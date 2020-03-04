@@ -4,6 +4,8 @@ This data set consists of the most common cross-site trackers with data about th
 
 ## Resources
 
+- Read our [our blog post](https://spreadprivacy.com/duckduckgo-tracker-radar/) for more information on the Tracker Radar
+
 - To learn more about the Tracker Radar data format, see [Data Model](docs/DATA_MODEL.md)
 
 - The code used to build the Tracker Radar: [Tracker Radar Collector](http://github.com/duckduckgo/tracker-radar-collector) and [Tracker Radar Detector](https://github.com/duckduckgo/tracker-radar-detector)
