@@ -1,46 +1,46 @@
 # Overview
-These trackers were identified by crawling the top sites on the internet, and looking for 3rd party resource requests that are on several different sites which set cookies or access browser APIs known to be used in fingerprinting.
+These domains were identified by crawling the top sites on the internet, and looking for 3rd party resource requests that are on several different sites which set cookies or access browser APIs known to be used in fingerprinting.
 
-- Tracker and entitiy data is automatically generated using the [Tracker Radar Detector](https://github.com/duckduckgo/tracker-radar-detector)
+- Domain and entitiy data is automatically generated using the [Tracker Radar Detector](https://github.com/duckduckgo/tracker-radar-detector)
 
-- [**Domains**](#Domains): Automatically generated tracker data files.
-- [**Entities**](#entities): Automatically generated data on entities or companies that control the trackers. 
-- [**Build data**](#build-data): Static files used to build the tracker data files. This includes data on privacy policies, surrogate definitions, categories, and more.
+- [**Domains**](#Domains): Automatically generated domain data files.
+- [**Entities**](#entities): Automatically generated data on entities or companies that control the domain. 
+- [**Build data**](#build-data): Static files used to build the domain data files. This includes data on privacy policies, surrogate definitions, categories, and more.
 - [**Breakage data**](#breakage-data): Static files defining broken sites or requests that can cause breakage. 
 
 ## Development
 
-- The tracker and entity data is automatically generated using [Tracker Radar Detector](https://github.com/duckduckgo/tracker-radar-detector). 
+- The domain and entity data is automatically generated using [Tracker Radar Detector](https://github.com/duckduckgo/tracker-radar-detector). 
 - New development and bug fixes, other then broken sites, are handled internally.
 
 ## Domains
-The tracker data is stored as individual JSON files in the [domains](/domains) directory.
+The domain data is stored as individual JSON files in the [domains](/domains) directory.
 
-Trackers are grouped by their domain name and IDNA encoded.
+Domains are grouped by their domain name and IDNA encoded.
 
-Each tracker is defined using the following fields:
+Each domain is defined using the following fields:
 
 |||
 |---|---|
-|**domain**|The domain of the tracker|
+|**domain**|The domain of the third party request|
 |**resources**|Resources to match for a given domain|
-|**surrogates**|Replacement code for specific tracker scripts to prevent website breakage|
-|**owner**|Entity (usually a company) that control this tracker|
-|**source**|The organizations of processes which identified the tracker|
-|**prevalence**|Percentage of top sites that request this tracker|
-|**fingerprinting**|Likelihood this tracker is fingerprinting users|
-|**cookies**|Percentage of the top sites that have cookies set by this tracker|
-|**performance**|Performance impact of loading this tracker|
-|**categories**|An array of categories describing the purpose of this tracker|
+|**surrogates**|Replacement code for specific domain scripts to prevent website breakage|
+|**owner**|Entity (usually a company) that control this domain|
+|**source**|The organizations of processes which identified the domain|
+|**prevalence**|Percentage of top sites that request this domain|
+|**fingerprinting**|Likelihood this domain is fingerprinting users|
+|**cookies**|Percentage of the top sites that have cookies set by this domain|
+|**performance**|Performance impact of loading this domain|
+|**categories**|An array of categories describing the purpose of this domain|
 
 #### Resources
 An array of regexes to match against the full URL of significant third-party requests made to this domain. Significant is any resource detected to be using a browser API used for fingerprinting or setting/getting cookies.
 
 |||
 |--|--|
-|**rule**|A regex to match against the tracker url|
-|**cookies**|Percentage of the top sites that have cookies set by this third-party tracker|
-|**fingerprinting**|Likelihood this third-party tracker is using browser APIs to uniquely identify users|
+|**rule**|A regex to match against the request URL|
+|**cookies**|Percentage of the top sites that have cookies set by this third-party domain|
+|**fingerprinting**|Likelihood this third-party domain is using browser APIs to uniquely identify users|
 |**apis**|A list of browser APIs accessed by this resource which are commonly used in fingerprinting|
 |**prevalence**|Percentage of the top sites where this resource was seen|
 
@@ -49,7 +49,7 @@ An optional array of resources that can cause breakage if blocked.
 
 |||
 |--|--|
-|**rule**|A regex to match against the tracker url|
+|**rule**|A regex to match against the request URL|
 |**domains**|An optional list of domains that this breaking rule applies to| 
 |**types**|An optional list of request types that this breaking rule applies to|
 
@@ -58,14 +58,14 @@ An optional array of resources and replacement function names to prevent site br
 
 |||
 |--|--|
-|**rule**|A regex to match against the tracker url|
+|**rule**|A regex to match against the request URL|
 |**replaceWith**|Name of replacement function to serve in place to avoid site breakage (NOTE: These are not currently included in the Tracker Radar data)|
 
 #### Source 
-An array of the organizations or processes which identified the tracker. Currently the only value in all trackers is DDG, but more may be added in the future.
+An array of the organizations or processes which identified the domain. Currently the only value in all domains is DDG, but more may be added in the future.
 
 #### Owner
-Entity (a company or organization) that controls each tracker. Each entity may have the following fields defined:
+Entity (a company or organization) that controls each domain. Each entity may have the following fields defined:
 
 |||
 |--|--|
@@ -75,16 +75,16 @@ Entity (a company or organization) that controls each tracker. Each entity may h
 |**displayName**|A shortened entity name without company suffixes|
 
 #### Domain
-The domain that should be matched against third-party requests to identify the request as being associated with a known tracker.
+The domain that should be matched against third-party requests.
 
 #### Prevalence [0-1]
-The percentage of the top sites that request this third-party tracker.
+The percentage of the top sites that request this third-party domain.
 
 #### cookies [0-1]
-The percentage of the top sites that have cookies set by this third-party tracker.
+The percentage of the top sites that have cookies set by this third-party domain.
 
 #### Fingerprinting [0-3]
-The likelihood this third-party tracker is using browser APIs to uniquely identify users.
+The likelihood this third-party domain is using browser APIs to uniquely identify users.
 
 |||
 |--|--|
@@ -95,7 +95,7 @@ The likelihood this third-party tracker is using browser APIs to uniquely identi
 
 #### Performance
 
-Performance impact of a tracker.
+Performance impact of a domain.
 
 |||
 |--|--|
@@ -107,7 +107,7 @@ Performance impact of a tracker.
 Each of these fields is assigned a value from 1-3, where 1 is little to no performance impact, and 3 is high impact. The delta between values representing an order of magnitude difference.
 
 #### Categories
-Categories assigned to each tracker, attempting to describe its observed purpose or intent. See [categories](CATEGORIES.md) for the full list.
+Categories assigned to each domain, attempting to describe its observed purpose or intent. See [categories](CATEGORIES.md) for the full list.
 
 ---
 
@@ -129,13 +129,13 @@ Each entity is defined using the following fields:
 
 ### /static
 
-Data files used in the generate of the Tracker Data Set
+Data files used to renerate the Tracker Radar
 
 |File|Use|
 |---|---|
 |[api_fingerprint_scores](/build-data/static/api_fingerprint_scores.json)|An object mapping browser APIs to their likelyhood to be used for fingerprinting. Scale is 0-6000|
-|[categorized_trackers](/build-data/static/categorized_trackers.csv)|CSV file with trackers and which categories they belong to|
-|[surrogates](/build-data/static/surrogates.json)|Mapping tracker resources to their surrogates.|
+|[categorized_trackers](/build-data/static/categorized_trackers.csv)|CSV file with domains and which categories they belong to|
+|[surrogates](/build-data/static/surrogates.json)|Mapping domain resources to their surrogates.|
 |[breaking](/build-data/breaking)|Broken site data used for identifying whole sites or requests that cause breakage.|
 
 ---
