@@ -1,18 +1,18 @@
-### How do you decide what is a tracker?
+### How do you decide what domains to include?
 
-Trackers were identified by crawling the top sites on the Internet, and looking for 3rd party resource requests that are on several different sites which set cookies or access browser APIs known to be used in fingerprinting.
+The included domains were identified by crawling the top sites on the Internet, and looking for 3rd party resource requests that are on several different sites which set cookies or access browser APIs known to be used in fingerprinting.
 
-### You're missing a tracker. How do I submit a new one?
+### You're missing a domain. How do I submit a new one?
 
-Trackers are automatically generated and included in our list based on prevalence on top sites and their use of cookies or browser APIs.
+Domains are automatically generated and included in our list based on prevalence on top sites and their use of cookies or browser APIs.
 
 ### How is the data created and maintained?
 
-These trackers were identified by crawling the top sites on the Internet, and looking for 3rd party resource requests which set cookies or access browser APIs known to be used in fingerprinting. We periodically crawl and update the tracker data, usually at least monthly.
+These domains were identified by crawling the top sites on the Internet, and looking for 3rd party resource requests which set cookies or access browser APIs known to be used in fingerprinting. We periodically crawl and update the data, usually at least monthly.
 
 ### Are you differentiating between trackers and ads?
 
-No. Trackers are automatically included based on their use of browser APIs or by setting cookies.
+No. Domains are automatically included based on their use of browser APIs or by setting cookies.
 
 ### How are you determining likelihood of fingerprinting? 
 
