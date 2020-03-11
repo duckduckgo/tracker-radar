@@ -1,6 +1,6 @@
 # DuckDuckGo Tracker Radar
 
-This data set consists of the most common cross-site trackers with data about their tracking behavior. It allows for easy custom solutions with the significant metadata it has for trackers: parent entity, prevalence, use of fingerprinting, cookies, privacy policy, and performance. The data on individual tracker domains can be found in the [domains](/domains) directory.
+This is not a block list, but a data set that consists of the most common cross-site third party domains with data about their behavior. It allows for easy custom solutions with the significant metadata it has for each domain: parent entity, prevalence, use of fingerprinting, cookies, privacy policy, and performance. The data on individual domains can be found in the [domains](/domains) directory.
 
 ## Resources
 
