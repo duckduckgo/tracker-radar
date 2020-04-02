@@ -4,10 +4,11 @@
     "source": [
         "DuckDuckGo"
     ],
-    "prevalence": 0.00067,
-    "sites": 29,
+    "prevalence": 0.00061,
+    "sites": 30,
     "subdomains": [
         "b",
+        "cdn-ak.b",
         "cdn.pool"
     ],
     "fingerprinting": 1,
@@ -17,13 +18,15 @@
             "cookies": 0,
             "fingerprinting": 1,
             "subdomains": [
-                "b"
+                "b",
+                "cdn-ak.b"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 13
+                "Navigator.prototype.userAgent": 12,
+                "Date.prototype.getTime": 1
             },
-            "sites": 20,
-            "prevalence": 0.000462
+            "sites": 24,
+            "prevalence": 0.000488
         },
         {
             "rule": "st-hatena\\.com\\/valve\\/valve\\.js",
@@ -35,14 +38,24 @@
             "apis": {
                 "window.sessionStorage": 3,
                 "Date.prototype.getTime": 3,
-                "Screen.prototype.width": 1,
-                "Screen.prototype.height": 1,
-                "Screen.prototype.colorDepth": 1,
                 "Date.prototype.getTimezoneOffset": 3,
                 "window.localStorage": 2
             },
             "sites": 3,
-            "prevalence": 0.0000694
+            "prevalence": 0.000061
+        },
+        {
+            "rule": "st-hatena\\.com\\/valve\\/dmp\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn.pool"
+            ],
+            "apis": {
+                "Document.cookie getter": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000407
         }
     ],
     "categories": [],
