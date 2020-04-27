@@ -9,37 +9,30 @@
     "source": [
         "DuckDuckGo"
     ],
-    "prevalence": 0.00229,
-    "sites": 99,
+    "prevalence": 0.00244,
+    "sites": 114,
     "subdomains": [
-        "collection-filter-www",
         "slack-cordova-io",
+        "socketio-tweet-stream",
         "prod-shopify-etl",
-        "sailshopify-webhooks-prod"
+        "sailshopify-webhooks-prod",
+        "iterable-shopify",
+        "iterable-shopify-qa",
+        "dsm-pet"
     ],
     "fingerprinting": 1,
     "resources": [
         {
-            "rule": "herokuapp\\.com\\/api\\/v1\\/filters",
-            "cookies": 0.0000462,
-            "fingerprinting": 0,
-            "subdomains": [
-                "collection-filter-www"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000462
-        },
-        {
             "rule": "herokuapp\\.com\\/socket\\.io\\/",
-            "cookies": 0.0000462,
+            "cookies": 0.0000642,
             "fingerprinting": 0,
             "subdomains": [
-                "slack-cordova-io"
+                "slack-cordova-io",
+                "socketio-tweet-stream"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000462
+            "sites": 3,
+            "prevalence": 0.0000642
         },
         {
             "rule": "herokuapp\\.com\\/public\\/enhanced_min\\.js",
@@ -49,14 +42,14 @@
                 "prod-shopify-etl"
             ],
             "apis": {
-                "Document.cookie getter": 3
+                "Document.cookie getter": 5
             },
-            "sites": 3,
-            "prevalence": 0.0000694
+            "sites": 5,
+            "prevalence": 0.000107
         },
         {
             "rule": "herokuapp\\.com\\/shopify\\.js",
-            "cookies": 0.0000694,
+            "cookies": 0.0000642,
             "fingerprinting": 1,
             "subdomains": [
                 "sailshopify-webhooks-prod"
@@ -64,10 +57,43 @@
             "apis": {
                 "Document.cookie setter": 3,
                 "Document.cookie getter": 3,
-                "Date.prototype.getTime": 3
+                "Date.prototype.getTime": 3,
+                "window.localStorage": 1
             },
             "sites": 3,
-            "prevalence": 0.0000694
+            "prevalence": 0.0000642
+        },
+        {
+            "rule": "herokuapp\\.com\\/connector",
+            "cookies": 0.0000642,
+            "fingerprinting": 1,
+            "subdomains": [
+                "iterable-shopify",
+                "iterable-shopify-qa"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 3,
+                "window.localStorage": 3,
+                "Document.cookie getter": 3,
+                "Document.cookie setter": 3
+            },
+            "sites": 3,
+            "prevalence": 0.0000642
+        },
+        {
+            "rule": "herokuapp\\.com\\/utilityx\\.js",
+            "cookies": 0.0000642,
+            "fingerprinting": 1,
+            "subdomains": [
+                "dsm-pet"
+            ],
+            "apis": {
+                "Document.cookie getter": 3,
+                "Document.cookie setter": 3,
+                "Screen.prototype.width": 3
+            },
+            "sites": 3,
+            "prevalence": 0.0000642
         }
     ],
     "categories": [
@@ -79,5 +105,5 @@
         "cpu": 0,
         "cache": 1
     },
-    "cookies": 0.000231
+    "cookies": 0.000364
 }
