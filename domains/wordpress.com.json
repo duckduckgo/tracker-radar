@@ -9,38 +9,40 @@
     "source": [
         "DuckDuckGo"
     ],
-    "prevalence": 0.00497,
-    "sites": 232,
+    "prevalence": 0.00455,
+    "sites": 319,
     "subdomains": [
         "public-api",
         "stats",
-        "jetpack",
-        "v0"
+        "jetpack"
     ],
     "fingerprinting": 1,
     "resources": [
         {
             "rule": "wordpress\\.com\\/wp-admin\\/rest-proxy\\/",
-            "cookies": 0.000835,
-            "fingerprinting": 0,
+            "cookies": 0.000841,
+            "fingerprinting": 1,
             "subdomains": [
                 "public-api"
             ],
-            "apis": {},
-            "sites": 40,
-            "prevalence": 0.000857
+            "apis": {
+                "Navigator.prototype.userAgent": 1,
+                "Date.prototype.getTime": 1
+            },
+            "sites": 60,
+            "prevalence": 0.000856
         },
         {
-            "rule": "wordpress\\.com\\/e-202017\\.js",
+            "rule": "wordpress\\.com\\/e-202021\\.js",
             "cookies": 0,
             "fingerprinting": 1,
             "subdomains": [
                 "stats"
             ],
             "apis": {
-                "Navigator.prototype.appName": 5
+                "Navigator.prototype.appName": 10
             },
-            "sites": 12,
+            "sites": 18,
             "prevalence": 0.000257
         },
         {
@@ -54,8 +56,21 @@
                 "HTMLCanvasElement.prototype.constructor": 1,
                 "HTMLCanvasElement.prototype.toDataURL": 1
             },
-            "sites": 4,
-            "prevalence": 0.0000857
+            "sites": 6,
+            "prevalence": 0.0000856
+        },
+        {
+            "rule": "wordpress\\.com\\/e-201406\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "stats"
+            ],
+            "apis": {
+                "Navigator.prototype.appName": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000285
         }
     ],
     "categories": [
@@ -63,10 +78,14 @@
         "Embedded Content"
     ],
     "performance": {
-        "time": 1,
-        "size": 3,
-        "cpu": 1,
+        "time": 2,
+        "size": 2,
+        "cpu": 0,
         "cache": 1
     },
-    "cookies": 0.000835
+    "cookies": 0.000841,
+    "types": {
+        "Document": 66,
+        "Script": 20
+    }
 }
