@@ -32,6 +32,7 @@ Each domain is defined using the following fields:
 |**cookies**|Percentage of the top sites that have cookies set by this domain|
 |**performance**|Performance impact of loading this domain|
 |**categories**|An array of categories describing the purpose of this domain|
+|**types**|Request types this domain has used|
 
 #### Resources
 An array of regexes to match against the full URL of significant third-party requests made to this domain. Significant is any resource detected to be using a browser API used for fingerprinting or setting/getting cookies.
