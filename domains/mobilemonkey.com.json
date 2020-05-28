@@ -5,7 +5,7 @@
         "DuckDuckGo"
     ],
     "prevalence": 0.000128,
-    "sites": 6,
+    "sites": 9,
     "subdomains": [
         "static",
         "webchat"
@@ -20,11 +20,11 @@
                 "static"
             ],
             "apis": {
-                "window.sessionStorage": 5,
-                "window.localStorage": 5
+                "window.sessionStorage": 6,
+                "window.localStorage": 6
             },
-            "sites": 5,
-            "prevalence": 0.000107
+            "sites": 6,
+            "prevalence": 0.0000856
         },
         {
             "rule": "mobilemonkey\\.com\\/webchat-bootstrap\\.js",
@@ -34,11 +34,14 @@
                 "webchat"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 5,
-                "window.matchMedia(\"prefers-reduced-motion\")": 5
+                "Navigator.prototype.userAgent": 8,
+                "window.matchMedia(\"prefers-reduced-motion\")": 8,
+                "window.localStorage": 2,
+                "window.sessionStorage": 2,
+                "CSSStyleDeclaration.setProperty(\"fontFamily\",…)": 1
             },
-            "sites": 5,
-            "prevalence": 0.000107
+            "sites": 8,
+            "prevalence": 0.000114
         },
         {
             "rule": "mobilemonkey\\.com\\/chat-config\\.js",
@@ -48,10 +51,28 @@
                 "webchat"
             ],
             "apis": {
-                "window.localStorage": 5
+                "window.localStorage": 8
             },
-            "sites": 5,
-            "prevalence": 0.000107
+            "sites": 8,
+            "prevalence": 0.000114
+        },
+        {
+            "rule": "mobilemonkey\\.com\\/webchat\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "webchat"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Event.prototype.timeStamp": 2,
+                "Navigator.prototype.userAgent": 2,
+                "window.matchMedia(\"prefers-reduced-motion\")": 2,
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.language": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000285
         }
     ],
     "categories": [],
@@ -59,7 +80,10 @@
         "time": 0,
         "size": 0,
         "cpu": 0,
-        "cache": 0
+        "cache": 3
     },
-    "cookies": 0
+    "cookies": 0,
+    "types": {
+        "Script": 24
+    }
 }
