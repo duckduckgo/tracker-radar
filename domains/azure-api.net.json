@@ -9,29 +9,63 @@
     "source": [
         "DuckDuckGo"
     ],
-    "prevalence": 0.0000428,
-    "sites": 3,
+    "prevalence": 0.000122,
+    "sites": 6,
     "subdomains": [
-        "suncountry"
+        "apim-gw-azu-nyc-prod",
+        "qiagenapi"
+    ],
+    "cnames": [
+        {
+            "original": "api.nyc.gov",
+            "resolved": "apim-gw-azu-nyc-prod.azure-api.net"
+        },
+        {
+            "original": "api.qiagen.com",
+            "resolved": "qiagenapi.azure-api.net"
+        }
     ],
     "fingerprinting": 0,
     "resources": [
         {
-            "rule": "azure-api\\.net\\/api\\/nsk\\/v1\\/token",
-            "cookies": 0.0000285,
+            "rule": "azure-api\\.net\\/public\\/api\\/GetCalendar",
+            "cookies": 0.0000608,
             "fingerprinting": 0,
             "subdomains": [
-                "suncountry"
+                "apim-gw-azu-nyc-prod"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000608,
+            "cnames": [
+                {
+                    "original": "api.nyc.gov",
+                    "resolved": "apim-gw-azu-nyc-prod.azure-api.net"
+                }
+            ]
+        },
+        {
+            "rule": "azure-api\\.net\\/header-frontend\\/user",
+            "cookies": 0.0000405,
+            "fingerprinting": 0,
+            "subdomains": [
+                "qiagenapi"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000285
+            "prevalence": 0.0000405,
+            "cnames": [
+                {
+                    "original": "api.qiagen.com",
+                    "resolved": "qiagenapi.azure-api.net"
+                }
+            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0000285,
+    "cookies": 0.000081,
     "types": {
-        "XHR": 2
+        "XHR": 5
     }
 }
