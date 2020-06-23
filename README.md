@@ -4,7 +4,7 @@ This is not a block list, but a data set of the most common third party domains 
 
 ## Resources
 
-- Read our [our blog post](https://spreadprivacy.com/duckduckgo-tracker-radar/) for more information on the Tracker Radar
+- Read [our blog post](https://spreadprivacy.com/duckduckgo-tracker-radar/) for more information on the Tracker Radar
 
 - To learn more about the Tracker Radar data format, see [Data Model](docs/DATA_MODEL.md)
 
