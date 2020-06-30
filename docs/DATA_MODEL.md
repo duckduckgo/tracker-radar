@@ -33,6 +33,7 @@ Each domain is defined using the following fields:
 |**performance**|Performance impact of loading this domain|
 |**categories**|An array of categories describing the purpose of this domain|
 |**types**|Request types this domain has used|
+|**cnames**|An array of subdomains that include DNS CNAMES redirecting to this domain|
 
 #### Resources
 An array of regexes to match against the full URL of significant third-party requests made to this domain. Significant is any resource detected to be using a browser API used for fingerprinting or setting/getting cookies.
@@ -44,6 +45,7 @@ An array of regexes to match against the full URL of significant third-party req
 |**fingerprinting**|Likelihood this third-party domain is using browser APIs to uniquely identify users|
 |**apis**|A list of browser APIs accessed by this resource which are commonly used in fingerprinting|
 |**prevalence**|Percentage of the top sites where this resource was seen|
+|**cnames**|A list of DNS CNAMEs that redirected to this resource|
 
 #### Breaking
 An optional array of resources that can cause breakage if blocked.
