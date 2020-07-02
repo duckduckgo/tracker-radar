@@ -9,16 +9,15 @@
     "source": [
         "DuckDuckGo"
     ],
-    "prevalence": 0.000985,
-    "sites": 72,
+    "prevalence": 0.000958,
+    "sites": 70,
     "subdomains": [
-        "snowplow-collector-vpc",
-        "unsplash-snowplow-scala-stream-collector.us-east-1",
-        "iphonelife-collector.us-west-2",
         "snowplowclair-env.us-east-1",
         "rr-sp-prod",
         "snowplowclojure-prod.us-east-1",
         "j2cweb-prod.us-east-1",
+        "unsplash-snowplow-scala-stream-collector.us-east-1",
+        "iphonelife-collector.us-west-2",
         "contextproxy-env.us-east-1",
         "slynode-prod-x"
     ],
@@ -30,10 +29,6 @@
         {
             "original": "c.iphonelife.com",
             "resolved": "iphonelife-collector.us-west-2.elasticbeanstalk.com"
-        },
-        {
-            "original": "c.viadeo.com",
-            "resolved": "snowplow-collector-vpc.elasticbeanstalk.com"
         },
         {
             "original": "collector.unsplash.com",
@@ -62,33 +57,6 @@
     ],
     "fingerprinting": 1,
     "resources": [
-        {
-            "rule": "elasticbeanstalk\\.com\\/i",
-            "cookies": 0.0000137,
-            "fingerprinting": 0,
-            "subdomains": [
-                "snowplow-collector-vpc",
-                "unsplash-snowplow-scala-stream-collector.us-east-1",
-                "iphonelife-collector.us-west-2"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.000041,
-            "cnames": [
-                {
-                    "original": "c.viadeo.com",
-                    "resolved": "snowplow-collector-vpc.elasticbeanstalk.com"
-                },
-                {
-                    "original": "collector.unsplash.com",
-                    "resolved": "unsplash-snowplow-scala-stream-collector.us-east-1.elasticbeanstalk.com"
-                },
-                {
-                    "original": "c.iphonelife.com",
-                    "resolved": "iphonelife-collector.us-west-2.elasticbeanstalk.com"
-                }
-            ]
-        },
         {
             "rule": "elasticbeanstalk\\.com\\/com\\.snowplowanalytics\\.snowplow\\/tp2",
             "cookies": 0.000041,
@@ -168,6 +136,28 @@
             ]
         },
         {
+            "rule": "elasticbeanstalk\\.com\\/i",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "unsplash-snowplow-scala-stream-collector.us-east-1",
+                "iphonelife-collector.us-west-2"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000274,
+            "cnames": [
+                {
+                    "original": "collector.unsplash.com",
+                    "resolved": "unsplash-snowplow-scala-stream-collector.us-east-1.elasticbeanstalk.com"
+                },
+                {
+                    "original": "c.iphonelife.com",
+                    "resolved": "iphonelife-collector.us-west-2.elasticbeanstalk.com"
+                }
+            ]
+        },
+        {
             "rule": "elasticbeanstalk\\.com\\/",
             "cookies": 0.0000547,
             "fingerprinting": 0,
@@ -202,12 +192,14 @@
             ]
         }
     ],
-    "categories": [],
+    "categories": [
+        "CDN"
+    ],
     "performance": {},
-    "cookies": 0.000342,
+    "cookies": 0.000328,
     "types": {
-        "Image": 3,
         "XHR": 9,
+        "Image": 2,
         "Script": 4,
         "Fetch": 2
     }
