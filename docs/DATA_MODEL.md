@@ -14,7 +14,19 @@ These domains were identified by crawling the top sites on the internet, and loo
 - New development and bug fixes, other then broken sites, are handled internally.
 
 ## Domains
-The domain data is stored as individual JSON files in the [domains](/domains) directory.
+The domain data is stored as individual JSON files in the [domains](/domains) directory. Inside this directory are subdirectories for each region the data has been crawled in. A listing of the regions crawled is below:
+
+|**Region Code**|**Region**|
+|---|---|
+|**US**|United States|
+|**AU**|Australia|
+|**CA**|Canada|
+|**CH**|Switzerland|
+|**DE**|Germany|
+|**FR**|France|
+|**GB**|Great Britain|
+|**NL**|Netherlands|
+|**NO**|Norway|
 
 Domains are grouped by their domain name and IDNA encoded.
 
