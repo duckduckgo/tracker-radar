@@ -10,17 +10,46 @@
     "prevalence": 0.0115,
     "sites": 110,
     "subdomains": [
+        "id",
+        "counter",
         "ssp",
         "profile.ssp",
         "kraken",
         "sandbox.ssp",
-        "static",
-        "id",
-        "counter"
+        "static"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "rambler\\.ru\\/rambler-id-helper\\/auth_events\\.js",
+            "cookies": 0.000417,
+            "fingerprinting": 1,
+            "subdomains": [
+                "id"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 4,
+            "prevalence": 0.000417,
+            "cnames": [],
+            "type": "Script"
+        },
+        {
+            "rule": "rambler\\.ru\\/top100\\.cnt",
+            "cookies": 0.000208,
+            "fingerprinting": 0,
+            "subdomains": [
+                "counter"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000417,
+            "cnames": [],
+            "type": "Image"
+        },
         {
             "rule": "rambler\\.ru\\/capirs_async\\.js",
             "cookies": 0,
@@ -171,35 +200,6 @@
             "prevalence": 0.00125,
             "cnames": [],
             "type": "Document"
-        },
-        {
-            "rule": "rambler\\.ru\\/rambler-id-helper\\/auth_events\\.js",
-            "cookies": 0.000417,
-            "fingerprinting": 1,
-            "subdomains": [
-                "id"
-            ],
-            "apis": {
-                "Date.prototype.getTime": 2,
-                "Document.cookie setter": 2
-            },
-            "sites": 4,
-            "prevalence": 0.000417,
-            "cnames": [],
-            "type": "Script"
-        },
-        {
-            "rule": "rambler\\.ru\\/top100\\.cnt",
-            "cookies": 0.000208,
-            "fingerprinting": 0,
-            "subdomains": [
-                "counter"
-            ],
-            "apis": {},
-            "sites": 4,
-            "prevalence": 0.000417,
-            "cnames": [],
-            "type": "Image"
         }
     ],
     "categories": [
@@ -217,9 +217,9 @@
     "cookies": 0.00292,
     "types": {
         "Script": 30,
+        "Image": 23,
         "XHR": 7,
         "Document": 28,
-        "Image": 23,
         "Font": 32
     }
 }

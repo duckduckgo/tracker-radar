@@ -12,39 +12,57 @@
     "prevalence": 0.00497,
     "sites": 48,
     "subdomains": [
+        "support",
         "www",
-        "community",
         "docs",
-        "support"
+        "community"
     ],
     "cnames": [],
     "fingerprinting": 3,
     "resources": [
         {
-            "rule": "oracle\\.com\\/index\\.html",
-            "cookies": 0.000207,
+            "rule": "oracle\\.com\\/portal",
+            "cookies": 0.000725,
             "fingerprinting": 0,
             "subdomains": [
-                "www"
+                "support"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000207,
+            "sites": 7,
+            "prevalence": 0.000725,
             "cnames": [],
             "type": "Document"
         },
         {
-            "rule": "oracle\\.com\\/welcome",
-            "cookies": 0.000207,
-            "fingerprinting": 0,
+            "rule": "oracle\\.com\\/portal\\/js\\/universal\\/oracle-universal\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
             "subdomains": [
-                "community"
+                "support"
             ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000207,
+            "apis": {
+                "window.localStorage": 3
+            },
+            "sites": 7,
+            "prevalence": 0.000725,
             "cnames": [],
-            "type": "Document"
+            "type": "Script"
+        },
+        {
+            "rule": "oracle\\.com\\/portal\\/js\\/libs\\/require\\/require\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "support"
+            ],
+            "apis": {
+                "Navigator.prototype.platform": 2,
+                "Date.prototype.getTime": 2
+            },
+            "sites": 7,
+            "prevalence": 0.000725,
+            "cnames": [],
+            "type": "Script"
         },
         {
             "rule": "oracle\\.com\\/akam\\/11\\/pixel_3bcfaa41",
@@ -148,50 +166,6 @@
             "prevalence": 0.00135,
             "cnames": [],
             "type": "Document"
-        },
-        {
-            "rule": "oracle\\.com\\/portal",
-            "cookies": 0.000725,
-            "fingerprinting": 0,
-            "subdomains": [
-                "support"
-            ],
-            "apis": {},
-            "sites": 7,
-            "prevalence": 0.000725,
-            "cnames": [],
-            "type": "Document"
-        },
-        {
-            "rule": "oracle\\.com\\/portal\\/js\\/universal\\/oracle-universal\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "support"
-            ],
-            "apis": {
-                "window.localStorage": 3
-            },
-            "sites": 7,
-            "prevalence": 0.000725,
-            "cnames": [],
-            "type": "Script"
-        },
-        {
-            "rule": "oracle\\.com\\/portal\\/js\\/libs\\/require\\/require\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "support"
-            ],
-            "apis": {
-                "Navigator.prototype.platform": 2,
-                "Date.prototype.getTime": 2
-            },
-            "sites": 7,
-            "prevalence": 0.000725,
-            "cnames": [],
-            "type": "Script"
         }
     ],
     "categories": [],
@@ -203,9 +177,9 @@
     },
     "cookies": 0.00155,
     "types": {
-        "Document": 24,
+        "Document": 20,
+        "Script": 29,
         "Image": 3,
-        "XHR": 7,
-        "Script": 29
+        "XHR": 7
     }
 }

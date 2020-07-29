@@ -10,14 +10,30 @@
     "prevalence": 0.0197,
     "sites": 192,
     "subdomains": [
+        "login",
         "commons",
         "commons.m",
-        "login",
         "meta"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "wikimedia\\.org\\/wiki\\/Special:CentralAutoLogin\\/checkLoggedIn",
+            "cookies": 0.00504,
+            "fingerprinting": 1,
+            "subdomains": [
+                "login"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 36,
+                "window.localStorage": 36
+            },
+            "sites": 64,
+            "prevalence": 0.00658,
+            "cnames": [],
+            "type": "Script"
+        },
         {
             "rule": "wikimedia\\.org\\/static\\/images\\/project-logos\\/commonswiki\\.png",
             "cookies": 0.00072,
@@ -111,22 +127,6 @@
             "type": "Image"
         },
         {
-            "rule": "wikimedia\\.org\\/wiki\\/Special:CentralAutoLogin\\/checkLoggedIn",
-            "cookies": 0.00504,
-            "fingerprinting": 1,
-            "subdomains": [
-                "login"
-            ],
-            "apis": {
-                "Date.prototype.getTime": 36,
-                "window.localStorage": 36
-            },
-            "sites": 64,
-            "prevalence": 0.00658,
-            "cnames": [],
-            "type": "Script"
-        },
-        {
             "rule": "wikimedia\\.org\\/w\\/index\\.php",
             "cookies": 0.00236,
             "fingerprinting": 0,
@@ -195,8 +195,8 @@
     },
     "cookies": 0.00658,
     "types": {
-        "Image": 36,
         "Script": 105,
+        "Image": 36,
         "Document": 9
     }
 }

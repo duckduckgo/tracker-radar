@@ -10,14 +10,33 @@
     "prevalence": 0.00946,
     "sites": 92,
     "subdomains": [
+        "videoplayer",
         "economictimes",
         "timesofindia",
-        "agi-static",
-        "videoplayer"
+        "agi-static"
     ],
     "cnames": [],
     "fingerprinting": 3,
     "resources": [
+        {
+            "rule": "indiatimes\\.com\\/gdpr\\/slikeapi\\.js",
+            "cookies": 0.000103,
+            "fingerprinting": 1,
+            "subdomains": [
+                "videoplayer"
+            ],
+            "apis": {
+                "Navigator.prototype.plugins": 1,
+                "Navigator.prototype.userAgent": 1,
+                "Document.cookie setter": 1,
+                "window.localStorage": 1,
+                "Date.prototype.getTime": 1
+            },
+            "sites": 8,
+            "prevalence": 0.000822,
+            "cnames": [],
+            "type": "Script"
+        },
         {
             "rule": "indiatimes\\.com\\/jshome_topnew\\/v-49,minify-1\\.cms",
             "cookies": 0,
@@ -181,36 +200,6 @@
             "type": "Script"
         },
         {
-            "rule": "indiatimes\\.com\\/pn\\/version-39,minify-1\\.cms",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "timesofindia"
-            ],
-            "apis": {
-                "Navigator.prototype.userAgent": 1
-            },
-            "sites": 2,
-            "prevalence": 0.000206,
-            "cnames": [],
-            "type": "Other"
-        },
-        {
-            "rule": "indiatimes\\.com\\/videos\\/jquery_1_11_0_min\\/version-14,minify-1\\.cms",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "timesofindia"
-            ],
-            "apis": {
-                "Navigator.prototype.userAgent": 2
-            },
-            "sites": 2,
-            "prevalence": 0.000206,
-            "cnames": [],
-            "type": "Other"
-        },
-        {
             "rule": "indiatimes\\.com\\/resources\\/cd530cff4brn2146ffb292f7581ddfbc",
             "cookies": 0.000308,
             "fingerprinting": 3,
@@ -268,25 +257,6 @@
             "prevalence": 0.000308,
             "cnames": [],
             "type": "XHR"
-        },
-        {
-            "rule": "indiatimes\\.com\\/gdpr\\/slikeapi\\.js",
-            "cookies": 0.000103,
-            "fingerprinting": 1,
-            "subdomains": [
-                "videoplayer"
-            ],
-            "apis": {
-                "Navigator.prototype.plugins": 1,
-                "Navigator.prototype.userAgent": 1,
-                "Document.cookie setter": 1,
-                "window.localStorage": 1,
-                "Date.prototype.getTime": 1
-            },
-            "sites": 8,
-            "prevalence": 0.000822,
-            "cnames": [],
-            "type": "Script"
         }
     ],
     "categories": [],
@@ -300,7 +270,6 @@
     "types": {
         "Script": 69,
         "Document": 16,
-        "Other": 4,
         "XHR": 6
     }
 }

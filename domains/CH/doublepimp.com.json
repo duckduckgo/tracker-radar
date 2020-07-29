@@ -7,24 +7,43 @@
     "prevalence": 0.0176,
     "sites": 169,
     "subdomains": [
-        "engine.phn",
-        "cdn.engine.phn"
+        "cdn.engine.phn",
+        "engine.phn"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
         {
-            "rule": "doublepimp\\.com\\/preroll\\.engine",
-            "cookies": 0.000417,
-            "fingerprinting": 0,
+            "rule": "doublepimp\\.com\\/Scripts\\/MediaScripts\\/cv\\.js",
+            "cookies": 0.000208,
+            "fingerprinting": 1,
             "subdomains": [
-                "engine.phn"
+                "cdn.engine.phn"
             ],
-            "apis": {},
-            "sites": 20,
-            "prevalence": 0.00208,
+            "apis": {
+                "window.localStorage": 1,
+                "Navigator.prototype.userAgent": 1
+            },
+            "sites": 4,
+            "prevalence": 0.000417,
             "cnames": [],
-            "type": "XHR"
+            "type": "Script"
+        },
+        {
+            "rule": "doublepimp\\.com\\/Scripts\\/MediaScripts\\/fb\\.js",
+            "cookies": 0.000417,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn.engine.phn"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 1,
+                "window.devicePixelRatio": 1
+            },
+            "sites": 4,
+            "prevalence": 0.000417,
+            "cnames": [],
+            "type": "Script"
         },
         {
             "rule": "doublepimp\\.com\\/Scripts\\/MediaScripts\\/i\\.js",
@@ -67,6 +86,19 @@
             "prevalence": 0.000834,
             "cnames": [],
             "type": "Script"
+        },
+        {
+            "rule": "doublepimp\\.com\\/preroll\\.engine",
+            "cookies": 0.000417,
+            "fingerprinting": 0,
+            "subdomains": [
+                "engine.phn"
+            ],
+            "apis": {},
+            "sites": 20,
+            "prevalence": 0.00208,
+            "cnames": [],
+            "type": "XHR"
         },
         {
             "rule": "doublepimp\\.com\\/Scripts\\/infinity\\.js\\.aspx",
@@ -140,38 +172,6 @@
             "prevalence": 0.00552,
             "cnames": [],
             "type": "Document"
-        },
-        {
-            "rule": "doublepimp\\.com\\/Scripts\\/MediaScripts\\/cv\\.js",
-            "cookies": 0.000208,
-            "fingerprinting": 1,
-            "subdomains": [
-                "cdn.engine.phn"
-            ],
-            "apis": {
-                "window.localStorage": 1,
-                "Navigator.prototype.userAgent": 1
-            },
-            "sites": 4,
-            "prevalence": 0.000417,
-            "cnames": [],
-            "type": "Script"
-        },
-        {
-            "rule": "doublepimp\\.com\\/Scripts\\/MediaScripts\\/fb\\.js",
-            "cookies": 0.000417,
-            "fingerprinting": 1,
-            "subdomains": [
-                "cdn.engine.phn"
-            ],
-            "apis": {
-                "Navigator.prototype.userAgent": 1,
-                "window.devicePixelRatio": 1
-            },
-            "sites": 4,
-            "prevalence": 0.000417,
-            "cnames": [],
-            "type": "Script"
         }
     ],
     "categories": [],
@@ -183,8 +183,8 @@
     },
     "cookies": 0.00928,
     "types": {
-        "XHR": 20,
         "Script": 98,
+        "XHR": 20,
         "Document": 112
     }
 }

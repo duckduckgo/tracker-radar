@@ -11,10 +11,10 @@
     "sites": 230,
     "subdomains": [
         "login",
+        "cdn",
         "web-api",
         "produkte",
         "www",
-        "cdn",
         "famigros",
         "produits",
         "photoservice",
@@ -41,43 +41,38 @@
             "type": "XHR"
         },
         {
-            "rule": "migros\\.ch\\/widgets\\/cmd\\/legaldocument\\/cookie_banner\\/enabled",
-            "cookies": 0.00302,
-            "fingerprinting": 0,
+            "rule": "migros\\.ch\\/ch\\.migros\\.msc\\/clients\\/full\\/20200630131218\\/js\\/msc\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
             "subdomains": [
-                "web-api"
+                "cdn"
             ],
-            "apis": {},
-            "sites": 32,
-            "prevalence": 0.00334,
+            "apis": {
+                "Navigator.prototype.userAgent": 3,
+                "window.sessionStorage": 3,
+                "window.localStorage": 3,
+                "Date.prototype.getTime": 3,
+                "window.matchMedia(\"prefers-reduced-motion\")": 3
+            },
+            "sites": 8,
+            "prevalence": 0.000834,
             "cnames": [],
-            "type": "Fetch"
+            "type": "Script"
         },
         {
-            "rule": "migros\\.ch\\/oauth2\\/authorize",
-            "cookies": 0.00177,
-            "fingerprinting": 0,
+            "rule": "migros\\.ch\\/js\\/autologin\\.js",
+            "cookies": 0.000104,
+            "fingerprinting": 1,
             "subdomains": [
                 "login"
             ],
-            "apis": {},
-            "sites": 19,
-            "prevalence": 0.00198,
+            "apis": {
+                "Document.cookie setter": 1
+            },
+            "sites": 9,
+            "prevalence": 0.000938,
             "cnames": [],
-            "type": "Document"
-        },
-        {
-            "rule": "migros\\.ch\\/widgets\\/cmd\\/legaldocument\\/cookie_banner\\/de",
-            "cookies": 0.00323,
-            "fingerprinting": 0,
-            "subdomains": [
-                "web-api"
-            ],
-            "apis": {},
-            "sites": 32,
-            "prevalence": 0.00334,
-            "cnames": [],
-            "type": "Fetch"
+            "type": "Script"
         },
         {
             "rule": "migros\\.ch\\/api\\/trackingid",
@@ -311,6 +306,45 @@
             "type": "Document"
         },
         {
+            "rule": "migros\\.ch\\/widgets\\/cmd\\/legaldocument\\/cookie_banner\\/enabled",
+            "cookies": 0.00302,
+            "fingerprinting": 0,
+            "subdomains": [
+                "web-api"
+            ],
+            "apis": {},
+            "sites": 32,
+            "prevalence": 0.00334,
+            "cnames": [],
+            "type": "Fetch"
+        },
+        {
+            "rule": "migros\\.ch\\/oauth2\\/authorize",
+            "cookies": 0.00177,
+            "fingerprinting": 0,
+            "subdomains": [
+                "login"
+            ],
+            "apis": {},
+            "sites": 19,
+            "prevalence": 0.00198,
+            "cnames": [],
+            "type": "Document"
+        },
+        {
+            "rule": "migros\\.ch\\/widgets\\/cmd\\/legaldocument\\/cookie_banner\\/de",
+            "cookies": 0.00323,
+            "fingerprinting": 0,
+            "subdomains": [
+                "web-api"
+            ],
+            "apis": {},
+            "sites": 32,
+            "prevalence": 0.00334,
+            "cnames": [],
+            "type": "Fetch"
+        },
+        {
             "rule": "migros\\.ch\\/\\.rest\\/fragments\\/v1\\/resources\\/css\\/basics\\.css",
             "cookies": 0.000104,
             "fingerprinting": 0,
@@ -361,19 +395,6 @@
             "prevalence": 0.00177,
             "cnames": [],
             "type": "Fetch"
-        },
-        {
-            "rule": "migros\\.ch\\/widgets\\/cmd\\/legaldocument\\/cookie_banner\\/it",
-            "cookies": 0.000208,
-            "fingerprinting": 0,
-            "subdomains": [
-                "web-api"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000208,
-            "cnames": [],
-            "type": "XHR"
         },
         {
             "rule": "migros\\.ch\\/widgets\\/categories\\.json\\/store-order",
@@ -562,51 +583,17 @@
             "prevalence": 0.00177,
             "cnames": [],
             "type": "Fetch"
-        },
-        {
-            "rule": "migros\\.ch\\/ch\\.migros\\.msc\\/clients\\/full\\/20200630131218\\/js\\/msc\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "cdn"
-            ],
-            "apis": {
-                "Navigator.prototype.userAgent": 3,
-                "window.sessionStorage": 3,
-                "window.localStorage": 3,
-                "Date.prototype.getTime": 3,
-                "window.matchMedia(\"prefers-reduced-motion\")": 3
-            },
-            "sites": 8,
-            "prevalence": 0.000834,
-            "cnames": [],
-            "type": "Script"
-        },
-        {
-            "rule": "migros\\.ch\\/js\\/autologin\\.js",
-            "cookies": 0.000104,
-            "fingerprinting": 1,
-            "subdomains": [
-                "login"
-            ],
-            "apis": {
-                "Document.cookie setter": 1
-            },
-            "sites": 9,
-            "prevalence": 0.000938,
-            "cnames": [],
-            "type": "Script"
         }
     ],
     "categories": [],
     "performance": {},
     "cookies": 0.012,
     "types": {
-        "XHR": 178,
-        "Fetch": 128,
-        "Document": 53,
+        "XHR": 176,
         "Script": 143,
+        "Document": 53,
         "Image": 170,
+        "Fetch": 128,
         "Stylesheet": 8
     }
 }

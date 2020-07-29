@@ -10,15 +10,59 @@
     "prevalence": 0.00351,
     "sites": 34,
     "subdomains": [
-        "community",
-        "webapps-cdn",
         "securetags",
         "geoip",
-        "go"
+        "go",
+        "community",
+        "webapps-cdn"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "esri\\.com\\/id",
+            "cookies": 0.00134,
+            "fingerprinting": 0,
+            "subdomains": [
+                "securetags"
+            ],
+            "apis": {},
+            "sites": 15,
+            "prevalence": 0.00155,
+            "cnames": [],
+            "type": "XHR"
+        },
+        {
+            "rule": "esri\\.com\\/geoip\\.js",
+            "cookies": 0.000103,
+            "fingerprinting": 1,
+            "subdomains": [
+                "geoip"
+            ],
+            "apis": {
+                "window.sessionStorage": 2,
+                "Document.cookie getter": 1,
+                "Date.prototype.getTime": 1,
+                "Document.cookie setter": 1
+            },
+            "sites": 12,
+            "prevalence": 0.00124,
+            "cnames": [],
+            "type": "Script"
+        },
+        {
+            "rule": "esri\\.com\\/dcjs\\/82202\\/1182\\/dc\\.js",
+            "cookies": 0.000103,
+            "fingerprinting": 0,
+            "subdomains": [
+                "go"
+            ],
+            "apis": {},
+            "sites": 11,
+            "prevalence": 0.00113,
+            "cnames": [],
+            "type": "Script"
+        },
         {
             "rule": "esri\\.com\\/2018\\.25\\.0\\.787d0e3\\/plugins\\/gamification\\/resources\\/script\\/lib\\/nitro\\/NitroJSConnector\\.js",
             "cookies": 0,
@@ -82,50 +126,6 @@
             "prevalence": 0.000515,
             "cnames": [],
             "type": "Script"
-        },
-        {
-            "rule": "esri\\.com\\/id",
-            "cookies": 0.00134,
-            "fingerprinting": 0,
-            "subdomains": [
-                "securetags"
-            ],
-            "apis": {},
-            "sites": 15,
-            "prevalence": 0.00155,
-            "cnames": [],
-            "type": "XHR"
-        },
-        {
-            "rule": "esri\\.com\\/geoip\\.js",
-            "cookies": 0.000103,
-            "fingerprinting": 1,
-            "subdomains": [
-                "geoip"
-            ],
-            "apis": {
-                "window.sessionStorage": 2,
-                "Document.cookie getter": 1,
-                "Date.prototype.getTime": 1,
-                "Document.cookie setter": 1
-            },
-            "sites": 12,
-            "prevalence": 0.00124,
-            "cnames": [],
-            "type": "Script"
-        },
-        {
-            "rule": "esri\\.com\\/dcjs\\/82202\\/1182\\/dc\\.js",
-            "cookies": 0.000103,
-            "fingerprinting": 0,
-            "subdomains": [
-                "go"
-            ],
-            "apis": {},
-            "sites": 11,
-            "prevalence": 0.00113,
-            "cnames": [],
-            "type": "Script"
         }
     ],
     "categories": [],
@@ -137,8 +137,8 @@
     },
     "cookies": 0.00186,
     "types": {
+        "XHR": 15,
         "Script": 38,
-        "Document": 6,
-        "XHR": 15
+        "Document": 6
     }
 }

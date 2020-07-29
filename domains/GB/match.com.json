@@ -10,13 +10,73 @@
     "prevalence": 0.00103,
     "sites": 10,
     "subdomains": [
-        "uk",
         "us",
-        "securecp"
+        "securecp",
+        "uk"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "match\\.com\\/clientresource\\/gettranslations",
+            "cookies": 0.000618,
+            "fingerprinting": 0,
+            "subdomains": [
+                "us"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000618,
+            "cnames": [],
+            "type": "Script"
+        },
+        {
+            "rule": "match\\.com\\/scripts\\/jquery\\/current\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "securecp"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 1,
+                "Date.prototype.getTime": 1
+            },
+            "sites": 6,
+            "prevalence": 0.000618,
+            "cnames": [],
+            "type": "Script"
+        },
+        {
+            "rule": "match\\.com\\/scripts\\/site\\/match-legacy\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "securecp"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 1
+            },
+            "sites": 6,
+            "prevalence": 0.000618,
+            "cnames": [],
+            "type": "Script"
+        },
+        {
+            "rule": "match\\.com\\/scripts\\/cp\\/core\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "securecp"
+            ],
+            "apis": {
+                "Navigator.prototype.cookieEnabled": 1,
+                "Date.prototype.getTime": 1
+            },
+            "sites": 6,
+            "prevalence": 0.000618,
+            "cnames": [],
+            "type": "Script"
+        },
         {
             "rule": "match\\.com\\/apida\\/oauth\\/accesstokens",
             "cookies": 0.000309,
@@ -125,66 +185,6 @@
             "prevalence": 0.000309,
             "cnames": [],
             "type": "XHR"
-        },
-        {
-            "rule": "match\\.com\\/clientresource\\/gettranslations",
-            "cookies": 0.000618,
-            "fingerprinting": 0,
-            "subdomains": [
-                "us"
-            ],
-            "apis": {},
-            "sites": 6,
-            "prevalence": 0.000618,
-            "cnames": [],
-            "type": "Script"
-        },
-        {
-            "rule": "match\\.com\\/scripts\\/jquery\\/current\\.min\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "securecp"
-            ],
-            "apis": {
-                "Navigator.prototype.userAgent": 1,
-                "Date.prototype.getTime": 1
-            },
-            "sites": 6,
-            "prevalence": 0.000618,
-            "cnames": [],
-            "type": "Script"
-        },
-        {
-            "rule": "match\\.com\\/scripts\\/site\\/match-legacy\\.min\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "securecp"
-            ],
-            "apis": {
-                "Navigator.prototype.userAgent": 1
-            },
-            "sites": 6,
-            "prevalence": 0.000618,
-            "cnames": [],
-            "type": "Script"
-        },
-        {
-            "rule": "match\\.com\\/scripts\\/cp\\/core\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "securecp"
-            ],
-            "apis": {
-                "Navigator.prototype.cookieEnabled": 1,
-                "Date.prototype.getTime": 1
-            },
-            "sites": 6,
-            "prevalence": 0.000618,
-            "cnames": [],
-            "type": "Script"
         }
     ],
     "categories": [],
@@ -196,8 +196,8 @@
     },
     "cookies": 0.000927,
     "types": {
-        "Fetch": 3,
         "Script": 33,
+        "Fetch": 3,
         "XHR": 9
     }
 }

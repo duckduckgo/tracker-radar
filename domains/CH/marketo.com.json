@@ -12,6 +12,12 @@
     "prevalence": 0.00698,
     "sites": 67,
     "subdomains": [
+        "rtp-static",
+        "sjrtp8",
+        "sjrtp2",
+        "sjrtp1",
+        "lonrtp1",
+        "sjrtp7",
         "sjrtp8-cdn",
         "sjrtp2-cdn",
         "app-sjp",
@@ -20,17 +26,76 @@
         "app-sj05",
         "app-ab13",
         "app-lon04",
-        "app-abd",
-        "lonrtp1",
-        "sjrtp8",
-        "sjrtp2",
-        "rtp-static",
-        "sjrtp1",
-        "sjrtp7"
+        "app-abd"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "marketo\\.com\\/rtp\\/libs\\/jquery\\/1\\.8\\.3\\/jquery\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "rtp-static"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 1,
+                "Date.prototype.getTime": 1
+            },
+            "sites": 7,
+            "prevalence": 0.00073,
+            "cnames": [],
+            "type": "Script"
+        },
+        {
+            "rule": "marketo\\.com\\/gw1\\/trw",
+            "cookies": 0.000208,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sjrtp8",
+                "sjrtp2",
+                "sjrtp1",
+                "lonrtp1"
+            ],
+            "apis": {},
+            "sites": 10,
+            "prevalence": 0.00104,
+            "cnames": [],
+            "type": "Script"
+        },
+        {
+            "rule": "marketo\\.com\\/gw1\\/msg",
+            "cookies": 0.00125,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sjrtp8",
+                "sjrtp2",
+                "sjrtp7",
+                "sjrtp1",
+                "lonrtp1"
+            ],
+            "apis": {},
+            "sites": 29,
+            "prevalence": 0.00302,
+            "cnames": [],
+            "type": "Script"
+        },
+        {
+            "rule": "marketo\\.com\\/rtp\\/libs\\/jqueryui\\/1\\.9\\.2f\\/jquery-custom-ui\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "rtp-static"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 8,
+                "Navigator.prototype.appName": 6
+            },
+            "sites": 10,
+            "prevalence": 0.00104,
+            "cnames": [],
+            "type": "Script"
+        },
         {
             "rule": "marketo\\.com\\/rtp-api\\/v1\\/rtp\\.js",
             "cookies": 0.000104,
@@ -121,71 +186,6 @@
             "prevalence": 0.00167,
             "cnames": [],
             "type": "XHR"
-        },
-        {
-            "rule": "marketo\\.com\\/rtp\\/libs\\/jquery\\/1\\.8\\.3\\/jquery\\.min\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "rtp-static"
-            ],
-            "apis": {
-                "Navigator.prototype.userAgent": 1,
-                "Date.prototype.getTime": 1
-            },
-            "sites": 7,
-            "prevalence": 0.00073,
-            "cnames": [],
-            "type": "Script"
-        },
-        {
-            "rule": "marketo\\.com\\/gw1\\/trw",
-            "cookies": 0.000208,
-            "fingerprinting": 0,
-            "subdomains": [
-                "sjrtp8",
-                "sjrtp2",
-                "sjrtp1",
-                "lonrtp1"
-            ],
-            "apis": {},
-            "sites": 10,
-            "prevalence": 0.00104,
-            "cnames": [],
-            "type": "Script"
-        },
-        {
-            "rule": "marketo\\.com\\/gw1\\/msg",
-            "cookies": 0.00125,
-            "fingerprinting": 0,
-            "subdomains": [
-                "sjrtp8",
-                "sjrtp2",
-                "sjrtp7",
-                "sjrtp1",
-                "lonrtp1"
-            ],
-            "apis": {},
-            "sites": 29,
-            "prevalence": 0.00302,
-            "cnames": [],
-            "type": "Script"
-        },
-        {
-            "rule": "marketo\\.com\\/rtp\\/libs\\/jqueryui\\/1\\.9\\.2f\\/jquery-custom-ui\\.min\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "rtp-static"
-            ],
-            "apis": {
-                "Navigator.prototype.userAgent": 8,
-                "Navigator.prototype.appName": 6
-            },
-            "sites": 10,
-            "prevalence": 0.00104,
-            "cnames": [],
-            "type": "Script"
         }
     ],
     "categories": [

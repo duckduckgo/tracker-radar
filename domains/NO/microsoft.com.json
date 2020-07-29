@@ -13,21 +13,21 @@
     "sites": 319,
     "subdomains": [
         "web.vortex.data",
+        "azure",
         "teams",
         "partner",
         "uhf",
         "www",
+        "account",
+        "answers",
         "techcommunity",
         "docs",
-        "azure",
         "developer",
         "visualstudio",
         "cloudblogs",
         "gallery.technet",
         "todo",
         "devblogs",
-        "account",
-        "answers",
         "c1"
     ],
     "cnames": [],
@@ -47,6 +47,19 @@
             "prevalence": 0.0116,
             "cnames": [],
             "type": "Script"
+        },
+        {
+            "rule": "microsoft\\.com\\/auth\\/sso\\/",
+            "cookies": 0.000515,
+            "fingerprinting": 0,
+            "subdomains": [
+                "azure"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000515,
+            "cnames": [],
+            "type": "Document"
         },
         {
             "rule": "microsoft\\.com\\/share\\/launcher\\.js",
@@ -122,23 +135,30 @@
             "type": "Document"
         },
         {
-            "rule": "microsoft\\.com\\/library\\/svy\\/xbox\\/broker\\.js",
-            "cookies": 0,
-            "fingerprinting": 2,
+            "rule": "microsoft\\.com\\/feedback",
+            "cookies": 0.000309,
+            "fingerprinting": 0,
             "subdomains": [
-                "www"
+                "account"
             ],
-            "apis": {
-                "Document.cookie getter": 1,
-                "Navigator.prototype.userAgent": 1,
-                "Screen.prototype.availWidth": 1,
-                "Screen.prototype.availHeight": 1,
-                "Date.prototype.getTime": 1
-            },
-            "sites": 2,
-            "prevalence": 0.000206,
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000619,
             "cnames": [],
-            "type": "Script"
+            "type": "XHR"
+        },
+        {
+            "rule": "microsoft\\.com\\/en-us",
+            "cookies": 0.000309,
+            "fingerprinting": 0,
+            "subdomains": [
+                "answers"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000309,
+            "cnames": [],
+            "type": "Document"
         },
         {
             "rule": "microsoft\\.com\\/",
@@ -243,32 +263,6 @@
             "type": "XHR"
         },
         {
-            "rule": "microsoft\\.com\\/feedback",
-            "cookies": 0.000309,
-            "fingerprinting": 0,
-            "subdomains": [
-                "account"
-            ],
-            "apis": {},
-            "sites": 6,
-            "prevalence": 0.000619,
-            "cnames": [],
-            "type": "XHR"
-        },
-        {
-            "rule": "microsoft\\.com\\/en-us",
-            "cookies": 0.000309,
-            "fingerprinting": 0,
-            "subdomains": [
-                "answers"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.000309,
-            "cnames": [],
-            "type": "Document"
-        },
-        {
             "rule": "microsoft\\.com\\/c\\.gif",
             "cookies": 0.00309,
             "fingerprinting": 0,
@@ -280,66 +274,6 @@
             "prevalence": 0.00402,
             "cnames": [],
             "type": "Image"
-        },
-        {
-            "rule": "microsoft\\.com\\/dist\\/oneui\\.razor\\/public\\/styles\\/amx\\.min\\.css",
-            "cookies": 0.000206,
-            "fingerprinting": 0,
-            "subdomains": [
-                "account"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000206,
-            "cnames": [],
-            "type": "Stylesheet"
-        },
-        {
-            "rule": "microsoft\\.com\\/bundles\\/scripts\\/webi",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "account"
-            ],
-            "apis": {
-                "Navigator.prototype.userAgent": 2,
-                "Date.prototype.getTime": 2,
-                "Navigator.prototype.appVersion": 2
-            },
-            "sites": 2,
-            "prevalence": 0.000206,
-            "cnames": [],
-            "type": "Script"
-        },
-        {
-            "rule": "microsoft\\.com\\/bundles\\/scripts\\/site",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "account"
-            ],
-            "apis": {
-                "window.matchMedia(\"prefers-reduced-motion\")": 2,
-                "window.sessionStorage": 2,
-                "Navigator.prototype.userAgent": 2
-            },
-            "sites": 2,
-            "prevalence": 0.000206,
-            "cnames": [],
-            "type": "Script"
-        },
-        {
-            "rule": "microsoft\\.com\\/dist\\/oneui\\.razor\\/public\\/scripts\\/amx\\.min\\.js",
-            "cookies": 0.000103,
-            "fingerprinting": 0,
-            "subdomains": [
-                "account"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000206,
-            "cnames": [],
-            "type": "Script"
         },
         {
             "rule": "microsoft\\.com\\/onerfstatics\\/marketingsites-neu-prod\\/shell\\/_scrf\\/js\\/themes=default\\/54-af9f9f\\/c0-247156\\/de-099401\\/e1-a50eee\\/e7-954872\\/d8-97d509\\/f0-251fe2\\/46-be1318\\/77-04a268\\/11-240c7b\\/63-077520\\/a4-34de62\\/bb-d7480b\\/db-bc0148\\/dc-7e9864\\/78-4c7d22\\/e1-c35781\\/23-c64e70\\/cd-23d3b0\\/6d-1e7ed0\\/b7-cadaa7\\/ca-40b7b0\\/4e-ee3a55\\/3e-f5c39b\\/c3-6454d7\\/f9-7592d3\\/92-10345d\\/79-499886\\/7e-cda2d3\\/b2-7087f0\\/ab-30f5b9\\/e0-3c9860\\/91-97a04f\\/1f-100dea\\/33-abe4df\\/4d-6e4c52",
@@ -355,19 +289,6 @@
             "prevalence": 0.000515,
             "cnames": [],
             "type": "Script"
-        },
-        {
-            "rule": "microsoft\\.com\\/auth\\/sso\\/",
-            "cookies": 0.000515,
-            "fingerprinting": 0,
-            "subdomains": [
-                "azure"
-            ],
-            "apis": {},
-            "sites": 5,
-            "prevalence": 0.000515,
-            "cnames": [],
-            "type": "Document"
         }
     ],
     "categories": [
@@ -384,10 +305,9 @@
     },
     "cookies": 0.0121,
     "types": {
-        "Script": 166,
+        "Script": 158,
         "Document": 78,
-        "Image": 59,
         "XHR": 66,
-        "Stylesheet": 2
+        "Image": 59
     }
 }

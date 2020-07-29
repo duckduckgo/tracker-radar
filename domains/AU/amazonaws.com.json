@@ -14,24 +14,32 @@
     "subdomains": [
         "s3",
         "easy-redirects.s3-eu-west-1",
+        "groove-widget-production.s3",
         "srsv2.s3",
         "o9tt6h08li.execute-api.eu-west-1",
         "t3t09eztsd.execute-api.us-west-2",
         "a3-assets.s3-eu-west-1",
-        "s3-ap-southeast-2",
-        "sp-20200205162929557200000009-1307135046.eu-central-1.elb",
         "s3-eu-west-1",
-        "checkouts-public.s3",
-        "groove-widget-production.s3"
+        "checkouts-public.s3"
     ],
-    "cnames": [
-        {
-            "original": "sp.ecosia.org",
-            "resolved": "sp-20200205162929557200000009-1307135046.eu-central-1.elb.amazonaws.com"
-        }
-    ],
+    "cnames": [],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "amazonaws\\.com\\/downloads\\.mailchimp\\.com\\/js\\/goal\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "s3"
+            ],
+            "apis": {
+                "Document.cookie getter": 5
+            },
+            "sites": 91,
+            "prevalence": 0.00934,
+            "cnames": [],
+            "type": "Script"
+        },
         {
             "rule": "amazonaws\\.com\\/downloads\\.mailchimp\\.com\\/js\\/mc-validate\\.js",
             "cookies": 0,
@@ -64,21 +72,6 @@
             "type": "Script"
         },
         {
-            "rule": "amazonaws\\.com\\/downloads\\.mailchimp\\.com\\/js\\/goal\\.min\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "s3"
-            ],
-            "apis": {
-                "Document.cookie getter": 5
-            },
-            "sites": 91,
-            "prevalence": 0.00934,
-            "cnames": [],
-            "type": "Script"
-        },
-        {
             "rule": "amazonaws\\.com\\/redirect-app\\.js",
             "cookies": 0,
             "fingerprinting": 1,
@@ -91,6 +84,22 @@
             },
             "sites": 53,
             "prevalence": 0.00544,
+            "cnames": [],
+            "type": "Script"
+        },
+        {
+            "rule": "amazonaws\\.com\\/main-0888432fba2fe606d31c\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "groove-widget-production.s3"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 5,
+                "window.localStorage": 5
+            },
+            "sites": 9,
+            "prevalence": 0.000923,
             "cnames": [],
             "type": "Script"
         },
@@ -183,21 +192,6 @@
             "type": "Script"
         },
         {
-            "rule": "amazonaws\\.com\\/ts-apac-aramamoorthy\\/ps-1503\\/aus-super-abc-targeting\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "s3-ap-southeast-2"
-            ],
-            "apis": {
-                "Navigator.prototype.userAgent": 1
-            },
-            "sites": 2,
-            "prevalence": 0.000205,
-            "cnames": [],
-            "type": "Script"
-        },
-        {
             "rule": "amazonaws\\.com\\/static\\.chartbeat\\.com\\/js\\/chartbeat_video\\.js",
             "cookies": 0.000308,
             "fingerprinting": 2,
@@ -222,24 +216,6 @@
             "prevalence": 0.00041,
             "cnames": [],
             "type": "Script"
-        },
-        {
-            "rule": "amazonaws\\.com\\/com\\.snowplowanalytics\\.snowplow\\/tp2",
-            "cookies": 0.000205,
-            "fingerprinting": 0,
-            "subdomains": [
-                "sp-20200205162929557200000009-1307135046.eu-central-1.elb"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000205,
-            "cnames": [
-                {
-                    "original": "sp.ecosia.org",
-                    "resolved": "sp-20200205162929557200000009-1307135046.eu-central-1.elb.amazonaws.com"
-                }
-            ],
-            "type": "XHR"
         },
         {
             "rule": "amazonaws\\.com\\/optimera-ops\\/oPS\\.js",
@@ -359,22 +335,6 @@
             "prevalence": 0.00267,
             "cnames": [],
             "type": "Script"
-        },
-        {
-            "rule": "amazonaws\\.com\\/main-0888432fba2fe606d31c\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "groove-widget-production.s3"
-            ],
-            "apis": {
-                "Navigator.prototype.userAgent": 5,
-                "window.localStorage": 5
-            },
-            "sites": 9,
-            "prevalence": 0.000923,
-            "cnames": [],
-            "type": "Script"
         }
     ],
     "categories": [
@@ -388,8 +348,8 @@
     },
     "cookies": 0.00205,
     "types": {
-        "Script": 448,
+        "Script": 446,
         "Document": 11,
-        "XHR": 7
+        "XHR": 5
     }
 }

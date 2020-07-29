@@ -14,14 +14,14 @@
     "subdomains": [
         "www",
         "sstats",
+        "entitlement.auth",
+        "sp.auth",
+        "community",
         "helpx",
         "get",
-        "community",
-        "sp.auth",
-        "wwwimages2",
         "acrobat",
         "adobeid-na1.services",
-        "entitlement.auth"
+        "wwwimages2"
     ],
     "cnames": [],
     "fingerprinting": 3,
@@ -53,49 +53,20 @@
             "type": "XHR"
         },
         {
-            "rule": "adobe\\.com\\/",
-            "cookies": 0.000515,
+            "rule": "adobe\\.com\\/entitlement\\/v4\\/AccessEnabler\\.js",
+            "cookies": 0,
             "fingerprinting": 1,
             "subdomains": [
-                "helpx",
-                "get",
-                "community",
-                "www"
+                "entitlement.auth"
             ],
             "apis": {
-                "Date.prototype.getTime": 1,
-                "window.localStorage": 1
+                "console.memory": 6,
+                "Document.cookie getter": 6
             },
-            "sites": 12,
-            "prevalence": 0.00124,
+            "sites": 13,
+            "prevalence": 0.00134,
             "cnames": [],
-            "type": "Document"
-        },
-        {
-            "rule": "adobe\\.com\\/o\\/client\\/token",
-            "cookies": 0.00165,
-            "fingerprinting": 0,
-            "subdomains": [
-                "sp.auth"
-            ],
-            "apis": {},
-            "sites": 16,
-            "prevalence": 0.00165,
-            "cnames": [],
-            "type": "XHR"
-        },
-        {
-            "rule": "adobe\\.com\\/adobe-services\\/config\\/msnbc",
-            "cookies": 0.00103,
-            "fingerprinting": 0,
-            "subdomains": [
-                "sp.auth"
-            ],
-            "apis": {},
-            "sites": 10,
-            "prevalence": 0.00103,
-            "cnames": [],
-            "type": "XHR"
+            "type": "Script"
         },
         {
             "rule": "adobe\\.com\\/entitlement\\/v4\\/AccessEnablerProxy\\.js",
@@ -152,19 +123,6 @@
             "type": "Script"
         },
         {
-            "rule": "adobe\\.com\\/adobe-services\\/config\\/BBCA",
-            "cookies": 0.000206,
-            "fingerprinting": 0,
-            "subdomains": [
-                "sp.auth"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000206,
-            "cnames": [],
-            "type": "XHR"
-        },
-        {
             "rule": "adobe\\.com\\/b\\/ss\\/adbadobenonacdcprod,adbadobeprototype\\/10\\/JS-2\\.20\\.0-LAUN\\/s82407006943909",
             "cookies": 0.000206,
             "fingerprinting": 0,
@@ -191,6 +149,51 @@
             "type": "Image"
         },
         {
+            "rule": "adobe\\.com\\/",
+            "cookies": 0.000515,
+            "fingerprinting": 1,
+            "subdomains": [
+                "helpx",
+                "get",
+                "community",
+                "www"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 1,
+                "window.localStorage": 1
+            },
+            "sites": 12,
+            "prevalence": 0.00124,
+            "cnames": [],
+            "type": "Document"
+        },
+        {
+            "rule": "adobe\\.com\\/o\\/client\\/token",
+            "cookies": 0.00165,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sp.auth"
+            ],
+            "apis": {},
+            "sites": 16,
+            "prevalence": 0.00165,
+            "cnames": [],
+            "type": "XHR"
+        },
+        {
+            "rule": "adobe\\.com\\/adobe-services\\/config\\/msnbc",
+            "cookies": 0.00103,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sp.auth"
+            ],
+            "apis": {},
+            "sites": 10,
+            "prevalence": 0.00103,
+            "cnames": [],
+            "type": "XHR"
+        },
+        {
             "rule": "adobe\\.com\\/services\\/feds\\.res_1\\.js\\/head\\/en\\/acom\\.js",
             "cookies": 0,
             "fingerprinting": 1,
@@ -206,19 +209,6 @@
             "type": "Script"
         },
         {
-            "rule": "adobe\\.com\\/entitlement\\/lib\\/AccessEnablerHelper\\.js",
-            "cookies": 0.000103,
-            "fingerprinting": 0,
-            "subdomains": [
-                "sp.auth"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000206,
-            "cnames": [],
-            "type": "Script"
-        },
-        {
             "rule": "adobe\\.com\\/adobe-services\\/config\\/HISTORY",
             "cookies": 0.000309,
             "fingerprinting": 0,
@@ -230,34 +220,6 @@
             "prevalence": 0.000309,
             "cnames": [],
             "type": "XHR"
-        },
-        {
-            "rule": "adobe\\.com\\/services\\/feds\\.res_1\\.html\\/en\\/acom\\/www\\.adobe\\.com\\.html",
-            "cookies": 0.000103,
-            "fingerprinting": 0,
-            "subdomains": [
-                "www"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000206,
-            "cnames": [],
-            "type": "Fetch"
-        },
-        {
-            "rule": "adobe\\.com\\/etc\\/beagle\\/public\\/globalnav\\/adobe-privacy\\/stable\\/privacy\\.min\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "wwwimages2"
-            ],
-            "apis": {
-                "Date.prototype.getTime": 1
-            },
-            "sites": 2,
-            "prevalence": 0.000206,
-            "cnames": [],
-            "type": "Script"
         },
         {
             "rule": "adobe\\.com\\/etc\\.doccloud\\.dexterlibs\\/doccloud\\/clientlibs\\/head\\.combined\\.fp-3a139c1d9cf7f15ac72f1246943ce737\\.js",
@@ -452,22 +414,6 @@
             "prevalence": 0.000722,
             "cnames": [],
             "type": "Document"
-        },
-        {
-            "rule": "adobe\\.com\\/entitlement\\/v4\\/AccessEnabler\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "entitlement.auth"
-            ],
-            "apis": {
-                "console.memory": 6,
-                "Document.cookie getter": 6
-            },
-            "sites": 13,
-            "prevalence": 0.00134,
-            "cnames": [],
-            "type": "Script"
         }
     ],
     "categories": [],
@@ -480,9 +426,9 @@
     "cookies": 0.00804,
     "types": {
         "Image": 21,
-        "XHR": 81,
+        "XHR": 79,
+        "Script": 55,
         "Document": 19,
-        "Script": 59,
-        "Fetch": 7
+        "Fetch": 5
     }
 }
