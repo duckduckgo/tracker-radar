@@ -14,7 +14,7 @@ These domains were identified by crawling the top sites on the internet, and loo
 - New development and bug fixes, other then broken sites, are handled internally.
 
 ## Domains
-The domain data is stored as individual region-specific JSON files. Within the [domains](/domains) directory are subdirectories which contain domain data files from each regional crawl. A listing of the regions crawled is below:
+The domain data is stored as individual region-specific JSON files. We crawl the most popular domains for each given region. The resulting domain data is stored in region-specific subdirectories within the [domains](/domains) directory:
 
 |**Region Code**|**Region**|
 |---|---|
