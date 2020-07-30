@@ -19,14 +19,6 @@ The domain data is stored as individual region-specific JSON files. We crawl the
 |**Region Code**|**Region**|
 |---|---|
 |**[US](/domains/US)**|United States|
-|**[AU](/domains/AU)**|Australia|
-|**[CA](/domains/CA)**|Canada|
-|**[CH](/domains/CH)**|Switzerland|
-|**[DE](/domains/DE)**|Germany|
-|**[FR](/domains/FR)**|France|
-|**[GB](/domains/GB)**|Great Britain|
-|**[NL](/domains/NL)**|Netherlands|
-|**[NO](/domains/NO)**|Norway|
 
 Domains are grouped by their domain name and IDNA encoded.
 
