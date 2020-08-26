@@ -9,11 +9,13 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.000139,
-    "sites": 10,
+    "prevalence": 0.00025,
+    "sites": 34,
     "subdomains": [
+        "oneottprodapi",
         "drinkaware-api",
         "apim-gw-azu-nyc-prod",
+        "aswest2extprodampwapi",
         "qiagenapi"
     ],
     "cnames": [
@@ -28,63 +30,93 @@
         {
             "original": "api.qiagen.com",
             "resolved": "qiagenapi.azure-api.net"
+        },
+        {
+            "original": "api2.oregonlottery.org",
+            "resolved": "aswest2extprodampwapi.azure-api.net"
         }
     ],
     "fingerprinting": 0,
     "resources": [
         {
+            "rule": "azure-api\\.net\\/news-analytics\\/news\\/pageviews",
+            "cookies": 0.0000147,
+            "fingerprinting": 0,
+            "subdomains": [
+                "oneottprodapi"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000147,
+            "cnames": []
+        },
+        {
             "rule": "azure-api\\.net\\/content\\/dictionary",
-            "cookies": 0.0000277,
+            "cookies": 0.0000147,
             "fingerprinting": 0,
             "subdomains": [
                 "drinkaware-api"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000277,
+            "prevalence": 0.0000147,
             "cnames": [
                 {
                     "original": "api.drinkaware.co.uk",
                     "resolved": "drinkaware-api.azure-api.net"
                 }
-            ],
-            "type": "XHR"
+            ]
         },
         {
             "rule": "azure-api\\.net\\/public\\/api\\/GetCalendar",
-            "cookies": 0.0000416,
+            "cookies": 0.0000221,
             "fingerprinting": 0,
             "subdomains": [
                 "apim-gw-azu-nyc-prod"
             ],
             "apis": {},
             "sites": 3,
-            "prevalence": 0.0000416,
+            "prevalence": 0.0000221,
             "cnames": [
                 {
                     "original": "api.nyc.gov",
                     "resolved": "apim-gw-azu-nyc-prod.azure-api.net"
                 }
+            ]
+        },
+        {
+            "rule": "azure-api\\.net\\/drawresults\\/MostRecentDraws",
+            "cookies": 0.0000147,
+            "fingerprinting": 0,
+            "subdomains": [
+                "aswest2extprodampwapi"
             ],
-            "type": "XHR"
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000147,
+            "cnames": [
+                {
+                    "original": "api2.oregonlottery.org",
+                    "resolved": "aswest2extprodampwapi.azure-api.net"
+                }
+            ]
         },
         {
             "rule": "azure-api\\.net\\/header-frontend\\/user",
-            "cookies": 0.0000277,
+            "cookies": 0.0000147,
             "fingerprinting": 0,
             "subdomains": [
                 "qiagenapi"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000277,
+            "prevalence": 0.0000147,
             "cnames": [
                 {
                     "original": "api.qiagen.com",
                     "resolved": "qiagenapi.azure-api.net"
                 }
-            ],
-            "type": "XHR"
+            ]
         }
     ],
     "categories": [],
@@ -94,8 +126,8 @@
         "cpu": 0,
         "cache": 0
     },
-    "cookies": 0.0000693,
+    "cookies": 0.0000882,
     "types": {
-        "XHR": 7
+        "XHR": 11
     }
 }

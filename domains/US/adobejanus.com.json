@@ -4,16 +4,21 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.000194,
-    "sites": 14,
+    "prevalence": 0.000176,
+    "sites": 24,
     "subdomains": [
         "adobelogin-static.prod.ims",
-        "services.prod.ims"
+        "services.prod.ims",
+        "adobelogin.prod.ims"
     ],
     "cnames": [
         {
             "original": "adobeid-na1.services.adobe.com",
             "resolved": "services.prod.ims.adobejanus.com"
+        },
+        {
+            "original": "ims-na1.adobelogin.com",
+            "resolved": "adobelogin.prod.ims.adobejanus.com"
         },
         {
             "original": "static.adobelogin.com",
@@ -30,40 +35,56 @@
                 "adobelogin-static.prod.ims"
             ],
             "apis": {},
-            "sites": 9,
-            "prevalence": 0.000125,
+            "sites": 8,
+            "prevalence": 0.0000588,
             "cnames": [
                 {
                     "original": "static.adobelogin.com",
                     "resolved": "adobelogin-static.prod.ims.adobejanus.com"
                 }
-            ],
-            "type": "Script"
+            ]
         },
         {
             "rule": "adobejanus\\.com\\/ims\\/check\\/v4\\/token",
-            "cookies": 0.00018,
+            "cookies": 0.000103,
             "fingerprinting": 0,
             "subdomains": [
                 "services.prod.ims"
             ],
             "apis": {},
-            "sites": 13,
-            "prevalence": 0.00018,
+            "sites": 14,
+            "prevalence": 0.000103,
             "cnames": [
                 {
                     "original": "adobeid-na1.services.adobe.com",
                     "resolved": "services.prod.ims.adobejanus.com"
                 }
+            ]
+        },
+        {
+            "rule": "adobejanus\\.com\\/ims\\/authorize\\/v1",
+            "cookies": 0.0000147,
+            "fingerprinting": 0,
+            "subdomains": [
+                "adobelogin.prod.ims"
             ],
-            "type": "XHR"
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000147,
+            "cnames": [
+                {
+                    "original": "ims-na1.adobelogin.com",
+                    "resolved": "adobelogin.prod.ims.adobejanus.com"
+                }
+            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000194,
+    "cookies": 0.000169,
     "types": {
-        "Script": 9,
-        "XHR": 13
+        "Script": 8,
+        "XHR": 14,
+        "Document": 2
     }
 }

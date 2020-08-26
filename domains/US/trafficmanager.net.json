@@ -9,33 +9,41 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.00111,
-    "sites": 80,
+    "prevalence": 0.000993,
+    "sites": 135,
     "subdomains": [
+        "realm",
+        "nslc-prod-app",
         "dig-ixiaa-prod",
-        "schuh-uks-api-tm-prod",
+        "cdn.platform",
+        "prd-ase-petsmartapi",
+        "advwebtracking",
         "transat-clientapi",
         "xz-e-p-bgetmg-p-10",
         "xz-e-p-comedtmg-p-10",
         "xz-e-p-pecotmg-p-10",
         "xz-e-p-pepcotmg-p-10",
         "serviceschipotlecom",
-        "realm",
-        "nslc-prod-app",
-        "api-visitor-tm"
+        "catalogoclaro",
+        "schuh-uks-api-tm-prod",
+        "gypstatic"
     ],
     "cnames": [
         {
-            "original": "api-visitor.interviewme.pl",
-            "resolved": "api-visitor-tm.trafficmanager.net"
+            "original": "adoptions-api.petsmart.com",
+            "resolved": "prd-ase-petsmartapi.trafficmanager.net"
         },
         {
-            "original": "api-visitor.zety.com",
-            "resolved": "api-visitor-tm.trafficmanager.net"
+            "original": "advwebtracking.advantech.com",
+            "resolved": "advwebtracking.trafficmanager.net"
         },
         {
             "original": "bc.ixiaa.com",
             "resolved": "dig-ixiaa-prod.trafficmanager.net"
+        },
+        {
+            "original": "catalogo.claro.com.pe",
+            "resolved": "catalogoclaro.trafficmanager.net"
         },
         {
             "original": "clientapi.airtransat.com",
@@ -76,56 +84,198 @@
         {
             "original": "services.chipotle.com",
             "resolved": "serviceschipotlecom.trafficmanager.net"
+        },
+        {
+            "original": "st0.xo.gr",
+            "resolved": "gypstatic.trafficmanager.net"
+        },
+        {
+            "original": "west.cdn.mathletics.com",
+            "resolved": "cdn.platform.trafficmanager.net"
         }
     ],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
+            "rule": "trafficmanager\\.net\\/\\.well-known\\/openid-configuration",
+            "cookies": 0.000118,
+            "fingerprinting": 0,
+            "subdomains": [
+                "realm"
+            ],
+            "apis": {},
+            "sites": 16,
+            "prevalence": 0.000118,
+            "cnames": [
+                {
+                    "original": "realm.hearstnp.com",
+                    "resolved": "realm.trafficmanager.net"
+                }
+            ]
+        },
+        {
+            "rule": "trafficmanager\\.net\\/connect\\/authorize",
+            "cookies": 0.000118,
+            "fingerprinting": 0,
+            "subdomains": [
+                "realm"
+            ],
+            "apis": {},
+            "sites": 16,
+            "prevalence": 0.000118,
+            "cnames": [
+                {
+                    "original": "realm.hearstnp.com",
+                    "resolved": "realm.trafficmanager.net"
+                }
+            ]
+        },
+        {
+            "rule": "trafficmanager\\.net\\/sso\\/idp\\/SAML2",
+            "cookies": 0.0000221,
+            "fingerprinting": 0,
+            "subdomains": [
+                "nslc-prod-app"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000294,
+            "cnames": [
+                {
+                    "original": "login.norton.com",
+                    "resolved": "nslc-prod-app.trafficmanager.net"
+                }
+            ]
+        },
+        {
             "rule": "trafficmanager\\.net\\/a7d649ee-3cd6-4014-9464-4d37789ebb34\\/a\\.js",
-            "cookies": 0.0000554,
+            "cookies": 0.0000441,
             "fingerprinting": 0,
             "subdomains": [
                 "dig-ixiaa-prod"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.0000554,
+            "sites": 6,
+            "prevalence": 0.0000441,
             "cnames": [
                 {
                     "original": "bc.ixiaa.com",
                     "resolved": "dig-ixiaa-prod.trafficmanager.net"
                 }
-            ],
-            "type": "XHR"
+            ]
         },
         {
-            "rule": "trafficmanager\\.net\\/MasterService\\/CheckRedirect",
-            "cookies": 0.0000277,
-            "fingerprinting": 0,
+            "rule": "trafficmanager\\.net\\/html\\/sign-in-page\\/vendor\\.f838797fdc4d89941a88\\.js",
+            "cookies": 0,
+            "fingerprinting": 3,
             "subdomains": [
-                "schuh-uks-api-tm-prod"
+                "cdn.platform"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000277,
+            "prevalence": 0.0000147,
             "cnames": [
                 {
-                    "original": "schuhservice.schuh.co.uk",
-                    "resolved": "schuh-uks-api-tm-prod.trafficmanager.net"
+                    "original": "west.cdn.mathletics.com",
+                    "resolved": "cdn.platform.trafficmanager.net"
                 }
+            ]
+        },
+        {
+            "rule": "trafficmanager\\.net\\/html\\/sign-in-page\\/entry-app\\.cb9da11cb4c8958933b2\\.js",
+            "cookies": 0,
+            "fingerprinting": 3,
+            "subdomains": [
+                "cdn.platform"
             ],
-            "type": "XHR"
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000147,
+            "cnames": [
+                {
+                    "original": "west.cdn.mathletics.com",
+                    "resolved": "cdn.platform.trafficmanager.net"
+                }
+            ]
+        },
+        {
+            "rule": "trafficmanager\\.net\\/v1\\/adoptions",
+            "cookies": 0.0000147,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prd-ase-petsmartapi"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000147,
+            "cnames": [
+                {
+                    "original": "adoptions-api.petsmart.com",
+                    "resolved": "prd-ase-petsmartapi.trafficmanager.net"
+                }
+            ]
+        },
+        {
+            "rule": "trafficmanager\\.net\\/Track\\/track\\.aspx",
+            "cookies": 0.0000147,
+            "fingerprinting": 0,
+            "subdomains": [
+                "advwebtracking"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000147,
+            "cnames": [
+                {
+                    "original": "advwebtracking.advantech.com",
+                    "resolved": "advwebtracking.trafficmanager.net"
+                }
+            ]
+        },
+        {
+            "rule": "trafficmanager\\.net\\/jQuery\\/jquery-1\\.7\\.2\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "advwebtracking"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000147,
+            "cnames": [
+                {
+                    "original": "advwebtracking.advantech.com",
+                    "resolved": "advwebtracking.trafficmanager.net"
+                }
+            ]
+        },
+        {
+            "rule": "trafficmanager\\.net\\/AddRequest\\.ashx",
+            "cookies": 0.0000147,
+            "fingerprinting": 0,
+            "subdomains": [
+                "advwebtracking"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000147,
+            "cnames": [
+                {
+                    "original": "advwebtracking.advantech.com",
+                    "resolved": "advwebtracking.trafficmanager.net"
+                }
+            ]
         },
         {
             "rule": "trafficmanager\\.net\\/api\\/Persistence\\/UpdateCookies\\/",
-            "cookies": 0.0000277,
+            "cookies": 0.0000147,
             "fingerprinting": 0,
             "subdomains": [
                 "transat-clientapi"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000277,
+            "prevalence": 0.0000147,
             "cnames": [
                 {
                     "original": "clientapi.transat.com",
@@ -135,12 +285,11 @@
                     "original": "clientapi.airtransat.com",
                     "resolved": "transat-clientapi.trafficmanager.net"
                 }
-            ],
-            "type": "Document"
+            ]
         },
         {
             "rule": "trafficmanager\\.net\\/api\\/Services\\/MyAccountService\\.svc\\/GetWebUserName",
-            "cookies": 0.0000554,
+            "cookies": 0.0000294,
             "fingerprinting": 0,
             "subdomains": [
                 "xz-e-p-bgetmg-p-10",
@@ -150,7 +299,7 @@
             ],
             "apis": {},
             "sites": 5,
-            "prevalence": 0.0000693,
+            "prevalence": 0.0000368,
             "cnames": [
                 {
                     "original": "secure.bge.com",
@@ -168,12 +317,11 @@
                     "original": "secure.pepco.com",
                     "resolved": "xz-e-p-pepcotmg-p-10.trafficmanager.net"
                 }
-            ],
-            "type": "XHR"
+            ]
         },
         {
             "rule": "trafficmanager\\.net\\/api\\/Services\\/MyAccountService\\.svc\\/IsMaintenanceMode",
-            "cookies": 0.0000693,
+            "cookies": 0.0000368,
             "fingerprinting": 0,
             "subdomains": [
                 "xz-e-p-bgetmg-p-10",
@@ -183,7 +331,7 @@
             ],
             "apis": {},
             "sites": 5,
-            "prevalence": 0.0000693,
+            "prevalence": 0.0000368,
             "cnames": [
                 {
                     "original": "secure.bge.com",
@@ -201,120 +349,92 @@
                     "original": "secure.pepco.com",
                     "resolved": "xz-e-p-pepcotmg-p-10.trafficmanager.net"
                 }
-            ],
-            "type": "XHR"
+            ]
         },
         {
             "rule": "trafficmanager\\.net\\/onlineorderingstatus",
-            "cookies": 0.0000277,
+            "cookies": 0.0000147,
             "fingerprinting": 0,
             "subdomains": [
                 "serviceschipotlecom"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000277,
+            "prevalence": 0.0000147,
             "cnames": [
                 {
                     "original": "services.chipotle.com",
                     "resolved": "serviceschipotlecom.trafficmanager.net"
                 }
-            ],
-            "type": "XHR"
+            ]
         },
         {
-            "rule": "trafficmanager\\.net\\/utility\\/TregTrackLoadTelemetry\\/",
-            "cookies": 0.0000693,
+            "rule": "trafficmanager\\.net\\/miniform-cambiate\\.html",
+            "cookies": 0.0000147,
             "fingerprinting": 0,
             "subdomains": [
-                "realm"
-            ],
-            "apis": {},
-            "sites": 5,
-            "prevalence": 0.0000693,
-            "cnames": [
-                {
-                    "original": "realm.hearstnp.com",
-                    "resolved": "realm.trafficmanager.net"
-                }
-            ],
-            "type": "Script"
-        },
-        {
-            "rule": "trafficmanager\\.net\\/\\.well-known\\/openid-configuration",
-            "cookies": 0.000194,
-            "fingerprinting": 0,
-            "subdomains": [
-                "realm"
-            ],
-            "apis": {},
-            "sites": 14,
-            "prevalence": 0.000194,
-            "cnames": [
-                {
-                    "original": "realm.hearstnp.com",
-                    "resolved": "realm.trafficmanager.net"
-                }
-            ],
-            "type": "XHR"
-        },
-        {
-            "rule": "trafficmanager\\.net\\/connect\\/authorize",
-            "cookies": 0.000125,
-            "fingerprinting": 0,
-            "subdomains": [
-                "realm"
-            ],
-            "apis": {},
-            "sites": 14,
-            "prevalence": 0.000194,
-            "cnames": [
-                {
-                    "original": "realm.hearstnp.com",
-                    "resolved": "realm.trafficmanager.net"
-                }
-            ],
-            "type": "Document"
-        },
-        {
-            "rule": "trafficmanager\\.net\\/sso\\/idp\\/SAML2",
-            "cookies": 0.0000416,
-            "fingerprinting": 0,
-            "subdomains": [
-                "nslc-prod-app"
-            ],
-            "apis": {},
-            "sites": 4,
-            "prevalence": 0.0000554,
-            "cnames": [
-                {
-                    "original": "login.norton.com",
-                    "resolved": "nslc-prod-app.trafficmanager.net"
-                }
-            ],
-            "type": "Document"
-        },
-        {
-            "rule": "trafficmanager\\.net\\/tracking-v6\\.js",
-            "cookies": 0.0000277,
-            "fingerprinting": 1,
-            "subdomains": [
-                "api-visitor-tm"
+                "catalogoclaro"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000277,
+            "prevalence": 0.0000147,
             "cnames": [
                 {
-                    "original": "api-visitor.interviewme.pl",
-                    "resolved": "api-visitor-tm.trafficmanager.net"
-                },
-                {
-                    "original": "api-visitor.zety.com",
-                    "resolved": "api-visitor-tm.trafficmanager.net"
+                    "original": "catalogo.claro.com.pe",
+                    "resolved": "catalogoclaro.trafficmanager.net"
                 }
+            ]
+        },
+        {
+            "rule": "trafficmanager\\.net\\/miniform-oferta\\.html",
+            "cookies": 0.0000147,
+            "fingerprinting": 0,
+            "subdomains": [
+                "catalogoclaro"
             ],
-            "type": "Script"
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000147,
+            "cnames": [
+                {
+                    "original": "catalogo.claro.com.pe",
+                    "resolved": "catalogoclaro.trafficmanager.net"
+                }
+            ]
+        },
+        {
+            "rule": "trafficmanager\\.net\\/MasterService\\/CheckRedirect",
+            "cookies": 0.0000147,
+            "fingerprinting": 0,
+            "subdomains": [
+                "schuh-uks-api-tm-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000147,
+            "cnames": [
+                {
+                    "original": "schuhservice.schuh.co.uk",
+                    "resolved": "schuh-uks-api-tm-prod.trafficmanager.net"
+                }
+            ]
+        },
+        {
+            "rule": "trafficmanager\\.net\\/xosearch\\/Content\\/img\\/bg_misc\\.jpg",
+            "cookies": 0.0000147,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gypstatic"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000147,
+            "cnames": [
+                {
+                    "original": "st0.xo.gr",
+                    "resolved": "gypstatic.trafficmanager.net"
+                }
+            ]
         }
     ],
     "categories": [
@@ -326,10 +446,11 @@
         "cpu": 0,
         "cache": 0
     },
-    "cookies": 0.000554,
+    "cookies": 0.000544,
     "types": {
-        "XHR": 32,
-        "Document": 20,
-        "Script": 7
+        "XHR": 40,
+        "Document": 28,
+        "Script": 6,
+        "Image": 2
     }
 }
