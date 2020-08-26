@@ -9,10 +9,12 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.00043,
-    "sites": 31,
+    "prevalence": 0.000338,
+    "sites": 46,
     "subdomains": [
-        "conrad-prod-gcp-prod"
+        "ee-prod-prod-02",
+        "conrad-prod-gcp-prod",
+        "tmobileprd-prd02"
     ],
     "cnames": [
         {
@@ -26,10 +28,35 @@
         {
             "original": "api.conrad.de",
             "resolved": "conrad-prod-gcp-prod.apigee.net"
+        },
+        {
+            "original": "api.ee.co.uk",
+            "resolved": "ee-prod-prod-02.apigee.net"
+        },
+        {
+            "original": "facade.saas.api.t-mobile.com",
+            "resolved": "tmobileprd-prd02.apigee.net"
         }
     ],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "apigee\\.net\\/v1\\/identity\\/authorize",
+            "cookies": 0.00000735,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ee-prod-prod-02"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000221,
+            "cnames": [
+                {
+                    "original": "api.ee.co.uk",
+                    "resolved": "ee-prod-prod-02.apigee.net"
+                }
+            ]
+        },
         {
             "rule": "apigee\\.net\\/push-js-sdk\\/1\\/push-notifications\\.js",
             "cookies": 0,
@@ -39,7 +66,7 @@
             ],
             "apis": {},
             "sites": 4,
-            "prevalence": 0.0000554,
+            "prevalence": 0.0000294,
             "cnames": [
                 {
                     "original": "api.conrad.de",
@@ -53,19 +80,18 @@
                     "original": "api.conrad.ch",
                     "resolved": "conrad-prod-gcp-prod.apigee.net"
                 }
-            ],
-            "type": "Script"
+            ]
         },
         {
             "rule": "apigee\\.net\\/session\\/1\\/userinfo",
-            "cookies": 0.0000554,
+            "cookies": 0.0000294,
             "fingerprinting": 0,
             "subdomains": [
                 "conrad-prod-gcp-prod"
             ],
             "apis": {},
             "sites": 4,
-            "prevalence": 0.0000554,
+            "prevalence": 0.0000294,
             "cnames": [
                 {
                     "original": "api.conrad.de",
@@ -79,17 +105,34 @@
                     "original": "api.conrad.ch",
                     "resolved": "conrad-prod-gcp-prod.apigee.net"
                 }
+            ]
+        },
+        {
+            "rule": "apigee\\.net\\/reb2-web-auth\\/v2\\/anonymous-token-jwt",
+            "cookies": 0.0000147,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tmobileprd-prd02"
             ],
-            "type": "XHR"
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000147,
+            "cnames": [
+                {
+                    "original": "facade.saas.api.t-mobile.com",
+                    "resolved": "tmobileprd-prd02.apigee.net"
+                }
+            ]
         }
     ],
     "categories": [
         "CDN"
     ],
     "performance": {},
-    "cookies": 0.000097,
+    "cookies": 0.000103,
     "types": {
+        "Document": 3,
         "Script": 4,
-        "XHR": 4
+        "XHR": 6
     }
 }

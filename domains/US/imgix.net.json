@@ -9,15 +9,25 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.00617,
-    "sites": 445,
+    "prevalence": 0.00563,
+    "sites": 766,
     "subdomains": [
+        "bhgst",
         "dos",
         "dss",
-        "iss",
-        "rss"
+        "rss",
+        "unimedias",
+        "remax-prodapp"
     ],
     "cnames": [
+        {
+            "original": "i.unimedias.fr",
+            "resolved": "unimedias.imgix.net"
+        },
+        {
+            "original": "img.bygghemma.se",
+            "resolved": "bhgst.imgix.net"
+        },
         {
             "original": "static.doorsuperstore.co.uk",
             "resolved": "dos.imgix.net"
@@ -27,10 +37,6 @@
             "resolved": "dss.imgix.net"
         },
         {
-            "original": "static.insulationsuperstore.co.uk",
-            "resolved": "iss.imgix.net"
-        },
-        {
             "original": "static.roofingsuperstore.co.uk",
             "resolved": "rss.imgix.net"
         }
@@ -38,18 +44,51 @@
     "fingerprinting": 1,
     "resources": [
         {
+            "rule": "imgix\\.net\\/dist\\/4149\\/bygghemma\\/client\\/vendors\\.fa98c79a53aa1b07b9a5\\.chunk\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "bhgst"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000147,
+            "cnames": [
+                {
+                    "original": "img.bygghemma.se",
+                    "resolved": "bhgst.imgix.net"
+                }
+            ]
+        },
+        {
+            "rule": "imgix\\.net\\/dist\\/4149\\/bygghemma\\/client\\/commons\\.14cae334f44c40d9a9a6\\.chunk\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "bhgst"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000147,
+            "cnames": [
+                {
+                    "original": "img.bygghemma.se",
+                    "resolved": "bhgst.imgix.net"
+                }
+            ]
+        },
+        {
             "rule": "imgix\\.net\\/themes\\/base\\/assets\\/js\\/footer\\.min\\.js",
             "cookies": 0,
             "fingerprinting": 1,
             "subdomains": [
                 "dos",
                 "dss",
-                "iss",
                 "rss"
             ],
             "apis": {},
             "sites": 4,
-            "prevalence": 0.0000554,
+            "prevalence": 0.0000294,
             "cnames": [
                 {
                     "original": "static.doorsuperstore.co.uk",
@@ -60,15 +99,88 @@
                     "resolved": "dss.imgix.net"
                 },
                 {
-                    "original": "static.insulationsuperstore.co.uk",
-                    "resolved": "iss.imgix.net"
-                },
-                {
                     "original": "static.roofingsuperstore.co.uk",
                     "resolved": "rss.imgix.net"
                 }
+            ]
+        },
+        {
+            "rule": "imgix\\.net\\/atinternet\\/par\\/xtcore\\.js",
+            "cookies": 0.0000147,
+            "fingerprinting": 2,
+            "subdomains": [
+                "unimedias"
             ],
-            "type": "Script"
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000147,
+            "cnames": [
+                {
+                    "original": "i.unimedias.fr",
+                    "resolved": "unimedias.imgix.net"
+                }
+            ]
+        },
+        {
+            "rule": "imgix\\.net\\/main\\.e3c780e2ef21d4a4588e\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "remax-prodapp"
+            ],
+            "apis": {
+                "window.matchMedia(\"prefers-reduced-motion\")": 2,
+                "window.localStorage": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Date.prototype.getTime": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000147,
+            "cnames": []
+        },
+        {
+            "rule": "imgix\\.net\\/polyfills\\.a112881d45c9dd9c8ad2\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "remax-prodapp"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000147,
+            "cnames": []
+        },
+        {
+            "rule": "imgix\\.net\\/scripts\\.92a65c5b3c9e0ba27d9b\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "remax-prodapp"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000147,
+            "cnames": []
+        },
+        {
+            "rule": "imgix\\.net\\/vendor\\.d48556597456f619a0f5\\.js",
+            "cookies": 0.0000147,
+            "fingerprinting": 1,
+            "subdomains": [
+                "remax-prodapp"
+            ],
+            "apis": {
+                "Document.cookie setter": 2,
+                "Document.cookie getter": 2,
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000147,
+            "cnames": []
         }
     ],
     "categories": [
@@ -80,8 +192,9 @@
         "cpu": 0,
         "cache": 1
     },
-    "cookies": 0.0000416,
+    "cookies": 0.0000441,
     "types": {
-        "Script": 4
+        "Script": 10,
+        "Fetch": 8
     }
 }

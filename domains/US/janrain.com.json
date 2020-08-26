@@ -7,12 +7,18 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.000111,
-    "sites": 8,
+    "prevalence": 0.00011,
+    "sites": 15,
     "subdomains": [
-        "cdn-social"
+        "cdn-social",
+        "login-beachbody-com.api.us"
     ],
-    "cnames": [],
+    "cnames": [
+        {
+            "original": "login.beachbody.com",
+            "resolved": "login-beachbody-com.api.us.janrain.com"
+        }
+    ],
     "fingerprinting": 1,
     "resources": [
         {
@@ -23,14 +29,30 @@
                 "cdn-social"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 3,
-                "Date.prototype.getTime": 3,
-                "window.localStorage": 3
+                "Date.prototype.getTime": 7,
+                "window.localStorage": 7,
+                "Navigator.prototype.userAgent": 6
             },
-            "sites": 3,
-            "prevalence": 0.0000416,
-            "cnames": [],
-            "type": "Script"
+            "sites": 7,
+            "prevalence": 0.0000515,
+            "cnames": []
+        },
+        {
+            "rule": "janrain\\.com\\/03ed5554-4840-327e-9346-6e5c74000000\\/auth-ui\\/login",
+            "cookies": 0.0000147,
+            "fingerprinting": 0,
+            "subdomains": [
+                "login-beachbody-com.api.us"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000147,
+            "cnames": [
+                {
+                    "original": "login.beachbody.com",
+                    "resolved": "login-beachbody-com.api.us.janrain.com"
+                }
+            ]
         }
     ],
     "categories": [],
@@ -40,8 +62,9 @@
         "cpu": 0,
         "cache": 3
     },
-    "cookies": 0.0000139,
+    "cookies": 0.0000147,
     "types": {
-        "Script": 3
+        "Script": 7,
+        "Document": 2
     }
 }

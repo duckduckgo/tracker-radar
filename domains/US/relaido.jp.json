@@ -4,30 +4,33 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000416,
-    "sites": 3,
+    "prevalence": 0.000221,
+    "sites": 30,
     "subdomains": [
-        "api",
-        "cdn"
+        "cdn",
+        "sync",
+        "api"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
         {
-            "rule": "relaido\\.jp\\/tr\\/v1\\/uuid",
-            "cookies": 0.0000416,
-            "fingerprinting": 0,
+            "rule": "relaido\\.jp\\/rplayer\\/rplayer\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
             "subdomains": [
-                "api"
+                "cdn"
             ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000416,
-            "cnames": [],
-            "type": "Script"
+            "apis": {
+                "Navigator.prototype.userAgent": 6,
+                "window.localStorage": 6
+            },
+            "sites": 6,
+            "prevalence": 0.0000441,
+            "cnames": []
         },
         {
-            "rule": "relaido\\.jp\\/rplayer\\/rplayer\\.js",
+            "rule": "relaido\\.jp\\/rplayer\\/uplayer\\.js",
             "cookies": 0,
             "fingerprinting": 1,
             "subdomains": [
@@ -38,9 +41,37 @@
                 "window.localStorage": 2
             },
             "sites": 2,
-            "prevalence": 0.0000277,
-            "cnames": [],
-            "type": "Script"
+            "prevalence": 0.0000147,
+            "cnames": []
+        },
+        {
+            "rule": "relaido\\.jp\\/sync\\.js",
+            "cookies": 0.0000588,
+            "fingerprinting": 2,
+            "subdomains": [
+                "sync"
+            ],
+            "apis": {
+                "Navigator.prototype.product": 8,
+                "Navigator.prototype.userAgent": 8,
+                "Document.cookie getter": 8,
+                "Document.cookie setter": 8
+            },
+            "sites": 8,
+            "prevalence": 0.0000588,
+            "cnames": []
+        },
+        {
+            "rule": "relaido\\.jp\\/tr\\/v1\\/uuid",
+            "cookies": 0.0000882,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 12,
+            "prevalence": 0.0000882,
+            "cnames": []
         }
     ],
     "categories": [],
@@ -50,8 +81,8 @@
         "cpu": 0,
         "cache": 0
     },
-    "cookies": 0.0000416,
+    "cookies": 0.000103,
     "types": {
-        "Script": 5
+        "Script": 28
     }
 }
