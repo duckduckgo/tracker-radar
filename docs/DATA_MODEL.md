@@ -22,7 +22,6 @@ The domain data is stored as individual region-specific JSON files. We crawl the
 |**[AU](/domains/AU)**|Austrailia|
 |**[CA](/domains/CA)**|Canada|
 |**[DE](/domains/DE)**|Germany|
-|**[CH](/domains/CH)**|Switzerland|
 |**[FR](/domains/FR)**|France|
 |**[GB](/domains/GB)**|Great Britain|
 |**[NL](/domains/NL)**|Netherlands|
