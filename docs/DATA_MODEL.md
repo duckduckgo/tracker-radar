@@ -19,7 +19,7 @@ The domain data is stored as individual region-specific JSON files. We crawl the
 |**Region Code**|**Region**|
 |---|---|
 |**[US](/domains/US)**|United States|
-|**[AU](/domains/AU)**|Austrailia|
+|**[AU](/domains/AU)**|Australia|
 |**[CA](/domains/CA)**|Canada|
 |**[DE](/domains/DE)**|Germany|
 |**[FR](/domains/FR)**|France|
