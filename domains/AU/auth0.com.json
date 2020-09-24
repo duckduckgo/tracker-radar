@@ -7,22 +7,20 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.00142,
-    "sites": 14,
+    "prevalence": 0.00162,
+    "sites": 16,
     "subdomains": [
         "arduino-prod-cd-7d4guw5p2tbeio38.edge.tenants",
-        "hashicorp-cd-uiujfnz9rprgm4yc.edge.tenants",
+        "makermedia",
         "newyorkmedia-cd-xglicwlvftem6afq.edge.tenants",
+        "tradelink-bigcommerce-prod-cd-xikfehzx64xu37pk.edge.tenants.au",
+        "mng-prod",
         "theeconomist-cd-8z7hhx8vxuw2efbz.edge.tenants.eu",
-        "lendi-customer-production-cd-rdlslelgydlwue81.edge.tenants.au",
         "native-prod-cd-yncplrbkvveyjcxu.edge.tenants.eu",
-        "natgeo-cd-2md8k4cqoq8hgxsu.edge.tenants"
+        "natgeo-cd-2md8k4cqoq8hgxsu.edge.tenants",
+        "cdn"
     ],
     "cnames": [
-        {
-            "original": "auth.hashicorp.com",
-            "resolved": "hashicorp-cd-uiujfnz9rprgm4yc.edge.tenants.auth0.com"
-        },
         {
             "original": "auth.native-instruments.com",
             "resolved": "native-prod-cd-yncplrbkvveyjcxu.edge.tenants.eu.auth0.com"
@@ -32,12 +30,12 @@
             "resolved": "theeconomist-cd-8z7hhx8vxuw2efbz.edge.tenants.eu.auth0.com"
         },
         {
-            "original": "identity.nationalgeographic.com",
-            "resolved": "natgeo-cd-2md8k4cqoq8hgxsu.edge.tenants.auth0.com"
+            "original": "bcauth.tradelink.com.au",
+            "resolved": "tradelink-bigcommerce-prod-cd-xikfehzx64xu37pk.edge.tenants.au.auth0.com"
         },
         {
-            "original": "lala.lendi.com.au",
-            "resolved": "lendi-customer-production-cd-rdlslelgydlwue81.edge.tenants.au.auth0.com"
+            "original": "identity.nationalgeographic.com",
+            "resolved": "natgeo-cd-2md8k4cqoq8hgxsu.edge.tenants.auth0.com"
         },
         {
             "original": "login.arduino.cc",
@@ -52,40 +50,37 @@
     "resources": [
         {
             "rule": "auth0\\.com\\/authorize",
-            "cookies": 0.00091,
+            "cookies": 0.000811,
             "fingerprinting": 0,
             "subdomains": [
                 "arduino-prod-cd-7d4guw5p2tbeio38.edge.tenants",
-                "hashicorp-cd-uiujfnz9rprgm4yc.edge.tenants",
+                "makermedia",
                 "newyorkmedia-cd-xglicwlvftem6afq.edge.tenants",
+                "tradelink-bigcommerce-prod-cd-xikfehzx64xu37pk.edge.tenants.au",
+                "mng-prod",
                 "theeconomist-cd-8z7hhx8vxuw2efbz.edge.tenants.eu",
-                "lendi-customer-production-cd-rdlslelgydlwue81.edge.tenants.au",
                 "native-prod-cd-yncplrbkvveyjcxu.edge.tenants.eu",
                 "natgeo-cd-2md8k4cqoq8hgxsu.edge.tenants"
             ],
             "apis": {},
-            "sites": 9,
-            "prevalence": 0.00091,
+            "sites": 10,
+            "prevalence": 0.00101,
             "cnames": [
                 {
                     "original": "login.arduino.cc",
                     "resolved": "arduino-prod-cd-7d4guw5p2tbeio38.edge.tenants.auth0.com"
                 },
                 {
-                    "original": "auth.hashicorp.com",
-                    "resolved": "hashicorp-cd-uiujfnz9rprgm4yc.edge.tenants.auth0.com"
-                },
-                {
                     "original": "login.nymag.com",
                     "resolved": "newyorkmedia-cd-xglicwlvftem6afq.edge.tenants.auth0.com"
                 },
                 {
-                    "original": "authenticate.economist.com",
-                    "resolved": "theeconomist-cd-8z7hhx8vxuw2efbz.edge.tenants.eu.auth0.com"
+                    "original": "bcauth.tradelink.com.au",
+                    "resolved": "tradelink-bigcommerce-prod-cd-xikfehzx64xu37pk.edge.tenants.au.auth0.com"
                 },
                 {
-                    "original": "lala.lendi.com.au",
-                    "resolved": "lendi-customer-production-cd-rdlslelgydlwue81.edge.tenants.au.auth0.com"
+                    "original": "authenticate.economist.com",
+                    "resolved": "theeconomist-cd-8z7hhx8vxuw2efbz.edge.tenants.eu.auth0.com"
                 },
                 {
                     "original": "auth.native-instruments.com",
@@ -96,6 +91,23 @@
                     "resolved": "natgeo-cd-2md8k4cqoq8hgxsu.edge.tenants.auth0.com"
                 }
             ]
+        },
+        {
+            "rule": "auth0\\.com\\/js\\/lock\\/11\\.22\\.2\\/lock\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.appName": 2,
+                "Date.prototype.getTime": 2,
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": []
         }
     ],
     "categories": [],
@@ -105,8 +117,9 @@
         "cpu": 0,
         "cache": 1
     },
-    "cookies": 0.00091,
+    "cookies": 0.000913,
     "types": {
-        "Document": 9
+        "Document": 10,
+        "Script": 2
     }
 }
