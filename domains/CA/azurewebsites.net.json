@@ -9,50 +9,101 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.00957,
-    "sites": 94,
+    "prevalence": 0.00976,
+    "sites": 95,
     "subdomains": [
+        "stickyaddtocartbar",
         "rcapiuseridexchange",
         "tlweb-postaway",
-        "onea-analytics",
-        "prod-anchorage-proxy-connext",
         "prod-ajc-proxy-connext",
+        "prod-mng-api-proxy-connext",
         "prod-saltwire-proxy-connext",
+        "prod-newsday-proxy-connext",
         "prod-review-journal-proxy-connext",
+        "prod-tampabay-proxy-connext",
         "yoopifyapi",
+        "cr-temp-ibiace",
+        "gnass-sitesettings-service-webapi-prod-we",
+        "gape-pricingservice-webapi-prod-we",
         "mb-usa-tagging-tagserver-prod",
-        "toyota-tagging-tagserver-prod"
+        "mazda-tagging-tagserver-prod"
     ],
     "cnames": [
         {
             "original": "postaway.translink.ca",
             "resolved": "tlweb-postaway.azurewebsites.net"
+        },
+        {
+            "original": "pricingapi.jabra.com",
+            "resolved": "gape-pricingservice-webapi-prod-we.azurewebsites.net"
+        },
+        {
+            "original": "sitesettingsapi.jabra.com",
+            "resolved": "gnass-sitesettings-service-webapi-prod-we.azurewebsites.net"
         }
     ],
     "fingerprinting": 1,
     "resources": [
         {
+            "rule": "azurewebsites\\.net\\/Scripts\\/satcb\\.min\\.js",
+            "cookies": 0.000205,
+            "fingerprinting": 1,
+            "subdomains": [
+                "stickyaddtocartbar"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000205,
+            "cnames": []
+        },
+        {
+            "rule": "azurewebsites\\.net\\/Home\\/LoadStickyCart",
+            "cookies": 0.000205,
+            "fingerprinting": 0,
+            "subdomains": [
+                "stickyaddtocartbar"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000205,
+            "cnames": []
+        },
+        {
             "rule": "azurewebsites\\.net\\/api\\/user",
-            "cookies": 0.000305,
+            "cookies": 0.000205,
             "fingerprinting": 0,
             "subdomains": [
                 "rcapiuseridexchange"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000305,
+            "sites": 2,
+            "prevalence": 0.000205,
+            "cnames": []
+        },
+        {
+            "rule": "azurewebsites\\.net\\/api\\/user",
+            "cookies": 0.000205,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rcapiuseridexchange"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000205,
             "cnames": []
         },
         {
             "rule": "azurewebsites\\.net\\/api\\/report-csp",
-            "cookies": 0.000204,
+            "cookies": 0.000205,
             "fingerprinting": 0,
             "subdomains": [
                 "tlweb-postaway"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000204,
+            "prevalence": 0.000205,
             "cnames": [
                 {
                     "original": "postaway.translink.ca",
@@ -61,67 +112,175 @@
             ]
         },
         {
-            "rule": "azurewebsites\\.net\\/analytics",
-            "cookies": 0.000204,
+            "rule": "azurewebsites\\.net\\/api\\/views",
+            "cookies": 0.000308,
             "fingerprinting": 0,
             "subdomains": [
-                "onea-analytics"
+                "prod-ajc-proxy-connext",
+                "prod-mng-api-proxy-connext",
+                "prod-saltwire-proxy-connext",
+                "prod-newsday-proxy-connext",
+                "prod-review-journal-proxy-connext",
+                "prod-tampabay-proxy-connext"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000204,
+            "sites": 12,
+            "prevalence": 0.00123,
             "cnames": []
         },
         {
             "rule": "azurewebsites\\.net\\/api\\/views",
-            "cookies": 0.000814,
+            "cookies": 0.00123,
             "fingerprinting": 0,
             "subdomains": [
-                "prod-anchorage-proxy-connext",
                 "prod-ajc-proxy-connext",
+                "prod-mng-api-proxy-connext",
                 "prod-saltwire-proxy-connext",
-                "prod-review-journal-proxy-connext"
+                "prod-newsday-proxy-connext",
+                "prod-review-journal-proxy-connext",
+                "prod-tampabay-proxy-connext"
             ],
             "apis": {},
-            "sites": 8,
-            "prevalence": 0.000814,
+            "sites": 12,
+            "prevalence": 0.00123,
             "cnames": []
         },
         {
             "rule": "azurewebsites\\.net\\/api\\/v2\\/postToolStats\\/views",
-            "cookies": 0.000204,
+            "cookies": 0.000205,
             "fingerprinting": 0,
             "subdomains": [
                 "yoopifyapi"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000204,
+            "prevalence": 0.000205,
+            "cnames": []
+        },
+        {
+            "rule": "azurewebsites\\.net\\/api\\/v2\\/postToolStats\\/views",
+            "cookies": 0.000205,
+            "fingerprinting": 0,
+            "subdomains": [
+                "yoopifyapi"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000205,
             "cnames": []
         },
         {
             "rule": "azurewebsites\\.net\\/api\\/GetCoordinateFromIP",
-            "cookies": 0.000204,
+            "cookies": 0.000205,
             "fingerprinting": 0,
             "subdomains": [
                 "yoopifyapi"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000204,
+            "prevalence": 0.000205,
             "cnames": []
         },
         {
+            "rule": "azurewebsites\\.net\\/Aces\\.js",
+            "cookies": 0.000103,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cr-temp-ibiace"
+            ],
+            "apis": {
+                "window.devicePixelRatio": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000205,
+            "cnames": []
+        },
+        {
+            "rule": "azurewebsites\\.net\\/images\\/Aces_atlas_\\.png",
+            "cookies": 0.000103,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cr-temp-ibiace"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000205,
+            "cnames": []
+        },
+        {
+            "rule": "azurewebsites\\.net\\/aces\\.xml",
+            "cookies": 0.000205,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cr-temp-ibiace"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000205,
+            "cnames": []
+        },
+        {
+            "rule": "azurewebsites\\.net\\/\\/api\\/v1\\/settings",
+            "cookies": 0.000205,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gnass-sitesettings-service-webapi-prod-we"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000205,
+            "cnames": [
+                {
+                    "original": "sitesettingsapi.jabra.com",
+                    "resolved": "gnass-sitesettings-service-webapi-prod-we.azurewebsites.net"
+                }
+            ]
+        },
+        {
+            "rule": "azurewebsites\\.net\\/\\/v1\\/family",
+            "cookies": 0.000205,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gape-pricingservice-webapi-prod-we"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000205,
+            "cnames": [
+                {
+                    "original": "pricingapi.jabra.com",
+                    "resolved": "gape-pricingservice-webapi-prod-we.azurewebsites.net"
+                }
+            ]
+        },
+        {
+            "rule": "azurewebsites\\.net\\/api\\/v1\\/settings",
+            "cookies": 0.000103,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gnass-sitesettings-service-webapi-prod-we"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000205,
+            "cnames": [
+                {
+                    "original": "sitesettingsapi.jabra.com",
+                    "resolved": "gnass-sitesettings-service-webapi-prod-we.azurewebsites.net"
+                }
+            ]
+        },
+        {
             "rule": "azurewebsites\\.net\\/1x1\\.gif",
-            "cookies": 0.000204,
+            "cookies": 0.000308,
             "fingerprinting": 0,
             "subdomains": [
                 "mb-usa-tagging-tagserver-prod",
-                "toyota-tagging-tagserver-prod"
+                "mazda-tagging-tagserver-prod"
             ],
             "apis": {},
             "sites": 3,
-            "prevalence": 0.000305,
+            "prevalence": 0.000308,
             "cnames": []
         }
     ],
@@ -134,11 +293,12 @@
         "cpu": 1,
         "cache": 3
     },
-    "cookies": 0.00295,
+    "cookies": 0.00308,
     "types": {
-        "XHR": 9,
-        "Other": 2,
-        "Fetch": 8,
-        "Image": 3
+        "Script": 4,
+        "XHR": 10,
+        "Other": 18,
+        "Fetch": 18,
+        "Image": 5
     }
 }

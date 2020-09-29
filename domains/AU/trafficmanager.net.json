@@ -9,13 +9,18 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.00131,
+    "prevalence": 0.00132,
     "sites": 13,
     "subdomains": [
+        "fps-namer",
         "realm",
-        "fps-namer"
+        "gcs-api"
     ],
     "cnames": [
+        {
+            "original": "api.getcreditscore.com.au",
+            "resolved": "gcs-api.trafficmanager.net"
+        },
         {
             "original": "na.fps.ford.com",
             "resolved": "fps-namer.trafficmanager.net"
@@ -28,32 +33,15 @@
     "fingerprinting": 1,
     "resources": [
         {
-            "rule": "trafficmanager\\.net\\/\\.well-known\\/openid-configuration",
-            "cookies": 0.000101,
-            "fingerprinting": 0,
-            "subdomains": [
-                "realm"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [
-                {
-                    "original": "realm.hearstnp.com",
-                    "resolved": "realm.trafficmanager.net"
-                }
-            ]
-        },
-        {
             "rule": "trafficmanager\\.net\\/fps\\/api\\/personalization_1_8\\/set",
-            "cookies": 0.000202,
+            "cookies": 0.000203,
             "fingerprinting": 0,
             "subdomains": [
                 "fps-namer"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000202,
+            "prevalence": 0.000203,
             "cnames": [
                 {
                     "original": "na.fps.ford.com",
@@ -63,18 +51,69 @@
         },
         {
             "rule": "trafficmanager\\.net\\/fps\\/api\\/personalization_1_8\\/get",
-            "cookies": 0.000202,
+            "cookies": 0.000304,
             "fingerprinting": 0,
             "subdomains": [
                 "fps-namer"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
+            "sites": 3,
+            "prevalence": 0.000304,
             "cnames": [
                 {
                     "original": "na.fps.ford.com",
                     "resolved": "fps-namer.trafficmanager.net"
+                }
+            ]
+        },
+        {
+            "rule": "trafficmanager\\.net\\/\\.well-known\\/openid-configuration",
+            "cookies": 0.000203,
+            "fingerprinting": 0,
+            "subdomains": [
+                "realm"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [
+                {
+                    "original": "realm.hearstnp.com",
+                    "resolved": "realm.trafficmanager.net"
+                }
+            ]
+        },
+        {
+            "rule": "trafficmanager\\.net\\/connect\\/authorize",
+            "cookies": 0.000203,
+            "fingerprinting": 0,
+            "subdomains": [
+                "realm"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [
+                {
+                    "original": "realm.hearstnp.com",
+                    "resolved": "realm.trafficmanager.net"
+                }
+            ]
+        },
+        {
+            "rule": "trafficmanager\\.net\\/v1\\/user\\/init",
+            "cookies": 0.000203,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gcs-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [
+                {
+                    "original": "api.getcreditscore.com.au",
+                    "resolved": "gcs-api.trafficmanager.net"
                 }
             ]
         }
@@ -88,8 +127,10 @@
         "cpu": 0,
         "cache": 0
     },
-    "cookies": 0.000708,
+    "cookies": 0.000811,
     "types": {
-        "XHR": 6
+        "XHR": 7,
+        "Document": 2,
+        "Fetch": 2
     }
 }

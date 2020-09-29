@@ -9,11 +9,13 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.00152,
-    "sites": 15,
+    "prevalence": 0.00172,
+    "sites": 17,
     "subdomains": [
         "t",
+        "t1",
         "collector",
+        "survey-ui",
         "au"
     ],
     "cnames": [],
@@ -21,34 +23,47 @@
     "resources": [
         {
             "rule": "effectivemeasure\\.net\\/tag\\.js",
-            "cookies": 0.00152,
+            "cookies": 0.00172,
             "fingerprinting": 2,
             "subdomains": [
-                "t"
+                "t",
+                "t1"
             ],
             "apis": {
-                "Document.cookie setter": 15,
-                "Document.cookie getter": 13,
-                "Date.prototype.getTime": 15,
-                "Navigator.prototype.doNotTrack": 15,
-                "Date.prototype.getTimezoneOffset": 15,
-                "Screen.prototype.height": 15,
-                "Screen.prototype.width": 15
+                "Date.prototype.getTime": 17,
+                "Navigator.prototype.doNotTrack": 17,
+                "Document.cookie setter": 17,
+                "Date.prototype.getTimezoneOffset": 17,
+                "Screen.prototype.height": 17,
+                "Screen.prototype.width": 17,
+                "Document.cookie getter": 12
             },
-            "sites": 15,
-            "prevalence": 0.00152,
+            "sites": 17,
+            "prevalence": 0.00172,
             "cnames": []
         },
         {
             "rule": "effectivemeasure\\.net\\/beacon\\/get",
-            "cookies": 0.00162,
+            "cookies": 0.00183,
             "fingerprinting": 0,
             "subdomains": [
                 "collector"
             ],
             "apis": {},
-            "sites": 16,
-            "prevalence": 0.00162,
+            "sites": 18,
+            "prevalence": 0.00183,
+            "cnames": []
+        },
+        {
+            "rule": "effectivemeasure\\.net\\/beacon\\/set",
+            "cookies": 0.000203,
+            "fingerprinting": 0,
+            "subdomains": [
+                "collector"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
             "cnames": []
         },
         {
@@ -59,8 +74,22 @@
                 "collector"
             ],
             "apis": {},
-            "sites": 16,
-            "prevalence": 0.00162,
+            "sites": 18,
+            "prevalence": 0.00183,
+            "cnames": []
+        },
+        {
+            "rule": "effectivemeasure\\.net\\/survey\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "survey-ui"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 3,
+            "prevalence": 0.000304,
             "cnames": []
         },
         {
@@ -73,7 +102,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000202,
+            "prevalence": 0.000203,
             "cnames": []
         }
     ],
@@ -84,9 +113,10 @@
         "cpu": 0,
         "cache": 3
     },
-    "cookies": 0.00152,
+    "cookies": 0.00172,
     "types": {
-        "Script": 47,
+        "Script": 56,
+        "Fetch": 2,
         "Image": 2
     }
 }

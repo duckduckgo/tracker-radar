@@ -9,13 +9,18 @@
     "source": [
         "DuckDuckGo-GB"
     ],
-    "prevalence": 0.00101,
-    "sites": 10,
+    "prevalence": 0.00163,
+    "sites": 16,
     "subdomains": [
         "nslc-prod-app",
-        "fps-namer"
+        "fps-namer",
+        "idp.redbridge"
     ],
     "cnames": [
+        {
+            "original": "idp.redbridge.gov.uk",
+            "resolved": "idp.redbridge.trafficmanager.net"
+        },
         {
             "original": "login.norton.com",
             "resolved": "nslc-prod-app.trafficmanager.net"
@@ -29,14 +34,14 @@
     "resources": [
         {
             "rule": "trafficmanager\\.net\\/sso\\/idp\\/SAML2",
-            "cookies": 0.000101,
+            "cookies": 0.000204,
             "fingerprinting": 0,
             "subdomains": [
                 "nslc-prod-app"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
+            "sites": 3,
+            "prevalence": 0.000305,
             "cnames": [
                 {
                     "original": "login.norton.com",
@@ -46,14 +51,14 @@
         },
         {
             "rule": "trafficmanager\\.net\\/fps\\/api\\/personalization_1_8\\/set",
-            "cookies": 0.000202,
+            "cookies": 0.000204,
             "fingerprinting": 0,
             "subdomains": [
                 "fps-namer"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000202,
+            "prevalence": 0.000204,
             "cnames": [
                 {
                     "original": "na.fps.ford.com",
@@ -63,18 +68,35 @@
         },
         {
             "rule": "trafficmanager\\.net\\/fps\\/api\\/personalization_1_8\\/get",
-            "cookies": 0.000202,
+            "cookies": 0.000305,
             "fingerprinting": 0,
             "subdomains": [
                 "fps-namer"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
+            "sites": 3,
+            "prevalence": 0.000305,
             "cnames": [
                 {
                     "original": "na.fps.ford.com",
                     "resolved": "fps-namer.trafficmanager.net"
+                }
+            ]
+        },
+        {
+            "rule": "trafficmanager\\.net\\/connect\\/authorize",
+            "cookies": 0.000204,
+            "fingerprinting": 0,
+            "subdomains": [
+                "idp.redbridge"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000204,
+            "cnames": [
+                {
+                    "original": "idp.redbridge.gov.uk",
+                    "resolved": "idp.redbridge.trafficmanager.net"
                 }
             ]
         }
@@ -88,9 +110,9 @@
         "cpu": 0,
         "cache": 0
     },
-    "cookies": 0.000709,
+    "cookies": 0.00102,
     "types": {
-        "Document": 2,
-        "XHR": 4
+        "Document": 5,
+        "XHR": 5
     }
 }
