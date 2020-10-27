@@ -58,6 +58,7 @@ An array of regexes to match against the full URL of significant third-party req
 |**apis**|A list of browser APIs accessed by this resource which are commonly used in fingerprinting|
 |**prevalence**|Percentage of the top sites where this resource was seen|
 |**cnames**|A list of DNS CNAMEs that redirected to this resource|
+|**responseHashes**| A list of SHA256 response body hashes seen for this resource
 
 #### Breaking
 An optional array of resources that can cause breakage if blocked.
