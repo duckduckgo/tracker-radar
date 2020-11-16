@@ -9,12 +9,10 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.000326,
-    "sites": 43,
+    "prevalence": 0.000335,
+    "sites": 44,
     "subdomains": [
-        "tmobileprd-prd02",
-        "conrad-prod-gcp-prod",
-        "drteknologi-prod"
+        "conrad-prod-gcp-prod"
     ],
     "cnames": [
         {
@@ -26,47 +24,52 @@
             "resolved": "conrad-prod-gcp-prod.apigee.net"
         },
         {
-            "original": "api.dr.dk",
-            "resolved": "drteknologi-prod.apigee.net"
-        },
-        {
-            "original": "facade.saas.api.t-mobile.com",
-            "resolved": "tmobileprd-prd02.apigee.net"
+            "original": "api.conrad.de",
+            "resolved": "conrad-prod-gcp-prod.apigee.net"
         }
     ],
     "fingerprinting": 1,
     "resources": [
         {
-            "rule": "apigee\\.net\\/reb2-web-auth\\/v2\\/anonymous-token-jwt",
-            "cookies": 0.0000152,
-            "fingerprinting": 0,
+            "rule": "apigee\\.net\\/push-js-sdk\\/1\\/push-notifications\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
             "subdomains": [
-                "tmobileprd-prd02"
+                "conrad-prod-gcp-prod"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.0000152,
             "cnames": [
                 {
-                    "original": "facade.saas.api.t-mobile.com",
-                    "resolved": "tmobileprd-prd02.apigee.net"
+                    "original": "api.conrad.de",
+                    "resolved": "conrad-prod-gcp-prod.apigee.net"
                 }
             ],
             "responseHashes": [
-                "7833d8a69ab61bc1dac3b6a0620f706be2512e25f38b727500f5b42f4372ab85"
+                "7dc259793298a0cc4083dbe8d9010d3993adf7cb752141999545a82c741a25d8"
+            ],
+            "type": "Script",
+            "exampleSites": [
+                "conrad.de",
+                "www.conrad.de"
             ]
         },
         {
             "rule": "apigee\\.net\\/session\\/1\\/userinfo",
-            "cookies": 0.0000228,
+            "cookies": 0.0000304,
             "fingerprinting": 0,
             "subdomains": [
                 "conrad-prod-gcp-prod"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000228,
+            "sites": 4,
+            "prevalence": 0.0000304,
             "cnames": [
+                {
+                    "original": "api.conrad.de",
+                    "resolved": "conrad-prod-gcp-prod.apigee.net"
+                },
                 {
                     "original": "api.conrad.at",
                     "resolved": "conrad-prod-gcp-prod.apigee.net"
@@ -78,26 +81,13 @@
             ],
             "responseHashes": [
                 "d2001e30502fbb50784004b1d5db8ca87f42981121496f77a6b3c910cc41d900"
-            ]
-        },
-        {
-            "rule": "apigee\\.net\\/cxense\\/public\\/widget\\/data",
-            "cookies": 0.0000152,
-            "fingerprinting": 0,
-            "subdomains": [
-                "drteknologi-prod"
             ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000152,
-            "cnames": [
-                {
-                    "original": "api.dr.dk",
-                    "resolved": "drteknologi-prod.apigee.net"
-                }
-            ],
-            "responseHashes": [
-                "089fdeed8cec8018b2051ad1310a2de28704d204192cc2db72036a6ab1a11bd5"
+            "type": "XHR",
+            "exampleSites": [
+                "conrad.de",
+                "www.conrad.de",
+                "www.conrad.at",
+                "www.conrad.ch"
             ]
         }
     ],
@@ -105,8 +95,9 @@
         "CDN"
     ],
     "performance": {},
-    "cookies": 0.0000683,
+    "cookies": 0.0000685,
     "types": {
-        "XHR": 7
+        "Script": 2,
+        "XHR": 4
     }
 }

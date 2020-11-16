@@ -9,14 +9,12 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.00143,
-    "sites": 14,
+    "prevalence": 0.00132,
+    "sites": 13,
     "subdomains": [
-        "nslc-prod-app",
-        "realm",
         "fps-namer",
-        "gcs-api",
-        "jabpc-publicservice-tfm-prod"
+        "realm",
+        "gcs-api"
     ],
     "cnames": [
         {
@@ -24,16 +22,8 @@
             "resolved": "gcs-api.trafficmanager.net"
         },
         {
-            "original": "login.norton.com",
-            "resolved": "nslc-prod-app.trafficmanager.net"
-        },
-        {
             "original": "na.fps.ford.com",
             "resolved": "fps-namer.trafficmanager.net"
-        },
-        {
-            "original": "productcatalogueapi.jabra.com",
-            "resolved": "jabpc-publicservice-tfm-prod.trafficmanager.net"
         },
         {
             "original": "realm.hearstnp.com",
@@ -43,36 +33,67 @@
     "fingerprinting": 1,
     "resources": [
         {
-            "rule": "trafficmanager\\.net\\/sso\\/idp\\/SAML2",
-            "cookies": 0.000205,
+            "rule": "trafficmanager\\.net\\/fps\\/api\\/personalization_1_8\\/set",
+            "cookies": 0.000203,
             "fingerprinting": 0,
             "subdomains": [
-                "nslc-prod-app"
+                "fps-namer"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000307,
+            "sites": 2,
+            "prevalence": 0.000203,
             "cnames": [
                 {
-                    "original": "login.norton.com",
-                    "resolved": "nslc-prod-app.trafficmanager.net"
+                    "original": "na.fps.ford.com",
+                    "resolved": "fps-namer.trafficmanager.net"
                 }
             ],
             "responseHashes": [
-                "36512563723259b5d0680a30b582e8f18943a2782ad085a3a3717c09f336cd23",
-                "7bf7ab68ad08cb852cc44379afd7d740073da87caa6bb49d4aad32db7339e643"
+                "b06ece1e79ef61e5deb54d2735044bba2a5fdfe2bbe08820ef2e327d5902a2f4"
+            ],
+            "type": "XHR",
+            "exampleSites": [
+                "ford.com",
+                "www.ford.com"
+            ]
+        },
+        {
+            "rule": "trafficmanager\\.net\\/fps\\/api\\/personalization_1_8\\/get",
+            "cookies": 0.000304,
+            "fingerprinting": 0,
+            "subdomains": [
+                "fps-namer"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000304,
+            "cnames": [
+                {
+                    "original": "na.fps.ford.com",
+                    "resolved": "fps-namer.trafficmanager.net"
+                }
+            ],
+            "responseHashes": [
+                "bcd066466709a1bc748524ccf3e77c33497c480a45997a49b210552defcb2f7a",
+                "882d91de5bee05b82ec9960e606e8bb47a41f3d56967f82a80d4f9e7b2112b75"
+            ],
+            "type": "XHR",
+            "exampleSites": [
+                "ford.com",
+                "owner.ford.com",
+                "www.ford.com"
             ]
         },
         {
             "rule": "trafficmanager\\.net\\/\\.well-known\\/openid-configuration",
-            "cookies": 0.000205,
+            "cookies": 0.000203,
             "fingerprinting": 0,
             "subdomains": [
                 "realm"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000205,
+            "prevalence": 0.000203,
             "cnames": [
                 {
                     "original": "realm.hearstnp.com",
@@ -81,56 +102,46 @@
             ],
             "responseHashes": [
                 "03bc90950a3cf3d2baae54d90e814b61d4066e0deec3a120d04f03b38c064f6b"
+            ],
+            "type": "XHR",
+            "exampleSites": [
+                "chron.com",
+                "www.sfgate.com"
             ]
         },
         {
             "rule": "trafficmanager\\.net\\/connect\\/authorize",
-            "cookies": 0.000205,
+            "cookies": 0.000203,
             "fingerprinting": 0,
             "subdomains": [
                 "realm"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000205,
+            "prevalence": 0.000203,
             "cnames": [
                 {
                     "original": "realm.hearstnp.com",
                     "resolved": "realm.trafficmanager.net"
                 }
             ],
-            "responseHashes": []
-        },
-        {
-            "rule": "trafficmanager\\.net\\/fps\\/api\\/personalization_1_8\\/get",
-            "cookies": 0.000102,
-            "fingerprinting": 0,
-            "subdomains": [
-                "fps-namer"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000205,
-            "cnames": [
-                {
-                    "original": "na.fps.ford.com",
-                    "resolved": "fps-namer.trafficmanager.net"
-                }
-            ],
-            "responseHashes": [
-                "936386cfd5527492ba131d2777c1ebb9215dad35eb0b61a001ee66697efdc368"
+            "responseHashes": [],
+            "type": "Document",
+            "exampleSites": [
+                "chron.com",
+                "www.sfgate.com"
             ]
         },
         {
             "rule": "trafficmanager\\.net\\/v1\\/user\\/init",
-            "cookies": 0.000205,
+            "cookies": 0.000203,
             "fingerprinting": 0,
             "subdomains": [
                 "gcs-api"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000205,
+            "prevalence": 0.000203,
             "cnames": [
                 {
                     "original": "api.getcreditscore.com.au",
@@ -139,44 +150,11 @@
             ],
             "responseHashes": [
                 "15d2d8ca6787b458f002faca95057076619c7cba447ead16e196211cd3e705ab"
-            ]
-        },
-        {
-            "rule": "trafficmanager\\.net\\/\\/v1\\/family\\/filter",
-            "cookies": 0.000205,
-            "fingerprinting": 0,
-            "subdomains": [
-                "jabpc-publicservice-tfm-prod"
             ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000205,
-            "cnames": [
-                {
-                    "original": "productcatalogueapi.jabra.com",
-                    "resolved": "jabpc-publicservice-tfm-prod.trafficmanager.net"
-                }
-            ],
-            "responseHashes": []
-        },
-        {
-            "rule": "trafficmanager\\.net\\/\\/v1\\/family\\/filter",
-            "cookies": 0.000205,
-            "fingerprinting": 0,
-            "subdomains": [
-                "jabpc-publicservice-tfm-prod"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000205,
-            "cnames": [
-                {
-                    "original": "productcatalogueapi.jabra.com",
-                    "resolved": "jabpc-publicservice-tfm-prod.trafficmanager.net"
-                }
-            ],
-            "responseHashes": [
-                "ff7f4bb8d9a2a95b07c37cb6595709f006fcb104c81356f22f3aab6860d09952"
+            "type": "Fetch",
+            "exampleSites": [
+                "getcreditscore.com.au",
+                "www.getcreditscore.com.au"
             ]
         }
     ],
@@ -189,11 +167,10 @@
         "cpu": 0,
         "cache": 0
     },
-    "cookies": 0.000922,
+    "cookies": 0.000811,
     "types": {
-        "Document": 5,
-        "XHR": 4,
-        "Fetch": 4,
-        "Other": 2
+        "XHR": 7,
+        "Document": 2,
+        "Fetch": 2
     }
 }
