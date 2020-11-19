@@ -9,29 +9,62 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.000507,
-    "sites": 5,
+    "prevalence": 0.00103,
+    "sites": 10,
     "subdomains": [
+        "nslc-prod-app",
         "jabpc-publicservice-tfm-prod"
     ],
     "cnames": [
+        {
+            "original": "login.norton.com",
+            "resolved": "nslc-prod-app.trafficmanager.net"
+        },
         {
             "original": "productcatalogueapi.jabra.com",
             "resolved": "jabpc-publicservice-tfm-prod.trafficmanager.net"
         }
     ],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
         {
+            "rule": "trafficmanager\\.net\\/sso\\/idp\\/SAML2",
+            "cookies": 0.00031,
+            "fingerprinting": 0,
+            "subdomains": [
+                "nslc-prod-app"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000414,
+            "cnames": [
+                {
+                    "original": "login.norton.com",
+                    "resolved": "nslc-prod-app.trafficmanager.net"
+                }
+            ],
+            "responseHashes": [
+                "d0a2baa1b0c10fede6f98e1895fd89905d6adc21db893b3df0db579042949929",
+                "fdd6404da878a44a8baa25f8cc3c8c2f821a7bae49351e66a7ce616214e60e9c"
+            ],
+            "type": "Document",
+            "exampleSites": [
+                "norton.com",
+                "community.norton.com",
+                "safeweb.norton.com",
+                "support.norton.com"
+            ]
+        },
+        {
             "rule": "trafficmanager\\.net\\/\\/v1\\/family\\/filter",
-            "cookies": 0.000203,
+            "cookies": 0.000207,
             "fingerprinting": 0,
             "subdomains": [
                 "jabpc-publicservice-tfm-prod"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000203,
+            "prevalence": 0.000207,
             "cnames": [
                 {
                     "original": "productcatalogueapi.jabra.com",
@@ -47,14 +80,14 @@
         },
         {
             "rule": "trafficmanager\\.net\\/\\/v1\\/family\\/filter",
-            "cookies": 0.000203,
+            "cookies": 0.000207,
             "fingerprinting": 0,
             "subdomains": [
                 "jabpc-publicservice-tfm-prod"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000203,
+            "prevalence": 0.000207,
             "cnames": [
                 {
                     "original": "productcatalogueapi.jabra.com",
@@ -80,8 +113,9 @@
         "cpu": 0,
         "cache": 0
     },
-    "cookies": 0.000101,
+    "cookies": 0.000517,
     "types": {
+        "Document": 4,
         "Other": 2,
         "Fetch": 2
     }

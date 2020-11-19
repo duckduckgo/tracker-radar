@@ -4,12 +4,17 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.00264,
+    "prevalence": 0.00273,
     "sites": 26,
     "subdomains": [
-        "consentdeliveryfd"
+        "consentdeliveryfd",
+        "cquprod"
     ],
     "cnames": [
+        {
+            "original": "my-cd.cqu.edu.au",
+            "resolved": "cquprod.azurefd.net"
+        },
         {
             "original": "wcpstatic.microsoft.com",
             "resolved": "consentdeliveryfd.azurefd.net"
@@ -19,16 +24,18 @@
     "resources": [
         {
             "rule": "azurefd\\.net\\/mscc\\/lib\\/v2\\/wcp-consent\\.js",
-            "cookies": 0,
+            "cookies": 0.000421,
             "fingerprinting": 1,
             "subdomains": [
                 "consentdeliveryfd"
             ],
             "apis": {
-                "Document.cookie getter": 1
+                "Navigator.prototype.userAgent": 4,
+                "Document.cookie getter": 1,
+                "Document.cookie setter": 1
             },
-            "sites": 26,
-            "prevalence": 0.00264,
+            "sites": 23,
+            "prevalence": 0.00242,
             "cnames": [
                 {
                     "original": "wcpstatic.microsoft.com",
@@ -36,37 +43,89 @@
                 }
             ],
             "responseHashes": [
-                "208edbed32b2adac9446df83caa4a093a261492ba6b8b3bcfe6a75efb8b70294"
+                "919dca34db91911735f214ed2cff5e08f37459d94a364afb3df187baf1f77aff"
             ],
             "type": "Script",
             "exampleSites": [
                 "microsoft.com",
+                "answers.microsoft.com",
                 "docs.microsoft.com",
-                "office.com",
-                "social.msdn.microsoft.com",
                 "social.technet.microsoft.com",
+                "social.msdn.microsoft.com",
                 "support.microsoft.com",
-                "www.minecraft.net",
-                "support.xbox.com",
-                "news.microsoft.com",
-                "visualstudio.microsoft.com",
-                "techcommunity.microsoft.com",
-                "community.powerbi.com",
-                "news.xbox.com",
-                "office.live.com",
                 "templates.office.com",
-                "support.skype.com",
-                "minecraft.net",
-                "www.skype.com",
-                "azure.microsoft.com",
-                "windows.microsoft.com"
+                "www.ageofempires.com",
+                "www.typescriptlang.org",
+                "techcommunity.microsoft.com",
+                "code.visualstudio.com",
+                "www.minecraft.net",
+                "powerusers.microsoft.com",
+                "support.xbox.com",
+                "developercommunity.visualstudio.com",
+                "powerbi.microsoft.com",
+                "dev.azure.com",
+                "devblogs.microsoft.com",
+                "community.powerbi.com",
+                "forums.xamarin.com"
+            ]
+        },
+        {
+            "rule": "azurefd\\.net\\/api\\/my-cqu",
+            "cookies": 0.00021,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cquprod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.00021,
+            "cnames": [
+                {
+                    "original": "my-cd.cqu.edu.au",
+                    "resolved": "cquprod.azurefd.net"
+                }
+            ],
+            "responseHashes": [
+                "f72a6d5ad6ac8728fd604d0f249d39f53c6bb343d50851a1f08b94175d5fe078"
+            ],
+            "type": "Fetch",
+            "exampleSites": [
+                "cqu.edu.au",
+                "my.cqu.edu.au"
+            ]
+        },
+        {
+            "rule": "azurefd\\.net\\/sitecore\\/api\\/layout\\/render\\/jss",
+            "cookies": 0.00021,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cquprod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.00021,
+            "cnames": [
+                {
+                    "original": "my-cd.cqu.edu.au",
+                    "resolved": "cquprod.azurefd.net"
+                }
+            ],
+            "responseHashes": [
+                "01f66b1d130d34ca25f20675aaf810d5965a2164655ff3b65804704979693ed4"
+            ],
+            "type": "XHR",
+            "exampleSites": [
+                "cqu.edu.au",
+                "my.cqu.edu.au"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.000526,
     "types": {
-        "Script": 26
+        "Script": 23,
+        "Fetch": 2,
+        "XHR": 2
     }
 }

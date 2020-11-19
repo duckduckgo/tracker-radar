@@ -9,65 +9,165 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000507,
-    "sites": 5,
+    "prevalence": 0.00144,
+    "sites": 14,
     "subdomains": [
-        "jabpc-publicservice-tfm-prod"
+        "fps-namer",
+        "transat-clientapi",
+        "realm"
     ],
     "cnames": [
         {
-            "original": "productcatalogueapi.jabra.com",
-            "resolved": "jabpc-publicservice-tfm-prod.trafficmanager.net"
-        }
-    ],
-    "fingerprinting": 0,
-    "resources": [
-        {
-            "rule": "trafficmanager\\.net\\/\\/v1\\/family\\/filter",
-            "cookies": 0.000203,
-            "fingerprinting": 0,
-            "subdomains": [
-                "jabpc-publicservice-tfm-prod"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000203,
-            "cnames": [
-                {
-                    "original": "productcatalogueapi.jabra.com",
-                    "resolved": "jabpc-publicservice-tfm-prod.trafficmanager.net"
-                }
-            ],
-            "responseHashes": [],
-            "type": "Other",
-            "exampleSites": [
-                "jabra.com",
-                "www.jabra.com"
-            ]
+            "original": "clientapi.airtransat.com",
+            "resolved": "transat-clientapi.trafficmanager.net"
         },
         {
-            "rule": "trafficmanager\\.net\\/\\/v1\\/family\\/filter",
-            "cookies": 0.000203,
+            "original": "clientapi.transat.com",
+            "resolved": "transat-clientapi.trafficmanager.net"
+        },
+        {
+            "original": "na.fps.ford.com",
+            "resolved": "fps-namer.trafficmanager.net"
+        },
+        {
+            "original": "realm.hearstnp.com",
+            "resolved": "realm.trafficmanager.net"
+        }
+    ],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "trafficmanager\\.net\\/fps\\/api\\/personalization_1_8\\/set",
+            "cookies": 0.000206,
             "fingerprinting": 0,
             "subdomains": [
-                "jabpc-publicservice-tfm-prod"
+                "fps-namer"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000203,
+            "sites": 4,
+            "prevalence": 0.000411,
             "cnames": [
                 {
-                    "original": "productcatalogueapi.jabra.com",
-                    "resolved": "jabpc-publicservice-tfm-prod.trafficmanager.net"
+                    "original": "na.fps.ford.com",
+                    "resolved": "fps-namer.trafficmanager.net"
                 }
             ],
             "responseHashes": [
-                "adf7dfebb258686bd560bb955d8a19b9a32a08c8136d1e368ac12005289e8b7d"
+                "ca5f0993155c8c58b805a92f8012ff657d3559e91a03896b57035311afa7cb1b",
+                "f6edd079600165bdf3ec9a95a5aa54877745282f6d2fee19041b8b85fb0d0ddc"
             ],
-            "type": "Fetch",
+            "type": "XHR",
             "exampleSites": [
-                "jabra.com",
-                "www.jabra.com"
+                "ford.com",
+                "owner.ford.com",
+                "www.ford.ca",
+                "www.ford.com"
+            ]
+        },
+        {
+            "rule": "trafficmanager\\.net\\/fps\\/api\\/personalization_1_8\\/get",
+            "cookies": 0.000309,
+            "fingerprinting": 0,
+            "subdomains": [
+                "fps-namer"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000411,
+            "cnames": [
+                {
+                    "original": "na.fps.ford.com",
+                    "resolved": "fps-namer.trafficmanager.net"
+                }
+            ],
+            "responseHashes": [
+                "bcd066466709a1bc748524ccf3e77c33497c480a45997a49b210552defcb2f7a",
+                "5b05e8bcebf19318581575049eb7c13d2e2d0143f5316bc3136175eb57ead44d",
+                "882d91de5bee05b82ec9960e606e8bb47a41f3d56967f82a80d4f9e7b2112b75"
+            ],
+            "type": "XHR",
+            "exampleSites": [
+                "ford.com",
+                "owner.ford.com",
+                "www.ford.ca",
+                "www.ford.com"
+            ]
+        },
+        {
+            "rule": "trafficmanager\\.net\\/api\\/Persistence\\/UpdateCookies\\/",
+            "cookies": 0.000206,
+            "fingerprinting": 0,
+            "subdomains": [
+                "transat-clientapi"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000206,
+            "cnames": [
+                {
+                    "original": "clientapi.transat.com",
+                    "resolved": "transat-clientapi.trafficmanager.net"
+                },
+                {
+                    "original": "clientapi.airtransat.com",
+                    "resolved": "transat-clientapi.trafficmanager.net"
+                }
+            ],
+            "responseHashes": [
+                "b3fe78004559a47a8ab0cc31e7918d8b9b476c018781748eaf8fcc226e574001"
+            ],
+            "type": "Document",
+            "exampleSites": [
+                "airtransat.com",
+                "www.airtransat.com"
+            ]
+        },
+        {
+            "rule": "trafficmanager\\.net\\/\\.well-known\\/openid-configuration",
+            "cookies": 0.000206,
+            "fingerprinting": 0,
+            "subdomains": [
+                "realm"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000206,
+            "cnames": [
+                {
+                    "original": "realm.hearstnp.com",
+                    "resolved": "realm.trafficmanager.net"
+                }
+            ],
+            "responseHashes": [
+                "03bc90950a3cf3d2baae54d90e814b61d4066e0deec3a120d04f03b38c064f6b"
+            ],
+            "type": "XHR",
+            "exampleSites": [
+                "chron.com",
+                "www.sfgate.com"
+            ]
+        },
+        {
+            "rule": "trafficmanager\\.net\\/connect\\/authorize",
+            "cookies": 0.000206,
+            "fingerprinting": 0,
+            "subdomains": [
+                "realm"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000206,
+            "cnames": [
+                {
+                    "original": "realm.hearstnp.com",
+                    "resolved": "realm.trafficmanager.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Document",
+            "exampleSites": [
+                "chron.com",
+                "www.sfgate.com"
             ]
         }
     ],
@@ -80,9 +180,9 @@
         "cpu": 0,
         "cache": 0
     },
-    "cookies": 0.000101,
+    "cookies": 0.00103,
     "types": {
-        "Other": 2,
-        "Fetch": 2
+        "XHR": 10,
+        "Document": 4
     }
 }

@@ -4,17 +4,22 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000507,
-    "sites": 5,
+    "prevalence": 0.00072,
+    "sites": 7,
     "subdomains": [
-        "cloudflare",
+        "fullscript",
         "elasticsearch",
-        "influxdata"
+        "cloudflare",
+        "sketchup"
     ],
     "cnames": [
         {
-            "original": "get.influxdata.com",
-            "resolved": "influxdata.mktoweb.com"
+            "original": "get.fullscript.com",
+            "resolved": "fullscript.mktoweb.com"
+        },
+        {
+            "original": "get.sketchup.com",
+            "resolved": "sketchup.mktoweb.com"
         },
         {
             "original": "info.cloudflare.com",
@@ -25,21 +30,56 @@
             "resolved": "elasticsearch.mktoweb.com"
         }
     ],
-    "fingerprinting": 2,
+    "fingerprinting": 1,
     "resources": [
         {
+            "rule": "mktoweb\\.com\\/index\\.php\\/form\\/XDFrame",
+            "cookies": 0.000103,
+            "fingerprinting": 0,
+            "subdomains": [
+                "fullscript",
+                "elasticsearch"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000206,
+            "cnames": [
+                {
+                    "original": "get.fullscript.com",
+                    "resolved": "fullscript.mktoweb.com"
+                },
+                {
+                    "original": "info.elastic.co",
+                    "resolved": "elasticsearch.mktoweb.com"
+                }
+            ],
+            "responseHashes": [
+                "e1f62b05267fccb3a0aa8e09ab8dcedf1cf0357cb186027bbbd1e9ffb1e15e04"
+            ],
+            "type": "Document",
+            "exampleSites": [
+                "fullscript.com",
+                "www.elastic.co"
+            ]
+        },
+        {
             "rule": "mktoweb\\.com\\/js\\/forms2\\/js\\/forms2\\.min\\.js",
-            "cookies": 0.000304,
+            "cookies": 0.000309,
             "fingerprinting": 1,
             "subdomains": [
+                "fullscript",
                 "cloudflare",
                 "elasticsearch",
-                "influxdata"
+                "sketchup"
             ],
             "apis": {},
             "sites": 4,
-            "prevalence": 0.000406,
+            "prevalence": 0.000411,
             "cnames": [
+                {
+                    "original": "get.fullscript.com",
+                    "resolved": "fullscript.mktoweb.com"
+                },
                 {
                     "original": "info.cloudflare.com",
                     "resolved": "cloudflare.mktoweb.com"
@@ -49,8 +89,8 @@
                     "resolved": "elasticsearch.mktoweb.com"
                 },
                 {
-                    "original": "get.influxdata.com",
-                    "resolved": "influxdata.mktoweb.com"
+                    "original": "get.sketchup.com",
+                    "resolved": "sketchup.mktoweb.com"
                 }
             ],
             "responseHashes": [
@@ -58,17 +98,18 @@
             ],
             "type": "Script",
             "exampleSites": [
-                "cloudflare.com",
+                "fullscript.com",
                 "www.cloudflare.com",
                 "www.elastic.co",
-                "www.influxdata.com"
+                "www.sketchup.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000507,
+    "cookies": 0.00072,
     "types": {
+        "Document": 2,
         "Script": 4
     }
 }

@@ -9,65 +9,72 @@
     "source": [
         "DuckDuckGo-GB"
     ],
-    "prevalence": 0.000507,
-    "sites": 5,
+    "prevalence": 0.00133,
+    "sites": 13,
     "subdomains": [
-        "jabpc-publicservice-tfm-prod"
+        "nslc-prod-app",
+        "idp.redbridge"
     ],
     "cnames": [
         {
-            "original": "productcatalogueapi.jabra.com",
-            "resolved": "jabpc-publicservice-tfm-prod.trafficmanager.net"
-        }
-    ],
-    "fingerprinting": 0,
-    "resources": [
-        {
-            "rule": "trafficmanager\\.net\\/\\/v1\\/family\\/filter",
-            "cookies": 0.000203,
-            "fingerprinting": 0,
-            "subdomains": [
-                "jabpc-publicservice-tfm-prod"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000203,
-            "cnames": [
-                {
-                    "original": "productcatalogueapi.jabra.com",
-                    "resolved": "jabpc-publicservice-tfm-prod.trafficmanager.net"
-                }
-            ],
-            "responseHashes": [],
-            "type": "Other",
-            "exampleSites": [
-                "jabra.com",
-                "www.jabra.com"
-            ]
+            "original": "idp.redbridge.gov.uk",
+            "resolved": "idp.redbridge.trafficmanager.net"
         },
         {
-            "rule": "trafficmanager\\.net\\/\\/v1\\/family\\/filter",
-            "cookies": 0.000203,
+            "original": "login.norton.com",
+            "resolved": "nslc-prod-app.trafficmanager.net"
+        }
+    ],
+    "fingerprinting": 1,
+    "resources": [
+        {
+            "rule": "trafficmanager\\.net\\/sso\\/idp\\/SAML2",
+            "cookies": 0.000204,
             "fingerprinting": 0,
             "subdomains": [
-                "jabpc-publicservice-tfm-prod"
+                "nslc-prod-app"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000203,
+            "sites": 3,
+            "prevalence": 0.000307,
             "cnames": [
                 {
-                    "original": "productcatalogueapi.jabra.com",
-                    "resolved": "jabpc-publicservice-tfm-prod.trafficmanager.net"
+                    "original": "login.norton.com",
+                    "resolved": "nslc-prod-app.trafficmanager.net"
                 }
             ],
             "responseHashes": [
-                "adf7dfebb258686bd560bb955d8a19b9a32a08c8136d1e368ac12005289e8b7d"
+                "683e95eba48c81d96c7aed57697b8e473245c91304bf68a1085caa9049c4da05",
+                "b0c6e50efd3d37621cfcf152f6050917d57f9aa60ed2539465a3c7bb2aa326d2"
             ],
-            "type": "Fetch",
+            "type": "Document",
             "exampleSites": [
-                "jabra.com",
-                "www.jabra.com"
+                "norton.com",
+                "community.norton.com",
+                "support.norton.com"
+            ]
+        },
+        {
+            "rule": "trafficmanager\\.net\\/connect\\/authorize",
+            "cookies": 0.000204,
+            "fingerprinting": 0,
+            "subdomains": [
+                "idp.redbridge"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000204,
+            "cnames": [
+                {
+                    "original": "idp.redbridge.gov.uk",
+                    "resolved": "idp.redbridge.trafficmanager.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Document",
+            "exampleSites": [
+                "redbridge.gov.uk",
+                "www.redbridge.gov.uk"
             ]
         }
     ],
@@ -80,9 +87,8 @@
         "cpu": 0,
         "cache": 0
     },
-    "cookies": 0.000101,
+    "cookies": 0.000818,
     "types": {
-        "Other": 2,
-        "Fetch": 2
+        "Document": 5
     }
 }

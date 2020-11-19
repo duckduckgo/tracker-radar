@@ -9,14 +9,16 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.00578,
-    "sites": 57,
+    "prevalence": 0.00946,
+    "sites": 90,
     "subdomains": [
+        "cdn1-gae-ssl-default",
         "i-invdn-com",
-        "blznav",
+        "amp",
         "vod-progressive",
-        "standard-tls.warnermediacdn",
-        "tmsi"
+        "opgg-cdn",
+        "opgg-static",
+        "standard-tls.warnermediacdn"
     ],
     "cnames": [
         {
@@ -28,8 +30,70 @@
             "resolved": "standard-tls.warnermediacdn.akamaized.net"
         }
     ],
-    "fingerprinting": 3,
+    "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "akamaized\\.net\\/js\\/isp\\.jquery\\.requires\\.js",
+            "cookies": 0.000105,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn1-gae-ssl-default"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2,
+                "window.sessionStorage": 2,
+                "Navigator.prototype.appName": 2,
+                "Navigator.prototype.appVersion": 2,
+                "Document.cookie getter": 1,
+                "Document.cookie setter": 1
+            },
+            "sites": 3,
+            "prevalence": 0.000315,
+            "cnames": [],
+            "responseHashes": [
+                "548bcf9caa8071c16966ab9e555d963616b45a13067038d81abd1912e3192e13"
+            ],
+            "type": "Script",
+            "exampleSites": [
+                "targus.com",
+                "www.mrvitamins.com.au",
+                "www.soundseasy.com.au"
+            ]
+        },
+        {
+            "rule": "akamaized\\.net\\/js\\/isp\\.v\\.2\\.0\\.1\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn1-gae-ssl-default"
+            ],
+            "apis": {
+                "window.localStorage": 6,
+                "window.sessionStorage": 6,
+                "Navigator.prototype.userAgent": 6,
+                "Navigator.prototype.language": 6,
+                "Navigator.prototype.vendor": 6,
+                "Date.prototype.getTime": 6,
+                "Navigator.prototype.appVersion": 5,
+                "Document.cookie getter": 4
+            },
+            "sites": 6,
+            "prevalence": 0.000631,
+            "cnames": [],
+            "responseHashes": [
+                "9846a287d6f8b529f1060bf3f02dcea28c09eaac018305c2cd6231149c74ad78"
+            ],
+            "type": "Script",
+            "exampleSites": [
+                "targus.com",
+                "www.commutercycles.com.au",
+                "www.everten.com.au",
+                "www.interiorsecrets.com.au",
+                "www.mrvitamins.com.au",
+                "www.nutritionwarehouse.com.au"
+            ]
+        },
         {
             "rule": "akamaized\\.net\\/js\\/jquery-6\\.4\\.9\\.04\\.min\\.js",
             "cookies": 0,
@@ -39,11 +103,10 @@
             ],
             "apis": {
                 "Navigator.prototype.userAgent": 2,
-                "Date.prototype.getTime": 2,
-                "Event.prototype.timeStamp": 2
+                "Date.prototype.getTime": 2
             },
             "sites": 2,
-            "prevalence": 0.000203,
+            "prevalence": 0.00021,
             "cnames": [],
             "responseHashes": [
                 "d982b888f5002f4b75035abff99147fa1f0603b583104d6e11dbe393cda08896"
@@ -67,7 +130,7 @@
                 "window.localStorage": 1
             },
             "sites": 2,
-            "prevalence": 0.000203,
+            "prevalence": 0.00021,
             "cnames": [],
             "responseHashes": [
                 "0064bd488225435fc6cdd5f2b38e0ee9592697cd74af3b220ac3b91e179f2132"
@@ -89,7 +152,7 @@
                 "Navigator.prototype.userAgent": 2
             },
             "sites": 2,
-            "prevalence": 0.000203,
+            "prevalence": 0.00021,
             "cnames": [],
             "responseHashes": [
                 "10b8714eb5a412ab0bece0bef0fcd9553a38cd0bead58a752e346d6779051373"
@@ -103,7 +166,7 @@
         {
             "rule": "akamaized\\.net\\/js\\/main-1\\.17\\.265\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 1,
+            "fingerprinting": 2,
             "subdomains": [
                 "i-invdn-com"
             ],
@@ -117,7 +180,7 @@
                 "Document.cookie getter": 2
             },
             "sites": 2,
-            "prevalence": 0.000203,
+            "prevalence": 0.00021,
             "cnames": [],
             "responseHashes": [
                 "6b0880a4d5e341f57650bc02ce9bd49c33e9579cd9238efed59d2d83c6bcc14d"
@@ -140,7 +203,7 @@
                 "Date.prototype.getTime": 2
             },
             "sites": 2,
-            "prevalence": 0.000203,
+            "prevalence": 0.00021,
             "cnames": [],
             "responseHashes": [
                 "a389cdb91b7b65a113ed24192360d6ea286ea74719d2839eef4530105ece7e7f"
@@ -162,7 +225,7 @@
                 "Date.prototype.getTimezoneOffset": 2
             },
             "sites": 2,
-            "prevalence": 0.000203,
+            "prevalence": 0.00021,
             "cnames": [],
             "responseHashes": [
                 "09012f877d3866dc2f9ac85c2dc2f50ecf405d165a83825b4a99fb43957891ee"
@@ -174,91 +237,271 @@
             ]
         },
         {
-            "rule": "akamaized\\.net\\/navbar-e49de0c4e22b332c\\.js",
+            "rule": "akamaized\\.net\\/hosted\\/1\\.0\\/player\\.esi",
             "cookies": 0,
             "fingerprinting": 1,
             "subdomains": [
-                "blznav"
+                "amp"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 4,
+                "Navigator.prototype.language": 4
+            },
+            "sites": 4,
+            "prevalence": 0.000421,
+            "cnames": [],
+            "responseHashes": [
+                "4895465e6b11215dfd5354d8f20a4391635811bfc77ec7040ba3d615e09f7067"
+            ],
+            "type": "Script",
+            "exampleSites": [
+                "careertrend.com",
+                "oureverydaylife.com",
+                "pocketsense.com",
+                "sciencing.com"
+            ]
+        },
+        {
+            "rule": "akamaized\\.net\\/exp=1605706443~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F4490%2F18%2F472451542%2F2104525832\\.mp4~hmac=d69cbdd2aad472e0bee20a7a141c627621630ad0a39819399964bae6f0f14ce6\\/vimeo-prod-skyfire-std-us\\/01\\/4490\\/18\\/472451542\\/2104525832\\.mp4",
+            "cookies": 0.00021,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vod-progressive"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.00021,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Media",
+            "exampleSites": [
+                "wondershare.com",
+                "filmora.wondershare.com"
+            ]
+        },
+        {
+            "rule": "akamaized\\.net\\/exp=1605706443~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F4490%2F18%2F472451144%2F2104523751\\.mp4~hmac=d384ef24cd28b71c1dd520ea58a90a06dbedbd183eb9fa7558fe1eff67602e5d\\/vimeo-prod-skyfire-std-us\\/01\\/4490\\/18\\/472451144\\/2104523751\\.mp4",
+            "cookies": 0.00021,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vod-progressive"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.00021,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Media",
+            "exampleSites": [
+                "wondershare.com",
+                "filmora.wondershare.com"
+            ]
+        },
+        {
+            "rule": "akamaized\\.net\\/exp=1605706443~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F4490%2F18%2F472451661%2F2118259324\\.mp4~hmac=aa7bdc63d8fbd4fff0556d4a4bac1d9d7e56b61ff1f12606ddbd25058107d859\\/vimeo-prod-skyfire-std-us\\/01\\/4490\\/18\\/472451661\\/2118259324\\.mp4",
+            "cookies": 0.00021,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vod-progressive"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.00021,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Media",
+            "exampleSites": [
+                "wondershare.com",
+                "filmora.wondershare.com"
+            ]
+        },
+        {
+            "rule": "akamaized\\.net\\/moment-2\\.5\\.0\\/moment\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "opgg-cdn"
+            ],
+            "apis": {
+                "Date.prototype.getTimezoneOffset": 1,
+                "Date.prototype.getTime": 1
+            },
+            "sites": 2,
+            "prevalence": 0.00021,
+            "cnames": [],
+            "responseHashes": [
+                "db2bc4f475293fefb2c560d15534593e3997d27aabc10ed9bd21f552ec21d8eb"
+            ],
+            "type": "Script",
+            "exampleSites": [
+                "op.gg",
+                "www.op.gg"
+            ]
+        },
+        {
+            "rule": "akamaized\\.net\\/jquery-2\\.1\\.3\\/jquery-2\\.1\\.3\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "opgg-cdn"
+            ],
+            "apis": {
+                "Event.prototype.timeStamp": 1
+            },
+            "sites": 2,
+            "prevalence": 0.00021,
+            "cnames": [],
+            "responseHashes": [
+                "aa73d1e53f493e06f442ff045a58e3e1c85068e43e9003367f90b3ea9aa4c464"
+            ],
+            "type": "Script",
+            "exampleSites": [
+                "op.gg",
+                "www.op.gg"
+            ]
+        },
+        {
+            "rule": "akamaized\\.net\\/modernizr-2\\.7\\.1\\/modernizr\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "opgg-cdn"
+            ],
+            "apis": {
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.00021,
+            "cnames": [],
+            "responseHashes": [
+                "f63817e18056ed9b0ec02d803b0668c238fc03e97bf54278e0d85ee6e01bbe7d"
+            ],
+            "type": "Script",
+            "exampleSites": [
+                "op.gg",
+                "www.op.gg"
+            ]
+        },
+        {
+            "rule": "akamaized\\.net\\/lib\\/browserdetect\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "opgg-static"
             ],
             "apis": {
                 "Navigator.prototype.userAgent": 2
             },
             "sites": 2,
-            "prevalence": 0.000203,
+            "prevalence": 0.00021,
             "cnames": [],
             "responseHashes": [
-                "d7cf540756da0144230164079cdef30669de7939dd4f20e221969fbe5c2e1ef2"
+                "be78e36f0418b972201afad348c796d49fa17d3aff3b63021dfb7d913519b28e"
             ],
             "type": "Script",
             "exampleSites": [
-                "blizzard.com",
-                "us.forums.blizzard.com"
+                "op.gg",
+                "www.op.gg"
             ]
         },
         {
-            "rule": "akamaized\\.net\\/exp=1605644944~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F4490%2F18%2F472451661%2F2118259324\\.mp4~hmac=3eaf2fe7f7a27fb6ea5ba596837b3e9345ec70747822ef3ad18f93aecfbf75ad\\/vimeo-prod-skyfire-std-us\\/01\\/4490\\/18\\/472451661\\/2118259324\\.mp4",
-            "cookies": 0.000203,
-            "fingerprinting": 0,
+            "rule": "akamaized\\.net\\/jquery\\.jcf-1\\.1\\.3\\/js\\/jcf\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
             "subdomains": [
-                "vod-progressive"
+                "opgg-cdn"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
             "sites": 2,
-            "prevalence": 0.000203,
+            "prevalence": 0.00021,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Media",
+            "responseHashes": [
+                "64ba1e10113b71505dd9d16fb69fafe5616239bee7c8f4658b9890a64ef71489"
+            ],
+            "type": "Script",
             "exampleSites": [
-                "wondershare.com",
-                "filmora.wondershare.com"
+                "op.gg",
+                "www.op.gg"
             ]
         },
         {
-            "rule": "akamaized\\.net\\/exp=1605644944~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F4490%2F18%2F472451542%2F2104525832\\.mp4~hmac=b683d090c8f7051645004f06f5da7e8e49b27ef9c2a0dd0d9d45a7b96cd6e098\\/vimeo-prod-skyfire-std-us\\/01\\/4490\\/18\\/472451542\\/2104525832\\.mp4",
-            "cookies": 0.000203,
-            "fingerprinting": 0,
+            "rule": "akamaized\\.net\\/tipped-4\\.6\\.1\\/js\\/tipped\\/tipped\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
             "subdomains": [
-                "vod-progressive"
+                "opgg-cdn"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
             "sites": 2,
-            "prevalence": 0.000203,
+            "prevalence": 0.00021,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Media",
+            "responseHashes": [
+                "5e8941dfc4b59e2590be0140600c88c501dc6099a5fe96647507e52cb493a5fc"
+            ],
+            "type": "Script",
             "exampleSites": [
-                "wondershare.com",
-                "filmora.wondershare.com"
+                "op.gg",
+                "www.op.gg"
             ]
         },
         {
-            "rule": "akamaized\\.net\\/exp=1605644944~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F4490%2F18%2F472451144%2F2104523751\\.mp4~hmac=b4c201ebea69ef49f96fb4536f1fd294fdd5e3adcf4e6efea15cc3cbbb737805\\/vimeo-prod-skyfire-std-us\\/01\\/4490\\/18\\/472451144\\/2104523751\\.mp4",
-            "cookies": 0.000203,
-            "fingerprinting": 0,
+            "rule": "akamaized\\.net\\/js3\\/common\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
             "subdomains": [
-                "vod-progressive"
+                "opgg-static"
             ],
-            "apis": {},
+            "apis": {
+                "window.localStorage": 2
+            },
             "sites": 2,
-            "prevalence": 0.000203,
+            "prevalence": 0.00021,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Media",
+            "responseHashes": [
+                "88e8d0567bc0952c1e7cd5044fede46450c9c4a853409e1eb70baaf4bf44575e"
+            ],
+            "type": "Script",
             "exampleSites": [
-                "wondershare.com",
-                "filmora.wondershare.com"
+                "op.gg",
+                "www.op.gg"
+            ]
+        },
+        {
+            "rule": "akamaized\\.net\\/swiper-3\\.3\\.1\\/swiper\\.jquery\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "opgg-cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.00021,
+            "cnames": [],
+            "responseHashes": [
+                "50faabf04cc37d35aa5f2cd9da3d1b4fd4e64ddb7aa9c553a2ba03d0bca116a1"
+            ],
+            "type": "Script",
+            "exampleSites": [
+                "op.gg",
+                "www.op.gg"
             ]
         },
         {
             "rule": "akamaized\\.net\\/xslo\\/cvp\\/assets\\/video\\/blank\\.mp4",
-            "cookies": 0.000101,
+            "cookies": 0.000105,
             "fingerprinting": 0,
             "subdomains": [
                 "standard-tls.warnermediacdn"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000203,
+            "prevalence": 0.00021,
             "cnames": [
                 {
                     "original": "z.cdn.turner.com",
@@ -279,26 +522,32 @@
             ]
         },
         {
-            "rule": "akamaized\\.net\\/js\\/globals\\/tm-data-scouts_7\\.entry\\.js",
-            "cookies": 0,
+            "rule": "akamaized\\.net\\/js\\/isp\\.jquery\\.requires\\.full\\.js",
+            "cookies": 0.000105,
             "fingerprinting": 1,
             "subdomains": [
-                "tmsi"
+                "cdn1-gae-ssl-default"
             ],
             "apis": {
-                "Date.prototype.getTimezoneOffset": 2,
-                "Document.cookie getter": 2
+                "Date.prototype.getTime": 3,
+                "Navigator.prototype.userAgent": 3,
+                "window.localStorage": 3,
+                "window.sessionStorage": 3,
+                "Navigator.prototype.appName": 3,
+                "Navigator.prototype.appVersion": 3,
+                "Document.cookie setter": 1
             },
-            "sites": 2,
-            "prevalence": 0.000203,
+            "sites": 3,
+            "prevalence": 0.000315,
             "cnames": [],
             "responseHashes": [
-                "5b5e03c337d03770692a3383b20f253b0f19ac709c7771a5e8e44fe84571cc4c"
+                "7e2aa7b4d590546a24b2efdc8effab4e5c984676b9ff548f3fe406b3e30fbc28"
             ],
             "type": "Script",
             "exampleSites": [
-                "transfermarkt.com",
-                "www.transfermarkt.de"
+                "commutercycles.com.au",
+                "www.everten.com.au",
+                "www.nutritionwarehouse.com.au"
             ]
         }
     ],
@@ -311,9 +560,9 @@
         "cpu": 2,
         "cache": 1
     },
-    "cookies": 0.000913,
+    "cookies": 0.00137,
     "types": {
-        "Script": 16,
+        "Script": 44,
         "Media": 8
     }
 }

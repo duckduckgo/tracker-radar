@@ -9,29 +9,157 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.000507,
-    "sites": 5,
+    "prevalence": 0.00126,
+    "sites": 12,
     "subdomains": [
+        "nslc-prod-app",
+        "defenceimages",
+        "api-visitor-tm",
+        "fps-namer",
         "jabpc-publicservice-tfm-prod"
     ],
     "cnames": [
+        {
+            "original": "api-visitor.resumelab.com",
+            "resolved": "api-visitor-tm.trafficmanager.net"
+        },
+        {
+            "original": "api-visitor.zety.com",
+            "resolved": "api-visitor-tm.trafficmanager.net"
+        },
+        {
+            "original": "images.defence.gov.au",
+            "resolved": "defenceimages.trafficmanager.net"
+        },
+        {
+            "original": "login.norton.com",
+            "resolved": "nslc-prod-app.trafficmanager.net"
+        },
+        {
+            "original": "na.fps.ford.com",
+            "resolved": "fps-namer.trafficmanager.net"
+        },
         {
             "original": "productcatalogueapi.jabra.com",
             "resolved": "jabpc-publicservice-tfm-prod.trafficmanager.net"
         }
     ],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
         {
+            "rule": "trafficmanager\\.net\\/sso\\/idp\\/SAML2",
+            "cookies": 0.00021,
+            "fingerprinting": 0,
+            "subdomains": [
+                "nslc-prod-app"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000315,
+            "cnames": [
+                {
+                    "original": "login.norton.com",
+                    "resolved": "nslc-prod-app.trafficmanager.net"
+                }
+            ],
+            "responseHashes": [
+                "edf5e92fb831eb37cc6413c79272b29bead80e022c838ceafeb40f451cf9198c"
+            ],
+            "type": "Document",
+            "exampleSites": [
+                "norton.com",
+                "community.norton.com",
+                "support.norton.com"
+            ]
+        },
+        {
+            "rule": "trafficmanager\\.net\\/fotoweb\\/cache\\/5002\\/Assets\\/2020\\/S20203484\\/20201029raaf8540638_0419\\.t5fa34506\\.m1000\\.x1100pbKk06SS2XjW\\.jpg",
+            "cookies": 0.000315,
+            "fingerprinting": 0,
+            "subdomains": [
+                "defenceimages"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000315,
+            "cnames": [
+                {
+                    "original": "images.defence.gov.au",
+                    "resolved": "defenceimages.trafficmanager.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Image",
+            "exampleSites": [
+                "defence.gov.au",
+                "www.defence.gov.au",
+                "www1.defence.gov.au"
+            ]
+        },
+        {
+            "rule": "trafficmanager\\.net\\/tracking-v7\\.js",
+            "cookies": 0.000105,
+            "fingerprinting": 1,
+            "subdomains": [
+                "api-visitor-tm"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.00021,
+            "cnames": [
+                {
+                    "original": "api-visitor.resumelab.com",
+                    "resolved": "api-visitor-tm.trafficmanager.net"
+                },
+                {
+                    "original": "api-visitor.zety.com",
+                    "resolved": "api-visitor-tm.trafficmanager.net"
+                }
+            ],
+            "responseHashes": [
+                "37c684a2560077496d83a28c134a23465bbd9bb1439881a05e481ce06eb64b5a"
+            ],
+            "type": "Script",
+            "exampleSites": [
+                "resumelab.com",
+                "zety.com"
+            ]
+        },
+        {
+            "rule": "trafficmanager\\.net\\/fps\\/api\\/personalization_1_8\\/get",
+            "cookies": 0.00021,
+            "fingerprinting": 0,
+            "subdomains": [
+                "fps-namer"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.00021,
+            "cnames": [
+                {
+                    "original": "na.fps.ford.com",
+                    "resolved": "fps-namer.trafficmanager.net"
+                }
+            ],
+            "responseHashes": [
+                "21dd9a8926a7fa4f8e8df47c5519a45c9d713b0ebacf995a6be3cce9e6fe11bd"
+            ],
+            "type": "XHR",
+            "exampleSites": [
+                "ford.com",
+                "www.ford.com"
+            ]
+        },
+        {
             "rule": "trafficmanager\\.net\\/\\/v1\\/family\\/filter",
-            "cookies": 0.000203,
+            "cookies": 0.00021,
             "fingerprinting": 0,
             "subdomains": [
                 "jabpc-publicservice-tfm-prod"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000203,
+            "prevalence": 0.00021,
             "cnames": [
                 {
                     "original": "productcatalogueapi.jabra.com",
@@ -41,20 +169,20 @@
             "responseHashes": [],
             "type": "Other",
             "exampleSites": [
-                "jabra.com",
-                "www.jabra.com"
+                "jabra.com.au",
+                "www.jabra.com.au"
             ]
         },
         {
             "rule": "trafficmanager\\.net\\/\\/v1\\/family\\/filter",
-            "cookies": 0.000203,
+            "cookies": 0.00021,
             "fingerprinting": 0,
             "subdomains": [
                 "jabpc-publicservice-tfm-prod"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000203,
+            "prevalence": 0.00021,
             "cnames": [
                 {
                     "original": "productcatalogueapi.jabra.com",
@@ -62,12 +190,12 @@
                 }
             ],
             "responseHashes": [
-                "adf7dfebb258686bd560bb955d8a19b9a32a08c8136d1e368ac12005289e8b7d"
+                "d8a1e84b606fa438df17d9f6e92dccc8aab7d513328dcb3340cbb74ddcc0a286"
             ],
             "type": "Fetch",
             "exampleSites": [
-                "jabra.com",
-                "www.jabra.com"
+                "jabra.com.au",
+                "www.jabra.com.au"
             ]
         }
     ],
@@ -80,8 +208,12 @@
         "cpu": 0,
         "cache": 0
     },
-    "cookies": 0.000101,
+    "cookies": 0.000841,
     "types": {
+        "Document": 3,
+        "Image": 3,
+        "Script": 2,
+        "XHR": 2,
         "Other": 2,
         "Fetch": 2
     }

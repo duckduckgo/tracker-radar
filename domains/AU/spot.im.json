@@ -4,8 +4,8 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.000609,
-    "sites": 6,
+    "prevalence": 0.000841,
+    "sites": 8,
     "subdomains": [
         "events-collector",
         "static-cdn",
@@ -16,22 +16,26 @@
     "resources": [
         {
             "rule": "spot\\.im\\/api\\/v1\\/device_load",
-            "cookies": 0.000203,
+            "cookies": 0.000421,
             "fingerprinting": 0,
             "subdomains": [
                 "events-collector"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000203,
+            "sites": 4,
+            "prevalence": 0.000421,
             "cnames": [],
             "responseHashes": [
-                "e97f8becf09fe11410f73ce416a9e92f5d0e1e8fe2a104ef2bcca825159d02a9"
+                "132e3de001cc625673a3c98f32b7206474530a02c9df5860e7e8852511b155d8",
+                "d97a0ab9cdf0350862df8b2dabb7a22349f6fba59d7ad4ea4d84c4211b47259c",
+                "b8728fceccb5fa3c045e9b46cae123c1c30d75796d3bdf52fe5e2b8b264a4b89"
             ],
             "type": "Fetch",
             "exampleSites": [
                 "variety.com",
-                "www.dailywire.com"
+                "www.aol.com",
+                "www.dailywire.com",
+                "www.silverdoctors.com"
             ]
         },
         {
@@ -42,11 +46,11 @@
                 "static-cdn"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 2,
-                "window.localStorage": 2
+                "Navigator.prototype.userAgent": 1,
+                "window.localStorage": 1
             },
-            "sites": 2,
-            "prevalence": 0.000203,
+            "sites": 3,
+            "prevalence": 0.000315,
             "cnames": [],
             "responseHashes": [
                 "a41aa28da3c31791c833e9b5141ec266cea3fae495dd899885adbd45964155a0"
@@ -54,19 +58,20 @@
             "type": "Script",
             "exampleSites": [
                 "variety.com",
-                "www.dailywire.com"
+                "www.dailywire.com",
+                "www.silverdoctors.com"
             ]
         },
         {
             "rule": "spot\\.im\\/api\\/v1\\/pixels",
-            "cookies": 0.000101,
+            "cookies": 0.00021,
             "fingerprinting": 0,
             "subdomains": [
                 "pix"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000203,
+            "sites": 3,
+            "prevalence": 0.000315,
             "cnames": [],
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -74,27 +79,48 @@
             "type": "Other",
             "exampleSites": [
                 "variety.com",
+                "www.aol.com",
                 "www.dailywire.com"
             ]
         },
         {
-            "rule": "spot\\.im\\/api\\/v1\\/pixel",
-            "cookies": 0.000203,
-            "fingerprinting": 0,
+            "rule": "spot\\.im\\/production\\/conversation-page\\/tags\\/v2\\.2\\.12\\/conversation-page-bundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
             "subdomains": [
-                "pix"
+                "static-cdn"
             ],
-            "apis": {},
+            "apis": {
+                "window.localStorage": 1
+            },
             "sites": 2,
-            "prevalence": 0.000203,
+            "prevalence": 0.00021,
             "cnames": [],
-            "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-            ],
-            "type": "Image",
+            "responseHashes": [],
+            "type": "Script",
             "exampleSites": [
-                "realclearpolitics.com",
-                "www.realclearpolitics.com"
+                "aol.com",
+                "www.silverdoctors.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/production\\/ab-test-changer\\/tags\\/v1\\.1\\.1\\/ab-test-changer\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static-cdn"
+            ],
+            "apis": {
+                "window.localStorage": 1
+            },
+            "sites": 2,
+            "prevalence": 0.00021,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "exampleSites": [
+                "aol.com",
+                "www.silverdoctors.com"
             ]
         }
     ],
@@ -105,11 +131,10 @@
         "cpu": 0,
         "cache": 1
     },
-    "cookies": 0.000406,
+    "cookies": 0.000421,
     "types": {
-        "Fetch": 2,
-        "Script": 2,
-        "Other": 2,
-        "Image": 2
+        "Fetch": 4,
+        "Script": 7,
+        "Other": 3
     }
 }
