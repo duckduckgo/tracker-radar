@@ -4,14 +4,79 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000405,
-    "sites": 4,
+    "prevalence": 0.000609,
+    "sites": 6,
     "subdomains": [
+        "events-collector",
+        "static-cdn",
         "pix"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "spot\\.im\\/api\\/v1\\/device_load",
+            "cookies": 0.000203,
+            "fingerprinting": 0,
+            "subdomains": [
+                "events-collector"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "e97f8becf09fe11410f73ce416a9e92f5d0e1e8fe2a104ef2bcca825159d02a9"
+            ],
+            "type": "Fetch",
+            "exampleSites": [
+                "variety.com",
+                "www.dailywire.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/production\\/launcher\\/tags\\/v2\\.42\\.9\\/vendor\\/vendor-bundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static-cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "a41aa28da3c31791c833e9b5141ec266cea3fae495dd899885adbd45964155a0"
+            ],
+            "type": "Script",
+            "exampleSites": [
+                "variety.com",
+                "www.dailywire.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/api\\/v1\\/pixels",
+            "cookies": 0.000101,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pix"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Other",
+            "exampleSites": [
+                "variety.com",
+                "www.dailywire.com"
+            ]
+        },
         {
             "rule": "spot\\.im\\/api\\/v1\\/pixel",
             "cookies": 0.000203,
@@ -25,6 +90,11 @@
             "cnames": [],
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "exampleSites": [
+                "realclearpolitics.com",
+                "www.realclearpolitics.com"
             ]
         }
     ],
@@ -35,8 +105,11 @@
         "cpu": 0,
         "cache": 1
     },
-    "cookies": 0.000203,
+    "cookies": 0.000406,
     "types": {
+        "Fetch": 2,
+        "Script": 2,
+        "Other": 2,
         "Image": 2
     }
 }
