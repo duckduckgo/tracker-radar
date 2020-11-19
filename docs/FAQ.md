@@ -47,7 +47,7 @@ Our crawler keeps track of APIs resource use on each site where they are found. 
 
 ### Are you weighting the use of various APIs in determining possible fingerprinting?
 
-Yes, we are weighting the APIs. The weights are defined in [api_fingerprint_weights.json](/build-data/static/api_fingerprint_weights.json) and range from 1-6000.  Weights are currently based on the ratio of how often a given API is called by "suspicious scripts" vs "non-suspicious scripts" (e.g. "WebGLRenderingContext.getSupportedExtensions" has a very high weight, while "window.localStorage" has a very low one).
+Yes, we are weighting the APIs. The weights are defined in [api_fingerprint_weights.json](/build-data/generated/api_fingerprint_weights.json).  Weights are currently based on the ratio of how often a given API is called by "suspicious scripts" vs "non-suspicious scripts" (e.g. "WebGLRenderingContext.getSupportedExtensions" has a very high weight, while "window.localStorage" has a very low one).
 
 ### Are you looking at whether something is just present in a script, or whether it actually gets called?
 
