@@ -18,36 +18,28 @@
     "resources": [
         {
             "rule": "citrix\\.com\\/c-lib\\/insights\\/v2\\/insights-min\\.js",
-            "cookies": 0.0000152,
+            "cookies": 0.0000076,
             "fingerprinting": 1,
             "subdomains": [
                 "www"
             ],
             "apis": {
-                "Document.cookie getter": 2,
                 "Date.prototype.getTime": 2,
-                "Document.cookie setter": 2,
-                "Navigator.prototype.userAgent": 2
+                "Navigator.prototype.userAgent": 2,
+                "Document.cookie getter": 1,
+                "Document.cookie setter": 1
             },
             "sites": 2,
             "prevalence": 0.0000152,
             "cnames": [],
             "responseHashes": [
                 "d68683393c92e57b8cbd4a11df014a61ed6a696ae9d69e68539f08096a0bc346"
-            ]
-        },
-        {
-            "rule": "citrix\\.com\\/api\\/v2\\/sendInsights",
-            "cookies": 0.0000152,
-            "fingerprinting": 0,
-            "subdomains": [
-                "titan"
             ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000152,
-            "cnames": [],
-            "responseHashes": []
+            "type": "Script",
+            "exampleSites": [
+                "sharefile.com",
+                "www.sharefile.com"
+            ]
         },
         {
             "rule": "citrix\\.com\\/api\\/v2\\/sendInsights",
@@ -62,6 +54,29 @@
             "cnames": [],
             "responseHashes": [
                 "4b99468f12b21b72f6dbe5fc910326e357a55eec772149c703dfd8a93673f6b7"
+            ],
+            "type": "XHR",
+            "exampleSites": [
+                "sharefile.com",
+                "www.sharefile.com"
+            ]
+        },
+        {
+            "rule": "citrix\\.com\\/api\\/v2\\/sendInsights",
+            "cookies": 0.0000152,
+            "fingerprinting": 0,
+            "subdomains": [
+                "titan"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000152,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Other",
+            "exampleSites": [
+                "sharefile.com",
+                "www.sharefile.com"
             ]
         }
     ],
@@ -70,7 +85,7 @@
     "cookies": 0.0000152,
     "types": {
         "Script": 2,
-        "Other": 2,
-        "XHR": 2
+        "XHR": 2,
+        "Other": 2
     }
 }

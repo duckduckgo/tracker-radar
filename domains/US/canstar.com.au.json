@@ -11,14 +11,15 @@
     "sites": 2,
     "subdomains": [
         "widgets",
+        "sso",
         "collector-sf.api"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "canstar\\.com\\.au\\/widgets\\/assets\\/js\\/widgets\\/user_bar\\/user_bar-prod\\.js",
-            "cookies": 0.00000759,
+            "cookies": 0.0000152,
             "fingerprinting": 1,
             "subdomains": [
                 "widgets"
@@ -27,16 +28,43 @@
                 "Navigator.prototype.platform": 2,
                 "Navigator.prototype.userAgent": 2,
                 "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2,
+                "Document.cookie getter": 2,
                 "window.localStorage": 2,
-                "window.sessionStorage": 2,
-                "Document.cookie setter": 1,
-                "Document.cookie getter": 1
+                "window.sessionStorage": 2
             },
             "sites": 2,
             "prevalence": 0.0000152,
             "cnames": [],
             "responseHashes": [
-                "2440b0dcfb801374d4bacd3174bbe0a3002edc3c2a1a6c227bf7440dbff46f16"
+                "e1a8c39723a6c3167de57e22f01e7853cadf56f95d538823a8cee29cea17191f"
+            ],
+            "type": "Script",
+            "exampleSites": [
+                "canstarblue.com.au",
+                "www.canstarblue.com.au"
+            ]
+        },
+        {
+            "rule": "canstar\\.com\\.au\\/sso\\.html",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "sso"
+            ],
+            "apis": {
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000152,
+            "cnames": [],
+            "responseHashes": [
+                "5ca7ce6433b0bdcd97d9f85a230cb9db105985f37b6f8636a37cb6abdb46bbfa"
+            ],
+            "type": "Document",
+            "exampleSites": [
+                "canstarblue.com.au",
+                "www.canstarblue.com.au"
             ]
         },
         {
@@ -52,6 +80,11 @@
             "cnames": [],
             "responseHashes": [
                 "2689367b205c16ce32ed4200942b8b8b1e262dfc70d9bc9fbc77c49699a4f1df"
+            ],
+            "type": "XHR",
+            "exampleSites": [
+                "canstarblue.com.au",
+                "www.canstarblue.com.au"
             ]
         }
     ],
@@ -60,6 +93,7 @@
     "cookies": 0.0000152,
     "types": {
         "Script": 2,
+        "Document": 2,
         "XHR": 2
     }
 }

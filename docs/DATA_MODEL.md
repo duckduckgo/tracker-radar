@@ -59,6 +59,7 @@ An array of regexes to match against the full URL of significant third-party req
 |**prevalence**|Percentage of the top sites where this resource was seen|
 |**cnames**|A list of DNS CNAMEs that redirected to this resource|
 |**responseHashes**| A list of SHA256 response body hashes seen for this resource
+|**exampleSites**| An optional list of examples sites where a resource was found|
 
 #### Breaking
 An optional array of resources that can cause breakage if blocked.
@@ -149,10 +150,17 @@ Data files used to renerate the Tracker Radar
 
 |File|Use|
 |---|---|
-|[api_fingerprint_scores](/build-data/static/api_fingerprint_scores.json)|An object mapping browser APIs to their likelyhood to be used for fingerprinting. Scale is 0-6000|
 |[categorized_trackers](/build-data/static/categorized_trackers.csv)|CSV file with domains and which categories they belong to|
 |[surrogates](/build-data/static/surrogates.json)|Mapping domain resources to their surrogates.|
 |[breaking](/build-data/breaking)|Broken site data used for identifying whole sites or requests that cause breakage.|
+
+### /generated
+
+Generated files created while building Tracker Radar
+
+|File|Use|
+|---|---|
+|[api_fingerprint_scores](/build-data/generated/api_fingerprint_scores.json)|An object mapping browser APIs to their likelyhood to be used for fingerprinting. Higher score means that an API is more likely to be used for fingerprinting|
 
 ---
 

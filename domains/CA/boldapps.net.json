@@ -4,12 +4,10 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000819,
-    "sites": 8,
+    "prevalence": 0.00103,
+    "sites": 10,
     "subdomains": [
         "upsells",
-        "bundles.staging",
-        "bundles",
         "apps",
         "stores"
     ],
@@ -17,80 +15,112 @@
     "fingerprinting": 1,
     "resources": [
         {
+            "rule": "boldapps\\.net\\/v2_ui\\/js\\/UpsellTracker\\.js",
+            "cookies": 0.000411,
+            "fingerprinting": 0,
+            "subdomains": [
+                "upsells"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000514,
+            "cnames": [],
+            "responseHashes": [
+                "e61a96ab8335b5b84b3b094050c6d76f2aac658fab4b5ede970ad9828b84ec68"
+            ],
+            "type": "Script",
+            "exampleSites": [
+                "candyfunhouse.ca",
+                "ca.shopatshowcase.com",
+                "chatters.ca",
+                "www.gouletpens.com",
+                "www.keychron.com"
+            ]
+        },
+        {
             "rule": "boldapps\\.net\\/v2_ui\\/js\\/upsell\\.js",
-            "cookies": 0.000205,
+            "cookies": 0.000411,
             "fingerprinting": 1,
             "subdomains": [
                 "upsells"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 2
+                "Navigator.prototype.userAgent": 4,
+                "Date.prototype.getTime": 1
             },
-            "sites": 2,
-            "prevalence": 0.000205,
+            "sites": 5,
+            "prevalence": 0.000514,
             "cnames": [],
             "responseHashes": [
                 "7b26c47c11c273e7536f432af2bd4d613dc4fa272ba6afa682c86f1d4af816a8"
-            ]
-        },
-        {
-            "rule": "boldapps\\.net\\/bundles_install_check\\.js",
-            "cookies": 0.000205,
-            "fingerprinting": 0,
-            "subdomains": [
-                "bundles.staging",
-                "bundles"
             ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000205,
-            "cnames": [],
-            "responseHashes": [
-                "48922662ded60ae654cf1bd95f3f85d65afa8121d93f155bc7c69cd3b9cb43c7"
+            "type": "Script",
+            "exampleSites": [
+                "candyfunhouse.ca",
+                "ca.shopatshowcase.com",
+                "chatters.ca",
+                "www.gouletpens.com",
+                "www.keychron.com"
             ]
         },
         {
             "rule": "boldapps\\.net\\/pricerules\\/staples-canada\\.myshopify\\.com\\/enabled",
-            "cookies": 0.000307,
+            "cookies": 0.000309,
             "fingerprinting": 0,
             "subdomains": [
                 "apps"
             ],
             "apis": {},
             "sites": 3,
-            "prevalence": 0.000307,
+            "prevalence": 0.000309,
             "cnames": [],
             "responseHashes": [
                 "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
+            ],
+            "type": "Fetch",
+            "exampleSites": [
+                "staples.ca",
+                "www.bureauengros.com",
+                "www.staples.ca"
             ]
         },
         {
             "rule": "boldapps\\.net\\/front-end\\/get_stores\\.php",
-            "cookies": 0.000205,
+            "cookies": 0.000206,
             "fingerprinting": 0,
             "subdomains": [
                 "stores"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000205,
+            "prevalence": 0.000206,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Other",
+            "exampleSites": [
+                "bureauengros.com",
+                "www.staples.ca"
+            ]
+        },
+        {
+            "rule": "boldapps\\.net\\/front-end\\/get_stores\\.php",
+            "cookies": 0.000206,
+            "fingerprinting": 0,
+            "subdomains": [
+                "stores"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000206,
             "cnames": [],
             "responseHashes": [
-                "94da9031bce4b40411100fbbeb3f9da317c9aa9f6a9efda4e281027b2e9d725c"
-            ]
-        },
-        {
-            "rule": "boldapps\\.net\\/front-end\\/get_stores\\.php",
-            "cookies": 0.000205,
-            "fingerprinting": 0,
-            "subdomains": [
-                "stores"
+                "8ff44777a1d2f80234238254d19bc8e089d3aa30b5c10fd412a39b3197aab89a"
             ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000205,
-            "cnames": [],
-            "responseHashes": []
+            "type": "Fetch",
+            "exampleSites": [
+                "bureauengros.com",
+                "www.staples.ca"
+            ]
         }
     ],
     "categories": [],
@@ -100,9 +130,9 @@
         "cpu": 0,
         "cache": 3
     },
-    "cookies": 0.000819,
+    "cookies": 0.000926,
     "types": {
-        "Script": 4,
+        "Script": 10,
         "Fetch": 5,
         "Other": 2
     }
