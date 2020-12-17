@@ -9,15 +9,18 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.00719,
-    "sites": 70,
+    "prevalence": 0.00642,
+    "sites": 63,
     "subdomains": [
         "cdn.account.microsoft.com",
-        "cm.everesttech.net",
+        "c-s.cms.ms",
         "analytics.supplyframe",
         "ads.supplyframe",
+        "cm.everesttech.net",
+        "ws-rvrs-default.ubisoft",
         "bs.eyeblaster",
-        "idmsa.apple.com"
+        "idmsa.apple.com",
+        "beacon-cdn-custom.walmart.com"
     ],
     "cnames": [
         {
@@ -29,8 +32,16 @@
             "resolved": "analytics.supplyframe.akadns.net"
         },
         {
+            "original": "beacon.walmart.com",
+            "resolved": "beacon-cdn-custom.walmart.com.akadns.net"
+        },
+        {
             "original": "bs.serving-sys.com",
             "resolved": "bs.eyeblaster.akadns.net"
+        },
+        {
+            "original": "c.s-microsoft.com",
+            "resolved": "c-s.cms.ms.akadns.net"
         },
         {
             "original": "cm.everesttech.net",
@@ -43,76 +54,14 @@
         {
             "original": "mem.gfx.ms",
             "resolved": "cdn.account.microsoft.com.akadns.net"
+        },
+        {
+            "original": "overlay.ubisoft.com",
+            "resolved": "ws-rvrs-default.ubisoft.akadns.net"
         }
     ],
     "fingerprinting": 2,
     "resources": [
-        {
-            "rule": "akadns\\.net\\/scripts\\/me\\/MeControl\\/10\\.20300\\.4\\/en-US\\/meBoot\\.min\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "cdn.account.microsoft.com"
-            ],
-            "apis": {},
-            "sites": 11,
-            "prevalence": 0.00113,
-            "cnames": [
-                {
-                    "original": "mem.gfx.ms",
-                    "resolved": "cdn.account.microsoft.com.akadns.net"
-                }
-            ],
-            "responseHashes": [
-                "854dd4b898202b808f0122d4c79d08a14bd7844d393e4abecb327da4aaae0d65"
-            ],
-            "type": "Script",
-            "exampleSites": [
-                "microsoft.com",
-                "answers.microsoft.com",
-                "community.windows.com",
-                "developercommunity.visualstudio.com",
-                "office.com",
-                "office.live.com",
-                "onedrive.live.com",
-                "support.microsoft.com",
-                "templates.office.com",
-                "visualstudio.microsoft.com",
-                "www.xbox.com"
-            ]
-        },
-        {
-            "rule": "akadns\\.net\\/scripts\\/me\\/MeControl\\/10\\.20300\\.4\\/en-US\\/meCore\\.min\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "cdn.account.microsoft.com"
-            ],
-            "apis": {},
-            "sites": 9,
-            "prevalence": 0.000924,
-            "cnames": [
-                {
-                    "original": "mem.gfx.ms",
-                    "resolved": "cdn.account.microsoft.com.akadns.net"
-                }
-            ],
-            "responseHashes": [
-                "c965f854e2429f283ac9ca2f8f7641b10e6f43f7ef1f0ad6482f1f7b6b5a21f6"
-            ],
-            "type": "Script",
-            "exampleSites": [
-                "microsoft.com",
-                "answers.microsoft.com",
-                "community.windows.com",
-                "developercommunity.visualstudio.com",
-                "office.com",
-                "office.live.com",
-                "onedrive.live.com",
-                "templates.office.com",
-                "visualstudio.microsoft.com"
-            ]
-        },
         {
             "rule": "akadns\\.net\\/meversion",
             "cookies": 0,
@@ -121,8 +70,8 @@
                 "cdn.account.microsoft.com"
             ],
             "apis": {},
-            "sites": 13,
-            "prevalence": 0.00133,
+            "sites": 11,
+            "prevalence": 0.00112,
             "cnames": [
                 {
                     "original": "mem.gfx.ms",
@@ -130,118 +79,143 @@
                 }
             ],
             "responseHashes": [
-                "ff615dbd85d85b1c118485896afa374d754801257119751c4a9b6c017e4317df",
                 "73b66ee96ec396f7616426e4aa20accb8878f90af20d802a5f1ff115d4b2f8d1",
-                "1aab12910287758171bbed81bf238707a75aa3003fd623ce718290593010420e",
-                "dbedeb1a38df1137b0213da4d077fdf320da8cb6555163ffd79ffb8635a9600b",
-                "c5f7ef5fa6ea3bb133842d20d941df0e8efd6f9f0ddfafeb000b93d35e8b2952",
-                "39da8782ac2d54e832f9b3f840be36e038810bacb9b155c5645a05041b8b8027",
-                "33f1747ed1f21beda91d9c08016dd1877ad753c855304e7424543f4ea93964ef",
-                "219e41711bf05f99e613c7e9c55631cf3e69e478d9186b188e1f4ad3267e6734",
-                "71bab4e45c5ef9a7854a29088ebaf9f947f95fb8ad019dd7565a6c7416e38b94"
+                "05b6ade0f8b3042d560f9459d698af2efaa02c2ebd29f1b4ec264c162293e162",
+                "18668a6d01288e3c73703550a82cacc1eaaf042d2192edd925c3c76ad8cc497c",
+                "0351eb7b91d2526e18b3d2d7a0ef9d86ef82a0c094955d6e154eeede4515d659",
+                "f51fc3ce2d235174c2d8ee94313591997316daef9e94e1f30f2280c7a4200343",
+                "d039c018c3ba549764dcc6662e2e14bb6998bcb19da2fbd337825896b0bbee4d",
+                "ac999610ff4f011e39c5805e9e104912318deb7279970b4d1cdbb92a1346a7dc",
+                "5caed55958a1c176f56ad874a5ff29e012ed431074af3be555fd7af4a42e2f17",
+                "f5ff2d76260ecc8707c16d04c065a55427bdc2dc2900a29459a32909b473661f"
             ],
             "type": "Script",
             "exampleSites": [
                 "microsoft.com",
-                "community.windows.com",
                 "dynamics.microsoft.com",
-                "office.com",
-                "office.live.com",
                 "onedrive.live.com",
+                "office.live.com",
                 "support.microsoft.com",
                 "support.xbox.com",
                 "templates.office.com",
                 "visualstudio.microsoft.com",
                 "www.microsoft.com",
                 "www.office.com",
-                "www.onenote.com"
+                "www.xbox.com"
             ]
         },
         {
-            "rule": "akadns\\.net\\/cm\\/dd",
-            "cookies": 0.000308,
-            "fingerprinting": 0,
+            "rule": "akadns\\.net\\/scripts\\/me\\/MeControl\\/10\\.20239\\.2\\/en-US\\/meBoot\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
             "subdomains": [
-                "cm.everesttech.net"
+                "cdn.account.microsoft.com"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000308,
+            "sites": 9,
+            "prevalence": 0.000917,
             "cnames": [
                 {
-                    "original": "cm.everesttech.net",
-                    "resolved": "cm.everesttech.net.akadns.net"
+                    "original": "mem.gfx.ms",
+                    "resolved": "cdn.account.microsoft.com.akadns.net"
                 }
             ],
-            "responseHashes": [],
-            "type": "Image",
+            "responseHashes": [
+                "88af89dda9ff0a9d42906fbec6f12da1eab82a9c0f98349e2728a344568ee372"
+            ],
+            "type": "Script",
             "exampleSites": [
-                "acrobatusers.com",
-                "spark.adobe.com",
-                "stock.adobe.com"
+                "microsoft.com",
+                "developercommunity.visualstudio.com",
+                "onedrive.live.com",
+                "office.live.com",
+                "support.microsoft.com",
+                "templates.office.com",
+                "visualstudio.microsoft.com",
+                "www.office.com",
+                "www.xbox.com"
+            ]
+        },
+        {
+            "rule": "akadns\\.net\\/scripts\\/me\\/MeControl\\/10\\.20239\\.2\\/en-US\\/meCore\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn.account.microsoft.com"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.000917,
+            "cnames": [
+                {
+                    "original": "mem.gfx.ms",
+                    "resolved": "cdn.account.microsoft.com.akadns.net"
+                }
+            ],
+            "responseHashes": [
+                "6ef69deb7ce06ddbd206e3b4cb4ed37280fe82500663d6159c1455704bb71e32"
+            ],
+            "type": "Script",
+            "exampleSites": [
+                "microsoft.com",
+                "developercommunity.visualstudio.com",
+                "onedrive.live.com",
+                "office.live.com",
+                "support.microsoft.com",
+                "templates.office.com",
+                "visualstudio.microsoft.com",
+                "www.office.com",
+                "www.xbox.com"
+            ]
+        },
+        {
+            "rule": "akadns\\.net\\/mscc\\/statics\\/mscc-0\\.4\\.2\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "c-s.cms.ms"
+            ],
+            "apis": {},
+            "sites": 15,
+            "prevalence": 0.00153,
+            "cnames": [
+                {
+                    "original": "c.s-microsoft.com",
+                    "resolved": "c-s.cms.ms.akadns.net"
+                }
+            ],
+            "responseHashes": [
+                "a188e6c4c6729c3abbe6a34e45b5c3d7d65ffc659e1baa46632ffb1c876e815c"
+            ],
+            "type": "Script",
+            "exampleSites": [
+                "microsoft.com",
+                "blogs.windows.com",
+                "community.powerbi.com",
+                "devblogs.microsoft.com",
+                "developer.microsoft.com",
+                "docs.microsoft.com",
+                "news.xbox.com",
+                "onedrive.live.com",
+                "office.live.com",
+                "techcommunity.microsoft.com",
+                "support.microsoft.com",
+                "visualstudio.microsoft.com",
+                "www.microsoft.com",
+                "www.office.com",
+                "www.seaofthieves.com"
             ]
         },
         {
             "rule": "akadns\\.net\\/trackingservlet\\/impression",
-            "cookies": 0.000308,
-            "fingerprinting": 0,
-            "subdomains": [
-                "analytics.supplyframe"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.000308,
-            "cnames": [
-                {
-                    "original": "analytics.supplyframe.com",
-                    "resolved": "analytics.supplyframe.akadns.net"
-                }
-            ],
-            "responseHashes": [
-                "b1442e85b03bdcaf66dc58c7abb98745dd2687d86350be9a298a1d9382ac849b"
-            ],
-            "type": "Image",
-            "exampleSites": [
-                "hackaday.io",
-                "hackaday.com",
-                "www.tindie.com"
-            ]
-        },
-        {
-            "rule": "akadns\\.net\\/openads\\/www\\/delivery\\/lg\\.php",
-            "cookies": 0.000205,
-            "fingerprinting": 0,
-            "subdomains": [
-                "ads.supplyframe"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000205,
-            "cnames": [
-                {
-                    "original": "ads.supplyframe.com",
-                    "resolved": "ads.supplyframe.akadns.net"
-                }
-            ],
-            "responseHashes": [
-                "4e0705327480ad2323cb03d9c450ffcae4a98bf3a5382fa0c7882145ed620e49"
-            ],
-            "type": "Image",
-            "exampleSites": [
-                "hackaday.com",
-                "www.tindie.com"
-            ]
-        },
-        {
-            "rule": "akadns\\.net\\/trackingservlet\\/impression\\/",
-            "cookies": 0.000205,
+            "cookies": 0.000204,
             "fingerprinting": 0,
             "subdomains": [
                 "analytics.supplyframe"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000205,
+            "prevalence": 0.000204,
             "cnames": [
                 {
                     "original": "analytics.supplyframe.com",
@@ -259,14 +233,14 @@
         },
         {
             "rule": "akadns\\.net\\/openads\\/adjs\\.php",
-            "cookies": 0.000205,
+            "cookies": 0.000204,
             "fingerprinting": 0,
             "subdomains": [
                 "ads.supplyframe"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000205,
+            "prevalence": 0.000204,
             "cnames": [
                 {
                     "original": "ads.supplyframe.com",
@@ -274,7 +248,7 @@
                 }
             ],
             "responseHashes": [
-                "c12ebed2305ce4574845cc0adfdc0ee5b0ff54f5466a63f7a20b1d21d45ef1e5"
+                "8ab3ac46ba26772ee9c66a685a366dd901020775544928131ed4012a48da0b0c"
             ],
             "type": "Script",
             "exampleSites": [
@@ -283,65 +257,64 @@
             ]
         },
         {
-            "rule": "akadns\\.net\\/scripts\\/me\\/MeControl\\/10\\.20300\\.4\\/nb-NO\\/meBoot\\.min\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
+            "rule": "akadns\\.net\\/cm\\/dd",
+            "cookies": 0.000204,
+            "fingerprinting": 0,
             "subdomains": [
-                "cdn.account.microsoft.com"
+                "cm.everesttech.net"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000205,
+            "prevalence": 0.000204,
             "cnames": [
                 {
-                    "original": "mem.gfx.ms",
-                    "resolved": "cdn.account.microsoft.com.akadns.net"
+                    "original": "cm.everesttech.net",
+                    "resolved": "cm.everesttech.net.akadns.net"
                 }
             ],
-            "responseHashes": [
-                "b62647e0476634951a50e76e6c742cc405200d902906da0ea883b43d00d48c9e"
-            ],
-            "type": "Script",
+            "responseHashes": [],
+            "type": "Image",
             "exampleSites": [
-                "office.com",
-                "www.microsoft.com"
+                "adobe.com",
+                "stock.adobe.com"
             ]
         },
         {
-            "rule": "akadns\\.net\\/scripts\\/me\\/MeControl\\/10\\.20300\\.4\\/nb-NO\\/meCore\\.min\\.js",
+            "rule": "akadns\\.net\\/overlay-connect-integration\\/widget\\.js",
             "cookies": 0,
             "fingerprinting": 1,
             "subdomains": [
-                "cdn.account.microsoft.com"
+                "ws-rvrs-default.ubisoft"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000205,
+            "sites": 3,
+            "prevalence": 0.000306,
             "cnames": [
                 {
-                    "original": "mem.gfx.ms",
-                    "resolved": "cdn.account.microsoft.com.akadns.net"
+                    "original": "overlay.ubisoft.com",
+                    "resolved": "ws-rvrs-default.ubisoft.akadns.net"
                 }
             ],
             "responseHashes": [
-                "af6f622ac4606c68d9b81dbee29a2211ba010ea41be2d615a88fe41d3df1a13e"
+                "4f76c428a9f40162cda25ea9d8bdabe73779a8f840062b1023b16e701c1c0681"
             ],
             "type": "Script",
             "exampleSites": [
-                "office.com",
-                "www.microsoft.com"
+                "ubisoft.com",
+                "uplay.ubisoft.com",
+                "www.ubisoft.com"
             ]
         },
         {
             "rule": "akadns\\.net\\/Serving",
-            "cookies": 0.000411,
+            "cookies": 0.000611,
             "fingerprinting": 0,
             "subdomains": [
                 "bs.eyeblaster"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.000411,
+            "sites": 6,
+            "prevalence": 0.000611,
             "cnames": [
                 {
                     "original": "bs.serving-sys.com",
@@ -351,7 +324,9 @@
             "responseHashes": [],
             "type": "Image",
             "exampleSites": [
-                "amazon.in",
+                "amazon.ae",
+                "www.amazon.in",
+                "www.amazon.ca",
                 "www.amazon.com",
                 "www.amazon.com.au",
                 "www.dpreview.com"
@@ -359,25 +334,52 @@
         },
         {
             "rule": "akadns\\.net\\/appleauth\\/jslog",
-            "cookies": 0.000205,
+            "cookies": 0.000204,
             "fingerprinting": 0,
             "subdomains": [
                 "idmsa.apple.com"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000205,
+            "prevalence": 0.000204,
             "cnames": [
                 {
                     "original": "idmsa.apple.com",
                     "resolved": "idmsa.apple.com.akadns.net"
                 }
             ],
-            "responseHashes": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
             "type": "XHR",
             "exampleSites": [
                 "icloud.com",
                 "www.icloud.com"
+            ]
+        },
+        {
+            "rule": "akadns\\.net\\/rum\\.gif",
+            "cookies": 0.000204,
+            "fingerprinting": 0,
+            "subdomains": [
+                "beacon-cdn-custom.walmart.com"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000204,
+            "cnames": [
+                {
+                    "original": "beacon.walmart.com",
+                    "resolved": "beacon-cdn-custom.walmart.com.akadns.net"
+                }
+            ],
+            "responseHashes": [
+                "93ae7d494fad0fb30cbf3ae746a39c4bc7a0f8bbf87fbb587a3f3c01f3c5ce20"
+            ],
+            "type": "Image",
+            "exampleSites": [
+                "walmart.com",
+                "www.walmart.com"
             ]
         }
     ],
@@ -385,10 +387,10 @@
         "CDN"
     ],
     "performance": {},
-    "cookies": 0.00216,
+    "cookies": 0.00214,
     "types": {
-        "Script": 39,
-        "Image": 14,
+        "Script": 49,
+        "Image": 12,
         "XHR": 2
     }
 }

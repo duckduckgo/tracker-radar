@@ -9,24 +9,25 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.0074,
-    "sites": 72,
+    "prevalence": 0.0076,
+    "sites": 74,
     "subdomains": [
         "cdn.account.microsoft.com",
         "idmsa.apple.com",
         "lcs.naver.com",
         "mrd.mrdmall",
-        "afcs.dellcdn.com",
+        "c-s.cms.ms",
+        "analytics.supplyframe",
         "bs.eyeblaster",
         "js-cdn-music-lb.itunes-apple.com",
-        "smetrics.cdw.com",
         "beacon-cdn.samsclub.com",
-        "beacon-cdn.walmart.ca"
+        "beacon-cdn.walmart.ca",
+        "beacon-cdn-custom.walmart.com"
     ],
     "cnames": [
         {
-            "original": "afcs.dellcdn.com",
-            "resolved": "afcs.dellcdn.com.akadns.net"
+            "original": "analytics.supplyframe.com",
+            "resolved": "analytics.supplyframe.akadns.net"
         },
         {
             "original": "beacon.samsclub.com",
@@ -37,8 +38,16 @@
             "resolved": "beacon-cdn.walmart.ca.akadns.net"
         },
         {
+            "original": "beacon.walmart.com",
+            "resolved": "beacon-cdn-custom.walmart.com.akadns.net"
+        },
+        {
             "original": "bs.serving-sys.com",
             "resolved": "bs.eyeblaster.akadns.net"
+        },
+        {
+            "original": "c.s-microsoft.com",
+            "resolved": "c-s.cms.ms.akadns.net"
         },
         {
             "original": "idmsa.apple.com",
@@ -59,28 +68,20 @@
         {
             "original": "mrd.dhgate.com",
             "resolved": "mrd.mrdmall.akadns.net"
-        },
-        {
-            "original": "smetrics.cdw.ca",
-            "resolved": "smetrics.cdw.com.akadns.net"
-        },
-        {
-            "original": "smetrics.cdw.com",
-            "resolved": "smetrics.cdw.com.akadns.net"
         }
     ],
     "fingerprinting": 2,
     "resources": [
         {
-            "rule": "akadns\\.net\\/meversion",
+            "rule": "akadns\\.net\\/scripts\\/me\\/MeControl\\/10\\.20239\\.2\\/en-US\\/meBoot\\.min\\.js",
             "cookies": 0,
             "fingerprinting": 1,
             "subdomains": [
                 "cdn.account.microsoft.com"
             ],
             "apis": {},
-            "sites": 5,
-            "prevalence": 0.000514,
+            "sites": 14,
+            "prevalence": 0.00144,
             "cnames": [
                 {
                     "original": "mem.gfx.ms",
@@ -88,38 +89,7 @@
                 }
             ],
             "responseHashes": [
-                "7fbe238c1ef2bf5ac9282b2b2beb6b4fc0250a2f43dd481a7e900844ceb186d9",
-                "dbedeb1a38df1137b0213da4d077fdf320da8cb6555163ffd79ffb8635a9600b",
-                "39da8782ac2d54e832f9b3f840be36e038810bacb9b155c5645a05041b8b8027",
-                "219e41711bf05f99e613c7e9c55631cf3e69e478d9186b188e1f4ad3267e6734"
-            ],
-            "type": "Script",
-            "exampleSites": [
-                "microsoft.com",
-                "developercommunity.visualstudio.com",
-                "onedrive.live.com",
-                "support.xbox.com",
-                "visualstudio.microsoft.com"
-            ]
-        },
-        {
-            "rule": "akadns\\.net\\/scripts\\/me\\/MeControl\\/10\\.20300\\.4\\/en-US\\/meBoot\\.min\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "cdn.account.microsoft.com"
-            ],
-            "apis": {},
-            "sites": 13,
-            "prevalence": 0.00134,
-            "cnames": [
-                {
-                    "original": "mem.gfx.ms",
-                    "resolved": "cdn.account.microsoft.com.akadns.net"
-                }
-            ],
-            "responseHashes": [
-                "854dd4b898202b808f0122d4c79d08a14bd7844d393e4abecb327da4aaae0d65"
+                "88af89dda9ff0a9d42906fbec6f12da1eab82a9c0f98349e2728a344568ee372"
             ],
             "type": "Script",
             "exampleSites": [
@@ -128,8 +98,9 @@
                 "community.dynamics.com",
                 "developercommunity.visualstudio.com",
                 "office.live.com",
-                "odc.officeapps.live.com",
+                "office.com",
                 "onedrive.live.com",
+                "products.office.com",
                 "support.microsoft.com",
                 "templates.office.com",
                 "visualstudio.microsoft.com",
@@ -139,15 +110,15 @@
             ]
         },
         {
-            "rule": "akadns\\.net\\/scripts\\/me\\/MeControl\\/10\\.20300\\.4\\/en-US\\/meCore\\.min\\.js",
+            "rule": "akadns\\.net\\/scripts\\/me\\/MeControl\\/10\\.20239\\.2\\/en-US\\/meCore\\.min\\.js",
             "cookies": 0,
             "fingerprinting": 1,
             "subdomains": [
                 "cdn.account.microsoft.com"
             ],
             "apis": {},
-            "sites": 12,
-            "prevalence": 0.00123,
+            "sites": 14,
+            "prevalence": 0.00144,
             "cnames": [
                 {
                     "original": "mem.gfx.ms",
@@ -155,7 +126,7 @@
                 }
             ],
             "responseHashes": [
-                "c965f854e2429f283ac9ca2f8f7641b10e6f43f7ef1f0ad6482f1f7b6b5a21f6"
+                "6ef69deb7ce06ddbd206e3b4cb4ed37280fe82500663d6159c1455704bb71e32"
             ],
             "type": "Script",
             "exampleSites": [
@@ -164,25 +135,27 @@
                 "community.dynamics.com",
                 "developercommunity.visualstudio.com",
                 "office.live.com",
-                "odc.officeapps.live.com",
+                "office.com",
                 "onedrive.live.com",
+                "products.office.com",
                 "support.microsoft.com",
                 "templates.office.com",
                 "visualstudio.microsoft.com",
                 "www.microsoft.com",
-                "www.office.com"
+                "www.office.com",
+                "www.xbox.com"
             ]
         },
         {
             "rule": "akadns\\.net\\/appleauth\\/auth\\/authorize\\/signin",
-            "cookies": 0.000206,
+            "cookies": 0.000205,
             "fingerprinting": 0,
             "subdomains": [
                 "idmsa.apple.com"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000206,
+            "prevalence": 0.000205,
             "cnames": [
                 {
                     "original": "idmsa.apple.com",
@@ -190,7 +163,7 @@
                 }
             ],
             "responseHashes": [
-                "c34b5bc2b326e7c376db64218ef580f62ab6d3d6a89c43d24ae721a810638edf"
+                "9f2938bd93332f3723bcbfe2756116660a1fc8ec1142e3687a5bedc3c0ce5b7c"
             ],
             "type": "Document",
             "exampleSites": [
@@ -200,14 +173,14 @@
         },
         {
             "rule": "akadns\\.net\\/appleauth\\/jslog",
-            "cookies": 0.000309,
+            "cookies": 0.000308,
             "fingerprinting": 0,
             "subdomains": [
                 "idmsa.apple.com"
             ],
             "apis": {},
             "sites": 3,
-            "prevalence": 0.000309,
+            "prevalence": 0.000308,
             "cnames": [
                 {
                     "original": "idmsa.apple.com",
@@ -225,15 +198,48 @@
             ]
         },
         {
+            "rule": "akadns\\.net\\/meversion",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn.account.microsoft.com"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000616,
+            "cnames": [
+                {
+                    "original": "mem.gfx.ms",
+                    "resolved": "cdn.account.microsoft.com.akadns.net"
+                }
+            ],
+            "responseHashes": [
+                "05b6ade0f8b3042d560f9459d698af2efaa02c2ebd29f1b4ec264c162293e162",
+                "0351eb7b91d2526e18b3d2d7a0ef9d86ef82a0c094955d6e154eeede4515d659",
+                "f51fc3ce2d235174c2d8ee94313591997316daef9e94e1f30f2280c7a4200343",
+                "ac999610ff4f011e39c5805e9e104912318deb7279970b4d1cdbb92a1346a7dc",
+                "18668a6d01288e3c73703550a82cacc1eaaf042d2192edd925c3c76ad8cc497c"
+            ],
+            "type": "Script",
+            "exampleSites": [
+                "microsoft.com",
+                "onedrive.live.com",
+                "support.microsoft.com",
+                "support.xbox.com",
+                "visualstudio.microsoft.com",
+                "www.office.com"
+            ]
+        },
+        {
             "rule": "akadns\\.net\\/m",
-            "cookies": 0.000206,
+            "cookies": 0.000205,
             "fingerprinting": 0,
             "subdomains": [
                 "lcs.naver.com"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000206,
+            "prevalence": 0.000205,
             "cnames": [
                 {
                     "original": "lcs.naver.com",
@@ -250,15 +256,15 @@
             ]
         },
         {
-            "rule": "akadns\\.net\\/mread\\/promo-PromoGift-showPromoGiftPopup\\.do",
-            "cookies": 0.000309,
+            "rule": "akadns\\.net\\/home\\/web\\/index\\.do",
+            "cookies": 0.000411,
             "fingerprinting": 0,
             "subdomains": [
                 "mrd.mrdmall"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000309,
+            "sites": 4,
+            "prevalence": 0.000411,
             "cnames": [
                 {
                     "original": "mrd.dhgate.com",
@@ -266,8 +272,37 @@
                 }
             ],
             "responseHashes": [
-                "aea39399152f0e665ac931995b28b0bd8d599df5d355c204c9f69bb09873e635",
-                "c05b1624b528788ec5f20cbef6589baba4337159973b3007f93f52c3d0f7e0d5"
+                "6d7f0132bdea786c6c162d3475701ed28d644a9b790044ded8ba061ebf51e98c",
+                "f9cf4498d6da54f61035d6657a441150af126e9d592b06b638a22f4e42e07d1b",
+                "27efba7de5fe42fe8c080ff09ec26f8e9e67db3bb01101aa1e122945ce2d235d"
+            ],
+            "type": "XHR",
+            "exampleSites": [
+                "dhgate.com",
+                "ca.dhgate.com",
+                "m.ca.dhgate.com",
+                "www.dhgate.com"
+            ]
+        },
+        {
+            "rule": "akadns\\.net\\/mread\\/promo-PromoGift-showPromoGiftPopup\\.do",
+            "cookies": 0.000308,
+            "fingerprinting": 0,
+            "subdomains": [
+                "mrd.mrdmall"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000308,
+            "cnames": [
+                {
+                    "original": "mrd.dhgate.com",
+                    "resolved": "mrd.mrdmall.akadns.net"
+                }
+            ],
+            "responseHashes": [
+                "0e1ce02ed5d006c72545684a5e046bfe78f3805ad70c5627fd5a0bc5cb51eb76",
+                "cbb37a6b1f3883abaaf3137d1d79b33635cc896547ca60f5eeb751106bea9810"
             ],
             "type": "Script",
             "exampleSites": [
@@ -277,90 +312,70 @@
             ]
         },
         {
-            "rule": "akadns\\.net\\/csb\\/masthead\\/bundles\\/1\\.0\\.1\\.669\\/js\\/mastheadscripts\\.min\\.js",
+            "rule": "akadns\\.net\\/mscc\\/statics\\/mscc-0\\.4\\.2\\.min\\.js",
             "cookies": 0,
             "fingerprinting": 1,
             "subdomains": [
-                "afcs.dellcdn.com"
+                "c-s.cms.ms"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000206,
+            "sites": 7,
+            "prevalence": 0.000719,
             "cnames": [
                 {
-                    "original": "afcs.dellcdn.com",
-                    "resolved": "afcs.dellcdn.com.akadns.net"
+                    "original": "c.s-microsoft.com",
+                    "resolved": "c-s.cms.ms.akadns.net"
                 }
             ],
             "responseHashes": [
-                "94f686fcf10ea9a68be5c62e931e955781167d16437aa1e0fc14b77828620b22"
+                "a188e6c4c6729c3abbe6a34e45b5c3d7d65ffc659e1baa46632ffb1c876e815c"
             ],
             "type": "Script",
             "exampleSites": [
-                "dell.com",
-                "www.dell.com"
+                "powerbi.com",
+                "devblogs.microsoft.com",
+                "powerusers.microsoft.com",
+                "techcommunity.microsoft.com",
+                "support.microsoft.com",
+                "visualstudio.microsoft.com",
+                "www.seaofthieves.com"
             ]
         },
         {
-            "rule": "akadns\\.net\\/boomerang\\/latest\\/boomerang-csb-full\\.min\\.js",
-            "cookies": 0.000206,
-            "fingerprinting": 2,
+            "rule": "akadns\\.net\\/trackingservlet\\/impression",
+            "cookies": 0.000205,
+            "fingerprinting": 0,
             "subdomains": [
-                "afcs.dellcdn.com"
+                "analytics.supplyframe"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000206,
+            "prevalence": 0.000205,
             "cnames": [
                 {
-                    "original": "afcs.dellcdn.com",
-                    "resolved": "afcs.dellcdn.com.akadns.net"
+                    "original": "analytics.supplyframe.com",
+                    "resolved": "analytics.supplyframe.akadns.net"
                 }
             ],
             "responseHashes": [
-                "d2654e47ee05b392bd5e1a170fc3e26ebc3a2b94526e6062b162538fe04ed492"
+                "b1442e85b03bdcaf66dc58c7abb98745dd2687d86350be9a298a1d9382ac849b"
             ],
-            "type": "Script",
+            "type": "Image",
             "exampleSites": [
-                "dell.com",
-                "www.dell.com"
-            ]
-        },
-        {
-            "rule": "akadns\\.net\\/csb\\/contact-drawer\\/bundles\\/1\\.0\\.1\\.173\\/js\\/domain\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "afcs.dellcdn.com"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000206,
-            "cnames": [
-                {
-                    "original": "afcs.dellcdn.com",
-                    "resolved": "afcs.dellcdn.com.akadns.net"
-                }
-            ],
-            "responseHashes": [
-                "77835090da8b22425ae985e35f162b6051966c5c7b6c789c04e0d2b5f2a55817"
-            ],
-            "type": "Script",
-            "exampleSites": [
-                "dell.com",
-                "www.dell.com"
+                "hackaday.io",
+                "hackaday.com"
             ]
         },
         {
             "rule": "akadns\\.net\\/Serving",
-            "cookies": 0.000823,
+            "cookies": 0.000822,
             "fingerprinting": 0,
             "subdomains": [
                 "bs.eyeblaster"
             ],
             "apis": {},
             "sites": 8,
-            "prevalence": 0.000823,
+            "prevalence": 0.000822,
             "cnames": [
                 {
                     "original": "bs.serving-sys.com",
@@ -371,17 +386,17 @@
             "type": "Image",
             "exampleSites": [
                 "imdb.com",
-                "sell.amazon.com",
+                "www.amazon.ae",
                 "www.amazon.in",
                 "www.amazon.com",
-                "www.amazon.ca",
                 "www.amazon.com.au",
+                "www.amazon.ca",
                 "www.dpreview.com",
                 "www.imdb.com"
             ]
         },
         {
-            "rule": "akadns\\.net\\/musickit\\/v2\\/components\\/musickit-components\\/p-897077be\\.js",
+            "rule": "akadns\\.net\\/musickit\\/v2\\/components\\/musickit-components\\/p-05cc51ee\\.js",
             "cookies": 0,
             "fingerprinting": 1,
             "subdomains": [
@@ -389,7 +404,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000206,
+            "prevalence": 0.000205,
             "cnames": [
                 {
                     "original": "js-cdn.music.apple.com",
@@ -397,7 +412,7 @@
                 }
             ],
             "responseHashes": [
-                "a4d0c33ad0c819a8f415d409f476bb069fa4d8fa97feb7018e5cd93c5a0a81dd"
+                "73d1dafea222d4b052e4c17e994a593a239e7b6638b815d15d8f914e7d68c3a9"
             ],
             "type": "Script",
             "exampleSites": [
@@ -406,7 +421,7 @@
             ]
         },
         {
-            "rule": "akadns\\.net\\/musickit\\/v2\\/components\\/musickit-components\\/p-cc9b16e7\\.js",
+            "rule": "akadns\\.net\\/musickit\\/v2\\/components\\/musickit-components\\/p-b41b0ae9\\.js",
             "cookies": 0,
             "fingerprinting": 1,
             "subdomains": [
@@ -414,7 +429,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000206,
+            "prevalence": 0.000205,
             "cnames": [
                 {
                     "original": "js-cdn.music.apple.com",
@@ -422,7 +437,7 @@
                 }
             ],
             "responseHashes": [
-                "4640d965ba04d4b0e21e47bb7167dbee5e7ecbc2d1c617a876242a19f2b8bfc3"
+                "3d62e49b527585d399d8640bbc506ae84d1f5d32aebd0cf247de48c873f67d7e"
             ],
             "type": "Script",
             "exampleSites": [
@@ -431,7 +446,7 @@
             ]
         },
         {
-            "rule": "akadns\\.net\\/musickit\\/v2\\/components\\/musickit-components\\/p-5ffa4cd5\\.js",
+            "rule": "akadns\\.net\\/musickit\\/v2\\/components\\/musickit-components\\/p-fcebddc3\\.js",
             "cookies": 0,
             "fingerprinting": 1,
             "subdomains": [
@@ -439,7 +454,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000206,
+            "prevalence": 0.000205,
             "cnames": [
                 {
                     "original": "js-cdn.music.apple.com",
@@ -447,71 +462,17 @@
                 }
             ],
             "responseHashes": [
-                "fd884e613c59c986374afd324bc2ab25ac32d3080fa7cbb3ac2fd222e9a1cade"
+                "0c97951b885e19ecb2d454bee8ae46e7ce1d8801a4bbb8bb64e73cc7da35cf52"
             ],
             "type": "Script",
             "exampleSites": [
                 "apple.com",
                 "tv.apple.com"
-            ]
-        },
-        {
-            "rule": "akadns\\.net\\/musickit\\/v2\\/components\\/musickit-components\\/p-da9aac47\\.entry\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "js-cdn-music-lb.itunes-apple.com"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000206,
-            "cnames": [
-                {
-                    "original": "js-cdn.music.apple.com",
-                    "resolved": "js-cdn-music-lb.itunes-apple.com.akadns.net"
-                }
-            ],
-            "responseHashes": [
-                "9f65dd1aa87a7cf04a2b9e534827615e134337f397c6e2a7f03c344a41bb0db5"
-            ],
-            "type": "Script",
-            "exampleSites": [
-                "apple.com",
-                "tv.apple.com"
-            ]
-        },
-        {
-            "rule": "akadns\\.net\\/id",
-            "cookies": 0.000206,
-            "fingerprinting": 0,
-            "subdomains": [
-                "smetrics.cdw.com"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000206,
-            "cnames": [
-                {
-                    "original": "smetrics.cdw.ca",
-                    "resolved": "smetrics.cdw.com.akadns.net"
-                },
-                {
-                    "original": "smetrics.cdw.com",
-                    "resolved": "smetrics.cdw.com.akadns.net"
-                }
-            ],
-            "responseHashes": [
-                "b20793ee23a5e447c15de5d06a121e045c0263b79761eddf7dfeb7d0e8a110b5"
-            ],
-            "type": "XHR",
-            "exampleSites": [
-                "cdw.ca",
-                "www.cdw.com"
             ]
         },
         {
             "rule": "akadns\\.net\\/beacon\\.js",
-            "cookies": 0,
+            "cookies": 0.000205,
             "fingerprinting": 1,
             "subdomains": [
                 "beacon-cdn.samsclub.com",
@@ -519,7 +480,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000206,
+            "prevalence": 0.000205,
             "cnames": [
                 {
                     "original": "beacon.samsclub.com",
@@ -530,7 +491,9 @@
                     "resolved": "beacon-cdn.walmart.ca.akadns.net"
                 }
             ],
-            "responseHashes": [],
+            "responseHashes": [
+                "06718277ef52b0cb816a5d767e4c9742d08da62ba6e498c35d83226d4a573e19"
+            ],
             "type": "Script",
             "exampleSites": [
                 "samsclub.com",
@@ -538,19 +501,60 @@
             ]
         },
         {
-            "rule": "akadns\\.net\\/rum\\.gif",
-            "cookies": 0.000206,
-            "fingerprinting": 0,
+            "rule": "akadns\\.net\\/rum\\.js",
+            "cookies": 0.000308,
+            "fingerprinting": 2,
             "subdomains": [
-                "beacon-cdn.samsclub.com"
+                "beacon-cdn.samsclub.com",
+                "beacon-cdn.walmart.ca",
+                "beacon-cdn-custom.walmart.com"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000206,
+            "sites": 3,
+            "prevalence": 0.000308,
             "cnames": [
                 {
                     "original": "beacon.samsclub.com",
                     "resolved": "beacon-cdn.samsclub.com.akadns.net"
+                },
+                {
+                    "original": "beacon.walmart.ca",
+                    "resolved": "beacon-cdn.walmart.ca.akadns.net"
+                },
+                {
+                    "original": "beacon.walmart.com",
+                    "resolved": "beacon-cdn-custom.walmart.com.akadns.net"
+                }
+            ],
+            "responseHashes": [
+                "78f26083bf4a140a506224e50143207b57308479ec1fc80f2576d7b50ea0c52b"
+            ],
+            "type": "Script",
+            "exampleSites": [
+                "samsclub.com",
+                "www.walmart.ca",
+                "www.walmart.com"
+            ]
+        },
+        {
+            "rule": "akadns\\.net\\/rum\\.gif",
+            "cookies": 0.000308,
+            "fingerprinting": 0,
+            "subdomains": [
+                "beacon-cdn.samsclub.com",
+                "beacon-cdn-custom.walmart.com"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000308,
+            "cnames": [
+                {
+                    "original": "beacon.samsclub.com",
+                    "resolved": "beacon-cdn.samsclub.com.akadns.net"
+                },
+                {
+                    "original": "beacon.walmart.com",
+                    "resolved": "beacon-cdn-custom.walmart.com.akadns.net"
                 }
             ],
             "responseHashes": [
@@ -559,7 +563,8 @@
             "type": "Image",
             "exampleSites": [
                 "samsclub.com",
-                "www.samsclub.com"
+                "www.samsclub.com",
+                "www.walmart.com"
             ]
         }
     ],
@@ -567,11 +572,11 @@
         "CDN"
     ],
     "performance": {},
-    "cookies": 0.00278,
+    "cookies": 0.00318,
     "types": {
-        "Script": 49,
+        "Script": 55,
         "Document": 2,
-        "XHR": 5,
-        "Image": 12
+        "XHR": 7,
+        "Image": 15
     }
 }

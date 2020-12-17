@@ -4,17 +4,19 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000076,
+    "prevalence": 0.00000761,
     "sites": 1,
     "subdomains": [
-        "static"
+        "static",
+        "analytics",
+        "www"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "blogr\\.xxx\\/min\\/",
-            "cookies": 0.0000076,
+            "cookies": 0.00000761,
             "fingerprinting": 0,
             "subdomains": [
                 "static"
@@ -34,12 +36,14 @@
         },
         {
             "rule": "blogr\\.xxx\\/common\\/js\\/libs\\/jquery\\/2\\.1\\.1\\/jquery\\.min\\.js",
-            "cookies": 0.0000076,
-            "fingerprinting": 0,
+            "cookies": 0.00000761,
+            "fingerprinting": 1,
             "subdomains": [
                 "static"
             ],
-            "apis": {},
+            "apis": {
+                "Event.prototype.timeStamp": 2
+            },
             "sites": 2,
             "prevalence": 0.0000152,
             "cnames": [],
@@ -54,12 +58,14 @@
         },
         {
             "rule": "blogr\\.xxx\\/common\\/js\\/libs\\/jquery-migrate\\/jquery-migrate-1\\.2\\.1\\.min\\.js",
-            "cookies": 0.0000076,
-            "fingerprinting": 0,
+            "cookies": 0.00000761,
+            "fingerprinting": 1,
             "subdomains": [
                 "static"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
             "sites": 2,
             "prevalence": 0.0000152,
             "cnames": [],
@@ -74,12 +80,13 @@
         },
         {
             "rule": "blogr\\.xxx\\/min\\/",
-            "cookies": 0,
+            "cookies": 0.00000761,
             "fingerprinting": 1,
             "subdomains": [
                 "static"
             ],
             "apis": {
+                "Navigator.prototype.userAgent": 1,
                 "window.devicePixelRatio": 1,
                 "Date.prototype.getTime": 1
             },
@@ -97,7 +104,7 @@
         },
         {
             "rule": "blogr\\.xxx\\/default\\/css\\/toolbarexternal\\.css",
-            "cookies": 0.0000076,
+            "cookies": 0.00000761,
             "fingerprinting": 0,
             "subdomains": [
                 "static"
@@ -117,7 +124,7 @@
         },
         {
             "rule": "blogr\\.xxx\\/embed\\/icons\\/font\\/blogrembed\\.woff",
-            "cookies": 0.0000076,
+            "cookies": 0.00000761,
             "fingerprinting": 0,
             "subdomains": [
                 "static"
@@ -137,7 +144,7 @@
         },
         {
             "rule": "blogr\\.xxx\\/common\\/fonts\\/pacifico\\/pacifico-latin\\.woff2",
-            "cookies": 0.0000076,
+            "cookies": 0.00000761,
             "fingerprinting": 0,
             "subdomains": [
                 "static"
@@ -154,14 +161,85 @@
                 "nude.hu",
                 "www.nude.hu"
             ]
+        },
+        {
+            "rule": "blogr\\.xxx\\/matomo\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "analytics"
+            ],
+            "apis": {
+                "window.name": 2,
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.cookieEnabled": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.mimeTypes": 2,
+                "Navigator.prototype.javaEnabled": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "Navigator.prototype.platform": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000152,
+            "cnames": [],
+            "responseHashes": [
+                "0995371a359a4a701d66f8b183de6144de9a042e5bac84b6f920968f51567742"
+            ],
+            "type": "Script",
+            "exampleSites": [
+                "nude.hu",
+                "www.nude.hu"
+            ]
+        },
+        {
+            "rule": "blogr\\.xxx\\/track\\.php",
+            "cookies": 0.0000152,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000152,
+            "cnames": [],
+            "responseHashes": [
+                "1567dfbeaa726933c5eea089948f699d89ce66884c2d3fc835ff489d72c71c7f"
+            ],
+            "type": "Image",
+            "exampleSites": [
+                "nude.hu",
+                "www.nude.hu"
+            ]
+        },
+        {
+            "rule": "blogr\\.xxx\\/common\\/bower_components\\/components-font-awesome\\/css\\/font-awesome\\.min\\.css",
+            "cookies": 0.00000761,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000152,
+            "cnames": [],
+            "responseHashes": [
+                "799aeb25cc0373fdee0e1b1db7ad6c2f6a0e058dfadaa3379689f583213190bd"
+            ],
+            "type": "Stylesheet",
+            "exampleSites": [
+                "nude.hu",
+                "www.nude.hu"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0000076,
+    "cookies": 0.00000761,
     "types": {
-        "Stylesheet": 4,
-        "Script": 6,
-        "Font": 4
+        "Stylesheet": 6,
+        "Script": 8,
+        "Font": 4,
+        "Image": 2
     }
 }

@@ -4,16 +4,21 @@
     "source": [
         "DuckDuckGo-GB"
     ],
-    "prevalence": 0.000409,
-    "sites": 4,
+    "prevalence": 0.00132,
+    "sites": 13,
     "subdomains": [
-        "prod.ups-adcom.aolp-ds-prd.aws",
-        "prod.ups-ats.aolp-ds-prd.aws"
+        "prod.ups-ats.aolp-ds-prd.aws",
+        "service.sp-ats.aolp-ds-prd.aws",
+        "real.rotation.guce.aws"
     ],
     "cnames": [
         {
-            "original": "pixel.advertising.com",
-            "resolved": "prod.ups-adcom.aolp-ds-prd.aws.oath.cloud"
+            "original": "guce.huffpost.com",
+            "resolved": "real.rotation.guce.aws.oath.cloud"
+        },
+        {
+            "original": "service.idsync.analytics.yahoo.com",
+            "resolved": "service.sp-ats.aolp-ds-prd.aws.oath.cloud"
         },
         {
             "original": "ups.analytics.yahoo.com",
@@ -23,11 +28,10 @@
     "fingerprinting": 0,
     "resources": [
         {
-            "rule": "oath\\.cloud\\/ups\\/56465\\/sync",
-            "cookies": 0.000102,
+            "rule": "oath\\.cloud\\/ups\\/log",
+            "cookies": 0.000204,
             "fingerprinting": 0,
             "subdomains": [
-                "prod.ups-adcom.aolp-ds-prd.aws",
                 "prod.ups-ats.aolp-ds-prd.aws"
             ],
             "apis": {},
@@ -35,54 +39,73 @@
             "prevalence": 0.000204,
             "cnames": [
                 {
-                    "original": "pixel.advertising.com",
-                    "resolved": "prod.ups-adcom.aolp-ds-prd.aws.oath.cloud"
-                },
-                {
                     "original": "ups.analytics.yahoo.com",
                     "resolved": "prod.ups-ats.aolp-ds-prd.aws.oath.cloud"
                 }
             ],
-            "responseHashes": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
             "type": "Image",
             "exampleSites": [
-                "mapquest.com",
-                "www.mapquest.com"
+                "techcrunch.com",
+                "www.autoblog.com"
             ]
         },
         {
-            "rule": "oath\\.cloud\\/ups\\/55946\\/sync",
-            "cookies": 0.000102,
+            "rule": "oath\\.cloud\\/sp\\/v0\\/pixels",
+            "cookies": 0.000204,
             "fingerprinting": 0,
             "subdomains": [
-                "prod.ups-adcom.aolp-ds-prd.aws",
-                "prod.ups-ats.aolp-ds-prd.aws"
+                "service.sp-ats.aolp-ds-prd.aws"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000204,
             "cnames": [
                 {
-                    "original": "pixel.advertising.com",
-                    "resolved": "prod.ups-adcom.aolp-ds-prd.aws.oath.cloud"
-                },
+                    "original": "service.idsync.analytics.yahoo.com",
+                    "resolved": "service.sp-ats.aolp-ds-prd.aws.oath.cloud"
+                }
+            ],
+            "responseHashes": [
+                "0ce2ac0bc903633719a22cfa7a4c5060802366a355250ace0d43a850341ce791"
+            ],
+            "type": "XHR",
+            "exampleSites": [
+                "techcrunch.com",
+                "www.autoblog.com"
+            ]
+        },
+        {
+            "rule": "oath\\.cloud\\/consent",
+            "cookies": 0.000204,
+            "fingerprinting": 0,
+            "subdomains": [
+                "real.rotation.guce.aws"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000204,
+            "cnames": [
                 {
-                    "original": "ups.analytics.yahoo.com",
-                    "resolved": "prod.ups-ats.aolp-ds-prd.aws.oath.cloud"
+                    "original": "guce.huffpost.com",
+                    "resolved": "real.rotation.guce.aws.oath.cloud"
                 }
             ],
             "responseHashes": [],
             "type": "Image",
             "exampleSites": [
-                "mapquest.com",
-                "www.mapquest.com"
+                "huffpost.com",
+                "www.huffpost.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000102,
+    "cookies": 0.000305,
     "types": {
-        "Image": 4
+        "Image": 4,
+        "XHR": 2
     }
 }

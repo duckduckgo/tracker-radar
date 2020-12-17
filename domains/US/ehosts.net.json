@@ -4,37 +4,127 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000228,
-    "sites": 3,
+    "prevalence": 0.0000532,
+    "sites": 7,
     "subdomains": [
+        "hpe91proactive",
+        "hpi91proactive",
+        "hpe91",
         "pheinc"
     ],
-    "cnames": [],
+    "cnames": [
+        {
+            "original": "h30662.www3.hpe.com",
+            "resolved": "hpe91proactive.ehosts.net"
+        },
+        {
+            "original": "h30664.www3.hp.com",
+            "resolved": "hpi91proactive.ehosts.net"
+        },
+        {
+            "original": "livechat.hpe.com",
+            "resolved": "hpe91.ehosts.net"
+        }
+    ],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "ehosts\\.net\\/netagent\\/proactive\\/Visitor\\.aspx",
+            "cookies": 0.0000228,
+            "fingerprinting": 0,
+            "subdomains": [
+                "hpe91proactive",
+                "hpi91proactive"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000304,
+            "cnames": [
+                {
+                    "original": "h30662.www3.hpe.com",
+                    "resolved": "hpe91proactive.ehosts.net"
+                },
+                {
+                    "original": "h30664.www3.hp.com",
+                    "resolved": "hpi91proactive.ehosts.net"
+                }
+            ],
+            "responseHashes": [
+                "2c3094434cd3f741daa35d2f9313249179a15169bba35304aee4e598d2f8b39b",
+                "9f23831229a3449f7fd6cc1213ed886dd7950965bd97a80f8814abf7af17887d",
+                "bc7e0133be98771259820786d9cad42fb54428ce33a3c933f1551e2b8e7ff07d"
+            ],
+            "type": "XHR",
+            "exampleSites": [
+                "hpe.com",
+                "buy.hpe.com",
+                "store.hp.com",
+                "www.hpe.com"
+            ]
+        },
         {
             "rule": "ehosts\\.net\\/netagent\\/client\\/unified\\/includes2\\/portaldetection\\.js",
             "cookies": 0,
             "fingerprinting": 1,
             "subdomains": [
+                "hpe91",
                 "pheinc"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 2,
-                "window.name": 2,
-                "Document.cookie getter": 2,
-                "window.sessionStorage": 2
+                "Navigator.prototype.userAgent": 1,
+                "window.name": 1,
+                "Document.cookie getter": 1,
+                "window.sessionStorage": 1
             },
-            "sites": 2,
-            "prevalence": 0.0000152,
-            "cnames": [],
+            "sites": 3,
+            "prevalence": 0.0000228,
+            "cnames": [
+                {
+                    "original": "livechat.hpe.com",
+                    "resolved": "hpe91.ehosts.net"
+                }
+            ],
             "responseHashes": [
+                "cf9a04e8e6a0802d89c0b6987407029fb5168d8b0020ea00a0aa060795b196df",
                 "04f2449de97dfaef1e310ed75d858a7a7a2f1d8c8afbde8379fc5b92736f8607"
             ],
             "type": "Script",
             "exampleSites": [
-                "adameve.com",
+                "hpe.com",
+                "buy.hpe.com",
                 "www.adameve.com"
+            ]
+        },
+        {
+            "rule": "ehosts\\.net\\/netagent\\/proactive\\/proactive\\.aspx",
+            "cookies": 0.0000228,
+            "fingerprinting": 1,
+            "subdomains": [
+                "hpi91proactive",
+                "hpe91proactive"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000228,
+            "cnames": [
+                {
+                    "original": "h30664.www3.hp.com",
+                    "resolved": "hpi91proactive.ehosts.net"
+                },
+                {
+                    "original": "h30662.www3.hpe.com",
+                    "resolved": "hpe91proactive.ehosts.net"
+                }
+            ],
+            "responseHashes": [
+                "6407848a3e01dffeb872b25748e5356b689221d8c2b4765f8c63072b87f28f73",
+                "bdd22f02dfbc9bdef0806b146588afe35e6734428a15b83840c58755ed8f7ea3"
+            ],
+            "type": "Script",
+            "exampleSites": [
+                "hp.com",
+                "store.hp.com",
+                "www.hpe.com"
             ]
         }
     ],
@@ -45,8 +135,9 @@
         "cpu": 0,
         "cache": 3
     },
-    "cookies": 0,
+    "cookies": 0.000038,
     "types": {
-        "Script": 2
+        "XHR": 4,
+        "Script": 6
     }
 }

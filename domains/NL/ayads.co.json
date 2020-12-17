@@ -7,18 +7,68 @@
     "source": [
         "DuckDuckGo-NL"
     ],
-    "prevalence": 0.000407,
-    "sites": 4,
+    "prevalence": 0.000509,
+    "sites": 5,
     "subdomains": [
-        "geoworker",
-        "ads"
+        "ads",
+        "antenna",
+        "geoworker"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
         {
+            "rule": "ayads\\.co\\/ajs\\.php",
+            "cookies": 0.000204,
+            "fingerprinting": 1,
+            "subdomains": [
+                "ads"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2,
+                "PerformanceTiming.prototype.navigationStart": 2,
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2,
+                "Navigator.prototype.connection": 2,
+                "Date.prototype.getTimezoneOffset": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000204,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "exampleSites": [
+                "kijkdirect.nl",
+                "www.paroles.net"
+            ]
+        },
+        {
             "rule": "ayads\\.co\\/",
-            "cookies": 0.000306,
+            "cookies": 0.000102,
+            "fingerprinting": 0,
+            "subdomains": [
+                "antenna"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000611,
+            "cnames": [],
+            "responseHashes": [
+                "cf4724b2f736ed1a0ae6bc28f1ead963d9cd2c1fd87b6ef32e7799fc1c5c8bda"
+            ],
+            "type": "Image",
+            "exampleSites": [
+                "kijkdirect.nl",
+                "www.kijkdirect.nl",
+                "www.lequipe.fr",
+                "www.newscientist.com",
+                "www.paroles.net",
+                "www.songtexte.com"
+            ]
+        },
+        {
+            "rule": "ayads\\.co\\/",
+            "cookies": 0.000407,
             "fingerprinting": 0,
             "subdomains": [
                 "geoworker"
@@ -32,35 +82,10 @@
             ],
             "type": "XHR",
             "exampleSites": [
-                "ccm.net",
-                "www.kijkdirect.nl",
-                "www.leboncoin.fr",
-                "www.thinkbabynames.com"
-            ]
-        },
-        {
-            "rule": "ayads\\.co\\/ajs\\.php",
-            "cookies": 0.000204,
-            "fingerprinting": 1,
-            "subdomains": [
-                "ads"
-            ],
-            "apis": {
-                "Navigator.prototype.userAgent": 2,
-                "window.localStorage": 2,
-                "Navigator.prototype.connection": 2,
-                "Date.prototype.getTime": 2,
-                "Date.prototype.getTimezoneOffset": 1,
-                "PerformanceTiming.prototype.navigationStart": 1
-            },
-            "sites": 2,
-            "prevalence": 0.000204,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Script",
-            "exampleSites": [
                 "kijkdirect.nl",
-                "www.thinkbabynames.com"
+                "www.newscientist.com",
+                "www.paroles.net",
+                "www.songtexte.com"
             ]
         }
     ],
@@ -71,9 +96,10 @@
         "cpu": 0,
         "cache": 3
     },
-    "cookies": 0.000407,
+    "cookies": 0.000509,
     "types": {
-        "XHR": 4,
-        "Script": 2
+        "Script": 2,
+        "Image": 6,
+        "XHR": 4
     }
 }

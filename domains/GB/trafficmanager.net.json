@@ -9,10 +9,11 @@
     "source": [
         "DuckDuckGo-GB"
     ],
-    "prevalence": 0.00133,
-    "sites": 13,
+    "prevalence": 0.00163,
+    "sites": 16,
     "subdomains": [
         "nslc-prod-app",
+        "fps-namer",
         "idp.redbridge"
     ],
     "cnames": [
@@ -23,6 +24,10 @@
         {
             "original": "login.norton.com",
             "resolved": "nslc-prod-app.trafficmanager.net"
+        },
+        {
+            "original": "na.fps.ford.com",
+            "resolved": "fps-namer.trafficmanager.net"
         }
     ],
     "fingerprinting": 1,
@@ -36,7 +41,7 @@
             ],
             "apis": {},
             "sites": 3,
-            "prevalence": 0.000307,
+            "prevalence": 0.000305,
             "cnames": [
                 {
                     "original": "login.norton.com",
@@ -44,14 +49,66 @@
                 }
             ],
             "responseHashes": [
-                "683e95eba48c81d96c7aed57697b8e473245c91304bf68a1085caa9049c4da05",
-                "b0c6e50efd3d37621cfcf152f6050917d57f9aa60ed2539465a3c7bb2aa326d2"
+                "a0783dc5b8ed1d995a63f7a4db01a51308a339a2d10ed92805d2d0964ca2749a",
+                "4caa6044d24a36da296170d96174dba0bb4d78e451ea7440c768509c6d8e6745"
             ],
             "type": "Document",
             "exampleSites": [
                 "norton.com",
                 "community.norton.com",
                 "support.norton.com"
+            ]
+        },
+        {
+            "rule": "trafficmanager\\.net\\/fps\\/api\\/personalization_1_8\\/set",
+            "cookies": 0.000204,
+            "fingerprinting": 0,
+            "subdomains": [
+                "fps-namer"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000204,
+            "cnames": [
+                {
+                    "original": "na.fps.ford.com",
+                    "resolved": "fps-namer.trafficmanager.net"
+                }
+            ],
+            "responseHashes": [
+                "d1d077a6d0b57d917811cc546280e29f569eb211f28d5a1539bd7837ad4f2e0e"
+            ],
+            "type": "XHR",
+            "exampleSites": [
+                "ford.com",
+                "www.ford.com"
+            ]
+        },
+        {
+            "rule": "trafficmanager\\.net\\/fps\\/api\\/personalization_1_8\\/get",
+            "cookies": 0.000305,
+            "fingerprinting": 0,
+            "subdomains": [
+                "fps-namer"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000305,
+            "cnames": [
+                {
+                    "original": "na.fps.ford.com",
+                    "resolved": "fps-namer.trafficmanager.net"
+                }
+            ],
+            "responseHashes": [
+                "bcd066466709a1bc748524ccf3e77c33497c480a45997a49b210552defcb2f7a",
+                "882d91de5bee05b82ec9960e606e8bb47a41f3d56967f82a80d4f9e7b2112b75"
+            ],
+            "type": "XHR",
+            "exampleSites": [
+                "ford.com",
+                "owner.ford.com",
+                "www.ford.com"
             ]
         },
         {
@@ -87,8 +144,9 @@
         "cpu": 0,
         "cache": 0
     },
-    "cookies": 0.000818,
+    "cookies": 0.00112,
     "types": {
-        "Document": 5
+        "Document": 5,
+        "XHR": 5
     }
 }

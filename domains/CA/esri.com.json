@@ -7,32 +7,85 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000206,
+    "prevalence": 0.000205,
     "sites": 2,
     "subdomains": [
-        "securetags"
+        "securetags",
+        "webapps-cdn",
+        "www"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "esri\\.com\\/id",
-            "cookies": 0.000206,
+            "cookies": 0.000205,
             "fingerprinting": 0,
             "subdomains": [
                 "securetags"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000206,
+            "prevalence": 0.000205,
             "cnames": [],
             "responseHashes": [
-                "e3c3b87d9024e34501a717e77cd06d05eeb898d8bcc7e9267231379c9824c991"
+                "c08c0b6083bf826408231068f65c50ab7c6d195cda7334ad8e29b799b6717734"
             ],
             "type": "XHR",
             "exampleSites": [
                 "arcgis.com",
-                "desktop.arcgis.com"
+                "pro.arcgis.com"
+            ]
+        },
+        {
+            "rule": "esri\\.com\\/CDN\\/components\\/global-nav\\/js\\/gn\\.js",
+            "cookies": 0.000205,
+            "fingerprinting": 2,
+            "subdomains": [
+                "webapps-cdn"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.languages": 2,
+                "window.sessionStorage": 2,
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2,
+                "window.matchMedia(\"prefers-reduced-motion\")": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000205,
+            "cnames": [],
+            "responseHashes": [
+                "2e4393b715c594be943f9856f40dfe89723097aa739556c96494e856ff3b8643"
+            ],
+            "type": "Script",
+            "exampleSites": [
+                "arcgis.com",
+                "pro.arcgis.com"
+            ]
+        },
+        {
+            "rule": "esri\\.com\\/en-us\\/arcgis\\/products\\/arcgis-pro\\/resources",
+            "cookies": 0.000205,
+            "fingerprinting": 1,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000205,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "exampleSites": [
+                "arcgis.com",
+                "pro.arcgis.com"
             ]
         }
     ],
@@ -43,8 +96,10 @@
         "cpu": 0,
         "cache": 3
     },
-    "cookies": 0.000206,
+    "cookies": 0.000205,
     "types": {
-        "XHR": 2
+        "XHR": 2,
+        "Script": 2,
+        "Image": 2
     }
 }
