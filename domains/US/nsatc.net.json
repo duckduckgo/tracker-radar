@@ -4,12 +4,13 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.000289,
-    "sites": 38,
+    "prevalence": 0.000342,
+    "sites": 45,
     "subdomains": [
         "cdn1.edgedatg.cre.go.com",
+        "dig.abclocal.go.cre.go.com",
+        "cdn-ssl.img.shopdisney.cre.go.com",
         "api.currys.co.uk",
-        "cdn.media.disneyatoz.cre.go.com",
         "c.xbox.com"
     ],
     "cnames": [
@@ -22,26 +23,30 @@
             "resolved": "c.xbox.com.nsatc.net"
         },
         {
-            "original": "cdn.media.disneyatoz.com",
-            "resolved": "cdn.media.disneyatoz.cre.go.com.nsatc.net"
+            "original": "cdn-ssl.img.shopdisney.com",
+            "resolved": "cdn-ssl.img.shopdisney.cre.go.com.nsatc.net"
         },
         {
             "original": "cdn1.edgedatg.com",
             "resolved": "cdn1.edgedatg.cre.go.com.nsatc.net"
+        },
+        {
+            "original": "dig.abclocal.go.com",
+            "resolved": "dig.abclocal.go.cre.go.com.nsatc.net"
         }
     ],
     "fingerprinting": 2,
     "resources": [
         {
             "rule": "nsatc\\.net\\/aws\\/abc\\/scripts\\/adobe-analytics2\\.js",
-            "cookies": 0.0000228,
+            "cookies": 0.0000152,
             "fingerprinting": 2,
             "subdomains": [
                 "cdn1.edgedatg.cre.go.com"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000228,
+            "sites": 2,
+            "prevalence": 0.0000152,
             "cnames": [
                 {
                     "original": "cdn1.edgedatg.com",
@@ -53,7 +58,6 @@
             ],
             "type": "Script",
             "exampleSites": [
-                "go.com",
                 "abc.com",
                 "abc.go.com"
             ]
@@ -79,10 +83,58 @@
             ],
             "type": "Script",
             "exampleSites": [
-                "go.com",
                 "abc.com",
                 "abc.go.com",
-                "fxnow.fxnetworks.com"
+                "fxnow.fxnetworks.com",
+                "www.foxplay.com"
+            ]
+        },
+        {
+            "rule": "nsatc\\.net\\/ccg\\/interactives\\/wildfires\\/map_california\\.html",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "dig.abclocal.go.cre.go.com"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000152,
+            "cnames": [
+                {
+                    "original": "dig.abclocal.go.com",
+                    "resolved": "dig.abclocal.go.cre.go.com.nsatc.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Document",
+            "exampleSites": [
+                "abc30.com",
+                "abc7news.com"
+            ]
+        },
+        {
+            "rule": "nsatc\\.net\\/content\\/tealium\\/utag\\/shopdisneysfcc\\/prod\\/utag\\.js",
+            "cookies": 0.0000152,
+            "fingerprinting": 2,
+            "subdomains": [
+                "cdn-ssl.img.shopdisney.cre.go.com"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000152,
+            "cnames": [
+                {
+                    "original": "cdn-ssl.img.shopdisney.com",
+                    "resolved": "cdn-ssl.img.shopdisney.cre.go.com.nsatc.net"
+                }
+            ],
+            "responseHashes": [
+                "9189f1b97a014e15304154a5744e074ff728163f6b9307420bc81824d8ab4333"
+            ],
+            "type": "Script",
+            "exampleSites": [
+                "shopdisney.com",
+                "www.shopdisney.com"
             ]
         },
         {
@@ -101,36 +153,13 @@
                     "resolved": "api.currys.co.uk.nsatc.net"
                 }
             ],
-            "responseHashes": [],
+            "responseHashes": [
+                "7b2151378d5e5fe855de409a30528a6740d8c81540e158bde3df36f5ec93b189"
+            ],
             "type": "Fetch",
             "exampleSites": [
                 "currys.co.uk",
                 "www.currys.co.uk"
-            ]
-        },
-        {
-            "rule": "nsatc\\.net\\/analytics\\/corp-batch-2\\/utag\\.js",
-            "cookies": 0.0000076,
-            "fingerprinting": 2,
-            "subdomains": [
-                "cdn.media.disneyatoz.cre.go.com"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000152,
-            "cnames": [
-                {
-                    "original": "cdn.media.disneyatoz.com",
-                    "resolved": "cdn.media.disneyatoz.cre.go.com.nsatc.net"
-                }
-            ],
-            "responseHashes": [
-                "a585d80a29d8f30d1a59e63d512e2dca71ee59df3204e0647fef7399fc8e6866"
-            ],
-            "type": "Script",
-            "exampleSites": [
-                "starwars.com",
-                "www.starwars.com"
             ]
         },
         {
@@ -161,9 +190,10 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0000835,
+    "cookies": 0.0000989,
     "types": {
-        "Script": 9,
+        "Script": 8,
+        "Document": 2,
         "Fetch": 2,
         "Image": 2
     }

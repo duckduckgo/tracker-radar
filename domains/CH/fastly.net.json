@@ -9,13 +9,15 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.00631,
-    "sites": 61,
+    "prevalence": 0.00675,
+    "sites": 66,
     "subdomains": [
         "s2.shared.global",
         "e2.shared.us-eu",
         "h3.shared.global",
-        "prod.f.ssl.global"
+        "dualstack.f3.shared.global",
+        "prod.f.ssl.global",
+        "p.shared.global"
     ],
     "cnames": [
         {
@@ -35,22 +37,30 @@
             "resolved": "e2.shared.us-eu.fastly.net"
         },
         {
+            "original": "origami-build.ft.com",
+            "resolved": "dualstack.f3.shared.global.fastly.net"
+        },
+        {
             "original": "s1.lemde.fr",
             "resolved": "s2.shared.global.fastly.net"
+        },
+        {
+            "original": "scripts.mediavine.com",
+            "resolved": "p.shared.global.fastly.net"
         }
     ],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
-            "rule": "fastly\\.net\\/media\\/js\\/lib\\/requirejs\\/require\\.448254579057\\.js",
+            "rule": "fastly\\.net\\/media\\/js\\/lib\\/requirejs\\/require\\.447105612025\\.js",
             "cookies": 0,
             "fingerprinting": 1,
             "subdomains": [
                 "s2.shared.global"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.00031,
+            "sites": 2,
+            "prevalence": 0.000205,
             "cnames": [
                 {
                     "original": "s1.lemde.fr",
@@ -63,13 +73,12 @@
             "type": "Script",
             "exampleSites": [
                 "lemonde.fr",
-                "jardinage.lemonde.fr",
-                "paroles2chansons.lemonde.fr"
+                "jardinage.lemonde.fr"
             ]
         },
         {
             "rule": "fastly\\.net\\/_nymcid",
-            "cookies": 0.00031,
+            "cookies": 0.000205,
             "fingerprinting": 1,
             "subdomains": [
                 "e2.shared.us-eu",
@@ -77,7 +86,7 @@
             ],
             "apis": {},
             "sites": 3,
-            "prevalence": 0.00031,
+            "prevalence": 0.000307,
             "cnames": [
                 {
                     "original": "client.vulture.com",
@@ -100,7 +109,7 @@
         },
         {
             "rule": "fastly\\.net\\/_nymcid\\/extend",
-            "cookies": 0.00031,
+            "cookies": 0.000307,
             "fingerprinting": 0,
             "subdomains": [
                 "h3.shared.global",
@@ -108,7 +117,7 @@
             ],
             "apis": {},
             "sites": 3,
-            "prevalence": 0.00031,
+            "prevalence": 0.000307,
             "cnames": [
                 {
                     "original": "client.nymag.com",
@@ -134,15 +143,38 @@
             ]
         },
         {
+            "rule": "fastly\\.net\\/v2\\/bundles\\/js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "dualstack.f3.shared.global"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000205,
+            "cnames": [
+                {
+                    "original": "origami-build.ft.com",
+                    "resolved": "dualstack.f3.shared.global.fastly.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Script",
+            "exampleSites": [
+                "ft.com",
+                "rankings.ft.com"
+            ]
+        },
+        {
             "rule": "fastly\\.net\\/t\\.gif",
-            "cookies": 0.000207,
+            "cookies": 0.000205,
             "fingerprinting": 0,
             "subdomains": [
                 "prod.f.ssl.global"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000207,
+            "prevalence": 0.000205,
             "cnames": [
                 {
                     "original": "analytics.businessinsider.com",
@@ -156,6 +188,81 @@
             "exampleSites": [
                 "businessinsider.com",
                 "www.insider.com"
+            ]
+        },
+        {
+            "rule": "fastly\\.net\\/tags\\/2\\.60\\.4\\/wrapper\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "p.shared.global"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000205,
+            "cnames": [
+                {
+                    "original": "scripts.mediavine.com",
+                    "resolved": "p.shared.global.fastly.net"
+                }
+            ],
+            "responseHashes": [
+                "54661fd984b991e97bce920e71f8a14a0f24d1b7a2628954ba167d452202c766"
+            ],
+            "type": "Script",
+            "exampleSites": [
+                "thehollywoodgossip.com",
+                "www.tvfanatic.com"
+            ]
+        },
+        {
+            "rule": "fastly\\.net\\/tags\\/2\\.60\\.4\\/gdpr\\.45fb7a715193a16ce009\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "p.shared.global"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000205,
+            "cnames": [
+                {
+                    "original": "scripts.mediavine.com",
+                    "resolved": "p.shared.global.fastly.net"
+                }
+            ],
+            "responseHashes": [
+                "6f7c5da7d3ba3a2b702ed680b5895df0899d5eeea7b7d336309b49642b61a8af"
+            ],
+            "type": "Script",
+            "exampleSites": [
+                "thehollywoodgossip.com",
+                "www.tvfanatic.com"
+            ]
+        },
+        {
+            "rule": "fastly\\.net\\/tags\\/2\\.60\\.4\\/gdprModal\\.185f334d292042336135\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "p.shared.global"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000205,
+            "cnames": [
+                {
+                    "original": "scripts.mediavine.com",
+                    "resolved": "p.shared.global.fastly.net"
+                }
+            ],
+            "responseHashes": [
+                "a0f3f2aa752fbc8778a695110d91754dbce48fe2eb78950610d4fea0dd0fdb2c"
+            ],
+            "type": "Script",
+            "exampleSites": [
+                "thehollywoodgossip.com",
+                "www.tvfanatic.com"
             ]
         }
     ],
@@ -175,9 +282,9 @@
         "cpu": 1,
         "cache": 1
     },
-    "cookies": 0.000931,
+    "cookies": 0.00102,
     "types": {
-        "Script": 3,
+        "Script": 10,
         "Document": 3,
         "XHR": 3,
         "Image": 2

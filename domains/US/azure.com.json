@@ -9,14 +9,25 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.000403,
-    "sites": 53,
+    "prevalence": 0.000228,
+    "sites": 30,
     "subdomains": [
-        "js.monitor",
         "innss.westeurope.cloudapp",
-        "premera.westus2.cloudapp"
+        "sdtagging-east.eastus.cloudapp",
+        "sdtagging-staging.eastus.cloudapp",
+        "prd-sc-eu2-appg-pip.eastus2.cloudapp",
+        "premera.westus2.cloudapp",
+        "wbgazappgwprd.eastus.cloudapp"
     ],
     "cnames": [
+        {
+            "original": "dataviz.worldbank.org",
+            "resolved": "wbgazappgwprd.eastus.cloudapp.azure.com"
+        },
+        {
+            "original": "eubanner.honeywellhome.com",
+            "resolved": "prd-sc-eu2-appg-pip.eastus2.cloudapp.azure.com"
+        },
         {
             "original": "innlogging.nrk.no",
             "resolved": "innss.westeurope.cloudapp.azure.com"
@@ -28,37 +39,6 @@
     ],
     "fingerprinting": 1,
     "resources": [
-        {
-            "rule": "azure\\.com\\/scripts\\/b\\/ai\\.2\\.min\\.js",
-            "cookies": 0.0000304,
-            "fingerprinting": 1,
-            "subdomains": [
-                "js.monitor"
-            ],
-            "apis": {
-                "window.sessionStorage": 5,
-                "Document.cookie getter": 4,
-                "Date.prototype.getTime": 5,
-                "Navigator.prototype.userAgent": 5,
-                "Document.cookie setter": 4,
-                "window.localStorage": 5,
-                "PerformanceTiming.prototype.navigationStart": 5
-            },
-            "sites": 5,
-            "prevalence": 0.000038,
-            "cnames": [],
-            "responseHashes": [
-                "9dbbe78a9fe127367c7859fe6c87cb7728a134047bb9e56bd7c180408110bfda"
-            ],
-            "type": "Script",
-            "exampleSites": [
-                "usnews.com",
-                "bestlawfirms.usnews.com",
-                "lawyers.usnews.com",
-                "www.bestlawyers.com",
-                "www.roompot.nl"
-            ]
-        },
         {
             "rule": "azure\\.com\\/core\\/nonstandard\\/opsession",
             "cookies": 0.0000228,
@@ -86,28 +66,50 @@
             ]
         },
         {
-            "rule": "azure\\.com\\/nonstandard\\/opsession",
+            "rule": "azure\\.com\\/id\\/3pc",
+            "cookies": 0.00000761,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sdtagging-east.eastus.cloudapp",
+                "sdtagging-staging.eastus.cloudapp"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000038,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "exampleSites": [
+                "downeasttoyota.com",
+                "www.downeasttoyota.com",
+                "www.lexus.com",
+                "www.toyotacertified.com",
+                "www.toyota.com"
+            ]
+        },
+        {
+            "rule": "azure\\.com\\/api\\/BannerText\\/en-US",
             "cookies": 0.0000152,
             "fingerprinting": 0,
             "subdomains": [
-                "innss.westeurope.cloudapp"
+                "prd-sc-eu2-appg-pip.eastus2.cloudapp"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.0000152,
             "cnames": [
                 {
-                    "original": "innlogging.nrk.no",
-                    "resolved": "innss.westeurope.cloudapp.azure.com"
+                    "original": "eubanner.honeywellhome.com",
+                    "resolved": "prd-sc-eu2-appg-pip.eastus2.cloudapp.azure.com"
                 }
             ],
             "responseHashes": [
-                "9a2e62c6ab9e7143c6c9b9e2460720e3168a76a913ed761da1ae711ce65611a1"
+                "3ddcf7fbf4c945724549d54265bf41cc6708dab606a24806f541ad4d3e7a4215"
             ],
-            "type": "Document",
+            "type": "XHR",
             "exampleSites": [
-                "nrk.no",
-                "www.nrk.no"
+                "honeywellhome.com",
+                "www.honeywellhome.com"
             ]
         },
         {
@@ -127,12 +129,37 @@
                 }
             ],
             "responseHashes": [
-                "d2e21716b593b9bbcbe4af477185c20b2843c1e76c0d9ed5077512e0201c3fb5"
+                "0fcf9448035a3293ce3ea76f306ad532780f323d44170c994413df8230e978c3"
             ],
             "type": "XHR",
             "exampleSites": [
                 "premera.com",
                 "www.premera.com"
+            ]
+        },
+        {
+            "rule": "azure\\.com\\/vizql\\/csp-report",
+            "cookies": 0.0000152,
+            "fingerprinting": 0,
+            "subdomains": [
+                "wbgazappgwprd.eastus.cloudapp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000152,
+            "cnames": [
+                {
+                    "original": "dataviz.worldbank.org",
+                    "resolved": "wbgazappgwprd.eastus.cloudapp.azure.com"
+                }
+            ],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Other",
+            "exampleSites": [
+                "worldbank.org",
+                "www.worldbank.org"
             ]
         }
     ],
@@ -143,10 +170,11 @@
         "cpu": 0,
         "cache": 0
     },
-    "cookies": 0.000114,
+    "cookies": 0.0000913,
     "types": {
+        "Document": 3,
         "Script": 5,
-        "Document": 5,
-        "XHR": 2
+        "XHR": 4,
+        "Other": 2
     }
 }

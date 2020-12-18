@@ -4,37 +4,92 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.000105,
+    "prevalence": 0.000101,
     "sites": 1,
     "subdomains": [
-        "push.ladbrokes-production.aws"
+        "push.ladbrokes-production.aws",
+        "socket.ladbrokes-production.aws"
     ],
     "cnames": [
         {
             "original": "push.ladbrokes.com.au",
             "resolved": "push.ladbrokes-production.aws.neds.com"
+        },
+        {
+            "original": "socket.ladbrokes.com.au",
+            "resolved": "socket.ladbrokes-production.aws.neds.com"
         }
     ],
     "fingerprinting": 0,
     "resources": [
         {
             "rule": "neds\\.com\\/socket\\.io\\/",
-            "cookies": 0.000105,
+            "cookies": 0.000203,
             "fingerprinting": 0,
             "subdomains": [
                 "push.ladbrokes-production.aws"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.00021,
+            "prevalence": 0.000203,
             "cnames": [
                 {
                     "original": "push.ladbrokes.com.au",
                     "resolved": "push.ladbrokes-production.aws.neds.com"
                 }
             ],
-            "responseHashes": [],
+            "responseHashes": [
+                "62325dfc1fc675255519674da6e2c4aad5f51cc6c3217ed3c6fbf6cabe0d86b0"
+            ],
             "type": "XHR",
+            "exampleSites": [
+                "ladbrokes.com.au",
+                "www.ladbrokes.com.au"
+            ]
+        },
+        {
+            "rule": "neds\\.com\\/rest\\/v1\\/availability\\/",
+            "cookies": 0.000203,
+            "fingerprinting": 0,
+            "subdomains": [
+                "socket.ladbrokes-production.aws"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [
+                {
+                    "original": "socket.ladbrokes.com.au",
+                    "resolved": "socket.ladbrokes-production.aws.neds.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Other",
+            "exampleSites": [
+                "ladbrokes.com.au",
+                "www.ladbrokes.com.au"
+            ]
+        },
+        {
+            "rule": "neds\\.com\\/rest\\/v1\\/availability\\/",
+            "cookies": 0.000203,
+            "fingerprinting": 0,
+            "subdomains": [
+                "socket.ladbrokes-production.aws"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [
+                {
+                    "original": "socket.ladbrokes.com.au",
+                    "resolved": "socket.ladbrokes-production.aws.neds.com"
+                }
+            ],
+            "responseHashes": [
+                "9f47831889b9eb2aff5fad8b34dc1892a6e46f5fc22392d0ee16219249f3a82d"
+            ],
+            "type": "Fetch",
             "exampleSites": [
                 "ladbrokes.com.au",
                 "www.ladbrokes.com.au"
@@ -43,8 +98,10 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000105,
+    "cookies": 0.000101,
     "types": {
-        "XHR": 2
+        "XHR": 2,
+        "Other": 2,
+        "Fetch": 2
     }
 }

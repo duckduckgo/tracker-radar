@@ -4,15 +4,17 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.000828,
-    "sites": 8,
+    "prevalence": 0.00123,
+    "sites": 12,
     "subdomains": [
+        "jfrog",
         "owncloud",
         "cloudflare",
         "elasticsearch",
+        "influxdata",
         "mural",
-        "qualtrics",
-        "sketchup"
+        "sentinelone",
+        "snowflakecomputing"
     ],
     "cnames": [
         {
@@ -20,8 +22,12 @@
             "resolved": "mural.mktoweb.com"
         },
         {
-            "original": "get.sketchup.com",
-            "resolved": "sketchup.mktoweb.com"
+            "original": "get.influxdata.com",
+            "resolved": "influxdata.mktoweb.com"
+        },
+        {
+            "original": "go.sentinelone.com",
+            "resolved": "sentinelone.mktoweb.com"
         },
         {
             "original": "info.cloudflare.com",
@@ -32,30 +38,61 @@
             "resolved": "elasticsearch.mktoweb.com"
         },
         {
-            "original": "oc.owncloud.com",
-            "resolved": "owncloud.mktoweb.com"
+            "original": "info.snowflake.com",
+            "resolved": "snowflakecomputing.mktoweb.com"
         },
         {
-            "original": "success.qualtrics.com",
-            "resolved": "qualtrics.mktoweb.com"
+            "original": "leap.jfrog.com",
+            "resolved": "jfrog.mktoweb.com"
+        },
+        {
+            "original": "oc.owncloud.com",
+            "resolved": "owncloud.mktoweb.com"
         }
     ],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
+            "rule": "mktoweb\\.com\\/rs\\/256-FNZ-187\\/images\\/Homepage%20Automotive%20summit%20CET\\.png",
+            "cookies": 0.000205,
+            "fingerprinting": 0,
+            "subdomains": [
+                "jfrog"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000205,
+            "cnames": [
+                {
+                    "original": "leap.jfrog.com",
+                    "resolved": "jfrog.mktoweb.com"
+                }
+            ],
+            "responseHashes": [
+                "8febe6bf79be95c0db1f25d958f506be761e3713f5074123e62a1472f613b63f"
+            ],
+            "type": "Image",
+            "exampleSites": [
+                "jfrog.com",
+                "www.jfrog.com"
+            ]
+        },
+        {
             "rule": "mktoweb\\.com\\/index\\.php\\/form\\/getForm",
-            "cookies": 0.000103,
+            "cookies": 0.000102,
             "fingerprinting": 0,
             "subdomains": [
                 "owncloud",
                 "cloudflare",
                 "elasticsearch",
+                "influxdata",
                 "mural",
-                "qualtrics"
+                "sentinelone",
+                "snowflakecomputing"
             ],
             "apis": {},
-            "sites": 5,
-            "prevalence": 0.000517,
+            "sites": 7,
+            "prevalence": 0.000716,
             "cnames": [
                 {
                     "original": "oc.owncloud.com",
@@ -70,43 +107,101 @@
                     "resolved": "elasticsearch.mktoweb.com"
                 },
                 {
+                    "original": "get.influxdata.com",
+                    "resolved": "influxdata.mktoweb.com"
+                },
+                {
                     "original": "engage.mural.co",
                     "resolved": "mural.mktoweb.com"
                 },
                 {
-                    "original": "success.qualtrics.com",
-                    "resolved": "qualtrics.mktoweb.com"
+                    "original": "go.sentinelone.com",
+                    "resolved": "sentinelone.mktoweb.com"
+                },
+                {
+                    "original": "info.snowflake.com",
+                    "resolved": "snowflakecomputing.mktoweb.com"
                 }
             ],
             "responseHashes": [
-                "2f3430af8860cb4d592750057a1e529c01c0c41e54f51aab331157074db2a29a",
-                "1837176fe19320137760b3222971ea532575df017f895ba528bf756fca2a6380",
-                "7bfc6cdcca6e9beec787b921724ade721f26588723e86af9e061557780b5618b"
+                "c52e9d89a28b731409c2d7be1af3e25fbc9edc91b5c683a20ab0a0b643a579bd",
+                "bfe68cb94af58be161be89489cc1e5422cd2b61ea8c56a7798d6f64d6eda5a31",
+                "0e4bd4a7e4b5f271b3adbd44a1f9e8741e98b86a8231960f80d667a9b8c367d8",
+                "a455712dfd4b3a396dbed327eafb665409e409d20608d97e106482709aa2a9c5",
+                "1ef4f7356fba481178728bceda89cf7ff5b224c48b74fdbf36350dca1054941b",
+                "5f2b60cb72713ec0c71029aecd43817b5c9ae0a85e25315bdbebf1a0573f58ab"
             ],
             "type": "Script",
             "exampleSites": [
                 "owncloud.com",
                 "www.cloudflare.com",
                 "www.elastic.co",
+                "www.influxdata.com",
                 "www.mural.co",
-                "www.qualtrics.com"
+                "www.sentinelone.com",
+                "www.snowflake.com"
+            ]
+        },
+        {
+            "rule": "mktoweb\\.com\\/index\\.php\\/form\\/XDFrame",
+            "cookies": 0.000307,
+            "fingerprinting": 0,
+            "subdomains": [
+                "owncloud",
+                "elasticsearch",
+                "sentinelone",
+                "snowflakecomputing"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000409,
+            "cnames": [
+                {
+                    "original": "oc.owncloud.com",
+                    "resolved": "owncloud.mktoweb.com"
+                },
+                {
+                    "original": "info.elastic.co",
+                    "resolved": "elasticsearch.mktoweb.com"
+                },
+                {
+                    "original": "go.sentinelone.com",
+                    "resolved": "sentinelone.mktoweb.com"
+                },
+                {
+                    "original": "info.snowflake.com",
+                    "resolved": "snowflakecomputing.mktoweb.com"
+                }
+            ],
+            "responseHashes": [
+                "e1f62b05267fccb3a0aa8e09ab8dcedf1cf0357cb186027bbbd1e9ffb1e15e04",
+                "64d117a5cdaf7b8aa3bc5ff1abeec0e1d98b834782d49f34260c4e1ecc7ec4c2",
+                "92db647b7ac09b3cdf2d5ab197561bc2585365d991b184dffd7a2a6e20572d69"
+            ],
+            "type": "Document",
+            "exampleSites": [
+                "owncloud.com",
+                "www.elastic.co",
+                "www.sentinelone.com",
+                "www.snowflake.com"
             ]
         },
         {
             "rule": "mktoweb\\.com\\/js\\/forms2\\/js\\/forms2\\.min\\.js",
-            "cookies": 0.000414,
+            "cookies": 0.000307,
             "fingerprinting": 1,
             "subdomains": [
                 "owncloud",
                 "cloudflare",
                 "elasticsearch",
+                "influxdata",
                 "mural",
-                "qualtrics",
-                "sketchup"
+                "sentinelone",
+                "snowflakecomputing"
             ],
             "apis": {},
-            "sites": 6,
-            "prevalence": 0.000621,
+            "sites": 7,
+            "prevalence": 0.000716,
             "cnames": [
                 {
                     "original": "oc.owncloud.com",
@@ -121,135 +216,43 @@
                     "resolved": "elasticsearch.mktoweb.com"
                 },
                 {
+                    "original": "get.influxdata.com",
+                    "resolved": "influxdata.mktoweb.com"
+                },
+                {
                     "original": "engage.mural.co",
                     "resolved": "mural.mktoweb.com"
                 },
                 {
-                    "original": "success.qualtrics.com",
-                    "resolved": "qualtrics.mktoweb.com"
+                    "original": "go.sentinelone.com",
+                    "resolved": "sentinelone.mktoweb.com"
                 },
                 {
-                    "original": "get.sketchup.com",
-                    "resolved": "sketchup.mktoweb.com"
+                    "original": "info.snowflake.com",
+                    "resolved": "snowflakecomputing.mktoweb.com"
                 }
             ],
             "responseHashes": [
-                "dde2a7cd4331f78a4b35dca9aa2e716fc3d0c83ba0f855f0812cbfae4a27a805"
+                "f24c51a94a931f1bdd7c3dacc9ebb3848305f5eb5a3feddf0b01227f6c778c17"
             ],
             "type": "Script",
             "exampleSites": [
                 "owncloud.com",
                 "www.cloudflare.com",
                 "www.elastic.co",
+                "www.influxdata.com",
                 "www.mural.co",
-                "www.qualtrics.com",
-                "www.sketchup.com"
-            ]
-        },
-        {
-            "rule": "mktoweb\\.com\\/js\\/forms2\\/css\\/forms2\\.css",
-            "cookies": 0.000103,
-            "fingerprinting": 0,
-            "subdomains": [
-                "cloudflare",
-                "elasticsearch",
-                "mural",
-                "qualtrics"
-            ],
-            "apis": {},
-            "sites": 4,
-            "prevalence": 0.000414,
-            "cnames": [
-                {
-                    "original": "info.cloudflare.com",
-                    "resolved": "cloudflare.mktoweb.com"
-                },
-                {
-                    "original": "info.elastic.co",
-                    "resolved": "elasticsearch.mktoweb.com"
-                },
-                {
-                    "original": "engage.mural.co",
-                    "resolved": "mural.mktoweb.com"
-                },
-                {
-                    "original": "success.qualtrics.com",
-                    "resolved": "qualtrics.mktoweb.com"
-                }
-            ],
-            "responseHashes": [
-                "256e42104f48a5fa80b031da12dc56acde224fba3f9810f8f8192b39136d365a"
-            ],
-            "type": "Stylesheet",
-            "exampleSites": [
-                "cloudflare.com",
-                "www.elastic.co",
-                "www.mural.co",
-                "www.qualtrics.com"
-            ]
-        },
-        {
-            "rule": "mktoweb\\.com\\/js\\/forms2\\/css\\/forms2-theme-plain\\.css",
-            "cookies": 0.000103,
-            "fingerprinting": 0,
-            "subdomains": [
-                "elasticsearch",
-                "qualtrics"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000207,
-            "cnames": [
-                {
-                    "original": "info.elastic.co",
-                    "resolved": "elasticsearch.mktoweb.com"
-                },
-                {
-                    "original": "success.qualtrics.com",
-                    "resolved": "qualtrics.mktoweb.com"
-                }
-            ],
-            "responseHashes": [
-                "57cd46adbabd6c40823602b4513aecbe89320a769572255272abe9f008de69fa"
-            ],
-            "type": "Stylesheet",
-            "exampleSites": [
-                "elastic.co",
-                "www.qualtrics.com"
-            ]
-        },
-        {
-            "rule": "mktoweb\\.com\\/Form-Pre-Fill-Helper-DTP\\.html",
-            "cookies": 0.000103,
-            "fingerprinting": 0,
-            "subdomains": [
-                "qualtrics"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000207,
-            "cnames": [
-                {
-                    "original": "success.qualtrics.com",
-                    "resolved": "qualtrics.mktoweb.com"
-                }
-            ],
-            "responseHashes": [
-                "92e634b3b742e0799bfd428d5b0abd4b8467690827e95515543329230d747bc2"
-            ],
-            "type": "Document",
-            "exampleSites": [
-                "qualtrics.com",
-                "www.qualtrics.com"
+                "www.sentinelone.com",
+                "www.snowflake.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000828,
+    "cookies": 0.00123,
     "types": {
-        "Script": 11,
-        "Stylesheet": 6,
-        "Document": 2
+        "Image": 2,
+        "Script": 14,
+        "Document": 4
     }
 }

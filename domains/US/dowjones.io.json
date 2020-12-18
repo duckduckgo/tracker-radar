@@ -4,29 +4,65 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.000038,
-    "sites": 5,
+    "prevalence": 0.0000609,
+    "sites": 8,
     "subdomains": [
+        "cdn.archimedes",
         "collector.archimedes",
         "wsj-prod.bluegrass.mktdata",
         "mw-prod.bluegrass.mktdata"
     ],
     "cnames": [
         {
-            "original": "am.wsj.com",
-            "resolved": "collector.archimedes.dowjones.io"
-        },
-        {
             "original": "mwstream.wsj.net",
             "resolved": "mw-prod.bluegrass.mktdata.dowjones.io"
+        },
+        {
+            "original": "stream.barrons.com",
+            "resolved": "wsj-prod.bluegrass.mktdata.dowjones.io"
         },
         {
             "original": "wsjstream.wsj.net",
             "resolved": "wsj-prod.bluegrass.mktdata.dowjones.io"
         }
     ],
-    "fingerprinting": 0,
+    "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "dowjones\\.io\\/assets\\/am_tracker\\.js",
+            "cookies": 0.0000152,
+            "fingerprinting": 2,
+            "subdomains": [
+                "cdn.archimedes"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "Date.prototype.getTimezoneOffset": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.doNotTrack": 2,
+                "Navigator.prototype.language": 2,
+                "Navigator.prototype.mimeTypes": 2,
+                "Navigator.prototype.javaEnabled": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "Screen.prototype.colorDepth": 2,
+                "Navigator.prototype.cookieEnabled": 2,
+                "Date.prototype.getTime": 2,
+                "window.localStorage": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000152,
+            "cnames": [],
+            "responseHashes": [
+                "7fe3acc14f796554b6b64665e332f080406056b6511ee221e7211fae368e6781"
+            ],
+            "type": "Script",
+            "exampleSites": [
+                "wsj.com",
+                "blogs.wsj.com"
+            ]
+        },
         {
             "rule": "dowjones\\.io\\/com\\.snowplowanalytics\\.snowplow\\/tp2",
             "cookies": 0.0000152,
@@ -37,12 +73,7 @@
             "apis": {},
             "sites": 2,
             "prevalence": 0.0000152,
-            "cnames": [
-                {
-                    "original": "am.wsj.com",
-                    "resolved": "collector.archimedes.dowjones.io"
-                }
-            ],
+            "cnames": [],
             "responseHashes": [
                 "2689367b205c16ce32ed4200942b8b8b1e262dfc70d9bc9fbc77c49699a4f1df"
             ],
@@ -54,18 +85,22 @@
         },
         {
             "rule": "dowjones\\.io\\/bg2\\/signalr\\/negotiate",
-            "cookies": 0.0000228,
+            "cookies": 0.0000304,
             "fingerprinting": 0,
             "subdomains": [
                 "wsj-prod.bluegrass.mktdata",
                 "mw-prod.bluegrass.mktdata"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000228,
+            "sites": 4,
+            "prevalence": 0.0000304,
             "cnames": [
                 {
                     "original": "wsjstream.wsj.net",
+                    "resolved": "wsj-prod.bluegrass.mktdata.dowjones.io"
+                },
+                {
+                    "original": "stream.barrons.com",
                     "resolved": "wsj-prod.bluegrass.mktdata.dowjones.io"
                 },
                 {
@@ -74,30 +109,36 @@
                 }
             ],
             "responseHashes": [
-                "0942948ba39782807191abc297ff3e1aad6f9aef76f8e97f4684bebf4f259619",
-                "118d64e280c2b5d2b2ff706575fdc866deb9cd50254d28d8f58d6606281d226e"
+                "0917837c7a17dca26e35f2bd22e16acee1c56d9bd15e16d24b40c706fe339487",
+                "f780b9a179ec6be1640f5760f9fb980404715040fa4da4a7344eef6f2ebfcef4",
+                "c1a0bb51a52cf17b3506e3abd5afb27728b5d332d79e848a3fc27b0cd6078efb"
             ],
             "type": "XHR",
             "exampleSites": [
                 "wsj.com",
                 "blogs.wsj.com",
+                "www.barrons.com",
                 "www.marketwatch.com"
             ]
         },
         {
             "rule": "dowjones\\.io\\/bg2\\/signalr\\/start",
-            "cookies": 0.0000228,
+            "cookies": 0.0000304,
             "fingerprinting": 0,
             "subdomains": [
                 "wsj-prod.bluegrass.mktdata",
                 "mw-prod.bluegrass.mktdata"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000228,
+            "sites": 4,
+            "prevalence": 0.0000304,
             "cnames": [
                 {
                     "original": "wsjstream.wsj.net",
+                    "resolved": "wsj-prod.bluegrass.mktdata.dowjones.io"
+                },
+                {
+                    "original": "stream.barrons.com",
                     "resolved": "wsj-prod.bluegrass.mktdata.dowjones.io"
                 },
                 {
@@ -112,6 +153,7 @@
             "exampleSites": [
                 "wsj.com",
                 "blogs.wsj.com",
+                "www.barrons.com",
                 "www.marketwatch.com"
             ]
         }
@@ -123,8 +165,9 @@
         "cpu": 0,
         "cache": 0
     },
-    "cookies": 0.0000228,
+    "cookies": 0.0000456,
     "types": {
-        "XHR": 8
+        "Script": 2,
+        "XHR": 10
     }
 }
