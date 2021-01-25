@@ -7,13 +7,15 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000837,
-    "sites": 11,
+    "prevalence": 0.000122,
+    "sites": 16,
     "subdomains": [
         "pingjs",
-        "tajs",
         "cgi.connect",
-        "graph"
+        "graph",
+        "ssl.captcha",
+        "t.captcha",
+        "res.wx"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -26,17 +28,17 @@
                 "pingjs"
             ],
             "apis": {
-                "Date.prototype.getTime": 3,
-                "window.localStorage": 3,
-                "window.sessionStorage": 3,
-                "Screen.prototype.width": 3,
-                "Screen.prototype.height": 3,
-                "Screen.prototype.colorDepth": 3,
-                "Navigator.prototype.language": 3,
-                "Date.prototype.getTimezoneOffset": 3
+                "Date.prototype.getTime": 4,
+                "window.localStorage": 4,
+                "window.sessionStorage": 4,
+                "Screen.prototype.width": 4,
+                "Screen.prototype.height": 4,
+                "Screen.prototype.colorDepth": 4,
+                "Navigator.prototype.language": 4,
+                "Date.prototype.getTimezoneOffset": 4
             },
-            "sites": 3,
-            "prevalence": 0.0000228,
+            "sites": 4,
+            "prevalence": 0.0000306,
             "cnames": [],
             "responseHashes": [
                 "9a6a7fd329a24b7047569c00348001b96fff59764d31c230b4ebb6afb80ddb92"
@@ -45,49 +47,20 @@
             "exampleSites": [
                 "tencent.com",
                 "cloud.tencent.com",
-                "www.globaltimes.cn"
-            ]
-        },
-        {
-            "rule": "qq\\.com\\/stats",
-            "cookies": 0.0000152,
-            "fingerprinting": 2,
-            "subdomains": [
-                "tajs"
-            ],
-            "apis": {
-                "Document.cookie getter": 2,
-                "Document.cookie setter": 2,
-                "Screen.prototype.width": 2,
-                "Screen.prototype.height": 2,
-                "Screen.prototype.colorDepth": 2,
-                "Navigator.prototype.language": 2,
-                "Navigator.prototype.javaEnabled": 2,
-                "Date.prototype.getTimezoneOffset": 2,
-                "Navigator.prototype.plugins": 2
-            },
-            "sites": 2,
-            "prevalence": 0.0000152,
-            "cnames": [],
-            "responseHashes": [
-                "928554ea664f5f5b7707cf9cc749e58955f516c9f3bd1bc818e6f907cfb004d4"
-            ],
-            "type": "Script",
-            "exampleSites": [
-                "tencent.com",
-                "cloud.tencent.com"
+                "www.sf-express.com",
+                "x8speeder.com"
             ]
         },
         {
             "rule": "qq\\.com\\/report\\/report",
-            "cookies": 0.0000152,
+            "cookies": 0.0000153,
             "fingerprinting": 0,
             "subdomains": [
                 "cgi.connect"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000152,
+            "prevalence": 0.0000153,
             "cnames": [],
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -100,14 +73,14 @@
         },
         {
             "rule": "qq\\.com\\/jsdkproxy\\/PMProxy\\.html",
-            "cookies": 0.0000152,
+            "cookies": 0.0000153,
             "fingerprinting": 0,
             "subdomains": [
                 "graph"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000152,
+            "prevalence": 0.0000153,
             "cnames": [],
             "responseHashes": [
                 "4634eb2c0284d0a842870b92b6bf88b5f2e7103262494d19d69d5b925170b1d4"
@@ -120,22 +93,92 @@
         },
         {
             "rule": "qq\\.com\\/jsdkproxy\\/qc-1\\.0\\.1\\.js",
-            "cookies": 0.0000152,
+            "cookies": 0.0000153,
             "fingerprinting": 0,
             "subdomains": [
                 "graph"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000152,
+            "prevalence": 0.0000153,
             "cnames": [],
             "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                "fe5e3112085cae3eb146e4f93e5052854a86a4f94fbec3031744fb14b1799309"
             ],
             "type": "Script",
             "exampleSites": [
                 "sina.com.cn",
                 "iask.sina.com.cn"
+            ]
+        },
+        {
+            "rule": "qq\\.com\\/TCaptcha\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "ssl.captcha"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000153,
+            "cnames": [],
+            "responseHashes": [
+                "b61ef6c8e825690031d263ce4c6b52f03ff61a29c2cd51601ef86633e248d357"
+            ],
+            "type": "Script",
+            "exampleSites": [
+                "3dmgame.com",
+                "www.3dmgame.com"
+            ]
+        },
+        {
+            "rule": "qq\\.com\\/template\\/captcha-pre-verify\\.html",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "t.captcha"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "window.sessionStorage": 2,
+                "window.name": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000153,
+            "cnames": [],
+            "responseHashes": [
+                "e322bf518a36ca6d6bcf9a287c6cebef52e7af39912b803f45f559ec9bfc0fbf"
+            ],
+            "type": "Document",
+            "exampleSites": [
+                "3dmgame.com",
+                "www.3dmgame.com"
+            ]
+        },
+        {
+            "rule": "qq\\.com\\/open\\/js\\/jweixin-1\\.6\\.0\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "res.wx"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.platform": 2,
+                "Date.prototype.getTime": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000153,
+            "cnames": [],
+            "responseHashes": [
+                "e55662dc8c011c02ffc492e7140a8651ef0a4de6b907b69c4bb5e2982961da28"
+            ],
+            "type": "Script",
+            "exampleSites": [
+                "cnblogs.com",
+                "www.cnblogs.com"
             ]
         }
     ],
@@ -146,10 +189,10 @@
         "cpu": 0,
         "cache": 1
     },
-    "cookies": 0.000038,
+    "cookies": 0.0000229,
     "types": {
-        "Script": 7,
+        "Script": 10,
         "Image": 2,
-        "Document": 2
+        "Document": 4
     }
 }

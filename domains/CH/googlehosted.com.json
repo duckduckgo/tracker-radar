@@ -4,9 +4,11 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.00102,
-    "sites": 10,
+    "prevalence": 0.00113,
+    "sites": 11,
     "subdomains": [
+        "api.id.ghs",
+        "api.stage-id.ghs",
         "ghs"
     ],
     "cnames": [
@@ -15,55 +17,85 @@
             "resolved": "ghs.googlehosted.com"
         },
         {
-            "original": "uie.data.cbc.ca",
-            "resolved": "ghs.googlehosted.com"
+            "original": "api.id.swmhdata.sueddeutsche.de",
+            "resolved": "api.id.ghs.googlehosted.com"
         },
         {
-            "original": "uie.radio-canada.ca",
+            "original": "api.stage-id.swmhdata.stuttgarter-zeitung.de",
+            "resolved": "api.stage-id.ghs.googlehosted.com"
+        },
+        {
+            "original": "uie.data.cbc.ca",
             "resolved": "ghs.googlehosted.com"
         }
     ],
     "fingerprinting": 1,
     "resources": [
         {
+            "rule": "googlehosted\\.com\\/js\\/id-service\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "api.id.ghs",
+                "api.stage-id.ghs"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000206,
+            "cnames": [
+                {
+                    "original": "api.id.swmhdata.sueddeutsche.de",
+                    "resolved": "api.id.ghs.googlehosted.com"
+                },
+                {
+                    "original": "api.stage-id.swmhdata.stuttgarter-zeitung.de",
+                    "resolved": "api.stage-id.ghs.googlehosted.com"
+                }
+            ],
+            "responseHashes": [
+                "ed70f561b10a9143320313f923247d4711bc08ffef12d86e5787708f3b7cfa6c"
+            ],
+            "type": "Script",
+            "exampleSites": [
+                "sueddeutsche.de",
+                "www.stuttgarter-zeitung.de"
+            ]
+        },
+        {
             "rule": "googlehosted\\.com\\/v0\\/current_user",
-            "cookies": 0.000205,
+            "cookies": 0.000206,
             "fingerprinting": 0,
             "subdomains": [
                 "ghs"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000205,
+            "prevalence": 0.000206,
             "cnames": [
-                {
-                    "original": "uie.radio-canada.ca",
-                    "resolved": "ghs.googlehosted.com"
-                },
                 {
                     "original": "uie.data.cbc.ca",
                     "resolved": "ghs.googlehosted.com"
                 }
             ],
             "responseHashes": [
-                "a3beb3a4fedc5b082815442518fdead4686907552db33732213df840962deaa1"
+                "a84166c2509e4da2e863a17a452e4e85652e1b5468b866cbf4fe671efcf61d5e"
             ],
             "type": "XHR",
             "exampleSites": [
-                "radio-canada.ca",
+                "cbc.ca",
                 "www.cbc.ca"
             ]
         },
         {
             "rule": "googlehosted\\.com\\/track",
-            "cookies": 0.000205,
+            "cookies": 0.000206,
             "fingerprinting": 0,
             "subdomains": [
                 "ghs"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000205,
+            "prevalence": 0.000206,
             "cnames": [
                 {
                     "original": "a.et.nytimes.com",
@@ -82,8 +114,9 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000409,
+    "cookies": 0.000206,
     "types": {
+        "Script": 2,
         "XHR": 2,
         "Other": 2
     }

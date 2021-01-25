@@ -7,11 +7,12 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000304,
+    "prevalence": 0.0000306,
     "sites": 4,
     "subdomains": [
         "espoonkaupunki",
-        "teliafi"
+        "teliafi",
+        "teliafi-chat"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -29,11 +30,36 @@
                 "Navigator.prototype.vendor": 3
             },
             "sites": 3,
-            "prevalence": 0.0000228,
+            "prevalence": 0.0000229,
             "cnames": [],
             "responseHashes": [
-                "bcbbe1c4577514ea23a79610a9cdc0c436e83326bdbb7240fcbda98f097e3bf2",
-                "38b991a480aeb96c83f1743a544b201d0ae6a5ca7382d3203b4beed7f69b693a"
+                "eecfd813881a600849262c4e3cc7fc9940bc2cca24a441226bb4c6e7d9ca4a6b",
+                "fb885ef07f407f74a449773a4065e5d4ee1f6c2908992b78124a8d1f589301a4"
+            ],
+            "type": "Script",
+            "exampleSites": [
+                "espoo.fi",
+                "www.espoo.fi",
+                "www.telia.fi"
+            ]
+        },
+        {
+            "rule": "lekane\\.net\\/lekane\\/DialogueConfig",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "espoonkaupunki",
+                "teliafi"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 1
+            },
+            "sites": 3,
+            "prevalence": 0.0000229,
+            "cnames": [],
+            "responseHashes": [
+                "be2f8da62ef1eea568cb8973464056408fbe7f94cbc26f98df3f8b992378dcd5",
+                "e419861dce740c5553ff9b433f23bec421568f1e6a0abe5fea222c0025c707cb"
             ],
             "type": "Script",
             "exampleSites": [
@@ -44,23 +70,25 @@
         },
         {
             "rule": "lekane\\.net\\/lekane\\/DialogueResource",
-            "cookies": 0,
+            "cookies": 0.0000153,
             "fingerprinting": 1,
             "subdomains": [
                 "espoonkaupunki",
                 "teliafi"
             ],
             "apis": {
-                "Navigator.prototype.plugins": 1,
-                "Navigator.prototype.appVersion": 1,
-                "Date.prototype.getTime": 1
+                "Navigator.prototype.plugins": 2,
+                "Navigator.prototype.appVersion": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2,
+                "Date.prototype.getTime": 2
             },
             "sites": 3,
-            "prevalence": 0.0000228,
+            "prevalence": 0.0000229,
             "cnames": [],
             "responseHashes": [
-                "1664ff420d3a901c4aeeb3f4eb0d5787c47301820606584bc4c529ced63f271b",
-                "8c2902f97fa93b60570005f4402ce83cd5c324a03b5d8d65b87da5fd3a736f56"
+                "334a283094ab3f0ff908d16a2e57c696d8c1bf138a29c67312899bdbf5e4b362"
             ],
             "type": "Script",
             "exampleSites": [
@@ -71,7 +99,7 @@
         },
         {
             "rule": "lekane\\.net\\/lekane\\/dialogue-tracking\\.js",
-            "cookies": 0.0000228,
+            "cookies": 0.0000229,
             "fingerprinting": 2,
             "subdomains": [
                 "espoonkaupunki",
@@ -89,11 +117,11 @@
                 "Navigator.prototype.plugins": 3
             },
             "sites": 3,
-            "prevalence": 0.0000228,
+            "prevalence": 0.0000229,
             "cnames": [],
             "responseHashes": [
-                "7776f81d869eec0136c4976089f0fadb4431c21ee3eb371ddc71e68869393da9",
-                "86ba05fe620250dc362469d81eb8a452f377289632945daa2b621c35f011270b"
+                "f61093c08f5e7bb0f077fcba45bc33f66072a0cc9b43532a3ee1a535d291425b",
+                "cb47bad174edd90114fe53e7170b8c14c959a1621cc77d262ddf75b03ee2924f"
             ],
             "type": "Script",
             "exampleSites": [
@@ -104,7 +132,7 @@
         },
         {
             "rule": "lekane\\.net\\/lekane\\/tr\\/",
-            "cookies": 0.0000228,
+            "cookies": 0.0000229,
             "fingerprinting": 0,
             "subdomains": [
                 "espoonkaupunki",
@@ -112,10 +140,11 @@
             ],
             "apis": {},
             "sites": 3,
-            "prevalence": 0.0000228,
+            "prevalence": 0.0000229,
             "cnames": [],
             "responseHashes": [
-                "012bc2ea62aef5924777ea2e9bc1e12c772de0388c18acff41afb4ad7e8ed112"
+                "c5923c3849f63a8e6b4319d00d3e71f88ef08b94b9200208cf291c732d8b2834",
+                "a7093921cb38f2b5f8a0ab2609bcb3e74c45e5caa4acfef771f138af5dc40822"
             ],
             "type": "Script",
             "exampleSites": [
@@ -123,12 +152,122 @@
                 "www.espoo.fi",
                 "www.telia.fi"
             ]
+        },
+        {
+            "rule": "lekane\\.net\\/chatserver\\/novelty\\/novelty\\.js",
+            "cookies": 0.0000153,
+            "fingerprinting": 2,
+            "subdomains": [
+                "teliafi-chat"
+            ],
+            "apis": {
+                "Navigator.prototype.product": 2,
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2,
+                "window.name": 2,
+                "URL.createObjectURL": 2,
+                "window.matchMedia(\"prefers-reduced-motion\")": 2,
+                "window.sessionStorage": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie getter": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000153,
+            "cnames": [],
+            "responseHashes": [
+                "bfa3b5e788d225a47f2958c54853c389ba470bf6ad31750d587e0f7e60cfa5d5"
+            ],
+            "type": "Script",
+            "exampleSites": [
+                "telia.fi",
+                "www.telia.fi"
+            ]
+        },
+        {
+            "rule": "lekane\\.net\\/chatserver\\/novelty\\/987\\.js",
+            "cookies": 0.0000153,
+            "fingerprinting": 0,
+            "subdomains": [
+                "teliafi-chat"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000153,
+            "cnames": [],
+            "responseHashes": [
+                "5aa009ca3fdd5e458a89650191a6a8f003c898bdde3aebe3cd611926a32906ea"
+            ],
+            "type": "Script",
+            "exampleSites": [
+                "telia.fi",
+                "www.telia.fi"
+            ]
+        },
+        {
+            "rule": "lekane\\.net\\/chatserver\\/dialoguechat",
+            "cookies": 0.0000153,
+            "fingerprinting": 0,
+            "subdomains": [
+                "teliafi-chat"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000153,
+            "cnames": [],
+            "responseHashes": [
+                "375b91eef904790daba7036b9877bb74a24d662e30967753fe8bd2c1e3f3136e"
+            ],
+            "type": "Script",
+            "exampleSites": [
+                "telia.fi",
+                "www.telia.fi"
+            ]
+        },
+        {
+            "rule": "lekane\\.net\\/chatserver\\/rest\\/robot\\/v2\\/pageLoad",
+            "cookies": 0.0000153,
+            "fingerprinting": 0,
+            "subdomains": [
+                "teliafi-chat"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000153,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Other",
+            "exampleSites": [
+                "telia.fi",
+                "www.telia.fi"
+            ]
+        },
+        {
+            "rule": "lekane\\.net\\/chatserver\\/rest\\/robot\\/v2\\/pageLoad",
+            "cookies": 0.0000153,
+            "fingerprinting": 0,
+            "subdomains": [
+                "teliafi-chat"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000153,
+            "cnames": [],
+            "responseHashes": [
+                "6b2017aca31e5ca11258dd9b93bd3fe2cc872908ffd6ba0e4052304923328b6f"
+            ],
+            "type": "XHR",
+            "exampleSites": [
+                "telia.fi",
+                "www.telia.fi"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0000304,
+    "cookies": 0.0000306,
     "types": {
-        "Script": 12
+        "Script": 21,
+        "Other": 2,
+        "XHR": 2
     }
 }

@@ -7,15 +7,13 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.00338,
-    "sites": 33,
+    "prevalence": 0.00402,
+    "sites": 39,
     "subdomains": [
-        "speedy",
-        "minecraftresourcepac",
+        "blokt",
+        "segu",
         "askpython",
-        "journaldev",
-        "geekdashboard",
-        "programiz"
+        "speedy"
     ],
     "cnames": [
         {
@@ -23,38 +21,61 @@
             "resolved": "askpython.b-cdn.net"
         },
         {
-            "original": "cdn.geekdashboard.com",
-            "resolved": "geekdashboard.b-cdn.net"
-        },
-        {
-            "original": "cdn.journaldev.com",
-            "resolved": "journaldev.b-cdn.net"
-        },
-        {
-            "original": "cdn.minecraft-resourcepacks.com",
-            "resolved": "minecraftresourcepac.b-cdn.net"
-        },
-        {
-            "original": "cdn.programiz.com",
-            "resolved": "programiz.b-cdn.net"
+            "original": "cdn.blokt.com",
+            "resolved": "blokt.b-cdn.net"
         },
         {
             "original": "speedy.literotica.com",
             "resolved": "speedy.b-cdn.net"
         }
     ],
-    "fingerprinting": 2,
+    "fingerprinting": 1,
     "resources": [
         {
-            "rule": "b-cdn\\.net\\/authenticate\\/scripts\\/vendor-f3a1ff7b\\.modern\\.js",
+            "rule": "b-cdn\\.net\\/wp-includes\\/js\\/wp-embed\\.min\\.js",
             "cookies": 0,
             "fingerprinting": 1,
+            "subdomains": [
+                "blokt",
+                "segu",
+                "askpython"
+            ],
+            "apis": {
+                "Navigator.prototype.appVersion": 1,
+                "Navigator.prototype.userAgent": 1
+            },
+            "sites": 3,
+            "prevalence": 0.00031,
+            "cnames": [
+                {
+                    "original": "cdn.blokt.com",
+                    "resolved": "blokt.b-cdn.net"
+                },
+                {
+                    "original": "cdn.askpython.com",
+                    "resolved": "askpython.b-cdn.net"
+                }
+            ],
+            "responseHashes": [
+                "6ebcda7a3a41ef97f0b4071160ceb1020e540fdc0f790079a5c2ef01ab654fe0"
+            ],
+            "type": "Script",
+            "exampleSites": [
+                "blokt.com",
+                "segu-geschichte.de",
+                "www.askpython.com"
+            ]
+        },
+        {
+            "rule": "b-cdn\\.net\\/authenticate\\/scripts\\/vendor-7710e3eb1\\.modern\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
             "subdomains": [
                 "speedy"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000205,
+            "sites": 3,
+            "prevalence": 0.00031,
             "cnames": [
                 {
                     "original": "speedy.literotica.com",
@@ -62,11 +83,12 @@
                 }
             ],
             "responseHashes": [
-                "bbef17f86f46536dafbcadd183ceff62aeb647f1340afc0f2a617d5ec64a53b3"
+                "43bc8d1f91c747b26ec0ff293991cd955d1bb3a470e8db8cee7ceaaba0ee3c5c"
             ],
             "type": "Script",
             "exampleSites": [
                 "literotica.com",
+                "search.literotica.com",
                 "tags.literotica.com"
             ]
         },
@@ -78,8 +100,8 @@
                 "speedy"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000205,
+            "sites": 3,
+            "prevalence": 0.00031,
             "cnames": [
                 {
                     "original": "speedy.literotica.com",
@@ -92,158 +114,37 @@
             "type": "Script",
             "exampleSites": [
                 "literotica.com",
+                "search.literotica.com",
                 "tags.literotica.com"
             ]
         },
         {
-            "rule": "b-cdn\\.net\\/wp-includes\\/js\\/jquery\\/jquery\\.js",
+            "rule": "b-cdn\\.net\\/wp-includes\\/js\\/jquery\\/jquery\\.min\\.js",
             "cookies": 0,
             "fingerprinting": 1,
             "subdomains": [
-                "minecraftresourcepac",
-                "askpython",
-                "journaldev"
+                "segu",
+                "askpython"
             ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.000307,
-            "cnames": [
-                {
-                    "original": "cdn.minecraft-resourcepacks.com",
-                    "resolved": "minecraftresourcepac.b-cdn.net"
-                },
-                {
-                    "original": "cdn.askpython.com",
-                    "resolved": "askpython.b-cdn.net"
-                },
-                {
-                    "original": "cdn.journaldev.com",
-                    "resolved": "journaldev.b-cdn.net"
-                }
-            ],
-            "responseHashes": [
-                "1db21d816296e6939ba1f42962496e4134ae2b0081e26970864c40c6d02bb1df"
-            ],
-            "type": "Script",
-            "exampleSites": [
-                "minecraft-resourcepacks.com",
-                "www.askpython.com",
-                "www.journaldev.com"
-            ]
-        },
-        {
-            "rule": "b-cdn\\.net\\/wp-content\\/plugins\\/wp-rocket\\/assets\\/js\\/lazyload\\/16\\.1\\/lazyload\\.min\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "minecraftresourcepac",
-                "geekdashboard"
-            ],
-            "apis": {},
+            "apis": {
+                "Element.prototype.getClientRects": 1,
+                "Event.prototype.timeStamp": 1
+            },
             "sites": 2,
-            "prevalence": 0.000205,
-            "cnames": [
-                {
-                    "original": "cdn.minecraft-resourcepacks.com",
-                    "resolved": "minecraftresourcepac.b-cdn.net"
-                },
-                {
-                    "original": "cdn.geekdashboard.com",
-                    "resolved": "geekdashboard.b-cdn.net"
-                }
-            ],
-            "responseHashes": [
-                "6e86a52a9858206302e32036d89907e3ac87762055e7f9c6364aec33221b3e41"
-            ],
-            "type": "Script",
-            "exampleSites": [
-                "minecraft-resourcepacks.com",
-                "www.geekdashboard.com"
-            ]
-        },
-        {
-            "rule": "b-cdn\\.net\\/wp-content\\/plugins\\/ajax-search-lite\\/js\\/min\\/jquery\\.ajaxsearchlite\\.min\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "askpython",
-                "journaldev"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000205,
+            "prevalence": 0.000206,
             "cnames": [
                 {
                     "original": "cdn.askpython.com",
                     "resolved": "askpython.b-cdn.net"
-                },
-                {
-                    "original": "cdn.journaldev.com",
-                    "resolved": "journaldev.b-cdn.net"
                 }
             ],
             "responseHashes": [
-                "356216917d769cb07a5ce3f4b9de0d9e0584f4bc3bfca01277a68040f0bca247"
+                "60240d5a27ede94fd35fea44bd110b88c7d8cfc08127f032d13b0c622b8be827"
             ],
             "type": "Script",
             "exampleSites": [
-                "askpython.com",
-                "www.journaldev.com"
-            ]
-        },
-        {
-            "rule": "b-cdn\\.net\\/wp-includes\\/js\\/wp-embed\\.min\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "askpython",
-                "journaldev"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000205,
-            "cnames": [
-                {
-                    "original": "cdn.askpython.com",
-                    "resolved": "askpython.b-cdn.net"
-                },
-                {
-                    "original": "cdn.journaldev.com",
-                    "resolved": "journaldev.b-cdn.net"
-                }
-            ],
-            "responseHashes": [
-                "6ebcda7a3a41ef97f0b4071160ceb1020e540fdc0f790079a5c2ef01ab654fe0"
-            ],
-            "type": "Script",
-            "exampleSites": [
-                "askpython.com",
-                "www.journaldev.com"
-            ]
-        },
-        {
-            "rule": "b-cdn\\.net\\/sites\\/tutorial2program\\/files\\/js\\/js_dWhBODswdXXk1M5Z5nyqNfGljmqwxUwAK9i6D0YSDNs\\.js",
-            "cookies": 0.000205,
-            "fingerprinting": 1,
-            "subdomains": [
-                "programiz"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000205,
-            "cnames": [
-                {
-                    "original": "cdn.programiz.com",
-                    "resolved": "programiz.b-cdn.net"
-                }
-            ],
-            "responseHashes": [
-                "756841383b307575e4d4ce59e67caa35f1a58e6ab0c54c002bd8ba0f46120cdb"
-            ],
-            "type": "Script",
-            "exampleSites": [
-                "programiz.com",
-                "www.programiz.com"
+                "segu-geschichte.de",
+                "www.askpython.com"
             ]
         }
     ],
@@ -256,8 +157,8 @@
         "cpu": 2,
         "cache": 1
     },
-    "cookies": 0.000102,
+    "cookies": 0,
     "types": {
-        "Script": 15
+        "Script": 11
     }
 }

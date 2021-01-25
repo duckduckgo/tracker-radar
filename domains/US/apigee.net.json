@@ -9,10 +9,11 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.000342,
-    "sites": 45,
+    "prevalence": 0.00039,
+    "sites": 51,
     "subdomains": [
-        "conrad-prod-gcp-prod"
+        "conrad-prod-gcp-prod",
+        "ecollege-prod"
     ],
     "cnames": [
         {
@@ -26,6 +27,10 @@
         {
             "original": "api.conrad.de",
             "resolved": "conrad-prod-gcp-prod.apigee.net"
+        },
+        {
+            "original": "login.pearson.com",
+            "resolved": "ecollege-prod.apigee.net"
         }
     ],
     "fingerprinting": 1,
@@ -38,40 +43,50 @@
                 "conrad-prod-gcp-prod"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000152,
+            "sites": 4,
+            "prevalence": 0.0000306,
             "cnames": [
                 {
+                    "original": "api.conrad.at",
+                    "resolved": "conrad-prod-gcp-prod.apigee.net"
+                },
+                {
                     "original": "api.conrad.de",
+                    "resolved": "conrad-prod-gcp-prod.apigee.net"
+                },
+                {
+                    "original": "api.conrad.ch",
                     "resolved": "conrad-prod-gcp-prod.apigee.net"
                 }
             ],
             "responseHashes": [
-                "7dc259793298a0cc4083dbe8d9010d3993adf7cb752141999545a82c741a25d8"
+                "e2e325a22d537a88f4299dc695d56e80ddccd274f42fa212af31b0efad2f89bf"
             ],
             "type": "Script",
             "exampleSites": [
-                "conrad.de",
-                "www.conrad.de"
+                "conrad.at",
+                "www.conrad.at",
+                "www.conrad.de",
+                "www.conrad.ch"
             ]
         },
         {
             "rule": "apigee\\.net\\/session\\/1\\/userinfo",
-            "cookies": 0.0000304,
+            "cookies": 0.0000306,
             "fingerprinting": 0,
             "subdomains": [
                 "conrad-prod-gcp-prod"
             ],
             "apis": {},
             "sites": 4,
-            "prevalence": 0.0000304,
+            "prevalence": 0.0000306,
             "cnames": [
                 {
-                    "original": "api.conrad.de",
+                    "original": "api.conrad.at",
                     "resolved": "conrad-prod-gcp-prod.apigee.net"
                 },
                 {
-                    "original": "api.conrad.at",
+                    "original": "api.conrad.de",
                     "resolved": "conrad-prod-gcp-prod.apigee.net"
                 },
                 {
@@ -84,10 +99,35 @@
             ],
             "type": "XHR",
             "exampleSites": [
-                "conrad.de",
-                "www.conrad.de",
+                "conrad.at",
                 "www.conrad.at",
+                "www.conrad.de",
                 "www.conrad.ch"
+            ]
+        },
+        {
+            "rule": "apigee\\.net\\/v1\\/piapi\\/login\\/js\\/v2\\/session\\.js",
+            "cookies": 0.00000764,
+            "fingerprinting": 1,
+            "subdomains": [
+                "ecollege-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000153,
+            "cnames": [
+                {
+                    "original": "login.pearson.com",
+                    "resolved": "ecollege-prod.apigee.net"
+                }
+            ],
+            "responseHashes": [
+                "dc3105c999e80d37f25c95996e1c558a3f32f6ac8f12fe3106829ff0801ad449"
+            ],
+            "type": "Script",
+            "exampleSites": [
+                "pearson.com",
+                "www.pearson.com"
             ]
         }
     ],
@@ -95,9 +135,9 @@
         "CDN"
     ],
     "performance": {},
-    "cookies": 0.0000685,
+    "cookies": 0.000084,
     "types": {
-        "Script": 2,
+        "Script": 6,
         "XHR": 4
     }
 }
