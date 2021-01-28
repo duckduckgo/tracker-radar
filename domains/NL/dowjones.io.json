@@ -4,7 +4,7 @@
     "source": [
         "DuckDuckGo-NL"
     ],
-    "prevalence": 0.000204,
+    "prevalence": 0.000205,
     "sites": 2,
     "subdomains": [
         "mw-prod.bluegrass.mktdata",
@@ -20,11 +20,11 @@
             "resolved": "wsj-prod.bluegrass.mktdata.dowjones.io"
         }
     ],
-    "fingerprinting": 2,
+    "fingerprinting": 0,
     "resources": [
         {
             "rule": "dowjones\\.io\\/bg2\\/signalr\\/negotiate",
-            "cookies": 0.000204,
+            "cookies": 0.000102,
             "fingerprinting": 0,
             "subdomains": [
                 "mw-prod.bluegrass.mktdata",
@@ -32,7 +32,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000204,
+            "prevalence": 0.000205,
             "cnames": [
                 {
                     "original": "mwstream.wsj.net",
@@ -44,7 +44,7 @@
                 }
             ],
             "responseHashes": [
-                "c03b45969e520612ad41b6ce11bf71f1c738234a8d396945cf484146b20b2a26"
+                "636dc8ec65b222bf67fa8110d7ef8eeb7e5a199ab3b36372bfa639ed6b400b5c"
             ],
             "type": "XHR",
             "exampleSites": [
@@ -53,8 +53,8 @@
             ]
         },
         {
-            "rule": "dowjones\\.io\\/bg2\\/signalr\\/start",
-            "cookies": 0.000204,
+            "rule": "dowjones\\.io\\/BG2\\/signalr\\/connect",
+            "cookies": 0.000102,
             "fingerprinting": 0,
             "subdomains": [
                 "mw-prod.bluegrass.mktdata",
@@ -62,7 +62,35 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000204,
+            "prevalence": 0.000205,
+            "cnames": [
+                {
+                    "original": "mwstream.wsj.net",
+                    "resolved": "mw-prod.bluegrass.mktdata.dowjones.io"
+                },
+                {
+                    "original": "wsjstream.wsj.net",
+                    "resolved": "wsj-prod.bluegrass.mktdata.dowjones.io"
+                }
+            ],
+            "responseHashes": [],
+            "type": "EventSource",
+            "exampleSites": [
+                "marketwatch.com",
+                "www.wsj.com"
+            ]
+        },
+        {
+            "rule": "dowjones\\.io\\/bg2\\/signalr\\/start",
+            "cookies": 0.000102,
+            "fingerprinting": 0,
+            "subdomains": [
+                "mw-prod.bluegrass.mktdata",
+                "wsj-prod.bluegrass.mktdata"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000205,
             "cnames": [
                 {
                     "original": "mwstream.wsj.net",
@@ -81,6 +109,37 @@
                 "marketwatch.com",
                 "www.wsj.com"
             ]
+        },
+        {
+            "rule": "dowjones\\.io\\/bg2\\/signalr\\/send",
+            "cookies": 0.000102,
+            "fingerprinting": 0,
+            "subdomains": [
+                "mw-prod.bluegrass.mktdata",
+                "wsj-prod.bluegrass.mktdata"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000307,
+            "cnames": [
+                {
+                    "original": "mwstream.wsj.net",
+                    "resolved": "mw-prod.bluegrass.mktdata.dowjones.io"
+                },
+                {
+                    "original": "wsjstream.wsj.net",
+                    "resolved": "wsj-prod.bluegrass.mktdata.dowjones.io"
+                }
+            ],
+            "responseHashes": [
+                "2ae22c56affed2e37e5197c2c008d940bb12309d15e7838dda8815a8c5f82ad9"
+            ],
+            "type": "XHR",
+            "exampleSites": [
+                "marketwatch.com",
+                "www.marketwatch.com",
+                "www.wsj.com"
+            ]
         }
     ],
     "categories": [],
@@ -90,8 +149,10 @@
         "cpu": 0,
         "cache": 0
     },
-    "cookies": 0.000204,
+    "cookies": 0.000102,
     "types": {
-        "XHR": 4
-    }
+        "XHR": 7,
+        "EventSource": 2
+    },
+    "nameservers": []
 }

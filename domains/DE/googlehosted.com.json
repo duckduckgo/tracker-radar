@@ -4,14 +4,36 @@
     "source": [
         "DuckDuckGo-DE"
     ],
-    "prevalence": 0.000916,
-    "sites": 9,
+    "prevalence": 0.00145,
+    "sites": 14,
     "subdomains": [
-        "ghs"
+        "ghs",
+        "api.id.ghs",
+        "api.stage-id.ghs"
     ],
     "cnames": [
         {
             "original": "a.et.nytimes.com",
+            "resolved": "ghs.googlehosted.com"
+        },
+        {
+            "original": "a.nytimes.com",
+            "resolved": "ghs.googlehosted.com"
+        },
+        {
+            "original": "api.id.swmhdata.jetzt.de",
+            "resolved": "api.id.ghs.googlehosted.com"
+        },
+        {
+            "original": "api.id.swmhdata.sueddeutsche.de",
+            "resolved": "api.id.ghs.googlehosted.com"
+        },
+        {
+            "original": "api.stage-id.swmhdata.stuttgarter-nachrichten.de",
+            "resolved": "api.stage-id.ghs.googlehosted.com"
+        },
+        {
+            "original": "purr.nytimes.com",
             "resolved": "ghs.googlehosted.com"
         },
         {
@@ -22,40 +44,63 @@
     "fingerprinting": 1,
     "resources": [
         {
-            "rule": "googlehosted\\.com\\/v0\\/current_user",
-            "cookies": 0.000204,
+            "rule": "googlehosted\\.com\\/svc\\/nyt\\/data-layer",
+            "cookies": 0.000207,
             "fingerprinting": 0,
             "subdomains": [
                 "ghs"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000204,
+            "prevalence": 0.000207,
             "cnames": [
                 {
-                    "original": "uie.data.cbc.ca",
+                    "original": "a.nytimes.com",
                     "resolved": "ghs.googlehosted.com"
                 }
             ],
             "responseHashes": [
-                "e6679e9b6560dd1a162ab3478b30135df87dd149ff2ae326b753d36017099ba3"
+                "48a48bd4f1ecb4198d3c68b4057d07d632c069f46a4aced06f00c2a8d12daffa"
             ],
             "type": "XHR",
             "exampleSites": [
-                "cbc.ca",
-                "www.cbc.ca"
+                "nytimes.com",
+                "www.nytimes.com"
             ]
         },
         {
-            "rule": "googlehosted\\.com\\/track",
-            "cookies": 0.000204,
+            "rule": "googlehosted\\.com\\/v1\\/purr-cache",
+            "cookies": 0.000207,
             "fingerprinting": 0,
             "subdomains": [
                 "ghs"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000204,
+            "prevalence": 0.000207,
+            "cnames": [
+                {
+                    "original": "purr.nytimes.com",
+                    "resolved": "ghs.googlehosted.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Fetch",
+            "exampleSites": [
+                "nytimes.com",
+                "www.nytimes.com"
+            ]
+        },
+        {
+            "rule": "googlehosted\\.com\\/track",
+            "cookies": 0.000311,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ghs"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000311,
             "cnames": [
                 {
                     "original": "a.et.nytimes.com",
@@ -68,15 +113,81 @@
             "type": "Other",
             "exampleSites": [
                 "nytimes.com",
+                "cooking.nytimes.com",
                 "www.nytimes.com"
+            ]
+        },
+        {
+            "rule": "googlehosted\\.com\\/js\\/id-service\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "api.id.ghs",
+                "api.stage-id.ghs"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000414,
+            "cnames": [
+                {
+                    "original": "api.id.swmhdata.sueddeutsche.de",
+                    "resolved": "api.id.ghs.googlehosted.com"
+                },
+                {
+                    "original": "api.id.swmhdata.jetzt.de",
+                    "resolved": "api.id.ghs.googlehosted.com"
+                },
+                {
+                    "original": "api.stage-id.swmhdata.stuttgarter-nachrichten.de",
+                    "resolved": "api.stage-id.ghs.googlehosted.com"
+                }
+            ],
+            "responseHashes": [
+                "02291cfc5865048e583fb0fce42e333e54778df71d77571115dca58d77f80165",
+                "ed70f561b10a9143320313f923247d4711bc08ffef12d86e5787708f3b7cfa6c"
+            ],
+            "type": "Script",
+            "exampleSites": [
+                "sueddeutsche.de",
+                "www.jetzt.de",
+                "www.sueddeutsche.de",
+                "www.stuttgarter-nachrichten.de"
+            ]
+        },
+        {
+            "rule": "googlehosted\\.com\\/v0\\/current_user",
+            "cookies": 0.000207,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ghs"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000207,
+            "cnames": [
+                {
+                    "original": "uie.data.cbc.ca",
+                    "resolved": "ghs.googlehosted.com"
+                }
+            ],
+            "responseHashes": [
+                "00b3db7c41bd365083e1f425f333bbbb1fc2b77ae744f94706ff88491a6b5f4a"
+            ],
+            "type": "XHR",
+            "exampleSites": [
+                "cbc.ca",
+                "www.cbc.ca"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000407,
+    "cookies": 0.000311,
     "types": {
-        "XHR": 2,
-        "Other": 2
-    }
+        "XHR": 4,
+        "Fetch": 2,
+        "Other": 3,
+        "Script": 4
+    },
+    "nameservers": []
 }

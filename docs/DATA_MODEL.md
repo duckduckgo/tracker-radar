@@ -46,6 +46,7 @@ Each domain is defined using the following fields:
 |**categories**|An array of categories describing the purpose of this domain|
 |**types**|Request types this domain has used|
 |**cnames**|An array of subdomains that include DNS CNAMES redirecting to this domain|
+|**nameservers**|An array of name servers for this domain|
 
 #### Resources
 An array of regexes to match against the full URL of significant third-party requests made to this domain. Significant is any resource detected to be using a browser API used for fingerprinting or setting/getting cookies.

@@ -4,10 +4,11 @@
     "source": [
         "DuckDuckGo-GB"
     ],
-    "prevalence": 0.000916,
-    "sites": 9,
+    "prevalence": 0.00113,
+    "sites": 11,
     "subdomains": [
-        "ghs"
+        "ghs",
+        "api.id.ghs"
     ],
     "cnames": [
         {
@@ -15,11 +16,11 @@
             "resolved": "ghs.googlehosted.com"
         },
         {
-            "original": "a.nytimes.com",
-            "resolved": "ghs.googlehosted.com"
+            "original": "api.id.swmhdata.sueddeutsche.de",
+            "resolved": "api.id.ghs.googlehosted.com"
         },
         {
-            "original": "purr.nytimes.com",
+            "original": "tracker.gymshark.com",
             "resolved": "ghs.googlehosted.com"
         },
         {
@@ -30,63 +31,70 @@
     "fingerprinting": 1,
     "resources": [
         {
-            "rule": "googlehosted\\.com\\/svc\\/nyt\\/data-layer",
-            "cookies": 0.000204,
+            "rule": "googlehosted\\.com\\/",
+            "cookies": 0.000103,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ghs",
+                "api.id.ghs"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000205,
+            "cnames": [
+                {
+                    "original": "tracker.gymshark.com",
+                    "resolved": "ghs.googlehosted.com"
+                },
+                {
+                    "original": "api.id.swmhdata.sueddeutsche.de",
+                    "resolved": "api.id.ghs.googlehosted.com"
+                }
+            ],
+            "responseHashes": [
+                "19f3cfd32d7ab757c4c1a11252442b8c36dd19ca0756fe2be305c1368471e6e8"
+            ],
+            "type": "XHR",
+            "exampleSites": [
+                "gymshark.com",
+                "www.sueddeutsche.de"
+            ]
+        },
+        {
+            "rule": "googlehosted\\.com\\/v0\\/current_user",
+            "cookies": 0.000205,
             "fingerprinting": 0,
             "subdomains": [
                 "ghs"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000204,
+            "prevalence": 0.000205,
             "cnames": [
                 {
-                    "original": "a.nytimes.com",
+                    "original": "uie.data.cbc.ca",
                     "resolved": "ghs.googlehosted.com"
                 }
             ],
             "responseHashes": [
-                "e4e626e35f2710c3abb3b9ddf98944e40a91535dfcdb308cdbd4ff6fb72f85a6"
+                "6da15006547081a976ea079f5ec907780e48c27d150fd30028d85dc8bb32b18a"
             ],
             "type": "XHR",
             "exampleSites": [
-                "nytimes.com",
-                "www.nytimes.com"
+                "cbc.ca",
+                "www.cbc.ca"
             ]
         },
         {
-            "rule": "googlehosted\\.com\\/v1\\/purr-cache",
-            "cookies": 0.000204,
+            "rule": "googlehosted\\.com\\/track",
+            "cookies": 0.000205,
             "fingerprinting": 0,
             "subdomains": [
                 "ghs"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000204,
-            "cnames": [
-                {
-                    "original": "purr.nytimes.com",
-                    "resolved": "ghs.googlehosted.com"
-                }
-            ],
-            "responseHashes": [],
-            "type": "Fetch",
-            "exampleSites": [
-                "nytimes.com",
-                "www.nytimes.com"
-            ]
-        },
-        {
-            "rule": "googlehosted\\.com\\/track",
-            "cookies": 0.000305,
-            "fingerprinting": 0,
-            "subdomains": [
-                "ghs"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.000305,
+            "prevalence": 0.000205,
             "cnames": [
                 {
                     "original": "a.et.nytimes.com",
@@ -99,42 +107,16 @@
             "type": "Other",
             "exampleSites": [
                 "nytimes.com",
-                "cooking.nytimes.com",
                 "www.nytimes.com"
-            ]
-        },
-        {
-            "rule": "googlehosted\\.com\\/v0\\/current_user",
-            "cookies": 0.000204,
-            "fingerprinting": 0,
-            "subdomains": [
-                "ghs"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000204,
-            "cnames": [
-                {
-                    "original": "uie.data.cbc.ca",
-                    "resolved": "ghs.googlehosted.com"
-                }
-            ],
-            "responseHashes": [
-                "b720691d9ff6799ac14a405977f97dc0c0698c8d1ac9f4dcd0ce471331afb2f6"
-            ],
-            "type": "XHR",
-            "exampleSites": [
-                "cbc.ca",
-                "www.cbc.ca"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000509,
+    "cookies": 0.000411,
     "types": {
         "XHR": 4,
-        "Fetch": 2,
-        "Other": 3
-    }
+        "Other": 2
+    },
+    "nameservers": []
 }
