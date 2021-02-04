@@ -12,14 +12,6 @@ module.exports = {
             "rules": {"type": "array"}
         }
     },
-    "rule": {
-        "type": "object",
-        "properties": {
-            "rule": {"type": "string"},
-            "fingerprinting": {"type": "integer", "minimum": 0, "maximum": 3},
-            "cookies": {"type": "number"}
-        }
-    },
     "entity": {
         "type": "object",
         "properties": {
