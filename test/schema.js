@@ -34,7 +34,6 @@ module.exports = {
                 "type": "array",
                 "items": {"type": "string"}
             },
-            "default": {"type": "string"},
             "resources": {
                 "type": "array",
                 "items": {
@@ -54,7 +53,7 @@ module.exports = {
     "entity": {
         "type": "object",
         "properties": {
-            "properties": {"type": "array"},
+            "properties": {"type": "array", "items": {"type": "string"}},
             "displayName": {"type": "string"},
             "name": {"type": "string"},
             "prevalence": {
