@@ -3,13 +3,52 @@ module.exports = {
         "type": "object",
         "properties": {
             "domain": {"type": "string"},
-            "owner": {"type": "object"},
+            "owner": {
+                "type": "object",
+                "properties": {
+                    "name": {"type": "string"},
+                    "displayName": {"type": "string"},
+                    "privacyPolicy": {"type": "string"},
+                    "url": {"type": "string"}
+                }
+            },
+            "cnames": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "original": {"type": "string"},
+                        "resolved": {"type": "string"},
+                    },
+                    "required": ["original", "resolved"]
+                }
+            },
+            "subdomains": {
+                "type": "array",
+                "items": {"type": "string"}
+            },
             "prevalence": {"type": "number"},
             "fingerprinting": {"type": "integer", "minimum": 0, "maximum": 3},
             "cookies": {"type": "number"},
-            "categories": {"type": "array"},
+            "categories": {
+                "type": "array",
+                "items": {"type": "string"}
+            },
             "default": {"type": "string"},
-            "rules": {"type": "array"}
+            "resources": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "rule": {"type": "string"},
+                        "cookies": {"type": "number"},
+                        "fingerprinting": {"type": "integer", "minimum": 0, "maximum": 3},
+                        "exampleSites": {"type": "array", "items": {"type":"string"}},
+                        "responseHashes": {"type": "array", "items": {"type": "string"}},
+                    },
+                    "required": ["rule", "cookies", "fingerprinting", "exampleSites", "responseHashes"]
+                }
+            }
         }
     },
     "entity": {
@@ -26,5 +65,5 @@ module.exports = {
             }
         },
         "required": ["name", "displayName", "properties"]
-    }
+    },
 }
