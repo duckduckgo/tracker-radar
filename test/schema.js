@@ -68,7 +68,7 @@ module.exports = {
                             }
                         }
                     },
-                    "required": ["rule", "cookies", "fingerprinting", "responseHashes"]
+                    "required": ["rule", "cookies", "fingerprinting", "exampleSites", "responseHashes"]
                 }
             }
         }
