@@ -61,6 +61,16 @@ An array of regexes to match against the full URL of significant third-party req
 |**cnames**|A list of DNS CNAMEs that redirected to this resource|
 |**responseHashes**| A list of SHA256 response body hashes seen for this resource
 |**exampleSites**| An optional list of examples sites where a resource was found|
+|**firstPartyCookies**| A dictionary of cookies this resource sets in the first party context (via `document.cookie`). Keys are cookie names, values see _firstPartyCookies_ table.|
+|**firstPartyCookiesSent**| A dictionary of first party cookies whose values are sent to this resource. Keys are cookie names, values are the prevalence for that cookie.|
+
+##### First-party cookies
+|||
+|--|--|
+|**ttl**|The median number of seconds in the future this cookie is set to expire. `null` if the cookie is a session cookie.|
+|**length**|Average string length of the cookie value.|
+|**prevalence**|Proportion of pages that this cookie is set on.|
+|**uniqueness**|Number of distinct values see divided by number of times seen. 1 means that values are always unique, 0 means it is a constant.|
 
 #### Breaking
 An optional array of resources that can cause breakage if blocked.
