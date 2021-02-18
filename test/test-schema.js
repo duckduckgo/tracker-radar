@@ -10,7 +10,7 @@ describe('Domain schema', () => {
         for (const region of regions) {
             for (const file of fs.readdirSync(`domains/${region}`)) {
                 const data = JSON.parse(fs.readFileSync(`domains/${region}/${file}`, 'utf8'))
-                ajv.validate(schema.domain, data), true, `${region}/${file}`
+                ajv.validate(schema.domain, data)
                 assert.strictEqual(ajv.errors, null)
             }
         }
