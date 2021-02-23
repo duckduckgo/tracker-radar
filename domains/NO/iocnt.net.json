@@ -9,29 +9,67 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000311,
-    "sites": 3,
+    "prevalence": 0.000403,
+    "sites": 4,
     "subdomains": [
-        "chip-relay"
+        "chip-relay",
+        "pcmagzin-relay"
     ],
     "cnames": [
         {
             "original": "data-2f2ec12966.chip.de",
             "resolved": "chip-relay.iocnt.net"
+        },
+        {
+            "original": "data-db9f015784.pc-magazin.de",
+            "resolved": "pcmagzin-relay.iocnt.net"
         }
     ],
     "fingerprinting": 2,
     "resources": [
         {
             "rule": "iocnt\\.net\\/sensor\\.modern\\.ncl\\.min\\.js",
-            "cookies": 0.000207,
+            "cookies": 0.000302,
             "fingerprinting": 2,
+            "subdomains": [
+                "chip-relay",
+                "pcmagzin-relay"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [
+                {
+                    "original": "data-2f2ec12966.chip.de",
+                    "resolved": "chip-relay.iocnt.net"
+                },
+                {
+                    "original": "data-db9f015784.pc-magazin.de",
+                    "resolved": "pcmagzin-relay.iocnt.net"
+                }
+            ],
+            "responseHashes": [
+                "fcdd071e15605bd8910d5922ddac064dc1e4288bdb893d16b03e4929dc2ce741"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "chip.de",
+                "www.chip.de",
+                "www.pc-magazin.de"
+            ]
+        },
+        {
+            "rule": "iocnt\\.net\\/chip-config\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
             "subdomains": [
                 "chip-relay"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000207,
+            "prevalence": 0.000201,
             "cnames": [
                 {
                     "original": "data-2f2ec12966.chip.de",
@@ -39,12 +77,47 @@
                 }
             ],
             "responseHashes": [
-                "b4b6eb013d1a8657206168e8e931cdc1be827ea90d1bb062bab5788aa6bd7bef"
+                "5b7194802fe04c70fbe42a1d1bb7369a86a165594cee5b16ddf58a69ca7b01f8"
             ],
-            "type": "Script",
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
             "exampleSites": [
                 "chip.de",
                 "www.chip.de"
+            ]
+        },
+        {
+            "rule": "iocnt\\.net\\/relay\\.io",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "chip-relay",
+                "pcmagzin-relay"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [
+                {
+                    "original": "data-2f2ec12966.chip.de",
+                    "resolved": "chip-relay.iocnt.net"
+                },
+                {
+                    "original": "data-db9f015784.pc-magazin.de",
+                    "resolved": "pcmagzin-relay.iocnt.net"
+                }
+            ],
+            "responseHashes": [
+                "8ed5ba0c31b99d68021d83b29330bf9a33ee0046d32a344db8e7530276553b1f"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "chip.de",
+                "www.chip.de",
+                "www.pc-magazin.de"
             ]
         }
     ],
@@ -55,9 +128,10 @@
         "cpu": 1,
         "cache": 3
     },
-    "cookies": 0.000207,
+    "cookies": 0.000302,
     "types": {
-        "Script": 2
+        "Script": 3,
+        "XHR": 5
     },
     "nameservers": []
 }

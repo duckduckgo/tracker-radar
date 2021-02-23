@@ -4,9 +4,10 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.00013,
+    "prevalence": 0.000118,
     "sites": 17,
     "subdomains": [
+        "assets",
         "tribune-baltimore-sun-prod.cdn",
         "tribune-capital-gazette-prod.cdn",
         "tribune-chicago-tribune-prod.cdn",
@@ -16,8 +17,7 @@
         "tribune-new-york-daily-news-prod.cdn",
         "tribune-orlando-sentinel-prod.cdn",
         "tribune-virginian-pilot-prod.cdn",
-        "tribune-sun-sentinel.cdn",
-        "assets"
+        "tribune-sun-sentinel.cdn"
     ],
     "cnames": [
         {
@@ -64,8 +64,41 @@
     "fingerprinting": 1,
     "resources": [
         {
+            "rule": "zephr\\.com\\/zephr-browser\\/1\\.3\\.2\\/zephr-browser\\.umd\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 4
+            },
+            "sites": 11,
+            "prevalence": 0.0000764,
+            "cnames": [],
+            "responseHashes": [
+                "1ad2e50157e4b52db4d7b44fe0339aeb04fc3e624b472a216fbd5f1e13b8a254"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "baltimoresun.com",
+                "www.baltimoresun.com",
+                "www.capitalgazette.com",
+                "www.chicagotribune.com",
+                "www.courant.com",
+                "www.dailypress.com",
+                "www.mcall.com",
+                "www.nydailynews.com",
+                "www.orlandosentinel.com",
+                "www.pilotonline.com",
+                "www.sun-sentinel.com"
+            ]
+        },
+        {
             "rule": "zephr\\.com\\/zephr\\/features",
-            "cookies": 0.000084,
+            "cookies": 0.0000764,
             "fingerprinting": 0,
             "subdomains": [
                 "tribune-baltimore-sun-prod.cdn",
@@ -81,7 +114,7 @@
             ],
             "apis": {},
             "sites": 11,
-            "prevalence": 0.000084,
+            "prevalence": 0.0000764,
             "cnames": [
                 {
                     "original": "zephr.baltimoresun.com",
@@ -128,6 +161,8 @@
                 "da29d80c94b0649e4af6f76a445e667804381b4e006975bd2d689b10d5dfac68"
             ],
             "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
             "exampleSites": [
                 "baltimoresun.com",
                 "www.baltimoresun.com",
@@ -153,12 +188,13 @@
                 "tribune-hartford-courant-prod.cdn",
                 "tribune-daily-press-prod.cdn",
                 "tribune-morning-call-prod.cdn",
+                "tribune-new-york-daily-news-prod.cdn",
                 "tribune-orlando-sentinel-prod.cdn",
                 "tribune-virginian-pilot-prod.cdn",
                 "tribune-sun-sentinel.cdn"
             ],
             "apis": {},
-            "sites": 10,
+            "sites": 11,
             "prevalence": 0.0000764,
             "cnames": [
                 {
@@ -186,6 +222,10 @@
                     "resolved": "tribune-morning-call-prod.cdn.zephr.com"
                 },
                 {
+                    "original": "zephr.nydailynews.com",
+                    "resolved": "tribune-new-york-daily-news-prod.cdn.zephr.com"
+                },
+                {
                     "original": "zephr.orlandosentinel.com",
                     "resolved": "tribune-orlando-sentinel-prod.cdn.zephr.com"
                 },
@@ -199,7 +239,9 @@
                 }
             ],
             "responseHashes": [],
-            "type": "Other",
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
             "exampleSites": [
                 "baltimoresun.com",
                 "www.baltimoresun.com",
@@ -208,6 +250,7 @@
                 "www.courant.com",
                 "www.dailypress.com",
                 "www.mcall.com",
+                "www.nydailynews.com",
                 "www.orlandosentinel.com",
                 "www.pilotonline.com",
                 "www.sun-sentinel.com"
@@ -224,12 +267,13 @@
                 "tribune-hartford-courant-prod.cdn",
                 "tribune-daily-press-prod.cdn",
                 "tribune-morning-call-prod.cdn",
+                "tribune-new-york-daily-news-prod.cdn",
                 "tribune-orlando-sentinel-prod.cdn",
                 "tribune-virginian-pilot-prod.cdn",
                 "tribune-sun-sentinel.cdn"
             ],
             "apis": {},
-            "sites": 10,
+            "sites": 11,
             "prevalence": 0.0000764,
             "cnames": [
                 {
@@ -257,6 +301,10 @@
                     "resolved": "tribune-morning-call-prod.cdn.zephr.com"
                 },
                 {
+                    "original": "zephr.nydailynews.com",
+                    "resolved": "tribune-new-york-daily-news-prod.cdn.zephr.com"
+                },
+                {
                     "original": "zephr.orlandosentinel.com",
                     "resolved": "tribune-orlando-sentinel-prod.cdn.zephr.com"
                 },
@@ -270,11 +318,14 @@
                 }
             ],
             "responseHashes": [
-                "6b1c5df47f0c9b4b18a6c1c32f7aec456da00c05bb1bd731fb42a4ffe242c396",
+                "6185a8cac4628f78a083503b88b7b067d618e1ebdc52624515fc97556854bae5",
                 "67fabcca0a80151761324d4013e7b45b0b3890893cd0908ed4bd955301f06325",
-                "6185a8cac4628f78a083503b88b7b067d618e1ebdc52624515fc97556854bae5"
+                "3f7e62ea4c55e1a9448dbcc7ac73421b4bb5878b06da412a1100c3e0e28ba0fb",
+                "5cdcfa81f313d5f6aa438841f0b486312f25da26374439b1667188664d7f71cf"
             ],
             "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
             "exampleSites": [
                 "baltimoresun.com",
                 "www.baltimoresun.com",
@@ -283,48 +334,25 @@
                 "www.courant.com",
                 "www.dailypress.com",
                 "www.mcall.com",
+                "www.nydailynews.com",
                 "www.orlandosentinel.com",
                 "www.pilotonline.com",
                 "www.sun-sentinel.com"
-            ]
-        },
-        {
-            "rule": "zephr\\.com\\/zephr-browser\\/1\\.3\\.2\\/zephr-browser\\.umd\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "assets"
-            ],
-            "apis": {
-                "Navigator.prototype.userAgent": 2
-            },
-            "sites": 4,
-            "prevalence": 0.0000306,
-            "cnames": [],
-            "responseHashes": [
-                "1ad2e50157e4b52db4d7b44fe0339aeb04fc3e624b472a216fbd5f1e13b8a254"
-            ],
-            "type": "Script",
-            "exampleSites": [
-                "chicagotribune.com",
-                "www.courant.com",
-                "www.dailypress.com",
-                "www.pilotonline.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.00013,
+    "cookies": 0.000118,
     "types": {
-        "Fetch": 21,
-        "Other": 10,
-        "Script": 4
+        "Script": 11,
+        "Fetch": 22,
+        "Preflight": 11
     },
     "nameservers": [
-        "ns-1113.awsdns-11.org",
         "ns-1991.awsdns-56.co.uk",
         "ns-46.awsdns-05.com",
-        "ns-877.awsdns-45.net"
+        "ns-877.awsdns-45.net",
+        "ns-1113.awsdns-11.org"
     ]
 }

@@ -4,9 +4,10 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000153,
+    "prevalence": 0.0000139,
     "sites": 2,
     "subdomains": [
+        "download",
         "www",
         "sstats"
     ],
@@ -14,25 +15,63 @@
     "fingerprinting": 2,
     "resources": [
         {
+            "rule": "bitdefender\\.com\\/resources\\/themes\\/draco\\/scripts\\/ads\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "download"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "e6ea464d3d20c2a23b116f868ba8e02e8f79580632cfa26d7721026a49d66b31"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bitdefender.de",
+                "www.bitdefender.de"
+            ]
+        },
+        {
             "rule": "bitdefender\\.com\\/scripts\\/TagIT\\.v1\\.min\\.js",
-            "cookies": 0.0000153,
+            "cookies": 0.0000139,
             "fingerprinting": 1,
             "subdomains": [
                 "www"
             ],
             "apis": {
+                "Document.cookie getter": 1,
+                "Document.cookie setter": 2,
                 "Date.prototype.getTime": 2,
                 "Navigator.prototype.userAgent": 2,
-                "Navigator.prototype.appVersion": 2,
-                "Document.cookie setter": 2
+                "Navigator.prototype.appVersion": 2
             },
             "sites": 2,
-            "prevalence": 0.0000153,
+            "prevalence": 0.0000139,
             "cnames": [],
             "responseHashes": [
                 "1789e6bf0f139fc89e73756237ae433989a6d27e7effe2d1771c06d2566f889b"
             ],
             "type": "Script",
+            "firstPartyCookies": {
+                "tagit_session": {
+                    "ttl": null,
+                    "length": 1,
+                    "prevalence": 0.000006945795015697497,
+                    "uniqueness": 1
+                },
+                "tagit_params": {
+                    "ttl": null,
+                    "length": 24,
+                    "prevalence": 0.000013891590031394994,
+                    "uniqueness": 0.5
+                }
+            },
+            "firstPartyCookiesSent": {},
             "exampleSites": [
                 "bitdefender.de",
                 "www.bitdefender.de"
@@ -40,19 +79,21 @@
         },
         {
             "rule": "bitdefender\\.com\\/id",
-            "cookies": 0.0000153,
+            "cookies": 0.0000139,
             "fingerprinting": 0,
             "subdomains": [
                 "sstats"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000153,
+            "prevalence": 0.0000139,
             "cnames": [],
             "responseHashes": [
-                "f4e321019a15705fc12448204e0fa704a3d454ed8fe05818dea786e5ae71b080"
+                "d4cd3d934736f2aa832f791e0522ec4bbe889efec79f2694b72a7db261a2f35e"
             ],
             "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
             "exampleSites": [
                 "bitdefender.de",
                 "www.bitdefender.de"
@@ -60,19 +101,43 @@
         },
         {
             "rule": "bitdefender\\.com\\/site\\/Main\\/TagIT\\/newsessioninit\\/",
-            "cookies": 0.0000153,
+            "cookies": 0.0000139,
             "fingerprinting": 0,
             "subdomains": [
                 "www"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000153,
+            "prevalence": 0.0000139,
             "cnames": [],
             "responseHashes": [
                 "fceba08a6bbdf2598e8f6d43e71b51854337da5f880c3fff252a25b9cd10b6ae"
             ],
             "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bitdefender.de",
+                "www.bitdefender.de"
+            ]
+        },
+        {
+            "rule": "bitdefender\\.com\\/resources\\/themes\\/draco\\/images\\/2018\\/map\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "download"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "e29883d634189603b2655b92e18a44bc7d9e38ecc584a0974f73380c905ae9cf"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
             "exampleSites": [
                 "bitdefender.de",
                 "www.bitdefender.de"
@@ -80,19 +145,21 @@
         },
         {
             "rule": "bitdefender\\.com\\/site\\/Main\\/TagIT\\/getparams\\/",
-            "cookies": 0.0000153,
+            "cookies": 0.0000139,
             "fingerprinting": 0,
             "subdomains": [
                 "www"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000153,
+            "prevalence": 0.0000139,
             "cnames": [],
             "responseHashes": [
                 "33f4a3188e5bd3946bc65cba66db7f0400a6c149acc208b4b46640af86858f61"
             ],
             "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
             "exampleSites": [
                 "bitdefender.de",
                 "www.bitdefender.de"
@@ -106,15 +173,16 @@
         "cpu": 0,
         "cache": 0
     },
-    "cookies": 0.0000153,
+    "cookies": 0.0000139,
     "types": {
-        "Script": 6,
-        "XHR": 2
+        "Script": 8,
+        "XHR": 2,
+        "Image": 2
     },
     "nameservers": [
-        "pdns210.ultradns.org",
-        "pdns210.ultradns.biz",
         "pdns210.ultradns.net",
-        "pdns210.ultradns.com"
+        "pdns210.ultradns.com",
+        "pdns210.ultradns.org",
+        "pdns210.ultradns.biz"
     ]
 }

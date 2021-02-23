@@ -4,40 +4,57 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.000733,
+    "prevalence": 0.000716,
     "sites": 7,
     "subdomains": [
         "cdn1",
         "api-cf",
-        "www"
+        "www",
+        "tracker"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
         {
             "rule": "affirm\\.com\\/js\\/v2\\/affirm\\.js",
-            "cookies": 0.000209,
+            "cookies": 0.000409,
             "fingerprinting": 2,
             "subdomains": [
                 "cdn1"
             ],
             "apis": {
-                "console.memory": 5,
-                "Navigator.prototype.userAgent": 5,
-                "Navigator.prototype.connection": 5,
-                "window.localStorage": 5,
-                "window.devicePixelRatio": 5,
-                "Date.prototype.getTime": 4,
-                "Document.cookie getter": 2,
-                "Document.cookie setter": 2
+                "console.memory": 6,
+                "Navigator.prototype.userAgent": 6,
+                "Navigator.prototype.connection": 6,
+                "window.localStorage": 6,
+                "window.devicePixelRatio": 6,
+                "Date.prototype.getTime": 6,
+                "Document.cookie getter": 4,
+                "Document.cookie setter": 4
             },
             "sites": 7,
-            "prevalence": 0.000733,
+            "prevalence": 0.000716,
             "cnames": [],
             "responseHashes": [
-                "15d6591ca985f6215fd66d9adfb2eb991e5b64b6fcef41bd8eadec30f6e35519"
+                "5f4bf1a816b272228e6d86a687849346928121499d9b78968e15f3f7834d566a",
+                "166d106ceb73b6de8f06f31bb2e1bf2179c6868474cae8b20fb16e581c916fc1"
             ],
             "type": "Script",
+            "firstPartyCookies": {
+                "cookietest": {
+                    "ttl": -1613697107,
+                    "length": 1,
+                    "prevalence": 0.00030690537084398974,
+                    "uniqueness": 0.3333333333333333
+                },
+                "tracker_device": {
+                    "ttl": 157680027,
+                    "length": 36,
+                    "prevalence": 0.0004092071611253197,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
             "exampleSites": [
                 "drop.com",
                 "stockx.com",
@@ -50,23 +67,28 @@
         },
         {
             "rule": "affirm\\.com\\/api\\/v2\\/session\\/touch_track",
-            "cookies": 0.000419,
+            "cookies": 0.000614,
             "fingerprinting": 0,
             "subdomains": [
                 "api-cf"
             ],
             "apis": {},
-            "sites": 5,
-            "prevalence": 0.000523,
+            "sites": 6,
+            "prevalence": 0.000614,
             "cnames": [],
             "responseHashes": [
-                "a96e81a2af7ce6862f2a5e5ee97c11af141f33cb40aca2d9ef93850f486d0d2c",
-                "a95debd60b98566be5237728dce9c7cb45bfb0bcd76d96e85e4cfe69eb0d190d",
-                "03ed572a15d11a73f9d24fe04b3f9102769b150bb729466e21a4c636521af24b"
+                "d0253c8e710e53a15deefc68e9c34204631b81b07b41288a0e3eea444b9aa98b",
+                "4909a33758d5c9053827b9b9857e4ecd76dd4a0b7276abfe20f3dcba1da717bd",
+                "b640e29bbc442c11b37bb5305e4b2f454c7d08ab78de6dcb7cb8d15f934d4141",
+                "d76a9f37eb80656f164a6e8ae04a8aa6c0ef82fc01a906ab9386ed2ddfdb4fbf",
+                "2cffe4641eaeb9ea6fd7f437abf59dd73e8c83c53a3fa820f6eccea49f490f5e"
             ],
             "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
             "exampleSites": [
-                "comptia.org",
+                "stockx.com",
+                "www.comptia.org",
                 "www.hellotech.com",
                 "www.oakley.com",
                 "www.yourmechanic.com",
@@ -75,26 +97,49 @@
         },
         {
             "rule": "affirm\\.com\\/api\\/v2\\/cookie_sent",
-            "cookies": 0.000523,
+            "cookies": 0.000614,
             "fingerprinting": 0,
             "subdomains": [
                 "www"
             ],
             "apis": {},
             "sites": 6,
-            "prevalence": 0.000628,
+            "prevalence": 0.000614,
             "cnames": [],
             "responseHashes": [
-                "8d728ba62f3f7c795e471c6dce9d637ffce93580e4936c3f1b578320242df7b8",
                 "924aebf24af414b12986f4af470b2ac7b61d765897f9e222c0af15805de9ae40"
             ],
             "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
             "exampleSites": [
-                "comptia.org",
+                "stockx.com",
                 "www.comptia.org",
                 "www.hellotech.com",
                 "www.oakley.com",
                 "www.yourmechanic.com",
+                "www.zzounds.com"
+            ]
+        },
+        {
+            "rule": "affirm\\.com\\/collect",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tracker"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000205,
+            "cnames": [],
+            "responseHashes": [
+                "70f07df8529a5da355e70cb8fd1a2c6cdbe6dec83a5332bfcf06f5a917e6e607"
+            ],
+            "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "zzounds.com",
                 "www.zzounds.com"
             ]
         }
@@ -106,10 +151,11 @@
         "cpu": 0,
         "cache": 1
     },
-    "cookies": 0.000419,
+    "cookies": 0.000614,
     "types": {
         "Script": 7,
-        "Fetch": 11
+        "Fetch": 12,
+        "Other": 2
     },
     "nameservers": [
         "ns-614.awsdns-12.net",

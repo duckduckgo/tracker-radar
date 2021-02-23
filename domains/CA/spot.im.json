@@ -4,35 +4,93 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.00093,
-    "sites": 9,
+    "prevalence": 0.00102,
+    "sites": 10,
     "subdomains": [
+        "direct-events-collector",
+        "publisher-assets",
         "events-collector",
-        "pix"
+        "pix",
+        "open-api"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
+            "rule": "spot\\.im\\/api\\/v2\\/events",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "direct-events-collector"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000613,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sheknows.com",
+                "thefreethoughtproject.com",
+                "www.celebdirtylaundry.com",
+                "www.dailywire.com",
+                "www.realclearpolitics.com",
+                "www.silverdoctors.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/ad\\/event-tracking\\/pixel-ads-google-adsense\\.html",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "publisher-assets"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.000715,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sheknows.com",
+                "soaps.sheknows.com",
+                "thefreethoughtproject.com",
+                "www.celebdirtylaundry.com",
+                "www.dailywire.com",
+                "www.realclearpolitics.com",
+                "www.silverdoctors.com"
+            ]
+        },
+        {
             "rule": "spot\\.im\\/api\\/v1\\/device_load",
-            "cookies": 0.000516,
+            "cookies": 0.000613,
             "fingerprinting": 0,
             "subdomains": [
                 "events-collector"
             ],
             "apis": {},
-            "sites": 5,
-            "prevalence": 0.000516,
+            "sites": 6,
+            "prevalence": 0.000613,
             "cnames": [],
             "responseHashes": [
-                "d92048035d5ebfb703b769420c355125585e5263cc3b997dfd49116fcc2e8686",
-                "4c29b1641b7a9df643ee5b481af684d0739063c812a95e327235525ea8506dfe",
-                "e066b0d04830401ca7b50b287ab034b71958c0c3b72f305780edbd54c45d2fed",
-                "553dfa12a426c2d52272357561d7df1b974967994d5c52108e094aac196d4a18"
+                "2401048df61a1e05c6c91a960a8adf891ae6f1e4e4045442c43330d21e050884",
+                "7bb79ae7d3991fe0130f41fc581272dfee6aaeea137b3be27003870c95f9f081",
+                "99f3d4cffbcb788f550afae317eea39d8e97b5ef5b42d6af5a8feb96344e2fd7",
+                "0540c0ad5624545574a493710b562cf94323f394d96e18c3fc32d0027dbd5c15",
+                "f3cbcd96de98da3d6f06aa9a81e0149939e69b436ab745590140c8a148c907f9"
             ],
             "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
             "exampleSites": [
                 "sheknows.com",
+                "thefreethoughtproject.com",
                 "www.celebdirtylaundry.com",
                 "www.dailywire.com",
                 "www.realclearpolitics.com",
@@ -41,22 +99,51 @@
         },
         {
             "rule": "spot\\.im\\/api\\/v1\\/pixels",
-            "cookies": 0.00031,
+            "cookies": 0.000613,
             "fingerprinting": 0,
             "subdomains": [
                 "pix"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.000413,
+            "sites": 6,
+            "prevalence": 0.000613,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
             "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
             "exampleSites": [
                 "sheknows.com",
+                "soaps.sheknows.com",
+                "thefreethoughtproject.com",
                 "www.celebdirtylaundry.com",
                 "www.realclearpolitics.com",
                 "www.silverdoctors.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/v1\\/messages-count",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "open-api"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000306,
+            "cnames": [],
+            "responseHashes": [
+                "ab525447e402d88fa9882caceab62a7154a3756bbd6c899db4628f8750a670f1"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "the-sun.com",
+                "www.thesun.co.uk",
+                "www.thesun.ie"
             ]
         }
     ],
@@ -67,15 +154,16 @@
         "cpu": 0,
         "cache": 1
     },
-    "cookies": 0.000516,
+    "cookies": 0.000613,
     "types": {
-        "Fetch": 5,
-        "Other": 4
+        "XHR": 6,
+        "Fetch": 16,
+        "Other": 6
     },
     "nameservers": [
-        "ns-2018.awsdns-60.co.uk",
-        "ns-34.awsdns-04.com",
         "ns-802.awsdns-36.net",
-        "ns-1202.awsdns-22.org"
+        "ns-1202.awsdns-22.org",
+        "ns-2018.awsdns-60.co.uk",
+        "ns-34.awsdns-04.com"
     ]
 }

@@ -7,36 +7,236 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.000642,
-    "sites": 84,
+    "prevalence": 0.000674,
+    "sites": 97,
     "subdomains": [
-        "hub"
+        "cdn",
+        "hub",
+        "share",
+        "hola-auth.hub",
+        "cbc-login.hub",
+        "monarte.hub",
+        "reachplc.hub"
     ],
-    "cnames": [],
+    "cnames": [
+        {
+            "original": "auth.arte.tv",
+            "resolved": "monarte.hub.loginradius.com"
+        },
+        {
+            "original": "auth.hola.com",
+            "resolved": "hola-auth.hub.loginradius.com"
+        },
+        {
+            "original": "login.cbc.ca",
+            "resolved": "cbc-login.hub.loginradius.com"
+        }
+    ],
     "fingerprinting": 1,
     "resources": [
         {
-            "rule": "loginradius\\.com\\/include\\/js\\/LoginRadius\\.js",
+            "rule": "loginradius\\.com\\/share\\/v1\\/LoginRadius\\.js",
             "cookies": 0,
             "fingerprinting": 1,
             "subdomains": [
-                "hub"
+                "cdn"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 1,
-                "window.localStorage": 1,
-                "Date.prototype.getTime": 1
+                "Navigator.prototype.userAgent": 2
             },
             "sites": 2,
-            "prevalence": 0.0000153,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "0670fb16f841523dca4aab4633ca0f9ef4f0639e3ceeaad1e3f8cc46c1992923"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "adw.org",
+                "blog.adw.org"
+            ]
+        },
+        {
+            "rule": "loginradius\\.com\\/include\\/js\\/LoginRadius\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "hub"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
             "cnames": [],
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
             ],
             "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
             "exampleSites": [
                 "adw.org",
                 "blog.adw.org"
+            ]
+        },
+        {
+            "rule": "loginradius\\.com\\/ApiData\\/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "share"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "adw.org",
+                "blog.adw.org"
+            ]
+        },
+        {
+            "rule": "loginradius\\.com\\/ssologin\\/login",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "hola-auth.hub",
+                "cbc-login.hub"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.0000417,
+            "cnames": [
+                {
+                    "original": "auth.hola.com",
+                    "resolved": "hola-auth.hub.loginradius.com"
+                },
+                {
+                    "original": "login.cbc.ca",
+                    "resolved": "cbc-login.hub.loginradius.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hola.com",
+                "cocinayrecetas.hola.com",
+                "newsinteractives.cbc.ca",
+                "us.hola.com",
+                "www.cbc.ca",
+                "www.hola.com"
+            ]
+        },
+        {
+            "rule": "loginradius\\.com\\/ssologin\\/login",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "hola-auth.hub",
+                "cbc-login.hub"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.0000417,
+            "cnames": [
+                {
+                    "original": "auth.hola.com",
+                    "resolved": "hola-auth.hub.loginradius.com"
+                },
+                {
+                    "original": "login.cbc.ca",
+                    "resolved": "cbc-login.hub.loginradius.com"
+                }
+            ],
+            "responseHashes": [
+                "f7a4a046540cd7b682afc0d129cbbdea16081d1a54dfd3385115725f960c54c9"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hola.com",
+                "cocinayrecetas.hola.com",
+                "newsinteractives.cbc.ca",
+                "us.hola.com",
+                "www.cbc.ca",
+                "www.hola.com"
+            ]
+        },
+        {
+            "rule": "loginradius\\.com\\/ssologin\\/login",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "monarte.hub"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [
+                {
+                    "original": "auth.arte.tv",
+                    "resolved": "monarte.hub.loginradius.com"
+                }
+            ],
+            "responseHashes": [
+                "a1d169ea3a1e17ff6a959d45977bde8a366c38c98dba19e803f4e8c00baa3dce"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "arte.tv",
+                "www.arte.tv"
+            ]
+        },
+        {
+            "rule": "loginradius\\.com\\/ssologin\\/login",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "reachplc.hub"
+            ],
+            "apis": {},
+            "sites": 44,
+            "prevalence": 0.000306,
+            "cnames": [],
+            "responseHashes": [
+                "f7a4a046540cd7b682afc0d129cbbdea16081d1a54dfd3385115725f960c54c9"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "www.express.co.uk",
+                "www.mirror.co.uk",
+                "www.belfastlive.co.uk",
+                "www.gazettelive.co.uk",
+                "www.leeds-live.co.uk",
+                "www.edinburghlive.co.uk",
+                "www.liverpoolecho.co.uk",
+                "www.stokesentinel.co.uk",
+                "belfastlive.co.uk",
+                "www.kentlive.news",
+                "www.getreading.co.uk",
+                "www.somersetlive.co.uk",
+                "www.walesonline.co.uk",
+                "www.cheshire-live.co.uk",
+                "www.nottinghampost.com",
+                "www.gloucestershirelive.co.uk",
+                "www.coventrytelegraph.net",
+                "www.dailypost.co.uk",
+                "www.hulldailymail.co.uk",
+                "www.chroniclelive.co.uk"
             ]
         }
     ],
@@ -49,12 +249,15 @@
     },
     "cookies": 0,
     "types": {
-        "Script": 2
+        "Script": 8,
+        "Preflight": 6,
+        "XHR": 6,
+        "Fetch": 44
     },
     "nameservers": [
-        "ns4.p14.dynect.net",
         "ns1.p14.dynect.net",
+        "ns3.p14.dynect.net",
         "ns2.p14.dynect.net",
-        "ns3.p14.dynect.net"
+        "ns4.p14.dynect.net"
     ]
 }

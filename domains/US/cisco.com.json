@@ -7,15 +7,40 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000153,
-    "sites": 2,
+    "prevalence": 0.0000278,
+    "sites": 4,
     "subdomains": [
         "www",
-        "smetrics"
+        "smetrics",
+        "cisco-tags"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "cisco\\.com\\/c\\/dam\\/cdc\\/t\\/ctm-core\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "ab5a468a3c8bf8d9249fbcdb16304c55ee3e5c3aa8f30486b701bfe292adb96d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "meraki.com",
+                "community.meraki.com"
+            ]
+        },
         {
             "rule": "cisco\\.com\\/c\\/dam\\/cdc\\/t\\/ctm\\.js",
             "cookies": 0,
@@ -24,20 +49,46 @@
                 "www"
             ],
             "apis": {
-                "Navigator.prototype.platform": 2,
-                "Date.prototype.getTime": 2,
-                "Navigator.prototype.userAgent": 2,
-                "window.localStorage": 2,
-                "Navigator.prototype.cookieEnabled": 2,
-                "Navigator.prototype.doNotTrack": 2
+                "Navigator.prototype.platform": 3,
+                "Date.prototype.getTime": 3,
+                "Navigator.prototype.userAgent": 3,
+                "Document.cookie getter": 3,
+                "window.localStorage": 3,
+                "Navigator.prototype.cookieEnabled": 3,
+                "Navigator.prototype.doNotTrack": 3
             },
-            "sites": 2,
-            "prevalence": 0.0000153,
+            "sites": 3,
+            "prevalence": 0.0000208,
             "cnames": [],
             "responseHashes": [
-                "b575d537b2eca4f2a06c9b828153de0d86f2fc8aa4ab72589351aebaed4d31f0"
+                "3aad60cfca448d3cae55b95bb1ba390f08cc9164f4ef142eeaeef0b4ca364230"
             ],
             "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "meraki.com",
+                "community.meraki.com",
+                "www.thousandeyes.com"
+            ]
+        },
+        {
+            "rule": "cisco\\.com\\/c\\/dam\\/cdc\\/t\\/i\\/close14x14\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "8771b025c9a4ad79c440a6de651e1c864d2720bd02d7385a747eb1fbb1c231cb"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
             "exampleSites": [
                 "meraki.com",
                 "community.meraki.com"
@@ -45,22 +96,50 @@
         },
         {
             "rule": "cisco\\.com\\/id",
-            "cookies": 0.0000153,
+            "cookies": 0.0000139,
             "fingerprinting": 0,
             "subdomains": [
                 "smetrics"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000153,
+            "prevalence": 0.0000139,
             "cnames": [],
             "responseHashes": [
-                "2e1cf995b4328c9c714246633a2ad9fe709aa187406bf40fd335e903fc47e388"
+                "61da7d802d7ffd89868e12a260f639f57e5b2f287ad3b24b67ca2d6789511869"
             ],
             "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
             "exampleSites": [
                 "meraki.com",
                 "community.meraki.com"
+            ]
+        },
+        {
+            "rule": "cisco\\.com\\/tag\\/ntpagetag\\.gif",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cisco-tags"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000208,
+            "cnames": [],
+            "responseHashes": [
+                "b96b64444f7d52c39b5716fe4d3e8d0433c67fb79731a4400188835d97b74bce"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "gpv_v9": 0.000006945795015697497,
+                "_ga": 0.000006945795015697497
+            },
+            "exampleSites": [
+                "meraki.com",
+                "community.meraki.com",
+                "www.thousandeyes.com"
             ]
         }
     ],
@@ -71,14 +150,15 @@
         "cpu": 0,
         "cache": 3
     },
-    "cookies": 0.0000153,
+    "cookies": 0.0000139,
     "types": {
-        "Script": 2,
+        "Script": 5,
+        "Image": 5,
         "XHR": 2
     },
     "nameservers": [
-        "ns1.cisco.com",
         "ns2.cisco.com",
+        "ns1.cisco.com",
         "ns3.cisco.com"
     ]
 }

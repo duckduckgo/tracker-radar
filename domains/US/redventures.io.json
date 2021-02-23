@@ -4,19 +4,79 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000458,
-    "sites": 6,
+    "prevalence": 0.0000556,
+    "sites": 8,
     "subdomains": [
-        "analytics.prod.novant"
+        "flow-bff-client.us.flow",
+        "social-proofing-api.datascience",
+        "analytics.prod.novant",
+        "datum-api.prod.novant",
+        "preamp-decision-api.prod.novant"
     ],
     "cnames": [
         {
             "original": "wwwanalytics.novanthealth.org",
             "resolved": "analytics.prod.novant.redventures.io"
+        },
+        {
+            "original": "wwwdatum-api.novanthealth.org",
+            "resolved": "datum-api.prod.novant.redventures.io"
+        },
+        {
+            "original": "wwwpreamp.novanthealth.org",
+            "resolved": "preamp-decision-api.prod.novant.redventures.io"
         }
     ],
     "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "redventures\\.io\\/api\\/start",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "flow-bff-client.us.flow"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000208,
+            "cnames": [],
+            "responseHashes": [
+                "fd540b0228ad80b6676da3df46b38a63694637b3350cd13ff290a0ca20abd81c",
+                "db2711b515a8f78ea3a2cf7160f0948dcb95f87abcbd081ff5123d2234160b59"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "decisiondata.org",
+                "www.allconnect.com",
+                "www.hvac.com"
+            ]
+        },
+        {
+            "rule": "redventures\\.io\\/get-data",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "social-proofing-api.datascience"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "4fad7c72349a6fb4671c5a2bba210fb55093081d9a20ac42530b6b96600355a8"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "tglr_req": 0.000013891590031394994
+            },
+            "exampleSites": [
+                "bestcollegereviews.org",
+                "www.bestcollegereviews.org"
+            ]
+        },
         {
             "rule": "redventures\\.io\\/lptk\\/novanthealthorg\\/bundle\\.js",
             "cookies": 0,
@@ -26,7 +86,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000153,
+            "prevalence": 0.0000139,
             "cnames": [
                 {
                     "original": "wwwanalytics.novanthealth.org",
@@ -37,6 +97,8 @@
                 "b1ec1f40beb61365f304cd6dbb21f7efb0fce3f81c1f81f6a29338b855875a4a"
             ],
             "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
             "exampleSites": [
                 "novanthealth.org",
                 "www.novanthealth.org"
@@ -44,14 +106,14 @@
         },
         {
             "rule": "redventures\\.io\\/datum\\/cohesion-novant\\.min\\.js",
-            "cookies": 0.00000764,
+            "cookies": 0.00000695,
             "fingerprinting": 2,
             "subdomains": [
                 "analytics.prod.novant"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000153,
+            "prevalence": 0.0000139,
             "cnames": [
                 {
                     "original": "wwwanalytics.novanthealth.org",
@@ -62,6 +124,114 @@
                 "0f7380b5109c07cd530745ce4a9a33570cde83641ec37d1cfbcd47665af6df50"
             ],
             "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "novanthealth.org",
+                "www.novanthealth.org"
+            ]
+        },
+        {
+            "rule": "redventures\\.io\\/v1\\/tagular\\/beam",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "datum-api.prod.novant"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [
+                {
+                    "original": "wwwdatum-api.novanthealth.org",
+                    "resolved": "datum-api.prod.novant.redventures.io"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "novanthealth.org",
+                "www.novanthealth.org"
+            ]
+        },
+        {
+            "rule": "redventures\\.io\\/v1\\/tagular\\/beam",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "datum-api.prod.novant"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [
+                {
+                    "original": "wwwdatum-api.novanthealth.org",
+                    "resolved": "datum-api.prod.novant.redventures.io"
+                }
+            ],
+            "responseHashes": [
+                "712561c76ad801659a0e52d2af6b3e6f83baa6b2a4d48d8b1f2889a7478ea277"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "novanthealth.org",
+                "www.novanthealth.org"
+            ]
+        },
+        {
+            "rule": "redventures\\.io\\/api\\/v1\\/decisions",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "preamp-decision-api.prod.novant"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [
+                {
+                    "original": "wwwpreamp.novanthealth.org",
+                    "resolved": "preamp-decision-api.prod.novant.redventures.io"
+                }
+            ],
+            "responseHashes": [
+                "ad363c9ebe106a67f852d021b522e355496e90c8df5b38194fb15a311050afa9"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "novanthealth.org",
+                "www.novanthealth.org"
+            ]
+        },
+        {
+            "rule": "redventures\\.io\\/api\\/v1\\/confirmation",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "preamp-decision-api.prod.novant"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [
+                {
+                    "original": "wwwpreamp.novanthealth.org",
+                    "resolved": "preamp-decision-api.prod.novant.redventures.io"
+                }
+            ],
+            "responseHashes": [
+                "27badc983df1780b60c2b3fa9d3a19a00e46aac798451f0febdca52920faaddf"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
             "exampleSites": [
                 "novanthealth.org",
                 "www.novanthealth.org"
@@ -75,9 +245,17 @@
         "cpu": 0,
         "cache": 0
     },
-    "cookies": 0.00000764,
+    "cookies": 0.00000695,
     "types": {
-        "Script": 4
+        "Fetch": 5,
+        "Script": 4,
+        "Preflight": 2,
+        "XHR": 6
     },
-    "nameservers": []
+    "nameservers": [
+        "ns-534.awsdns-02.net",
+        "ns-1095.awsdns-08.org",
+        "ns-1761.awsdns-28.co.uk",
+        "ns-211.awsdns-26.com"
+    ]
 }

@@ -9,142 +9,323 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.00176,
-    "sites": 17,
+    "prevalence": 0.00143,
+    "sites": 14,
     "subdomains": [
-        "nslc-prod-app",
-        "fps-namer",
-        "transat-clientapi"
+        "rc-geoip",
+        "kaz-mtl1-tm-geoloc",
+        "naapimtm",
+        "fps-na-api-1",
+        "fps-na-api-3",
+        "realm"
     ],
     "cnames": [
         {
-            "original": "clientapi.airtransat.com",
-            "resolved": "transat-clientapi.trafficmanager.net"
+            "original": "api.mps.ford.com",
+            "resolved": "naapimtm.trafficmanager.net"
         },
         {
-            "original": "clientapi.transat.com",
-            "resolved": "transat-clientapi.trafficmanager.net"
+            "original": "geoip.radio-canada.ca",
+            "resolved": "rc-geoip.trafficmanager.net"
         },
         {
-            "original": "login.norton.com",
-            "resolved": "nslc-prod-app.trafficmanager.net"
+            "original": "geoloc.kitco.com",
+            "resolved": "kaz-mtl1-tm-geoloc.trafficmanager.net"
         },
         {
-            "original": "na.fps.ford.com",
-            "resolved": "fps-namer.trafficmanager.net"
+            "original": "na.fps1.ford.com",
+            "resolved": "fps-na-api-1.trafficmanager.net"
+        },
+        {
+            "original": "na.fps3.ford.com",
+            "resolved": "fps-na-api-3.trafficmanager.net"
+        },
+        {
+            "original": "realm.hearstnp.com",
+            "resolved": "realm.trafficmanager.net"
         }
     ],
     "fingerprinting": 1,
     "resources": [
         {
-            "rule": "trafficmanager\\.net\\/sso\\/idp\\/SAML2",
-            "cookies": 0.00031,
+            "rule": "trafficmanager\\.net\\/geoip\\.js",
+            "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "nslc-prod-app"
+                "rc-geoip"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.000413,
+            "sites": 2,
+            "prevalence": 0.000204,
             "cnames": [
                 {
-                    "original": "login.norton.com",
-                    "resolved": "nslc-prod-app.trafficmanager.net"
+                    "original": "geoip.radio-canada.ca",
+                    "resolved": "rc-geoip.trafficmanager.net"
                 }
             ],
             "responseHashes": [
-                "2ebbe37f803947a3396350d71cf6006eea1d913f04f5e54ee582111ef10188f1",
-                "009cb42ca6f9a06741d409cc25f33d50c7a81eebddbb4fbe8ef84835c6074635"
+                "38146eafc82e1d1fab014e3257633b0541d95679e5e99ebe56671a3530ff46e8"
             ],
-            "type": "Document",
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
             "exampleSites": [
-                "norton.com",
-                "community.norton.com",
-                "safeweb.norton.com",
-                "support.norton.com"
+                "radio-canada.ca",
+                "www.icimusique.ca"
+            ]
+        },
+        {
+            "rule": "trafficmanager\\.net\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "kaz-mtl1-tm-geoloc"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000204,
+            "cnames": [
+                {
+                    "original": "geoloc.kitco.com",
+                    "resolved": "kaz-mtl1-tm-geoloc.trafficmanager.net"
+                }
+            ],
+            "responseHashes": [
+                "065db44fc09e793d51fca8ee8076358e09b368b6c91e121b511f4f525d0009cb"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kitco.com",
+                "online.kitco.com"
+            ]
+        },
+        {
+            "rule": "trafficmanager\\.net\\/api\\/users\\/guest\\/guid",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "naapimtm"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000306,
+            "cnames": [
+                {
+                    "original": "api.mps.ford.com",
+                    "resolved": "naapimtm.trafficmanager.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ford.com",
+                "www.ford.ca",
+                "www.ford.com"
+            ]
+        },
+        {
+            "rule": "trafficmanager\\.net\\/api\\/users\\/guest\\/guid",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "naapimtm"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000306,
+            "cnames": [
+                {
+                    "original": "api.mps.ford.com",
+                    "resolved": "naapimtm.trafficmanager.net"
+                }
+            ],
+            "responseHashes": [
+                "51514c884940003af1820b1663ce52432dc2f7fbb589f1ac738594b49d95b60a",
+                "12f50aeee0a2870fdf29f029eb6bb8c9ee5cb9cdef311fd322a719817de1fe68"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ford.com",
+                "www.ford.ca",
+                "www.ford.com"
             ]
         },
         {
             "rule": "trafficmanager\\.net\\/fps\\/api\\/personalization_1_8\\/set",
-            "cookies": 0.00031,
+            "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "fps-namer"
+                "fps-na-api-1"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000306,
+            "cnames": [
+                {
+                    "original": "na.fps1.ford.com",
+                    "resolved": "fps-na-api-1.trafficmanager.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ford.com",
+                "www.ford.ca",
+                "www.ford.com"
+            ]
+        },
+        {
+            "rule": "trafficmanager\\.net\\/fps\\/api\\/personalization_1_8\\/set",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "fps-na-api-1"
             ],
             "apis": {},
             "sites": 4,
-            "prevalence": 0.000413,
+            "prevalence": 0.000409,
             "cnames": [
                 {
-                    "original": "na.fps.ford.com",
-                    "resolved": "fps-namer.trafficmanager.net"
+                    "original": "na.fps1.ford.com",
+                    "resolved": "fps-na-api-1.trafficmanager.net"
                 }
             ],
             "responseHashes": [
-                "93e1d727487f94eb77c7e5d2579c4ffa73f021131ae1e9a59312b104eaff81a8",
-                "1570cd8dc2e8c454464d5f358ba2728c34c0a9320e6eaf3f0e67e0346c8ba3e9"
+                "964c2f2163cc5ef128347c56614612c60174bc1bcdf65bcff38f94bec66bbdcb",
+                "9d8800143e022b46df28478440fe2b411446a2a0a8548e3b4b25b7b5fe125ea0",
+                "c7a5bdca777634d09b5e5591eba0bdf61e544a86ba34df2d27c0ce366f8610c8"
             ],
             "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
             "exampleSites": [
                 "ford.com",
                 "owner.ford.com",
-                "www.ford.com",
-                "www.ford.ca"
+                "www.ford.ca",
+                "www.ford.com"
             ]
         },
         {
             "rule": "trafficmanager\\.net\\/fps\\/api\\/personalization_1_8\\/get",
-            "cookies": 0.000207,
+            "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "fps-namer"
+                "fps-na-api-3"
             ],
             "apis": {},
             "sites": 3,
-            "prevalence": 0.00031,
+            "prevalence": 0.000306,
             "cnames": [
                 {
-                    "original": "na.fps.ford.com",
-                    "resolved": "fps-namer.trafficmanager.net"
+                    "original": "na.fps3.ford.com",
+                    "resolved": "fps-na-api-3.trafficmanager.net"
                 }
             ],
-            "responseHashes": [
-                "5b05e8bcebf19318581575049eb7c13d2e2d0143f5316bc3136175eb57ead44d"
-            ],
-            "type": "XHR",
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "gt_uid": 0.0001021659174499387
+            },
             "exampleSites": [
                 "ford.com",
-                "www.ford.com",
-                "www.ford.ca"
+                "www.ford.ca",
+                "www.ford.com"
             ]
         },
         {
-            "rule": "trafficmanager\\.net\\/api\\/Persistence\\/UpdateCookies\\/",
-            "cookies": 0.000207,
+            "rule": "trafficmanager\\.net\\/fps\\/api\\/personalization_1_8\\/get",
+            "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "transat-clientapi"
+                "fps-na-api-3"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000207,
+            "sites": 3,
+            "prevalence": 0.000306,
             "cnames": [
                 {
-                    "original": "clientapi.transat.com",
-                    "resolved": "transat-clientapi.trafficmanager.net"
-                },
-                {
-                    "original": "clientapi.airtransat.com",
-                    "resolved": "transat-clientapi.trafficmanager.net"
+                    "original": "na.fps3.ford.com",
+                    "resolved": "fps-na-api-3.trafficmanager.net"
                 }
             ],
             "responseHashes": [
-                "18f822fcba1e7923deefe8012e69b8a28aa679920ac860a9afb9e84bfb3abbc1"
+                "5b05e8bcebf19318581575049eb7c13d2e2d0143f5316bc3136175eb57ead44d",
+                "882d91de5bee05b82ec9960e606e8bb47a41f3d56967f82a80d4f9e7b2112b75"
             ],
-            "type": "Document",
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "gt_uid": 0.0001021659174499387
+            },
             "exampleSites": [
-                "airtransat.com",
-                "www.airtransat.com"
+                "ford.com",
+                "www.ford.ca",
+                "www.ford.com"
+            ]
+        },
+        {
+            "rule": "trafficmanager\\.net\\/\\.well-known\\/openid-configuration",
+            "cookies": 0.000409,
+            "fingerprinting": 0,
+            "subdomains": [
+                "realm"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000409,
+            "cnames": [
+                {
+                    "original": "realm.hearstnp.com",
+                    "resolved": "realm.trafficmanager.net"
+                }
+            ],
+            "responseHashes": [
+                "03bc90950a3cf3d2baae54d90e814b61d4066e0deec3a120d04f03b38c064f6b"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "chron.com",
+                "www.houstonchronicle.com",
+                "www.sfgate.com",
+                "www.sfchronicle.com"
+            ]
+        },
+        {
+            "rule": "trafficmanager\\.net\\/connect\\/authorize",
+            "cookies": 0.000409,
+            "fingerprinting": 0,
+            "subdomains": [
+                "realm"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000409,
+            "cnames": [
+                {
+                    "original": "realm.hearstnp.com",
+                    "resolved": "realm.trafficmanager.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "chron.com",
+                "www.houstonchronicle.com",
+                "www.sfgate.com",
+                "www.sfchronicle.com"
             ]
         }
     ],
@@ -157,10 +338,12 @@
         "cpu": 0,
         "cache": 0
     },
-    "cookies": 0.00114,
+    "cookies": 0.000613,
     "types": {
-        "Document": 6,
-        "XHR": 7
+        "Script": 2,
+        "XHR": 16,
+        "Preflight": 9,
+        "Document": 4
     },
     "nameservers": []
 }

@@ -7,14 +7,15 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.00124,
-    "sites": 12,
+    "prevalence": 0.00141,
+    "sites": 14,
     "subdomains": [
+        "cdn",
         "arduino-prod-cd-7d4guw5p2tbeio38.edge.tenants",
-        "tv2dk-prod-cd-hz8d8hls0zj1lkbj.edge.tv2dk",
+        "makermedia-cd-mz8mmiokurx5ls4h.edge.tenants",
         "newyorkmedia-cd-xglicwlvftem6afq.edge.tenants",
-        "native-prod-cd-yncplrbkvveyjcxu.edge.tenants.eu",
-        "natgeo-cd-2md8k4cqoq8hgxsu.edge.tenants"
+        "tv2dk-prod-cd-hz8d8hls0zj1lkbj.edge.tv2dk",
+        "native-prod-cd-yncplrbkvveyjcxu.edge.tenants.eu"
     ],
     "cnames": [
         {
@@ -26,12 +27,12 @@
             "resolved": "tv2dk-prod-cd-hz8d8hls0zj1lkbj.edge.tv2dk.auth0.com"
         },
         {
-            "original": "identity.nationalgeographic.com",
-            "resolved": "natgeo-cd-2md8k4cqoq8hgxsu.edge.tenants.auth0.com"
-        },
-        {
             "original": "login.arduino.cc",
             "resolved": "arduino-prod-cd-7d4guw5p2tbeio38.edge.tenants.auth0.com"
+        },
+        {
+            "original": "login.make.co",
+            "resolved": "makermedia-cd-mz8mmiokurx5ls4h.edge.tenants.auth0.com"
         },
         {
             "original": "login.nymag.com",
@@ -41,59 +42,88 @@
     "fingerprinting": 1,
     "resources": [
         {
+            "rule": "auth0\\.com\\/js\\/auth0\\/9\\.11\\/auth0\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.appName": 2,
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "2ae5aed8aab32ad79a23003eee65fec603ddbeed83b296ba4735ff840e12b005"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "polaris.com",
+                "uk.vwr.com"
+            ]
+        },
+        {
             "rule": "auth0\\.com\\/authorize",
-            "cookies": 0.000726,
+            "cookies": 0.000907,
             "fingerprinting": 0,
             "subdomains": [
                 "arduino-prod-cd-7d4guw5p2tbeio38.edge.tenants",
-                "tv2dk-prod-cd-hz8d8hls0zj1lkbj.edge.tv2dk",
+                "makermedia-cd-mz8mmiokurx5ls4h.edge.tenants",
                 "newyorkmedia-cd-xglicwlvftem6afq.edge.tenants",
-                "native-prod-cd-yncplrbkvveyjcxu.edge.tenants.eu",
-                "natgeo-cd-2md8k4cqoq8hgxsu.edge.tenants"
+                "tv2dk-prod-cd-hz8d8hls0zj1lkbj.edge.tv2dk",
+                "native-prod-cd-yncplrbkvveyjcxu.edge.tenants.eu"
             ],
             "apis": {},
             "sites": 9,
-            "prevalence": 0.000933,
+            "prevalence": 0.000907,
             "cnames": [
                 {
                     "original": "login.arduino.cc",
                     "resolved": "arduino-prod-cd-7d4guw5p2tbeio38.edge.tenants.auth0.com"
                 },
                 {
-                    "original": "auth.tv2.dk",
-                    "resolved": "tv2dk-prod-cd-hz8d8hls0zj1lkbj.edge.tv2dk.auth0.com"
+                    "original": "login.make.co",
+                    "resolved": "makermedia-cd-mz8mmiokurx5ls4h.edge.tenants.auth0.com"
                 },
                 {
                     "original": "login.nymag.com",
                     "resolved": "newyorkmedia-cd-xglicwlvftem6afq.edge.tenants.auth0.com"
                 },
                 {
-                    "original": "auth.native-instruments.com",
-                    "resolved": "native-prod-cd-yncplrbkvveyjcxu.edge.tenants.eu.auth0.com"
+                    "original": "auth.tv2.dk",
+                    "resolved": "tv2dk-prod-cd-hz8d8hls0zj1lkbj.edge.tv2dk.auth0.com"
                 },
                 {
-                    "original": "identity.nationalgeographic.com",
-                    "resolved": "natgeo-cd-2md8k4cqoq8hgxsu.edge.tenants.auth0.com"
+                    "original": "auth.native-instruments.com",
+                    "resolved": "native-prod-cd-yncplrbkvveyjcxu.edge.tenants.eu.auth0.com"
                 }
             ],
             "responseHashes": [
-                "4fb0c0faa703c7e50b90406c4267e50ded052fdfe0f9a3964d7d3fdfac2a5ae3",
+                "65c724dc6a3971833ca467837f026f65c026a70cac6fcb0c6915a52e5d25975f",
                 "26a35f36a69b8fe9df0aa7f2fca60f636598da6fde92efc58e7c60de2cd347d3",
-                "30912021da1539b467a016fb9f7c37c1ef6f120d724a1f181e5866c88020ac77",
-                "896be60661611134e893001eed6facb4c91b55d5c386482945ccee4f8a18be84",
-                "433b018c2db105c0f744733e7d88b926435619674207d9caeba3fb9934979e19",
+                "dfa41575c8be752ee5239179a52e469bea2287b168e4688e4916d5f715178755",
+                "37c47402959655209e6cc50aa9ed7fb3a0e6c8bf7563a55e3e647011b9352707",
+                "ff22b6700c46df9deee66bca53453f60d9b852ca4b7e92bb6d004bc373e6f2be",
+                "1ed2351e27c3fa002858d4b1d7f167e8caf37e1666030756981b46972db6ad26",
                 "8ec708153facc644902845a479011bb4c8e6ee50c800c4bfb008fec49f6ac2fe",
                 "082ff52536e0c353ef638c852fe56a606b393319d1afe0278887acdb2783bdfc"
             ],
             "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
             "exampleSites": [
                 "arduino.cc",
-                "nyheder.tv2.dk",
+                "makezine.com",
                 "nymag.com",
+                "nyheder.tv2.dk",
                 "sport.tv2.dk",
                 "tv2.dk",
                 "www.native-instruments.com",
-                "www.nationalgeographic.com",
                 "www.thecut.com",
                 "www.vulture.com"
             ]
@@ -106,9 +136,13 @@
         "cpu": 0,
         "cache": 1
     },
-    "cookies": 0.00083,
+    "cookies": 0.00101,
     "types": {
+        "Script": 2,
         "Document": 9
     },
-    "nameservers": []
+    "nameservers": [
+        "kolton.ns.cloudflare.com",
+        "monroe.ns.cloudflare.com"
+    ]
 }
