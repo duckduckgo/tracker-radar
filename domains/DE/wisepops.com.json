@@ -7,17 +7,19 @@
     "source": [
         "DuckDuckGo-DE"
     ],
-    "prevalence": 0.000621,
+    "prevalence": 0.000611,
     "sites": 6,
     "subdomains": [
-        "loader"
+        "loader",
+        "popup",
+        "tracking"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
         {
             "rule": "wisepops\\.com\\/get-loader\\.js",
-            "cookies": 0.000621,
+            "cookies": 0.000611,
             "fingerprinting": 1,
             "subdomains": [
                 "loader"
@@ -30,16 +32,37 @@
                 "Navigator.prototype.cookieEnabled": 6
             },
             "sites": 6,
-            "prevalence": 0.000621,
+            "prevalence": 0.000611,
             "cnames": [],
             "responseHashes": [
-                "a7f837a177fe810e1856b2f7133ebecf43d6fecded97719c895def8adadf2c3c",
-                "8131228c3eb06118c09d3af6c967f58c94399daf7c6142cef48e791a0131bb19",
-                "44ae182382a9581cdbfe5ae8ee0a6fd7420bbe6bea41dbcf1fc18d3cea3dbee6",
-                "77b155b46d3088c70df756f94ab3b4f494daede5064047b89a653d6ecef2e77d",
-                "5aaba892653e1f71524a42cb30f70d829519b4de2c718b626ec1110cdb796008"
+                "873a226ab1c12c68d84804fefe5879de623cfe880e3728d81e1cf83b376e1f93",
+                "69e86431576d0a6f46e3b98a508c7e49196b64c550ad6ce1ec5f12d52d041884",
+                "e7dbb6f0c6fcf1487c1688d133e0b70e3158328cc82c9c85e17333f427de74e4",
+                "2c28c07546c4a1a9d4f5e6a8bd767d3754c00cdfb17031d26cb328517afdf23e",
+                "3b7ae27e508a8e83fa35b160c73256f680b493ddf09de647594decdcdd0a397c"
             ],
             "type": "Script",
+            "firstPartyCookies": {
+                "wisepops": {
+                    "ttl": 63072006,
+                    "length": 197,
+                    "prevalence": 0.0005088022794342118,
+                    "uniqueness": 1
+                },
+                "wisepops_session": {
+                    "ttl": null,
+                    "length": 238,
+                    "prevalence": 0.0005088022794342118,
+                    "uniqueness": 1
+                },
+                "wisepops_visits": {
+                    "ttl": 63072004,
+                    "length": 40,
+                    "prevalence": 0.0005088022794342118,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
             "exampleSites": [
                 "bikeexchange.de",
                 "www.btc-echo.de",
@@ -47,6 +70,58 @@
                 "www.falstaff.de",
                 "www.purevpn.com",
                 "www.studyhelp.de"
+            ]
+        },
+        {
+            "rule": "wisepops\\.com\\/my-wisepop",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "popup"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000611,
+            "cnames": [],
+            "responseHashes": [
+                "8f7caff7cb9212cd6efff4ee6e187d357b8f3911603a43aa958e52acdcb1c12a",
+                "3cd94940627feb812f6b474f67a87cb196ab25a76e6b6caf6c10bfb330cd4c89",
+                "b45788937cb486ea705a8b1e2bb9ebcfa8f35e3608d53461394af726e7ebaea8",
+                "ca008b238cb2521eb40c258cc10932466442a92b0dc05fa2690226530f8a856d"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bikeexchange.de",
+                "www.btc-echo.de",
+                "www.dailywire.com",
+                "www.falstaff.de",
+                "www.purevpn.com",
+                "www.studyhelp.de"
+            ]
+        },
+        {
+            "rule": "wisepops\\.com\\/_\\.gif",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tracking"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000305,
+            "cnames": [],
+            "responseHashes": [
+                "ef1955ae757c8b966c83248350331bd3a30f658ced11f387f8ebf05ab3368629"
+            ],
+            "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dailywire.com",
+                "www.dailywire.com",
+                "www.falstaff.de"
             ]
         }
     ],
@@ -57,9 +132,11 @@
         "cpu": 1,
         "cache": 1
     },
-    "cookies": 0.000621,
+    "cookies": 0.000611,
     "types": {
-        "Script": 6
+        "Script": 6,
+        "XHR": 6,
+        "Other": 3
     },
     "nameservers": [
         "wally.ns.cloudflare.com",

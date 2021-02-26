@@ -4,10 +4,12 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000229,
+    "prevalence": 0.0000208,
     "sites": 3,
     "subdomains": [
-        "pcdn"
+        "pcdn",
+        "event",
+        "push"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -24,15 +26,62 @@
                 "window.localStorage": 2,
                 "Navigator.prototype.vendor": 2,
                 "Navigator.prototype.userAgent": 2,
-                "Navigator.prototype.storage": 2
+                "Navigator.prototype.storage": 1,
+                "Notification.permission": 2
             },
             "sites": 2,
-            "prevalence": 0.0000153,
+            "prevalence": 0.0000139,
             "cnames": [],
             "responseHashes": [
                 "9a2d600c721e377245d12ad573af73c4efaa4bf80410f9dfc6125cec93607db8"
             ],
             "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "n11.com",
+                "www.n11.com"
+            ]
+        },
+        {
+            "rule": "dengage\\.com\\/api\\/web\\/event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "event"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "n11.com",
+                "www.n11.com"
+            ]
+        },
+        {
+            "rule": "dengage\\.com\\/api\\/web\\/subscription",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "push"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "c1436f013d4e07095a5a4bb65ac418fb769a398e247f2224807b3ec41bae4fe0"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
             "exampleSites": [
                 "n11.com",
                 "www.n11.com"
@@ -43,7 +92,8 @@
     "performance": {},
     "cookies": 0,
     "types": {
-        "Script": 2
+        "Script": 2,
+        "Fetch": 4
     },
     "nameservers": [
         "ns-cloud-c2.googledomains.com",

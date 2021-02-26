@@ -7,18 +7,19 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.000516,
+    "prevalence": 0.000505,
     "sites": 5,
     "subdomains": [
         "admp-tc-euronews",
-        "admp-tc-sati"
+        "admp-tc-sati",
+        "code3"
     ],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "adtlgc\\.com\\/user",
-            "cookies": 0.000206,
+            "cookies": 0.000101,
             "fingerprinting": 0,
             "subdomains": [
                 "admp-tc-euronews",
@@ -26,17 +27,92 @@
             ],
             "apis": {},
             "sites": 4,
-            "prevalence": 0.000413,
+            "prevalence": 0.000404,
             "cnames": [],
             "responseHashes": [
                 "baee049272b23bef0a1a5f69bec303a844dc431d25607426aba9f49161e69be5"
             ],
             "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "evid_0070": 0.00020181634712411706
+            },
             "exampleSites": [
                 "euronews.com",
                 "m.adevarul.ro",
                 "www.digi24.ro",
                 "www.euronews.com"
+            ]
+        },
+        {
+            "rule": "adtlgc\\.com\\/js\\/sati_init\\.js",
+            "cookies": 0.000202,
+            "fingerprinting": 1,
+            "subdomains": [
+                "code3"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2,
+                "Navigator.prototype.appVersion": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "88690ede5d109d4a0b19e11f421b6e5bc5ccbbfb4578a88b5042aa25544bc764"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "evid_set_0046": {
+                    "ttl": 66,
+                    "length": 1,
+                    "prevalence": 0.00020181634712411706,
+                    "uniqueness": 0.5
+                },
+                "evid_0046": {
+                    "ttl": 7776006,
+                    "length": 41,
+                    "prevalence": 0.00020181634712411706,
+                    "uniqueness": 1
+                },
+                "adptset_0046": {
+                    "ttl": 7206,
+                    "length": 1,
+                    "prevalence": 0.00020181634712411706,
+                    "uniqueness": 0.5
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "adevarul.ro",
+                "www.digi24.ro"
+            ]
+        },
+        {
+            "rule": "adtlgc\\.com\\/event\\/v3\\/pagestat",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "admp-tc-sati"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "evid_0046": 0.00020181634712411706
+            },
+            "exampleSites": [
+                "adevarul.ro",
+                "www.digi24.ro"
             ]
         }
     ],
@@ -47,9 +123,10 @@
         "cpu": 0,
         "cache": 3
     },
-    "cookies": 0.000206,
+    "cookies": 0.000202,
     "types": {
-        "Script": 4
+        "Script": 6,
+        "XHR": 2
     },
     "nameservers": [
         "ns-943.awsdns-53.net",

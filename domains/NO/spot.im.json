@@ -4,30 +4,78 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000415,
+    "prevalence": 0.000403,
     "sites": 4,
     "subdomains": [
+        "direct-events-collector",
+        "publisher-assets",
         "events-collector",
-        "pix"
+        "pix",
+        "open-api"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
         {
+            "rule": "spot\\.im\\/api\\/v2\\/events",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "direct-events-collector"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dailywire.com",
+                "www.realclearpolitics.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/ad\\/event-tracking\\/pixel-ads-google-adsense\\.html",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "publisher-assets"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dailywire.com",
+                "www.dailywire.com",
+                "www.realclearpolitics.com"
+            ]
+        },
+        {
             "rule": "spot\\.im\\/api\\/v1\\/device_load",
-            "cookies": 0.000207,
+            "cookies": 0.000201,
             "fingerprinting": 0,
             "subdomains": [
                 "events-collector"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000207,
+            "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "08f831cdcaafaa16e097b7ecfbf9d19d94c174a2fb75e69c8f72b19e5936b077"
+                "a053d753f0a0c1d98bd8ee146a15e0bdae25333f372998a240667f73ee3b4dd1"
             ],
             "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
             "exampleSites": [
                 "dailywire.com",
                 "www.realclearpolitics.com"
@@ -35,20 +83,46 @@
         },
         {
             "rule": "spot\\.im\\/api\\/v1\\/pixels",
-            "cookies": 0.000207,
+            "cookies": 0.000201,
             "fingerprinting": 0,
             "subdomains": [
                 "pix"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000207,
+            "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
             "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
             "exampleSites": [
                 "dailywire.com",
                 "www.realclearpolitics.com"
+            ]
+        },
+        {
+            "rule": "spot\\.im\\/v1\\/messages-count",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "open-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "ab525447e402d88fa9882caceab62a7154a3756bbd6c899db4628f8750a670f1"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "the-sun.com",
+                "www.thesun.co.uk"
             ]
         }
     ],
@@ -59,15 +133,16 @@
         "cpu": 0,
         "cache": 1
     },
-    "cookies": 0.000207,
+    "cookies": 0.000201,
     "types": {
-        "Fetch": 2,
+        "XHR": 2,
+        "Fetch": 7,
         "Other": 2
     },
     "nameservers": [
-        "ns-2018.awsdns-60.co.uk",
-        "ns-34.awsdns-04.com",
         "ns-802.awsdns-36.net",
-        "ns-1202.awsdns-22.org"
+        "ns-1202.awsdns-22.org",
+        "ns-2018.awsdns-60.co.uk",
+        "ns-34.awsdns-04.com"
     ]
 }

@@ -7,7 +7,7 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.000419,
+    "prevalence": 0.000409,
     "sites": 4,
     "subdomains": [
         "cat-cdn",
@@ -27,12 +27,14 @@
                 "Navigator.prototype.userAgent": 1
             },
             "sites": 2,
-            "prevalence": 0.000209,
+            "prevalence": 0.000205,
             "cnames": [],
             "responseHashes": [
                 "ebb958774f0e1f6e2afe9a7e7e1ab93f017dd96ac53c9ac2379771a96c57db1c"
             ],
             "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
             "exampleSites": [
                 "catch.com.au",
                 "www.catch.com.au"
@@ -40,25 +42,33 @@
         },
         {
             "rule": "truefitcorp\\.com\\/fitrec\\/cat\\/js\\/tracker\\.js",
-            "cookies": 0.000105,
+            "cookies": 0.000102,
             "fingerprinting": 1,
             "subdomains": [
                 "cat-cdn"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 1,
-                "Document.cookie getter": 1,
-                "window.matchMedia(\"prefers-reduced-motion\")": 1,
-                "Date.prototype.getTime": 1,
+                "Navigator.prototype.userAgent": 2,
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 2,
                 "Document.cookie setter": 1
             },
             "sites": 2,
-            "prevalence": 0.000209,
+            "prevalence": 0.000205,
             "cnames": [],
             "responseHashes": [
                 "cb3f6d5723dd9563ef1d829d2208e1e1a42f806d1ea900a5ad2de7c612baea56"
             ],
             "type": "Script",
+            "firstPartyCookies": {
+                "tfc-l": {
+                    "ttl": 315360000,
+                    "length": 87,
+                    "prevalence": 0.00010230179028132993,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
             "exampleSites": [
                 "catch.com.au",
                 "www.catch.com.au"
@@ -66,24 +76,89 @@
         },
         {
             "rule": "truefitcorp\\.com\\/fitconfig",
-            "cookies": 0.000314,
+            "cookies": 0.000307,
             "fingerprinting": 0,
             "subdomains": [
                 "consumer"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000314,
+            "sites": 4,
+            "prevalence": 0.000409,
             "cnames": [],
             "responseHashes": [
-                "0a4e1a9442537fae7b6b42a0459c80eb01bbe826e28573ed5e3809f84bc8759f",
-                "1c9f0eb17a7710d0b58ab4d4e1dfcabfd0dd22598a1b95f72860eec1fc790e45"
+                "eb9ea1f5f57ce8a00fa31bd85579bd9aa0c67420466b2acaafd14651ba2f4594",
+                "d8bacaf8ae6c2caeaf326e63e6bc054f44d50033ab5311330944b7e3db66b451"
             ],
             "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
             "exampleSites": [
                 "catch.com.au",
+                "www.catch.com.au",
                 "www.myer.com.au",
                 "www.review-australia.com"
+            ]
+        },
+        {
+            "rule": "truefitcorp\\.com\\/profile\\/public\\/v2\\/cat\\/token",
+            "cookies": 0.000205,
+            "fingerprinting": 0,
+            "subdomains": [
+                "consumer"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000205,
+            "cnames": [],
+            "responseHashes": [
+                "e60e17a413bc3cfbb4a4cb2a4b42277a701f1a5b9d9d830904610ae51fae9582"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "catch.com.au",
+                "www.catch.com.au"
+            ]
+        },
+        {
+            "rule": "truefitcorp\\.com\\/profile\\/public\\/v2\\/cat\\/analytics\\/tracking",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "consumer"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000205,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "catch.com.au",
+                "www.catch.com.au"
+            ]
+        },
+        {
+            "rule": "truefitcorp\\.com\\/profile\\/public\\/v2\\/cat\\/analytics\\/tracking",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "consumer"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000205,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "catch.com.au",
+                "www.catch.com.au"
             ]
         }
     ],
@@ -98,9 +173,11 @@
         "cpu": 0,
         "cache": 1
     },
-    "cookies": 0.000314,
+    "cookies": 0.000409,
     "types": {
-        "Script": 7
+        "Script": 8,
+        "XHR": 4,
+        "Other": 2
     },
     "nameservers": [
         "ns-553.awsdns-05.net",

@@ -7,17 +7,18 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000535,
-    "sites": 7,
+    "prevalence": 0.0000556,
+    "sites": 8,
     "subdomains": [
-        "cdn.esales"
+        "cdn.esales",
+        "api.esales"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
         {
             "rule": "apptus\\.com\\/api\\/apptus-esales-api-2\\.2\\.0\\.js",
-            "cookies": 0.00000764,
+            "cookies": 0.00000695,
             "fingerprinting": 1,
             "subdomains": [
                 "cdn.esales"
@@ -29,12 +30,27 @@
                 "Document.cookie setter": 1
             },
             "sites": 2,
-            "prevalence": 0.0000153,
+            "prevalence": 0.0000139,
             "cnames": [],
             "responseHashes": [
                 "6d5045335fe4ddc9bf4621e5fae309e90a0022b12daff83174c236ab0874e154"
             ],
             "type": "Script",
+            "firstPartyCookies": {
+                "apptus.customerKey": {
+                    "ttl": 31536037,
+                    "length": 36,
+                    "prevalence": 0.000006945650286508075,
+                    "uniqueness": 1
+                },
+                "apptus.sessionKey": {
+                    "ttl": null,
+                    "length": 36,
+                    "prevalence": 0.000006945650286508075,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
             "exampleSites": [
                 "fortnumandmason.com",
                 "www.fortnumandmason.com"
@@ -42,7 +58,7 @@
         },
         {
             "rule": "apptus\\.com\\/inject\\/apptus-esales-injection-w9E05D815\\.js",
-            "cookies": 0.0000229,
+            "cookies": 0.0000208,
             "fingerprinting": 1,
             "subdomains": [
                 "cdn.esales"
@@ -55,16 +71,103 @@
                 "Navigator.prototype.userAgent": 1
             },
             "sites": 3,
-            "prevalence": 0.0000229,
+            "prevalence": 0.0000208,
             "cnames": [],
             "responseHashes": [
-                "cc5a7ac972b827658f605691d1a9bfda6300f8ad54bc98e01042b1f672c0ff19"
+                "cc0a63e1848604b76f87ec543937f89a2eddd76e1e478967578df11ea90679e7"
             ],
             "type": "Script",
+            "firstPartyCookies": {
+                "apptus.sessionKey": {
+                    "ttl": null,
+                    "length": 36,
+                    "prevalence": 0.000020836950859524224,
+                    "uniqueness": 1
+                },
+                "apptus.customerKey": {
+                    "ttl": 31536001,
+                    "length": 36,
+                    "prevalence": 0.000020836950859524224,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
             "exampleSites": [
                 "jula.no",
-                "www.jula.se",
-                "www.jula.no"
+                "www.jula.no",
+                "www.jula.se"
+            ]
+        },
+        {
+            "rule": "apptus\\.com\\/clusters\\/w9E05D815\\/dynamic-pages\\/START",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api.esales"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "apptus.sessionKey": 0.00001389130057301615,
+                "apptus.customerKey": 0.00001389130057301615
+            },
+            "exampleSites": [
+                "jula.no",
+                "www.jula.se"
+            ]
+        },
+        {
+            "rule": "apptus\\.com\\/clusters\\/w9E05D815\\/dynamic-pages\\/START",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api.esales"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "f49c8db4aea226518bb4cfddc710f260a8e9822a62bc4728d097509fa5d77949"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "apptus.sessionKey": 0.00001389130057301615,
+                "apptus.customerKey": 0.00001389130057301615
+            },
+            "exampleSites": [
+                "jula.no",
+                "www.jula.se"
+            ]
+        },
+        {
+            "rule": "apptus\\.com\\/api\\/apptus-esales-api-1\\.2\\.3\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn.esales"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "464f574315e8eab283a8f067d0b0c5819c720d3ee695b6c52f0ccc6d223a0b68"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "studio.co.uk",
+                "www.studio.co.uk"
             ]
         }
     ],
@@ -75,14 +178,16 @@
         "cpu": 0,
         "cache": 0
     },
-    "cookies": 0.0000382,
+    "cookies": 0.0000347,
     "types": {
-        "Script": 5
+        "Script": 7,
+        "Preflight": 2,
+        "XHR": 2
     },
     "nameservers": [
         "ns2.inbranddns.com",
-        "ns4.inbranddns.com",
+        "ns3.inbranddns.com",
         "ns1.inbranddns.com",
-        "ns3.inbranddns.com"
+        "ns4.inbranddns.com"
     ]
 }

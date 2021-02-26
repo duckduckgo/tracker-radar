@@ -9,16 +9,27 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.000474,
-    "sites": 62,
+    "prevalence": 0.000306,
+    "sites": 44,
     "subdomains": [
         "js.monitor",
+        "westeurope-0.in.applicationinsights",
+        "eastus2-0.in.applicationinsights",
+        "uasapiprod.northeurope.cloudapp",
         "innss.westeurope.cloudapp",
+        "dxf-smart-home-waf.westeurope.cloudapp",
         "prd-sc-eu2-appg-pip.eastus2.cloudapp",
+        "wafweblaliga.westeurope.cloudapp",
         "prodsolb.eastus.cloudapp",
-        "premera.westus2.cloudapp"
+        "dkazr-prd-livechat.eastus2.cloudapp",
+        "premera.westus2.cloudapp",
+        "pphtalk.eastus.cloudapp"
     ],
     "cnames": [
+        {
+            "original": "apim.laliga.com",
+            "resolved": "wafweblaliga.westeurope.cloudapp.azure.com"
+        },
         {
             "original": "eubanner.honeywellhome.com",
             "resolved": "prd-sc-eu2-appg-pip.eastus2.cloudapp.azure.com"
@@ -28,57 +39,163 @@
             "resolved": "innss.westeurope.cloudapp.azure.com"
         },
         {
+            "original": "livechat.niddk.nih.gov",
+            "resolved": "dkazr-prd-livechat.eastus2.cloudapp.azure.com"
+        },
+        {
             "original": "member-edge.premera.com",
             "resolved": "premera.westus2.cloudapp.azure.com"
         },
         {
+            "original": "services.bosch-smarthome.com",
+            "resolved": "dxf-smart-home-waf.westeurope.cloudapp.azure.com"
+        },
+        {
             "original": "store.ltw.org",
             "resolved": "prodsolb.eastus.cloudapp.azure.com"
+        },
+        {
+            "original": "talk.pressherald.com",
+            "resolved": "pphtalk.eastus.cloudapp.azure.com"
+        },
+        {
+            "original": "uas.services.ucp.kaspersky-labs.com",
+            "resolved": "uasapiprod.northeurope.cloudapp.azure.com"
         }
     ],
     "fingerprinting": 1,
     "resources": [
         {
             "rule": "azure\\.com\\/scripts\\/b\\/ai\\.2\\.min\\.js",
-            "cookies": 0.0000306,
+            "cookies": 0.0000347,
             "fingerprinting": 1,
             "subdomains": [
                 "js.monitor"
             ],
             "apis": {
-                "window.sessionStorage": 5,
-                "Document.cookie getter": 4,
-                "Date.prototype.getTime": 5,
-                "Navigator.prototype.userAgent": 5,
-                "Document.cookie setter": 4,
-                "window.localStorage": 5,
-                "PerformanceTiming.prototype.navigationStart": 5
+                "window.sessionStorage": 6,
+                "Document.cookie getter": 5,
+                "Date.prototype.getTime": 6,
+                "Navigator.prototype.userAgent": 6,
+                "Document.cookie setter": 5,
+                "window.localStorage": 6,
+                "PerformanceTiming.prototype.navigationStart": 6
             },
-            "sites": 5,
-            "prevalence": 0.0000382,
+            "sites": 6,
+            "prevalence": 0.0000417,
             "cnames": [],
             "responseHashes": [
-                "9dbbe78a9fe127367c7859fe6c87cb7728a134047bb9e56bd7c180408110bfda"
+                "2f4e3e28aeb435afc9528382b79d0ddc2a19cd3485998874b7d9ed502f8fd9c9"
             ],
             "type": "Script",
+            "firstPartyCookies": {
+                "ai_user": {
+                    "ttl": 31536001,
+                    "length": 47,
+                    "prevalence": 0.0000277826011460323,
+                    "uniqueness": 1
+                },
+                "ai_session": {
+                    "ttl": 1801,
+                    "length": 50,
+                    "prevalence": 0.00003472825143254037,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
             "exampleSites": [
                 "usnews.com",
                 "bestlawfirms.usnews.com",
                 "lawyers.usnews.com",
                 "www.bestlawyers.com",
-                "www.salahtimes.com"
+                "www.salahtimes.com",
+                "www.skiforeningen.no"
+            ]
+        },
+        {
+            "rule": "azure\\.com\\/\\/v2\\/track",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "westeurope-0.in.applicationinsights",
+                "eastus2-0.in.applicationinsights"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000208,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nederlandseloterij.nl",
+                "eurojackpot.nederlandseloterij.nl",
+                "www.tu10conmodelo.cl"
+            ]
+        },
+        {
+            "rule": "azure\\.com\\/\\/v2\\/track",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "westeurope-0.in.applicationinsights",
+                "eastus2-0.in.applicationinsights"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000208,
+            "cnames": [],
+            "responseHashes": [
+                "513fa9efcd57db663d3a04059d0e6758f2c0b42d54082c3353a8340cdb41effa",
+                "2d4e6fc4cc086cf99949cb1d9c45ece2336d1a1b457fe7eb3136377bdf285aa2"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nederlandseloterij.nl",
+                "eurojackpot.nederlandseloterij.nl",
+                "www.tu10conmodelo.cl"
+            ]
+        },
+        {
+            "rule": "azure\\.com\\/portal-api\\/v1\\/agreements",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "uasapiprod.northeurope.cloudapp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [
+                {
+                    "original": "uas.services.ucp.kaspersky-labs.com",
+                    "resolved": "uasapiprod.northeurope.cloudapp.azure.com"
+                }
+            ],
+            "responseHashes": [
+                "9208ef73c23a916ef9b9904a349122594c799907c606699383e61b4c4fce9efa"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kaspersky.com",
+                "my.kaspersky.com"
             ]
         },
         {
             "rule": "azure\\.com\\/core\\/nonstandard\\/opsession",
-            "cookies": 0.0000153,
+            "cookies": 0.0000139,
             "fingerprinting": 0,
             "subdomains": [
                 "innss.westeurope.cloudapp"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000153,
+            "prevalence": 0.0000139,
             "cnames": [
                 {
                     "original": "innlogging.nrk.no",
@@ -89,21 +206,50 @@
                 "9a2e62c6ab9e7143c6c9b9e2460720e3168a76a913ed761da1ae711ce65611a1"
             ],
             "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
             "exampleSites": [
                 "nrk.no",
                 "tv.nrk.no"
             ]
         },
         {
+            "rule": "azure\\.com\\/metasearch\\/home-metasearch\\/targetsystems",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dxf-smart-home-waf.westeurope.cloudapp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [
+                {
+                    "original": "services.bosch-smarthome.com",
+                    "resolved": "dxf-smart-home-waf.westeurope.cloudapp.azure.com"
+                }
+            ],
+            "responseHashes": [
+                "acb304c1fb852b5ebaa6cc1abb2a975500dc46537aff792379ec4a6eaafbc60a"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bosch-smarthome.com",
+                "www.bosch-smarthome.com"
+            ]
+        },
+        {
             "rule": "azure\\.com\\/api\\/BannerText\\/en-US",
-            "cookies": 0.0000153,
+            "cookies": 0.0000139,
             "fingerprinting": 0,
             "subdomains": [
                 "prd-sc-eu2-appg-pip.eastus2.cloudapp"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000153,
+            "prevalence": 0.0000139,
             "cnames": [
                 {
                     "original": "eubanner.honeywellhome.com",
@@ -114,21 +260,75 @@
                 "3ddcf7fbf4c945724549d54265bf41cc6708dab606a24806f541ad4d3e7a4215"
             ],
             "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
             "exampleSites": [
                 "honeywellhome.com",
                 "www.honeywellhome.com"
             ]
         },
         {
+            "rule": "azure\\.com\\/public-service\\/api\\/v1\\/news",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "wafweblaliga.westeurope.cloudapp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [
+                {
+                    "original": "apim.laliga.com",
+                    "resolved": "wafweblaliga.westeurope.cloudapp.azure.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "laliga.com",
+                "www.laliga.com"
+            ]
+        },
+        {
+            "rule": "azure\\.com\\/public-service\\/api\\/v1\\/news",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "wafweblaliga.westeurope.cloudapp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [
+                {
+                    "original": "apim.laliga.com",
+                    "resolved": "wafweblaliga.westeurope.cloudapp.azure.com"
+                }
+            ],
+            "responseHashes": [
+                "753f01b34470fede2c5f48643428893385b0e8c2b3aaca7f1ef280133c9adc94"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "laliga.com",
+                "www.laliga.com"
+            ]
+        },
+        {
             "rule": "azure\\.com\\/SubscribeWidgetPage\\.aspx",
-            "cookies": 0.0000153,
+            "cookies": 0.0000139,
             "fingerprinting": 0,
             "subdomains": [
                 "prodsolb.eastus.cloudapp"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000153,
+            "prevalence": 0.0000139,
             "cnames": [
                 {
                     "original": "store.ltw.org",
@@ -136,9 +336,173 @@
                 }
             ],
             "responseHashes": [
-                "98fa5391ea5f15b5fea3c463ecc0d8ed54a2c4924467fa9711ebe20524d30f50"
+                "8e181e3483a3805b5e0982ada0ded7a80be2d68fe6970014a3771d63b6849433"
             ],
             "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ltw.org",
+                "www.ltw.org"
+            ]
+        },
+        {
+            "rule": "azure\\.com\\/jquery\\/jquery-3\\.0\\.0\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prodsolb.eastus.cloudapp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [
+                {
+                    "original": "store.ltw.org",
+                    "resolved": "prodsolb.eastus.cloudapp.azure.com"
+                }
+            ],
+            "responseHashes": [
+                "e501eec858d2e8b2ce3899af73c97efcbc24c1ef53c7b902b51094bb7b4f76a5"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ltw.org",
+                "www.ltw.org"
+            ]
+        },
+        {
+            "rule": "azure\\.com\\/jquery\\/jquery-migrate-1\\.4\\.1\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "prodsolb.eastus.cloudapp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [
+                {
+                    "original": "store.ltw.org",
+                    "resolved": "prodsolb.eastus.cloudapp.azure.com"
+                }
+            ],
+            "responseHashes": [
+                "c68a880944aa03082e88bbe6c7df7747ee45f506fa777e76fb41709a0ba5a935"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ltw.org",
+                "www.ltw.org"
+            ]
+        },
+        {
+            "rule": "azure\\.com\\/jscripts\\/formvalidate\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prodsolb.eastus.cloudapp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [
+                {
+                    "original": "store.ltw.org",
+                    "resolved": "prodsolb.eastus.cloudapp.azure.com"
+                }
+            ],
+            "responseHashes": [
+                "37725139d83a6f5ab2deee460f645c0b015f7f5af9a10756eb347e8af87ff9b4"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ltw.org",
+                "www.ltw.org"
+            ]
+        },
+        {
+            "rule": "azure\\.com\\/jscripts\\/core\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prodsolb.eastus.cloudapp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [
+                {
+                    "original": "store.ltw.org",
+                    "resolved": "prodsolb.eastus.cloudapp.azure.com"
+                }
+            ],
+            "responseHashes": [
+                "20bae7567e224a9761017824c6447f403e7f71b25aa4a2d266b06096d246f43a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ltw.org",
+                "www.ltw.org"
+            ]
+        },
+        {
+            "rule": "azure\\.com\\/jscripts\\/date\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prodsolb.eastus.cloudapp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [
+                {
+                    "original": "store.ltw.org",
+                    "resolved": "prodsolb.eastus.cloudapp.azure.com"
+                }
+            ],
+            "responseHashes": [
+                "22572f365f1014e30cb5674e5e274e35bc58f8df37a3b663bf0433891b7d0108"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ltw.org",
+                "www.ltw.org"
+            ]
+        },
+        {
+            "rule": "azure\\.com\\/jquery\\/plugins\\/jquery\\.studioonline\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prodsolb.eastus.cloudapp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [
+                {
+                    "original": "store.ltw.org",
+                    "resolved": "prodsolb.eastus.cloudapp.azure.com"
+                }
+            ],
+            "responseHashes": [
+                "beff62d394d20669cc58415d9f9e9d24ecb2c934d0a59b86436fb93931008377"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
             "exampleSites": [
                 "ltw.org",
                 "www.ltw.org"
@@ -153,7 +517,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000153,
+            "prevalence": 0.0000139,
             "cnames": [
                 {
                     "original": "store.ltw.org",
@@ -164,6 +528,35 @@
                 "28ce75d953678c4942df47a11707a15e3c756021cf89090e3e6aa7ad6b6971c3"
             ],
             "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ltw.org",
+                "www.ltw.org"
+            ]
+        },
+        {
+            "rule": "azure\\.com\\/jquery\\/plugins\\/jquery\\.mask\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prodsolb.eastus.cloudapp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [
+                {
+                    "original": "store.ltw.org",
+                    "resolved": "prodsolb.eastus.cloudapp.azure.com"
+                }
+            ],
+            "responseHashes": [
+                "fe908cd3da779542f6d46d2c1342085a1faca88743a2765c2fbcf79f3ea51f73"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
             "exampleSites": [
                 "ltw.org",
                 "www.ltw.org"
@@ -178,7 +571,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000153,
+            "prevalence": 0.0000139,
             "cnames": [
                 {
                     "original": "store.ltw.org",
@@ -189,6 +582,170 @@
                 "cd2dbebc6cbfe0e5dbd04302e446497ba08c615f30ff8d4f5a8d7ed4e9c000df"
             ],
             "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ltw.org",
+                "www.ltw.org"
+            ]
+        },
+        {
+            "rule": "azure\\.com\\/jquery\\/plugins\\/jquery\\.pagination\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prodsolb.eastus.cloudapp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [
+                {
+                    "original": "store.ltw.org",
+                    "resolved": "prodsolb.eastus.cloudapp.azure.com"
+                }
+            ],
+            "responseHashes": [
+                "dc690e6fe3086b952f8c66a48d0ef85b54b1966ad38a62e7b2a567fdce025a3e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ltw.org",
+                "www.ltw.org"
+            ]
+        },
+        {
+            "rule": "azure\\.com\\/jquery\\/plugins\\/jquery\\.watermark\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prodsolb.eastus.cloudapp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [
+                {
+                    "original": "store.ltw.org",
+                    "resolved": "prodsolb.eastus.cloudapp.azure.com"
+                }
+            ],
+            "responseHashes": [
+                "9b8645f91233dc768f443504dd7d0d739acbea2179ce029fc64c2d91bf07eb3d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ltw.org",
+                "www.ltw.org"
+            ]
+        },
+        {
+            "rule": "azure\\.com\\/jquery\\/plugins\\/jquery\\.linq\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prodsolb.eastus.cloudapp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [
+                {
+                    "original": "store.ltw.org",
+                    "resolved": "prodsolb.eastus.cloudapp.azure.com"
+                }
+            ],
+            "responseHashes": [
+                "75caead04980b830c69a6ac24042b37e570c89e89c387380b440f8eb3a6ddfae"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ltw.org",
+                "www.ltw.org"
+            ]
+        },
+        {
+            "rule": "azure\\.com\\/jquery\\/plugins\\/jquery\\.creditCardValidator\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prodsolb.eastus.cloudapp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [
+                {
+                    "original": "store.ltw.org",
+                    "resolved": "prodsolb.eastus.cloudapp.azure.com"
+                }
+            ],
+            "responseHashes": [
+                "9a7b46a5fe72cce1b0b06ef9883e9f6d06b38e3b08c76a00c6a368b514c43e04"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ltw.org",
+                "www.ltw.org"
+            ]
+        },
+        {
+            "rule": "azure\\.com\\/jquery\\/plugins\\/accounting\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prodsolb.eastus.cloudapp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [
+                {
+                    "original": "store.ltw.org",
+                    "resolved": "prodsolb.eastus.cloudapp.azure.com"
+                }
+            ],
+            "responseHashes": [
+                "1b1589c7a7e1338b07b9164daf283dd9f7cb658cba9752c2e872b813d3b7e5e4"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ltw.org",
+                "www.ltw.org"
+            ]
+        },
+        {
+            "rule": "azure\\.com\\/jquery\\/plugins\\/jquery\\.blockUI\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "prodsolb.eastus.cloudapp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [
+                {
+                    "original": "store.ltw.org",
+                    "resolved": "prodsolb.eastus.cloudapp.azure.com"
+                }
+            ],
+            "responseHashes": [
+                "7cf61ac49db51c71cc2075931783858316d7e1df8806fd6fa0136a01e8ccb81b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
             "exampleSites": [
                 "ltw.org",
                 "www.ltw.org"
@@ -203,7 +760,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000153,
+            "prevalence": 0.0000139,
             "cnames": [
                 {
                     "original": "store.ltw.org",
@@ -214,6 +771,305 @@
                 "c65a976b8bfc5f43567fdf624f69389bc2ceb7712d6d798fa983f6d225b69704"
             ],
             "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ltw.org",
+                "www.ltw.org"
+            ]
+        },
+        {
+            "rule": "azure\\.com\\/scripts\\/animations\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prodsolb.eastus.cloudapp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [
+                {
+                    "original": "store.ltw.org",
+                    "resolved": "prodsolb.eastus.cloudapp.azure.com"
+                }
+            ],
+            "responseHashes": [
+                "dc2795d43cdbdcb0dc9fcb3efb00cdca10039090f69792a5034606c607f2b424"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ltw.org",
+                "www.ltw.org"
+            ]
+        },
+        {
+            "rule": "azure\\.com\\/jquery\\/jquery-ui-1\\.12\\.1\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prodsolb.eastus.cloudapp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [
+                {
+                    "original": "store.ltw.org",
+                    "resolved": "prodsolb.eastus.cloudapp.azure.com"
+                }
+            ],
+            "responseHashes": [
+                "a7ac54f58ba507b13621ceb6fcf5fe879f5ac9bdcf049d16153110c6ad048c7c"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ltw.org",
+                "www.ltw.org"
+            ]
+        },
+        {
+            "rule": "azure\\.com\\/jquery\\/jquery-ui\\.override\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prodsolb.eastus.cloudapp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [
+                {
+                    "original": "store.ltw.org",
+                    "resolved": "prodsolb.eastus.cloudapp.azure.com"
+                }
+            ],
+            "responseHashes": [
+                "a888aed09a9b709648042e3e0fcc2d99ce68278eca06c0e394004ab9c017e7f6"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ltw.org",
+                "www.ltw.org"
+            ]
+        },
+        {
+            "rule": "azure\\.com\\/jquery\\/plugins\\/jquery\\.qtip\\.min\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prodsolb.eastus.cloudapp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [
+                {
+                    "original": "store.ltw.org",
+                    "resolved": "prodsolb.eastus.cloudapp.azure.com"
+                }
+            ],
+            "responseHashes": [
+                "52f72d7e7e72d2ce6c1cb238fa471a45f68a642b4bafbf4148092535cfd8a813"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ltw.org",
+                "www.ltw.org"
+            ]
+        },
+        {
+            "rule": "azure\\.com\\/includes\\/slider\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prodsolb.eastus.cloudapp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [
+                {
+                    "original": "store.ltw.org",
+                    "resolved": "prodsolb.eastus.cloudapp.azure.com"
+                }
+            ],
+            "responseHashes": [
+                "92e905fb79aec047f90a53cc026874afbeaa994c807449c94456a6f6affe5883"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ltw.org",
+                "www.ltw.org"
+            ]
+        },
+        {
+            "rule": "azure\\.com\\/includes\\/so-progress-indicator\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prodsolb.eastus.cloudapp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [
+                {
+                    "original": "store.ltw.org",
+                    "resolved": "prodsolb.eastus.cloudapp.azure.com"
+                }
+            ],
+            "responseHashes": [
+                "7485ed632d4271e9ed5f59bae0f20ddea509e124f859aa13e8db3dddcde7a1ea"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ltw.org",
+                "www.ltw.org"
+            ]
+        },
+        {
+            "rule": "azure\\.com\\/includes\\/so-style-childSponsorship\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prodsolb.eastus.cloudapp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [
+                {
+                    "original": "store.ltw.org",
+                    "resolved": "prodsolb.eastus.cloudapp.azure.com"
+                }
+            ],
+            "responseHashes": [
+                "46ec6f1627ccc03351d11d3e8a31457348955e1f55bb9b401f8f9ffd7f21dc29"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ltw.org",
+                "www.ltw.org"
+            ]
+        },
+        {
+            "rule": "azure\\.com\\/includes\\/z-so-style\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prodsolb.eastus.cloudapp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [
+                {
+                    "original": "store.ltw.org",
+                    "resolved": "prodsolb.eastus.cloudapp.azure.com"
+                }
+            ],
+            "responseHashes": [
+                "a34b0ca577fa5680ed4171aef07820d5aa90321435944919322e2f863063e7c9"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ltw.org",
+                "www.ltw.org"
+            ]
+        },
+        {
+            "rule": "azure\\.com\\/App_Themes\\/Skin_1\\/z-ltw-style\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prodsolb.eastus.cloudapp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [
+                {
+                    "original": "store.ltw.org",
+                    "resolved": "prodsolb.eastus.cloudapp.azure.com"
+                }
+            ],
+            "responseHashes": [
+                "d4306d6208c8e1c008bd113b7bf411641b6841552cb761f5ac3fd7d5e2eba1cb"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ltw.org",
+                "www.ltw.org"
+            ]
+        },
+        {
+            "rule": "azure\\.com\\/App_Themes\\/Skin_1\\/zz-ltw-style\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prodsolb.eastus.cloudapp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [
+                {
+                    "original": "store.ltw.org",
+                    "resolved": "prodsolb.eastus.cloudapp.azure.com"
+                }
+            ],
+            "responseHashes": [
+                "e24b0f4178a35dfff2782f7313bf5372996ac236a5586086a24d7402ec12d8ee"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ltw.org",
+                "www.ltw.org"
+            ]
+        },
+        {
+            "rule": "azure\\.com\\/App_Themes\\/Skin_1\\/zzz-ltw-style\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prodsolb.eastus.cloudapp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [
+                {
+                    "original": "store.ltw.org",
+                    "resolved": "prodsolb.eastus.cloudapp.azure.com"
+                }
+            ],
+            "responseHashes": [
+                "8a8e76fc55ed93b420f3470400eee772eb10c6073752ba653541ac3f367853d2"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
             "exampleSites": [
                 "ltw.org",
                 "www.ltw.org"
@@ -228,7 +1084,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000153,
+            "prevalence": 0.0000139,
             "cnames": [
                 {
                     "original": "store.ltw.org",
@@ -239,6 +1095,8 @@
                 "40732e9dcfa704cf615e4691bb07aecfd1cc5e063220a46e4a7ff6560c77f5db"
             ],
             "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
             "exampleSites": [
                 "ltw.org",
                 "www.ltw.org"
@@ -253,7 +1111,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000153,
+            "prevalence": 0.0000139,
             "cnames": [
                 {
                     "original": "store.ltw.org",
@@ -264,21 +1122,320 @@
                 "398cdf1b27ef247e5bc77805f266bb441e60355463fc3d1776f41aae58b08cf1"
             ],
             "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
             "exampleSites": [
                 "ltw.org",
                 "www.ltw.org"
             ]
         },
         {
+            "rule": "azure\\.com\\/App_Themes\\/Skin_1\\/images\\/mail\\.gif",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prodsolb.eastus.cloudapp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [
+                {
+                    "original": "store.ltw.org",
+                    "resolved": "prodsolb.eastus.cloudapp.azure.com"
+                }
+            ],
+            "responseHashes": [
+                "b19206315c1a3980ae17c67c0fcc3a6613d57b7924526df81f0c901563febdb2"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ltw.org",
+                "www.ltw.org"
+            ]
+        },
+        {
+            "rule": "azure\\.com\\/App_Themes\\/Skin_1\\/webfonts\\/Fonts\\/scalasanswebpro-bold-webfont\\.woff2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prodsolb.eastus.cloudapp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [
+                {
+                    "original": "store.ltw.org",
+                    "resolved": "prodsolb.eastus.cloudapp.azure.com"
+                }
+            ],
+            "responseHashes": [
+                "91245edc05b343585ea887e3c0f15caebe03dd38dd382d69868a450a2ae432c9"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ltw.org",
+                "www.ltw.org"
+            ]
+        },
+        {
+            "rule": "azure\\.com\\/App_Themes\\/Skin_1\\/webfonts\\/Fonts\\/5cf4946d-aae7-4079-93b3-ac9452752a62\\.woff2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prodsolb.eastus.cloudapp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [
+                {
+                    "original": "store.ltw.org",
+                    "resolved": "prodsolb.eastus.cloudapp.azure.com"
+                }
+            ],
+            "responseHashes": [
+                "a90f324955f0f7efec7e7988c3998930b1eba379a2bb54f5b5269f624c444a6e"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ltw.org",
+                "www.ltw.org"
+            ]
+        },
+        {
+            "rule": "azure\\.com\\/App_Themes\\/Skin_1\\/webfonts\\/Fonts\\/scalasanswebpro-webfont\\.woff2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prodsolb.eastus.cloudapp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [
+                {
+                    "original": "store.ltw.org",
+                    "resolved": "prodsolb.eastus.cloudapp.azure.com"
+                }
+            ],
+            "responseHashes": [
+                "580498b59b5e4f9f5c0eaf809060cf6ca64586c4bb25eb3758c5fc8a893e018e"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ltw.org",
+                "www.ltw.org"
+            ]
+        },
+        {
+            "rule": "azure\\.com\\/App_Themes\\/Skin_1\\/webfonts\\/Fonts\\/af745fda-4cc8-4904-8641-070dcaf1b5ab\\.woff2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prodsolb.eastus.cloudapp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [
+                {
+                    "original": "store.ltw.org",
+                    "resolved": "prodsolb.eastus.cloudapp.azure.com"
+                }
+            ],
+            "responseHashes": [
+                "80e27033b2622277fde06750b006b64052c0d700c47cd9ed49c0cabe044f92bf"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ltw.org",
+                "www.ltw.org"
+            ]
+        },
+        {
+            "rule": "azure\\.com\\/ClientScriptHelper\\.asmx\\/MediaIDByZipCountry",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prodsolb.eastus.cloudapp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [
+                {
+                    "original": "store.ltw.org",
+                    "resolved": "prodsolb.eastus.cloudapp.azure.com"
+                }
+            ],
+            "responseHashes": [
+                "44f3cd95e6258fb77923c2c80a2a9f555dce2f9c20edd24bfb3c3c72477f49a4"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ltw.org",
+                "www.ltw.org"
+            ]
+        },
+        {
+            "rule": "azure\\.com\\/chatbeacon\\/NIDDK\\/1\\/scripts\\/chatbeacon\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "dkazr-prd-livechat.eastus2.cloudapp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [
+                {
+                    "original": "livechat.niddk.nih.gov",
+                    "resolved": "dkazr-prd-livechat.eastus2.cloudapp.azure.com"
+                }
+            ],
+            "responseHashes": [
+                "fa2ac6c754af09a3bf10c96edca46b64d491160c4bfdc499c4b00b8fdc2e91b5"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nih.gov",
+                "www.niddk.nih.gov"
+            ]
+        },
+        {
+            "rule": "azure\\.com\\/chatbeacon\\/NIDDK\\/1\\/scripts\\/main\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "dkazr-prd-livechat.eastus2.cloudapp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [
+                {
+                    "original": "livechat.niddk.nih.gov",
+                    "resolved": "dkazr-prd-livechat.eastus2.cloudapp.azure.com"
+                }
+            ],
+            "responseHashes": [
+                "bffe96f58f7a96ab47b87d2ec78f6524e31da0933385da076790b2209f19ab36"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nih.gov",
+                "www.niddk.nih.gov"
+            ]
+        },
+        {
+            "rule": "azure\\.com\\/chatbeacon\\/NIDDK\\/1\\/css\\/chatbeacon\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dkazr-prd-livechat.eastus2.cloudapp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [
+                {
+                    "original": "livechat.niddk.nih.gov",
+                    "resolved": "dkazr-prd-livechat.eastus2.cloudapp.azure.com"
+                }
+            ],
+            "responseHashes": [
+                "ce02ab22a4ef14dc0c12ce4d5c2166248431c4c0bcf2766fc413bcd64857cedb"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nih.gov",
+                "www.niddk.nih.gov"
+            ]
+        },
+        {
+            "rule": "azure\\.com\\/chatbeacon\\/NIDDK\\/1\\/css\\/custom\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dkazr-prd-livechat.eastus2.cloudapp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [
+                {
+                    "original": "livechat.niddk.nih.gov",
+                    "resolved": "dkazr-prd-livechat.eastus2.cloudapp.azure.com"
+                }
+            ],
+            "responseHashes": [
+                "7078f140cabf6517b22cf9309cdbf6888b24e87f69299834eb2595650af6a845"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nih.gov",
+                "www.niddk.nih.gov"
+            ]
+        },
+        {
+            "rule": "azure\\.com\\/chatbeacon\\/NIDDK\\/1\\/imgs\\/online\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dkazr-prd-livechat.eastus2.cloudapp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [
+                {
+                    "original": "livechat.niddk.nih.gov",
+                    "resolved": "dkazr-prd-livechat.eastus2.cloudapp.azure.com"
+                }
+            ],
+            "responseHashes": [
+                "9eaf1e17dda46853fd67e3f2ea20b0626b0e7186b2581f03f9be47ceb851207b"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nih.gov",
+                "www.niddk.nih.gov"
+            ]
+        },
+        {
             "rule": "azure\\.com\\/nonstandard\\/opsession",
-            "cookies": 0.0000153,
+            "cookies": 0.0000139,
             "fingerprinting": 0,
             "subdomains": [
                 "innss.westeurope.cloudapp"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000153,
+            "prevalence": 0.0000139,
             "cnames": [
                 {
                     "original": "innlogging.nrk.no",
@@ -289,6 +1446,8 @@
                 "9a2e62c6ab9e7143c6c9b9e2460720e3168a76a913ed761da1ae711ce65611a1"
             ],
             "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
             "exampleSites": [
                 "nrk.no",
                 "www.nrk.no"
@@ -296,14 +1455,14 @@
         },
         {
             "rule": "azure\\.com\\/api\\/v1\\.0\\/environment\\/information",
-            "cookies": 0.0000153,
+            "cookies": 0.0000139,
             "fingerprinting": 0,
             "subdomains": [
                 "premera.westus2.cloudapp"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000153,
+            "prevalence": 0.0000139,
             "cnames": [
                 {
                     "original": "member-edge.premera.com",
@@ -311,12 +1470,39 @@
                 }
             ],
             "responseHashes": [
-                "aa21ecb9861e888e94eb618f5558640c58bf9b945d18b835f7c87801abc33d52"
+                "576ace3b8a94c4cfbbb46e373b7a02f46db97bef3c07bfbe7765f9abe94ec788"
             ],
             "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
             "exampleSites": [
                 "premera.com",
                 "www.premera.com"
+            ]
+        },
+        {
+            "rule": "azure\\.com\\/static\\/embed\\/count\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pphtalk.eastus.cloudapp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [
+                {
+                    "original": "talk.pressherald.com",
+                    "resolved": "pphtalk.eastus.cloudapp.azure.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "pressherald.com",
+                "www.pressherald.com"
             ]
         }
     ],
@@ -329,14 +1515,18 @@
     },
     "cookies": 0.000153,
     "types": {
-        "Script": 15,
+        "Script": 50,
+        "Preflight": 5,
+        "XHR": 15,
         "Document": 6,
-        "XHR": 4
+        "Stylesheet": 24,
+        "Image": 4,
+        "Font": 8
     },
     "nameservers": [
-        "ns1-205.azure-dns.com",
         "ns2-205.azure-dns.net",
         "ns3-205.azure-dns.org",
-        "ns4-205.azure-dns.info"
+        "ns4-205.azure-dns.info",
+        "ns1-205.azure-dns.com"
     ]
 }

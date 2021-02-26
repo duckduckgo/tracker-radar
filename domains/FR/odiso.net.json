@@ -4,15 +4,19 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000722,
+    "prevalence": 0.000706,
     "sites": 7,
     "subdomains": [
         "czproxy",
+        "psproxy",
         "dkoproxy",
-        "metproxy",
-        "psproxy"
+        "metproxy"
     ],
     "cnames": [
+        {
+            "original": "cdn.cuisineaz.com",
+            "resolved": "czproxy.odiso.net"
+        },
         {
             "original": "matomo.cuisineaz.com",
             "resolved": "czproxy.odiso.net"
@@ -28,13 +32,49 @@
         {
             "original": "matomo.passeportsante.net",
             "resolved": "psproxy.odiso.net"
+        },
+        {
+            "original": "static.passeportsante.net",
+            "resolved": "psproxy.odiso.net"
         }
     ],
     "fingerprinting": 2,
     "resources": [
         {
+            "rule": "odiso\\.net\\/resources\\/img\\/1x1-pixel\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "czproxy",
+                "psproxy"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "cdn.cuisineaz.com",
+                    "resolved": "czproxy.odiso.net"
+                },
+                {
+                    "original": "static.passeportsante.net",
+                    "resolved": "psproxy.odiso.net"
+                }
+            ],
+            "responseHashes": [
+                "14241bd84781b608c300ded492f67075b891d3b0f6f4112972c03a2cb67f3e0e"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cuisineaz.com",
+                "www.passeportsante.net"
+            ]
+        },
+        {
             "rule": "odiso\\.net\\/matomo\\.js",
-            "cookies": 0.000206,
+            "cookies": 0.000202,
             "fingerprinting": 2,
             "subdomains": [
                 "czproxy",
@@ -44,7 +84,7 @@
             ],
             "apis": {},
             "sites": 4,
-            "prevalence": 0.000413,
+            "prevalence": 0.000403,
             "cnames": [
                 {
                     "original": "matomo.cuisineaz.com",
@@ -67,6 +107,52 @@
                 "382843b96a3a0f2c2b38c583563caad12733ae44b4b5f1b97abe948fc461596f"
             ],
             "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cuisineaz.com",
+                "www.deco.fr",
+                "www.meteocity.com",
+                "www.passeportsante.net"
+            ]
+        },
+        {
+            "rule": "odiso\\.net\\/matomo\\.php",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "czproxy",
+                "dkoproxy",
+                "metproxy",
+                "psproxy"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000403,
+            "cnames": [
+                {
+                    "original": "matomo.cuisineaz.com",
+                    "resolved": "czproxy.odiso.net"
+                },
+                {
+                    "original": "matomo.deco.fr",
+                    "resolved": "dkoproxy.odiso.net"
+                },
+                {
+                    "original": "matomo.meteocity.com",
+                    "resolved": "metproxy.odiso.net"
+                },
+                {
+                    "original": "matomo.passeportsante.net",
+                    "resolved": "psproxy.odiso.net"
+                }
+            ],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
             "exampleSites": [
                 "cuisineaz.com",
                 "www.deco.fr",
@@ -77,9 +163,11 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000206,
+    "cookies": 0.000202,
     "types": {
-        "Script": 4
+        "Image": 2,
+        "Script": 4,
+        "Other": 4
     },
     "nameservers": []
 }

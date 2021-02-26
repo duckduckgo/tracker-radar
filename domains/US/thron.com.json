@@ -7,37 +7,39 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.000107,
-    "sites": 14,
+    "prevalence": 0.0000903,
+    "sites": 13,
     "subdomains": [
         "whirlpool-cdn",
         "ferrari-cdn",
+        "dainese-cdn",
         "whirlpool-device",
-        "furla-cdn"
+        "furla-cdn",
+        "ferrari-view",
+        "whirlpool-view",
+        "whirlpool-track"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
         {
-            "rule": "thron\\.com\\/shared\\/plugins\\/tracking\\/current\\/tracking-library-min\\.js",
+            "rule": "thron\\.com\\/shared\\/plugins\\/tracking\\/current\\/bootstrapper-min\\.js",
             "cookies": 0,
-            "fingerprinting": 1,
+            "fingerprinting": 0,
             "subdomains": [
                 "whirlpool-cdn",
                 "ferrari-cdn"
             ],
-            "apis": {
-                "Navigator.prototype.userAgent": 6,
-                "Navigator.prototype.platform": 6,
-                "Navigator.prototype.appName": 6
-            },
+            "apis": {},
             "sites": 6,
-            "prevalence": 0.0000458,
+            "prevalence": 0.0000417,
             "cnames": [],
             "responseHashes": [
-                "be43fcd6a79e0ef43c4da499978e2674badba7c448f68226ba5e028195a481c4"
+                "5189bfd671f115bf280cc1ef40075a3641ccef09b2bb06c289378589e84a5944"
             ],
             "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
             "exampleSites": [
                 "bauknecht.de",
                 "www.bauknecht.de",
@@ -48,24 +50,66 @@
             ]
         },
         {
+            "rule": "thron\\.com\\/shared\\/plugins\\/tracking\\/current\\/tracking-library-min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "whirlpool-cdn",
+                "dainese-cdn",
+                "ferrari-cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 7,
+                "Navigator.prototype.platform": 7,
+                "Navigator.prototype.appName": 7
+            },
+            "sites": 7,
+            "prevalence": 0.0000486,
+            "cnames": [],
+            "responseHashes": [
+                "be43fcd6a79e0ef43c4da499978e2674badba7c448f68226ba5e028195a481c4"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bauknecht.de",
+                "www.bauknecht.de",
+                "www.dainese.com",
+                "www.ferrari.com",
+                "www.hotpoint.co.uk",
+                "www.kitchenaid.co.uk",
+                "www.kitchenaid.de"
+            ]
+        },
+        {
             "rule": "thron\\.com\\/shared\\/plugins\\/tracking\\/current\\/framed\\.html",
-            "cookies": 0.00000764,
+            "cookies": 0.00000695,
             "fingerprinting": 1,
             "subdomains": [
                 "whirlpool-cdn",
                 "ferrari-cdn"
             ],
             "apis": {
-                "Document.cookie getter": 1,
+                "Document.cookie getter": 2,
                 "Document.cookie setter": 1
             },
             "sites": 6,
-            "prevalence": 0.0000458,
+            "prevalence": 0.0000417,
             "cnames": [],
             "responseHashes": [
                 "cfa4678a1369f7595578b650a46b15eaa630d50b0edabcb9cd2aaf5469d1a684"
             ],
             "type": "Document",
+            "firstPartyCookies": {
+                "_TA_TRACKING": {
+                    "ttl": 157680020,
+                    "length": 143,
+                    "prevalence": 0.000006945650286508075,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
             "exampleSites": [
                 "bauknecht.de",
                 "www.bauknecht.de",
@@ -77,22 +121,47 @@
         },
         {
             "rule": "thron\\.com\\/api\\/xdevice\\/resources\\/device\\/get\\/whirlpool",
-            "cookies": 0.0000382,
+            "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
                 "whirlpool-device"
             ],
             "apis": {},
             "sites": 5,
-            "prevalence": 0.0000382,
+            "prevalence": 0.0000347,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bauknecht.de",
+                "www.bauknecht.de",
+                "www.hotpoint.co.uk",
+                "www.kitchenaid.co.uk",
+                "www.kitchenaid.de"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/api\\/xdevice\\/resources\\/device\\/get\\/whirlpool",
+            "cookies": 0.0000347,
+            "fingerprinting": 0,
+            "subdomains": [
+                "whirlpool-device"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.0000347,
             "cnames": [],
             "responseHashes": [
-                "bb6b291a688f19c874864b58a4f5e8375369cc6fd22eddce1451e8f6b2645ada",
-                "7802fc22b982f67ec97acc7d2f7648dec399241d8be799c34b449dd2dbe21455",
-                "953b5279b0c000f50b2ad31ec4c6f79c2b483f9a64a14e279fedfb1ce41122fd",
-                "04d6e644c0972c39a451d15eb3730ca2aa4d288b9fe9ec138f57931ba0ad0676"
+                "426398e71beafa2869f77f83ca1c7f16ddbb7704e2a86d0820d90957d36fb4ac",
+                "62920648134bb824bed3df17090f0051e12494f618bceac87519f600e33ad214",
+                "936cc38c592f3b254e9c1ba8af7e2e85b17463f384f41259b1a80e8db10265bc",
+                "20f18c619b4710613776e2c59f185c6fa929f92068134dfe2b9bfab49f4ab1bd"
             ],
             "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
             "exampleSites": [
                 "bauknecht.de",
                 "www.bauknecht.de",
@@ -125,12 +194,14 @@
                 "Navigator.prototype.plugins": 6
             },
             "sites": 6,
-            "prevalence": 0.0000458,
+            "prevalence": 0.0000417,
             "cnames": [],
             "responseHashes": [
                 "b4837c780336420f73a4f4946547d7c10bd261355494258661fd8c8d6553b733"
             ],
             "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
             "exampleSites": [
                 "bauknecht.de",
                 "www.bauknecht.de",
@@ -141,41 +212,1879 @@
             ]
         },
         {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/fce56404-c499-44f0-b8cb-f6703e4c7961\\/opkuod\\/std\\/550x550\\/sj_3",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "372d0e86b0facbf038da6f8347e3ae04bc438b784a44793b8c5651a5ffe2ca8e"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/6f4d3abb-840e-42f2-9fce-50779546c61d\\/nflkdz\\/std\\/550x550\\/banner_moto_woman",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "f171b1e0f38bf2a2c4d25a56e89a39bb06575a4731e0b01d14c76681a795faf9"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/efc24a22-9a68-4bd3-9b8b-0ab200275a8d\\/pekjtt\\/std\\/550x550\\/sj_15",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "a88a3cac924e63022341be6cfd0934668d18114d1c6623337febfa9638b0547e"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/213431b8-18b9-4839-b3dd-ad601f11c198\\/ramfdh\\/std\\/270x270\\/smart-jacket-black\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "2637953306b6b8d0ea3f45b9abd2ed8ca7a96188d15f6c6502d7751dc25677d6"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/24a0f2fa-1385-4028-b84f-90e80bc16b60\\/ramfdh\\/std\\/270x270\\/smart-jacket-woman-black\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "602918233b0386ccdf33f661495c101d8fa7c118333b56faa9b58ab9b672ad6e"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/2ea6cc24-d11d-4de7-9107-555b1eef7765\\/ramfdh\\/std\\/270x270\\/imatra-lady-leather-1pc\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "2cc8c2e144b664dec4726d42395670b1cfda15ca130acfdf75e619f930a31172"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/33b8919b-771d-48d9-92c8-eb1105e86acd\\/ramfdh\\/std\\/270x270\\/laguna-seca-5-1pc\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "cabf7df39970a2a41a7c9b29c18ebf7cc76d444b64d6c4527cd3f3ddf9d0f418"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/b1796864-8dcd-4f70-87b8-237507f167a6\\/ramfdh\\/std\\/270x270\\/laguna-seca-5-1pc\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "cabf7df39970a2a41a7c9b29c18ebf7cc76d444b64d6c4527cd3f3ddf9d0f418"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/7cf154eb-8641-453e-acba-1432d8c29a54\\/g9ns0j\\/std\\/550x550\\/menu-banner-vr46",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "3724b2240f1a4a2c570e806217e4c375d8e67840a6c8f33ff2108762b146463a"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/16f5d896-67b1-43e1-a117-e9241a207991\\/xp7srd\\/std\\/550x550\\/banner_dair",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "573744ddb61d29e61a3e4a2e9ed07bdef206f6d8664189552dcf6287272aed46"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/dcd73de3-c708-4c89-a925-1c76353336da\\/ramfdh\\/std\\/270x270\\/misano-d-air-jacket\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "2c256553efdef2ce761e1bc202f0291329d29a58b52b077becd582392a8c9c0b"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/de00db34-3897-4929-85c5-155588c14591\\/ramfdh\\/std\\/270x270\\/killalane-1-pc-perf\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "962b0524baf82703118b2fad6d31d61110d27ed524f2b77abae7b13dc10d4112"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/6bc21a6e-af77-4fe5-a3e6-e775ea07c2f7\\/ramfdh\\/std\\/270x270\\/laguna-seca-4-1pc\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "fe146ddb4f609bca9f4a8c74d0a7a7a4ef0bedecd16dad2de49d8c5e30aab982"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/0e6457ad-89e2-44a1-8938-ac28e4c108cd\\/ramfdh\\/std\\/270x270\\/laguna-seca-4-2pcs\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "c3159a6a2b3d13401a66b830a632ba03097a458702dec6a722a8714ca8c8f4c6"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/f7b4325f-c27e-4eae-b586-433bf6940a37\\/ramfdh\\/std\\/270x270\\/laguna-seca-4-1pc\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "b65759b0ec8b8de378c6c20d4880229c4104afa18dd4dde0edf7d45fb8abdc70"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/dc636942-f6df-46f1-a2f9-e5d874b8621c\\/ramfdh\\/std\\/270x270\\/rival-vest-pro-black\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "5e94c464d5a61fe131b4c205202e9c87d38e3ec9cabbeb6fbc611c1cc6d8d9ca"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/093713f5-cb8e-43c8-8191-a2f08ebb89cb\\/ramfdh\\/std\\/270x270\\/humpback-h20-neutro\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "55149d2b4a21703f3884dbfb48b0f175d42c194ec96cd118616dc9c3bedee842"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/59cf55f8-2d2f-486f-aa04-7ef3a3ba205f\\/ramfdh\\/std\\/270x270\\/rival-pro-shorts-black\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "d892cd6f69a36a524854fb36a29ad96f451e82188841f9fe9eff621478d7e174"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/a778d61d-0402-401a-8e78-673bc01e8838\\/ramfdh\\/std\\/270x270\\/hg-pants-1-black\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "20542cbd51e1c708ea1840b6957ce443b1880ceaf7693c1dde34d210e339e38d"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/d0d76b9a-e0d7-4f99-9e9c-02d099778182\\/ramfdh\\/std\\/270x270\\/hg-caddo-gloves-black\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "828262d2554a2d73c619f96c95837be46cf35cd16153c3b12d3295b50378fbce"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/8299f30a-ff39-4b00-9e91-07123a03aea8\\/pdchka\\/std\\/550x550\\/home-trending-bike-protection",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "2ffba350ebe20e06bc75d42f7923ce37f89f7a6d2fc74850b935b3cbb4c46950"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/d7fe75cb-c8e1-4287-9958-0191ffc4d6da\\/k4de2x\\/std\\/768x768\\/home-highlights-bike",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "843e614bd024aed181e08ca81b1bba49b5be829ae40aca3bc7275a854235f1a3"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/c364bd2e-1386-48f1-9434-e9821b50245f\\/ramfdh\\/std\\/270x270\\/trail-skins-shorts-black\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "ba9feed2c77368c7d7cd4c3169382837d697871c8312fd635c9afd2e4a154f25"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/07bac7c2-ed2b-4214-8d95-db4c0bbabf81\\/ramfdh\\/std\\/270x270\\/trail-skins-pro-tee\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "c86653c2ebdf57b840b9a90b340ff6154aaa02ab8110a7e7805bf7d7c07bd4d5"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/e3152951-e0ba-4a22-81a5-497f2468d97f\\/ramfdh\\/std\\/270x270\\/hg-bondi-3-4\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "e71eae7235bf1ca562cd9f47a57cc2bc23ffdaa247299bff504eeb264f55b36e"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/48dbdbc2-879c-44ed-b6d7-d6bf4302e605\\/ramfdh\\/std\\/270x270\\/hg-ramla-ss-wmn\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "b475ba5c12880855181cc1470d855704bdce36aef5ff404c3876b4eafdb7a4e9"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/90ec06b2-da2e-4a25-a487-164ff686c703\\/ramfdh\\/std\\/270x270\\/scarabeo-pro-knee-guards\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "ec0ffffa1c8197f1ecae391dd2409988154dccd48ea64a873b5fcc0fcdd61681"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/bc29a8c4-3e7c-45e5-af95-e3a1d9bb1438\\/ramfdh\\/std\\/270x270\\/scarabeo-pro-elbow-guards\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "931d5ac652ca3a8072a34eef7989d302c350dff229de1cc3e9b79cf78e02039b"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/978e3f69-99c8-4ba6-b338-a797a353d6bf\\/ramfdh\\/std\\/270x270\\/scarabeo-pro-tee-black\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "656b6965069c814c42ad0d0fa2a49759836047a0c67dc4d4ec0417d5a1763323"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/1c24bb80-4c57-4e44-8a26-dd4d588eaee7\\/ramfdh\\/std\\/270x270\\/trail-skins-pro-knee\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "6449f008ff23e8cb4f2f0d946e78009c9dc3654de5438734fde21b787960bbf8"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/f7d049ea-58ea-4c92-a381-7d0928eddad7\\/ramfdh\\/std\\/270x270\\/trail-skins-pro-elbow\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "24bc8506649bab0a1da5f7bbe4d1252873282480b8c7971e8722a9dc215358b5"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/3790843b-bfe2-44e7-9c07-8ec389ab571d\\/ramfdh\\/std\\/270x270\\/trail-skins-air-knee\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "d95452236d34e7dfcaffd92d73d6429c73c5cd29cdef853fdaa97ab36e322489"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/6e490b89-bb84-43f0-8c34-1bf7e79c4b3b\\/ramfdh\\/std\\/270x270\\/trail-skins-air-elbow\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "b7cbb445b484c8e48c287560efd2e7a0fa3c6caf99b9d206c9a60add9fa08273"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/65b13b04-004b-4bbf-88d5-772047430470\\/ramfdh\\/std\\/270x270\\/armoform-elbow-guard-lite\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "36001ba3c472b8f4dd41c445b8b388d66a3f2716d5475c4a1d1a0e7b4b5a233b"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/5399f430-ee1c-4cad-a5e5-125f038c928d\\/ramfdh\\/std\\/270x270\\/armoform-knee-guard-lite\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "348f50c8eeed46bf72b9a3a84abb1a37fe84d6f53694076cd65739e2f24701c4"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/12cc72f1-d1bc-4c98-a227-94e1cb22cab8\\/ramfdh\\/std\\/270x270\\/rhyolite-2-safety-jacket\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "af097cedaca9f4f0567a0d45f86aac2c05222cb7f256cb56087ab172cf4ed022"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/19a2d657-527a-4516-99b7-e9924dbe4468\\/ramfdh\\/std\\/270x270\\/hg-jersey-1-black\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "05fc50c30aec467e69f043ae6deb59c75e815fa9a72f3e34e3f203dda7850b78"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/7dad9fb5-ac38-48f4-8fa4-f295382e86bc\\/ramfdh\\/std\\/270x270\\/hp-needle-star-white\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "e6e356083d1704131e6be97a701c21608a3bfcd3b79cb981d171f59df8fb587c"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/3a0c848e-f7be-4bd9-8da7-4570c975d2d5\\/ramfdh\\/std\\/270x270\\/hp-prism-high-risk\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "e5765b01117ed06dec5f991497c27654aece87dfb3f8d50c60e3e6000e5c82eb"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/0d486e33-eda8-407f-822f-5338576ac936\\/ramfdh\\/std\\/270x270\\/awa-tech-rc-puritan\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/6bb287cd-b983-4ccb-9260-b988d0f8cace\\/ramfdh\\/std\\/270x270\\/awa-tech-shell-lily\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "22dc25cc56139c45971a28fa5e69c5adc5a02b02867bddce26ab65de10109155"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/9404a38f-4ee0-4542-9c34-543ae7798e1f\\/ramfdh\\/std\\/270x270\\/hp-mid-full-pro\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "06b8f22573d91e6791dc18253bde85a67932fc8e430ac0f9ed8131234550e5e6"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/f62b90c5-9568-4848-9691-3066d6da05ae\\/dnndvj\\/std\\/550x550\\/highlights-box_768x768-2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "a15d54fb830f07c2be270fb3e15d571128c8d258452c808decd2d6ec40578fa7"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/b6898e68-159e-4a02-aa80-ffc76b1037f1\\/fbr3jy\\/std\\/550x550\\/ski20-624",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "edc4541316851f0094bbd37a6138d11949059404cddf2ab19a395c3a7eb77170"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/bce004b3-7e45-413b-b2b7-d6e350cc97a4\\/8qj3qp\\/std\\/550x550\\/trending-banner_900x900",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "be853d921b88ed6db36e6fa9c56b27ee8e61f8864cfdb270cd70157ed03a8160"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/303145f6-b478-469b-a985-6c5f7e9b97ce\\/itxwud\\/std\\/550x550\\/menu-winter-woman-nucleo",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "8850cf658b09bcd7bc983d450d8aa32525ffb8978ea33cdeeee2ad21725170c9"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/573269ef-f766-4e6e-a76a-1505c471bf47\\/hpql3g\\/std\\/550x550\\/menu-winter-woman-backprotectors",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/a5b7e387-d10c-4682-b835-1e9ac213e846\\/cme22u\\/std\\/550x550\\/8837_rb_201118_phrobybragotto_dainese_hp",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/917eb43d-fb68-48c8-962d-53f1374cd9a7\\/ramfdh\\/std\\/270x270\\/slalom-jkt-kid-black\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/c25d5c49-edad-496e-a5f9-6e91f9dcd816\\/ramfdh\\/std\\/270x270\\/hp-flake-ribbo-kid\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "b3195a65d2e5c7f23df3d5163c89814bf54864291fb1f98545027e0232f22add"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/ef93abe7-7c42-41b1-85a7-8180ac264007\\/ramfdh\\/std\\/270x270\\/ribbo-padding-jkt-kid\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "3e5ba9b84e4e283d75cba57e822084900b8ca17a456fb30ee613ea0d6b76dc6c"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/2baa8b4d-6ee9-435d-a4a3-024b6320321d\\/ramfdh\\/std\\/270x270\\/ribbo-hp-jkt-kid\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "bc8d7178a31d09c1cc3587382b304b0d23831f5722149616deab860f192cf3e5"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/ada266fc-8ad1-43a8-95dd-6ec0c0e82e15\\/ramfdh\\/std\\/270x270\\/ribbo-pants-kid-black\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "7fbdcfa4711a5e0ceed9e1e9017539fa55f21d08ed04debeb402f9e443158fd8"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/7205b6a5-964c-4076-9c7e-c39fad8f7241\\/wjnysf\\/std\\/550x550\\/7924_rb_141118_dainese_awa",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "01c9b130489ad602c9cad269a5ced44cd5ada8bad3a65ebe76fd1dae2645732e"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/baddb264-01a0-484c-a0c0-29eb03d5abef\\/re2xd6\\/std\\/550x550\\/9104_rb_211118_dainese_hp",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "ae9fe31c6d6c31997ed131079f2567ea4ed05c34667d4e4200326202e3260489"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/3c4f906b-8b81-4157-9c71-79d2f654ccb9\\/ramfdh\\/std\\/270x270\\/hp2-m3-1-black\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "36e3abbbb27609a434ed3ea307d6c889f151bd97e7ec2ae919a3e0bb152c49f0"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/157fc41c-b750-431a-aedd-52d75886d036\\/ramfdh\\/std\\/270x270\\/hp2-m3-1-black\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/1f97f884-0f3c-4ecc-b136-15f16f5747ab\\/ramfdh\\/std\\/270x270\\/hp2-m3-1-black\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/d8cb6878-8b94-446b-bdbb-dffc28c9347b\\/ramfdh\\/std\\/270x270\\/hp2-m3-1-lily\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "a83749697b61c9a156d50cb2ec803e6d2647a4304892294e0131c88e7f5375c1"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/8b4b7099-8a45-40c2-b1fc-8c8890d7830c\\/ramfdh\\/std\\/270x270\\/hp2-m3-1-lime\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/0a01dfb8-2091-40cb-a366-dbdabc3926b3\\/ramfdh\\/std\\/270x270\\/hp-prism-outfit\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "7be3a4fb2a71d853cb6dd8afc59bb84aec36d7df851a90bdbb1a23e591833195"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/19decf22-3a14-4c3a-9ecb-a9cfb0c21c92\\/ramfdh\\/std\\/270x270\\/hp-icedust-outfit\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "0a77dc17c88420da0f4c771ee2af72b1a78d7fc11b52e02ade15ec1121e78b3f"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/35a00315-671a-489f-83c1-be27507447c3\\/ramfdh\\/std\\/270x270\\/hp-crust-outfit\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "fe9eb4a691da4e0667af081d11940f02cec5eb60a6f48708413a92251963fff9"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/24de45b0-cbe6-40b8-a95b-e8c5391f9dcd\\/ramfdh\\/std\\/270x270\\/hp-flake-ribbo-kid\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/dbd78088-326a-471b-9612-dd48dc463726\\/ramfdh\\/std\\/270x270\\/hp-roller-outfit\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/2f287ae6-5ef2-4a9b-b488-2cdc085db698\\/yyvrzo\\/std\\/600x600\\/slide_customworks_customcolor",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "2ac26432703e5ba1d7a5e4932ce1c9a8af032d37f3418846557c0f05a12086fd"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/2e1fdc6d-23f5-4724-8deb-2729b327ba8d\\/ssolem\\/std\\/600x600\\/slide_customworks_customfit",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/8eb222aa-deaf-44fc-b962-3594dfada9bd\\/gegk9r\\/std\\/600x600\\/slide_customworks_customcolorfit",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/566ac763-ae8c-43f4-83c2-324e0b0fa361\\/ervach\\/std\\/600x600\\/slide_customworks_speciale",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/3be9f52c-ea47-48a3-ad79-193a28c86457\\/ky607j\\/std\\/1920x600\\/menu-dainese-dna",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "06c29e7aaf82e32a60dddbd7d41ba9b177eca50f27bed9b7507afa03d3ff3781"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/8d1b31ba-c4c9-427d-b79f-278c8f5a25eb\\/l9idmz\\/std\\/1920x600\\/menu-dainese-history",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "8b5908a48c1e15463ab4bde97cf77a831e72619e11af0ef8c3cc95c6b4416fd1"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/2653703c-90e2-4d20-9424-7aa9687177c4\\/zweksw\\/std\\/1920x600\\/menu-dainese-careers",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "27ad69291ce8d8d90956a9e9620a566bd1abade1dafc5858f4e66020285c8e4b"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/b58931fd-be7a-48ce-af15-33d2cb485670\\/dmpi40\\/std\\/1920x600\\/menu-dainese-dar",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/36770421-d310-4691-bc7e-70e90ce9577b\\/yfsbst\\/std\\/1920x600\\/menu-dainese-journal",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/fa63b6b9-82a9-4f63-a946-400e93876fb1\\/osb2dx\\/std\\/1920x600\\/menu-dainese-stores",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/d22558b2-eea4-41e9-a7a5-a9adf9131407\\/oiu3df\\/std\\/1920x600\\/menu-dainese-technology",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/f6337032-0e84-4a2d-951a-9fab67550202\\/dosfei\\/std\\/1920x600\\/menu-dainese-valentinos-secret-room",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/81b7b0f7-e895-4892-9ccb-7132913feb1e\\/1twb3n\\/std\\/500x500\\/secure-payment",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/eaf9d28b-e698-475f-a75e-63b83acbe1ec\\/x5l1uy\\/std\\/500x500\\/free-shipping",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/delivery\\/public\\/image\\/dainese\\/f6113bbb-a8ca-418a-8923-463be8950fb1\\/rdrg3m\\/std\\/500x500\\/free-return",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dainese-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dainese.com",
+                "www.dainese.com"
+            ]
+        },
+        {
             "rule": "thron\\.com\\/shared\\/ce\\/bootstrap\\/1\\/scripts\\/embeds-min\\.js",
             "cookies": 0,
             "fingerprinting": 1,
             "subdomains": [
                 "ferrari-cdn",
-                "furla-cdn"
+                "furla-cdn",
+                "whirlpool-cdn"
             ],
             "apis": {
                 "Navigator.prototype.userAgent": 1
             },
-            "sites": 2,
-            "prevalence": 0.0000153,
+            "sites": 3,
+            "prevalence": 0.0000208,
             "cnames": [],
             "responseHashes": [
-                "c723e42d69ff007dec044ace590fab18e9f64b69166571c6b86624b4aebd2c90"
+                "eca86d20140483ff1afb110f0e8e88880f8b3af81ee57feae81a5fc156c8a9db"
             ],
             "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
             "exampleSites": [
                 "ferrari.com",
-                "www.furla.com"
+                "www.furla.com",
+                "www.kitchenaid.de"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/api\\/xcontents\\/resources\\/delivery\\/getContentDetail",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ferrari-view",
+                "whirlpool-view"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000208,
+            "cnames": [],
+            "responseHashes": [
+                "c0f35955feef21da93a472d1d0d2137fa4f1c3b06a0399bd77f5f3e11af8e53b",
+                "1212e5701d75ed2eb83fa0ac7ba08745b12ab6dd7e097cd08dfaf5ea7874056b"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ferrari.com",
+                "www.ferrari.com",
+                "www.kitchenaid.de"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/static\\/4L1AIC_STORE-Collezione_SS2021_Copertina_1920x1080-4500_RPXTFJ\\.mp4",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ferrari-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "a4127cdc508098cb8919f09338beac55226935ef3a8719aa698aeaad4b2fa8e7"
+            ],
+            "type": "Media",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ferrari.com",
+                "www.ferrari.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/static\\/JOAPJ0_GT-Video_Gateway_Sito_1920x1080_2020-4500_4I2PK7\\.mp4",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ferrari-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "d416d3af658b66829192a6bf0ed3cc3329d47791e5f84809fa402705585ecce2"
+            ],
+            "type": "Media",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ferrari.com",
+                "www.ferrari.com"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/api\\/xcontents\\/resources\\/delivery\\/getContentDetail",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "whirlpool-view"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kitchenaid.de",
+                "www.kitchenaid.de"
+            ]
+        },
+        {
+            "rule": "thron\\.com\\/i",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "whirlpool-track"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "caa849b179befa2645a8e2c474d2e82a76777a3305315ece911013e8ee9a916c"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kitchenaid.de",
+                "www.kitchenaid.de"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0000611,
+    "cookies": 0.0000556,
     "types": {
-        "Script": 14,
+        "Script": 22,
         "Document": 6,
-        "XHR": 5
+        "Preflight": 7,
+        "XHR": 8,
+        "Image": 162,
+        "Media": 4
     },
     "nameservers": [
-        "ns-567.awsdns-06.net",
         "ns-1369.awsdns-43.org",
         "ns-1964.awsdns-53.co.uk",
-        "ns-244.awsdns-30.com"
+        "ns-244.awsdns-30.com",
+        "ns-567.awsdns-06.net"
     ]
 }

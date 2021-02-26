@@ -4,18 +4,25 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.000722,
-    "sites": 7,
+    "prevalence": 0.000908,
+    "sites": 9,
     "subdomains": [
         "owncloud",
         "cloudflare",
+        "elasticsearch",
+        "nasdaq",
         "sketchup",
-        "elasticsearch"
+        "confluent",
+        "f5"
     ],
     "cnames": [
         {
             "original": "get.sketchup.com",
             "resolved": "sketchup.mktoweb.com"
+        },
+        {
+            "original": "go.confluent.io",
+            "resolved": "confluent.mktoweb.com"
         },
         {
             "original": "info.cloudflare.com",
@@ -26,6 +33,14 @@
             "resolved": "elasticsearch.mktoweb.com"
         },
         {
+            "original": "interact.nginx.com",
+            "resolved": "f5.mktoweb.com"
+        },
+        {
+            "original": "nd.nasdaq.com",
+            "resolved": "nasdaq.mktoweb.com"
+        },
+        {
             "original": "oc.owncloud.com",
             "resolved": "owncloud.mktoweb.com"
         }
@@ -34,15 +49,17 @@
     "resources": [
         {
             "rule": "mktoweb\\.com\\/index\\.php\\/form\\/getForm",
-            "cookies": 0.000103,
+            "cookies": 0.000101,
             "fingerprinting": 0,
             "subdomains": [
                 "owncloud",
-                "cloudflare"
+                "cloudflare",
+                "elasticsearch",
+                "nasdaq"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000206,
+            "sites": 4,
+            "prevalence": 0.000404,
             "cnames": [
                 {
                     "original": "oc.owncloud.com",
@@ -51,29 +68,84 @@
                 {
                     "original": "info.cloudflare.com",
                     "resolved": "cloudflare.mktoweb.com"
+                },
+                {
+                    "original": "info.elastic.co",
+                    "resolved": "elasticsearch.mktoweb.com"
+                },
+                {
+                    "original": "nd.nasdaq.com",
+                    "resolved": "nasdaq.mktoweb.com"
                 }
             ],
             "responseHashes": [
-                "2d358862fe543fc8d44213df82dc096212e82df630692c820c506ad1306028d4"
+                "b1281a312f9661dc929bb90d723dbba253918296f093c43e7e3d0ba8f06315ee",
+                "c186772f4a6e18daad34de54f073030bdcb174420afebe0a88f40b11e65353f0",
+                "583edcf09855defd93162f63ca29d0457e7be369764ad25f127335bbd7570e78"
             ],
             "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
             "exampleSites": [
                 "owncloud.com",
-                "www.cloudflare.com"
+                "www.cloudflare.com",
+                "www.elastic.co",
+                "www.nasdaq.com"
+            ]
+        },
+        {
+            "rule": "mktoweb\\.com\\/index\\.php\\/form\\/XDFrame",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "owncloud",
+                "elasticsearch",
+                "nasdaq"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [
+                {
+                    "original": "oc.owncloud.com",
+                    "resolved": "owncloud.mktoweb.com"
+                },
+                {
+                    "original": "info.elastic.co",
+                    "resolved": "elasticsearch.mktoweb.com"
+                },
+                {
+                    "original": "nd.nasdaq.com",
+                    "resolved": "nasdaq.mktoweb.com"
+                }
+            ],
+            "responseHashes": [
+                "e1f62b05267fccb3a0aa8e09ab8dcedf1cf0357cb186027bbbd1e9ffb1e15e04",
+                "f70bd7c424c7fea7c5a67e18f15001e5c7b99c430efb29f3c968e83ad1c7ce8f"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "owncloud.com",
+                "www.elastic.co",
+                "www.nasdaq.com"
             ]
         },
         {
             "rule": "mktoweb\\.com\\/js\\/forms2\\/js\\/forms2\\.min\\.js",
-            "cookies": 0.000103,
+            "cookies": 0.000303,
             "fingerprinting": 1,
             "subdomains": [
                 "owncloud",
                 "cloudflare",
+                "elasticsearch",
+                "nasdaq",
                 "sketchup"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.00031,
+            "sites": 5,
+            "prevalence": 0.000505,
             "cnames": [
                 {
                     "original": "oc.owncloud.com",
@@ -82,6 +154,14 @@
                 {
                     "original": "info.cloudflare.com",
                     "resolved": "cloudflare.mktoweb.com"
+                },
+                {
+                    "original": "info.elastic.co",
+                    "resolved": "elasticsearch.mktoweb.com"
+                },
+                {
+                    "original": "nd.nasdaq.com",
+                    "resolved": "nasdaq.mktoweb.com"
                 },
                 {
                     "original": "get.sketchup.com",
@@ -92,23 +172,28 @@
                 "014de295141a456ceda8e3c4762085e53dca50f91ddf65906d227f70cf0b1a55"
             ],
             "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
             "exampleSites": [
                 "owncloud.com",
                 "www.cloudflare.com",
+                "www.elastic.co",
+                "www.nasdaq.com",
                 "www.sketchup.com"
             ]
         },
         {
             "rule": "mktoweb\\.com\\/js\\/forms2\\/css\\/forms2\\.css",
-            "cookies": 0.000103,
+            "cookies": 0.000101,
             "fingerprinting": 0,
             "subdomains": [
                 "cloudflare",
-                "elasticsearch"
+                "elasticsearch",
+                "nasdaq"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000206,
+            "sites": 3,
+            "prevalence": 0.000303,
             "cnames": [
                 {
                     "original": "info.cloudflare.com",
@@ -117,24 +202,128 @@
                 {
                     "original": "info.elastic.co",
                     "resolved": "elasticsearch.mktoweb.com"
+                },
+                {
+                    "original": "nd.nasdaq.com",
+                    "resolved": "nasdaq.mktoweb.com"
                 }
             ],
             "responseHashes": [
                 "256e42104f48a5fa80b031da12dc56acde224fba3f9810f8f8192b39136d365a"
             ],
             "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
             "exampleSites": [
                 "cloudflare.com",
-                "www.elastic.co"
+                "www.elastic.co",
+                "www.nasdaq.com"
+            ]
+        },
+        {
+            "rule": "mktoweb\\.com\\/css\\/mktLPSupportCompat\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "confluent",
+                "f5"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "go.confluent.io",
+                    "resolved": "confluent.mktoweb.com"
+                },
+                {
+                    "original": "interact.nginx.com",
+                    "resolved": "f5.mktoweb.com"
+                }
+            ],
+            "responseHashes": [
+                "cc27845c4ba2580588d37b6d48939e7b833faeefa237e927860054226a0ad6f9"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "confluent.io",
+                "www.nginx.com"
+            ]
+        },
+        {
+            "rule": "mktoweb\\.com\\/js\\/stripmkttok\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "confluent",
+                "f5"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "go.confluent.io",
+                    "resolved": "confluent.mktoweb.com"
+                },
+                {
+                    "original": "interact.nginx.com",
+                    "resolved": "f5.mktoweb.com"
+                }
+            ],
+            "responseHashes": [
+                "f7545b96ed2740220c349ae9deb614faf1f0f211d4cf710788e0790f74cc9715"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "confluent.io",
+                "www.nginx.com"
+            ]
+        },
+        {
+            "rule": "mktoweb\\.com\\/js\\/forms2\\/css\\/forms2-theme-plain\\.css",
+            "cookies": 0.000101,
+            "fingerprinting": 0,
+            "subdomains": [
+                "elasticsearch",
+                "nasdaq"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "info.elastic.co",
+                    "resolved": "elasticsearch.mktoweb.com"
+                },
+                {
+                    "original": "nd.nasdaq.com",
+                    "resolved": "nasdaq.mktoweb.com"
+                }
+            ],
+            "responseHashes": [
+                "57cd46adbabd6c40823602b4513aecbe89320a769572255272abe9f008de69fa"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "elastic.co",
+                "www.nasdaq.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000722,
+    "cookies": 0.000908,
     "types": {
-        "Script": 5,
-        "Stylesheet": 2
+        "Script": 11,
+        "Document": 3,
+        "Stylesheet": 7
     },
     "nameservers": []
 }

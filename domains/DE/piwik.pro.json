@@ -7,14 +7,18 @@
     "source": [
         "DuckDuckGo-DE"
     ],
-    "prevalence": 0.00166,
-    "sites": 16,
+    "prevalence": 0.00183,
+    "sites": 18,
     "subdomains": [
         "bang-olufsen",
         "goettingen",
         "nabu",
         "moserholding",
-        "atf.containers"
+        "bang-olufsen.containers",
+        "goettingen.containers",
+        "lotto-niedersachsen.containers",
+        "atf.containers",
+        "dfv"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -43,12 +47,15 @@
                 "Navigator.prototype.appVersion": 1
             },
             "sites": 4,
-            "prevalence": 0.000414,
+            "prevalence": 0.000407,
             "cnames": [],
             "responseHashes": [
-                "3f4563efbc52fb808a3c641fedd030821b6eab2aea84276b4da8e52e183cf5ef"
+                "f8e1e6a3d970907fef160ca53460b7d132fdeaf921ead6632542570035f117bb",
+                "30a36b85d2f698e46249c684712f34ecb6ef7459eea6a8e1b340e464270cb0d9"
             ],
             "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
             "exampleSites": [
                 "bang-olufsen.com",
                 "www.goettingen.de",
@@ -57,35 +64,82 @@
             ]
         },
         {
+            "rule": "piwik\\.pro\\/consent\\/stats",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "bang-olufsen.containers",
+                "goettingen.containers",
+                "lotto-niedersachsen.containers"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000407,
+            "cnames": [],
+            "responseHashes": [
+                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bang-olufsen.com",
+                "www.goettingen.de",
+                "www.lotto-niedersachsen.de",
+                "www.lotto.de"
+            ]
+        },
+        {
             "rule": "piwik\\.pro\\/f8bf27ab-1994-40fe-b73e-6fa06ba96f5b\\.js",
-            "cookies": 0.000932,
+            "cookies": 0.00102,
             "fingerprinting": 1,
             "subdomains": [
                 "atf.containers"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 9,
-                "window.matchMedia(\"prefers-reduced-motion\")": 9,
-                "window.localStorage": 9,
-                "Document.cookie getter": 9,
-                "Document.cookie setter": 9,
-                "Navigator.prototype.doNotTrack": 9,
-                "Date.prototype.getTime": 9,
-                "Navigator.prototype.appVersion": 9
+                "Navigator.prototype.userAgent": 10,
+                "window.localStorage": 10,
+                "Document.cookie getter": 10,
+                "Document.cookie setter": 10,
+                "Navigator.prototype.doNotTrack": 10,
+                "Date.prototype.getTime": 10,
+                "Navigator.prototype.appVersion": 10
             },
-            "sites": 9,
-            "prevalence": 0.000932,
+            "sites": 10,
+            "prevalence": 0.00102,
             "cnames": [],
             "responseHashes": [
-                "ce55d067f9e47680c49a0c610c9c9beba3d4519aa253c2c1dece4f357f49cc9e",
-                "138e297803d9c50419170892df6b44668757a6ceb9dfc468baa76694252dd2e9",
-                "c6a8e1483f8e4eee0ce8f073de225ffbb9bf2afad49eeb9d9d6473f68d9d4a9b",
-                "2914ebd176e98495242e7981ca138b806f655b2c78114846ea47b2a48c12479f",
-                "a38b7d71ff67cd37a4ee44184b7ac61ad46c4d66f2a5b83d6340c468a858565e"
+                "c51eb7b92c7cdfcc9e61564c23b8134df4de6bd508a3c4b370f315987306c6ea",
+                "c67f3002a6b6bcfe59735ab0f3a4e012f82d52a449d491d5a993759bcddf25f7",
+                "5698c9c22e23704392b61fefe48ce53af03aba94cca5b802912472238c8a2d4a",
+                "6fb22a77ad241bad1f477d617be96e942c6ef8a27e33360f397965c063df551d",
+                "ff0f5648dc4c34e509bd21307a1965442496fd5864ba070db1cce556ffea2c8a",
+                "6f8956ee76d94d3dad9d84448c8c5858afc327f5c7e286befb1a41e4dba4d506"
             ],
             "type": "Script",
+            "firstPartyCookies": {
+                "stg_returning_visitor": {
+                    "ttl": 31536004,
+                    "length": 41,
+                    "prevalence": 0.0010176045588684236,
+                    "uniqueness": 1
+                },
+                "stg_traffic_source_priority": {
+                    "ttl": 1804,
+                    "length": 1,
+                    "prevalence": 0.0010176045588684236,
+                    "uniqueness": 0.1
+                },
+                "stg_last_interaction": {
+                    "ttl": 31536004,
+                    "length": 41,
+                    "prevalence": 0.0010176045588684236,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
             "exampleSites": [
-                "bunte.de",
+                "daskochrezept.de",
                 "www.einfachbacken.de",
                 "www.elle.de",
                 "www.freundin.de",
@@ -93,7 +147,37 @@
                 "www.haus.de",
                 "www.instyle.de",
                 "www.mylife.de",
+                "www.netdoktor.de",
                 "www.playboy.de"
+            ]
+        },
+        {
+            "rule": "piwik\\.pro\\/ppms\\.php",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "goettingen",
+                "dfv",
+                "nabu",
+                "moserholding"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000407,
+            "cnames": [],
+            "responseHashes": [
+                "548f2d6f4d0d820c6c5ffbeffcbd7f0e73193e2932eefe542accc84762deec87"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "get_top_level_domain_cookie": 0.00010176045588684237
+            },
+            "exampleSites": [
+                "goettingen.de",
+                "www.horizont.net",
+                "www.nabu.de",
+                "www.tt.com"
             ]
         }
     ],
@@ -104,14 +188,16 @@
         "cpu": 0,
         "cache": 3
     },
-    "cookies": 0.00114,
+    "cookies": 0.00132,
     "types": {
-        "Script": 13
+        "Script": 14,
+        "XHR": 4,
+        "Image": 4
     },
     "nameservers": [
+        "ns-344.awsdns-43.com",
         "ns-945.awsdns-54.net",
         "ns-1249.awsdns-28.org",
-        "ns-1658.awsdns-15.co.uk",
-        "ns-344.awsdns-43.com"
+        "ns-1658.awsdns-15.co.uk"
     ]
 }

@@ -7,17 +7,47 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.000153,
-    "sites": 20,
+    "prevalence": 0.000125,
+    "sites": 18,
     "subdomains": [
-        "web-sdk-cdn"
+        "web-sdk-cdn",
+        "sdk-api-v1"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
         {
-            "rule": "singular\\.net\\/singular-sdk\\/latest\\/singular-sdk\\.js",
+            "rule": "singular\\.net\\/singular-gtm-interface\\/latest\\/singular-gtm-interface\\.js",
             "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "web-sdk-cdn"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.0000625,
+            "cnames": [],
+            "responseHashes": [
+                "4f7326e4016c75e278e2783861eb6c11a7db35c0c78efd3ceb18525a89f9ff83"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "leagueoflegends.com",
+                "euw.leagueoflegends.com",
+                "na.leagueoflegends.com",
+                "signup.na.leagueoflegends.com",
+                "sportsbook.draftkings.com",
+                "universe.leagueoflegends.com",
+                "www.draftkings.com",
+                "www.luno.com",
+                "www.lyft.com"
+            ]
+        },
+        {
+            "rule": "singular\\.net\\/singular-sdk\\/latest\\/singular-sdk\\.js",
+            "cookies": 0.00000695,
             "fingerprinting": 2,
             "subdomains": [
                 "web-sdk-cdn"
@@ -29,27 +59,104 @@
                 "window.sessionStorage": 12,
                 "Screen.prototype.height": 12,
                 "Screen.prototype.width": 12,
-                "Navigator.prototype.platform": 12
+                "Navigator.prototype.platform": 12,
+                "Document.cookie getter": 1,
+                "Document.cookie setter": 1
             },
             "sites": 12,
-            "prevalence": 0.0000917,
+            "prevalence": 0.0000833,
             "cnames": [],
             "responseHashes": [
-                "3d8554ef737826886ffcc594f5698e3e75e4b9f79d53cc079aac116dd4fdcac6"
+                "3eef07b7d4282b250c4f2f78e369cec4bdcee39f56794783a24b0390eb198e02"
             ],
             "type": "Script",
+            "firstPartyCookies": {
+                "singular_device_id": {
+                    "ttl": 31536011,
+                    "length": 36,
+                    "prevalence": 0.000006945650286508075,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
             "exampleSites": [
                 "leagueoflegends.com",
                 "euw.leagueoflegends.com",
                 "na.leagueoflegends.com",
-                "playvalorant.com",
                 "playruneterra.com",
+                "playvalorant.com",
                 "signup.na.leagueoflegends.com",
                 "sportsbook.draftkings.com",
                 "universe.leagueoflegends.com",
                 "www.draftkings.com",
-                "www.lyft.com",
                 "www.luno.com",
+                "www.lyft.com",
+                "www.voicemod.net"
+            ]
+        },
+        {
+            "rule": "singular\\.net\\/api\\/v1\\/event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sdk-api-v1"
+            ],
+            "apis": {},
+            "sites": 12,
+            "prevalence": 0.0000833,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "singular_device_id": 0.000006945650286508075
+            },
+            "exampleSites": [
+                "leagueoflegends.com",
+                "euw.leagueoflegends.com",
+                "na.leagueoflegends.com",
+                "playruneterra.com",
+                "playvalorant.com",
+                "signup.na.leagueoflegends.com",
+                "sportsbook.draftkings.com",
+                "universe.leagueoflegends.com",
+                "www.draftkings.com",
+                "www.luno.com",
+                "www.lyft.com",
+                "www.voicemod.net"
+            ]
+        },
+        {
+            "rule": "singular\\.net\\/api\\/v1\\/event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sdk-api-v1"
+            ],
+            "apis": {},
+            "sites": 12,
+            "prevalence": 0.0000833,
+            "cnames": [],
+            "responseHashes": [
+                "8a49ea5083c8030f058182dcd6ae7da0960e68a0d762f71e8e8375f5732fb2fb"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "singular_device_id": 0.000006945650286508075
+            },
+            "exampleSites": [
+                "leagueoflegends.com",
+                "euw.leagueoflegends.com",
+                "na.leagueoflegends.com",
+                "playruneterra.com",
+                "playvalorant.com",
+                "signup.na.leagueoflegends.com",
+                "sportsbook.draftkings.com",
+                "universe.leagueoflegends.com",
+                "www.draftkings.com",
+                "www.luno.com",
+                "www.lyft.com",
                 "www.voicemod.net"
             ]
         }
@@ -61,14 +168,16 @@
         "cpu": 0,
         "cache": 3
     },
-    "cookies": 0,
+    "cookies": 0.00000695,
     "types": {
-        "Script": 12
+        "Script": 21,
+        "Preflight": 12,
+        "XHR": 12
     },
     "nameservers": [
+        "ns-887.awsdns-46.net",
         "ns-1422.awsdns-49.org",
         "ns-1710.awsdns-21.co.uk",
-        "ns-26.awsdns-03.com",
-        "ns-887.awsdns-46.net"
+        "ns-26.awsdns-03.com"
     ]
 }

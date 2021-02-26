@@ -7,10 +7,12 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000764,
+    "prevalence": 0.0000695,
     "sites": 10,
     "subdomains": [
-        "cdn"
+        "cdn",
+        "collector.regiolab",
+        "gw.regiolab"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -32,19 +34,87 @@
                 "Date.prototype.getTimezoneOffset": 6
             },
             "sites": 6,
-            "prevalence": 0.0000458,
+            "prevalence": 0.0000417,
             "cnames": [],
             "responseHashes": [
                 "24813bc4bd60832246394dd2c176df82956377c81fb5ebf6b990154ba4b879b7"
             ],
             "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
             "exampleSites": [
                 "omroepzeeland.nl",
-                "www.omroepwest.nl",
                 "www.omroepgelderland.nl",
-                "www.rtvdrenthe.nl",
+                "www.omroepwest.nl",
                 "www.rtvnoord.nl",
+                "www.rtvdrenthe.nl",
                 "www.rtvoost.nl"
+            ]
+        },
+        {
+            "rule": "primed\\.io\\/socket\\.io\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "collector.regiolab"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.0000417,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "omroepzeeland.nl",
+                "www.omroepgelderland.nl",
+                "www.omroepwest.nl",
+                "www.rtvnoord.nl",
+                "www.rtvdrenthe.nl",
+                "www.rtvoost.nl"
+            ]
+        },
+        {
+            "rule": "primed\\.io\\/api\\/v1\\/personalise",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gw.regiolab"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "omroepgelderland.nl",
+                "www.omroepgelderland.nl"
+            ]
+        },
+        {
+            "rule": "primed\\.io\\/api\\/v1\\/personalise",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gw.regiolab"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "bf2491645b6957cad8b587b508fff5915ec77a596c6102be015e73c4838cd816"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "omroepgelderland.nl",
+                "www.omroepgelderland.nl"
             ]
         }
     ],
@@ -52,12 +122,15 @@
     "performance": {},
     "cookies": 0,
     "types": {
-        "Script": 6
+        "Script": 6,
+        "WebSocket": 6,
+        "Preflight": 2,
+        "XHR": 2
     },
     "nameservers": [
-        "ns-cloud-d1.googledomains.com",
         "ns-cloud-d2.googledomains.com",
+        "ns-cloud-d4.googledomains.com",
         "ns-cloud-d3.googledomains.com",
-        "ns-cloud-d4.googledomains.com"
+        "ns-cloud-d1.googledomains.com"
     ]
 }
