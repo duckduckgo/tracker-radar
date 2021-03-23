@@ -7,19 +7,23 @@
     "prevalence": 0.0000208,
     "sites": 3,
     "subdomains": [
-        "xdn"
+        "xdn",
+        "io"
     ],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "tf\\.rs\\/static\\/tfs\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "xdn"
             ],
-            "apis": {},
+            "apis": {
+                "window.localStorage": 2,
+                "Navigator.prototype.userAgent": 2
+            },
             "sites": 2,
             "prevalence": 0.0000139,
             "cnames": [],
@@ -27,6 +31,26 @@
                 "7aa05b38c22ba158a61e58a713f594858ab3789fc23cda6ae75618775949deb7"
             ],
             "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "telegraf.rs",
+                "www.telegraf.rs"
+            ]
+        },
+        {
+            "rule": "tf\\.rs\\/socket\\.io\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "io"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -62,11 +86,12 @@
     "cookies": 0,
     "types": {
         "Script": 2,
+        "WebSocket": 2,
         "Image": 2
     },
     "nameservers": [
+        "ns03.comtradecloud.com",
         "ns02.comtradecloud.com",
-        "ns01.comtradecloud.com",
-        "ns03.comtradecloud.com"
+        "ns01.comtradecloud.com"
     ]
 }

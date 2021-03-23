@@ -4,33 +4,47 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000208,
-    "sites": 3,
+    "prevalence": 0.0000485,
+    "sites": 7,
     "subdomains": [
-        "chef-widget.bf-whatsnext-production.aws"
+        "cdn.bf-whatsnext-production.aws",
+        "chef-widget.bf-whatsnext-production.aws",
+        "assets.bf-tracking-production.aws",
+        "bf-tracking-production.aws"
     ],
-    "cnames": [],
-    "fingerprinting": 0,
+    "cnames": [
+        {
+            "original": "cdn.whatsnext.focus.de",
+            "resolved": "cdn.bf-whatsnext-production.aws.bfops.io"
+        }
+    ],
+    "fingerprinting": 2,
     "resources": [
         {
-            "rule": "bfops\\.io\\/api\\/v1\\/telemetry",
+            "rule": "bfops\\.io\\/static\\/widget\\/focus\\/wnloader\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "chef-widget.bf-whatsnext-production.aws"
+                "cdn.bf-whatsnext-production.aws"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000208,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [
+                {
+                    "original": "cdn.whatsnext.focus.de",
+                    "resolved": "cdn.bf-whatsnext-production.aws.bfops.io"
+                }
+            ],
+            "responseHashes": [
+                "a2a99a6bb9bdc4b2631eef3dc710ab5e764d5f889fb7726ea775a1783c8e65ae"
+            ],
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "focus.de",
-                "praxistipps.chip.de",
-                "www.bunte.de"
+                "www.focus.de"
             ]
         },
         {
@@ -55,21 +69,199 @@
                 "praxistipps.chip.de",
                 "www.bunte.de"
             ]
+        },
+        {
+            "rule": "bfops\\.io\\/api\\/v1\\/telemetry",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "chef-widget.bf-whatsnext-production.aws"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000208,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "focus.de",
+                "praxistipps.chip.de",
+                "www.bunte.de"
+            ]
+        },
+        {
+            "rule": "bfops\\.io\\/api\\/v1\\/telemetry\\/error\\/widget_error",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "chef-widget.bf-whatsnext-production.aws"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "focus.de",
+                "www.netmoms.de"
+            ]
+        },
+        {
+            "rule": "bfops\\.io\\/api\\/v1\\/telemetry\\/error\\/widget_error",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "chef-widget.bf-whatsnext-production.aws"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "focus.de",
+                "www.netmoms.de"
+            ]
+        },
+        {
+            "rule": "bfops\\.io\\/2\\.14\\.0\\/sp\\.js",
+            "cookies": 0.0000139,
+            "fingerprinting": 2,
+            "subdomains": [
+                "assets.bf-tracking-production.aws"
+            ],
+            "apis": {
+                "Date.prototype.getTimezoneOffset": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.doNotTrack": 2,
+                "Navigator.prototype.language": 2,
+                "Navigator.prototype.mimeTypes": 2,
+                "Navigator.prototype.javaEnabled": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "Screen.prototype.colorDepth": 2,
+                "Navigator.prototype.cookieEnabled": 2,
+                "Date.prototype.getTime": 2,
+                "window.localStorage": 2,
+                "Document.cookie setter": 2,
+                "Document.cookie getter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "50cf303cfaa020fcbedd6ad1bf045a008cbb88dfc792f731f07235dd1ca13599"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_snow_ses.ea17": {
+                    "ttl": 1801,
+                    "length": 1,
+                    "prevalence": 0.000013870010263807595,
+                    "uniqueness": 0.5
+                },
+                "_snow_id.ea17": {
+                    "ttl": 1801,
+                    "length": 108,
+                    "prevalence": 0.000013870010263807595,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "focus.de",
+                "www.focus.de"
+            ]
+        },
+        {
+            "rule": "bfops\\.io\\/com\\.snowplowanalytics\\.snowplow\\/tp2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "bf-tracking-production.aws"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "focus.de",
+                "www.focus.de"
+            ]
+        },
+        {
+            "rule": "bfops\\.io\\/com\\.snowplowanalytics\\.snowplow\\/tp2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "bf-tracking-production.aws"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "2689367b205c16ce32ed4200942b8b8b1e262dfc70d9bc9fbc77c49699a4f1df"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "focus.de",
+                "www.focus.de"
+            ]
+        },
+        {
+            "rule": "bfops\\.io\\/static\\/widget\\/netmoms\\/wnloader\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn.bf-whatsnext-production.aws"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "b7cbeaf9c802e19105ce2e963e905696bedbdc4d73ae65e068e6813cc09c6486"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "netmoms.de",
+                "www.netmoms.de"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.0000139,
     "types": {
-        "Preflight": 3,
-        "XHR": 3
+        "Script": 6,
+        "XHR": 7,
+        "Preflight": 7
     },
     "nameservers": [
         "a5-66.akam.net",
-        "a7-67.akam.net",
-        "a1-118.akam.net",
-        "a2-64.akam.net",
         "a16-67.akam.net",
-        "a28-65.akam.net"
+        "a7-67.akam.net",
+        "a28-65.akam.net",
+        "a1-118.akam.net",
+        "a2-64.akam.net"
     ]
 }

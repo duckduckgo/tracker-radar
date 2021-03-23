@@ -7,33 +7,37 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000695,
-    "sites": 10,
+    "prevalence": 0.0000832,
+    "sites": 12,
     "subdomains": [
         "stat.i3",
+        "cdn.dtm",
         "trac.i3",
+        "ad",
+        "pics",
         "digstatic",
         "www",
-        "p",
-        "pics"
+        "p"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "dmm\\.com\\/latest\\/js\\/dmm\\.tracking\\.min\\.js",
-            "cookies": 0,
+            "cookies": 0.0000139,
             "fingerprinting": 1,
             "subdomains": [
                 "stat.i3"
             ],
             "apis": {
-                "Navigator.prototype.languages": 1,
-                "Navigator.prototype.userAgent": 1,
-                "Date.prototype.getTime": 2
+                "Navigator.prototype.languages": 2,
+                "Document.cookie getter": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Date.prototype.getTime": 3,
+                "Document.cookie setter": 2
             },
-            "sites": 2,
-            "prevalence": 0.0000139,
+            "sites": 4,
+            "prevalence": 0.0000277,
             "cnames": [],
             "responseHashes": [
                 "ff1b52d5455c7a2beafbfb70ce8dfecdebdeb615c71eca0aa6721c991a4f0d90"
@@ -42,7 +46,36 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
+                "eroyakuba.com",
                 "erogazo-ngo.com",
+                "syukatsulabo.jp",
+                "www.moeruasia.net"
+            ]
+        },
+        {
+            "rule": "dmm\\.com\\/tagmanager_v1\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "cdn.dtm"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 1,
+                "Date.prototype.getTime": 2,
+                "Date.prototype.getTimezoneOffset": 2,
+                "Navigator.prototype.product": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "1b045f13d853591d7aecf0ba32c2a69f956d116e737dee2839c7b0d12aeeba20"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "eroyakuba.com",
                 "syukatsulabo.jp"
             ]
         },
@@ -54,28 +87,30 @@
                 "trac.i3"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000139,
+            "sites": 4,
+            "prevalence": 0.0000277,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
+                "eroyakuba.com",
                 "erogazo-ngo.com",
-                "syukatsulabo.jp"
+                "syukatsulabo.jp",
+                "www.moeruasia.net"
             ]
         },
         {
             "rule": "dmm\\.com\\/analytics\\/v0\\.9",
-            "cookies": 0.0000139,
+            "cookies": 0.0000277,
             "fingerprinting": 0,
             "subdomains": [
                 "trac.i3"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000139,
+            "sites": 4,
+            "prevalence": 0.0000277,
             "cnames": [],
             "responseHashes": [
                 "16f4290dfcd337157c07d43cbd24632e74ef6047e4a9cda0ba6eea48ce400616"
@@ -84,8 +119,52 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
+                "eroyakuba.com",
                 "erogazo-ngo.com",
-                "syukatsulabo.jp"
+                "syukatsulabo.jp",
+                "www.moeruasia.net"
+            ]
+        },
+        {
+            "rule": "dmm\\.com\\/ad\\/p\\/r",
+            "cookies": 0.0000139,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ad"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "erogazo-ngo.com",
+                "www.moeruasia.net"
+            ]
+        },
+        {
+            "rule": "dmm\\.com\\/mono\\/movie\\/n\\/now_printing\\/now_printing\\.jpg",
+            "cookies": 0.0000139,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pics"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "efea457c7fc0fae1eb0ec93f4f719189e38b0679cac47c11b829740d9b5675d8"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hentaku.co",
+                "www.javjack.com"
             ]
         },
         {
@@ -96,7 +175,7 @@
                 "digstatic"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.userAgent": 1,
                 "Date.prototype.getTime": 2
             },
             "sites": 2,
@@ -137,7 +216,7 @@
         },
         {
             "rule": "dmm\\.com\\/css\\/digital\\/slider\\.css",
-            "cookies": 0.00000695,
+            "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
                 "www"
@@ -521,23 +600,24 @@
         "cpu": 0,
         "cache": 3
     },
-    "cookies": 0.0000695,
+    "cookies": 0.0000832,
     "types": {
-        "Script": 8,
-        "Preflight": 2,
-        "XHR": 2,
-        "Stylesheet": 6,
-        "Image": 26
+        "Script": 12,
+        "Preflight": 4,
+        "XHR": 4,
+        "Document": 2,
+        "Image": 28,
+        "Stylesheet": 6
     },
     "nameservers": [
+        "a13-64.akam.net",
         "dns-a.iij.ad.jp",
+        "ns6.dmm.com",
         "a9-67.akam.net",
         "ns5.dmm.com",
-        "ns6.dmm.com",
-        "a1-198.akam.net",
-        "a14-65.akam.net",
-        "a13-64.akam.net",
         "a18-66.akam.net",
+        "a14-65.akam.net",
+        "a1-198.akam.net",
         "a12-67.akam.net"
     ]
 }

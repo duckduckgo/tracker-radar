@@ -4,9 +4,10 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000201,
-    "sites": 2,
+    "prevalence": 0.000301,
+    "sites": 3,
     "subdomains": [
+        "login.tmall.ru.gds",
         "fourier.taobao.com.gds",
         "s.alicdn.com.gds",
         "insights.alibaba.com.gds"
@@ -21,12 +22,43 @@
             "resolved": "insights.alibaba.com.gds.alibabadns.com"
         },
         {
+            "original": "login.tmall.ru",
+            "resolved": "login.tmall.ru.gds.alibabadns.com"
+        },
+        {
             "original": "s.alicdn.com",
             "resolved": "s.alicdn.com.gds.alibabadns.com"
         }
     ],
     "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "alibabadns\\.com\\/setCommonCookie\\.htm",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "login.tmall.ru.gds"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "login.tmall.ru",
+                    "resolved": "login.tmall.ru.gds.alibabadns.com"
+                }
+            ],
+            "responseHashes": [
+                "bcd0c685ab687ea6aa4e830fd463c502d42aec336789d4695c1b72303ae14838"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "aliexpress.com",
+                "www.aliexpress.com"
+            ]
+        },
         {
             "rule": "alibabadns\\.com\\/ts",
             "cookies": 0,
@@ -36,7 +68,7 @@
             ],
             "apis": {},
             "sites": 3,
-            "prevalence": 0.000302,
+            "prevalence": 0.000301,
             "cnames": [
                 {
                     "original": "fourier.taobao.com",
@@ -57,14 +89,14 @@
         },
         {
             "rule": "alibabadns\\.com\\/rp",
-            "cookies": 0.000201,
+            "cookies": 0.000301,
             "fingerprinting": 1,
             "subdomains": [
                 "fourier.taobao.com.gds"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000301,
             "cnames": [
                 {
                     "original": "fourier.taobao.com",
@@ -77,15 +109,16 @@
             "type": "Script",
             "firstPartyCookies": {
                 "xlly_s": {
-                    "ttl": 86407,
+                    "ttl": 86408,
                     "length": 1,
-                    "prevalence": 0.00020149103364900262,
-                    "uniqueness": 0.5
+                    "prevalence": 0.0003013863773357444,
+                    "uniqueness": 0.3333333333333333
                 }
             },
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "aliexpress.com",
+                "www.aliexpress.com",
                 "www.alibaba.com"
             ]
         },
@@ -118,7 +151,7 @@
         },
         {
             "rule": "alibabadns\\.com\\/openservice\\/gatewayService",
-            "cookies": 0.000101,
+            "cookies": 0.0001,
             "fingerprinting": 0,
             "subdomains": [
                 "insights.alibaba.com.gds"
@@ -133,7 +166,7 @@
                 }
             ],
             "responseHashes": [
-                "d7b6af426375e51847a56472684600408a029226fe74f5e727a00a0b0c1bfdd3"
+                "4d48395b101bed1cea3e32e04f6670223bb651c3205b9bcfeed668bb5bf15bbd"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -144,7 +177,34 @@
             ]
         },
         {
-            "rule": "alibabadns\\.com\\/@g\\/sc\\/header-footer\\/0\\.0\\.49\\/sc-header-footer\\/$node_modules\\/@alife\\/alpha-icon\\/src\\/iconfont\\.woff",
+            "rule": "alibabadns\\.com\\/@g\\/sc\\/aisn\\/0\\.0\\.66\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "s.alicdn.com.gds"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "s.alicdn.com",
+                    "resolved": "s.alicdn.com.gds.alibabadns.com"
+                }
+            ],
+            "responseHashes": [
+                "dcd6ad8d4591c865ccfffcd14cd450f4de0a568d6bd34cd7398e5bc19d46ec9d"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "alibaba.com",
+                "www.alibaba.com"
+            ]
+        },
+        {
+            "rule": "alibabadns\\.com\\/@g\\/sc\\/header-footer\\/0\\.0\\.51\\/sc-header-footer\\/$node_modules\\/@alife\\/alpha-icon\\/src\\/iconfont\\.woff",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -254,10 +314,12 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000201,
+    "cookies": 0.000301,
     "types": {
+        "XHR": 2,
         "Image": 5,
-        "Script": 4,
+        "Script": 5,
+        "Stylesheet": 2,
         "Font": 2,
         "Other": 6
     },

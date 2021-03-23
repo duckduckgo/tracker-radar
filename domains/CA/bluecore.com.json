@@ -7,18 +7,51 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.00327,
-    "sites": 32,
+    "prevalence": 0.00392,
+    "sites": 39,
     "subdomains": [
         "api",
-        "cdn"
+        "cdn",
+        "onsitestats",
+        "site"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
         {
+            "rule": "bluecore\\.com\\/api\\/track\\/customer_patch",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 11,
+            "prevalence": 0.00111,
+            "cnames": [],
+            "responseHashes": [
+                "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gamecrate.com",
+                "society6.com",
+                "www.anthropologie.com",
+                "www.cdw.ca",
+                "www.footlocker.ca",
+                "www.footlocker.com",
+                "www.newegg.com",
+                "www.newegg.ca",
+                "www.sephora.com",
+                "www.urbanoutfitters.com",
+                "www.yeti.com"
+            ]
+        },
+        {
             "rule": "bluecore\\.com\\/triggermail\\.js\\/brother\\.js",
-            "cookies": 0.000204,
+            "cookies": 0.000201,
             "fingerprinting": 2,
             "subdomains": [
                 "api"
@@ -37,7 +70,7 @@
                 "window.sessionStorage": 2
             },
             "sites": 2,
-            "prevalence": 0.000204,
+            "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
                 "8149055deea370cc5cc073b8733bd34bf8ca34e415f691fd52bd38c901927a17"
@@ -45,21 +78,21 @@
             "type": "Script",
             "firstPartyCookies": {
                 "mp_brother_mixpanel": {
-                    "ttl": 31536006,
+                    "ttl": 31536011,
                     "length": 140,
-                    "prevalence": 0.0002043318348998774,
+                    "prevalence": 0.00020108586366378444,
                     "uniqueness": 1
                 },
                 "bc_invalidateUrlCache_targeting": {
-                    "ttl": 606,
+                    "ttl": 604,
                     "length": 13,
-                    "prevalence": 0.0002043318348998774,
+                    "prevalence": 0.00020108586366378444,
                     "uniqueness": 1
                 },
                 "bluecoreNV": {
-                    "ttl": 30000006,
+                    "ttl": 30003604,
                     "length": 4,
-                    "prevalence": 0.0002043318348998774,
+                    "prevalence": 0.00020108586366378444,
                     "uniqueness": 0.5
                 }
             },
@@ -72,13 +105,15 @@
         {
             "rule": "bluecore\\.com\\/falcon\\/assets\\/targeting\\/bcQuery\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "cdn"
             ],
-            "apis": {},
-            "sites": 7,
-            "prevalence": 0.000715,
+            "apis": {
+                "Event.prototype.timeStamp": 2
+            },
+            "sites": 11,
+            "prevalence": 0.00111,
             "cnames": [],
             "responseHashes": [
                 "6ca995cd8dd6f8d1ec0662b17b4914cb3510c3418fef9139f91d2cba90bdd94c"
@@ -91,21 +126,25 @@
                 "www.ashleyfurniture.com",
                 "www.basspro.com",
                 "www.brother-usa.com",
+                "www.cabelas.com",
+                "www.footlocker.ca",
+                "www.footlocker.com",
                 "www.jcrew.com",
                 "www.nike.com",
-                "www.paulaschoice.com"
+                "www.stadiumgoods.com",
+                "www.yeti.com"
             ]
         },
         {
-            "rule": "bluecore\\.com\\/api\\/track\\/customer_patch",
+            "rule": "bluecore\\.com\\/api\\/track\\/viewed_onsite",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
                 "api"
             ],
             "apis": {},
-            "sites": 7,
-            "prevalence": 0.000715,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
                 "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
@@ -114,13 +153,79 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "anthropologie.com",
-                "www.cdw.ca",
-                "www.hayneedle.com",
-                "www.newegg.com",
-                "www.newegg.ca",
-                "www.sephora.com",
-                "www.urbanoutfitters.com"
+                "ashleyfurniture.com",
+                "www.brother-usa.com",
+                "www.footlocker.com"
+            ]
+        },
+        {
+            "rule": "bluecore\\.com\\/analytics",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "onsitestats"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "273521bed7e711c50d14a61c0c00cdee804056167c6b7b430ce2af8820715c25"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ashleyfurniture.com",
+                "www.brother-usa.com",
+                "www.footlocker.com"
+            ]
+        },
+        {
+            "rule": "bluecore\\.com\\/location",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "site"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e07e985e4b7bd999219b3bcd7836cbc329d31786571f74ea1fda4a01c3959c8c"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "siteBrand": 0.00010054293183189222
+            },
+            "exampleSites": [
+                "basspro.com",
+                "www.cabelas.com"
+            ]
+        },
+        {
+            "rule": "bluecore\\.com\\/api\\/track\\/viewed_page",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cabelas.ca",
+                "www.footlocker.ca",
+                "www.footlocker.com"
             ]
         }
     ],
@@ -131,15 +236,15 @@
         "cpu": 0,
         "cache": 3
     },
-    "cookies": 0.00204,
+    "cookies": 0.00292,
     "types": {
-        "Script": 9,
-        "XHR": 7
+        "XHR": 22,
+        "Script": 13
     },
     "nameservers": [
         "ns-cloud-b3.googledomains.com",
+        "ns-cloud-b4.googledomains.com",
         "ns-cloud-b1.googledomains.com",
-        "ns-cloud-b2.googledomains.com",
-        "ns-cloud-b4.googledomains.com"
+        "ns-cloud-b2.googledomains.com"
     ]
 }

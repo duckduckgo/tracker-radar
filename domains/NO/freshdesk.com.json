@@ -7,16 +7,22 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000403,
+    "prevalence": 0.000402,
     "sites": 4,
     "subdomains": [
         "springeronlineservice",
-        "elb11"
+        "elb11",
+        "elb23",
+        "assets"
     ],
     "cnames": [
         {
             "original": "support.fluentu.com",
             "resolved": "elb11.freshdesk.com"
+        },
+        {
+            "original": "support.nordpoolgroup.com",
+            "resolved": "elb23.freshdesk.com"
         }
     ],
     "fingerprinting": 1,
@@ -27,15 +33,20 @@
             "fingerprinting": 0,
             "subdomains": [
                 "springeronlineservice",
-                "elb11"
+                "elb11",
+                "elb23"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000301,
             "cnames": [
                 {
                     "original": "support.fluentu.com",
                     "resolved": "elb11.freshdesk.com"
+                },
+                {
+                    "original": "support.nordpoolgroup.com",
+                    "resolved": "elb23.freshdesk.com"
                 }
             ],
             "responseHashes": [
@@ -46,7 +57,32 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "springer.com",
-                "www.fluentu.com"
+                "www.fluentu.com",
+                "www.nordpoolgroup.com"
+            ]
+        },
+        {
+            "rule": "freshdesk\\.com\\/widget\\/freshwidget\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {
+                "Navigator.prototype.appVersion": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "a126fc513b831f8460dc9733c023000d5a0eee394d33787bae7c9f7362d58a66"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fluentu.com",
+                "www.nordpoolgroup.com"
             ]
         }
     ],
@@ -57,14 +93,15 @@
         "cpu": 0,
         "cache": 1
     },
-    "cookies": 0.000101,
+    "cookies": 0,
     "types": {
-        "Document": 2
+        "Document": 3,
+        "Script": 2
     },
     "nameservers": [
+        "ns-1270.awsdns-30.org",
         "ns-1955.awsdns-52.co.uk",
         "ns-350.awsdns-43.com",
-        "ns-514.awsdns-00.net",
-        "ns-1270.awsdns-30.org"
+        "ns-514.awsdns-00.net"
     ]
 }

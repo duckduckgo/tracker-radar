@@ -7,14 +7,15 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000695,
-    "sites": 10,
+    "prevalence": 0.0000763,
+    "sites": 11,
     "subdomains": [
         "navigator-dynamic",
+        "navigator-analytics",
         "personal-eventsapi"
     ],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "tweakwise\\.com\\/22\\/css\\/search",
@@ -63,48 +64,6 @@
             ]
         },
         {
-            "rule": "tweakwise\\.com\\/api\\/events",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "personal-eventsapi"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000139,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "fonq.nl",
-                "www.scapino.nl"
-            ]
-        },
-        {
-            "rule": "tweakwise\\.com\\/api\\/events",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "personal-eventsapi"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000139,
-            "cnames": [],
-            "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "fonq.nl",
-                "www.scapino.nl"
-            ]
-        },
-        {
             "rule": "tweakwise\\.com\\/20\\/css\\/search",
             "cookies": 0.0000139,
             "fingerprinting": 0,
@@ -149,13 +108,36 @@
             ]
         },
         {
-            "rule": "tweakwise\\.com\\/scripts\\/twp\\.js",
+            "rule": "tweakwise\\.com\\/bundles\\/scout\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "personal-eventsapi"
+                "navigator-analytics"
             ],
             "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "plus.nl",
+                "www.plus.nl"
+            ]
+        },
+        {
+            "rule": "tweakwise\\.com\\/scripts\\/twp\\.js",
+            "cookies": 0.00000694,
+            "fingerprinting": 1,
+            "subdomains": [
+                "personal-eventsapi"
+            ],
+            "apis": {
+                "Document.cookie getter": 1,
+                "Document.cookie setter": 1
+            },
             "sites": 2,
             "prevalence": 0.0000139,
             "cnames": [],
@@ -163,7 +145,14 @@
                 "9dbdaf3b7e01dae923fae9c8fd7130fe653dcb5ee6e842151def30b1bbcd826d"
             ],
             "type": "Script",
-            "firstPartyCookies": {},
+            "firstPartyCookies": {
+                "tw-personal": {
+                    "ttl": 31536000,
+                    "length": 36,
+                    "prevalence": 0.0000069350051319037975,
+                    "uniqueness": 1
+                }
+            },
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "scapino.nl",
@@ -173,17 +162,15 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0000417,
+    "cookies": 0.0000485,
     "types": {
         "Stylesheet": 5,
-        "Script": 7,
-        "Preflight": 2,
-        "XHR": 2
+        "Script": 9
     },
     "nameservers": [
-        "ns3-04.azure-dns.org",
         "ns4-04.azure-dns.info",
         "ns1-04.azure-dns.com",
-        "ns2-04.azure-dns.net"
+        "ns2-04.azure-dns.net",
+        "ns3-04.azure-dns.org"
     ]
 }

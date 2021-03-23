@@ -4,17 +4,21 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.00111,
-    "sites": 11,
+    "prevalence": 0.00131,
+    "sites": 13,
     "subdomains": [
+        "ghs",
         "api.id.ghs",
-        "api.stage-id.ghs",
-        "ghs"
+        "api.stage-id.ghs"
     ],
     "cnames": [
         {
             "original": "a.et.nytimes.com",
             "resolved": "ghs.googlehosted.com"
+        },
+        {
+            "original": "api.id.swmhdata.jetzt.de",
+            "resolved": "api.id.ghs.googlehosted.com"
         },
         {
             "original": "api.id.swmhdata.sueddeutsche.de",
@@ -31,10 +35,95 @@
         {
             "original": "ipapi.tmbi.com",
             "resolved": "ghs.googlehosted.com"
+        },
+        {
+            "original": "uie.radio-canada.ca",
+            "resolved": "ghs.googlehosted.com"
         }
     ],
     "fingerprinting": 0,
     "resources": [
+        {
+            "rule": "googlehosted\\.com\\/v0\\/ids",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ghs"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "uie.radio-canada.ca",
+                    "resolved": "ghs.googlehosted.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "radio-canada.ca",
+                "ici.radio-canada.ca"
+            ]
+        },
+        {
+            "rule": "googlehosted\\.com\\/v0\\/ids",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ghs"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "uie.radio-canada.ca",
+                    "resolved": "ghs.googlehosted.com"
+                }
+            ],
+            "responseHashes": [
+                "b4c27e06d6bb3d60e7a28cdc72d3fe0490e6e4c9ed3af22c6b5b019c620112fe"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "radio-canada.ca",
+                "ici.radio-canada.ca"
+            ]
+        },
+        {
+            "rule": "googlehosted\\.com\\/api\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ghs"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000402,
+            "cnames": [
+                {
+                    "original": "ipapi.tmbi.com",
+                    "resolved": "ghs.googlehosted.com"
+                }
+            ],
+            "responseHashes": [
+                "655e0ebc26b165294120e8c21845be000c57efdf2920b02e12d061bb0219d7ae"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "familyhandyman.com",
+                "www.rd.com",
+                "www.selection.ca",
+                "www.tasteofhome.com"
+            ]
+        },
         {
             "rule": "googlehosted\\.com\\/js\\/id-service\\.js",
             "cookies": 0,
@@ -45,8 +134,12 @@
             ],
             "apis": {},
             "sites": 4,
-            "prevalence": 0.000404,
+            "prevalence": 0.000402,
             "cnames": [
+                {
+                    "original": "api.id.swmhdata.jetzt.de",
+                    "resolved": "api.id.ghs.googlehosted.com"
+                },
                 {
                     "original": "api.id.swmhdata.sueddeutsche.de",
                     "resolved": "api.id.ghs.googlehosted.com"
@@ -69,51 +162,22 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "sueddeutsche.de",
+                "jetzt.de",
                 "www.sueddeutsche.de",
                 "www.stuttgarter-zeitung.de",
                 "www.stuttgarter-nachrichten.de"
             ]
         },
         {
-            "rule": "googlehosted\\.com\\/api\\/",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "ghs"
-            ],
-            "apis": {},
-            "sites": 4,
-            "prevalence": 0.000404,
-            "cnames": [
-                {
-                    "original": "ipapi.tmbi.com",
-                    "resolved": "ghs.googlehosted.com"
-                }
-            ],
-            "responseHashes": [
-                "655e0ebc26b165294120e8c21845be000c57efdf2920b02e12d061bb0219d7ae"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "familyhandyman.com",
-                "www.rd.com",
-                "www.selection.ca",
-                "www.tasteofhome.com"
-            ]
-        },
-        {
             "rule": "googlehosted\\.com\\/track",
-            "cookies": 0.000202,
+            "cookies": 0.000201,
             "fingerprinting": 0,
             "subdomains": [
                 "ghs"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000202,
+            "prevalence": 0.000201,
             "cnames": [
                 {
                     "original": "a.et.nytimes.com",
@@ -134,10 +198,11 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000101,
+    "cookies": 0.000201,
     "types": {
+        "Preflight": 2,
+        "XHR": 6,
         "Script": 4,
-        "XHR": 4,
         "Other": 2
     },
     "nameservers": []

@@ -10,19 +10,23 @@
     "prevalence": 0.000201,
     "sites": 2,
     "subdomains": [
-        "cdn"
+        "cdn",
+        "eligibility"
     ],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "wootric\\.com\\/wootric-sdk\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "cdn"
             ],
-            "apis": {},
+            "apis": {
+                "Date.prototype.getTime": 1,
+                "Document.cookie getter": 1
+            },
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
@@ -33,8 +37,30 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "docker.com",
-                "www.thebody.com"
+                "logrocket.com",
+                "hub.docker.com"
+            ]
+        },
+        {
+            "rule": "wootric\\.com\\/eligible\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "eligibility"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "c3f614f354a84d4e12374e55178c6142b604106b4d75d783d4aef080fd40a244"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "logrocket.com",
+                "blog.logrocket.com"
             ]
         }
     ],
@@ -47,10 +73,11 @@
     },
     "cookies": 0,
     "types": {
-        "Script": 2
+        "Script": 2,
+        "XHR": 2
     },
     "nameservers": [
-        "dns2.registrar-servers.com",
-        "dns1.registrar-servers.com"
+        "dns1.registrar-servers.com",
+        "dns2.registrar-servers.com"
     ]
 }

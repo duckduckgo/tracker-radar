@@ -4,9 +4,11 @@
     "source": [
         "DuckDuckGo-GB"
     ],
-    "prevalence": 0.000202,
-    "sites": 2,
+    "prevalence": 0.000302,
+    "sites": 3,
     "subdomains": [
+        "api",
+        "staging-api",
         "webchat",
         "cdn"
     ],
@@ -14,23 +16,31 @@
     "fingerprinting": 1,
     "resources": [
         {
-            "rule": "asksid\\.ai\\/v1\\/akzo\\/api\\/ab\\/chatbutton",
+            "rule": "asksid\\.ai\\/akzo-webchat-eukwdc\\/wc\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
-                "webchat"
+                "api",
+                "staging-api"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.product": 2,
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 1,
+                "Date.prototype.getTime": 1
+            },
             "sites": 2,
-            "prevalence": 0.000202,
+            "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "45287c79fc4304bed9f5685fd6a90e1970abbc014104d592838fcf61f731d660"
+            ],
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "duluxdecoratorcentre.co.uk",
-                "www.dulux.co.uk"
+                "cuprinol.co.uk",
+                "www.cuprinol.co.uk"
             ]
         },
         {
@@ -41,8 +51,29 @@
                 "webchat"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cuprinol.co.uk",
+                "www.dulux.co.uk",
+                "www.duluxdecoratorcentre.co.uk"
+            ]
+        },
+        {
+            "rule": "asksid\\.ai\\/v1\\/akzo\\/api\\/ab\\/chatbutton",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "webchat"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
                 "43349853ae151dffb303550d7f8dc418544e9148f59ddd4db6e555fb11dc439d"
@@ -51,8 +82,9 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "duluxdecoratorcentre.co.uk",
-                "www.dulux.co.uk"
+                "cuprinol.co.uk",
+                "www.dulux.co.uk",
+                "www.duluxdecoratorcentre.co.uk"
             ]
         },
         {
@@ -63,8 +95,8 @@
                 "cdn"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
                 "11f7135454f3a8e254333928597b1484b559d6c7ddcb087c578eeabe01960986"
@@ -73,8 +105,9 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "duluxdecoratorcentre.co.uk",
-                "www.dulux.co.uk"
+                "cuprinol.co.uk",
+                "www.dulux.co.uk",
+                "www.duluxdecoratorcentre.co.uk"
             ]
         }
     ],
@@ -82,16 +115,17 @@
     "performance": {},
     "cookies": 0,
     "types": {
-        "Preflight": 2,
-        "XHR": 2,
-        "Image": 2
+        "Script": 2,
+        "Preflight": 3,
+        "XHR": 3,
+        "Image": 3
     },
     "nameservers": [
+        "ns10.webreus.nl",
         "ns11.webreus.nl",
         "ns1-01.azure-dns.com",
         "ns2-01.azure-dns.net",
         "ns3-01.azure-dns.org",
-        "ns4-01.azure-dns.info",
-        "ns10.webreus.nl"
+        "ns4-01.azure-dns.info"
     ]
 }
