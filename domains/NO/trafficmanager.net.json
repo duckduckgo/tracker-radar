@@ -9,14 +9,22 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000907,
+    "prevalence": 0.000904,
     "sites": 9,
     "subdomains": [
+        "kaz-mtl1-tm-geoloc",
         "psapi-gateway-prod",
-        "bingshoppingtool-t2app-prod",
-        "bingshoppingtoolshopifyapp-prod"
+        "fps-na-api-3"
     ],
     "cnames": [
+        {
+            "original": "geoloc.kitco.com",
+            "resolved": "kaz-mtl1-tm-geoloc.trafficmanager.net"
+        },
+        {
+            "original": "na.fps3.ford.com",
+            "resolved": "fps-na-api-3.trafficmanager.net"
+        },
         {
             "original": "psapi.nrk.no",
             "resolved": "psapi-gateway-prod.trafficmanager.net"
@@ -24,6 +32,33 @@
     ],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "trafficmanager\\.net\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "kaz-mtl1-tm-geoloc"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "geoloc.kitco.com",
+                    "resolved": "kaz-mtl1-tm-geoloc.trafficmanager.net"
+                }
+            ],
+            "responseHashes": [
+                "9170a8b2fb3234baa721bf8b3de5935d8d160f6f987215b83b07a49a403e5e74"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kitco.com",
+                "online.kitco.com"
+            ]
+        },
         {
             "rule": "trafficmanager\\.net\\/playback\\/metadata\\/p1_oslo_akershus",
             "cookies": 0,
@@ -77,26 +112,30 @@
             ]
         },
         {
-            "rule": "trafficmanager\\.net\\/uet\\/tracking_script",
+            "rule": "trafficmanager\\.net\\/fps\\/api\\/personalization_1_8\\/get",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "bingshoppingtool-t2app-prod",
-                "bingshoppingtoolshopifyapp-prod"
+                "fps-na-api-3"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            "cnames": [
+                {
+                    "original": "na.fps3.ford.com",
+                    "resolved": "fps-na-api-3.trafficmanager.net"
+                }
             ],
-            "type": "Script",
+            "responseHashes": [
+                "936386cfd5527492ba131d2777c1ebb9215dad35eb0b61a001ee66697efdc368"
+            ],
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "barbershop.no",
-                "www.leveret.com"
+                "ford.com",
+                "www.ford.com"
             ]
         }
     ],
@@ -109,15 +148,10 @@
         "cpu": 0,
         "cache": 0
     },
-    "cookies": 0.000201,
+    "cookies": 0.0001,
     "types": {
-        "Fetch": 4,
-        "Script": 2
+        "XHR": 4,
+        "Fetch": 4
     },
-    "nameservers": [
-        "tm1.dns-tm.com",
-        "tm2.dns-tm.com",
-        "tm1.edgedns-tm.info",
-        "tm2.edgedns-tm.info"
-    ]
+    "nameservers": []
 }

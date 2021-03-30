@@ -9,34 +9,84 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.000205,
+    "prevalence": 0.000201,
     "sites": 2,
     "subdomains": [
-        "www.sc"
+        "www.sc",
+        "www"
     ],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "pages05\\.net\\/lp\\/static\\/js\\/iMAWebCookie\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
+            "cookies": 0.0001,
+            "fingerprinting": 1,
             "subdomains": [
                 "www.sc"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.cookieEnabled": 2,
+                "Document.cookie getter": 1,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 1
+            },
             "sites": 2,
-            "prevalence": 0.000205,
+            "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
                 "27a1e80167055f562f0ddda38620ec1f5a354c5ab795c75da16874f4095520f3"
             ],
             "type": "Script",
-            "firstPartyCookies": {},
+            "firstPartyCookies": {
+                "com.silverpop.iMAWebCookie": {
+                    "ttl": 86400017,
+                    "length": 36,
+                    "prevalence": 0.00010029084344599338,
+                    "uniqueness": 1
+                },
+                "com.silverpop.iMA.page_visit": {
+                    "ttl": 1217,
+                    "length": 3,
+                    "prevalence": 0.00010029084344599338,
+                    "uniqueness": 1
+                },
+                "com.silverpop.iMA.session": {
+                    "ttl": 1217,
+                    "length": 36,
+                    "prevalence": 0.00010029084344599338,
+                    "uniqueness": 1
+                }
+            },
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "bigbash.com.au",
-                "www.cricket.com.au"
+                "cricket.com.au",
+                "www.netwealth.com.au"
+            ]
+        },
+        {
+            "rule": "pages05\\.net\\/WTS\\/event\\.jpeg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "com.silverpop.iMAWebCookie": 0.00010029084344599338,
+                "com.silverpop.iMA.session": 0.00010029084344599338
+            },
+            "exampleSites": [
+                "cricket.com.au",
+                "www.netwealth.com.au"
             ]
         }
     ],
@@ -47,14 +97,15 @@
         "cpu": 0,
         "cache": 3
     },
-    "cookies": 0,
+    "cookies": 0.0001,
     "types": {
-        "Script": 2
+        "Script": 2,
+        "Image": 2
     },
     "nameservers": [
-        "ns4.acoustic-adm.com",
-        "ns1.acoustic-adm.com",
         "ns2.acoustic-adm.com",
-        "ns3.acoustic-adm.com"
+        "ns3.acoustic-adm.com",
+        "ns4.acoustic-adm.com",
+        "ns1.acoustic-adm.com"
     ]
 }

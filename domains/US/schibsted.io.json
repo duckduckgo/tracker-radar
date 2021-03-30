@@ -13,7 +13,8 @@
         "collector",
         "cogwheel.inventory",
         "region-api.inventory",
-        "cdn.inventory"
+        "cdn.inventory",
+        "cdn.svp"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -64,33 +65,55 @@
                 "vglive.no",
                 "www.adressa.no",
                 "www.aftenposten.no",
-                "www.aftenbladet.no",
                 "www.aftonbladet.se",
+                "www.aftenbladet.no",
                 "www.blocket.se",
                 "www.bt.no",
                 "www.finn.no",
                 "www.godt.no",
                 "www.klart.se",
-                "www.prisjakt.nu",
                 "www.prisjakt.no",
+                "www.prisjakt.nu",
                 "www.svd.se",
                 "www.tek.no",
                 "www.vg.no"
             ]
         },
         {
+            "rule": "schibsted\\.io\\/search\\/locationKeyWordsByIp",
+            "cookies": 0.0000139,
+            "fingerprinting": 0,
+            "subdomains": [
+                "region-api.inventory"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "5d284e3035c9b28dc6239c2a070f590bbac6fe2f94bab831efe29dd3995bea48"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "omni.se",
+                "www.klart.se"
+            ]
+        },
+        {
             "rule": "schibsted\\.io\\/search\\/locationKeyWordsByIP",
-            "cookies": 0.0000278,
+            "cookies": 0.0000277,
             "fingerprinting": 0,
             "subdomains": [
                 "region-api.inventory"
             ],
             "apis": {},
             "sites": 4,
-            "prevalence": 0.0000278,
+            "prevalence": 0.0000277,
             "cnames": [],
             "responseHashes": [
-                "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+                "5d284e3035c9b28dc6239c2a070f590bbac6fe2f94bab831efe29dd3995bea48"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -191,6 +214,33 @@
             ]
         },
         {
+            "rule": "schibsted\\.io\\/player\\/3\\.24\\.3\\/player\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn.svp"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2,
+                "Date.prototype.getTime": 2,
+                "window.devicePixelRatio": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "c6d6552838b8fa150db088699f0e11682b3151ec23b771f826d8bb4a9405e195"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "aftenbladet.no",
+                "www.bt.no"
+            ]
+        },
+        {
             "rule": "schibsted\\.io\\/ad-takeover\\/4\\.2\\.1\\/ad-takeover\\.js",
             "cookies": 0,
             "fingerprinting": 0,
@@ -214,24 +264,25 @@
         },
         {
             "rule": "schibsted\\.io\\/search\\/locationKeyWordsByIP",
-            "cookies": 0.0000139,
+            "cookies": 0.0000208,
             "fingerprinting": 0,
             "subdomains": [
                 "region-api.inventory"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000139,
+            "sites": 3,
+            "prevalence": 0.0000208,
             "cnames": [],
             "responseHashes": [
-                "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+                "5d284e3035c9b28dc6239c2a070f590bbac6fe2f94bab831efe29dd3995bea48"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "blocket.se",
-                "www.blocket.se"
+                "www.blocket.se",
+                "www.svd.se"
             ]
         },
         {
@@ -365,28 +416,6 @@
             ]
         },
         {
-            "rule": "schibsted\\.io\\/search\\/locationKeyWordsByIp",
-            "cookies": 0.0000139,
-            "fingerprinting": 0,
-            "subdomains": [
-                "region-api.inventory"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000139,
-            "cnames": [],
-            "responseHashes": [
-                "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "klart.se",
-                "www.klart.se"
-            ]
-        },
-        {
             "rule": "schibsted\\.io\\/api\\/v1\\/track\\/sdrn:schibsted:client:klartse",
             "cookies": 0,
             "fingerprinting": 0,
@@ -409,28 +438,6 @@
             ]
         },
         {
-            "rule": "schibsted\\.io\\/api\\/v1\\/track\\/sdrn:schibsted:client:prisjaktse",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "collector"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000139,
-            "cnames": [],
-            "responseHashes": [
-                "90687150c18ec51580a40877532d01b82c479d207966f5b51972f0efee916f18"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "prisjakt.nu",
-                "www.prisjakt.nu"
-            ]
-        },
-        {
             "rule": "schibsted\\.io\\/api\\/v1\\/track\\/sdrn:schibsted:client:prisjaktno",
             "cookies": 0,
             "fingerprinting": 0,
@@ -450,6 +457,28 @@
             "exampleSites": [
                 "prisjakt.no",
                 "www.prisjakt.no"
+            ]
+        },
+        {
+            "rule": "schibsted\\.io\\/api\\/v1\\/track\\/sdrn:schibsted:client:prisjaktse",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "collector"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "90687150c18ec51580a40877532d01b82c479d207966f5b51972f0efee916f18"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "prisjakt.nu",
+                "www.prisjakt.nu"
             ]
         },
         {
@@ -592,18 +621,18 @@
         "cpu": 0,
         "cache": 0
     },
-    "cookies": 0.0000833,
+    "cookies": 0.000111,
     "types": {
-        "Fetch": 36,
-        "Script": 20,
+        "Fetch": 37,
+        "Script": 22,
         "XHR": 6,
         "Preflight": 2,
         "Other": 2
     },
     "nameservers": [
-        "ns-839.awsdns-40.net",
-        "ns-106.awsdns-13.com",
         "ns-1275.awsdns-31.org",
-        "ns-1968.awsdns-54.co.uk"
+        "ns-1968.awsdns-54.co.uk",
+        "ns-839.awsdns-40.net",
+        "ns-106.awsdns-13.com"
     ]
 }
