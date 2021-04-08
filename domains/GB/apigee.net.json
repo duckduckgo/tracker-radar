@@ -9,11 +9,11 @@
     "source": [
         "DuckDuckGo-GB"
     ],
-    "prevalence": 0.000706,
-    "sites": 7,
+    "prevalence": 0.000804,
+    "sites": 8,
     "subdomains": [
-        "ee-prod-prod-02",
         "cisco-dsc-prod",
+        "ee-prod-prod-02",
         "ee-prod-prod",
         "cmg-prod"
     ],
@@ -34,6 +34,33 @@
     "fingerprinting": 1,
     "resources": [
         {
+            "rule": "apigee\\.net\\/v1\\/netid",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cisco-dsc-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "dsc.cisco.com",
+                    "resolved": "cisco-dsc-prod.apigee.net"
+                }
+            ],
+            "responseHashes": [
+                "4746b16284857545f505e19ab277a40c6e76a92bd28064ee31b45fff6de20d69"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cisco.com",
+                "www.cisco.com"
+            ]
+        },
+        {
             "rule": "apigee\\.net\\/v1\\/identity\\/authorize",
             "cookies": 0.000101,
             "fingerprinting": 0,
@@ -42,7 +69,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000202,
+            "prevalence": 0.000201,
             "cnames": [
                 {
                     "original": "api.ee.co.uk",
@@ -52,39 +79,62 @@
             "responseHashes": [],
             "type": "Document",
             "firstPartyCookies": {},
-            "firstPartyCookiesSent": {
-                "gpv_Page": 0.00010081661457808247
-            },
+            "firstPartyCookiesSent": {},
             "exampleSites": [
                 "ee.co.uk",
                 "id.ee.co.uk"
             ]
         },
         {
-            "rule": "apigee\\.net\\/v1\\/netid",
+            "rule": "apigee\\.net\\/plusnet\\/orders\\/v1\\/channel",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "cisco-dsc-prod"
+                "ee-prod-prod"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000202,
+            "prevalence": 0.000201,
             "cnames": [
                 {
-                    "original": "dsc.cisco.com",
-                    "resolved": "cisco-dsc-prod.apigee.net"
+                    "original": "api.external.plus.net",
+                    "resolved": "ee-prod-prod.apigee.net"
                 }
             ],
-            "responseHashes": [
-                "c4d944919fd5736c09842bb96b2088c62b4221015ec906280e40c1c397ff4223"
-            ],
-            "type": "Script",
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "cisco.com",
-                "www.cisco.com"
+                "plus.net",
+                "www.plus.net"
+            ]
+        },
+        {
+            "rule": "apigee\\.net\\/plusnet\\/orders\\/v1\\/channel",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ee-prod-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "api.external.plus.net",
+                    "resolved": "ee-prod-prod.apigee.net"
+                }
+            ],
+            "responseHashes": [
+                "23da04f8327162c02264ebf0798b082eae554e97e50c0b1ad446decdb5165eb7"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "plus.net",
+                "www.plus.net"
             ]
         },
         {
@@ -96,7 +146,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000202,
+            "prevalence": 0.000201,
             "cnames": [
                 {
                     "original": "api.external.plus.net",
@@ -121,7 +171,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000202,
+            "prevalence": 0.000201,
             "cnames": [
                 {
                     "original": "api.external.plus.net",
@@ -129,7 +179,7 @@
                 }
             ],
             "responseHashes": [
-                "cfcedb2f7a9ebc669430826f043269df19fcccf1a6bfde87e85009d253e6e6e2"
+                "73782b8b949964bc3948dbe30f64e2ae71172bead5184c656672b4c98dd6ba52"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -148,10 +198,10 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000202,
+            "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "90212b530c99bf9471a38d9e46fa4ebce26703c956399af1764aefd0527fe430"
+                "e47148b0db6b0934c59ab116a7b873879b2835a2d5bd64662d8b89467b92d991"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -166,12 +216,12 @@
         "CDN"
     ],
     "performance": {},
-    "cookies": 0.000202,
+    "cookies": 0.000201,
     "types": {
-        "Document": 2,
         "Script": 2,
-        "Preflight": 2,
-        "XHR": 4
+        "Document": 2,
+        "Preflight": 4,
+        "XHR": 6
     },
     "nameservers": [
         "ns-116.awsdns-14.com",

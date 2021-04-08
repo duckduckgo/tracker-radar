@@ -4,7 +4,7 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000278,
+    "prevalence": 0.0000277,
     "sites": 4,
     "subdomains": [
         "websdk",
@@ -12,7 +12,7 @@
         "main.api"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "ujet\\.co\\/v1\\/loader\\/loader\\.js",
@@ -22,7 +22,7 @@
                 "websdk"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 2
+                "Navigator.prototype.userAgent": 1
             },
             "sites": 2,
             "prevalence": 0.0000139,
@@ -55,7 +55,7 @@
             "type": "Document",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "IR_gbd": 0.000006945650286508075
+                "IR_gbd": 0.0000138699140758823
             },
             "exampleSites": [
                 "lorextechnology.com",
@@ -87,11 +87,13 @@
         {
             "rule": "ujet\\.co\\/v1\\/static\\/js\\/app\\.82dc471e\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "websdk"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.language": 2
+            },
             "sites": 2,
             "prevalence": 0.0000139,
             "cnames": [],
@@ -109,20 +111,26 @@
         {
             "rule": "ujet\\.co\\/v1\\/static\\/js\\/chunk-vendors\\.722eb0b9\\.js",
             "cookies": 0,
-            "fingerprinting": 1,
+            "fingerprinting": 2,
             "subdomains": [
                 "websdk"
             ],
             "apis": {
-                "window.localStorage": 1,
-                "window.sessionStorage": 1,
-                "Date.prototype.getTime": 1,
-                "Navigator.prototype.product": 1
+                "Navigator.prototype.userAgent": 2,
+                "Event.prototype.timeStamp": 2,
+                "Navigator.prototype.product": 2,
+                "window.localStorage": 2,
+                "window.sessionStorage": 2,
+                "Navigator.prototype.platform": 2,
+                "Navigator.prototype.vendor": 2,
+                "Date.prototype.getTime": 2
             },
             "sites": 2,
             "prevalence": 0.0000139,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "042d60268cde794cf5c31f0eb71c514b33cf5c28cebf7d6fb941794c184aceb5"
+            ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -139,13 +147,16 @@
                 "externals"
             ],
             "apis": {
-                "window.localStorage": 1,
-                "window.sessionStorage": 1
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2,
+                "window.sessionStorage": 2
             },
             "sites": 2,
             "prevalence": 0.0000139,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "42d06f7e1c58dffaf5bfb2fe92893e67867e54dcbba5dfa071ff7e97d251822c"
+            ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -165,7 +176,9 @@
             "sites": 2,
             "prevalence": 0.0000139,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "38ab1ad4c6161ed72b8c286e6455dde316486ac1f392d463febf5b784306136e"
+            ],
             "type": "Font",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -185,8 +198,32 @@
             "sites": 2,
             "prevalence": 0.0000139,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "d36d4584399531b257ad3f7fc7f52b3c51c2119f39da49a608b9e71076b6921f"
+            ],
             "type": "Media",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lorextechnology.com",
+                "www.lorextechnology.com"
+            ]
+        },
+        {
+            "rule": "ujet\\.co\\/api\\/v2\\/proactive_chat_triggers",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "main.api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            ],
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -213,26 +250,6 @@
                 "lorextechnology.com",
                 "www.lorextechnology.com"
             ]
-        },
-        {
-            "rule": "ujet\\.co\\/api\\/v2\\/proactive_chat_triggers",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "main.api"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000139,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "lorextechnology.com",
-                "www.lorextechnology.com"
-            ]
         }
     ],
     "categories": [],
@@ -249,13 +266,13 @@
         "Stylesheet": 2,
         "Font": 2,
         "Media": 2,
-        "Preflight": 2,
-        "XHR": 2
+        "XHR": 2,
+        "Preflight": 2
     },
     "nameservers": [
+        "ns-1246.awsdns-27.org",
         "ns-1550.awsdns-01.co.uk",
         "ns-506.awsdns-63.com",
-        "ns-893.awsdns-47.net",
-        "ns-1246.awsdns-27.org"
+        "ns-893.awsdns-47.net"
     ]
 }
