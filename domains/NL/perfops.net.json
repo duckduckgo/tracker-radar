@@ -8,7 +8,8 @@
     "sites": 2,
     "subdomains": [
         "cdn",
-        "rum-cdn"
+        "rum-cdn",
+        "devnull"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -23,7 +24,7 @@
             "apis": {
                 "Navigator.prototype.userAgent": 2,
                 "window.localStorage": 2,
-                "Navigator.prototype.onLine": 2
+                "Navigator.prototype.onLine": 1
             },
             "sites": 2,
             "prevalence": 0.000201,
@@ -41,7 +42,7 @@
         },
         {
             "rule": "perfops\\.net\\/providers",
-            "cookies": 0.000201,
+            "cookies": 0.000101,
             "fingerprinting": 0,
             "subdomains": [
                 "rum-cdn"
@@ -50,15 +51,35 @@
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [
-                "619c492b78bb4c8c94e08fb004a15102085fb80cafc87d5e5ffcf4b3232a4015"
-            ],
+            "responseHashes": [],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "123test.nl",
                 "www.opensubtitles.org"
+            ]
+        },
+        {
+            "rule": "perfops\\.net\\/rum\\/v1",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "devnull"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "9e0c57eb67f1e9eaa322fc94c07a064c23447fd80fd4c44e7cdbf1d71aa120fc"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "123test.nl",
+                "www.123test.nl"
             ]
         }
     ],
@@ -72,10 +93,10 @@
     "cookies": 0.000201,
     "types": {
         "Script": 2,
-        "XHR": 2
+        "XHR": 4
     },
     "nameservers": [
-        "dave.ns.cloudflare.com",
-        "amber.ns.cloudflare.com"
+        "amber.ns.cloudflare.com",
+        "dave.ns.cloudflare.com"
     ]
 }

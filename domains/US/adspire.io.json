@@ -4,8 +4,8 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000485,
-    "sites": 7,
+    "prevalence": 0.0000416,
+    "sites": 6,
     "subdomains": [
         "track",
         "adware"
@@ -15,13 +15,15 @@
     "resources": [
         {
             "rule": "adspire\\.io\\/code\\/alltimeru\\/",
-            "cookies": 0,
+            "cookies": 0.0000139,
             "fingerprinting": 1,
             "subdomains": [
                 "track"
             ],
             "apis": {
+                "Document.cookie getter": 2,
                 "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2,
                 "Navigator.prototype.userAgent": 2
             },
             "sites": 2,
@@ -31,7 +33,20 @@
                 "18e33aee395752b6027f71f85dd307799379b384cb41a96e6027be075289c5f7"
             ],
             "type": "Script",
-            "firstPartyCookies": {},
+            "firstPartyCookies": {
+                "adspire_uid": {
+                    "ttl": 63072011,
+                    "length": 24,
+                    "prevalence": 0.000013862319443289251,
+                    "uniqueness": 1
+                },
+                "ads_adware": {
+                    "ttl": 2592011,
+                    "length": 4,
+                    "prevalence": 0.000013862319443289251,
+                    "uniqueness": 0.5
+                }
+            },
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "alltime.ru",
@@ -54,10 +69,34 @@
             ],
             "type": "XHR",
             "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
+            "firstPartyCookiesSent": {
+                "adspire_uid": 0.000013862319443289251
+            },
             "exampleSites": [
                 "alltime.ru",
                 "www.alltime.ru"
+            ]
+        },
+        {
+            "rule": "adspire\\.io\\/code\\/stoloto\\.ru\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "track"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "stoloto.ru",
+                "www.stoloto.ru"
             ]
         }
     ],
@@ -70,11 +109,11 @@
     },
     "cookies": 0.0000208,
     "types": {
-        "Script": 2,
+        "Script": 4,
         "XHR": 2
     },
     "nameservers": [
-        "ns1.reg.ru",
-        "ns2.reg.ru"
+        "ns2.reg.ru",
+        "ns1.reg.ru"
     ]
 }

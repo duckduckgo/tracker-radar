@@ -7,16 +7,21 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.00111,
-    "sites": 11,
+    "prevalence": 0.00141,
+    "sites": 14,
     "subdomains": [
+        "cdn",
         "arduino-prod-cd-7d4guw5p2tbeio38.edge.tenants",
+        "makermedia-cd-mz8mmiokurx5ls4h.edge.tenants",
+        "messari-cd-uxuyfsbhh8l0f9d7.edge.tenants",
         "newyorkmedia-cd-xglicwlvftem6afq.edge.tenants",
-        "honestdoor",
-        "native-prod-cd-yncplrbkvveyjcxu.edge.tenants.eu",
-        "cdn"
+        "native-prod-cd-yncplrbkvveyjcxu.edge.tenants.eu"
     ],
     "cnames": [
+        {
+            "original": "accounts.messari.io",
+            "resolved": "messari-cd-uxuyfsbhh8l0f9d7.edge.tenants.auth0.com"
+        },
         {
             "original": "auth.native-instruments.com",
             "resolved": "native-prod-cd-yncplrbkvveyjcxu.edge.tenants.eu.auth0.com"
@@ -26,6 +31,10 @@
             "resolved": "arduino-prod-cd-7d4guw5p2tbeio38.edge.tenants.auth0.com"
         },
         {
+            "original": "login.make.co",
+            "resolved": "makermedia-cd-mz8mmiokurx5ls4h.edge.tenants.auth0.com"
+        },
+        {
             "original": "login.nymag.com",
             "resolved": "newyorkmedia-cd-xglicwlvftem6afq.edge.tenants.auth0.com"
         }
@@ -33,22 +42,59 @@
     "fingerprinting": 1,
     "resources": [
         {
+            "rule": "auth0\\.com\\/js\\/auth0\\/9\\.11\\/auth0\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.appName": 4,
+                "Date.prototype.getTime": 4,
+                "Navigator.prototype.userAgent": 4
+            },
+            "sites": 4,
+            "prevalence": 0.000402,
+            "cnames": [],
+            "responseHashes": [
+                "2ae5aed8aab32ad79a23003eee65fec603ddbeed83b296ba4735ff840e12b005"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "polaris.com",
+                "offroad.polaris.com",
+                "www.indianmotorcycle.com",
+                "www.polaris.com"
+            ]
+        },
+        {
             "rule": "auth0\\.com\\/authorize",
-            "cookies": 0.000603,
+            "cookies": 0.000703,
             "fingerprinting": 0,
             "subdomains": [
                 "arduino-prod-cd-7d4guw5p2tbeio38.edge.tenants",
+                "makermedia-cd-mz8mmiokurx5ls4h.edge.tenants",
+                "messari-cd-uxuyfsbhh8l0f9d7.edge.tenants",
                 "newyorkmedia-cd-xglicwlvftem6afq.edge.tenants",
-                "honestdoor",
                 "native-prod-cd-yncplrbkvveyjcxu.edge.tenants.eu"
             ],
             "apis": {},
-            "sites": 6,
-            "prevalence": 0.000603,
+            "sites": 7,
+            "prevalence": 0.000703,
             "cnames": [
                 {
                     "original": "login.arduino.cc",
                     "resolved": "arduino-prod-cd-7d4guw5p2tbeio38.edge.tenants.auth0.com"
+                },
+                {
+                    "original": "login.make.co",
+                    "resolved": "makermedia-cd-mz8mmiokurx5ls4h.edge.tenants.auth0.com"
+                },
+                {
+                    "original": "accounts.messari.io",
+                    "resolved": "messari-cd-uxuyfsbhh8l0f9d7.edge.tenants.auth0.com"
                 },
                 {
                     "original": "login.nymag.com",
@@ -60,9 +106,10 @@
                 }
             ],
             "responseHashes": [
+                "1b6b3107ab50f5506f93b14a5d3ae85517c878e953885e8a0effac94db26d6f7",
+                "de27c53a7e110a272fe0ee869ca95de67e37f7e0c3a80c6dc0772a36729fefcb",
                 "26a35f36a69b8fe9df0aa7f2fca60f636598da6fde92efc58e7c60de2cd347d3",
-                "69164dbe07e6a1faaa9fcf5e110f508b9f506c06c6bc535cd047c9f9e032ceb8",
-                "876dac0a7ca39cfc292a7c994e8ba6427a45a39deb3f7f820d427cdbfe8c5217",
+                "d116e99b0b10d6f72664e62da0e177a4e5ef5dbf8221f32287e81fee6cf25bbc",
                 "8ec708153facc644902845a479011bb4c8e6ee50c800c4bfb008fec49f6ac2fe",
                 "082ff52536e0c353ef638c852fe56a606b393319d1afe0278887acdb2783bdfc"
             ],
@@ -71,37 +118,12 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "arduino.cc",
+                "makezine.com",
+                "messari.io",
                 "nymag.com",
-                "www.honestdoor.com",
                 "www.native-instruments.com",
                 "www.thecut.com",
                 "www.vulture.com"
-            ]
-        },
-        {
-            "rule": "auth0\\.com\\/js\\/auth0\\/9\\.11\\/auth0\\.min\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "cdn"
-            ],
-            "apis": {
-                "Navigator.prototype.appName": 2,
-                "Date.prototype.getTime": 2,
-                "Navigator.prototype.userAgent": 2
-            },
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "2ae5aed8aab32ad79a23003eee65fec603ddbeed83b296ba4735ff840e12b005"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "indianmotorcycle.com",
-                "www.polaris.com"
             ]
         }
     ],
@@ -112,13 +134,13 @@
         "cpu": 0,
         "cache": 1
     },
-    "cookies": 0.000603,
+    "cookies": 0.000703,
     "types": {
-        "Document": 6,
-        "Script": 2
+        "Script": 4,
+        "Document": 7
     },
     "nameservers": [
-        "monroe.ns.cloudflare.com",
-        "kolton.ns.cloudflare.com"
+        "kolton.ns.cloudflare.com",
+        "monroe.ns.cloudflare.com"
     ]
 }

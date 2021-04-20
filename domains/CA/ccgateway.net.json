@@ -7,11 +7,12 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.00292,
-    "sites": 29,
+    "prevalence": 0.00361,
+    "sites": 36,
     "subdomains": [
         "carbon-cdn",
-        "cdn",
+        "script-api",
+        "privacy-location-edge",
         "tag-api-2-1",
         "dp"
     ],
@@ -20,139 +21,143 @@
     "resources": [
         {
             "rule": "ccgateway\\.net\\/script",
-            "cookies": 0.00271,
+            "cookies": 0.0012,
             "fingerprinting": 1,
             "subdomains": [
                 "carbon-cdn"
             ],
             "apis": {
-                "Date.prototype.getTime": 27,
-                "Document.cookie getter": 17,
-                "Document.cookie setter": 17
+                "Date.prototype.getTime": 30,
+                "window.sessionStorage": 23,
+                "Document.cookie getter": 12,
+                "Document.cookie setter": 12
             },
-            "sites": 27,
-            "prevalence": 0.00271,
+            "sites": 30,
+            "prevalence": 0.00301,
             "cnames": [],
             "responseHashes": [
-                "55795d89183b33c1aa784a4ea05df41d1fe2eb4ca52f48bdb9b7685b851fc0dd",
-                "471cd0fdefc3c6c28466893c7629fabaa9ccfaf55f8fa9630198c23de1d29425",
-                "0a9f82d526ed1ebdc246d99a4277531d92b1b83627e6545e2b728f22edd2c84e",
-                "26901806c5d5c69ae1fadcd971fef8bc5e7c04c27376a0e502424d09a23954c4",
-                "8f0d977ec62a98296ec3c855b5921a9a13713d2c81c01e06b2e9549950757771",
-                "9f2e0f4b1c60ab645621ab948d42e8eb204cff95c2b5261477de917838c5dd11",
-                "8e3aea2b3c045908f1c5f9b0e265cbd618a5f1e83a3cb1453e286d87bac8f2a5",
-                "2beb914fe2fde2905c3b58453fde884592a16093da1897544522f1d1210a977a",
-                "36509d0d2a760401bc3235cd281eb3573df770553fca84590a8a7201b301bba1",
-                "62c9e7fde4d51f0150f413a8d4de366d0c085b613583a5eaf07a6c976c2577a4",
-                "b376de2d06f9aa7f237bca157daa13237763048b5f48a1aace81545a535cccdd",
-                "6f6f02441a4d6dd8854bc98429c9d51cb0d1ac80e68bf8f251835804949dcf78",
-                "cce2eda1adacb22b93c74580aff37c8d8575a65da4b9989861489ca4a181bb2d",
-                "400c4900262cfea1a4b01d5acde1a9eeb38ee5428bead4711ef4ec32acb0a1ba",
-                "2d0ce944efa0d27d4cfc0b0cb4ac78173c56a9a829e0b233b80e570e55999ce2",
-                "265d6b5b2da2e6fde457255901d13995373261169caf846563339907baf5ed38",
-                "f476da1e834c882fff05e4f9601cf3d0da683eb13b976c8d6048ca19b87eb763",
-                "dd1db665ff8154192f9fdceca3ca247effbba94dc99394581efeea6ede1364a4",
-                "4bec8a6b50e768fcc01157ad724fc04a5440c241fadd48c6e057bd9cdaa6b050",
-                "dceb701350d365148bea9b5fc729fe68e50d3e52e2c3bae05dca3bc170e5f64f",
-                "e3eb1203b5f2d983c22b29bdfb882c774980c186cdc52a37ec9635993dc03125",
-                "5bbf9fd50c7c23c334e6f7c802b2946c0c7391436d17980fee6e66ea543383ae",
-                "ff271177e77e6551741226eacfefb4edbbf670b10c3d401846a8f8df635c1c07",
-                "6c4a2b7150bed08a4dc700b6a011cdac1577ee929babca10e24bbd28028bf61f",
-                "5d588d9f587d88c3dff61a89f22a4b49094a2ae16ac86e0f6c5143bd1a083ebb",
-                "f0b6409812984fea3c30f801261d0c126f66872e15e46372dd3f6cfbb617f7e7"
+                "9babaea15885a65a91e9ab5009b0c360344ab244c35721f07f22212b3ad6e199",
+                "d6f8d041b5c1b36987e0c113a4d1ff6fe4a5d5c7761f4f98e8857d6b968b74b4",
+                "ab907c873fb982aa8b76dbf3682dade23f8c05ff97eef529060b26c91bf1187e",
+                "d1d81715251dbe0760669e8afd50016458fe28965d883bf046c98ca263f4507b",
+                "3e1526b4d88ce48e6871fcd06519cfb3b52c6961a2db64ca66163781c9dbbfae",
+                "f14517691f4b266e96941d58867df4627f0c5181fc5fb9f2a8dbc0892da76f9b",
+                "8c12088b9df4ed3ec0e02abd55d3d39b2a9b1c1f187f7828f0ebbb7aed6f3596",
+                "cd1a3468919c0a966825c0b4f50e4b1674e7f07a4e9bbf08f1ac6f4071b7e768",
+                "0d0bac6187c079d4778be1a828f90450c0110cb60ed67a78ba1841541a4c52c4",
+                "5a6511d611f77b4083c303598295a282c80b9edd48ae50cc8879555fd78d3050",
+                "dad931a6f80c675edd3400aee26bd02c5d71a5615cd51e965e174e37c7f767ea",
+                "6643ef29556157a985e5e9496432eada332d742c2a223a7cd88720b47028cf8e",
+                "c7978a0d2440493751239e6f9b368a1e626205e4126759f38b41c66f12a12f8c",
+                "f2b1608617fca9a23cbf2ba0f77d73f2be9b9a3fc6aa843cd2c529d7ab635bd7",
+                "0b66eea5cd915439738c3ffbc30c9d983caf8f256c54d157b82aa81f84b30329",
+                "dc6fd624509457520066e2d51615abaad9a97f0fc5b31288c48d0a2e8f5e1280",
+                "ae5ef2a78d6e96eb28b009201ce720388c6bdf5b1fca79e82d4b4b0647276529",
+                "7fd0f1ab2e25a9fe3d199ff0e53c4124f4b3561a24f2115132adb873825a372d",
+                "8350dc898aa161260ef1c1e13985c5790817f80eece5bb8976328f06288bae0e",
+                "96df9112a99c49ae1b0c9cfac398b5d8151a2803e106a074d80d42354b874ed3",
+                "930c01a42b7b2e13968250433dde7c0c78e4cedd4dc0683474a53bb676a33ee4",
+                "9a9d3c54977836efb28d1ad15590c06e555907de85b535179e227d21adccaff5",
+                "c48e849730b50791bdc7ba18fe38fd97e018a86546d6267909c769ae13818eb2",
+                "6b5db34f6b388a54bbde265457956749c340a5763490aad16f629c5e911daa01",
+                "04cff53c1932e70a0e1babd7acd330c618b80d3dfa6b90e7fc50653a3d4b6b4c",
+                "01175d626f818ddddfd4437c21cc89a71f2e26fd7eab575d89e8b9a219fb718e",
+                "50463e9b61ec4c67985b300651f11b82785e77931c07e865ce076225a3ca448e",
+                "397f995b5411f58b18d4a8c9e9f40bca2193102b7bd43766e715c6be820ace73",
+                "94b1481ff37072d240dc3ba209d0d6e1eeef07ebcd5a8d0b3eccb23e034e7cbb"
             ],
             "type": "Script",
             "firstPartyCookies": {
                 "GLAM-JID": {
-                    "ttl": 1203,
+                    "ttl": 1202,
                     "length": 32,
-                    "prevalence": 0.0017092298411421677,
+                    "prevalence": 0.0012048192771084338,
                     "uniqueness": 1
                 },
                 "GLAM-AID": {
-                    "ttl": 2592003,
+                    "ttl": 2592002,
                     "length": 32,
-                    "prevalence": 0.0017092298411421677,
+                    "prevalence": 0.0012048192771084338,
                     "uniqueness": 1
                 },
                 "GLAM-SID": {
                     "ttl": null,
                     "length": 32,
-                    "prevalence": 0.0017092298411421677,
+                    "prevalence": 0.0012048192771084338,
                     "uniqueness": 1
                 },
                 "__j_state": {
-                    "ttl": 1203,
-                    "length": 230,
-                    "prevalence": 0.0017092298411421677,
+                    "ttl": 1202,
+                    "length": 231,
+                    "prevalence": 0.0012048192771084338,
                     "uniqueness": 1
                 }
             },
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "pairedlife.com",
-                "www.thestreet.com",
-                "owlcation.com",
-                "www.biography.com",
-                "reelrundown.com",
-                "www.cliqueduplateau.com",
+                "www.organicauthority.com",
+                "www.si.com",
+                "hobbylark.com",
                 "holidappy.com",
-                "danslescoulisses.com",
-                "discover.hubpages.com",
-                "bellatory.com",
-                "www.cinemaclock.com",
-                "exemplore.com",
                 "pethelpful.com",
-                "delishably.com",
-                "swimsuit.si.com",
-                "youmemindbody.com",
                 "www.maxim.com",
-                "dengarden.com",
-                "www.troisfoisparjour.com",
-                "hobbylark.com"
+                "discover.hubpages.com",
+                "delishably.com",
+                "danslescoulisses.com",
+                "www.cliqueduplateau.com",
+                "bitcoinmagazine.com",
+                "www.5ingredients15minutes.com",
+                "axleaddict.com",
+                "mtonews.com",
+                "www.thestreet.com",
+                "exemplore.com",
+                "swimsuit.si.com",
+                "www.cinemaclock.com",
+                "youmemindbody.com",
+                "www.biography.com"
             ]
         },
         {
-            "rule": "ccgateway\\.net\\/script\\/launcher\\/4\\/user\\.js",
+            "rule": "ccgateway\\.net\\/script\\/launcher\\/1\\/user\\.js",
             "cookies": 0,
             "fingerprinting": 1,
             "subdomains": [
-                "cdn"
+                "script-api"
             ],
             "apis": {
-                "window.localStorage": 26,
-                "window.sessionStorage": 26
+                "window.localStorage": 30,
+                "window.sessionStorage": 30
             },
-            "sites": 26,
-            "prevalence": 0.00261,
+            "sites": 30,
+            "prevalence": 0.00301,
             "cnames": [],
             "responseHashes": [
-                "35bbe317a3f7acddba3870e3aca6c5752dd3474ebb4dda6ed624df9abc64f0b8"
+                "6c02f985f5f5b415611b0c1317611b428066dab3a4106b616ffcee9ecf00c163"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "levelskip.com",
                 "swimsuit.si.com",
-                "pairedlife.com",
-                "www.cinemaclock.com",
-                "holidappy.com",
-                "www.troisfoisparjour.com",
-                "hollywoodpq.com",
-                "axleaddict.com",
-                "www.si.com",
                 "owlcation.com",
+                "danslescoulisses.com",
+                "bitcoinmagazine.com",
+                "holidappy.com",
+                "www.cinemaclock.com",
+                "axleaddict.com",
+                "discover.hubpages.com",
+                "pairedlife.com",
+                "mtonews.com",
                 "www.biography.com",
-                "wehavekids.com",
-                "delishably.com",
-                "pethelpful.com",
+                "levelskip.com",
+                "bellatory.com",
+                "www.troisfoisparjour.com",
+                "reelrundown.com",
                 "dengarden.com",
                 "www.maxim.com",
-                "bellatory.com",
-                "exemplore.com",
-                "reelrundown.com",
-                "www.cliqueduplateau.com"
+                "www.cliqueduplateau.com",
+                "youmemindbody.com",
+                "wehavekids.com"
             ]
         },
         {
@@ -160,143 +165,210 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
+                "script-api"
+            ],
+            "apis": {},
+            "sites": 30,
+            "prevalence": 0.00301,
+            "cnames": [],
+            "responseHashes": [
+                "a45e86f0c18bb324e485e3049d9de0797b114b95fd1d695cf8f67dbac8ac78b0",
+                "5b6018651ab2f7578d30752814316acd3ea1bd20adf67f56e20da0b16b913b73",
+                "40d0a8f70d3648e628b84782ab3fbb5fb7c7bd0bdf8c57a386c78ef657bd8a11",
+                "e1425df20e9ffacffaf68955a7e19fc083afca130b1aec97f25b3cf4cd0733b4",
+                "573887a4edbd9c31acbc9cba2c8041f57136b8099054e4222fc2a4d39eb44a81",
+                "44feb4768d2e15e5cafdfe60ec8224d7e8c0b2f09013d72f3ccc2bd82af800d7",
+                "c8e9793cb67e1bbf846b7ff020788b153351078edc942994a9addf02dac19c57",
+                "84a823dcf38ac6f3ba0d9eb674289a2e1c4ea6c7cfd6b95ff352024eab004e1b",
+                "5172354066500c83c74755743118de5fc5e6ba028774503bc5baec04e83a3c49",
+                "ab23f6f4f78757986d8d87922098d2e363fe2445ff7fd2637f5e6f99399b78f0",
+                "9a33c095ac35232ed9861aaaa7971bf86c4ec0643bf18ac3fa6bada0a41dfc90",
+                "ed3641a70dffce12894d2c7dbe3209786629da6e5d627b30fd634fce7bab0efd",
+                "d90bae1af8c789c260ed280d8846cf81f4c66aa4aeeb974d8e0cb53c35e137d1",
+                "a6cece343132bd10dd9ced386ef5b79036b8b475ba270027a77a3fdfa3db2f7a",
+                "826b8e39c3e6ecd6b5e19b798d87d4eb227387a6340ce803555529ad37cbd4fa",
+                "1ffe14878762ba7e116c67e3ebdf00df24b4c2ff2a8413461846c1a090b71693",
+                "666551ebcf8bb71e1a350c6c34227c4a7e7e4f5c753b4e7717dfffc79a5cf01b",
+                "ade49af4eb76263a8c3bb183ee99611511e3b972b142cbf3bd323741562e7d22",
+                "5ffd5e977324af65f396084c82fff20380810d3d2e5468372cffb55ebf81cc52",
+                "dc9c26976cf1e642e9a329ce654bb67656ca5779063280c7c0df134ecaf577a2",
+                "10997102aec06c53ee9b7d7472bf34f4708348bf003d923be8a1cbcabd402a85",
+                "5d88cb3cb9ef23127883e9de572eadbd1fde269a12223018402d3f4ee795495c",
+                "e38f64656e0d8307075d0de1c6a65da37f0917745dcd6b627f0cb7ad4f86df27",
+                "37e6de1be3e19b12b391c352df24278644187262df9b82ed6b61a7b646b8b104",
+                "63d5b51ac9f62eb037fb9e4d5b571b7db26c19b55aedf15665d742ef6de830c7",
+                "d977d053a38fd65fb50d1b5bebfd298b626305e4271f1cf606b40d788f61ba4e",
+                "bb0461348eff3e975d39a65539e4fe9593a474deca1a28b499561658c72ef049",
+                "55ec89281ffa4d4a740c2266f2f55fb79d3077f29d9f74d8f7d78d57f8401358",
+                "e96fa19a8cf99d84c67ec2c97e6105a456b98a52bc4882243f123406810ba677"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "www.cinemaclock.com",
+                "www.troisfoisparjour.com",
+                "delishably.com",
+                "www.si.com",
+                "www.thestreet.com",
+                "pethelpful.com",
+                "www.maxim.com",
+                "www.cliqueduplateau.com",
+                "holidappy.com",
+                "axleaddict.com",
+                "dengarden.com",
+                "owlcation.com",
+                "www.biography.com",
+                "bitcoinmagazine.com",
+                "hobbylark.com",
+                "mtonews.com",
+                "danslescoulisses.com",
+                "www.organicauthority.com",
+                "hollywoodpq.com",
+                "reelrundown.com"
+            ]
+        },
+        {
+            "rule": "ccgateway\\.net\\/script\\/launcher\\/1\\/realtime\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "script-api"
+            ],
+            "apis": {
+                "window.localStorage": 23
+            },
+            "sites": 23,
+            "prevalence": 0.00231,
+            "cnames": [],
+            "responseHashes": [
+                "7c44874e212bb59909bbc1963a75d2c326cae854268a8f9b57a222de325d7b5d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "www.thestreet.com",
+                "wehavekids.com",
+                "axleaddict.com",
+                "www.biography.com",
+                "reelrundown.com",
+                "bellatory.com",
+                "swimsuit.si.com",
+                "owlcation.com",
+                "dengarden.com",
+                "www.maxim.com",
+                "pethelpful.com",
+                "delishably.com",
+                "www.si.com",
+                "hobbylark.com",
+                "bitcoinmagazine.com",
+                "levelskip.com",
+                "pairedlife.com",
+                "discover.hubpages.com",
+                "exemplore.com",
+                "holidappy.com"
+            ]
+        },
+        {
+            "rule": "ccgateway\\.net\\/script\\/launcher\\/1\\/api\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "script-api"
+            ],
+            "apis": {},
+            "sites": 30,
+            "prevalence": 0.00301,
+            "cnames": [],
+            "responseHashes": [
+                "16fba9f2e761fdb9e33395aba520661833e53b81f3c055e29bd634598ff2e7bb"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "pethelpful.com",
+                "mtonews.com",
+                "bellatory.com",
+                "www.troisfoisparjour.com",
+                "www.thestreet.com",
+                "dengarden.com",
+                "hobbylark.com",
+                "lactualite.com",
+                "www.si.com",
+                "axleaddict.com",
+                "bitcoinmagazine.com",
+                "www.biography.com",
+                "swimsuit.si.com",
+                "discover.hubpages.com",
+                "www.maxim.com",
+                "www.organicauthority.com",
+                "exemplore.com",
+                "danslescoulisses.com",
+                "reelrundown.com",
+                "pairedlife.com"
+            ]
+        },
+        {
+            "rule": "ccgateway\\.net\\/getProfileRealtime",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
                 "carbon-cdn"
             ],
             "apis": {},
-            "sites": 27,
-            "prevalence": 0.00271,
+            "sites": 23,
+            "prevalence": 0.00231,
             "cnames": [],
             "responseHashes": [
-                "3baff902d8ce47a3221410b5ef72fc394e831e4e4b82aff9895aff5e11e3234f",
-                "710cc3fb21009b447017b648a3bc98486a720a74d7ba9487454427c4c5975e91",
-                "e54b6804ad8c82d556b823f90aa4a132e6458c2f210dcfa38dce60ea0caed018",
-                "b3a70033dc4d3d817a8a69ffa36118c2d0da431b72de61f1d0c5c3c939054e86",
-                "35355e9effd3c148b4c25d2b651a0269fc55b1cc6295ed585daecd513d0074ea",
-                "6575a80935fc241cc9a17aa37b55fe4381d402e52938131632b07abec8c814b8",
-                "eabfa9b9790e71ccfb783495c95cfd9aea71e88a8bfd64848ee35a8b0002bdd1",
-                "77674724446e838c4cc58e9d444437ef1524a34db0df35190e5ac71a602b7466",
-                "162aad06b9814447ea75c80faad4902e218a11aad2ed18bc7ea34a8b7ce555e0",
-                "50adf33c075e1879ec6719a10927582aa259313abaaf2717ab5e2ef75d8e2280",
-                "29c85e6a9b8b97ae849d73cf24a4ec6c7e857b8154564db68d7e8ed57d40fb90",
-                "579378cf7b5de5574b52c3c223ece9d0d032be20aa1b7ab9945e461bb874b63b",
-                "90d9f158149766a1070fed95a539318a55023ce05b3d34f967b19f0b4dcaddf9",
-                "5840dce932f1c11780e62118512b08beb4aa523ff32811518f6c683c87e465a1",
-                "1fc157f158ad83a07cff1e49b61afb0cf5ac2a92e04fa385f9ff799ee8259b0e",
-                "ecac154dd9561e0dc1b3d660b118176e101dc6660625421393a5b6a8bebf1ff6",
-                "2789005ed3402e5f80acbfcb6f0bce23ee06331e371f4a6dfa62dbdfb914870b",
-                "ff27c709ff6b34aa3309a0d59759ee68f9972ecb9f5adb19d4eeeb39aed4180e",
-                "d7484e0c402601c9dd9f723c094cdaa27c7bf225437c01ec86a148155804378e",
-                "0c83e479993d5f9f32c7f843c187578c9eafd4bfdbd1737c2cc4d925e35481a6",
-                "2ba550aba4aaaedcd0053ba715dcd53a8bbbd1348b2ef5ae00a3e5bcc4a16743",
-                "259fbb9b33802a3be49afb9335c2c704444d6330c3c4e9a4c56ca3ce5277c9fe",
-                "c77b6ba550226476d76cf4e0b65954bd3045fdceb21847f05585217bb7e0d132",
-                "b377a72a74b34f2d603c50a3493a81647ca57c69817f588909495d4ff3d228d1",
-                "a6d659dee5c5120808bdfddf0bcab0eec429ee7392d9e3ae26780ad2e6666610"
+                "98f78c90141a3362deff6cd1771962023f766f56f90b6d8c86075bcf55fb3311",
+                "25cf45ed94d59d7d08f046c67f3315821a11f3c29edb6d9e7ce1726b0be2cebd",
+                "d353293c6119c2b80deac446754b1656e60d693c4c25365b9ba93abbf0f021b8",
+                "4906bb755f9059e78f59cd879ff444053265f4d783877b9c196c66df98adf129",
+                "e3106397e9dde9c99420e7ef3031758fc4486a2de5d77f4c1ad57e105fdcb851",
+                "3a05cb0ff64d1e50a98541933c0075d0c16fb5f1963cd7a92802cf0551665d4e",
+                "5cd07b9345d315ebf66a8574dca3147314140ad3b8a76f2b245de2149ebb9a1d",
+                "52f082665af4065d92f66a7d6c54bf279ed8af9171b8b66d597d9c5a9a3331ec",
+                "28f6e8b7c4c7109ea76f37300b90505032f38be02213f5fdf43036f88ddc0e87",
+                "6a2bd7cd64dc4403cdd57f4e6c29d46852bb16b51a97c111b1cb45ef96f61601",
+                "ee83ff6346241826cf85fdcd52c2deedad829139465f305c31d21e9aa34e5354",
+                "bcd4a63f48404e4d43b7f954b6eeb8e896b9163f549a26b96f4cf5636c8d0ad8",
+                "44521273825120cfd98e88ca63c585cdf6fb3a426d3f1e3c6a0aac3f4517fb2d",
+                "411ca17549f3d92a9e858a4afe3e251b389a83b2a3c67c5294958b81e1cc3932",
+                "c28b8dd04ef5ad333f73f34c993716ac0546fa4095faece8c1e05e03c28e8dbf",
+                "cd9d9b54ce8200a8197b0dad906413d2f636ae152b4af38f28e85665eb6f05ad",
+                "450a52cd17fcceea567ba4d8879e6f13db70b7b1320543ec174e8b11fcc1cf93",
+                "7d06e95b854cc843fdf2fc6dbcb687bf04546fc09bc2453b50dbe291089f61a3",
+                "dc670fef0dbffdd224fccbee8af4868489540b2b319a4688a67db86ecb957998",
+                "30e4256b82bb99012c48b3ad389ef3e7d168ee5e118d0ed8db75d42e6bca8f6c",
+                "8755296722753df2ebcca62be5a38d183ade96e6ef6314bf42dffbdda6800035",
+                "eafb1dac1dccf0a281a1176d7674ef2816a3e2dbd9af02aa35442497b6a5de98"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "levelskip.com",
-                "pairedlife.com",
-                "reelrundown.com",
-                "www.cliqueduplateau.com",
-                "exemplore.com",
-                "pethelpful.com",
-                "bellatory.com",
-                "www.si.com",
-                "www.thestreet.com",
-                "mtonews.com",
-                "danslescoulisses.com",
-                "www.troisfoisparjour.com",
                 "www.maxim.com",
-                "delishably.com",
-                "owlcation.com",
-                "www.cinemaclock.com",
-                "holidappy.com",
-                "swimsuit.si.com",
-                "dengarden.com",
-                "axleaddict.com"
-            ]
-        },
-        {
-            "rule": "ccgateway\\.net\\/script\\/launcher\\/7\\/realtime\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "cdn"
-            ],
-            "apis": {},
-            "sites": 22,
-            "prevalence": 0.00221,
-            "cnames": [],
-            "responseHashes": [
-                "4e129df59df013a2f1b89f50dfb41b2cc7b86d5cc4f423b5b3a0f9f488f55364"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "youmemindbody.com",
-                "mtonews.com",
-                "www.si.com",
-                "delishably.com",
-                "hobbylark.com",
-                "bellatory.com",
-                "www.biography.com",
-                "www.thestreet.com",
-                "holidappy.com",
                 "wehavekids.com",
-                "owlcation.com",
-                "levelskip.com",
-                "pethelpful.com",
                 "discover.hubpages.com",
-                "spinditty.com",
-                "reelrundown.com",
-                "www.maxim.com",
-                "exemplore.com",
-                "dengarden.com",
-                "axleaddict.com"
-            ]
-        },
-        {
-            "rule": "ccgateway\\.net\\/script\\/launcher\\/8\\/api\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "cdn"
-            ],
-            "apis": {},
-            "sites": 27,
-            "prevalence": 0.00271,
-            "cnames": [],
-            "responseHashes": [
-                "3f86bf02353be2e2460b20811a6bad038cb9f7f6cdc7800b462dfebd3e95bf9c"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "www.cliqueduplateau.com",
-                "delishably.com",
-                "www.si.com",
-                "youmemindbody.com",
-                "dengarden.com",
-                "owlcation.com",
-                "pethelpful.com",
-                "swimsuit.si.com",
-                "reelrundown.com",
                 "axleaddict.com",
-                "www.thestreet.com",
-                "wehavekids.com",
+                "www.biography.com",
                 "levelskip.com",
-                "www.maxim.com",
-                "bellatory.com",
-                "mtonews.com",
-                "hobbylark.com",
-                "danslescoulisses.com",
+                "www.organicauthority.com",
+                "swimsuit.si.com",
+                "pethelpful.com",
                 "pairedlife.com",
-                "spinditty.com"
+                "mtonews.com",
+                "delishably.com",
+                "hobbylark.com",
+                "bitcoinmagazine.com",
+                "owlcation.com",
+                "reelrundown.com",
+                "www.thestreet.com",
+                "youmemindbody.com",
+                "bellatory.com",
+                "exemplore.com"
             ]
         },
         {
@@ -304,44 +376,43 @@
             "cookies": 0,
             "fingerprinting": 1,
             "subdomains": [
-                "cdn"
+                "script-api"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 26,
-                "Navigator.prototype.language": 26
+                "Navigator.prototype.userAgent": 30,
+                "Navigator.prototype.language": 30
             },
-            "sites": 26,
-            "prevalence": 0.00261,
+            "sites": 30,
+            "prevalence": 0.00301,
             "cnames": [],
             "responseHashes": [
-                "3902ebd687f992f1b029c3372ee93fddf4092714cbdb9032a94bd20dc19afef7",
-                "c23da91e2a306d65c54f0f19003148fcd7c4852d4b4c1aa68f7aa85b315961a9",
-                "9b869efe82c0aebf27c9c2df4d699a009e9b63ce063a4d3bc44b74507a1734d9"
+                "d450d60e9a0e0d1ba33db68c0c7ad64544f63f53950638193f51ecff4f391aa0",
+                "67feb6308ac83feddcb7bbfcc30960ef4357a7ca14ee369a2e0bd4cf8b0c2b9c"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "hollywoodpq.com",
-                "www.cinemaclock.com",
-                "delishably.com",
-                "hobbylark.com",
-                "www.troisfoisparjour.com",
-                "pethelpful.com",
-                "holidappy.com",
-                "swimsuit.si.com",
-                "axleaddict.com",
-                "levelskip.com",
-                "www.maxim.com",
-                "mtonews.com",
-                "owlcation.com",
-                "www.cliqueduplateau.com",
-                "pairedlife.com",
-                "discover.hubpages.com",
-                "www.biography.com",
+                "www.organicauthority.com",
                 "reelrundown.com",
-                "exemplore.com",
-                "www.si.com"
+                "www.cinemaclock.com",
+                "www.5ingredients15minutes.com",
+                "www.si.com",
+                "www.maxim.com",
+                "levelskip.com",
+                "danslescoulisses.com",
+                "holidappy.com",
+                "hollywoodpq.com",
+                "bellatory.com",
+                "discover.hubpages.com",
+                "bitcoinmagazine.com",
+                "www.biography.com",
+                "lactualite.com",
+                "dengarden.com",
+                "wehavekids.com",
+                "www.troisfoisparjour.com",
+                "owlcation.com",
+                "delishably.com"
             ]
         },
         {
@@ -349,211 +420,40 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
+                "privacy-location-edge",
                 "carbon-cdn"
             ],
             "apis": {},
-            "sites": 28,
-            "prevalence": 0.00282,
+            "sites": 36,
+            "prevalence": 0.00361,
             "cnames": [],
             "responseHashes": [
-                "f97e9da0e3b879f0a9df979ae260a5f7e1371edb127c1862d4f861981166cdc1"
+                "1c55d9b826e8dfa994370e306ae8dc2e849f3e003381dc848a0b95f782c0c0e3"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "axleaddict.com",
-                "www.biography.com",
-                "danslescoulisses.com",
-                "www.xe.com",
-                "youmemindbody.com",
-                "exemplore.com",
-                "www.cliqueduplateau.com",
-                "owlcation.com",
-                "www.si.com",
-                "hobbylark.com",
-                "www.troisfoisparjour.com",
-                "wehavekids.com",
-                "bellatory.com",
-                "mtonews.com",
-                "spinditty.com",
-                "hollywoodpq.com",
-                "delishably.com",
-                "finviz.com",
-                "dengarden.com",
-                "holidappy.com"
-            ]
-        },
-        {
-            "rule": "ccgateway\\.net\\/script\\/cs\\/scripts_clients_Maven_MavenPageData\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "cdn"
-            ],
-            "apis": {},
-            "sites": 21,
-            "prevalence": 0.00211,
-            "cnames": [],
-            "responseHashes": [
-                "239a7390dea4e611181a6e27443d63052b31bc2c9b5057257145c0c509850ea5"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "dengarden.com",
-                "youmemindbody.com",
-                "discover.hubpages.com",
-                "delishably.com",
-                "reelrundown.com",
-                "pethelpful.com",
-                "www.biography.com",
-                "www.si.com",
-                "owlcation.com",
-                "spinditty.com",
-                "axleaddict.com",
-                "exemplore.com",
-                "mtonews.com",
-                "bellatory.com",
-                "www.maxim.com",
-                "hobbylark.com",
-                "levelskip.com",
-                "wehavekids.com",
-                "pairedlife.com",
-                "swimsuit.si.com"
-            ]
-        },
-        {
-            "rule": "ccgateway\\.net\\/event\\/record\\/custom-page-data-maven",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "carbon-cdn"
-            ],
-            "apis": {},
-            "sites": 21,
-            "prevalence": 0.00211,
-            "cnames": [],
-            "responseHashes": [
-                "cf4724b2f736ed1a0ae6bc28f1ead963d9cd2c1fd87b6ef32e7799fc1c5c8bda"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {
-                "GLAM-JID": 0.0012065151819827067,
-                "GLAM-AID": 0.0012065151819827067,
-                "GLAM-SID": 0.0012065151819827067
-            },
-            "exampleSites": [
-                "exemplore.com",
-                "hobbylark.com",
-                "dengarden.com",
-                "levelskip.com",
-                "holidappy.com",
-                "delishably.com",
-                "www.biography.com",
-                "swimsuit.si.com",
-                "bellatory.com",
-                "pethelpful.com",
-                "owlcation.com",
-                "spinditty.com",
-                "youmemindbody.com",
-                "mtonews.com",
-                "reelrundown.com",
-                "discover.hubpages.com",
-                "pairedlife.com",
-                "axleaddict.com",
-                "www.maxim.com",
-                "www.si.com"
-            ]
-        },
-        {
-            "rule": "ccgateway\\.net\\/v1\\/event\\/record\\/custom-page-data-maven",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "tag-api-2-1"
-            ],
-            "apis": {},
-            "sites": 21,
-            "prevalence": 0.00211,
-            "cnames": [],
-            "responseHashes": [
-                "ef1955ae757c8b966c83248350331bd3a30f658ced11f387f8ebf05ab3368629"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {
-                "GLAM-JID": 0.0012065151819827067,
-                "GLAM-AID": 0.0012065151819827067,
-                "GLAM-SID": 0.0012065151819827067
-            },
-            "exampleSites": [
-                "delishably.com",
-                "holidappy.com",
-                "wehavekids.com",
-                "dengarden.com",
-                "www.si.com",
-                "bellatory.com",
-                "discover.hubpages.com",
-                "www.biography.com",
-                "mtonews.com",
-                "reelrundown.com",
-                "exemplore.com",
-                "levelskip.com",
-                "owlcation.com",
-                "pairedlife.com",
-                "www.maxim.com",
-                "spinditty.com",
-                "swimsuit.si.com",
-                "youmemindbody.com",
-                "hobbylark.com",
-                "pethelpful.com"
-            ]
-        },
-        {
-            "rule": "ccgateway\\.net\\/event\\/record\\/script-load",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "carbon-cdn"
-            ],
-            "apis": {},
-            "sites": 26,
-            "prevalence": 0.00261,
-            "cnames": [],
-            "responseHashes": [
-                "cf4724b2f736ed1a0ae6bc28f1ead963d9cd2c1fd87b6ef32e7799fc1c5c8bda"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {
-                "GLAM-JID": 0.0016086869093102755,
-                "GLAM-AID": 0.0016086869093102755,
-                "GLAM-SID": 0.0016086869093102755
-            },
-            "exampleSites": [
-                "levelskip.com",
-                "pethelpful.com",
-                "swimsuit.si.com",
-                "dengarden.com",
-                "www.cliqueduplateau.com",
-                "exemplore.com",
-                "hobbylark.com",
-                "wehavekids.com",
-                "bellatory.com",
-                "youmemindbody.com",
-                "spinditty.com",
-                "danslescoulisses.com",
-                "axleaddict.com",
-                "discover.hubpages.com",
-                "holidappy.com",
-                "hollywoodpq.com",
-                "www.maxim.com",
+                "xe.com",
                 "www.cinemaclock.com",
+                "wehavekids.com",
                 "owlcation.com",
-                "www.troisfoisparjour.com"
+                "exemplore.com",
+                "holidappy.com",
+                "www.xe.com",
+                "discover.hubpages.com",
+                "www.thestreet.com",
+                "reelrundown.com",
+                "hollywoodpq.com",
+                "bellatory.com",
+                "www.stockhouse.com",
+                "www.troisfoisparjour.com",
+                "lactualite.com",
+                "www.5ingredients15minutes.com",
+                "www.maxim.com",
+                "hobbylark.com",
+                "swimsuit.si.com",
+                "classic.biblegateway.com"
             ]
         },
         {
@@ -564,8 +464,8 @@
                 "tag-api-2-1"
             ],
             "apis": {},
-            "sites": 26,
-            "prevalence": 0.00261,
+            "sites": 30,
+            "prevalence": 0.00301,
             "cnames": [],
             "responseHashes": [
                 "ef1955ae757c8b966c83248350331bd3a30f658ced11f387f8ebf05ab3368629"
@@ -573,43 +473,43 @@
             "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "GLAM-JID": 0.0016086869093102755,
-                "GLAM-AID": 0.0016086869093102755,
-                "GLAM-SID": 0.0016086869093102755
+                "GLAM-JID": 0.0012048192771084338,
+                "GLAM-AID": 0.0012048192771084338,
+                "GLAM-SID": 0.0012048192771084338
             },
             "exampleSites": [
-                "danslescoulisses.com",
-                "hobbylark.com",
-                "dengarden.com",
-                "spinditty.com",
-                "holidappy.com",
-                "www.biography.com",
-                "hollywoodpq.com",
+                "www.troisfoisparjour.com",
                 "reelrundown.com",
-                "www.cliqueduplateau.com",
-                "axleaddict.com",
-                "levelskip.com",
-                "mtonews.com",
-                "pairedlife.com",
-                "wehavekids.com",
-                "bellatory.com",
-                "delishably.com",
+                "www.si.com",
                 "www.cinemaclock.com",
-                "swimsuit.si.com",
+                "pairedlife.com",
+                "www.5ingredients15minutes.com",
+                "danslescoulisses.com",
+                "lactualite.com",
+                "hollywoodpq.com",
+                "bitcoinmagazine.com",
+                "dengarden.com",
+                "axleaddict.com",
+                "exemplore.com",
                 "owlcation.com",
-                "www.maxim.com"
+                "www.maxim.com",
+                "wehavekids.com",
+                "youmemindbody.com",
+                "mtonews.com",
+                "holidappy.com",
+                "www.thestreet.com"
             ]
         },
         {
             "rule": "ccgateway\\.net\\/setUser",
-            "cookies": 0.00261,
+            "cookies": 0.00301,
             "fingerprinting": 0,
             "subdomains": [
                 "carbon-cdn"
             ],
             "apis": {},
-            "sites": 26,
-            "prevalence": 0.00261,
+            "sites": 30,
+            "prevalence": 0.00301,
             "cnames": [],
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -618,219 +518,98 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "reelrundown.com",
-                "hobbylark.com",
-                "levelskip.com",
-                "axleaddict.com",
-                "www.biography.com",
-                "exemplore.com",
                 "hollywoodpq.com",
-                "www.troisfoisparjour.com",
-                "www.maxim.com",
                 "www.cliqueduplateau.com",
-                "delishably.com",
-                "spinditty.com",
-                "danslescoulisses.com",
+                "hobbylark.com",
+                "exemplore.com",
                 "dengarden.com",
-                "wehavekids.com",
-                "discover.hubpages.com",
-                "mtonews.com",
+                "levelskip.com",
+                "youmemindbody.com",
                 "swimsuit.si.com",
+                "discover.hubpages.com",
+                "owlcation.com",
+                "www.troisfoisparjour.com",
+                "holidappy.com",
+                "www.5ingredients15minutes.com",
+                "axleaddict.com",
+                "www.maxim.com",
+                "reelrundown.com",
+                "www.organicauthority.com",
                 "pairedlife.com",
+                "www.biography.com",
                 "pethelpful.com"
             ]
         },
         {
-            "rule": "ccgateway\\.net\\/sync\\/user",
+            "rule": "ccgateway\\.net\\/v1\\/event\\/record\\/user-sync",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "carbon-cdn"
+                "tag-api-2-1"
             ],
             "apis": {},
-            "sites": 26,
-            "prevalence": 0.00261,
+            "sites": 30,
+            "prevalence": 0.00301,
             "cnames": [],
             "responseHashes": [
-                "cf4724b2f736ed1a0ae6bc28f1ead963d9cd2c1fd87b6ef32e7799fc1c5c8bda"
+                "ef1955ae757c8b966c83248350331bd3a30f658ced11f387f8ebf05ab3368629"
             ],
             "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "www.biography.com",
-                "wehavekids.com",
-                "pethelpful.com",
-                "www.maxim.com",
                 "owlcation.com",
-                "www.cliqueduplateau.com",
-                "bellatory.com",
-                "exemplore.com",
-                "youmemindbody.com",
-                "spinditty.com",
-                "axleaddict.com",
-                "hollywoodpq.com",
                 "swimsuit.si.com",
-                "pairedlife.com",
-                "danslescoulisses.com",
-                "delishably.com",
                 "www.troisfoisparjour.com",
-                "holidappy.com",
+                "www.cliqueduplateau.com",
+                "www.si.com",
+                "discover.hubpages.com",
                 "www.cinemaclock.com",
-                "mtonews.com"
+                "axleaddict.com",
+                "holidappy.com",
+                "www.maxim.com",
+                "youmemindbody.com",
+                "hobbylark.com",
+                "www.thestreet.com",
+                "mtonews.com",
+                "danslescoulisses.com",
+                "wehavekids.com",
+                "bitcoinmagazine.com",
+                "pairedlife.com",
+                "delishably.com",
+                "lactualite.com"
             ]
         },
         {
             "rule": "ccgateway\\.net\\/v1\\/da\\/c45c69aa5c",
             "cookies": 0,
-            "fingerprinting": 1,
+            "fingerprinting": 0,
             "subdomains": [
                 "dp"
             ],
-            "apis": {
-                "window.localStorage": 2,
-                "Navigator.prototype.userAgent": 2
-            },
-            "sites": 2,
-            "prevalence": 0.000201,
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000602,
             "cnames": [],
             "responseHashes": [
-                "6472e320fc2461b61d4e94b262a03d5715e33b3630b83b2fd0f451932a69b4dc"
+                "8e5db373e944c2981481fc98580e1953814e9b4a74e7f068e30a229dfb88bdd4",
+                "b379091aaece4f3a637e6f22e3e9dcb0c2f2bac712d4cfd6d99a6ba2db11a6ce",
+                "339f006d164a9c77fd763af8896655e97a80676e5f8ecd9dd06b0363e7d80164",
+                "6472e320fc2461b61d4e94b262a03d5715e33b3630b83b2fd0f451932a69b4dc",
+                "a48136deeff3bff05b82dd9fad8fe0b1913a5b0c953947af31c4a3a56026d306"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "IR_gbd": 0.00010054293183189222
+                "IR_gbd": 0.00020080321285140563
             },
             "exampleSites": [
-                "finviz.com",
-                "www.xe.com"
-            ]
-        },
-        {
-            "rule": "ccgateway\\.net\\/v1\\/appnendpt",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "dp"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {
-                "IR_gbd": 0.00010054293183189222
-            },
-            "exampleSites": [
-                "finviz.com",
-                "www.xe.com"
-            ]
-        },
-        {
-            "rule": "ccgateway\\.net\\/event\\/record\\/prebid2",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "carbon-cdn"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "cf4724b2f736ed1a0ae6bc28f1ead963d9cd2c1fd87b6ef32e7799fc1c5c8bda"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {
-                "GLAM-JID": 0.00010054293183189222,
-                "GLAM-AID": 0.00010054293183189222,
-                "GLAM-SID": 0.00010054293183189222
-            },
-            "exampleSites": [
-                "hollywoodpq.com",
-                "www.cliqueduplateau.com"
-            ]
-        },
-        {
-            "rule": "ccgateway\\.net\\/v1\\/event\\/record\\/prebid2",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "tag-api-2-1"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "ef1955ae757c8b966c83248350331bd3a30f658ced11f387f8ebf05ab3368629"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {
-                "GLAM-JID": 0.00010054293183189222,
-                "GLAM-AID": 0.00010054293183189222,
-                "GLAM-SID": 0.00010054293183189222
-            },
-            "exampleSites": [
-                "hollywoodpq.com",
-                "www.cliqueduplateau.com"
-            ]
-        },
-        {
-            "rule": "ccgateway\\.net\\/event\\/record\\/prebid",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "carbon-cdn"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "cf4724b2f736ed1a0ae6bc28f1ead963d9cd2c1fd87b6ef32e7799fc1c5c8bda"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {
-                "GLAM-JID": 0.00010054293183189222,
-                "GLAM-AID": 0.00010054293183189222,
-                "GLAM-SID": 0.00010054293183189222
-            },
-            "exampleSites": [
-                "hollywoodpq.com",
-                "www.cliqueduplateau.com"
-            ]
-        },
-        {
-            "rule": "ccgateway\\.net\\/v1\\/event\\/record\\/prebid",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "tag-api-2-1"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "ef1955ae757c8b966c83248350331bd3a30f658ced11f387f8ebf05ab3368629"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {
-                "GLAM-JID": 0.00010054293183189222,
-                "GLAM-AID": 0.00010054293183189222,
-                "GLAM-SID": 0.00010054293183189222
-            },
-            "exampleSites": [
-                "hollywoodpq.com",
-                "www.cliqueduplateau.com"
+                "biblegateway.com",
+                "jamaica-gleaner.com",
+                "www.stockhouse.com",
+                "www.wtatennis.com",
+                "www.xe.com",
+                "xe.com"
             ]
         }
     ],
@@ -841,11 +620,11 @@
         "cpu": 0,
         "cache": 1
     },
-    "cookies": 0.00271,
+    "cookies": 0.00301,
     "types": {
-        "Script": 204,
-        "XHR": 28,
-        "Image": 130
+        "Script": 232,
+        "XHR": 36,
+        "Image": 60
     },
     "nameservers": [
         "ns3-05.azure-dns.org",

@@ -7,11 +7,13 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000902,
-    "sites": 13,
+    "prevalence": 0.000132,
+    "sites": 19,
     "subdomains": [
         "engage-cloud",
-        "engage-ues-otavamedia"
+        "engage-ues-otavamedia",
+        "engage-ues",
+        "backend"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -28,9 +30,9 @@
                 "window.localStorage": 6,
                 "Navigator.prototype.userAgent": 6,
                 "Navigator.prototype.language": 6,
-                "Screen.prototype.height": 6,
-                "Screen.prototype.width": 6,
-                "Screen.prototype.colorDepth": 6,
+                "Screen.prototype.height": 5,
+                "Screen.prototype.width": 5,
+                "Screen.prototype.colorDepth": 5,
                 "Date.prototype.getTimezoneOffset": 6
             },
             "sites": 6,
@@ -44,11 +46,41 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "anna.fi",
-                "keskustelu.anna.fi",
                 "keskustelu.kaksplus.fi",
                 "kotiliesi.fi",
                 "murobbs.muropaketti.com",
+                "seura.fi",
                 "tekniikanmaailma.fi"
+            ]
+        },
+        {
+            "rule": "worldoftulo\\.com\\/api\\/v1\\/events",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "engage-ues-otavamedia",
+                "engage-ues"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.0000624,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "anna.fi",
+                "keskustelu.kaksplus.fi",
+                "kotiliesi.fi",
+                "murobbs.muropaketti.com",
+                "seura.fi",
+                "tekniikanmaailma.fi",
+                "www.ess.fi",
+                "www.ksml.fi",
+                "www.savonsanomat.fi"
             ]
         },
         {
@@ -59,22 +91,73 @@
                 "engage-ues-otavamedia"
             ],
             "apis": {},
-            "sites": 6,
-            "prevalence": 0.0000416,
+            "sites": 2,
+            "prevalence": 0.0000139,
             "cnames": [],
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
             ],
-            "type": "XHR",
+            "type": "Other",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "anna.fi",
-                "keskustelu.anna.fi",
-                "keskustelu.kaksplus.fi",
-                "kotiliesi.fi",
-                "murobbs.muropaketti.com",
-                "tekniikanmaailma.fi"
+                "kotiliesi.fi"
+            ]
+        },
+        {
+            "rule": "worldoftulo\\.com\\/tracker\\/1\\.3\\.2\\/event-tracker\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "engage-cloud"
+            ],
+            "apis": {
+                "window.sessionStorage": 4,
+                "window.localStorage": 4,
+                "Navigator.prototype.userAgent": 4,
+                "Navigator.prototype.language": 4,
+                "Screen.prototype.height": 4,
+                "Screen.prototype.width": 4,
+                "Screen.prototype.colorDepth": 4,
+                "Date.prototype.getTimezoneOffset": 4
+            },
+            "sites": 4,
+            "prevalence": 0.0000277,
+            "cnames": [],
+            "responseHashes": [
+                "3a9319ed7b8b6e8b5a32a1cc08acc87a0643bd94f694d052eeb319f3381f1afd"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ess.fi",
+                "www.ess.fi",
+                "www.ksml.fi",
+                "www.savonsanomat.fi"
+            ]
+        },
+        {
+            "rule": "worldoftulo\\.com\\/js\\/session",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "backend"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "94a28b032d7c068a154efac29512e9a106855a2ec7581ee210afb5b48f0b50dd"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gp.se",
+                "www.gp.se"
             ]
         }
     ],
@@ -82,8 +165,9 @@
     "performance": {},
     "cookies": 0,
     "types": {
-        "Script": 6,
-        "XHR": 6
+        "Script": 12,
+        "XHR": 9,
+        "Other": 2
     },
     "nameservers": [
         "ns2.loopia.se",

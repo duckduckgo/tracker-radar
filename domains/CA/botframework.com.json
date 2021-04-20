@@ -12,30 +12,40 @@
     "prevalence": 0.000402,
     "sites": 4,
     "subdomains": [
+        "cdn",
         "directline"
     ],
     "cnames": [],
-    "fingerprinting": 2,
+    "fingerprinting": 1,
     "resources": [
         {
-            "rule": "botframework\\.com\\/v3\\/directline\\/conversations",
+            "rule": "botframework\\.com\\/botframework-webchat\\/latest\\/webchat\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 2,
             "subdomains": [
-                "directline"
+                "cdn"
             ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.000302,
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2,
+                "Navigator.prototype.language": 2,
+                "URL.createObjectURL": 1,
+                "Navigator.prototype.platform": 1,
+                "Date.prototype.getTime": 1,
+                "Event.prototype.timeStamp": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "4821dc496ff448b093f0f6d1b458333cb899ce0d816a9ce7379e82ba3262d901"
+            ],
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "calgarylibrary.ca",
-                "store.hp.com",
-                "www.ottawapublichealth.ca"
+                "wexnermedical.osu.edu"
             ]
         },
         {
@@ -46,20 +56,38 @@
                 "directline"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000302,
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "calgarylibrary.ca",
+                "store.hp.com"
+            ]
+        },
+        {
+            "rule": "botframework\\.com\\/v3\\/directline\\/conversations",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "directline"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "a8a5dcf4b209eec5d5d29308bbb368a835bcb3c820434350c23819e0268d9364",
-                "5153c0b9535bec60b165590d218e06fde65a992096b4b1a5b30a52c6c121095a"
+                "dfd4a0f3b5616f7632e14b71cf64903259c7538ef225c5e46fe32ede595072aa"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "calgarylibrary.ca",
-                "store.hp.com",
-                "www.ottawapublichealth.ca"
+                "store.hp.com"
             ]
         }
     ],
@@ -72,13 +100,14 @@
     },
     "cookies": 0,
     "types": {
-        "Preflight": 3,
-        "XHR": 3
+        "Script": 2,
+        "Preflight": 2,
+        "XHR": 2
     },
     "nameservers": [
-        "ns4-205.azure-dns.info",
         "ns1-205.azure-dns.com",
         "ns2-205.azure-dns.net",
-        "ns3-205.azure-dns.org"
+        "ns3-205.azure-dns.org",
+        "ns4-205.azure-dns.info"
     ]
 }
