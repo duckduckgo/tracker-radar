@@ -9,11 +9,13 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000302,
-    "sites": 3,
+    "prevalence": 0.000602,
+    "sites": 6,
     "subdomains": [
         "chip-relay",
-        "focus-relay"
+        "focus-relay",
+        "finaonl-relay",
+        "at"
     ],
     "cnames": [
         {
@@ -23,21 +25,26 @@
         {
             "original": "data-2f2ec12966.chip.de",
             "resolved": "chip-relay.iocnt.net"
+        },
+        {
+            "original": "data-fdbbf15b66.finanzen.net",
+            "resolved": "finaonl-relay.iocnt.net"
         }
     ],
     "fingerprinting": 2,
     "resources": [
         {
             "rule": "iocnt\\.net\\/sensor\\.modern\\.ncl\\.min\\.js",
-            "cookies": 0.000302,
+            "cookies": 0.000502,
             "fingerprinting": 2,
             "subdomains": [
                 "chip-relay",
-                "focus-relay"
+                "focus-relay",
+                "finaonl-relay"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000302,
+            "sites": 5,
+            "prevalence": 0.000502,
             "cnames": [
                 {
                     "original": "data-2f2ec12966.chip.de",
@@ -46,6 +53,10 @@
                 {
                     "original": "data-1818d50639.focus.de",
                     "resolved": "focus-relay.iocnt.net"
+                },
+                {
+                    "original": "data-fdbbf15b66.finanzen.net",
+                    "resolved": "finaonl-relay.iocnt.net"
                 }
             ],
             "responseHashes": [
@@ -56,8 +67,10 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "chip.de",
+                "praxistipps.focus.de",
                 "www.chip.de",
-                "www.focus.de"
+                "www.focus.de",
+                "www.finanzen.net"
             ]
         },
         {
@@ -93,11 +106,12 @@
             "fingerprinting": 0,
             "subdomains": [
                 "chip-relay",
-                "focus-relay"
+                "focus-relay",
+                "finaonl-relay"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000302,
+            "sites": 5,
+            "prevalence": 0.000502,
             "cnames": [
                 {
                     "original": "data-2f2ec12966.chip.de",
@@ -106,6 +120,10 @@
                 {
                     "original": "data-1818d50639.focus.de",
                     "resolved": "focus-relay.iocnt.net"
+                },
+                {
+                    "original": "data-fdbbf15b66.finanzen.net",
+                    "resolved": "finaonl-relay.iocnt.net"
                 }
             ],
             "responseHashes": [
@@ -116,8 +134,91 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "chip.de",
+                "praxistipps.focus.de",
                 "www.chip.de",
+                "www.focus.de",
+                "www.finanzen.net"
+            ]
+        },
+        {
+            "rule": "iocnt\\.net\\/focus-config\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "focus-relay"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "data-1818d50639.focus.de",
+                    "resolved": "focus-relay.iocnt.net"
+                }
+            ],
+            "responseHashes": [
+                "742ffa2a251396bc3f024f6d34976b7f5c1d3ca51027a9d89de4be7d842e9061"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "focus.de",
                 "www.focus.de"
+            ]
+        },
+        {
+            "rule": "iocnt\\.net\\/sensor\\.modern\\.ncl\\.min\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 2,
+            "subdomains": [
+                "focus-relay",
+                "finaonl-relay"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "data-1818d50639.focus.de",
+                    "resolved": "focus-relay.iocnt.net"
+                },
+                {
+                    "original": "data-fdbbf15b66.finanzen.net",
+                    "resolved": "finaonl-relay.iocnt.net"
+                }
+            ],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "focus.de",
+                "www.finanzen.net"
+            ]
+        },
+        {
+            "rule": "iocnt\\.net\\/tx\\.io",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "at"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "netdoktor.de",
+                "www.netdoktor.de"
             ]
         }
     ],
@@ -128,10 +229,16 @@
         "cpu": 1,
         "cache": 3
     },
-    "cookies": 0.000302,
+    "cookies": 0.000602,
     "types": {
-        "Script": 3,
-        "XHR": 5
+        "Script": 7,
+        "XHR": 9,
+        "Other": 2
     },
-    "nameservers": []
+    "nameservers": [
+        "ns3.infonline.de",
+        "ns4.infonline.de",
+        "ns.infonline.de",
+        "ns2.infonline.de"
+    ]
 }

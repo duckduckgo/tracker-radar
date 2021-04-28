@@ -8,6 +8,8 @@
     "sites": 2,
     "subdomains": [
         "deploy",
+        "collect",
+        "cacheorcheck",
         "fonts"
     ],
     "cnames": [],
@@ -15,15 +17,16 @@
     "resources": [
         {
             "rule": "mopinion\\.com\\/js\\/pastease\\.js",
-            "cookies": 0.0001,
+            "cookies": 0.000201,
             "fingerprinting": 1,
             "subdomains": [
                 "deploy"
             ],
             "apis": {
                 "Document.cookie getter": 2,
-                "Date.prototype.getTime": 1,
-                "Document.cookie setter": 1
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2,
+                "Navigator.prototype.userAgent": 1
             },
             "sites": 2,
             "prevalence": 0.000201,
@@ -34,44 +37,120 @@
             "type": "Script",
             "firstPartyCookies": {
                 "Pastease.passive.chance.5YhMrk04JDZQkJe": {
-                    "ttl": 31536003,
+                    "ttl": 31536005,
                     "length": 10,
-                    "prevalence": 0.00010043185698503566,
+                    "prevalence": 0.0001006238679814852,
                     "uniqueness": 1
                 },
                 "Pastease.passive.activated.5YhMrk04JDZQkJe": {
-                    "ttl": 31536003,
+                    "ttl": 31536005,
                     "length": 1,
-                    "prevalence": 0.00010043185698503566,
+                    "prevalence": 0.0001006238679814852,
+                    "uniqueness": 1
+                },
+                "Pastease.passive.chance.MBPV5iA4kSf8e6g": {
+                    "ttl": 2592020,
+                    "length": 10,
+                    "prevalence": 0.0001006238679814852,
+                    "uniqueness": 1
+                },
+                "Pastease.passive.activated.MBPV5iA4kSf8e6g": {
+                    "ttl": 2592020,
+                    "length": 1,
+                    "prevalence": 0.0001006238679814852,
+                    "uniqueness": 1
+                },
+                "last_page.VZzRVNT8EN93JyMrule_0": {
+                    "ttl": null,
+                    "length": 7,
+                    "prevalence": 0.0001006238679814852,
+                    "uniqueness": 1
+                },
+                "page_count.VZzRVNT8EN93JyMrule_0": {
+                    "ttl": null,
+                    "length": 1,
+                    "prevalence": 0.0001006238679814852,
                     "uniqueness": 1
                 }
             },
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "cloudera.com",
-                "dl.acm.org"
+                "acm.org",
+                "www.tomtom.com"
             ]
         },
         {
-            "rule": "mopinion\\.com\\/css",
-            "cookies": 0.0001,
+            "rule": "mopinion\\.com\\/assets\\/surveys\\/2\\.0\\/js\\/survey\\.min\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 1,
+            "subdomains": [
+                "collect"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Document.cookie getter": 2,
+                "window.sessionStorage": 2,
+                "Navigator.prototype.maxTouchPoints": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "a3976701dd51507073044f58be6343992fd6e6549c7c43583ed07a151ecff627"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "acm.org",
+                "www.tomtom.com"
+            ]
+        },
+        {
+            "rule": "mopinion\\.com\\/survey\\/public\\/json-config",
+            "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "fonts"
+                "cacheorcheck"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "72586548d6ca467aa5e05a25bbf6d98cd0206f46734afd24f63a57f77e17027b"
+                "b223b81e89260e67a4553ba025447c98826b7c197d45d0e4e51ccd6388daead3"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "acm.org",
+                "www.tomtom.com"
+            ]
+        },
+        {
+            "rule": "mopinion\\.com\\/css",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "fonts"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "72586548d6ca467aa5e05a25bbf6d98cd0206f46734afd24f63a57f77e17027b",
+                "fe59c32943f584e019076b69007684c29bb2d759dd4bede99d151bc3414752ba"
             ],
             "type": "Stylesheet",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "acm.org",
-                "dl.acm.org"
+                "dl.acm.org",
+                "www.tomtom.com"
             ]
         }
     ],
@@ -82,15 +161,16 @@
         "cpu": 0,
         "cache": 3
     },
-    "cookies": 0.0001,
+    "cookies": 0.000201,
     "types": {
-        "Script": 2,
-        "Stylesheet": 2
+        "Script": 4,
+        "XHR": 2,
+        "Stylesheet": 3
     },
     "nameservers": [
+        "ns-1425.awsdns-50.org",
         "ns-1628.awsdns-11.co.uk",
         "ns-869.awsdns-44.net",
-        "ns-134.awsdns-16.com",
-        "ns-1425.awsdns-50.org"
+        "ns-134.awsdns-16.com"
     ]
 }

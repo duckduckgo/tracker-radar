@@ -9,8 +9,8 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000971,
-    "sites": 14,
+    "prevalence": 0.0000832,
+    "sites": 12,
     "subdomains": [
         "cdn-customers",
         "my",
@@ -19,7 +19,8 @@
         "cdn-eu1-2",
         "cdn-eu1-4",
         "cdn-s3",
-        "eu1-2"
+        "eu1-2",
+        "eu1-4"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -49,11 +50,13 @@
         {
             "rule": "nanorep\\.com\\/customers\\/mint\\/support-center\\/device-detecting\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "cdn-customers"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
             "sites": 2,
             "prevalence": 0.0000139,
             "cnames": [],
@@ -79,8 +82,7 @@
                 "Date.prototype.getTime": 2,
                 "window.localStorage": 2,
                 "Navigator.prototype.appVersion": 2,
-                "Navigator.prototype.userAgent": 2,
-                "Document.cookie getter": 2
+                "Navigator.prototype.userAgent": 2
             },
             "sites": 2,
             "prevalence": 0.0000139,
@@ -186,23 +188,31 @@
         },
         {
             "rule": "nanorep\\.com\\/web\\/include\\.js",
-            "cookies": 0,
+            "cookies": 0.0000139,
             "fingerprinting": 1,
             "subdomains": [
                 "my"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 2,
-                "window.localStorage": 2
+                "window.localStorage": 2,
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2
             },
             "sites": 2,
             "prevalence": 0.0000139,
             "cnames": [],
             "responseHashes": [
-                "d296e8808998d7b7edaa0addb8c807401d22a997b2226a4d456b91277eb4852d"
+                "3272a873eb0add05060775c9cd23efa47b5f154b024c128809f55d9b11b78e60"
             ],
             "type": "Script",
-            "firstPartyCookies": {},
+            "firstPartyCookies": {
+                "bc.visitor_token": {
+                    "ttl": 31536001,
+                    "length": 19,
+                    "prevalence": 0.000013862223362005031,
+                    "uniqueness": 1
+                }
+            },
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "fanniemae.com",
@@ -245,7 +255,7 @@
             "prevalence": 0.0000139,
             "cnames": [],
             "responseHashes": [
-                "1a9582e3d53180cda2f602ad27e974f19fa8d580515dfe0fa5bb48ba7f915cf7"
+                "9b58e0a40e4baf6ff2c5023c4d9d321bf85fa6078257c0a47ac3c818e95b9f9f"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -324,7 +334,7 @@
         },
         {
             "rule": "nanorep\\.com\\/web\\/embedded-widget\\.js",
-            "cookies": 0.00000693,
+            "cookies": 0,
             "fingerprinting": 1,
             "subdomains": [
                 "cdn-eu1-1",
@@ -334,25 +344,18 @@
             "apis": {
                 "Navigator.prototype.userAgent": 4,
                 "window.localStorage": 4,
-                "Document.cookie getter": 3,
-                "Document.cookie setter": 1
+                "Document.cookie getter": 3
             },
             "sites": 4,
             "prevalence": 0.0000277,
             "cnames": [],
             "responseHashes": [
+                "69a4e7c672d91a80f3cf5252e909f9d21a49d9d08e2d633bbb464f697fbd4691",
                 "26751336fd7a0dbd72a9b09a702f959ac177e5e6eee37c38a25ec4cb4e1a313c",
-                "1bf0b2f1313eb6ab8910d4c31abc977cf9cfea8531d3c615b09ef72d9ee14e05"
+                "ed6545ec053a702e692afcd5af1f793678af938e89a26af8657c0b452dab898d"
             ],
             "type": "Script",
-            "firstPartyCookies": {
-                "bc.visitor_token": {
-                    "ttl": 31536000,
-                    "length": 19,
-                    "prevalence": 0.00000693495703794115,
-                    "uniqueness": 1
-                }
-            },
+            "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "nordvpn.com",
@@ -394,7 +397,9 @@
             "sites": 2,
             "prevalence": 0.0000139,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "7de7247f8723bb62f96f362e6b68e7072dff18be3998871fabbcf7c9078c0c83"
+            ],
             "type": "Font",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -426,28 +431,6 @@
             ]
         },
         {
-            "rule": "nanorep\\.com\\/customers\\/nordvpn\\/support-center\\/fonts\\/gordita-bold\\.woff2",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "cdn-customers"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000139,
-            "cnames": [],
-            "responseHashes": [
-                "7e461c38fec726047a43fdfa5be1192b19d0ddf088e9191ca609d236d967794c"
-            ],
-            "type": "Font",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "nordvpn.com",
-                "support.nordvpn.com"
-            ]
-        },
-        {
             "rule": "nanorep\\.com\\/web\\/product-events\\.js",
             "cookies": 0,
             "fingerprinting": 0,
@@ -460,7 +443,7 @@
             "prevalence": 0.0000139,
             "cnames": [],
             "responseHashes": [
-                "945b30fcaaa46c9e2f34364fb18ad132d61783b1d406d3d57bbb104513bace9d"
+                "3a1ff16d86db8384bad4ea74c938d282072cd5e17b0f17cd6bebc89f7c1fdb3b"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -484,7 +467,7 @@
             "prevalence": 0.0000139,
             "cnames": [],
             "responseHashes": [
-                "5a0ce17b86774a03e27f0227c1efce793898629f38f197fbe9b1904e8535e3cd"
+                "d09d62f502206b2c7cf463878c765281659f3227d9cc81d2b5b0bb32cde377a2"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -682,13 +665,11 @@
             "prevalence": 0.0000139,
             "cnames": [],
             "responseHashes": [
-                "2c9b1a81b1e331e2a5cb6d7972652c3fae116b73d22095eeddc094cba6cdc703"
+                "8b0f4ea1a45e3805cb47e4c4335239fdb5f968dad75d20b59cc76c11c84c79cb"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
-            "firstPartyCookiesSent": {
-                "bc.visitor_token": 0.0000138699140758823
-            },
+            "firstPartyCookiesSent": {},
             "exampleSites": [
                 "vodafone.co.uk",
                 "support.vodafone.co.uk"
@@ -706,12 +687,12 @@
             "prevalence": 0.0000139,
             "cnames": [],
             "responseHashes": [
-                "8eadb88afb0170dbf9ce8e0d04df900eb28fc2a4110f6c5166f3b3f5b5c933e8"
+                "9907e4c8498b2ba6faf47b8e75e49134d1f8c55f47fcb12217222a2f5b75bb6d"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "bc.visitor_token": 0.0000138699140758823
+                "bc.visitor_token": 0.000013862223362005031
             },
             "exampleSites": [
                 "vodafone.co.uk",
@@ -735,11 +716,59 @@
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "bc.visitor_token": 0.0000138699140758823
+                "bc.visitor_token": 0.000013862223362005031
             },
             "exampleSites": [
                 "vodafone.co.uk",
                 "support.vodafone.co.uk"
+            ]
+        },
+        {
+            "rule": "nanorep\\.com\\/sdk\\/index\\.repo",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "eu1-4"
+            ],
+            "apis": {
+                "Navigator.prototype.appVersion": 2,
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "2f5f58ae42de14cfa7aff04cdf19cb7680a0a5730d7cceb29aa1f79ab2ee1ee1"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "natwest.com",
+                "supportcentre.natwest.com"
+            ]
+        },
+        {
+            "rule": "nanorep\\.com\\/common\\/css\\/articlewsdk\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn-customers"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "b53f7b76b03f1873396e3f3912d5a2415fc620aebad52ad52f170b92176de35b"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "natwest.com",
+                "supportcentre.natwest.com"
             ]
         },
         {
@@ -777,7 +806,9 @@
             "sites": 2,
             "prevalence": 0.0000139,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "5f1ab65fe2ad6b381a1ae036716475bf78c9b2e309528cf22170c1ddeefddcbf"
+            ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -800,7 +831,9 @@
             "sites": 2,
             "prevalence": 0.0000139,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "44bab0b058cb06b709caa029faf107089c7c498570a11639a64359b30def86b4"
+            ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -864,7 +897,9 @@
             "sites": 2,
             "prevalence": 0.0000139,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "35107e1190b78f0a6896e74e8cf0cbb38c804589ff8353d5e1c46abac2612e4d"
+            ],
             "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -906,8 +941,28 @@
             "sites": 2,
             "prevalence": 0.0000139,
             "cnames": [],
+            "responseHashes": [],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "natwest.com",
+                "supportcentre.natwest.com"
+            ]
+        },
+        {
+            "rule": "nanorep\\.com\\/customers\\/rbs\\/fonts\\/RNHouseSansW01Regular\\.ttf",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn-customers"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
             "responseHashes": [
-                "40ec7918f9426feb93023392755af7d03b6b473c6cce6ccd9f86e09da2e72af7"
+                "4a587b9e911c366c27905dc3293c4da72266df447c7285be7f5dae7d00776a37"
             ],
             "type": "Font",
             "firstPartyCookies": {},
@@ -925,20 +980,20 @@
         "cpu": 0,
         "cache": 3
     },
-    "cookies": 0.0000693,
+    "cookies": 0.0000416,
     "types": {
-        "Stylesheet": 8,
-        "Script": 26,
+        "Stylesheet": 10,
+        "Script": 28,
         "Image": 30,
         "XHR": 8,
         "Font": 10
     },
     "nameservers": [
-        "ns11.dnsmadeeasy.com",
         "ns15.dnsmadeeasy.com",
-        "ns10.dnsmadeeasy.com",
-        "ns14.dnsmadeeasy.com",
         "ns12.dnsmadeeasy.com",
-        "ns13.dnsmadeeasy.com"
+        "ns11.dnsmadeeasy.com",
+        "ns10.dnsmadeeasy.com",
+        "ns13.dnsmadeeasy.com",
+        "ns14.dnsmadeeasy.com"
     ]
 }
