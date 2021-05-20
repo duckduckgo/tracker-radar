@@ -9,12 +9,17 @@
     "source": [
         "DuckDuckGo-NL"
     ],
-    "prevalence": 0.000302,
-    "sites": 3,
+    "prevalence": 0.000402,
+    "sites": 4,
     "subdomains": [
+        "fps-na-api-3",
         "jabpc-publicservice-tfm-prod"
     ],
     "cnames": [
+        {
+            "original": "na.fps3.ford.com",
+            "resolved": "fps-na-api-3.trafficmanager.net"
+        },
         {
             "original": "productcatalogueapi.jabra.com",
             "resolved": "jabpc-publicservice-tfm-prod.trafficmanager.net"
@@ -22,6 +27,33 @@
     ],
     "fingerprinting": 0,
     "resources": [
+        {
+            "rule": "trafficmanager\\.net\\/fps\\/api\\/personalization_1_8\\/get",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "fps-na-api-3"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "na.fps3.ford.com",
+                    "resolved": "fps-na-api-3.trafficmanager.net"
+                }
+            ],
+            "responseHashes": [
+                "b7a696b44b818831b764d14765e2307cf5f7badfff3e5cfdbe6c9ba0df50eb57"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ford.com",
+                "www.ford.com"
+            ]
+        },
         {
             "rule": "trafficmanager\\.net\\/\\/v1\\/family\\/filter",
             "cookies": 0.000201,
@@ -84,8 +116,9 @@
         "cpu": 0,
         "cache": 0
     },
-    "cookies": 0.000201,
+    "cookies": 0.0001,
     "types": {
+        "XHR": 2,
         "Preflight": 2,
         "Fetch": 2
     },

@@ -8,20 +8,23 @@
         "DuckDuckGo-AU"
     ],
     "prevalence": 0.00431,
-    "sites": 42,
+    "sites": 43,
     "subdomains": [
         "us.tags",
         "au.tags",
         "hc.tags",
         "us.pixel",
-        "us.audience",
-        "au.audience",
-        "au.pixel"
+        "au.pixel",
+        "au.audience"
     ],
     "cnames": [
         {
             "original": "ncg.tags.news.com.au",
             "resolved": "au.tags.newscgp.com"
+        },
+        {
+            "original": "tags.barrons.com",
+            "resolved": "us.tags.newscgp.com"
         }
     ],
     "fingerprinting": 2,
@@ -29,15 +32,29 @@
         {
             "rule": "newscgp\\.com\\/prod\\/prebid\\/marketwatch\\/pb-no-auto\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 2,
             "subdomains": [
                 "us.tags"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2,
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.cookieEnabled": 2,
+                "window.sessionStorage": 2,
+                "Navigator.prototype.appName": 2,
+                "Document.cookie getter": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "Screen.prototype.colorDepth": 2,
+                "Date.prototype.getTimezoneOffset": 2
+            },
             "sites": 2,
-            "prevalence": 0.000205,
+            "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "73ae3f9a3a684bbaefe7dd782f208f1646c823d7dc3f4f84273052d131c91510"
+            ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -47,39 +64,8 @@
             ]
         },
         {
-            "rule": "newscgp\\.com\\/prod\\/prebid\\/nyp\\/pb\\.js",
-            "cookies": 0,
-            "fingerprinting": 2,
-            "subdomains": [
-                "us.tags"
-            ],
-            "apis": {
-                "Navigator.prototype.userAgent": 3,
-                "window.localStorage": 3,
-                "Date.prototype.getTime": 3,
-                "Navigator.prototype.cookieEnabled": 3,
-                "window.sessionStorage": 3,
-                "Navigator.prototype.appName": 3,
-                "Document.cookie getter": 2
-            },
-            "sites": 3,
-            "prevalence": 0.000308,
-            "cnames": [],
-            "responseHashes": [
-                "e2e4ba071dc62a5ba777b294f5262fb8c855258978917c073e5d10c197988d24"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "decider.com",
-                "nypost.com",
-                "pagesix.com"
-            ]
-        },
-        {
             "rule": "newscgp\\.com\\/prod\\/ncg\\/ncg\\.js",
-            "cookies": 0.00256,
+            "cookies": 0.00391,
             "fingerprinting": 2,
             "subdomains": [
                 "us.tags",
@@ -87,320 +73,440 @@
                 "hc.tags"
             ],
             "apis": {
-                "window.localStorage": 25,
-                "Document.cookie getter": 25,
-                "window.sessionStorage": 25,
-                "Document.cookie setter": 25,
-                "Date.prototype.getTimezoneOffset": 25,
-                "Navigator.prototype.userAgent": 25,
-                "Navigator.prototype.doNotTrack": 25,
-                "Navigator.prototype.language": 25,
-                "Navigator.prototype.mimeTypes": 25,
-                "Navigator.prototype.javaEnabled": 25,
-                "Screen.prototype.width": 25,
-                "Screen.prototype.height": 25,
-                "Screen.prototype.colorDepth": 25,
-                "Navigator.prototype.cookieEnabled": 25,
-                "Navigator.prototype.plugins": 4,
-                "Date.prototype.getTime": 25,
-                "Navigator.prototype.vendor": 4
+                "window.localStorage": 40,
+                "Document.cookie getter": 39,
+                "window.sessionStorage": 40,
+                "Document.cookie setter": 39,
+                "Date.prototype.getTimezoneOffset": 40,
+                "Navigator.prototype.userAgent": 40,
+                "Navigator.prototype.doNotTrack": 40,
+                "Navigator.prototype.language": 40,
+                "Navigator.prototype.mimeTypes": 40,
+                "Navigator.prototype.javaEnabled": 40,
+                "Screen.prototype.width": 40,
+                "Screen.prototype.height": 40,
+                "Screen.prototype.colorDepth": 40,
+                "Navigator.prototype.cookieEnabled": 40,
+                "Navigator.prototype.plugins": 6,
+                "Date.prototype.getTime": 40,
+                "Navigator.prototype.vendor": 6
             },
-            "sites": 39,
-            "prevalence": 0.004,
+            "sites": 40,
+            "prevalence": 0.00401,
             "cnames": [],
             "responseHashes": [
-                "89868194e8809928df37974211d2477ad0723d6aee71386fb438b3e939eb5bce",
-                "09754a1c6cc38a895f6d88725700dfec44bd3059ae0c9cbba39784fa7f363c4e"
+                "67a21d57307e304a2aad195f4eac41ba96ffbe1251941f84683cd74852a8684e",
+                "89868194e8809928df37974211d2477ad0723d6aee71386fb438b3e939eb5bce"
             ],
             "type": "Script",
             "firstPartyCookies": {
-                "_ncg_sp_ses.4d9e": {
-                    "ttl": 1820,
+                "_ncg_sp_ses.f57d": {
+                    "ttl": 1807,
                     "length": 1,
-                    "prevalence": 0.00010258514567090685,
-                    "uniqueness": 1
+                    "prevalence": 0.0002006823198876179,
+                    "uniqueness": 0.5
                 },
-                "_ncg_sp_id.4d9e": {
-                    "ttl": 63072020,
+                "_ncg_sp_id.f57d": {
+                    "ttl": 63072007,
                     "length": 108,
-                    "prevalence": 0.00010258514567090685,
+                    "prevalence": 0.0002006823198876179,
                     "uniqueness": 1
                 },
                 "_ncg_id_": {
-                    "ttl": 63072020,
+                    "ttl": 63072018,
                     "length": 36,
-                    "prevalence": 0.0004103405826836274,
+                    "prevalence": 0.0005017057997190448,
+                    "uniqueness": 1
+                },
+                "_ncg_sp_ses.4d9e": {
+                    "ttl": 1818,
+                    "length": 1,
+                    "prevalence": 0.00010034115994380895,
+                    "uniqueness": 1
+                },
+                "_ncg_sp_id.4d9e": {
+                    "ttl": 63072018,
+                    "length": 108,
+                    "prevalence": 0.00010034115994380895,
+                    "uniqueness": 1
+                },
+                "_ncg_sp_ses.146c": {
+                    "ttl": 1811,
+                    "length": 1,
+                    "prevalence": 0.0002006823198876179,
+                    "uniqueness": 0.5
+                },
+                "_ncg_sp_id.146c": {
+                    "ttl": 63072011,
+                    "length": 108,
+                    "prevalence": 0.0002006823198876179,
                     "uniqueness": 1
                 },
                 "nk": {
-                    "ttl": 94608028,
+                    "ttl": 94608012,
                     "length": 32,
-                    "prevalence": 0.0010258514567090685,
+                    "prevalence": 0.0011037527593818985,
                     "uniqueness": 1
-                },
-                "_ncg_sp_id.c260": {
-                    "ttl": 63072046,
-                    "length": 108,
-                    "prevalence": 0.0002051702913418137,
-                    "uniqueness": 1
-                },
-                "_ncg_sp_ses.c260": {
-                    "ttl": 1846,
-                    "length": 1,
-                    "prevalence": 0.0002051702913418137,
-                    "uniqueness": 0.5
                 },
                 "_ncg_sp_ses.06f3": {
-                    "ttl": 1818,
+                    "ttl": 1813,
                     "length": 1,
-                    "prevalence": 0.0002051702913418137,
+                    "prevalence": 0.0002006823198876179,
                     "uniqueness": 0.5
                 },
                 "_ncg_sp_id.06f3": {
-                    "ttl": 63072018,
+                    "ttl": 63072013,
                     "length": 108,
-                    "prevalence": 0.0002051702913418137,
+                    "prevalence": 0.0002006823198876179,
+                    "uniqueness": 1
+                },
+                "_ncg_sp_ses.64db": {
+                    "ttl": 1819,
+                    "length": 1,
+                    "prevalence": 0.00010034115994380895,
+                    "uniqueness": 1
+                },
+                "_ncg_sp_id.64db": {
+                    "ttl": 63072019,
+                    "length": 108,
+                    "prevalence": 0.00010034115994380895,
                     "uniqueness": 1
                 },
                 "_ncg_sp_ses.1f00": {
                     "ttl": 1821,
                     "length": 1,
-                    "prevalence": 0.00010258514567090685,
+                    "prevalence": 0.00010034115994380895,
                     "uniqueness": 1
                 },
                 "_ncg_sp_id.1f00": {
                     "ttl": 63072021,
                     "length": 108,
-                    "prevalence": 0.00010258514567090685,
+                    "prevalence": 0.00010034115994380895,
                     "uniqueness": 1
                 },
-                "_ncg_sp_ses.e8b5": {
-                    "ttl": 1818,
+                "_ncg_sp_ses.717a": {
+                    "ttl": 1816,
                     "length": 1,
-                    "prevalence": 0.00010258514567090685,
+                    "prevalence": 0.0002006823198876179,
+                    "uniqueness": 0.5
+                },
+                "_ncg_sp_id.717a": {
+                    "ttl": 63072016,
+                    "length": 108,
+                    "prevalence": 0.0002006823198876179,
                     "uniqueness": 1
                 },
-                "_ncg_sp_id.e8b5": {
-                    "ttl": 63072018,
+                "_ncg_sp_ses.f82f": {
+                    "ttl": 1815,
+                    "length": 1,
+                    "prevalence": 0.00010034115994380895,
+                    "uniqueness": 1
+                },
+                "_ncg_sp_id.f82f": {
+                    "ttl": 63072015,
                     "length": 108,
-                    "prevalence": 0.00010258514567090685,
+                    "prevalence": 0.00010034115994380895,
                     "uniqueness": 1
                 },
                 "_ncg_sp_ses.16ce": {
-                    "ttl": 1829,
+                    "ttl": 1809,
                     "length": 1,
-                    "prevalence": 0.00010258514567090685,
+                    "prevalence": 0.00010034115994380895,
                     "uniqueness": 1
                 },
                 "_ncg_sp_id.16ce": {
-                    "ttl": 63072029,
+                    "ttl": 63072009,
                     "length": 108,
-                    "prevalence": 0.00010258514567090685,
+                    "prevalence": 0.00010034115994380895,
+                    "uniqueness": 1
+                },
+                "_ncg_sp_ses.ede9": {
+                    "ttl": 1812,
+                    "length": 1,
+                    "prevalence": 0.00010034115994380895,
+                    "uniqueness": 1
+                },
+                "_ncg_sp_id.ede9": {
+                    "ttl": 63072012,
+                    "length": 108,
+                    "prevalence": 0.00010034115994380895,
                     "uniqueness": 1
                 },
                 "_ncg_sp_ses.d9d7": {
-                    "ttl": 1826,
+                    "ttl": 1811,
                     "length": 1,
-                    "prevalence": 0.00010258514567090685,
+                    "prevalence": 0.00010034115994380895,
                     "uniqueness": 1
                 },
                 "_ncg_sp_id.d9d7": {
-                    "ttl": 63072026,
+                    "ttl": 63072011,
                     "length": 108,
-                    "prevalence": 0.00010258514567090685,
+                    "prevalence": 0.00010034115994380895,
                     "uniqueness": 1
                 },
                 "_ncg_sp_ses.4a70": {
-                    "ttl": 1817,
+                    "ttl": 1811,
                     "length": 1,
-                    "prevalence": 0.00010258514567090685,
+                    "prevalence": 0.00010034115994380895,
                     "uniqueness": 1
                 },
                 "_ncg_sp_id.4a70": {
-                    "ttl": 63072017,
+                    "ttl": 63072011,
                     "length": 108,
-                    "prevalence": 0.00010258514567090685,
+                    "prevalence": 0.00010034115994380895,
+                    "uniqueness": 1
+                },
+                "_ncg_sp_ses.c260": {
+                    "ttl": 1818,
+                    "length": 1,
+                    "prevalence": 0.00010034115994380895,
+                    "uniqueness": 1
+                },
+                "_ncg_sp_id.c260": {
+                    "ttl": 63072018,
+                    "length": 108,
+                    "prevalence": 0.00010034115994380895,
+                    "uniqueness": 1
+                },
+                "_ncg_sp_ses.1d4a": {
+                    "ttl": 1831,
+                    "length": 1,
+                    "prevalence": 0.00010034115994380895,
+                    "uniqueness": 1
+                },
+                "_ncg_sp_id.1d4a": {
+                    "ttl": 63072031,
+                    "length": 108,
+                    "prevalence": 0.00010034115994380895,
+                    "uniqueness": 1
+                },
+                "_ncg_sp_ses.a59a": {
+                    "ttl": 1818,
+                    "length": 1,
+                    "prevalence": 0.00010034115994380895,
+                    "uniqueness": 1
+                },
+                "_ncg_sp_id.a59a": {
+                    "ttl": 63072018,
+                    "length": 108,
+                    "prevalence": 0.00010034115994380895,
                     "uniqueness": 1
                 },
                 "_ncg_sp_ses.ef52": {
-                    "ttl": 1826,
+                    "ttl": 1810,
                     "length": 1,
-                    "prevalence": 0.00010258514567090685,
+                    "prevalence": 0.00010034115994380895,
                     "uniqueness": 1
                 },
                 "_ncg_sp_id.ef52": {
-                    "ttl": 63072026,
+                    "ttl": 63072010,
                     "length": 108,
-                    "prevalence": 0.00010258514567090685,
+                    "prevalence": 0.00010034115994380895,
+                    "uniqueness": 1
+                },
+                "_ncg_sp_ses.ff50": {
+                    "ttl": 1811,
+                    "length": 1,
+                    "prevalence": 0.00010034115994380895,
+                    "uniqueness": 1
+                },
+                "_ncg_sp_id.ff50": {
+                    "ttl": 63072011,
+                    "length": 108,
+                    "prevalence": 0.00010034115994380895,
+                    "uniqueness": 1
+                },
+                "_ncg_sp_ses.94f0": {
+                    "ttl": 1813,
+                    "length": 1,
+                    "prevalence": 0.00010034115994380895,
+                    "uniqueness": 1
+                },
+                "_ncg_sp_id.94f0": {
+                    "ttl": 63072013,
+                    "length": 108,
+                    "prevalence": 0.00010034115994380895,
                     "uniqueness": 1
                 },
                 "_ncg_sp_ses.5a03": {
-                    "ttl": 1826,
+                    "ttl": 1810,
                     "length": 1,
-                    "prevalence": 0.00010258514567090685,
+                    "prevalence": 0.00010034115994380895,
                     "uniqueness": 1
                 },
                 "_ncg_sp_id.5a03": {
-                    "ttl": 63072026,
+                    "ttl": 63072010,
                     "length": 108,
-                    "prevalence": 0.00010258514567090685,
+                    "prevalence": 0.00010034115994380895,
                     "uniqueness": 1
                 },
                 "_sp_ses.2a92": {
-                    "ttl": 1806,
+                    "ttl": 1807,
                     "length": 1,
-                    "prevalence": 0.00010258514567090685,
+                    "prevalence": 0.00010034115994380895,
                     "uniqueness": 1
                 },
                 "_sp_id.2a92": {
-                    "ttl": 63072006,
+                    "ttl": 63072007,
                     "length": 108,
-                    "prevalence": 0.00010258514567090685,
+                    "prevalence": 0.00010034115994380895,
                     "uniqueness": 1
                 },
-                "_ncg_sp_ses.f4c7": {
-                    "ttl": 1820,
+                "_ncg_sp_ses.dcc3": {
+                    "ttl": 1810,
                     "length": 1,
-                    "prevalence": 0.00010258514567090685,
+                    "prevalence": 0.00010034115994380895,
                     "uniqueness": 1
                 },
-                "_ncg_sp_id.f4c7": {
-                    "ttl": 63072020,
+                "_ncg_sp_id.dcc3": {
+                    "ttl": 63072010,
                     "length": 108,
-                    "prevalence": 0.00010258514567090685,
+                    "prevalence": 0.00010034115994380895,
                     "uniqueness": 1
                 },
                 "_ncg_sp_ses.75e6": {
-                    "ttl": 1819,
+                    "ttl": 1815,
                     "length": 1,
-                    "prevalence": 0.00010258514567090685,
+                    "prevalence": 0.00010034115994380895,
                     "uniqueness": 1
                 },
                 "_ncg_sp_id.75e6": {
-                    "ttl": 63072019,
+                    "ttl": 63072015,
                     "length": 108,
-                    "prevalence": 0.00010258514567090685,
+                    "prevalence": 0.00010034115994380895,
                     "uniqueness": 1
                 },
                 "_ncg_sp_ses.ff3f": {
-                    "ttl": 1825,
+                    "ttl": 1812,
                     "length": 1,
-                    "prevalence": 0.00010258514567090685,
+                    "prevalence": 0.00010034115994380895,
                     "uniqueness": 1
                 },
                 "_ncg_sp_id.ff3f": {
-                    "ttl": 63072025,
+                    "ttl": 63072012,
                     "length": 108,
-                    "prevalence": 0.00010258514567090685,
+                    "prevalence": 0.00010034115994380895,
                     "uniqueness": 1
                 },
                 "_ncg_sp_ses.b006": {
-                    "ttl": 1832,
+                    "ttl": 1816,
                     "length": 1,
-                    "prevalence": 0.00010258514567090685,
+                    "prevalence": 0.00010034115994380895,
                     "uniqueness": 1
                 },
                 "_ncg_sp_id.b006": {
-                    "ttl": 63072032,
+                    "ttl": 63072016,
                     "length": 108,
-                    "prevalence": 0.00010258514567090685,
-                    "uniqueness": 1
-                },
-                "_ncg_sp_ses.cc72": {
-                    "ttl": 1827,
-                    "length": 1,
-                    "prevalence": 0.00010258514567090685,
-                    "uniqueness": 1
-                },
-                "_ncg_sp_id.cc72": {
-                    "ttl": 63072027,
-                    "length": 108,
-                    "prevalence": 0.00010258514567090685,
+                    "prevalence": 0.00010034115994380895,
                     "uniqueness": 1
                 },
                 "_ncg_sp_ses.f8aa": {
-                    "ttl": 1816,
+                    "ttl": 1812,
                     "length": 1,
-                    "prevalence": 0.00010258514567090685,
+                    "prevalence": 0.00010034115994380895,
                     "uniqueness": 1
                 },
                 "_ncg_sp_id.f8aa": {
-                    "ttl": 63072016,
+                    "ttl": 63072012,
                     "length": 108,
-                    "prevalence": 0.00010258514567090685,
+                    "prevalence": 0.00010034115994380895,
                     "uniqueness": 1
                 },
                 "_ncg_sp_ses.1a48": {
-                    "ttl": 1808,
+                    "ttl": 1809,
                     "length": 1,
-                    "prevalence": 0.00010258514567090685,
+                    "prevalence": 0.00010034115994380895,
                     "uniqueness": 1
                 },
                 "_ncg_sp_id.1a48": {
-                    "ttl": 63072008,
+                    "ttl": 63072009,
                     "length": 108,
-                    "prevalence": 0.00010258514567090685,
+                    "prevalence": 0.00010034115994380895,
+                    "uniqueness": 1
+                },
+                "_ncg_sp_ses.5a38": {
+                    "ttl": 1810,
+                    "length": 1,
+                    "prevalence": 0.00010034115994380895,
+                    "uniqueness": 1
+                },
+                "_ncg_sp_id.5a38": {
+                    "ttl": 63072010,
+                    "length": 108,
+                    "prevalence": 0.00010034115994380895,
                     "uniqueness": 1
                 },
                 "_ncg_sp_ses.c142": {
-                    "ttl": 1815,
+                    "ttl": 1814,
                     "length": 1,
-                    "prevalence": 0.00010258514567090685,
+                    "prevalence": 0.00010034115994380895,
                     "uniqueness": 1
                 },
                 "_ncg_sp_id.c142": {
-                    "ttl": 63072015,
+                    "ttl": 63072014,
                     "length": 108,
-                    "prevalence": 0.00010258514567090685,
+                    "prevalence": 0.00010034115994380895,
                     "uniqueness": 1
                 },
                 "_ncg_sp_ses.5348": {
-                    "ttl": 1832,
+                    "ttl": 1811,
                     "length": 1,
-                    "prevalence": 0.00010258514567090685,
+                    "prevalence": 0.00010034115994380895,
                     "uniqueness": 1
                 },
                 "_ncg_sp_id.5348": {
-                    "ttl": 63072032,
+                    "ttl": 63072011,
                     "length": 108,
-                    "prevalence": 0.00010258514567090685,
+                    "prevalence": 0.00010034115994380895,
                     "uniqueness": 1
                 },
                 "_ncg_sp_ses.d12b": {
                     "ttl": 1807,
                     "length": 1,
-                    "prevalence": 0.00010258514567090685,
+                    "prevalence": 0.00010034115994380895,
                     "uniqueness": 1
                 },
                 "_ncg_sp_id.d12b": {
                     "ttl": 63072007,
                     "length": 108,
-                    "prevalence": 0.00010258514567090685,
+                    "prevalence": 0.00010034115994380895,
+                    "uniqueness": 1
+                },
+                "_ncg_sp_ses.edd8": {
+                    "ttl": 1815,
+                    "length": 1,
+                    "prevalence": 0.00010034115994380895,
+                    "uniqueness": 1
+                },
+                "_ncg_sp_id.edd8": {
+                    "ttl": 63072015,
+                    "length": 108,
+                    "prevalence": 0.00010034115994380895,
                     "uniqueness": 1
                 }
             },
             "firstPartyCookiesSent": {},
             "exampleSites": [
+                "marketwatch.com",
                 "nypost.com",
                 "www.biblegateway.com",
-                "www.realtor.com",
-                "m.northernstar.com.au",
-                "www.couriermail.com.au",
-                "www.dailytelegraph.com.au",
-                "www.taste.com.au",
-                "pagesix.com",
-                "www.bodyandsoul.com.au",
-                "www.racenet.com.au",
-                "talksport.com",
-                "www.ntnews.com.au",
-                "www.themorningbulletin.com.au",
+                "www.marketwatch.com",
+                "www.punters.com.au",
                 "www.vogue.com",
-                "www.vogue.com.au",
-                "www.news-mail.com.au",
+                "www.frasercoastchronicle.com.au",
                 "www.theaustralian.com.au",
+                "www.bodyandsoul.com.au",
+                "www.geelongadvertiser.com.au",
+                "m.themorningbulletin.com.au",
+                "www.goldcoastbulletin.com.au",
+                "www.mytributes.com.au",
+                "www.ntnews.com.au",
+                "www.couriermail.com.au",
                 "www.themercury.com.au",
-                "www.cairnspost.com.au",
-                "www.adelaidenow.com.au"
+                "www.taste.com.au",
+                "www.dailymercury.com.au",
+                "www.kidspot.com.au",
+                "www.thechronicle.com.au"
             ]
         },
         {
@@ -412,9 +518,13 @@
                 "au.tags"
             ],
             "apis": {},
-            "sites": 6,
-            "prevalence": 0.000616,
+            "sites": 9,
+            "prevalence": 0.000903,
             "cnames": [
+                {
+                    "original": "tags.barrons.com",
+                    "resolved": "us.tags.newscgp.com"
+                },
                 {
                     "original": "ncg.tags.news.com.au",
                     "resolved": "au.tags.newscgp.com"
@@ -428,24 +538,27 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
+                "marketwatch.com",
+                "bigcharts.marketwatch.com",
                 "decider.com",
+                "nypost.com",
                 "pagesix.com",
-                "talksport.com",
                 "www.biblegateway.com",
-                "www.news.com.au",
-                "www.realtor.com"
+                "www.kidspot.com.au",
+                "www.marketwatch.com",
+                "www.news.com.au"
             ]
         },
         {
             "rule": "newscgp\\.com\\/i",
-            "cookies": 0.000308,
+            "cookies": 0.000702,
             "fingerprinting": 0,
             "subdomains": [
                 "us.pixel"
             ],
             "apis": {},
-            "sites": 5,
-            "prevalence": 0.000513,
+            "sites": 7,
+            "prevalence": 0.000702,
             "cnames": [],
             "responseHashes": [
                 "caa849b179befa2645a8e2c474d2e82a76777a3305315ece911013e8ee9a916c"
@@ -453,82 +566,97 @@
             "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "_ncg_id_": 0.0004103405826836274
+                "_ncg_id_": 0.0006020469596628537
             },
             "exampleSites": [
+                "marketwatch.com",
+                "bigcharts.marketwatch.com",
                 "decider.com",
+                "nypost.com",
                 "pagesix.com",
-                "talksport.com",
                 "www.biblegateway.com",
-                "www.realtor.com"
+                "www.marketwatch.com"
             ]
         },
         {
-            "rule": "newscgp\\.com\\/lookuplist",
+            "rule": "newscgp\\.com\\/prod\\/prebid\\/nyp\\/pb\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
-                "us.audience",
-                "au.audience"
+                "us.tags"
             ],
-            "apis": {},
-            "sites": 13,
-            "prevalence": 0.00133,
+            "apis": {
+                "Navigator.prototype.userAgent": 3,
+                "window.localStorage": 3,
+                "Date.prototype.getTime": 3,
+                "Navigator.prototype.cookieEnabled": 3,
+                "window.sessionStorage": 3,
+                "Navigator.prototype.appName": 3,
+                "Document.cookie getter": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [
-                "ec8d8cea3587a635f9708ab860f10a1be5bd6c917097f754a1c4f1abc5cc7169"
+                "9844619182bb4a8be637a32d8fd8d501066b5e38e09f12437a9a411e43bdaccb"
             ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {
-                "_ncg_id_": 0.0004103405826836274
-            },
-            "exampleSites": [
-                "decider.com",
-                "pagesix.com",
-                "talksport.com",
-                "www.bodyandsoul.com.au",
-                "www.cairnspost.com.au",
-                "www.couriermail.com.au",
-                "www.goldcoastbulletin.com.au",
-                "www.news.com.au",
-                "www.realtor.com",
-                "www.taste.com.au",
-                "www.theaustralian.com.au",
-                "www.themercury.com.au",
-                "www.townsvillebulletin.com.au"
-            ]
-        },
-        {
-            "rule": "newscgp\\.com\\/com\\.snowplowanalytics\\.snowplow\\/tp2",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "au.pixel"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000205,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Other",
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "dailymercury.com.au",
-                "www.racenet.com.au"
+                "decider.com",
+                "nypost.com",
+                "pagesix.com"
             ]
         },
         {
             "rule": "newscgp\\.com\\/com\\.snowplowanalytics\\.snowplow\\/tp2",
-            "cookies": 0.00144,
+            "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
                 "au.pixel"
             ],
             "apis": {},
-            "sites": 20,
-            "prevalence": 0.00205,
+            "sites": 32,
+            "prevalence": 0.00321,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "www.themorningbulletin.com.au",
+                "www.news.com.au",
+                "www.themercury.com.au",
+                "www.dailymercury.com.au",
+                "www.couriermail.com.au",
+                "www.adelaidenow.com.au",
+                "www.punters.com.au",
+                "www.gq.com",
+                "www.vogue.com",
+                "www.weeklytimesnow.com.au",
+                "www.thechronicle.com.au",
+                "www.theaustralian.com.au",
+                "m.sunshinecoastdaily.com.au",
+                "www.ntnews.com.au",
+                "www.frasercoastchronicle.com.au",
+                "www.kidspot.com.au",
+                "www.heraldsun.com.au",
+                "www.geelongadvertiser.com.au",
+                "www.mytributes.com.au",
+                "www.sunshinecoastdaily.com.au"
+            ]
+        },
+        {
+            "rule": "newscgp\\.com\\/com\\.snowplowanalytics\\.snowplow\\/tp2",
+            "cookies": 0.00321,
+            "fingerprinting": 0,
+            "subdomains": [
+                "au.pixel"
+            ],
+            "apis": {},
+            "sites": 33,
+            "prevalence": 0.00331,
             "cnames": [],
             "responseHashes": [
                 "2689367b205c16ce32ed4200942b8b8b1e262dfc70d9bc9fbc77c49699a4f1df"
@@ -537,62 +665,63 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "dailymercury.com.au",
-                "m.sunshinecoastdaily.com.au",
-                "www.bodyandsoul.com.au",
-                "www.cairnspost.com.au",
-                "www.couriermail.com.au",
-                "www.goldcoastbulletin.com.au",
-                "www.gq.com",
                 "www.mytributes.com.au",
+                "www.vogue.com",
+                "www.taste.com.au",
+                "www.bodyandsoul.com.au",
+                "www.geelongadvertiser.com.au",
+                "www.dailymercury.com.au",
+                "www.themercury.com.au",
+                "www.couriermail.com.au",
+                "www.ntnews.com.au",
+                "supercoach.dailytelegraph.com.au",
+                "www.buysearchsell.com.au",
+                "www.frasercoastchronicle.com.au",
+                "www.weeklytimesnow.com.au",
                 "www.news.com.au",
-                "www.northernstar.com.au",
                 "www.punters.com.au",
-                "www.qt.com.au",
                 "www.racenet.com.au",
                 "www.sunshinecoastdaily.com.au",
-                "www.taste.com.au",
-                "www.theaustralian.com.au",
-                "www.themercury.com.au",
-                "www.townsvillebulletin.com.au",
-                "www.vogue.com.au",
-                "www.vogue.com"
+                "www.heraldsun.com.au",
+                "www.qt.com.au",
+                "www.kidspot.com.au"
             ]
         },
         {
-            "rule": "newscgp\\.com\\/com\\.snowplowanalytics\\.snowplow\\/tp2",
+            "rule": "newscgp\\.com\\/lookuplist",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "au.pixel"
+                "au.audience"
             ],
             "apis": {},
-            "sites": 18,
-            "prevalence": 0.00185,
+            "sites": 19,
+            "prevalence": 0.00191,
             "cnames": [],
             "responseHashes": [],
-            "type": "Preflight",
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "sunshinecoastdaily.com.au",
+                "adelaidenow.com.au",
                 "www.bodyandsoul.com.au",
                 "www.cairnspost.com.au",
                 "www.couriermail.com.au",
+                "www.dailytelegraph.com.au",
+                "www.frasercoastchronicle.com.au",
+                "www.geelongadvertiser.com.au",
                 "www.goldcoastbulletin.com.au",
-                "www.gq.com",
-                "www.mytributes.com.au",
+                "www.heraldsun.com.au",
+                "www.kidspot.com.au",
                 "www.news.com.au",
                 "www.northernstar.com.au",
-                "www.punters.com.au",
-                "www.qt.com.au",
-                "www.sunshinecoastdaily.com.au",
+                "www.ntnews.com.au",
                 "www.taste.com.au",
                 "www.theaustralian.com.au",
+                "www.thechronicle.com.au",
                 "www.themercury.com.au",
                 "www.townsvillebulletin.com.au",
-                "www.vogue.com.au",
-                "www.vogue.com"
+                "www.weeklytimesnow.com.au"
             ]
         }
     ],
@@ -603,14 +732,13 @@
         "cpu": 0,
         "cache": 3
     },
-    "cookies": 0.00256,
+    "cookies": 0.00401,
     "types": {
-        "Script": 44,
-        "Document": 6,
-        "Image": 5,
-        "XHR": 33,
-        "Other": 2,
-        "Preflight": 18
+        "Script": 45,
+        "Document": 9,
+        "Image": 7,
+        "Preflight": 32,
+        "XHR": 52
     },
     "nameservers": [
         "ns-1037.awsdns-01.org",
