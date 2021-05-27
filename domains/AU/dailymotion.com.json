@@ -7,10 +7,13 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.000308,
+    "prevalence": 0.000301,
     "sites": 3,
     "subdomains": [
-        "speedtest"
+        "speedtest",
+        "dmxleo",
+        "st.sv4",
+        "api"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -18,23 +21,87 @@
         {
             "rule": "dailymotion\\.com\\/latencies\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "speedtest"
             ],
-            "apis": {},
+            "apis": {
+                "window.localStorage": 1,
+                "Date.prototype.getTime": 1
+            },
             "sites": 2,
-            "prevalence": 0.000205,
+            "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [
-                "72b2181e58d5c45800d66d36702794ca5ae5bf1fbc20f106442b7eac3191a623"
-            ],
+            "responseHashes": [],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "deccanherald.com",
-                "www.deccanherald.com"
+                "albawaba.com",
+                "www.asiaone.com"
+            ]
+        },
+        {
+            "rule": "dailymotion\\.com\\/cdn\\/manifest\\/video\\/xt3rt0c\\.m3u8",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dmxleo"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "albawaba.com",
+                "www.albawaba.com"
+            ]
+        },
+        {
+            "rule": "dailymotion\\.com\\/speedtest",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "speedtest",
+                "st.sv4"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "albawaba.com",
+                "www.albawaba.com"
+            ]
+        },
+        {
+            "rule": "dailymotion\\.com\\/videos",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "534878a6825508fa4c06802c05c76ef1c421a9ec21e99ca809554921136c05c7"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "asiaone.com",
+                "www.theaureview.com"
             ]
         }
     ],
@@ -48,12 +115,14 @@
         "cpu": 0,
         "cache": 3
     },
-    "cookies": 0.000103,
+    "cookies": 0.000201,
     "types": {
-        "Script": 2
+        "Script": 4,
+        "WebSocket": 2,
+        "Fetch": 2
     },
     "nameservers": [
-        "b.dailymotion.com",
-        "a.dailymotion.com"
+        "a.dailymotion.com",
+        "b.dailymotion.com"
     ]
 }

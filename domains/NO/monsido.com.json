@@ -7,10 +7,13 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000302,
-    "sites": 3,
+    "prevalence": 0.000401,
+    "sites": 4,
     "subdomains": [
-        "tracking"
+        "tracking",
+        "app-script",
+        "heatmaps",
+        "pagecorrect"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -24,7 +27,7 @@
             ],
             "apis": {},
             "sites": 3,
-            "prevalence": 0.000302,
+            "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [
                 "cf4724b2f736ed1a0ae6bc28f1ead963d9cd2c1fd87b6ef32e7799fc1c5c8bda"
@@ -32,12 +35,95 @@
             "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "monsido": 0.00010058338362502515
+                "monsido": 0.00020066218521119696
             },
             "exampleSites": [
                 "betterhealth.vic.gov.au",
+                "www.kristiansand.kommune.no",
+                "www.svea.com"
+            ]
+        },
+        {
+            "rule": "monsido\\.com\\/v2\\/monsido-script\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 1,
+            "subdomains": [
+                "app-script"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2
+            },
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [
+                "7b3054c4b03b85dc958f6b5ba09fa8e1c05790b265b1762044c55d63725f4d74"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "monsido": {
+                    "ttl": 2592005,
+                    "length": 16,
+                    "prevalence": 0.00020066218521119696,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kristiansand.kommune.no",
                 "www.svea.com",
-                "www.tmbank.com.au"
+                "www.yara.com"
+            ]
+        },
+        {
+            "rule": "monsido\\.com\\/v1\\/heatmaps\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "heatmaps"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "948976e69e0968029a216ee7287a4fac16d0c8f7352d3fa23600e0dae2a608ea"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kristiansand.kommune.no",
+                "www.svea.com"
+            ]
+        },
+        {
+            "rule": "monsido\\.com\\/v1\\/settings\\/ITlZZX2Dz2qKQsTskXm7dA\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "heatmaps",
+                "pagecorrect"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kristiansand.kommune.no",
+                "www.kristiansand.kommune.no"
             ]
         }
     ],
@@ -48,14 +134,16 @@
         "cpu": 1,
         "cache": 3
     },
-    "cookies": 0.000101,
+    "cookies": 0.000201,
     "types": {
-        "Image": 3
+        "Image": 3,
+        "Script": 5,
+        "XHR": 2
     },
     "nameservers": [
-        "ns-cloud-e2.googledomains.com",
         "ns-cloud-e1.googledomains.com",
-        "ns-cloud-e4.googledomains.com",
-        "ns-cloud-e3.googledomains.com"
+        "ns-cloud-e2.googledomains.com",
+        "ns-cloud-e3.googledomains.com",
+        "ns-cloud-e4.googledomains.com"
     ]
 }

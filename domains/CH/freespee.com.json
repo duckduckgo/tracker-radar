@@ -10,16 +10,20 @@
         "analytics"
     ],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "freespee\\.com\\/js\\/external\\/fs\\.js",
             "cookies": 0.000201,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "analytics"
             ],
-            "apis": {},
+            "apis": {
+                "Document.cookie getter": 1,
+                "Date.prototype.getTime": 1,
+                "Document.cookie setter": 1
+            },
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
@@ -27,11 +31,54 @@
                 "3eb0e3943d48257dc36fb19ebcf163b6447ced09ebc72c9f2278e3122d77efc4"
             ],
             "type": "Script",
+            "firstPartyCookies": {
+                "__fs_dncs_sessionid_368208ca-3e20-4f96-a4f7-7032d13aa4bd": {
+                    "ttl": 1802,
+                    "length": 36,
+                    "prevalence": 0.00010043185698503566,
+                    "uniqueness": 1
+                },
+                "__fs_dncs_trackingid_368208ca-3e20-4f96-a4f7-7032d13aa4bd": {
+                    "ttl": 31536002,
+                    "length": 36,
+                    "prevalence": 0.00010043185698503566,
+                    "uniqueness": 1
+                },
+                "__fs_dncs_exttrack": {
+                    "ttl": 31536002,
+                    "length": 1,
+                    "prevalence": 0.00010043185698503566,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rentokil.com",
+                "www.vroomly.com"
+            ]
+        },
+        {
+            "rule": "freespee\\.com\\/index\\.php",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "analytics"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [
+                "eb69fe8fea7cd9d76d684b4be7b37ff8c916bbd8d624eb3cf3d772d6194c59f5",
+                "d13484260c06b599f030df4c35101ec91d74459023bfbbaf899606dfdd5ffd41"
+            ],
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "jamesedition.com",
-                "www.roberthalf.ch"
+                "rentokil.com",
+                "www.rentokil.com",
+                "www.vroomly.com"
             ]
         }
     ],
@@ -44,7 +91,7 @@
     },
     "cookies": 0.000201,
     "types": {
-        "Script": 2
+        "Script": 5
     },
     "nameservers": [
         "ns-1584.awsdns-06.co.uk",

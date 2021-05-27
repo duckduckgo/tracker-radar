@@ -7,9 +7,9 @@
     "prevalence": 0.000201,
     "sites": 2,
     "subdomains": [
-        "dns-fr2.automation",
         "prixtel.automation",
-        "dns-dedi-fr2.automation"
+        "dns-dedi-fr2.automation",
+        "dns-fr2.automation"
     ],
     "cnames": [
         {
@@ -25,11 +25,12 @@
     "resources": [
         {
             "rule": "webmecanik\\.com\\/mtc\\.js",
-            "cookies": 0.0001,
+            "cookies": 0,
             "fingerprinting": 2,
             "subdomains": [
-                "dns-fr2.automation",
-                "prixtel.automation"
+                "prixtel.automation",
+                "dns-dedi-fr2.automation",
+                "dns-fr2.automation"
             ],
             "apis": {
                 "Navigator.prototype.language": 1,
@@ -39,43 +40,31 @@
                 "Navigator.prototype.appVersion": 1,
                 "Navigator.prototype.doNotTrack": 1,
                 "Intl.DateTimeFormat.prototype.resolvedOptions": 1,
-                "window.localStorage": 1,
-                "Document.cookie setter": 1
+                "window.localStorage": 1
             },
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000301,
             "cnames": [
+                {
+                    "original": "webmecanik.prixtel.com",
+                    "resolved": "dns-dedi-fr2.automation.webmecanik.com"
+                },
                 {
                     "original": "automation.normandie-tourisme.fr",
                     "resolved": "dns-fr2.automation.webmecanik.com"
                 }
             ],
-            "responseHashes": [],
+            "responseHashes": [
+                "a625295984da810980e2c82b80fe91728d79c4b743c965be858fd32fce0179df",
+                "1ea07ab8cf4de9437554454554df6474b6bfe0eaf74b871cdf5606de97b6570b"
+            ],
             "type": "Script",
-            "firstPartyCookies": {
-                "mtc_id": {
-                    "ttl": null,
-                    "length": 8,
-                    "prevalence": 0.00010041168792047395,
-                    "uniqueness": 1
-                },
-                "mtc_sid": {
-                    "ttl": null,
-                    "length": 23,
-                    "prevalence": 0.00010041168792047395,
-                    "uniqueness": 1
-                },
-                "mautic_device_id": {
-                    "ttl": null,
-                    "length": 23,
-                    "prevalence": 0.00010041168792047395,
-                    "uniqueness": 1
-                }
-            },
+            "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "normandie-tourisme.fr",
-                "www.prixtel.com"
+                "prixtel.com",
+                "assistance.prixtel.com",
+                "www.normandie-tourisme.fr"
             ]
         },
         {
@@ -83,20 +72,20 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "dns-fr2.automation",
-                "dns-dedi-fr2.automation"
+                "dns-dedi-fr2.automation",
+                "dns-fr2.automation"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [
                 {
-                    "original": "automation.normandie-tourisme.fr",
-                    "resolved": "dns-fr2.automation.webmecanik.com"
-                },
-                {
                     "original": "webmecanik.prixtel.com",
                     "resolved": "dns-dedi-fr2.automation.webmecanik.com"
+                },
+                {
+                    "original": "automation.normandie-tourisme.fr",
+                    "resolved": "dns-fr2.automation.webmecanik.com"
                 }
             ],
             "responseHashes": [],
@@ -104,8 +93,8 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "normandie-tourisme.fr",
-                "www.prixtel.com"
+                "prixtel.com",
+                "www.normandie-tourisme.fr"
             ]
         },
         {
@@ -113,31 +102,31 @@
             "cookies": 0.000201,
             "fingerprinting": 0,
             "subdomains": [
-                "dns-fr2.automation",
-                "dns-dedi-fr2.automation"
+                "dns-dedi-fr2.automation",
+                "dns-fr2.automation"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [
                 {
-                    "original": "automation.normandie-tourisme.fr",
-                    "resolved": "dns-fr2.automation.webmecanik.com"
-                },
-                {
                     "original": "webmecanik.prixtel.com",
                     "resolved": "dns-dedi-fr2.automation.webmecanik.com"
+                },
+                {
+                    "original": "automation.normandie-tourisme.fr",
+                    "resolved": "dns-fr2.automation.webmecanik.com"
                 }
             ],
             "responseHashes": [
-                "0fbc2fd80afe8d9b89e7e281ec40752079783575a115bdd7a7ddfe4cc4d11942"
+                "b896de4f262664a0b56cf63b315457873cedde6d7c3ed20a0248d98749eafc0b"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "normandie-tourisme.fr",
-                "www.prixtel.com"
+                "prixtel.com",
+                "www.normandie-tourisme.fr"
             ]
         }
     ],
@@ -145,9 +134,13 @@
     "performance": {},
     "cookies": 0.000201,
     "types": {
-        "Script": 2,
+        "Script": 3,
         "Preflight": 2,
         "XHR": 2
     },
-    "nameservers": []
+    "nameservers": [
+        "ns-235-a.gandi.net",
+        "ns-134-b.gandi.net",
+        "ns-21-c.gandi.net"
+    ]
 }
