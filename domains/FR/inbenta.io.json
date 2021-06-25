@@ -7,7 +7,9 @@
     "prevalence": 0.000804,
     "sites": 8,
     "subdomains": [
-        "sdk"
+        "sdk",
+        "api-gce1",
+        "api-gce2"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -34,7 +36,7 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "banquepopulaire.fr",
-                "www.banquepopulaire.fr"
+                "www.caisse-epargne.fr"
             ]
         },
         {
@@ -60,7 +62,7 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "banquepopulaire.fr",
-                "www.banquepopulaire.fr"
+                "www.caisse-epargne.fr"
             ]
         },
         {
@@ -82,7 +84,7 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "banquepopulaire.fr",
-                "www.banquepopulaire.fr"
+                "www.caisse-epargne.fr"
             ]
         },
         {
@@ -104,56 +106,51 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "banquepopulaire.fr",
-                "www.banquepopulaire.fr"
+                "www.caisse-epargne.fr"
             ]
         },
         {
-            "rule": "inbenta\\.io\\/search\\/1\\.32\\.0\\/inbenta-search-sdk\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "sdk"
-            ],
-            "apis": {
-                "Navigator.prototype.userAgent": 2,
-                "Navigator.prototype.product": 2,
-                "Document.cookie getter": 1,
-                "window.localStorage": 2
-            },
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "ed0b34eb1a9a37ddc3ff59b0ef87c22916facc17e5c31a8591947a548d9b80df"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "labanquepostale.fr",
-                "www.malakoffhumanis.com"
-            ]
-        },
-        {
-            "rule": "inbenta\\.io\\/search\\/1\\.32\\.0\\/inbenta-search-sdk-space-cowboy\\.min\\.css",
-            "cookies": 0,
+            "rule": "inbenta\\.io\\/prod\\/km\\/v1\\/tracking\\/session",
+            "cookies": 0.000201,
             "fingerprinting": 0,
             "subdomains": [
-                "sdk"
+                "api-gce1",
+                "api-gce2"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "b875c64d6fcedca82d9942e5929a21403ebfb97cfc862f8cbae585d0d16ecc52"
+                "fb8d460e2116430a38a1f064af9dc2a284c933a36466241a73de6b3aa35a8ad8"
             ],
-            "type": "Stylesheet",
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "labanquepostale.fr",
-                "www.malakoffhumanis.com"
+                "cofidis.fr",
+                "www.lolivier.fr"
+            ]
+        },
+        {
+            "rule": "inbenta\\.io\\/prod\\/km\\/v1\\/tracking\\/session",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-gce1",
+                "api-gce2"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cofidis.fr",
+                "www.lolivier.fr"
             ]
         }
     ],
@@ -164,15 +161,17 @@
         "cpu": 0,
         "cache": 3
     },
-    "cookies": 0,
+    "cookies": 0.000201,
     "types": {
-        "Script": 6,
-        "Stylesheet": 6
+        "Script": 4,
+        "Stylesheet": 4,
+        "XHR": 2,
+        "Preflight": 2
     },
     "nameservers": [
-        "ns-726.awsdns-26.net",
         "ns-1207.awsdns-22.org",
         "ns-1752.awsdns-27.co.uk",
-        "ns-406.awsdns-50.com"
+        "ns-406.awsdns-50.com",
+        "ns-726.awsdns-26.net"
     ]
 }

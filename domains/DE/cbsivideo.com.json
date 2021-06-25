@@ -4,16 +4,68 @@
     "source": [
         "DuckDuckGo-DE"
     ],
-    "prevalence": 0.000101,
-    "sites": 1,
+    "prevalence": 0.000302,
+    "sites": 3,
     "subdomains": [
+        "doppler-tasks",
+        "doppler-config",
         "livec0a3575.airspace-f",
         "livec0a3575.airspace-e",
+        "18053c1b-0c67-446a-b928-131a3b390409.dns-clientinfo",
+        "b3eb608c-bd6e-4a7d-92d9-8446e01f2f0c.dns-clientinfo",
         "doppler-reporting"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "cbsivideo\\.com\\/tasks\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "doppler-tasks"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "a5407dc99fa4f6117a61f50ed9833ac89dc7c2629b5f85b6a191a594083f8c94"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cbssports.com",
+                "www.mtv.com",
+                "www.southpark.de"
+            ]
+        },
+        {
+            "rule": "cbsivideo\\.com\\/doppler-0\\.1\\.17\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "doppler-config"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Date.prototype.getTime": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "c8de3fc234d2fafe518a605bafbc985873fd701f54751b04c01d5ae9d0109f3f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mtv.com",
+                "www.southpark.de"
+            ]
+        },
         {
             "rule": "cbsivideo\\.com\\/measurements\\/1536197413045-1555KB\\.ts",
             "cookies": 0,
@@ -23,18 +75,42 @@
                 "livec0a3575.airspace-e"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
-                "d3ce6c76659c38e2e46076e0d68f6bfe3932a6402f6fddb5bf35af618fae2a19"
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "cbssports.com",
-                "www.cbssports.com"
+                "mtv.com",
+                "www.mtv.com",
+                "www.southpark.de"
+            ]
+        },
+        {
+            "rule": "cbsivideo\\.com\\/clientinfo",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "18053c1b-0c67-446a-b928-131a3b390409.dns-clientinfo",
+                "b3eb608c-bd6e-4a7d-92d9-8446e01f2f0c.dns-clientinfo"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "712c448ebdfa69d3908548d700633f71594037e78a427a9b8c65f6c680848ee3"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mtv.com",
+                "www.southpark.de"
             ]
         },
         {
@@ -49,12 +125,33 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mtv.com",
+                "www.southpark.de"
+            ]
+        },
+        {
+            "rule": "cbsivideo\\.com\\/log",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "doppler-reporting"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "cbssports.com",
-                "www.cbssports.com"
+                "mtv.com",
+                "www.mtv.com",
+                "www.southpark.de"
             ]
         },
         {
@@ -65,18 +162,19 @@
                 "livec0a3575.airspace-f"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
-                "4e0705327480ad2323cb03d9c450ffcae4a98bf3a5382fa0c7882145ed620e49"
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "cbssports.com",
-                "www.cbssports.com"
+                "mtv.com",
+                "www.mtv.com",
+                "www.southpark.de"
             ]
         }
     ],
@@ -84,7 +182,9 @@
     "performance": {},
     "cookies": 0,
     "types": {
-        "Fetch": 6
+        "Fetch": 14,
+        "Script": 2,
+        "Preflight": 2
     },
     "nameservers": [
         "ns-883.awsdns-46.net",

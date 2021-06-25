@@ -7,8 +7,7 @@
     "prevalence": 0.000602,
     "sites": 6,
     "subdomains": [
-        "cdn",
-        "jsonapi-us-valkyrie"
+        "cdn"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -23,11 +22,11 @@
             "apis": {
                 "Navigator.prototype.userAgent": 3,
                 "window.localStorage": 3,
-                "Document.cookie getter": 2,
                 "Navigator.prototype.languages": 3,
                 "Navigator.prototype.language": 3,
                 "Navigator.prototype.mimeTypes": 3,
-                "Date.prototype.getTime": 2
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 3
             },
             "sites": 3,
             "prevalence": 0.000301,
@@ -39,31 +38,45 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "nsw.gov.au",
+                "hcamag.com",
                 "www.islhd.health.nsw.gov.au",
                 "www.seslhd.health.nsw.gov.au"
             ]
         },
         {
-            "rule": "sajari\\.net\\/sajari\\.api\\.pipeline\\.v1\\.Query\\/Search",
-            "cookies": 0,
-            "fingerprinting": 0,
+            "rule": "sajari\\.net\\/js\\/integrations\\/website-search-1\\.2\\.0\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 1,
             "subdomains": [
-                "jsonapi-us-valkyrie"
+                "cdn"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2,
+                "window.sessionStorage": 2,
+                "window.localStorage": 2
+            },
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "4304f69c97173481cb5e9da2125d96fc24185f170bb70d48008031aa5db5f01a"
+                "ba02027843f55fcb0222c3fbc13c394ef91f7223d6f4413eb4d321938bbb572d"
             ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
+            "type": "Script",
+            "firstPartyCookies": {
+                "sjSE": {
+                    "ttl": null,
+                    "length": 1,
+                    "prevalence": 0.0002007226013649137,
+                    "uniqueness": 1
+                }
+            },
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "nsw.gov.au",
-                "www.psc.nsw.gov.au"
+                "noosa.qld.gov.au",
+                "www.yourmortgage.com.au"
             ]
         }
     ],
@@ -74,15 +87,14 @@
         "cpu": 0,
         "cache": 3
     },
-    "cookies": 0.000201,
+    "cookies": 0.000301,
     "types": {
-        "Script": 3,
-        "Fetch": 2
+        "Script": 5
     },
     "nameservers": [
-        "ns-cloud-c1.googledomains.com",
         "ns-cloud-c4.googledomains.com",
         "ns-cloud-c2.googledomains.com",
-        "ns-cloud-c3.googledomains.com"
+        "ns-cloud-c3.googledomains.com",
+        "ns-cloud-c1.googledomains.com"
     ]
 }

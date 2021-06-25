@@ -11,6 +11,7 @@
     "sites": 13,
     "subdomains": [
         "js",
+        "sslgen-tidal",
         "sslgen-nyt",
         "api-js"
     ],
@@ -18,20 +19,26 @@
         {
             "original": "dd.nytimes.com",
             "resolved": "sslgen-nyt.datadome.co"
+        },
+        {
+            "original": "dd.tidal.com",
+            "resolved": "sslgen-tidal.datadome.co"
         }
     ],
     "fingerprinting": 3,
     "resources": [
         {
             "rule": "datadome\\.co\\/tags\\.js",
-            "cookies": 0.000808,
+            "cookies": 0.00121,
             "fingerprinting": 3,
             "subdomains": [
                 "js",
+                "sslgen-tidal",
                 "sslgen-nyt"
             ],
             "apis": {
                 "Navigator.prototype.userAgent": 11,
+                "Document.cookie getter": 8,
                 "Screen.prototype.height": 11,
                 "Screen.prototype.width": 11,
                 "Screen.prototype.colorDepth": 11,
@@ -50,55 +57,59 @@
                 "Navigator.prototype.maxTouchPoints": 11,
                 "Navigator.prototype.vendor": 11,
                 "Navigator.prototype.mimeTypes": 11,
-                "Navigator.prototype.mediaDevices": 10,
+                "Navigator.prototype.mediaDevices": 11,
                 "HTMLMediaElement.prototype.canPlayType": 11,
                 "MediaSource.isTypeSupported": 11,
-                "Navigator.prototype.deviceMemory": 10,
+                "Navigator.prototype.deviceMemory": 11,
                 "Screen.prototype.orientation": 11,
                 "Navigator.prototype.languages": 11,
                 "WebGLRenderingContext.prototype.getExtension": 11,
                 "WebGLRenderingContext.prototype.getParameter": 11,
-                "Navigator.prototype.permissions": 10,
+                "Navigator.prototype.permissions": 11,
                 "Intl.DateTimeFormat.prototype.resolvedOptions": 11,
                 "Notification.permission": 11,
-                "Document.cookie getter": 7,
-                "Document.cookie setter": 7
+                "Document.cookie setter": 10,
+                "Date.prototype.getTime": 1
             },
             "sites": 13,
             "prevalence": 0.00131,
             "cnames": [
+                {
+                    "original": "dd.tidal.com",
+                    "resolved": "sslgen-tidal.datadome.co"
+                },
                 {
                     "original": "dd.nytimes.com",
                     "resolved": "sslgen-nyt.datadome.co"
                 }
             ],
             "responseHashes": [
-                "777eeadfa99729f21fb6aae66847f30967a46f1fd6f9e58e142eeb6d36db6729"
+                "8695fe380d3c5942d5440f53c8b577274a89d0537af42f3be80fd721bda105e5"
             ],
             "type": "Script",
             "firstPartyCookies": {
                 "datadome": {
                     "ttl": 31536000,
                     "length": 106,
-                    "prevalence": 0.0005048465266558966,
+                    "prevalence": 0.0008035355564483728,
                     "uniqueness": 1
                 }
             },
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "brainly.com",
-                "brainly.in",
                 "tidal.com",
                 "www.alltrails.com",
                 "www.benzinga.com",
+                "www.bissell.com",
                 "www.brother-usa.com",
+                "www.cairn.info",
+                "www.flighthub.com",
                 "www.footlocker.com",
                 "www.footlocker.ca",
-                "www.idealista.com",
                 "www.knifecenter.com",
                 "www.londondrugs.com",
-                "www.nytimes.com",
-                "www.ouest-france.fr"
+                "www.nytimes.com"
             ]
         },
         {
@@ -107,6 +118,7 @@
             "fingerprinting": 0,
             "subdomains": [
                 "api-js",
+                "sslgen-tidal",
                 "sslgen-nyt"
             ],
             "apis": {},
@@ -114,40 +126,45 @@
             "prevalence": 0.00131,
             "cnames": [
                 {
+                    "original": "dd.tidal.com",
+                    "resolved": "sslgen-tidal.datadome.co"
+                },
+                {
                     "original": "dd.nytimes.com",
                     "resolved": "sslgen-nyt.datadome.co"
                 }
             ],
             "responseHashes": [
-                "0dd3e5e02746b564451345498e11cf5f6472547070e8f092b16066cd90c80dc7",
-                "b1c20a4b2b8f82d2b9e56e53784eac10752bc6217eb476ff6abc8fdaf6d2f53d",
-                "9f9805d6e5103e35f27012715d1d0d968e077826f89c77bdff575ccd9ac78a36",
-                "e362c566d9d2f6e2cf69aafa35b40f4a4e51bb569cc9b34e951f13c68f6c6a19",
-                "f76c1ef3b44c8bc5de948ed8922efa3c047bb6c67ac235d8ffa4072026c79178",
-                "6c8b465e2d835728b5a222299e4b23fa3b1bb97ff5b9626e84c0344e927783de",
-                "4836c39fce4e3a46a8049bea8d9c004e0e6451ee7309aa9fd52b3c345456aee5",
-                "336aa8c4afbd12f10eb3d56786495cb896666fb3618a79594f50c989b25801f1",
-                "b14992a93065ff0400da28398c80841aaaec714dd111725003a45bff0853d826",
-                "2aa040de41b193d8af10d31c09844b0c8397c3735a895ab308dbda972d613d39",
-                "f6371fb09397ad5cbb22f55cad69e02a62b64fba46e4f152057f5e9ddcb49eba"
+                "c9a4126e63117d98d6fc213404475d93058fb853bc5e4ef084b1cd1db909966c",
+                "a9511c416d9f0b4d75ff679b540f2817faa0e1fbd988fdc6d59af194744b4d88",
+                "a991aa5d7ec9befd3fa582cb9150721a716afb9d3cec55a72851f6404254d4da",
+                "295985f0657c07f8303faa9f20cdeea122c9b1c51ee9c353aaf788365868e26b",
+                "8d4a3b5e98c4bb6a98058557d06c9357d93595325f70d7a96099f64c20f0d611",
+                "cebd2b0c044db1c271619fcc2abf2aa31a6783bd561cb56a5319fd881f99ee83",
+                "caf6f73c209a3ecc5566ecd7a9e7f230e80a596fa3350c1c9bb6aef973ba8534",
+                "14be96d3a252b75c66612da3c60179ba0901bba681eb9346c98dfa6445ca307f",
+                "308d0b4eff7ec33c19d0650803307896b4a517c8a0457f97029b3422edc265a5",
+                "4c6b4c71c8dfba8f3fbe34dad7d449088485c11669f6de159ee13a5e040fdf75",
+                "a4d789ce9328b3594c2bcc5f42a67e3523afa0125eafc2cc1ca8ee2239e516f1",
+                "664a8f4636b24b8f11e2742aebe9bae3707449153838ed865b9a2e507f9f39c6"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "brainly.com",
-                "brainly.in",
                 "tidal.com",
                 "www.alltrails.com",
                 "www.benzinga.com",
+                "www.bissell.com",
                 "www.brother-usa.com",
+                "www.cairn.info",
+                "www.flighthub.com",
                 "www.footlocker.com",
                 "www.footlocker.ca",
-                "www.idealista.com",
                 "www.knifecenter.com",
                 "www.londondrugs.com",
-                "www.nytimes.com",
-                "www.ouest-france.fr"
+                "www.nytimes.com"
             ]
         }
     ],
@@ -158,15 +175,15 @@
         "cpu": 0,
         "cache": 3
     },
-    "cookies": 0.000808,
+    "cookies": 0.00121,
     "types": {
         "Script": 13,
         "XHR": 13
     },
     "nameservers": [
-        "ns-1139.awsdns-14.org",
         "ns-1801.awsdns-33.co.uk",
         "ns-359.awsdns-44.com",
-        "ns-888.awsdns-47.net"
+        "ns-888.awsdns-47.net",
+        "ns-1139.awsdns-14.org"
     ]
 }

@@ -9,22 +9,21 @@
     "source": [
         "DuckDuckGo-NL"
     ],
-    "prevalence": 0.0011,
-    "sites": 11,
+    "prevalence": 0.00121,
+    "sites": 12,
     "subdomains": [
         "app-ab01",
         "app-ab42",
         "app-sj06",
         "app-sj05",
-        "app-ab06",
         "app-sj13",
         "app-sj28",
+        "app-ab48",
         "lonrtp1-cdn",
         "sjrtp7-cdn",
         "sjrtp8-cdn",
         "rtp-static",
         "lonrtp1",
-        "sjrtp7",
         "sjrtp8"
     ],
     "cnames": [],
@@ -32,23 +31,23 @@
     "resources": [
         {
             "rule": "marketo\\.com\\/js\\/forms2\\/js\\/forms2\\.min\\.js",
-            "cookies": 0.000603,
+            "cookies": 0.000703,
             "fingerprinting": 1,
             "subdomains": [
                 "app-ab01",
                 "app-ab42",
                 "app-sj06",
                 "app-sj05",
-                "app-ab06",
                 "app-sj13",
-                "app-sj28"
+                "app-sj28",
+                "app-ab48"
             ],
             "apis": {
                 "window.localStorage": 7,
                 "Navigator.prototype.userAgent": 7,
-                "Element.prototype.getClientRects": 4,
+                "Element.prototype.getClientRects": 5,
                 "Document.cookie getter": 1,
-                "Event.prototype.timeStamp": 4
+                "Event.prototype.timeStamp": 5
             },
             "sites": 7,
             "prevalence": 0.000703,
@@ -64,43 +63,358 @@
                 "foursquare.com",
                 "health.clevelandclinic.org",
                 "spring.io",
-                "www.digikey.com",
                 "www.docker.com",
-                "www.dnb.com"
+                "www.dnb.com",
+                "www.gatsbyjs.com"
+            ]
+        },
+        {
+            "rule": "marketo\\.com\\/rtp-api\\/v1\\/rtp\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 2,
+            "subdomains": [
+                "lonrtp1-cdn",
+                "sjrtp7-cdn",
+                "sjrtp8-cdn"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 3,
+                "Document.cookie getter": 3,
+                "Navigator.prototype.userAgent": 3,
+                "Navigator.prototype.appName": 3,
+                "window.localStorage": 3,
+                "Document.cookie setter": 2,
+                "Date.prototype.getTimezoneOffset": 3
+            },
+            "sites": 4,
+            "prevalence": 0.000402,
+            "cnames": [],
+            "responseHashes": [
+                "5ae0bd4ee845f10169b859542eef0610586d430c9977b7d211991541cf5c1373",
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "5d3f6d71713fa8509ebbbd216575c5600a4d33d5caa9fe7bcdacb516e3bcb49f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "trwv.uid": {
+                    "ttl": 63072011,
+                    "length": 36,
+                    "prevalence": 0.00020090406830738323,
+                    "uniqueness": 1
+                },
+                "trwsa.sid": {
+                    "ttl": 1811,
+                    "length": 36,
+                    "prevalence": 0.00020090406830738323,
+                    "uniqueness": 1
+                },
+                "trwv.eml": {
+                    "ttl": 4,
+                    "length": 4,
+                    "prevalence": 0.00020090406830738323,
+                    "uniqueness": 0.5
+                },
+                "trwsb.stu": {
+                    "ttl": 4,
+                    "length": 4,
+                    "prevalence": 0.00020090406830738323,
+                    "uniqueness": 0.5
+                },
+                "trwsb.cpv": {
+                    "ttl": 4,
+                    "length": 4,
+                    "prevalence": 0.00020090406830738323,
+                    "uniqueness": 0.5
+                },
+                "trwv.crd": {
+                    "ttl": 4,
+                    "length": 4,
+                    "prevalence": 0.00020090406830738323,
+                    "uniqueness": 0.5
+                },
+                "trwv.vc": {
+                    "ttl": 4,
+                    "length": 4,
+                    "prevalence": 0.00020090406830738323,
+                    "uniqueness": 0.5
+                },
+                "trwv.lvd": {
+                    "ttl": 4,
+                    "length": 4,
+                    "prevalence": 0.00020090406830738323,
+                    "uniqueness": 0.5
+                },
+                "_ie_eml": {
+                    "ttl": 4,
+                    "length": 4,
+                    "prevalence": 0.00020090406830738323,
+                    "uniqueness": 0.5
+                },
+                "_ie_cpn": {
+                    "ttl": 4,
+                    "length": 4,
+                    "prevalence": 0.00020090406830738323,
+                    "uniqueness": 0.5
+                },
+                "trwv.cvd": {
+                    "ttl": 4,
+                    "length": 4,
+                    "prevalence": 0.00020090406830738323,
+                    "uniqueness": 0.5
+                },
+                "trwsb.sid": {
+                    "ttl": 4,
+                    "length": 4,
+                    "prevalence": 0.00020090406830738323,
+                    "uniqueness": 0.5
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "afp.com",
+                "www.dhlexpress.nl",
+                "www.microchip.com",
+                "www.nokia.com"
+            ]
+        },
+        {
+            "rule": "marketo\\.com\\/rtp\\/libs\\/jquery\\/1\\.8\\.3\\/jquery\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "rtp-static"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 3,
+                "Date.prototype.getTime": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [
+                "61c6caebd23921741fb5ffe6603f16634fca9840c2bf56ac8201e9264d6daccf"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "afp.com",
+                "www.dhlexpress.nl",
+                "www.nokia.com"
+            ]
+        },
+        {
+            "rule": "marketo\\.com\\/rtp\\/libs\\/jquery-ui-insightera-custom-1\\.9\\.6\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rtp-static"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [
+                "339b2b60e94b6dc169fd9e5b68ac16b1ca08ef6a4968e98a0f43c2add405e79a"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "afp.com",
+                "www.dhlexpress.nl",
+                "www.nokia.com"
+            ]
+        },
+        {
+            "rule": "marketo\\.com\\/gw1\\/trw",
+            "cookies": 0.000402,
+            "fingerprinting": 0,
+            "subdomains": [
+                "lonrtp1",
+                "sjrtp8"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000402,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "afp.com",
+                "factchecknederland.afp.com",
+                "www.dhlexpress.nl",
+                "www.nokia.com"
+            ]
+        },
+        {
+            "rule": "marketo\\.com\\/rtp\\/libs\\/ga-integration-2\\.0\\.4\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "rtp-static"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 3,
+                "Document.cookie getter": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [
+                "278cd45917f5fee0e5710b34f2c03a3652544fe5a6ccea56cbbd0bd7324bf5e7"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "afp.com",
+                "www.dhlexpress.nl",
+                "www.nokia.com"
+            ]
+        },
+        {
+            "rule": "marketo\\.com\\/gw1\\/msg",
+            "cookies": 0.000402,
+            "fingerprinting": 0,
+            "subdomains": [
+                "lonrtp1",
+                "sjrtp8"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000402,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "afp.com",
+                "factchecknederland.afp.com",
+                "www.dhlexpress.nl",
+                "www.nokia.com"
+            ]
+        },
+        {
+            "rule": "marketo\\.com\\/rtp\\/libs\\/jqueryui\\/1\\.9\\.2f\\/jquery-custom-ui\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "rtp-static"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 3,
+                "Navigator.prototype.appName": 1
+            },
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [
+                "35f273e01e70db780ae423347dffecfc27cc348ba4abbd6099331559a7c5cd31"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "afp.com",
+                "www.dhlexpress.nl",
+                "www.nokia.com"
+            ]
+        },
+        {
+            "rule": "marketo\\.com\\/gw1\\/rtp\\/api\\/v1_1\\/visitor",
+            "cookies": 0.000402,
+            "fingerprinting": 0,
+            "subdomains": [
+                "lonrtp1",
+                "sjrtp8"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000402,
+            "cnames": [],
+            "responseHashes": [
+                "068a497b68663c8219ed13aab5e012e808a0de51f50c06d3d5d361db0d55e3bf"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "afp.com",
+                "factchecknederland.afp.com",
+                "www.dhlexpress.nl",
+                "www.nokia.com"
+            ]
+        },
+        {
+            "rule": "marketo\\.com\\/gw1\\/ga\\/sgm",
+            "cookies": 0.000402,
+            "fingerprinting": 0,
+            "subdomains": [
+                "lonrtp1",
+                "sjrtp8"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000402,
+            "cnames": [],
+            "responseHashes": [
+                "25b4e974dc91d718d1b66bf120388c20da6dfd3a886ec8401af1c269dd169a44"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "tbw_bw_sd": 0.00010045203415369161
+            },
+            "exampleSites": [
+                "afp.com",
+                "factchecknederland.afp.com",
+                "www.dhlexpress.nl",
+                "www.nokia.com"
             ]
         },
         {
             "rule": "marketo\\.com\\/index\\.php\\/form\\/getForm",
-            "cookies": 0.0001,
+            "cookies": 0.000201,
             "fingerprinting": 0,
             "subdomains": [
                 "app-ab42",
                 "app-sj06",
                 "app-sj05",
                 "app-sj13",
-                "app-sj28"
+                "app-sj28",
+                "app-ab48"
             ],
             "apis": {},
-            "sites": 5,
-            "prevalence": 0.000502,
+            "sites": 6,
+            "prevalence": 0.000603,
             "cnames": [],
             "responseHashes": [
-                "98f0d0abf0799c7d31908a34aa05edcb457b1cf2c33b45f23bb9fc7931876b80",
-                "859b5d797f3c9e963d7b4a7a3ed30c16b73c6a72a1a8a452c991a35190f831b3",
-                "d5e691358eba9491219c2b376a41d9a6e3304d2aaa99ab51d15c12151052f911",
-                "0d0fd617427415168bf93cf2efc400a92ed7392b699d506d1af553ac41b70fa2"
+                "d421e6fca210b4b006bfa7331aec48745451064ca4a6817bea8cc92e5fe7a1f6",
+                "dbc7649619fc494c31e038afb6859dd1339fb72a05e4f1cade2ef7376172dbed",
+                "f4f9e5a44e8b225a21c29fe92a1dee4815ea4c1b622d25f093da266e9d150f44",
+                "298678b6a371c870f0f987b4bf647a9eb99de4b4ac1b9419c96b91a663d52c9b",
+                "a8d7919d84b836946f7488a23c5a7653a7885af5f3a2f33639b027babf30360c"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "os_lastpage_health.clevelandclinic.org": 0.00010043185698503566
+                "os_lastpage_health.clevelandclinic.org": 0.00010045203415369161
             },
             "exampleSites": [
                 "foursquare.com",
                 "health.clevelandclinic.org",
                 "spring.io",
                 "www.docker.com",
-                "www.dnb.com"
+                "www.dnb.com",
+                "www.gatsbyjs.com"
             ]
         },
         {
@@ -111,11 +425,12 @@
                 "app-ab42",
                 "app-sj06",
                 "app-sj05",
-                "app-sj28"
+                "app-sj28",
+                "app-ab48"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.000402,
+            "sites": 5,
+            "prevalence": 0.000502,
             "cnames": [],
             "responseHashes": [
                 "256e42104f48a5fa80b031da12dc56acde224fba3f9810f8f8192b39136d365a"
@@ -127,7 +442,8 @@
                 "foursquare.com",
                 "health.clevelandclinic.org",
                 "spring.io",
-                "www.dnb.com"
+                "www.dnb.com",
+                "www.gatsbyjs.com"
             ]
         },
         {
@@ -161,8 +477,8 @@
                 "app-ab42",
                 "app-sj06",
                 "app-sj05",
-                "app-ab06",
-                "app-sj28"
+                "app-sj28",
+                "app-ab48"
             ],
             "apis": {},
             "sites": 5,
@@ -171,8 +487,8 @@
             "responseHashes": [
                 "cf61463cf76f7c32e0a2367b93d373b1f1cc4e16858eefa761ff1523f5ad619a",
                 "7c380d371bbe7980ffbbad0fc4fb6d36249e93b4aad0066844fbc8349d805d91",
-                "5d96ea65724ef8698cfd2581855c430a4d3d6b890511f2aa094be8a2f777683b",
-                "983b740f301c9013623152fa4c12c6772f4e1eec28a3442a2895deff12e1da5d"
+                "983b740f301c9013623152fa4c12c6772f4e1eec28a3442a2895deff12e1da5d",
+                "b66f261f7f89c95fbca0de85ee7657eb6432ded0e74fc7f105550585978b6bb1"
             ],
             "type": "Document",
             "firstPartyCookies": {},
@@ -181,8 +497,8 @@
                 "foursquare.com",
                 "health.clevelandclinic.org",
                 "spring.io",
-                "www.digikey.com",
-                "www.dnb.com"
+                "www.dnb.com",
+                "www.gatsbyjs.com"
             ]
         },
         {
@@ -191,11 +507,12 @@
             "fingerprinting": 0,
             "subdomains": [
                 "app-sj05",
-                "app-sj28"
+                "app-sj28",
+                "app-ab48"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [
                 "14c8c62dc692fd8faa04434e3fed25e7c23d596b732f9db88f6e9f9ff5dfa61c"
@@ -205,264 +522,8 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "spring.io",
-                "www.dnb.com"
-            ]
-        },
-        {
-            "rule": "marketo\\.com\\/rtp-api\\/v1\\/rtp\\.js",
-            "cookies": 0.000201,
-            "fingerprinting": 2,
-            "subdomains": [
-                "lonrtp1-cdn",
-                "sjrtp7-cdn",
-                "sjrtp8-cdn"
-            ],
-            "apis": {
-                "Date.prototype.getTime": 3,
-                "Document.cookie getter": 3,
-                "Navigator.prototype.userAgent": 3,
-                "Navigator.prototype.appName": 3,
-                "window.localStorage": 3,
-                "Document.cookie setter": 2,
-                "Date.prototype.getTimezoneOffset": 3,
-                "Navigator.prototype.doNotTrack": 1
-            },
-            "sites": 3,
-            "prevalence": 0.000301,
-            "cnames": [],
-            "responseHashes": [
-                "543b7931a1bc708cfc08ab682fa5565ad3a4b5d83f3c4c48ab33591a8859c8f7",
-                "ed608cf0c79ddc7968c4cb3b7182a3a173cbd444b6b160badadfe04189ea1877"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {
-                "trwv.uid": {
-                    "ttl": 63072004,
-                    "length": 42,
-                    "prevalence": 0.00020086371397007131,
-                    "uniqueness": 1
-                },
-                "trwsa.sid": {
-                    "ttl": 1804,
-                    "length": 42,
-                    "prevalence": 0.00020086371397007131,
-                    "uniqueness": 1
-                },
-                "trwv.eml": {
-                    "ttl": 4,
-                    "length": 4,
-                    "prevalence": 0.00020086371397007131,
-                    "uniqueness": 0.5
-                },
-                "trwsb.stu": {
-                    "ttl": 4,
-                    "length": 4,
-                    "prevalence": 0.00020086371397007131,
-                    "uniqueness": 0.5
-                },
-                "trwsb.cpv": {
-                    "ttl": 4,
-                    "length": 4,
-                    "prevalence": 0.00020086371397007131,
-                    "uniqueness": 0.5
-                },
-                "trwv.crd": {
-                    "ttl": 4,
-                    "length": 4,
-                    "prevalence": 0.00020086371397007131,
-                    "uniqueness": 0.5
-                },
-                "trwv.vc": {
-                    "ttl": 4,
-                    "length": 4,
-                    "prevalence": 0.00020086371397007131,
-                    "uniqueness": 0.5
-                },
-                "trwv.lvd": {
-                    "ttl": 4,
-                    "length": 4,
-                    "prevalence": 0.00020086371397007131,
-                    "uniqueness": 0.5
-                },
-                "_ie_eml": {
-                    "ttl": 4,
-                    "length": 4,
-                    "prevalence": 0.00020086371397007131,
-                    "uniqueness": 0.5
-                },
-                "_ie_cpn": {
-                    "ttl": 4,
-                    "length": 4,
-                    "prevalence": 0.00020086371397007131,
-                    "uniqueness": 0.5
-                },
-                "trwv.cvd": {
-                    "ttl": 4,
-                    "length": 4,
-                    "prevalence": 0.00020086371397007131,
-                    "uniqueness": 0.5
-                },
-                "trwsb.sid": {
-                    "ttl": 4,
-                    "length": 4,
-                    "prevalence": 0.00020086371397007131,
-                    "uniqueness": 0.5
-                }
-            },
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "dhlexpress.nl",
-                "www.microchip.com",
-                "www.nokia.com"
-            ]
-        },
-        {
-            "rule": "marketo\\.com\\/rtp\\/libs\\/jquery\\/1\\.8\\.3\\/jquery\\.min\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "rtp-static"
-            ],
-            "apis": {
-                "Navigator.prototype.userAgent": 3,
-                "Date.prototype.getTime": 3
-            },
-            "sites": 3,
-            "prevalence": 0.000301,
-            "cnames": [],
-            "responseHashes": [
-                "61c6caebd23921741fb5ffe6603f16634fca9840c2bf56ac8201e9264d6daccf"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "dhlexpress.nl",
-                "www.microchip.com",
-                "www.nokia.com"
-            ]
-        },
-        {
-            "rule": "marketo\\.com\\/rtp\\/libs\\/jquery-ui-insightera-custom-1\\.9\\.6\\.css",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "rtp-static"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.000301,
-            "cnames": [],
-            "responseHashes": [
-                "339b2b60e94b6dc169fd9e5b68ac16b1ca08ef6a4968e98a0f43c2add405e79a"
-            ],
-            "type": "Stylesheet",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "dhlexpress.nl",
-                "www.microchip.com",
-                "www.nokia.com"
-            ]
-        },
-        {
-            "rule": "marketo\\.com\\/gw1\\/trw",
-            "cookies": 0.000301,
-            "fingerprinting": 0,
-            "subdomains": [
-                "lonrtp1",
-                "sjrtp7",
-                "sjrtp8"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.000301,
-            "cnames": [],
-            "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "dhlexpress.nl",
-                "www.microchip.com",
-                "www.nokia.com"
-            ]
-        },
-        {
-            "rule": "marketo\\.com\\/rtp\\/libs\\/ga-integration-2\\.0\\.3\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "rtp-static"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.000301,
-            "cnames": [],
-            "responseHashes": [
-                "ed98dedbe15b339c752900e4cbbac66b8bd5f9c6bf230e3456303c994fef5010"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "dhlexpress.nl",
-                "www.microchip.com",
-                "www.nokia.com"
-            ]
-        },
-        {
-            "rule": "marketo\\.com\\/gw1\\/msg",
-            "cookies": 0.000402,
-            "fingerprinting": 0,
-            "subdomains": [
-                "lonrtp1",
-                "sjrtp7",
-                "sjrtp8"
-            ],
-            "apis": {},
-            "sites": 4,
-            "prevalence": 0.000402,
-            "cnames": [],
-            "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "dhlexpress.nl",
-                "www.dhlexpress.nl",
-                "www.microchip.com",
-                "www.nokia.com"
-            ]
-        },
-        {
-            "rule": "marketo\\.com\\/rtp\\/libs\\/jqueryui\\/1\\.9\\.2f\\/jquery-custom-ui\\.min\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "rtp-static"
-            ],
-            "apis": {
-                "Navigator.prototype.userAgent": 3,
-                "Navigator.prototype.appName": 1
-            },
-            "sites": 3,
-            "prevalence": 0.000301,
-            "cnames": [],
-            "responseHashes": [
-                "35f273e01e70db780ae423347dffecfc27cc348ba4abbd6099331559a7c5cd31"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "dhlexpress.nl",
-                "www.microchip.com",
-                "www.nokia.com"
+                "www.dnb.com",
+                "www.gatsbyjs.com"
             ]
         }
     ],
@@ -480,12 +541,13 @@
     },
     "cookies": 0.0011,
     "types": {
-        "Script": 31,
-        "Stylesheet": 11,
+        "Script": 34,
+        "Stylesheet": 13,
+        "XHR": 8,
         "Document": 5
     },
     "nameservers": [
-        "ns1.marketo.com",
-        "ns2.mktdns.com"
+        "ns2.mktdns.com",
+        "ns1.marketo.com"
     ]
 }

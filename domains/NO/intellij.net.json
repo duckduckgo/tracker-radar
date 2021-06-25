@@ -4,15 +4,20 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.0001,
-    "sites": 1,
+    "prevalence": 0.000201,
+    "sites": 2,
     "subdomains": [
-        "data-srv.prod.w3jbcom.aws"
+        "data-srv.prod.w3jbcom.aws",
+        "hub-production.pub.aws"
     ],
     "cnames": [
         {
             "original": "data.services.jetbrains.com",
             "resolved": "data-srv.prod.w3jbcom.aws.intellij.net"
+        },
+        {
+            "original": "hub.jetbrains.com",
+            "resolved": "hub-production.pub.aws.intellij.net"
         }
     ],
     "fingerprinting": 0,
@@ -43,13 +48,67 @@
                 "jetbrains.com",
                 "www.jetbrains.com"
             ]
+        },
+        {
+            "rule": "intellij\\.net\\/api\\/rest\\/users\\/me",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "hub-production.pub.aws"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "hub.jetbrains.com",
+                    "resolved": "hub-production.pub.aws.intellij.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jetbrains.com",
+                "plugins.jetbrains.com"
+            ]
+        },
+        {
+            "rule": "intellij\\.net\\/api\\/rest\\/users\\/me",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "hub-production.pub.aws"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "hub.jetbrains.com",
+                    "resolved": "hub-production.pub.aws.intellij.net"
+                }
+            ],
+            "responseHashes": [
+                "ac8ec2172b7b6768aea508740089492bfbeb78b9f6b5a319f1d821b49dd75373"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jetbrains.com",
+                "plugins.jetbrains.com"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
     "cookies": 0,
     "types": {
-        "XHR": 2
+        "XHR": 2,
+        "Preflight": 2,
+        "Fetch": 2
     },
     "nameservers": []
 }
