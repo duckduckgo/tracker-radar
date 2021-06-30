@@ -4,33 +4,103 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.0001,
-    "sites": 1,
+    "prevalence": 0.000201,
+    "sites": 2,
     "subdomains": [
-        "devnull"
+        "cdn",
+        "api",
+        "rum-cdn"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
         {
-            "rule": "perfops\\.net\\/rum\\/v1",
+            "rule": "perfops\\.net\\/rom3\\/rom3\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2,
+                "Navigator.prototype.onLine": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "ddf3f389afb3e3ffd60b2bf62663d75355312748ddc7d5bbc04854b35b36ef88"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dnsperf.com",
+                "www.opensubtitles.org"
+            ]
+        },
+        {
+            "rule": "perfops\\.net\\/analytics\\/dns\\/data",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "devnull"
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dnsperf.com",
+                "www.dnsperf.com"
+            ]
+        },
+        {
+            "rule": "perfops\\.net\\/analytics\\/dns\\/data",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "8ef0b118bbd2f89dab3ea4873590c72c32b73241fdf41724156c72aa671a14f3"
+                "140efab54dff9f44a8f263b758b95eeada83d14a9ced3352389cb4e843045ef7"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "opensubtitles.org",
+                "dnsperf.com",
+                "www.dnsperf.com"
+            ]
+        },
+        {
+            "rule": "perfops\\.net\\/providers",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rum-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "796575cbfe4ae720ef84eaefde922d7adb67ef9c36f7a3d2170591e631550fda"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dnsperf.com",
                 "www.opensubtitles.org"
             ]
         }
@@ -44,10 +114,12 @@
     },
     "cookies": 0,
     "types": {
-        "XHR": 2
+        "Script": 2,
+        "Preflight": 2,
+        "XHR": 4
     },
     "nameservers": [
-        "amber.ns.cloudflare.com",
-        "dave.ns.cloudflare.com"
+        "dave.ns.cloudflare.com",
+        "amber.ns.cloudflare.com"
     ]
 }

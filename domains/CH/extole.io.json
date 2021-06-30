@@ -7,12 +7,18 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.000301,
-    "sites": 3,
+    "prevalence": 0.000401,
+    "sites": 4,
     "subdomains": [
-        "sonos"
+        "sonos",
+        "revzilla",
+        "wine"
     ],
     "cnames": [
+        {
+            "original": "refer.wine.com",
+            "resolved": "wine.extole.io"
+        },
         {
             "original": "share.sonos.com",
             "resolved": "sonos.extole.io"
@@ -22,30 +28,51 @@
     "resources": [
         {
             "rule": "extole\\.io\\/core\\.js",
-            "cookies": 0,
+            "cookies": 0.000201,
             "fingerprinting": 1,
             "subdomains": [
-                "sonos"
+                "sonos",
+                "revzilla",
+                "wine"
             ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.000301,
+            "apis": {
+                "Date.prototype.getTime": 1,
+                "Document.cookie getter": 1,
+                "Navigator.prototype.platform": 1,
+                "Document.cookie setter": 1
+            },
+            "sites": 4,
+            "prevalence": 0.000401,
             "cnames": [
                 {
                     "original": "share.sonos.com",
                     "resolved": "sonos.extole.io"
+                },
+                {
+                    "original": "refer.wine.com",
+                    "resolved": "wine.extole.io"
                 }
             ],
             "responseHashes": [
-                "c7a2ada181f5432c21eada726764bde4e5846c8bad7c1def138e7e4203dc13b8"
+                "a35737e51155cc55b743ce1f72409cefcbf646e0f428b4d3f9238ea532900fa8",
+                "ca4af2c0569e2d911e45f8e55c83b77caa1396e9bae4c90a4457284ca3e8334c",
+                "8b5d3861183be42d60119789da9eac6f537d690995744433580a31d9fc497792"
             ],
             "type": "Script",
-            "firstPartyCookies": {},
+            "firstPartyCookies": {
+                "extole_access_token": {
+                    "ttl": 31536006,
+                    "length": 26,
+                    "prevalence": 0.00010037137408411121,
+                    "uniqueness": 1
+                }
+            },
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "sonos.com",
-                "en.community.sonos.com",
-                "www.sonos.com"
+                "www.revzilla.com",
+                "www.sonos.com",
+                "www.wine.com"
             ]
         }
     ],
@@ -56,9 +83,9 @@
         "cpu": 0,
         "cache": 3
     },
-    "cookies": 0,
+    "cookies": 0.000201,
     "types": {
-        "Script": 3
+        "Script": 4
     },
     "nameservers": []
 }

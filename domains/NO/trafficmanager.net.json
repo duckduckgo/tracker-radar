@@ -9,21 +9,17 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000803,
-    "sites": 8,
+    "prevalence": 0.000903,
+    "sites": 9,
     "subdomains": [
+        "bingshoppingtool-t2app-prod",
         "psapi-gateway-prod",
-        "fps-na-api-3",
-        "jabpc-publicservice-tfm-prod"
+        "fps-na-api-3"
     ],
     "cnames": [
         {
             "original": "na.fps3.ford.com",
             "resolved": "fps-na-api-3.trafficmanager.net"
-        },
-        {
-            "original": "productcatalogueapi.jabra.com",
-            "resolved": "jabpc-publicservice-tfm-prod.trafficmanager.net"
         },
         {
             "original": "psapi.nrk.no",
@@ -32,6 +28,28 @@
     ],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "trafficmanager\\.net\\/uet\\/tracking_script",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "bingshoppingtool-t2app-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "enemasupply.com",
+                "smartkidsplanet.com"
+            ]
+        },
         {
             "rule": "trafficmanager\\.net\\/playback\\/metadata\\/p1_oslo_akershus",
             "cookies": 0,
@@ -48,7 +66,9 @@
                     "resolved": "psapi-gateway-prod.trafficmanager.net"
                 }
             ],
-            "responseHashes": [],
+            "responseHashes": [
+                "cbd7a77987119a67b3ee60046a2450286f557cea17b720a9a03460b0891e37c4"
+            ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -74,7 +94,7 @@
                 }
             ],
             "responseHashes": [
-                "d0e3013ce522a00efbce2d4273f023d33b07fe1f569bbb18b4d6729c1109b820"
+                "cbd7a77987119a67b3ee60046a2450286f557cea17b720a9a03460b0891e37c4"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -110,58 +130,6 @@
                 "ford.com",
                 "www.ford.com"
             ]
-        },
-        {
-            "rule": "trafficmanager\\.net\\/\\/v1\\/family\\/filter",
-            "cookies": 0.000201,
-            "fingerprinting": 0,
-            "subdomains": [
-                "jabpc-publicservice-tfm-prod"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [
-                {
-                    "original": "productcatalogueapi.jabra.com",
-                    "resolved": "jabpc-publicservice-tfm-prod.trafficmanager.net"
-                }
-            ],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "jabra.com",
-                "www.jabra.com"
-            ]
-        },
-        {
-            "rule": "trafficmanager\\.net\\/\\/v1\\/family\\/filter",
-            "cookies": 0.000201,
-            "fingerprinting": 0,
-            "subdomains": [
-                "jabpc-publicservice-tfm-prod"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [
-                {
-                    "original": "productcatalogueapi.jabra.com",
-                    "resolved": "jabpc-publicservice-tfm-prod.trafficmanager.net"
-                }
-            ],
-            "responseHashes": [
-                "d7c2673477d07de40a20514f69631eab78b131b9ab3a9722753df0c7ff1f2606"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "jabra.com",
-                "www.jabra.com"
-            ]
         }
     ],
     "categories": [
@@ -175,9 +143,14 @@
     },
     "cookies": 0.000201,
     "types": {
-        "Fetch": 6,
-        "XHR": 2,
-        "Preflight": 2
+        "Script": 2,
+        "Fetch": 4,
+        "XHR": 2
     },
-    "nameservers": []
+    "nameservers": [
+        "tm2.edgedns-tm.info",
+        "tm1.dns-tm.com",
+        "tm2.dns-tm.com",
+        "tm1.edgedns-tm.info"
+    ]
 }

@@ -7,14 +7,41 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.00111,
-    "sites": 11,
+    "prevalence": 0.00161,
+    "sites": 16,
     "subdomains": [
-        "cdn"
+        "cdn",
+        "api"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "rollbar\\.com\\/rollbarjs\\/refs\\/tags\\/v2\\.19\\.2\\/rollbar\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "console.memory": 2,
+                "Date.prototype.getTime": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [
+                "c77308873c903ec4d6a3163d5e90c0dc18d26cbe1a16b2f43674ca82b6c250c1"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "careerfoundry.com",
+                "www.softwareadvice.com",
+                "www.yeti.com"
+            ]
+        },
         {
             "rule": "rollbar\\.com\\/rollbarjs\\/refs\\/tags\\/v2\\.21\\.0\\/rollbar\\.min\\.js",
             "cookies": 0,
@@ -23,8 +50,8 @@
                 "cdn"
             ],
             "apis": {
-                "console.memory": 2,
-                "Date.prototype.getTime": 2,
+                "console.memory": 3,
+                "Date.prototype.getTime": 3,
                 "Navigator.prototype.userAgent": 1,
                 "Navigator.prototype.language": 1,
                 "Navigator.prototype.cookieEnabled": 1,
@@ -32,8 +59,8 @@
                 "Screen.prototype.height": 1,
                 "Navigator.prototype.plugins": 1
             },
-            "sites": 2,
-            "prevalence": 0.000202,
+            "sites": 3,
+            "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [
                 "e44570df12ef26021ef499b28c93e110bd53b31c29cae5206064d0a01b7faae2"
@@ -42,7 +69,8 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "sonos.com",
+                "koodomobile.com",
+                "en.community.sonos.com",
                 "www.sitejabber.com"
             ]
         },
@@ -54,11 +82,11 @@
                 "cdn"
             ],
             "apis": {
-                "console.memory": 4,
-                "Date.prototype.getTime": 4
+                "console.memory": 3,
+                "Date.prototype.getTime": 3
             },
-            "sites": 4,
-            "prevalence": 0.000404,
+            "sites": 3,
+            "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [
                 "eee2bc6e4edf311a6a0337c339dbd85d0d8d4040b25e390ab18237e2fa84f1c9"
@@ -67,10 +95,54 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "koinly.io",
+                "mixkit.co",
                 "variety.com",
-                "wwd.com",
                 "www.rollingstone.com"
+            ]
+        },
+        {
+            "rule": "rollbar\\.com\\/api\\/1\\/item\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wealthsimple.com",
+                "www.vistaprint.ca",
+                "www.vistaprint.com"
+            ]
+        },
+        {
+            "rule": "rollbar\\.com\\/api\\/1\\/item\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [
+                "902121ddb156a00bc3b3a06b3eb4b76995f8bc642120996cda9692219372a37c",
+                "c4c31e1f3bbdf4abf595291b32cfbeeddefa90fcaf14ee4cc0fc1f3c14694e04"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wealthsimple.com",
+                "www.vistaprint.ca",
+                "www.vistaprint.com"
             ]
         },
         {
@@ -81,11 +153,11 @@
                 "cdn"
             ],
             "apis": {
-                "console.memory": 1,
+                "console.memory": 2,
                 "Date.prototype.getTime": 2
             },
-            "sites": 3,
-            "prevalence": 0.000303,
+            "sites": 2,
+            "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
                 "525609b83b7b7a940bcbc35fd786bb68d5eb2c654c9cf32fa81b45be9978afb0"
@@ -95,8 +167,7 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "rvshare.com",
-                "www.litcharts.com",
-                "www.sportsinteraction.com"
+                "www.litcharts.com"
             ]
         }
     ],
@@ -109,14 +180,16 @@
     },
     "cookies": 0,
     "types": {
-        "Script": 9
+        "Script": 11,
+        "Preflight": 3,
+        "XHR": 3
     },
     "nameservers": [
-        "ns-cloud-d2.googledomains.com",
         "ns-112.awsdns-14.com",
-        "ns-cloud-d3.googledomains.com",
-        "ns-cloud-d4.googledomains.com",
         "ns-690.awsdns-22.net",
-        "ns-cloud-d1.googledomains.com"
+        "ns-cloud-d1.googledomains.com",
+        "ns-cloud-d2.googledomains.com",
+        "ns-cloud-d3.googledomains.com",
+        "ns-cloud-d4.googledomains.com"
     ]
 }

@@ -7,14 +7,87 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.000603,
+    "prevalence": 0.000602,
     "sites": 6,
     "subdomains": [
+        "cbc-login.hub",
+        "hola-auth.hub",
         "reachplc.hub"
     ],
-    "cnames": [],
+    "cnames": [
+        {
+            "original": "auth.hola.com",
+            "resolved": "hola-auth.hub.loginradius.com"
+        },
+        {
+            "original": "login.cbc.ca",
+            "resolved": "cbc-login.hub.loginradius.com"
+        }
+    ],
     "fingerprinting": 0,
     "resources": [
+        {
+            "rule": "loginradius\\.com\\/ssologin\\/login",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cbc-login.hub",
+                "hola-auth.hub"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "login.cbc.ca",
+                    "resolved": "cbc-login.hub.loginradius.com"
+                },
+                {
+                    "original": "auth.hola.com",
+                    "resolved": "hola-auth.hub.loginradius.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cbc.ca",
+                "www.hola.com"
+            ]
+        },
+        {
+            "rule": "loginradius\\.com\\/ssologin\\/login",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cbc-login.hub",
+                "hola-auth.hub"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "login.cbc.ca",
+                    "resolved": "cbc-login.hub.loginradius.com"
+                },
+                {
+                    "original": "auth.hola.com",
+                    "resolved": "hola-auth.hub.loginradius.com"
+                }
+            ],
+            "responseHashes": [
+                "f7a4a046540cd7b682afc0d129cbbdea16081d1a54dfd3385115725f960c54c9"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cbc.ca",
+                "www.hola.com"
+            ]
+        },
         {
             "rule": "loginradius\\.com\\/ssologin\\/login",
             "cookies": 0,
@@ -23,8 +96,8 @@
                 "reachplc.hub"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.000402,
+            "sites": 3,
+            "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [
                 "f7a4a046540cd7b682afc0d129cbbdea16081d1a54dfd3385115725f960c54c9"
@@ -35,7 +108,6 @@
             "exampleSites": [
                 "dailystar.co.uk",
                 "www.express.co.uk",
-                "www.liverpoolecho.co.uk",
                 "www.mirror.co.uk"
             ]
         }
@@ -49,12 +121,14 @@
     },
     "cookies": 0,
     "types": {
-        "Fetch": 4
+        "Preflight": 2,
+        "XHR": 2,
+        "Fetch": 3
     },
     "nameservers": [
-        "ns2.p14.dynect.net",
         "ns4.p14.dynect.net",
+        "ns1.p14.dynect.net",
         "ns3.p14.dynect.net",
-        "ns1.p14.dynect.net"
+        "ns2.p14.dynect.net"
     ]
 }

@@ -16,13 +16,15 @@
     "resources": [
         {
             "rule": "ontraport\\.com\\/tracking\\.js",
-            "cookies": 0,
+            "cookies": 0.0001,
             "fingerprinting": 1,
             "subdomains": [
                 "optassets"
             ],
             "apis": {
-                "Date.prototype.getTime": 2
+                "Date.prototype.getTime": 2,
+                "Document.cookie getter": 1,
+                "Document.cookie setter": 1
             },
             "sites": 2,
             "prevalence": 0.000201,
@@ -31,7 +33,20 @@
                 "5e216637f4a7df41f3b559d1998bcb11854d5c05f6b7fed6327c428c33e2cb93"
             ],
             "type": "Script",
-            "firstPartyCookies": {},
+            "firstPartyCookies": {
+                "sess_": {
+                    "ttl": 522978658,
+                    "length": 20,
+                    "prevalence": 0.00010036130068245685,
+                    "uniqueness": 1
+                },
+                "lastvisit": {
+                    "ttl": 522978658,
+                    "length": 10,
+                    "prevalence": 0.00010036130068245685,
+                    "uniqueness": 1
+                }
+            },
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "biddytarot.com",
@@ -55,7 +70,10 @@
             ],
             "type": "Script",
             "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
+            "firstPartyCookiesSent": {
+                "_ga": 0.0002007226013649137,
+                "sess_": 0.00010036130068245685
+            },
             "exampleSites": [
                 "biddytarot.com",
                 "www.vidaselect.com"
@@ -74,7 +92,7 @@
         "Script": 4
     },
     "nameservers": [
-        "ns4.ontraport.com",
-        "ns3.ontraport.com"
+        "ns3.ontraport.com",
+        "ns4.ontraport.com"
     ]
 }
