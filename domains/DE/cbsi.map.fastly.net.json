@@ -9,29 +9,44 @@
     "source": [
         "DuckDuckGo-DE"
     ],
-    "prevalence": 0.000301,
-    "sites": 3,
+    "prevalence": 0.000403,
+    "sites": 4,
     "subdomains": [
-        "isgprivacy"
+        "isgprivacy",
+        "news-ipv4",
+        "sports-global",
+        "sports-global-ipv4"
     ],
     "cnames": [
         {
+            "original": "feeds-cbsn.cbsnews.com",
+            "resolved": "news-ipv4.cbsi.map.fastly.net"
+        },
+        {
+            "original": "graphql-cdn-site.cbssports.com",
+            "resolved": "sports-global-ipv4.cbsi.map.fastly.net"
+        },
+        {
             "original": "production-cmp.isgprivacy.cbsi.com",
             "resolved": "isgprivacy.cbsi.map.fastly.net"
+        },
+        {
+            "original": "sports.cbsimg.net",
+            "resolved": "sports-global.cbsi.map.fastly.net"
         }
     ],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "cbsi\\.map\\.fastly\\.net\\/dist\\/optanon-v1\\.1\\.0\\.js",
-            "cookies": 0,
+            "cookies": 0.000101,
             "fingerprinting": 1,
             "subdomains": [
                 "isgprivacy"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000301,
+            "sites": 4,
+            "prevalence": 0.000403,
             "cnames": [
                 {
                     "original": "production-cmp.isgprivacy.cbsi.com",
@@ -39,14 +54,22 @@
                 }
             ],
             "responseHashes": [
-                "81da2aeb4b437b965aa2e486c07dcfb6ec91bc08bb75cc79d1cb77e5801413f2"
+                "ad6c004c443d6c1ac8a66e25a5973b3d49fddcb31dc4574c6504e8f1df66aaeb"
             ],
             "type": "Script",
-            "firstPartyCookies": {},
+            "firstPartyCookies": {
+                "OptanonAlertBoxClosed": {
+                    "ttl": null,
+                    "length": 24,
+                    "prevalence": 0.0001006947940791461,
+                    "uniqueness": 1
+                }
+            },
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "pluto.tv",
                 "www.cbsnews.com",
+                "www.cbssports.com",
                 "www.last.fm"
             ]
         },
@@ -58,8 +81,8 @@
                 "isgprivacy"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000301,
+            "sites": 4,
+            "prevalence": 0.000403,
             "cnames": [
                 {
                     "original": "production-cmp.isgprivacy.cbsi.com",
@@ -75,7 +98,141 @@
             "exampleSites": [
                 "pluto.tv",
                 "www.cbsnews.com",
+                "www.cbssports.com",
                 "www.last.fm"
+            ]
+        },
+        {
+            "rule": "cbsi\\.map\\.fastly\\.net\\/2\\.1\\/rundown\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "news-ipv4"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "feeds-cbsn.cbsnews.com",
+                    "resolved": "news-ipv4.cbsi.map.fastly.net"
+                }
+            ],
+            "responseHashes": [
+                "890ad54b6ce57f4657df34fcb3974dab7df92a54b76d319abbb58c2c41dc1504"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cbsnews.com",
+                "www.cbsnews.com"
+            ]
+        },
+        {
+            "rule": "cbsi\\.map\\.fastly\\.net\\/fonts\\/fs-industrie\\/variable\\/standard\\/FSIndustrieVFStd\\.woff2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sports-global"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "sports.cbsimg.net",
+                    "resolved": "sports-global.cbsi.map.fastly.net"
+                }
+            ],
+            "responseHashes": [
+                "ac72820b9e21a02036591e73ca71e463df0c9c194f8b5c8ba9d3cf6b2715225a"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cbssports.com",
+                "www.cbssports.com"
+            ]
+        },
+        {
+            "rule": "cbsi\\.map\\.fastly\\.net\\/fonts\\/fs-industrie\\/variable\\/narrow\\/FSIndustrieVFNw\\.woff2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sports-global"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "sports.cbsimg.net",
+                    "resolved": "sports-global.cbsi.map.fastly.net"
+                }
+            ],
+            "responseHashes": [
+                "6c23e88af26944c8f54378d07137844b16712b659b988ea5b95f39045dea2223"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cbssports.com",
+                "www.cbssports.com"
+            ]
+        },
+        {
+            "rule": "cbsi\\.map\\.fastly\\.net\\/graphql",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sports-global-ipv4"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "graphql-cdn-site.cbssports.com",
+                    "resolved": "sports-global-ipv4.cbsi.map.fastly.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cbssports.com",
+                "www.cbssports.com"
+            ]
+        },
+        {
+            "rule": "cbsi\\.map\\.fastly\\.net\\/graphql",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sports-global-ipv4"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "graphql-cdn-site.cbssports.com",
+                    "resolved": "sports-global-ipv4.cbsi.map.fastly.net"
+                }
+            ],
+            "responseHashes": [
+                "46b10d010bf0d8f42e8fa5a4132bfadaa7e40054d9ea2076323ae90cea309f49"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cbssports.com",
+                "www.cbssports.com"
             ]
         }
     ],
@@ -90,15 +247,26 @@
         "Session Replay"
     ],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.000101,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.9493670886075949
+        },
+        {
+            "domain": "cbsistatic.com",
+            "prevalence": 0.0379746835443038
+        },
+        {
+            "domain": "rum.us-east-1.amazonaws.com",
+            "prevalence": 0.012658227848101266
         }
     ],
     "types": {
-        "Script": 6
+        "Script": 8,
+        "Fetch": 4,
+        "Font": 4,
+        "Preflight": 2
     },
     "nameservers": []
 }
