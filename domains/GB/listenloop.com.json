@@ -7,10 +7,11 @@
     "source": [
         "DuckDuckGo-GB"
     ],
-    "prevalence": 0.000201,
-    "sites": 2,
+    "prevalence": 0.000403,
+    "sites": 4,
     "subdomains": [
-        "v2"
+        "v2",
+        "abm2"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -23,21 +24,47 @@
                 "v2"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 2,
-                "Navigator.prototype.mimeTypes": 2
+                "Navigator.prototype.userAgent": 4,
+                "Navigator.prototype.mimeTypes": 4
             },
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 4,
+            "prevalence": 0.000403,
             "cnames": [],
             "responseHashes": [
-                "6cf9266ea426e74be9743bec0db3d39fd72e99ad9cdd88bdcae6f155daaa760a"
+                "f1edc998b2adbdb90dc2081d44aefc3816941799a12c4e6042143d52e96b14cf"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "splunk.com",
-                "docs.splunk.com"
+                "docs.splunk.com",
+                "www.databricks.com",
+                "www.splunk.com"
+            ]
+        },
+        {
+            "rule": "listenloop\\.com\\/api\\/v1\\/public\\/analytics_data",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "abm2"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000403,
+            "cnames": [],
+            "responseHashes": [
+                "54c92804a5f97113030e5307876352f27f1623775916b78311a3131a6bf89fab"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "splunk.com",
+                "docs.splunk.com",
+                "www.databricks.com",
+                "www.splunk.com"
             ]
         }
     ],
@@ -47,15 +74,20 @@
     "topInitiators": [
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.6666666666666666
+            "prevalence": 0.5
         },
         {
             "domain": "ads-twitter.com",
-            "prevalence": 0.3333333333333333
+            "prevalence": 0.375
+        },
+        {
+            "domain": "signalfx.com",
+            "prevalence": 0.125
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 4,
+        "Fetch": 4
     },
     "nameservers": [
         "cloe.ns.cloudflare.com",

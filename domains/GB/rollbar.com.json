@@ -7,14 +7,40 @@
     "source": [
         "DuckDuckGo-GB"
     ],
-    "prevalence": 0.00121,
-    "sites": 12,
+    "prevalence": 0.00171,
+    "sites": 17,
     "subdomains": [
-        "cdn"
+        "cdn",
+        "api"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "rollbar\\.com\\/rollbarjs\\/refs\\/tags\\/v2\\.25\\.2\\/rollbar\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "console.memory": 2,
+                "Date.prototype.getTime": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "55af9a94aa072cf5c093d7269bd98cec30ecade6ac2bc94dc9b47758630f4ba5"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "crimerate.co.uk",
+                "www.mattressnextday.co.uk"
+            ]
+        },
         {
             "rule": "rollbar\\.com\\/rollbarjs\\/refs\\/tags\\/v2\\.26\\.1\\/rollbar\\.min\\.js",
             "cookies": 0,
@@ -24,10 +50,10 @@
             ],
             "apis": {
                 "console.memory": 3,
-                "Date.prototype.getTime": 4
+                "Date.prototype.getTime": 3
             },
-            "sites": 4,
-            "prevalence": 0.000402,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
                 "41764f6cf1cfa99fad12f1ee265ea0bb292761f6b15d1f5432756524854cd77f"
@@ -37,9 +63,40 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "mixkit.co",
-                "www.freeagent.com",
                 "www.litcharts.com",
                 "www.tagvenue.com"
+            ]
+        },
+        {
+            "rule": "rollbar\\.com\\/rollbarjs\\/refs\\/tags\\/v2\\.26\\.2\\/rollbar\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "console.memory": 3,
+                "Date.prototype.getTime": 3,
+                "Navigator.prototype.userAgent": 1,
+                "Navigator.prototype.language": 1,
+                "Navigator.prototype.cookieEnabled": 1,
+                "Screen.prototype.width": 1,
+                "Screen.prototype.height": 1,
+                "Navigator.prototype.plugins": 1
+            },
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "8d300b9ab92d40783cab239d68a9bc35dfab6480cadd8cb5ff8aed97b0eccf41"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "freeagent.com",
+                "www.freeagent.com",
+                "www.rightboat.com"
             ]
         },
         {
@@ -66,6 +123,48 @@
                 "variety.com",
                 "www.rollingstone.com"
             ]
+        },
+        {
+            "rule": "rollbar\\.com\\/api\\/1\\/item\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "on-running.com",
+                "www.rightboat.com"
+            ]
+        },
+        {
+            "rule": "rollbar\\.com\\/api\\/1\\/item\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "506b3cc969c32ca53337a2797711ea0283f05e843c1625f6952041fcfe331a50"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "on-running.com",
+                "www.rightboat.com"
+            ]
         }
     ],
     "categories": [],
@@ -74,16 +173,26 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.9411764705882353
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.058823529411764705
         }
     ],
     "types": {
-        "Script": 6
+        "Script": 10,
+        "Preflight": 2,
+        "XHR": 2
     },
     "nameservers": [
-        "ns-cloud-d3.googledomains.com",
+        "ns-112.awsdns-14.com",
+        "ns-690.awsdns-22.net",
+        "ns-1178.awsdns-19.org",
+        "ns-1903.awsdns-45.co.uk",
         "ns-cloud-d1.googledomains.com",
-        "ns-cloud-d4.googledomains.com",
-        "ns-cloud-d2.googledomains.com"
+        "ns-cloud-d2.googledomains.com",
+        "ns-cloud-d3.googledomains.com",
+        "ns-cloud-d4.googledomains.com"
     ]
 }

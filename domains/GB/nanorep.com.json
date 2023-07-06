@@ -9,12 +9,14 @@
     "source": [
         "DuckDuckGo-GB"
     ],
-    "prevalence": 0.000201,
-    "sites": 2,
+    "prevalence": 0.000403,
+    "sites": 4,
     "subdomains": [
         "cdn-eu1-1",
         "cdn-eu1-2",
-        "visitor-services"
+        "visitor-services",
+        "cdn-eu1-4",
+        "cdn-customers"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -48,48 +50,128 @@
         },
         {
             "rule": "nanorep\\.com\\/visitor-token-service\\/visitor-token",
-            "cookies": 0.000201,
+            "cookies": 0.000302,
             "fingerprinting": 0,
             "subdomains": [
                 "visitor-services"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
-                "4d757e4e64b88d571b73b76349859dcbc89e376f3aa114b4fe61ca3d51f084d8"
+                "2d0b20926644a8a9d1abc9452d1040e838158ad50e67d029c7cad28d8c0a138d",
+                "338ef147dd32afef60b722d826e2dc4febe126671dcdd279462fa29086d5b89b"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "nordvpn.com",
+                "support.vodafone.co.uk",
+                "www.icicibank.com"
+            ]
+        },
+        {
+            "rule": "nanorep\\.com\\/web\\/support-center\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn-eu1-4",
+                "cdn-eu1-2"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "11eebb013abc0fc1fc54406811c2d4f23c33db86229765cdbda74db398fcf650",
+                "524335face89c2c19971ce35838906f0066489be6fa0aec3611bcd9bcab928cf"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "natwest.com",
+                "supportcentre.natwest.com",
                 "support.vodafone.co.uk"
+            ]
+        },
+        {
+            "rule": "nanorep\\.com\\/customers\\/rbs\\/internal\\/jquery-ui\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn-customers"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "44bab0b058cb06b709caa029faf107089c7c498570a11639a64359b30def86b4"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "natwest.com",
+                "supportcentre.natwest.com"
+            ]
+        },
+        {
+            "rule": "nanorep\\.com\\/customers\\/rbs\\/internal\\/jquery-1\\.12\\.0\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn-customers"
+            ],
+            "apis": {
+                "Event.prototype.timeStamp": 2,
+                "Element.prototype.getClientRects": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "5f1ab65fe2ad6b381a1ae036716475bf78c9b2e309528cf22170c1ddeefddcbf"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "natwest.com",
+                "supportcentre.natwest.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000201,
+    "cookies": 0.000302,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.8666666666666667
+            "prevalence": 0.76
         },
         {
             "domain": "nanorep.co",
-            "prevalence": 0.13333333333333333
+            "prevalence": 0.12
+        },
+        {
+            "domain": "nr-customers.s3.amazonaws.com",
+            "prevalence": 0.12
         }
     ],
     "types": {
-        "Script": 2,
-        "XHR": 2
+        "Script": 9,
+        "XHR": 3
     },
     "nameservers": [
+        "ns-901.awsdns-48.net",
         "ns-1433.awsdns-51.org",
         "ns-238.awsdns-29.com",
-        "ns-2019.awsdns-60.co.uk",
-        "ns-901.awsdns-48.net"
+        "ns-2019.awsdns-60.co.uk"
     ]
 }
