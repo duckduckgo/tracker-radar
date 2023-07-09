@@ -7,18 +7,20 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000136,
-    "sites": 2,
+    "prevalence": 0.00000665,
+    "sites": 1,
     "subdomains": [
         "tracking",
+        "router",
+        "apigateway",
         "mt1-app"
     ],
     "cnames": [],
-    "fingerprinting": 2,
+    "fingerprinting": 3,
     "resources": [
         {
             "rule": "myspectro\\.io\\/piwik\\.js",
-            "cookies": 0.0000136,
+            "cookies": 0.0000133,
             "fingerprinting": 2,
             "subdomains": [
                 "tracking"
@@ -40,21 +42,23 @@
                 "Document.cookie setter": 2
             },
             "sites": 2,
-            "prevalence": 0.0000136,
+            "prevalence": 0.0000133,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "d7fc375178c93a2fc15fd888e30170eedf4ef3d04497e7f951ab7bfe0c921693"
+            ],
             "type": "Script",
             "firstPartyCookies": {
                 "_pk_id.304.6927": {
-                    "ttl": 33955204,
+                    "ttl": 33955207,
                     "length": 28,
-                    "prevalence": 0.000013611924045463826,
-                    "uniqueness": 1
+                    "prevalence": 0.000013305657565596892,
+                    "uniqueness": 0.5
                 },
                 "_pk_ses.304.6927": {
-                    "ttl": 1804,
+                    "ttl": 1810,
                     "length": 1,
-                    "prevalence": 0.000013611924045463826,
+                    "prevalence": 0.000013305657565596892,
                     "uniqueness": 0.5
                 }
             },
@@ -65,20 +69,21 @@
             ]
         },
         {
-            "rule": "myspectro\\.io\\/op",
-            "cookies": 0.0000136,
+            "rule": "myspectro\\.io\\/router\\.js",
+            "cookies": 0,
             "fingerprinting": 1,
             "subdomains": [
-                "mt1-app"
+                "router"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 2,
-                "window.devicePixelRatio": 2
+                "window.localStorage": 2
             },
             "sites": 2,
-            "prevalence": 0.0000136,
+            "prevalence": 0.0000133,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "a11aba1547ddb349def6e185ed6b7161beb436574f4c71de20cdf696009b5c94"
+            ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -88,20 +93,45 @@
             ]
         },
         {
-            "rule": "myspectro\\.io\\/piwik\\.php",
+            "rule": "myspectro\\.io\\/api\\/configurator\\/__test_conn",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "tracking"
+                "apigateway"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000136,
+            "prevalence": 0.0000133,
             "cnames": [],
             "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                "bb14e2f0d7d5be23c46574ca988736db77cb74ab2c9c5e867be7da26c3095374"
             ],
-            "type": "Ping",
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "h2r-equipements.com",
+                "www.h2r-equipements.com"
+            ]
+        },
+        {
+            "rule": "myspectro\\.io\\/op",
+            "cookies": 0.0000133,
+            "fingerprinting": 1,
+            "subdomains": [
+                "mt1-app"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.devicePixelRatio": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000133,
+            "cnames": [],
+            "responseHashes": [
+                "8945793bf01181018c45c9ba24fbf55623c4ef9465ff51c5302dc98db9954e8a"
+            ],
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -118,7 +148,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000136,
+            "prevalence": 0.0000133,
             "cnames": [],
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -130,48 +160,29 @@
                 "h2r-equipements.com",
                 "www.h2r-equipements.com"
             ]
-        },
-        {
-            "rule": "myspectro\\.io\\/tr",
-            "cookies": 0.0000136,
-            "fingerprinting": 0,
-            "subdomains": [
-                "mt1-app"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Ping",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "h2r-equipements.com",
-                "www.h2r-equipements.com"
-            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0000136,
+    "cookies": 0.00000665,
     "topInitiators": [
         {
-            "domain": "listener-0.js",
-            "prevalence": 0.6
+            "domain": "googletagmanager.com",
+            "prevalence": 0.5714285714285714
         },
         {
-            "domain": "googletagmanager.com",
-            "prevalence": 0.4
+            "domain": "listener-0.js",
+            "prevalence": 0.42857142857142855
         }
     ],
     "types": {
-        "Script": 4,
-        "Ping": 6
+        "Script": 6,
+        "Fetch": 2,
+        "Ping": 2
     },
     "nameservers": [
-        "ns-251-c.gandi.net",
+        "ns-20-a.gandi.net",
         "ns-59-b.gandi.net",
-        "ns-20-a.gandi.net"
+        "ns-251-c.gandi.net"
     ]
 }

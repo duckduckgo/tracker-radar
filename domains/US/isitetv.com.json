@@ -4,16 +4,40 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000681,
-    "sites": 10,
+    "prevalence": 0.0000532,
+    "sites": 8,
     "subdomains": [
+        "paapi",
         "events",
-        "static",
-        "flv"
+        "static"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "isitetv\\.com\\/isitetv_cms\\/paapi\\.php",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "paapi"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.00002,
+            "cnames": [],
+            "responseHashes": [
+                "e5461e8b75db56e8da84530f67a9f71ad6414e45f449d03671346fc300b64da3",
+                "b1a08c35b0e42b28b413fb586cfd191806e8d920e169dc9c5946f8adbdc00952"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "beko.co.uk",
+                "www.currys.co.uk",
+                "www.currys.ie"
+            ]
+        },
         {
             "rule": "isitetv\\.com\\/api\\/Event",
             "cookies": 0,
@@ -22,15 +46,18 @@
                 "events"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "sites": 5,
+            "prevalence": 0.0000333,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "currys.co.uk",
+                "beko.co.uk",
+                "www.beko.co.uk",
+                "www.currys.co.uk",
+                "www.currys.ie",
                 "www.harveynorman.ie"
             ]
         },
@@ -42,8 +69,8 @@
                 "events"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "sites": 5,
+            "prevalence": 0.0000333,
             "cnames": [],
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -52,20 +79,25 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "currys.co.uk",
+                "beko.co.uk",
+                "www.beko.co.uk",
+                "www.currys.co.uk",
+                "www.currys.ie",
                 "www.harveynorman.ie"
             ]
         },
         {
             "rule": "isitetv\\.com\\/api\\/embed\\/embed\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "static"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 1
+            },
             "sites": 3,
-            "prevalence": 0.0000204,
+            "prevalence": 0.00002,
             "cnames": [],
             "responseHashes": [
                 "e117b663593a710bec87c16fe446e7c27d96c7f921093944108dce615bb0bb5e"
@@ -80,25 +112,25 @@
             ]
         },
         {
-            "rule": "isitetv\\.com\\/js\\/Player_DID_IE\\.min\\.js",
+            "rule": "isitetv\\.com\\/isitetv_cms\\/get_outside_loggin_text\\.php",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "flv"
+                "paapi"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000136,
+            "prevalence": 0.0000133,
             "cnames": [],
             "responseHashes": [
-                "09b3496eb6463d0b9e779f8ddde28246b82f800433c7695444166b6cb6692e1c"
+                "8c95169d503142e73ca0e9c9e1b89dd224c252cb4d54dc0192f40cd060569544"
             ],
-            "type": "Script",
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "did.ie",
-                "www.did.ie"
+                "currys.co.uk",
+                "www.currys.co.uk"
             ]
         },
         {
@@ -108,7 +140,7 @@
             "subdomains": [],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000136,
+            "prevalence": 0.0000133,
             "cnames": [],
             "responseHashes": [
                 "6c1b208935fb537d0db7a8e300cd7f40f0d3e746a0e15dd3446bfd3568d31ef6"
@@ -128,24 +160,20 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.9545454545454546
-        },
-        {
-            "domain": "shopify.com",
-            "prevalence": 0.045454545454545456
+            "prevalence": 1
         }
     ],
     "types": {
-        "Preflight": 2,
-        "XHR": 4,
-        "Script": 5
+        "XHR": 12,
+        "Preflight": 5,
+        "Script": 3
     },
     "nameservers": [
+        "a11-65.akam.net",
+        "a1-58.akam.net",
+        "a20-67.akam.net",
         "a26-64.akam.net",
         "a5-65.akam.net",
-        "a20-67.akam.net",
-        "a14-66.akam.net",
-        "a11-65.akam.net",
-        "a1-58.akam.net"
+        "a14-66.akam.net"
     ]
 }

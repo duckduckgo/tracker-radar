@@ -4,14 +4,23 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000603,
-    "sites": 6,
+    "prevalence": 0.000705,
+    "sites": 7,
     "subdomains": [
+        "thd-ca-poc-prod",
         "dell-prod.actioniq",
-        "outside",
-        "thd"
+        "thd",
+        "outside"
     ],
     "cnames": [
+        {
+            "original": "meta-events.trailforks.com",
+            "resolved": "outside.mr-in.com"
+        },
+        {
+            "original": "mr.homedepot.ca",
+            "resolved": "thd-ca-poc-prod.mr-in.com"
+        },
         {
             "original": "mr.homedepot.com",
             "resolved": "thd.mr-in.com"
@@ -24,6 +33,58 @@
     "fingerprinting": 0,
     "resources": [
         {
+            "rule": "mr-in\\.com\\/v1\\/p",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "thd-ca-poc-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "mr.homedepot.ca",
+                    "resolved": "thd-ca-poc-prod.mr-in.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "homedepot.ca",
+                "www.homedepot.ca"
+            ]
+        },
+        {
+            "rule": "mr-in\\.com\\/v1\\/p",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "thd-ca-poc-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "mr.homedepot.ca",
+                    "resolved": "thd-ca-poc-prod.mr-in.com"
+                }
+            ],
+            "responseHashes": [
+                "c955e57777ec0d73639dca6748560d00aa5eb8e12f13ebb2ed9656add3908f97"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "homedepot.ca",
+                "www.homedepot.ca"
+            ]
+        },
+        {
             "rule": "mr-in\\.com\\/v1\\/sync\\/function",
             "cookies": 0,
             "fingerprinting": 0,
@@ -35,7 +96,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "8a85870e0e8e9701c1713c2234e6e6d465ce98c5c5360a20e5938cd09153b2df"
+                "6b163b97de067bddec8e3c3fb6e0efcb678c8dab945faae8d98be2b3698a675d"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -51,20 +112,24 @@
             "fingerprinting": 0,
             "subdomains": [
                 "dell-prod.actioniq",
-                "outside",
-                "thd"
+                "thd",
+                "outside"
             ],
             "apis": {},
             "sites": 5,
-            "prevalence": 0.000502,
+            "prevalence": 0.000504,
             "cnames": [
+                {
+                    "original": "mr.homedepot.com",
+                    "resolved": "thd.mr-in.com"
+                },
                 {
                     "original": "mr.pinkbike.com",
                     "resolved": "outside.mr-in.com"
                 },
                 {
-                    "original": "mr.homedepot.com",
-                    "resolved": "thd.mr-in.com"
+                    "original": "meta-events.trailforks.com",
+                    "resolved": "outside.mr-in.com"
                 }
             ],
             "responseHashes": [
@@ -75,37 +140,10 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "dell.com",
-                "m.pinkbike.com",
                 "www.dell.com",
                 "www.homedepot.com",
-                "www.pinkbike.com"
-            ]
-        },
-        {
-            "rule": "mr-in\\.com\\/v1\\/t",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "thd"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [
-                {
-                    "original": "mr.homedepot.com",
-                    "resolved": "thd.mr-in.com"
-                }
-            ],
-            "responseHashes": [
-                "c955e57777ec0d73639dca6748560d00aa5eb8e12f13ebb2ed9656add3908f97"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "homedepot.com",
-                "www.homedepot.com"
+                "www.pinkbike.com",
+                "www.trailforks.com"
             ]
         }
     ],
@@ -115,20 +153,22 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.4444444444444444
-        },
-        {
-            "domain": "thdstatic.com",
-            "prevalence": 0.3333333333333333
+            "prevalence": 0.5714285714285714
         },
         {
             "domain": "metarouter.io",
-            "prevalence": 0.2222222222222222
+            "prevalence": 0.2857142857142857
+        },
+        {
+            "domain": "thdstatic.com",
+            "prevalence": 0.14285714285714285
         }
     ],
     "types": {
+        "Preflight": 2,
+        "XHR": 2,
         "Script": 2,
-        "Fetch": 7
+        "Fetch": 5
     },
     "nameservers": [
         "nelci.ns.cloudflare.com",

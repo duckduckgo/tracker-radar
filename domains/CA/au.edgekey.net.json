@@ -9,19 +9,124 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000603,
+    "prevalence": 0.000604,
     "sites": 6,
     "subdomains": [
+        "collector.abc.net",
+        "analytics.realestate.com",
+        "carsguide.com",
         "images.sbs.com"
     ],
     "cnames": [
         {
+            "original": "analytics.realestate.com.au",
+            "resolved": "analytics.realestate.com.au.edgekey.net"
+        },
+        {
+            "original": "collector.abc.net.au",
+            "resolved": "collector.abc.net.au.edgekey.net"
+        },
+        {
             "original": "images.sbs.com.au",
             "resolved": "images.sbs.com.au.edgekey.net"
+        },
+        {
+            "original": "resources.carsguide.com.au",
+            "resolved": "carsguide.com.au.edgekey.net"
         }
     ],
     "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "au\\.edgekey\\.net\\/com\\.snowplowanalytics\\.snowplow\\/tp2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "collector.abc.net",
+                "analytics.realestate.com"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "collector.abc.net.au",
+                    "resolved": "collector.abc.net.au.edgekey.net"
+                },
+                {
+                    "original": "analytics.realestate.com.au",
+                    "resolved": "analytics.realestate.com.au.edgekey.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "abc.net.au",
+                "www.realestate.com.au"
+            ]
+        },
+        {
+            "rule": "au\\.edgekey\\.net\\/com\\.snowplowanalytics\\.snowplow\\/tp2",
+            "cookies": 0.000302,
+            "fingerprinting": 0,
+            "subdomains": [
+                "collector.abc.net",
+                "analytics.realestate.com"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [
+                {
+                    "original": "collector.abc.net.au",
+                    "resolved": "collector.abc.net.au.edgekey.net"
+                },
+                {
+                    "original": "analytics.realestate.com.au",
+                    "resolved": "analytics.realestate.com.au.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "2689367b205c16ce32ed4200942b8b8b1e262dfc70d9bc9fbc77c49699a4f1df"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "abc.net.au",
+                "www.abc.net.au",
+                "www.realestate.com.au"
+            ]
+        },
+        {
+            "rule": "au\\.edgekey\\.net\\/gtm\\/dmp-dil-script\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "carsguide.com"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "resources.carsguide.com.au",
+                    "resolved": "carsguide.com.au.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "f8bca0dbc7009a3977e34282b5dd40139b5df81a2fc078ad927c40d911713a61"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "carsguide.com.au",
+                "www.carsguide.com.au"
+            ]
+        },
         {
             "rule": "au\\.edgekey\\.net\\/dims4\\/default\\/0164bef\\/2147483647\\/strip\\/true\\/crop\\/1778x1000+1+0\\/resize\\/1280x720!\\/quality\\/90\\/",
             "cookies": 0,
@@ -79,30 +184,33 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000402,
+    "cookies": 0.000403,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.6388888888888888
+            "prevalence": 0.5161290322580645
         },
         {
             "domain": "tiqcdn.com",
-            "prevalence": 0.19444444444444445
+            "prevalence": 0.25806451612903225
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.08333333333333333
+            "prevalence": 0.12903225806451613
         },
         {
             "domain": "reagroupdata.com.au",
-            "prevalence": 0.05555555555555555
+            "prevalence": 0.06451612903225806
         },
         {
             "domain": "newscgp.com",
-            "prevalence": 0.027777777777777776
+            "prevalence": 0.03225806451612903
         }
     ],
     "types": {
+        "Preflight": 2,
+        "XHR": 3,
+        "Script": 2,
         "Image": 4
     },
     "nameservers": []

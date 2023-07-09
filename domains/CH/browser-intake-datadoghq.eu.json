@@ -7,10 +7,11 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.000402,
-    "sites": 4,
+    "prevalence": 0.000805,
+    "sites": 8,
     "subdomains": [
-        "rum"
+        "rum",
+        "session-replay"
     ],
     "cnames": [],
     "fingerprinting": 0,
@@ -23,13 +24,18 @@
                 "rum"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.000402,
+            "sites": 9,
+            "prevalence": 0.000905,
             "cnames": [],
             "responseHashes": [
-                "6a9cc69010b6cbee1d5fd8277f434113c073a3f797a8af62c76165caff4ddf7c",
-                "71e88aaedf7609e3f4ad617ec8c643dbacb6fe7882c43d0145eff73d9cccf50b",
-                "c7c2eec46f5f61435d0bc2bc30cfd311f9b89721339f4961651f9871a802569f"
+                "200e58b9e7f10c98a48757edfd77e171582ed89241fda44a701407ee8db0c566",
+                "6df184e9030249ddd8d941b3530cac951afc3b8d6bcf0df14cd59ac17b2f0d84",
+                "62b561c9873cff2de20a23ee8bf3f177889bea65fdc6b09a2545999291720a15",
+                "0e34ad77ae67d5d9db9b267beb7228b4c9222ddc1dc0474b8cf5c5b7266cd438",
+                "6e1f5dba4f7095beddd487c5e58a336a051a67d875b2e641a802a222523030a0",
+                "ff46dcdeab2b97de28f72f97e9daac007a3fb4dde5ae3173e1aab34b38eab5ef",
+                "e82a141cda2a9f00dba161b7d1372509daf477250aa209f8685a30f7281e2c8a",
+                "9af5624346cf4c55c62423dd2789f72827e091066f865cc16808aa79ef8a57a8"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -38,7 +44,34 @@
                 "decathlon.fr",
                 "conseilsport.decathlon.fr",
                 "de.toyota.ch",
-                "www.just-eat.ch"
+                "fr.flixbus.ch",
+                "fr.toyota.ch",
+                "www.burger-king.ch",
+                "www.mlb.com",
+                "www.smood.ch",
+                "www.tui.com"
+            ]
+        },
+        {
+            "rule": "browser-intake-datadoghq\\.eu\\/api\\/v2\\/replay",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "session-replay"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "2f74dbe49e9651fa48612b997fa72cb04a4c11be9f017b427d9241f980cde119"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "toyota.ch",
+                "fr.toyota.ch"
             ]
         },
         {
@@ -53,14 +86,14 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                "412b654ff95478c2aaeb283080416a66ec5c728aa809d951cb2d9e3e0e7def06"
             ],
-            "type": "Ping",
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "expondo.ch",
-                "www.expondo.ch"
+                "mlb.com",
+                "www.mlb.com"
             ]
         }
     ],
@@ -70,17 +103,21 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.8333333333333334
+        },
+        {
+            "domain": "datadoghq-browser-agent.com",
+            "prevalence": 0.16666666666666666
         }
     ],
     "types": {
-        "Fetch": 4,
-        "Ping": 2
+        "Fetch": 9,
+        "XHR": 4
     },
     "nameservers": [
-        "ns-cloud-e3.googledomains.com",
-        "ns-cloud-e2.googledomains.com",
         "ns-cloud-e4.googledomains.com",
-        "ns-cloud-e1.googledomains.com"
+        "ns-cloud-e1.googledomains.com",
+        "ns-cloud-e2.googledomains.com",
+        "ns-cloud-e3.googledomains.com"
     ]
 }

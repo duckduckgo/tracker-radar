@@ -7,16 +7,72 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000402,
-    "sites": 4,
+    "prevalence": 0.000604,
+    "sites": 6,
     "subdomains": [
+        "cdnperf",
+        "odimagetest",
         "democracynow"
     ],
-    "cnames": [],
-    "fingerprinting": 2,
+    "cnames": [
+        {
+            "original": "ic.od-cdn.com",
+            "resolved": "odimagetest.cachefly.net"
+        }
+    ],
+    "fingerprinting": 3,
     "resources": [
         {
-            "rule": "cachefly\\.net\\/democracynow\\/360\\/dn2023-0621\\.mp4",
+            "rule": "cachefly\\.net\\/500b-bench\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdnperf"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "13348a5efc450ea05bab020b8e54e8e467c1055e4eb7579d7868e12832958eef"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "24timezones.com",
+                "www.opensubtitles.org"
+            ]
+        },
+        {
+            "rule": "cachefly\\.net\\/resize",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "odimagetest"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "ic.od-cdn.com",
+                    "resolved": "odimagetest.cachefly.net"
+                }
+            ],
+            "responseHashes": [
+                "691b3c4a533a5db8b922b0f90ec60f5220cc5575ab27862d56d5f9ebb84f884e"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "overdrive.com",
+                "toronto.overdrive.com"
+            ]
+        },
+        {
+            "rule": "cachefly\\.net\\/democracynow\\/360\\/dn2023-0707\\.mp4",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -27,7 +83,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "902d4f22ff5d76058e4b29c28b8d1b05ab6ef62bb885ceed68c397d7b2017a25"
+                "ba64fc046cc61428cb1422441b654f7fe2d9604bea25a663d6f9fb3c94ea57b5"
             ],
             "type": "Media",
             "firstPartyCookies": {},
@@ -42,14 +98,20 @@
         "CDN"
     ],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.000101,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.9545454545454546
+        },
+        {
+            "domain": "perfops.net",
+            "prevalence": 0.045454545454545456
         }
     ],
     "types": {
+        "XHR": 2,
+        "Image": 2,
         "Media": 2
     },
     "nameservers": [

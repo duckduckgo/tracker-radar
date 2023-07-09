@@ -7,65 +7,101 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.000301,
-    "sites": 3,
+    "prevalence": 0.000402,
+    "sites": 4,
     "subdomains": [
-        "login"
+        "churchofjesuschrist.customdomains",
+        "ligonier.customdomains",
+        "servicenowsignon.customdomains"
     ],
-    "cnames": [],
+    "cnames": [
+        {
+            "original": "auth.ligonier.org",
+            "resolved": "ligonier.customdomains.okta.com"
+        },
+        {
+            "original": "id.churchofjesuschrist.org",
+            "resolved": "churchofjesuschrist.customdomains.okta.com"
+        },
+        {
+            "original": "ssosignon.servicenow.com",
+            "resolved": "servicenowsignon.customdomains.okta.com"
+        }
+    ],
     "fingerprinting": 1,
     "resources": [
         {
-            "rule": "okta\\.com\\/discovery\\/iframe\\.html",
-            "cookies": 0,
+            "rule": "okta\\.com\\/api\\/v1\\/sessions\\/me",
+            "cookies": 0.000302,
             "fingerprinting": 0,
             "subdomains": [
-                "login"
+                "churchofjesuschrist.customdomains",
+                "ligonier.customdomains",
+                "servicenowsignon.customdomains"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [
+                {
+                    "original": "id.churchofjesuschrist.org",
+                    "resolved": "churchofjesuschrist.customdomains.okta.com"
+                },
+                {
+                    "original": "auth.ligonier.org",
+                    "resolved": "ligonier.customdomains.okta.com"
+                },
+                {
+                    "original": "ssosignon.servicenow.com",
+                    "resolved": "servicenowsignon.customdomains.okta.com"
+                }
+            ],
+            "responseHashes": [
+                "fbca3383662a685057bd3f94c3871acc163b37a27eb9ca653a9b769f58bc390e"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "churchofjesuschrist.org",
+                "www.ligonier.org",
+                "www.servicenow.com"
+            ]
+        },
+        {
+            "rule": "okta\\.com\\/api\\/v1\\/sessions\\/me",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ligonier.customdomains",
+                "servicenowsignon.customdomains"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "312961c3e2abd191b80c96dc095382f8a09226a70ea00dbccc20ee26a67ced59"
+            "cnames": [
+                {
+                    "original": "auth.ligonier.org",
+                    "resolved": "ligonier.customdomains.okta.com"
+                },
+                {
+                    "original": "ssosignon.servicenow.com",
+                    "resolved": "servicenowsignon.customdomains.okta.com"
+                }
             ],
-            "type": "Document",
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "hesta.com.au",
-                "my.unimelb.edu.au"
-            ]
-        },
-        {
-            "rule": "okta\\.com\\/lib\\/discoveryIframe-88dc7396afa19c320b05\\.min\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "login"
-            ],
-            "apis": {
-                "Navigator.prototype.userAgent": 2,
-                "window.localStorage": 2
-            },
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "ccf6add544df0956a4db5ffeab1cd89d06f63c7f5ec8081b4584d948cdb6604c"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "hesta.com.au",
-                "my.unimelb.edu.au"
+                "ligonier.org",
+                "www.servicenow.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0001,
+    "cookies": 0.000302,
     "topInitiators": [
         {
             "domain": "oktacdn.com",
@@ -73,17 +109,17 @@
         }
     ],
     "types": {
-        "Document": 2,
-        "Script": 2
+        "Fetch": 3,
+        "Preflight": 2
     },
     "nameservers": [
-        "edns5.ultradns.biz",
-        "edns5.ultradns.com",
+        "ns-285.awsdns-35.com",
         "edns5.ultradns.net",
+        "edns5.ultradns.biz",
+        "ns-684.awsdns-21.net",
         "edns5.ultradns.org",
         "ns-1459.awsdns-54.org",
-        "ns-1563.awsdns-03.co.uk",
-        "ns-285.awsdns-35.com",
-        "ns-684.awsdns-21.net"
+        "edns5.ultradns.com",
+        "ns-1563.awsdns-03.co.uk"
     ]
 }

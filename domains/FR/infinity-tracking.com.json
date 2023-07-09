@@ -4,33 +4,83 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.0001,
-    "sites": 1,
+    "prevalence": 0.000202,
+    "sites": 2,
     "subdomains": [
+        "script",
+        "web.lon",
         "nas.lon"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
         {
-            "rule": "infinity-tracking\\.com\\/allocate",
+            "rule": "infinity-tracking\\.com\\/infinitytrack\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "script"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2,
+                "Date.prototype.getTime": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "911ae2110ecd742fac743dfe62868201a752cbcd799da2b6e6ae78aff9082853"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "chaletdejardin.fr",
+                "www.gartner.com"
+            ]
+        },
+        {
+            "rule": "infinity-tracking\\.com\\/v3\\/info",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "nas.lon"
+                "web.lon"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000201,
+            "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "e3901cdf0086d68a5d6da7a116babb6e025ecd5e9d0aa10d663bade95fbfd706"
+                "ec79253a74e11c32b013252e9aa93464227742d666163016e6c0d7588c03058e"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "gartner.com",
+                "chaletdejardin.fr",
+                "www.gartner.com"
+            ]
+        },
+        {
+            "rule": "infinity-tracking\\.com\\/v3\\/info",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "web.lon"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "chaletdejardin.fr",
                 "www.gartner.com"
             ]
         },
@@ -42,15 +92,46 @@
                 "nas.lon"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "16af2bfb605c2b35a8497f853dfbd82207ca863bef1e1d3a92c79cca6430beaf",
+                "a847ce031bbe6f021eefbcf324a41fa00f6f86350883e5b72b68641c3ecb0c8d"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_ga": 0.0002020814388198444,
+                "_uIDCUA": 0.0001010407194099222
+            },
+            "exampleSites": [
+                "chaletdejardin.fr",
+                "www.chaletdejardin.fr",
+                "www.gartner.com"
+            ]
+        },
+        {
+            "rule": "infinity-tracking\\.com\\/allocate",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "nas.lon"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
             "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
+            "firstPartyCookiesSent": {
+                "_ga": 0.0002020814388198444,
+                "_uIDCUA": 0.0001010407194099222
+            },
             "exampleSites": [
-                "gartner.com",
+                "chaletdejardin.fr",
+                "www.chaletdejardin.fr",
                 "www.gartner.com"
             ]
         }
@@ -60,13 +141,18 @@
     "cookies": 0,
     "topInitiators": [
         {
+            "domain": "first party",
+            "prevalence": 0.5
+        },
+        {
             "domain": "googletagmanager.com",
-            "prevalence": 1
+            "prevalence": 0.5
         }
     ],
     "types": {
-        "Fetch": 2,
-        "Preflight": 2
+        "Script": 2,
+        "Fetch": 5,
+        "Preflight": 5
     },
     "nameservers": [
         "ns-591.awsdns-09.net",

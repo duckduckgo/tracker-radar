@@ -9,10 +9,11 @@
     "source": [
         "DuckDuckGo-GB"
     ],
-    "prevalence": 0.000703,
+    "prevalence": 0.000705,
     "sites": 7,
     "subdomains": [
-        "analytics"
+        "analytics",
+        "gateway"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -25,8 +26,8 @@
                 "analytics"
             ],
             "apis": {},
-            "sites": 5,
-            "prevalence": 0.000502,
+            "sites": 4,
+            "prevalence": 0.000403,
             "cnames": [],
             "responseHashes": [
                 "8eefa322436955a85812c082e3ed2399efd61cef81bf4e07d4bee01146e21e62"
@@ -36,7 +37,6 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "myhermes.co.uk",
-                "www.cdc.gov",
                 "www.domesticandgeneral.com",
                 "www.imf.org",
                 "www.nationalrail.co.uk"
@@ -50,8 +50,8 @@
                 "analytics"
             ],
             "apis": {},
-            "sites": 5,
-            "prevalence": 0.000502,
+            "sites": 4,
+            "prevalence": 0.000403,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
@@ -59,10 +59,100 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "myhermes.co.uk",
-                "www.cdc.gov",
                 "www.domesticandgeneral.com",
                 "www.imf.org",
                 "www.nationalrail.co.uk"
+            ]
+        },
+        {
+            "rule": "foresee\\.com\\/sites\\/evri\\/production\\/gateway\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "gateway"
+            ],
+            "apis": {
+                "window.sessionStorage": 2,
+                "window.localStorage": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Date.prototype.getTimezoneOffset": 2,
+                "window.devicePixelRatio": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "dfce94a004fd3597b8e2fc03aa4a308ae5cb5b631ea166ab16c56afd193f81f1"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "evri.com",
+                "www.myhermes.co.uk"
+            ]
+        },
+        {
+            "rule": "foresee\\.com\\/code\\/19\\.14\\.10-fs\\/fs\\.utils\\.js",
+            "cookies": 0.000202,
+            "fingerprinting": 2,
+            "subdomains": [
+                "gateway"
+            ],
+            "apis": {
+                "window.sessionStorage": 2,
+                "window.localStorage": 2,
+                "window.name": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "window.innerWidth": 2,
+                "window.innerHeight": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "8b8b9fc91f46947f770793799e00ae7744e272bb36deda2ad7a925ba040361a5"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_4c_": {
+                    "ttl": 63047617,
+                    "length": 465,
+                    "prevalence": 0.0001007759750075582,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "evri.com",
+                "www.myhermes.co.uk"
+            ]
+        },
+        {
+            "rule": "foresee\\.com\\/code\\/19\\.14\\.10-fs\\/fs\\.compress\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gateway"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "cdf139e1224cc05da1f09a556f92b49ddb183242c1f8805d858cac51b78b5df0"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "evri.com",
+                "www.myhermes.co.uk"
             ]
         }
     ],
@@ -73,33 +163,38 @@
         "Session Replay"
     ],
     "performance": {},
-    "cookies": 0.000402,
+    "cookies": 0.000504,
     "topInitiators": [
         {
-            "domain": "first party",
-            "prevalence": 0.43478260869565216
+            "domain": "answerscloud.com",
+            "prevalence": 0.4090909090909091
         },
         {
-            "domain": "answerscloud.com",
-            "prevalence": 0.391304347826087
+            "domain": "first party",
+            "prevalence": 0.36363636363636365
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.13043478260869565
+            "prevalence": 0.13636363636363635
         },
         {
             "domain": "appdynamics.com",
-            "prevalence": 0.043478260869565216
+            "prevalence": 0.045454545454545456
+        },
+        {
+            "domain": "evri.com",
+            "prevalence": 0.045454545454545456
         }
     ],
     "types": {
-        "XHR": 5,
-        "Preflight": 5
+        "XHR": 4,
+        "Preflight": 4,
+        "Script": 6
     },
     "nameservers": [
         "ns-1388.awsdns-45.org",
         "ns-29.awsdns-03.com",
-        "ns-1710.awsdns-21.co.uk",
-        "ns-880.awsdns-46.net"
+        "ns-880.awsdns-46.net",
+        "ns-1710.awsdns-21.co.uk"
     ]
 }

@@ -9,19 +9,41 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000804,
+    "prevalence": 0.000806,
     "sites": 8,
     "subdomains": [
         "vs.aws",
         "fls-na",
         "aws",
         "unagi",
-        "payments",
+        "g-images",
         "apay-us"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "amazon\\.com\\/token",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vs.aws"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "c06df291405b9582835e6dd5e31cb911242f02f77aefab07d3ab55a90f40227c"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "repost.aws",
+                "s3.amazonaws.com"
+            ]
+        },
         {
             "rule": "amazon\\.com\\/token",
             "cookies": 0,
@@ -35,28 +57,6 @@
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "repost.aws",
-                "s3.amazonaws.com"
-            ]
-        },
-        {
-            "rule": "amazon\\.com\\/token",
-            "cookies": 0.000201,
-            "fingerprinting": 0,
-            "subdomains": [
-                "vs.aws"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "4a9370077137ebb0a3e7fe8c772f3ef96373933571817d7c8d9bfee177c48574"
-            ],
-            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -148,38 +148,37 @@
             ]
         },
         {
-            "rule": "amazon\\.com\\/gp\\/widgets\\/sessionstabilizer",
-            "cookies": 0.000201,
+            "rule": "amazon\\.com\\/images\\/G\\/01\\/associates\\/network\\/amzn\\.gif",
+            "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "payments"
+                "g-images"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "e03c2c228f0178bc52218c7c60d57465bca59faed6e7a079bf3c0725ec498981"
+                "b1341b7a78a350944f1a578eb81330b41a19d5297275291f13fd331e54873e4b"
             ],
-            "type": "XHR",
+            "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "mathway.com",
-                "www.woodcraft.com"
+                "eevblog.com",
+                "www.linuxquestions.org"
             ]
         },
         {
             "rule": "amazon\\.com\\/cs\\/uedata",
-            "cookies": 0.0001,
+            "cookies": 0.000101,
             "fingerprinting": 0,
             "subdomains": [
-                "apay-us",
-                "payments"
+                "apay-us"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000301,
+            "sites": 2,
+            "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -189,8 +188,7 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "mathway.com",
-                "www.mathway.com",
-                "www.woodcraft.com"
+                "www.mathway.com"
             ]
         }
     ],
@@ -203,15 +201,15 @@
         "Embedded Content"
     ],
     "performance": {},
-    "cookies": 0.000502,
+    "cookies": 0.000403,
     "topInitiators": [
         {
             "domain": "awsstatic.com",
-            "prevalence": 0.7777777777777778
+            "prevalence": 0.7936507936507936
         },
         {
             "domain": "payments-amazon.com",
-            "prevalence": 0.09523809523809523
+            "prevalence": 0.06349206349206349
         },
         {
             "domain": "first party",
@@ -223,7 +221,7 @@
         },
         {
             "domain": "amazon-adsystem.com",
-            "prevalence": 0.015873015873015872
+            "prevalence": 0.031746031746031744
         },
         {
             "domain": "intelligems.io",
@@ -235,20 +233,20 @@
         }
     ],
     "types": {
-        "Preflight": 2,
         "Fetch": 2,
-        "Image": 4,
-        "XHR": 7,
+        "Preflight": 2,
+        "Image": 6,
+        "XHR": 4,
         "Ping": 2
     },
     "nameservers": [
-        "ns1.amzndns.co.uk",
-        "ns1.amzndns.net",
-        "ns2.amzndns.net",
-        "ns1.amzndns.org",
         "ns2.amzndns.com",
         "ns2.amzndns.co.uk",
+        "ns1.amzndns.com",
+        "ns2.amzndns.net",
+        "ns1.amzndns.co.uk",
+        "ns1.amzndns.org",
         "ns2.amzndns.org",
-        "ns1.amzndns.com"
+        "ns1.amzndns.net"
     ]
 }

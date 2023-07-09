@@ -4,14 +4,59 @@
     "source": [
         "DuckDuckGo-DE"
     ],
-    "prevalence": 0.0001,
-    "sites": 1,
+    "prevalence": 0.000202,
+    "sites": 2,
     "subdomains": [
-        "events"
+        "cdn",
+        "events",
+        "yield-manager"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "browsiprod\\.com\\/bootstrap\\/bootstrap\\.js",
+            "cookies": 0.000202,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "window.sessionStorage": 2,
+                "Document.cookie getter": 2,
+                "window.localStorage": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "ee59a729348a1ee72417458ddb4879d4e09668334d2a715f3a700edb5e19bf04"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "__browsiSessionID": {
+                    "ttl": 1804,
+                    "length": 81,
+                    "prevalence": 0.0002016942315449778,
+                    "uniqueness": 1
+                },
+                "__browsiUID": {
+                    "ttl": 31536004,
+                    "length": 36,
+                    "prevalence": 0.0002016942315449778,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "arkids.net",
+                "www.dailydot.com"
+            ]
+        },
         {
             "rule": "browsiprod\\.com\\/events\\/v2\\/supply",
             "cookies": 0,
@@ -21,7 +66,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000201,
+            "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -30,31 +75,106 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "dailydot.com",
+                "arkids.net",
+                "www.dailydot.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/supply\\/v5",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "yield-manager"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "af787aa5d92fa9220601bbe6e6b56afe72fd6a144f869ba7c57d4e4a41d7640a"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "arkids.net",
+                "www.dailydot.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/sd\\/apps\\/middy\\/middy-desktop-4\\.16\\.16\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Screen.prototype.availWidth": 2,
+                "Screen.prototype.availHeight": 2,
+                "window.innerHeight": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "4264c8fc58f35145d23e3773bb453982705475d5da1d50477676a0c54b81a5e7"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "arkids.net",
+                "www.dailydot.com"
+            ]
+        },
+        {
+            "rule": "browsiprod\\.com\\/abd\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "481d713552f587d3bc0e3683557f8541ea69543e4d7abb7e4299c646ab10fd03"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "arkids.net",
                 "www.dailydot.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0001,
+    "cookies": 0.000202,
     "topInitiators": [
         {
-            "domain": "d137xjgotpkrvc.cloudfront.net",
-            "prevalence": 0.75
+            "domain": "first party",
+            "prevalence": 0.7142857142857143
         },
         {
-            "domain": "first party",
-            "prevalence": 0.25
+            "domain": "d137xjgotpkrvc.cloudfront.net",
+            "prevalence": 0.21428571428571427
+        },
+        {
+            "domain": "adapex.io",
+            "prevalence": 0.07142857142857142
         }
     ],
     "types": {
-        "XHR": 2
+        "Script": 6,
+        "XHR": 4
     },
     "nameservers": [
-        "ns-1215.awsdns-23.org",
-        "ns-1546.awsdns-01.co.uk",
         "ns-189.awsdns-23.com",
-        "ns-729.awsdns-27.net"
+        "ns-729.awsdns-27.net",
+        "ns-1546.awsdns-01.co.uk",
+        "ns-1215.awsdns-23.org"
     ]
 }

@@ -4,10 +4,11 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.000034,
-    "sites": 5,
+    "prevalence": 0.0000532,
+    "sites": 8,
     "subdomains": [
-        "cdn"
+        "cdn",
+        "api"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -15,13 +16,16 @@
         {
             "rule": "endorsal\\.io\\/widgets\\/widget\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "cdn"
             ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "apis": {
+                "HTMLMediaElement.prototype.canPlayType": 1,
+                "window.innerHeight": 1
+            },
+            "sites": 6,
+            "prevalence": 0.0000399,
             "cnames": [],
             "responseHashes": [
                 "4f4d316cbd28153db66e4b94fa13efa6243c82abdf6d1a2cf80e5bc610fce133"
@@ -31,7 +35,141 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "mobilesms.io",
-                "storylearning.com"
+                "quickjewelryrepairs.com",
+                "storylearning.com",
+                "tctmed.com",
+                "www.atticus.io",
+                "www.insidethebubble.net"
+            ]
+        },
+        {
+            "rule": "endorsal\\.io\\/widgets\\/fomo\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000133,
+            "cnames": [],
+            "responseHashes": [
+                "30a10dd00e60db8a9da8dc58904348b03d48c51b70374a9552eee9cdb8d667e5"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mobilesms.io",
+                "www.insidethebubble.net"
+            ]
+        },
+        {
+            "rule": "endorsal\\.io\\/widgets\\/endorsal-fomo\\.min\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000133,
+            "cnames": [],
+            "responseHashes": [
+                "647719c986b9990ad51d4adda91ad762acd08de22563202d648f19a27dadf008"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mobilesms.io",
+                "www.insidethebubble.net"
+            ]
+        },
+        {
+            "rule": "endorsal\\.io\\/render\\/fomo\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000133,
+            "cnames": [],
+            "responseHashes": [
+                "7535861fa1c8757287bdc2c7abe67c42a7ef9f4fdc570fe7a570910141b86b58"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mobilesms.io",
+                "www.insidethebubble.net"
+            ]
+        },
+        {
+            "rule": "endorsal\\.io\\/render\\/fomo\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000133,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mobilesms.io",
+                "www.insidethebubble.net"
+            ]
+        },
+        {
+            "rule": "endorsal\\.io\\/fomo\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000133,
+            "cnames": [],
+            "responseHashes": [
+                "17b2aa4efc4e6ce98a0e24ad08f9d18d629ce378597802629576897aa82538d6"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mobilesms.io",
+                "www.insidethebubble.net"
+            ]
+        },
+        {
+            "rule": "endorsal\\.io\\/fomo\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000133,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mobilesms.io",
+                "www.insidethebubble.net"
             ]
         }
     ],
@@ -41,16 +179,23 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.9444444444444444
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.05555555555555555
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 8,
+        "Stylesheet": 2,
+        "Fetch": 4,
+        "Preflight": 4
     },
     "nameservers": [
+        "ns-1586.awsdns-06.co.uk",
         "ns-1052.awsdns-03.org",
-        "ns-397.awsdns-49.com",
         "ns-692.awsdns-22.net",
-        "ns-1586.awsdns-06.co.uk"
+        "ns-397.awsdns-49.com"
     ]
 }

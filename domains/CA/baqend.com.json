@@ -4,24 +4,77 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.0001,
-    "sites": 1,
+    "prevalence": 0.000302,
+    "sites": 3,
     "subdomains": [
-        "bmw.app"
+        "bmw.app",
+        "swarovski.app",
+        "talbots.app"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
         {
+            "rule": "baqend\\.com\\/v1\\/speedkit\\/install\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 2,
+            "subdomains": [
+                "bmw.app",
+                "swarovski.app",
+                "talbots.app"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 3,
+                "window.localStorage": 2,
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2,
+                "PerformanceTiming.prototype.navigationStart": 3,
+                "Screen.prototype.width": 2,
+                "window.devicePixelRatio": 2,
+                "Screen.prototype.height": 2,
+                "window.indexedDB": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "46458664761e48ce95fe8fe4d0faf72447075b12d437335c1f0dfe587afe1263",
+                "3274620a64696b4a6d5e3fabb7cc29237b4155d4956da678f9111cb42c2c77c1"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "baqend-speedkit-user-id": {
+                    "ttl": 15552003,
+                    "length": 25,
+                    "prevalence": 0.00020147073637554144,
+                    "uniqueness": 1
+                },
+                "baqend-speedkit-config": {
+                    "ttl": 15552002,
+                    "length": 64,
+                    "prevalence": 0.00010073536818777072,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bmw.ca",
+                "www.swarovski.com",
+                "www.talbots.com"
+            ]
+        },
+        {
             "rule": "baqend\\.com\\/v1\\/rum\\/pi",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "bmw.app"
+                "bmw.app",
+                "swarovski.app",
+                "talbots.app"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 4,
+            "prevalence": 0.000403,
             "cnames": [],
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -31,7 +84,55 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "bmw.ca",
-                "www.bmw.ca"
+                "www.bmw.ca",
+                "www.swarovski.com",
+                "www.talbots.com"
+            ]
+        },
+        {
+            "rule": "baqend\\.com\\/v1\\/speedkit\\/sw\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "bmw.app",
+                "talbots.app"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "dac545d4dade85925d341d3688d3d59474fd8337ea500aa8186954f71b3d6b73"
+            ],
+            "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bmw.ca",
+                "www.talbots.com"
+            ]
+        },
+        {
+            "rule": "baqend\\.com\\/v1\\/bloomfilter",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "bmw.app",
+                "talbots.app"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "bbf0f1aaeddedf225b2afaab29ff4baea85af59b722df6e804431184ea2f712e"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bmw.ca",
+                "www.talbots.com"
             ]
         },
         {
@@ -39,7 +140,7 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "bmw.app"
+                "talbots.app"
             ],
             "apis": {},
             "sites": 2,
@@ -52,32 +153,34 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "bmw.ca",
-                "www.bmw.ca"
+                "talbots.com",
+                "www.talbots.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0001,
+    "cookies": 0.000201,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.6666666666666666
+            "prevalence": 0.8571428571428571
         },
         {
             "domain": "bmw.com",
-            "prevalence": 0.3333333333333333
+            "prevalence": 0.14285714285714285
         }
     ],
     "types": {
-        "Ping": 2,
-        "Fetch": 2
+        "Script": 3,
+        "Ping": 4,
+        "Other": 2,
+        "Fetch": 4
     },
     "nameservers": [
-        "ns-1037.awsdns-01.org",
         "ns-224.awsdns-28.com",
-        "ns-2024.awsdns-61.co.uk",
-        "ns-839.awsdns-40.net"
+        "ns-839.awsdns-40.net",
+        "ns-1037.awsdns-01.org",
+        "ns-2024.awsdns-61.co.uk"
     ]
 }

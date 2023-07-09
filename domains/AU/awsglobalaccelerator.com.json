@@ -4,16 +4,21 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.000401,
-    "sites": 4,
+    "prevalence": 0.000503,
+    "sites": 5,
     "subdomains": [
         "a80a9201ee101bbc3",
-        "aa256d807ce326fd6"
+        "aa256d807ce326fd6",
+        "ae6b5a65c402225de"
     ],
     "cnames": [
         {
             "original": "collector.cdp.cnn.com",
             "resolved": "a80a9201ee101bbc3.awsglobalaccelerator.com"
+        },
+        {
+            "original": "data-feed.flightradar24.com",
+            "resolved": "ae6b5a65c402225de.awsglobalaccelerator.com"
         },
         {
             "original": "fb.cars.com",
@@ -22,6 +27,34 @@
     ],
     "fingerprinting": 0,
     "resources": [
+        {
+            "rule": "awsglobalaccelerator\\.com\\/com\\.snowplowanalytics\\.snowplow\\/tp2",
+            "cookies": 0.000302,
+            "fingerprinting": 0,
+            "subdomains": [
+                "a80a9201ee101bbc3"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [
+                {
+                    "original": "collector.cdp.cnn.com",
+                    "resolved": "a80a9201ee101bbc3.awsglobalaccelerator.com"
+                }
+            ],
+            "responseHashes": [
+                "2689367b205c16ce32ed4200942b8b8b1e262dfc70d9bc9fbc77c49699a4f1df"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cnn.com",
+                "edition.cnn.com",
+                "www.cnn.com"
+            ]
+        },
         {
             "rule": "awsglobalaccelerator\\.com\\/com\\.snowplowanalytics\\.snowplow\\/tp2",
             "cookies": 0,
@@ -44,34 +77,6 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "cnn.com",
-                "www.cnn.com"
-            ]
-        },
-        {
-            "rule": "awsglobalaccelerator\\.com\\/com\\.snowplowanalytics\\.snowplow\\/tp2",
-            "cookies": 0.000301,
-            "fingerprinting": 0,
-            "subdomains": [
-                "a80a9201ee101bbc3"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.000301,
-            "cnames": [
-                {
-                    "original": "collector.cdp.cnn.com",
-                    "resolved": "a80a9201ee101bbc3.awsglobalaccelerator.com"
-                }
-            ],
-            "responseHashes": [
-                "2689367b205c16ce32ed4200942b8b8b1e262dfc70d9bc9fbc77c49699a4f1df"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "cnn.com",
-                "edition.cnn.com",
                 "www.cnn.com"
             ]
         },
@@ -99,6 +104,58 @@
                 "cars.com",
                 "www.cars.com"
             ]
+        },
+        {
+            "rule": "awsglobalaccelerator\\.com\\/fr24\\.feed\\.api\\.v1\\.Feed\\/LiveFeed",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ae6b5a65c402225de"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "data-feed.flightradar24.com",
+                    "resolved": "ae6b5a65c402225de.awsglobalaccelerator.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "flightradar24.com",
+                "www.flightradar24.com"
+            ]
+        },
+        {
+            "rule": "awsglobalaccelerator\\.com\\/fr24\\.feed\\.api\\.v1\\.Feed\\/LiveFeed",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ae6b5a65c402225de"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "data-feed.flightradar24.com",
+                    "resolved": "ae6b5a65c402225de.awsglobalaccelerator.com"
+                }
+            ],
+            "responseHashes": [
+                "695322378caa39f15c6472daa437ca22d8c81a3c9cdae2ff51d891da5dbe6d3e"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "flightradar24.com",
+                "www.flightradar24.com"
+            ]
         }
     ],
     "categories": [],
@@ -107,12 +164,16 @@
     "topInitiators": [
         {
             "domain": "facebook.net",
-            "prevalence": 1
+            "prevalence": 0.75
+        },
+        {
+            "domain": "google.com",
+            "prevalence": 0.25
         }
     ],
     "types": {
-        "Preflight": 2,
-        "XHR": 5
+        "XHR": 7,
+        "Preflight": 4
     },
     "nameservers": [
         "ns-1484.awsdns-57.org",

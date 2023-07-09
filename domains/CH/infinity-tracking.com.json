@@ -4,36 +4,114 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.0001,
-    "sites": 1,
+    "prevalence": 0.000402,
+    "sites": 4,
     "subdomains": [
+        "script",
+        "web.lon",
         "nas.lon"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
         {
-            "rule": "infinity-tracking\\.com\\/allocate",
+            "rule": "infinity-tracking\\.com\\/infinitytrack\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "script"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 4,
+                "window.localStorage": 4,
+                "Date.prototype.getTime": 3,
+                "Screen.prototype.width": 3,
+                "Screen.prototype.height": 3,
+                "Document.cookie getter": 1
+            },
+            "sites": 4,
+            "prevalence": 0.000402,
+            "cnames": [],
+            "responseHashes": [
+                "911ae2110ecd742fac743dfe62868201a752cbcd799da2b6e6ae78aff9082853"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "barcelo.com",
+                "www.gartner.com",
+                "www.hurtigruten.de",
+                "www.hurtigruten.com"
+            ]
+        },
+        {
+            "rule": "infinity-tracking\\.com\\/v3\\/info",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "nas.lon"
+                "web.lon"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000402,
+            "cnames": [],
+            "responseHashes": [
+                "ec79253a74e11c32b013252e9aa93464227742d666163016e6c0d7588c03058e",
+                "5a96351c7a369eacde132b95db76949ca225a77389536c18c9731ad8f492036f"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "barcelo.com",
+                "www.gartner.com",
+                "www.hurtigruten.de",
+                "www.hurtigruten.com"
+            ]
+        },
+        {
+            "rule": "infinity-tracking\\.com\\/v3\\/info",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "web.lon"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000402,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "barcelo.com",
+                "www.gartner.com",
+                "www.hurtigruten.de",
+                "www.hurtigruten.com"
+            ]
+        },
+        {
+            "rule": "infinity-tracking\\.com\\/inf_454\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "script"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "bb52d07fd92528f773f306b8066708a6321354eb67f3b41f76dceecfd30c8515"
+                "151b8a1b03c52a2e0fda0793b619827711e3c733d706f4149f7a72dca1ca6230"
             ],
-            "type": "Fetch",
+            "type": "Script",
             "firstPartyCookies": {},
-            "firstPartyCookiesSent": {
-                "_ga": 0.00020078305391024997
-            },
+            "firstPartyCookiesSent": {},
             "exampleSites": [
-                "gartner.com",
-                "www.gartner.com"
+                "barcelo.com",
+                "www.hurtigruten.de"
             ]
         },
         {
@@ -44,18 +122,41 @@
                 "nas.lon"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "fd6b6c58ae277085ba4b710399221e2ac7a51100f0a171a9b9c3d73d043a9f88",
+                "4cc91ef6fb7455dde0695bfa1578e69c857bf06601ff9b0f427d750b5b51fa9d"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "barcelo.com",
+                "www.gartner.com",
+                "www.hurtigruten.de"
+            ]
+        },
+        {
+            "rule": "infinity-tracking\\.com\\/allocate",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "nas.lon"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
             "firstPartyCookies": {},
-            "firstPartyCookiesSent": {
-                "_ga": 0.00020078305391024997
-            },
+            "firstPartyCookiesSent": {},
             "exampleSites": [
-                "gartner.com",
-                "www.gartner.com"
+                "barcelo.com",
+                "www.gartner.com",
+                "www.hurtigruten.de"
             ]
         }
     ],
@@ -65,17 +166,26 @@
     "topInitiators": [
         {
             "domain": "googletagmanager.com",
-            "prevalence": 1
+            "prevalence": 0.6
+        },
+        {
+            "domain": "tiqcdn.com",
+            "prevalence": 0.2
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.2
         }
     ],
     "types": {
-        "Fetch": 2,
-        "Preflight": 2
+        "Script": 6,
+        "Fetch": 7,
+        "Preflight": 7
     },
     "nameservers": [
-        "ns-591.awsdns-09.net",
-        "ns-477.awsdns-59.com",
         "ns-1629.awsdns-11.co.uk",
-        "ns-1116.awsdns-11.org"
+        "ns-591.awsdns-09.net",
+        "ns-1116.awsdns-11.org",
+        "ns-477.awsdns-59.com"
     ]
 }

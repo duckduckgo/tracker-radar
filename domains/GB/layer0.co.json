@@ -4,14 +4,45 @@
     "source": [
         "DuckDuckGo-GB"
     ],
-    "prevalence": 0.000301,
+    "prevalence": 0.000302,
     "sites": 3,
     "subdomains": [
+        "rum",
         "rum.ingress"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "layer0\\.co\\/latest\\.js",
+            "cookies": 0.000202,
+            "fingerprinting": 2,
+            "subdomains": [
+                "rum"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "Navigator.prototype.connection": 2,
+                "window.localStorage": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "Date.prototype.getTime": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "6832d3447398c1bbcb346ba0e26c21621144d9eadc40ef74636dd07dc1f8fd98"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hoka.com",
+                "www.ugg.com"
+            ]
+        },
         {
             "rule": "layer0\\.co\\/ingress\\/rum\\/v1\\/e812dfcd-a5be-4b3f-843c-e9294afddd5b",
             "cookies": 0,
@@ -21,7 +52,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000201,
+            "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -33,33 +64,11 @@
                 "jollyes.co.uk",
                 "www.jollyes.co.uk"
             ]
-        },
-        {
-            "rule": "layer0\\.co\\/ingress\\/rum\\/v1\\/91990ecd-974d-491a-9d3e-e49d49fad981",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "rum.ingress"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-            ],
-            "type": "Ping",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "wearewild.com",
-                "www.wearewild.com"
-            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0001,
+    "cookies": 0.000202,
     "topInitiators": [
         {
             "domain": "first party",
@@ -67,12 +76,13 @@
         }
     ],
     "types": {
-        "Ping": 4
+        "Script": 2,
+        "Ping": 2
     },
     "nameservers": [
         "ns-453.awsdns-56.com",
-        "ns-1261.awsdns-29.org",
         "ns-622.awsdns-13.net",
+        "ns-1261.awsdns-29.org",
         "ns-1781.awsdns-30.co.uk"
     ]
 }
