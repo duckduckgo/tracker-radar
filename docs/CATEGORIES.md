@@ -1,5 +1,5 @@
-Each tracker may be assigned to one or more of the following:
-
+We assign categories to some of the domains on our list based on the resources served by the domain, the domain’s prevalence, and its privacy policy.
+ 
 |Category|Description|
 |---|---|
 |**Action Pixels**|This tracker may be collecting user specific events in a first-party or third-party environment.|
@@ -9,7 +9,7 @@ Each tracker may be assigned to one or more of the following:
 |**Analytics**|The purpose of this tracker is analytics. These can be first-party, third-party, hosted, marketing analytics, web analytics, or any other reporting software.|
 |**Audience Measurement**|Similar to analytics, but may focus on deeper demographics, behavior sets and specific actions.<br><br>Examples in this category could be Nielsen measurement pixels, Tag Manager Systems, etc.|
 |**Badge**|Denotes that the domain is used to serve "trust" badges. Websites typically use these to build trust with the user by showing that they are legitimate and that their data is collected through secure third-party service providers.<br><br>Examples include antivirus badges from the likes of Norton and McAfee, and SSL badges that certify connections to the site are encrypted.|
-|**CDN**|Denotes that the third-party URL is a type of content delivery network or static file delivery system. The primary purpose of these is not tracking.|
+|**CDN**|These domains are used primarily to load resources required for web pages to load correctly.|
 |**Embedded Content**|Denotes that the domain is used to embed content into webpages. This covers video embeds like Youtube or Vimeo, audio embeds like spotify, and all forms of widgets like chat or contact forms etc.|
 |**Federated Login**|Cross-system login buttons such as "Login with Facebook" on third-party sites.|
 |**Malware**|The domain has been found to frequently serve malicious content (often referred to "malvertising"). While malvertising attacks impact the majority of ad networks, some are significantly worse than others.<br><br>Types of malware include pop-up ads for deceptive downloads, drive-by downloads, malicious banners, and web widgets in which redirection can be co-opted into redirecting to a malicious site.|
@@ -21,5 +21,6 @@ Each tracker may be assigned to one or more of the following:
 |**Social Network**|The domain is owned by a major social network. These domains are often used to serve embedded content (tweets, posts, stories) on third party sites, as well as oauth implementations (federated log in).|
 |**Social - Comment**|Related to social commenting functionality.|
 |**Social - Share**|Related to social sharing buttons powered by a third-party SDK. For example, Facebook's share buttons, or AddToAny's share button sets.<br><br>This does not relate to self-built share buttons (i.e. on my own site, I upload a picture of Facebook's share icon, and hyperlink it to a sharing URL. This does not involve third-party data.)|
+|**Tag Manager**|These domains are used primarily to load scripts (that is, tag management scripts) that then load additional resources on behalf of the site owner. The additional resources are usually tracking resources from third-party domains, even if the tag manager script itself often does not track the user. Sometimes tag managers are also used to load resources required for web pages to load correctly, for example, a tag manager may load a chat support widget.|
 |**Third-Party Analytics Marketing**|Related to third-party analytics systems for marketing, usually marketing attribution or funnel management.<br><br>On desktop this can include things like HubSpot, Marketo and Adobe. On mobile it could include attribution systems like branch.io<br><br>Tag managers, A/B testing tools and personalization tools may also be included in this category.|
 |**Unknown High Risk Behavior**|The purpose of the tracker cannot be identified. But if it is a widespread third-party URL, with a domain that does not resolve, and no description or documentation about its implementation can be found in a web search of the URL, then we can assume there is a low chance of it breaking sites and a high chance of user risk.<br><br>We also flag expired domains here if they were once a legitimate tracker, as they still exist broadly on many sites and could be scooped up by new owners and used maliciously.|
