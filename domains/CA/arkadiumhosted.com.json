@@ -4,35 +4,41 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000505,
+    "prevalence": 0.000504,
     "sites": 5,
     "subdomains": [
+        "ams.cdn",
         "geoip.cdn",
-        "arenacloud.cdn",
-        "ams.cdn"
+        "arenacloud.cdn"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
         {
-            "rule": "arkadiumhosted\\.com\\/json\\/",
+            "rule": "arkadiumhosted\\.com\\/advertisement\\/display\\/stable\\/display-ads\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
-                "geoip.cdn"
+                "ams.cdn"
             ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.000303,
+            "apis": {
+                "window.localStorage": 2,
+                "window.innerHeight": 2,
+                "window.innerWidth": 2,
+                "Document.cookie getter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "8468b1d93e666ef4cf04852ecb954584fbe7a4795dc65d7006ea5e78e418be93"
+            ],
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "readersdigest.ca",
-                "games.washingtonpost.com",
-                "puzzles.usatoday.com"
+                "games.washingtonpost.com"
             ]
         },
         {
@@ -44,7 +50,28 @@
             ],
             "apis": {},
             "sites": 3,
-            "prevalence": 0.000303,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "readersdigest.ca",
+                "games.usatoday.com",
+                "games.washingtonpost.com"
+            ]
+        },
+        {
+            "rule": "arkadiumhosted\\.com\\/json\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "geoip.cdn"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
                 "7add2a54e12f41328e8702e1ca32667e637fc4d6246e9b1b12636fc1d8af9394"
@@ -54,96 +81,7 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "readersdigest.ca",
-                "games.washingtonpost.com",
-                "puzzles.usatoday.com"
-            ]
-        },
-        {
-            "rule": "arkadiumhosted\\.com\\/arenaxstorage-blob\\/arenax-index\\/_arena-shared-content_\\/arkcom-game-arts\\/blackjack\\/Game_Tiles\\/webp\\/280x280\\.webp",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "arenacloud.cdn"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [],
-            "responseHashes": [
-                "0b54048962b8f206b606da2f4ed824c0f674a5cfe64e1b25e9b8383a10956a6a"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "readersdigest.ca",
-                "games.washingtonpost.com"
-            ]
-        },
-        {
-            "rule": "arkadiumhosted\\.com\\/arenaxstorage-blob\\/arenax-index\\/_arena-shared-content_\\/arkcom-game-arts\\/mahjongg-toy-chest\\/Game_Tiles\\/webp\\/280x280\\.webp",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "arenacloud.cdn"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [],
-            "responseHashes": [
-                "17ad7123273f2b5be4da86d0e3c84d86f6afec0273efdb8cdcccc2838ff0ba93"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "readersdigest.ca",
-                "games.washingtonpost.com"
-            ]
-        },
-        {
-            "rule": "arkadiumhosted\\.com\\/arenaxstorage-blob\\/arenax-index\\/_arena-shared-content_\\/arkcom-game-arts\\/codeword\\/Game_Tiles\\/webp\\/280x280\\.webp",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "arenacloud.cdn"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.000303,
-            "cnames": [],
-            "responseHashes": [
-                "3be0bae6091de7f2e4e8460efcbc2b430063411386e1c7f1302e1c7c3b8a8537"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "readersdigest.ca",
-                "games.washingtonpost.com",
-                "puzzles.usatoday.com"
-            ]
-        },
-        {
-            "rule": "arkadiumhosted\\.com\\/arenaxstorage-blob\\/arenax-index\\/_arena-shared-content_\\/arkcom-game-arts\\/bridge\\/Game_Tiles\\/webp\\/280x280\\.webp",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "arenacloud.cdn"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [],
-            "responseHashes": [
-                "99b0b7cc54af79ea0185cf2015e18370d44b8d52d400f6babe7085321aebd0d0"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "readersdigest.ca",
+                "games.usatoday.com",
                 "games.washingtonpost.com"
             ]
         },
@@ -159,7 +97,7 @@
             "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "3595048170dddd14049e44a6f726cc4175f64f70785dce4075445bb8d8088a4c"
+                "bda44eba887f5b988ae887e6553e6a0ddae9acdc9414f3f0a961ebf6893ddf05"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -170,117 +108,216 @@
             ]
         },
         {
-            "rule": "arkadiumhosted\\.com\\/arenaxstorage-blob\\/arenax-index\\/_arena-shared-content_\\/arkcom-game-arts\\/mahjongg-dimensions\\/Game_Tiles\\/webp\\/280x280\\.webp",
+            "rule": "arkadiumhosted\\.com\\/arenaxstorage-blob\\/arenax-index\\/_arena-shared-content_\\/arkcom-game-arts\\/daily-sudoku\\/Game_Tiles\\/webp\\/280x280\\.webp",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
                 "arenacloud.cdn"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000303,
+            "sites": 2,
+            "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "f40fd3172ca7ec9b0b18000e5c3bcbf4a37117c2093420c740c32e7dafcc853a"
+                "eef02bcc89d21cf9516f2b9fa0a1e3f265aa588220aec657e676bb5b0168f7d3"
             ],
             "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "readersdigest.ca",
-                "games.washingtonpost.com",
+                "games.washingtonpost.com"
+            ]
+        },
+        {
+            "rule": "arkadiumhosted\\.com\\/arenaxstorage-blob\\/arenax-index\\/_arena-shared-content_\\/arkcom-game-arts\\/spider-solitaire\\/Game_Tiles\\/webp\\/280x280\\.webp",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "arenacloud.cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "f2313cbac456e5edf9bc05e644c40c5419eec2ab3cce1cf9901fb3660efebff6"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "readersdigest.ca",
+                "games.washingtonpost.com"
+            ]
+        },
+        {
+            "rule": "arkadiumhosted\\.com\\/arenaxstorage-blob\\/arenax-index\\/_arena-shared-content_\\/arkcom-game-arts\\/mah-jongg-age-of-alchemy\\/Game_Tiles\\/webp\\/280x280\\.webp",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "arenacloud.cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "743b3d271e8a0ea18aee60d2218c795529560f1dd00dd448f98c75a6d54fba8f"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "readersdigest.ca",
+                "games.washingtonpost.com"
+            ]
+        },
+        {
+            "rule": "arkadiumhosted\\.com\\/arenaxstorage-blob\\/arenax-index\\/_arena-shared-content_\\/arkcom-game-arts\\/easy-crossword\\/Game_Tiles\\/webp\\/280x280\\.webp",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "arenacloud.cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "efb9af443ae9c276ef07a2d247622aff573195c2edb125a06e1af084825a902a"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "readersdigest.ca",
+                "games.washingtonpost.com"
+            ]
+        },
+        {
+            "rule": "arkadiumhosted\\.com\\/arenaxstorage-blob\\/arenax-index\\/_arena-shared-content_\\/arkcom-game-arts\\/mahjongg-dark-dimensions\\/Game_Tiles\\/webp\\/280x280\\.webp",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "arenacloud.cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "5b54106eed6da20a855d1d12955a3b8d565329cf1276e89e43199570a409a72c"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "readersdigest.ca",
+                "games.washingtonpost.com"
+            ]
+        },
+        {
+            "rule": "arkadiumhosted\\.com\\/arenaxstorage-blob\\/arenax-index\\/_arena-shared-content_\\/arkcom-game-arts\\/outspell\\/Game_Tiles\\/webp\\/280x280\\.webp",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "arenacloud.cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "925417f58528ed6aacb36a4364e8784770ffb570408b1d18ce0d78d4051b8e7d"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "readersdigest.ca",
+                "games.washingtonpost.com"
+            ]
+        },
+        {
+            "rule": "arkadiumhosted\\.com\\/arenaxstorage-blob\\/arenax-index\\/_arena-shared-content_\\/arkcom-game-arts\\/game-day-block-champ\\/Game_Tiles\\/webp\\/280x280\\.webp",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "arenacloud.cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "38f2dc5b1f30100f2690c1d103735eae3246c6c4bc8712a99a6db253a5e48496"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "readersdigest.ca",
                 "www.arkadium.com"
             ]
         },
         {
-            "rule": "arkadiumhosted\\.com\\/arenaxstorage-blob\\/arenax-index\\/_arena-shared-content_\\/arkcom-game-arts\\/wander-words\\/Game_Tiles\\/webp\\/280x280\\.webp",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "arenacloud.cdn"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.000303,
-            "cnames": [],
-            "responseHashes": [
-                "c94fa90424a8b73b8a93651f125947132ac49abc45defcdb7f5549270d85f8c1"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "readersdigest.ca",
-                "games.washingtonpost.com",
-                "puzzles.usatoday.com"
-            ]
-        },
-        {
-            "rule": "arkadiumhosted\\.com\\/arenaxstorage-blob\\/arenax-index\\/_arena-shared-content_\\/arkcom-game-arts\\/sudoku\\/Game_Tiles\\/webp\\/280x280\\.webp",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "arenacloud.cdn"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [],
-            "responseHashes": [
-                "5d09be1fcb45b7360509fa67bdeef772c1a9cd5ced54fd1d7a157d3af099b07d"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "readersdigest.ca",
-                "games.washingtonpost.com"
-            ]
-        },
-        {
-            "rule": "arkadiumhosted\\.com\\/advertisement\\/jarvis-bundles\\/bundle-NOM__atNqfFq1Zt6U0Ni9\\.js",
-            "cookies": 0.000202,
-            "fingerprinting": 1,
+            "rule": "arkadiumhosted\\.com\\/advertisement\\/jarvis-bundles\\/bundle-pZg7iVyZzE36TPGk0J2Fx\\.js",
+            "cookies": 0.000302,
+            "fingerprinting": 2,
             "subdomains": [
                 "ams.cdn"
             ],
             "apis": {
-                "window.sessionStorage": 2,
-                "Navigator.prototype.cookieEnabled": 2,
-                "Document.cookie getter": 2,
-                "window.localStorage": 2,
-                "Date.prototype.getTime": 2,
-                "Document.cookie setter": 2
+                "window.sessionStorage": 3,
+                "Navigator.prototype.cookieEnabled": 3,
+                "Document.cookie getter": 3,
+                "window.localStorage": 3,
+                "Date.prototype.getTime": 3,
+                "Document.cookie setter": 3,
+                "window.innerWidth": 1,
+                "window.innerHeight": 1,
+                "Navigator.prototype.doNotTrack": 1,
+                "Navigator.prototype.userAgent": 1,
+                "Navigator.prototype.language": 1,
+                "Navigator.prototype.connection": 1,
+                "Screen.prototype.width": 1,
+                "Screen.prototype.height": 1,
+                "window.name": 1,
+                "window.devicePixelRatio": 1,
+                "Screen.prototype.availHeight": 1,
+                "Navigator.prototype.maxTouchPoints": 1
             },
-            "sites": 2,
-            "prevalence": 0.000202,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
-                "173dc3048fdc41aafcf5146a0470aaddbd065076df8faeb9df8a84f942b657d4"
+                "3695abc9981694002a323fd9f4e845adadb65efd1742f26baf80bf3fcdc7bb50"
             ],
             "type": "Script",
             "firstPartyCookies": {
                 "_pbjs_userid_consent_data": {
-                    "ttl": 2592006,
+                    "ttl": 2592005,
                     "length": 16,
-                    "prevalence": 0.00020185708518368994,
-                    "uniqueness": 0.5
+                    "prevalence": 0.0003024498437342474,
+                    "uniqueness": 0.3333333333333333
                 },
                 "_pubcid": {
-                    "ttl": 31536006,
+                    "ttl": 31536005,
                     "length": 36,
-                    "prevalence": 0.00020185708518368994,
+                    "prevalence": 0.0003024498437342474,
                     "uniqueness": 1
                 }
             },
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "readersdigest.ca",
+                "games.washingtonpost.com",
                 "www.arkadium.com"
             ]
         },
         {
-            "rule": "arkadiumhosted\\.com\\/arenaxstorage-blob\\/arenax-index\\/_arena-shared-content_\\/arkcom-game-arts\\/word-wipe\\/Game_Tiles\\/webp\\/280x280\\.webp",
+            "rule": "arkadiumhosted\\.com\\/arenaxstorage-blob\\/arenax-index\\/_arena-shared-content_\\/ark-event-category\\/fall_assets\\/fall_into_fun\\/theme1\\/1080x400\\.webp",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -291,34 +328,42 @@
             "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "85be1f4f361f9d13c9a0cbabffce2160da6191c2d5c6615724509b2727701f5e"
+                "564e5c869d2d12b03e00625f56a6b1e79a75d03edb1757c6c10a7e84f5b17050"
             ],
             "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "usatoday.com",
-                "www.arkadium.com"
+                "games.washingtonpost.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000202,
+    "cookies": 0.000302,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.9242424242424242
+        },
+        {
+            "domain": "adlightning.com",
+            "prevalence": 0.06060606060606061
+        },
+        {
+            "domain": "googlesyndication.com",
+            "prevalence": 0.015151515151515152
         }
     ],
     "types": {
+        "Script": 5,
         "Preflight": 3,
         "Fetch": 3,
-        "Image": 21,
-        "Script": 2
+        "Image": 18
     },
     "nameservers": [
-        "dns2.stabletransit.com",
-        "dns1.stabletransit.com"
+        "ns2.rackspace.com",
+        "ns.rackspace.com"
     ]
 }

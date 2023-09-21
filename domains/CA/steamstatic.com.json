@@ -4,14 +4,14 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000505,
+    "prevalence": 0.000504,
     "sites": 5,
     "subdomains": [
         "community.akamai",
         "store.akamai"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "steamstatic\\.com\\/public\\/shared\\/css\\/motiva_sans\\.css",
@@ -72,7 +72,7 @@
             "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "75bfb38cda845f1d2b90cf084ba635668deeab16f56d84f988ac615a3b957932"
+                "df60c8c3fd33564a4ec249aa7b9b67bddca80bd29b8e40f4c5198ed1d8892479"
             ],
             "type": "Stylesheet",
             "firstPartyCookies": {},
@@ -130,7 +130,7 @@
         },
         {
             "rule": "steamstatic\\.com\\/public\\/shared\\/javascript\\/shared_global\\.js",
-            "cookies": 0,
+            "cookies": 0.000202,
             "fingerprinting": 2,
             "subdomains": [
                 "community.akamai",
@@ -139,6 +139,10 @@
             "apis": {
                 "Date.prototype.getTime": 2,
                 "Date.prototype.getTimezoneOffset": 2,
+                "Document.cookie setter": 2,
+                "window.sessionStorage": 2,
+                "Document.cookie getter": 2,
+                "window.localStorage": 2,
                 "window.innerHeight": 1,
                 "window.innerWidth": 1
             },
@@ -149,7 +153,20 @@
                 "4e18785566fd663dfc535745cdad338094ebb4766cde1dda4a1ba0b10652df91"
             ],
             "type": "Script",
-            "firstPartyCookies": {},
+            "firstPartyCookies": {
+                "timezoneOffset": {
+                    "ttl": 31536001,
+                    "length": 8,
+                    "prevalence": 0.00020163322915616494,
+                    "uniqueness": 0.5
+                },
+                "app_impressions": {
+                    "ttl": null,
+                    "length": 37,
+                    "prevalence": 0.00010081661457808247,
+                    "uniqueness": 1
+                }
+            },
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "steamcommunity.com",
@@ -272,6 +289,29 @@
             ]
         },
         {
+            "rule": "steamstatic\\.com\\/public\\/shared\\/images\\/header\\/btn_header_installsteam_download\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "community.akamai",
+                "store.akamai"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "c8b8a7e04d3f57fbc74af0fdab58c074c1f2f1d77850ac67eae8a1c3f8beab50"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "steamcommunity.com",
+                "store.steampowered.com"
+            ]
+        },
+        {
             "rule": "steamstatic\\.com\\/public\\/shared\\/fonts\\/MotivaSans-Thin\\.ttf",
             "cookies": 0,
             "fingerprinting": 0,
@@ -339,34 +379,11 @@
                 "steamcommunity.com",
                 "store.steampowered.com"
             ]
-        },
-        {
-            "rule": "steamstatic\\.com\\/public\\/shared\\/images\\/header\\/btn_header_installsteam_download\\.png",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "community.akamai",
-                "store.akamai"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [],
-            "responseHashes": [
-                "c8b8a7e04d3f57fbc74af0fdab58c074c1f2f1d77850ac67eae8a1c3f8beab50"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "steamcommunity.com",
-                "store.steampowered.com"
-            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.000202,
     "topInitiators": [
         {
             "domain": "first party",

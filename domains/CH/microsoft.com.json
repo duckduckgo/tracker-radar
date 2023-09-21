@@ -9,12 +9,14 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.000804,
-    "sites": 8,
+    "prevalence": 0.00121,
+    "sites": 12,
     "subdomains": [
         "browser.pipe.aria",
-        "edge-auth",
-        "browser.events.data"
+        "eu-mobile.events.data",
+        "adsdk",
+        "browser.events.data",
+        "edge-auth"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -24,11 +26,12 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "browser.pipe.aria"
+                "browser.pipe.aria",
+                "eu-mobile.events.data"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -38,44 +41,52 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "clevelandclinic.org",
-                "my.clevelandclinic.org"
+                "my.clevelandclinic.org",
+                "www.ecoflow.com"
             ]
         },
         {
-            "rule": "microsoft\\.com\\/js\\/ms_auth_client\\.min\\.js",
+            "rule": "microsoft\\.com\\/native-to-display\\/sdk\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
-                "edge-auth"
+                "adsdk"
             ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "apis": {
+                "Navigator.prototype.userAgent": 4,
+                "Date.prototype.getTime": 4,
+                "Document.cookie getter": 2,
+                "window.localStorage": 4
+            },
+            "sites": 4,
+            "prevalence": 0.000402,
             "cnames": [],
             "responseHashes": [
-                "60858ac4eee78c3815d57d6ce7941b5bd338033a39d7bcb796caeb46a87f4184"
+                "76b63211c7ab2657b9a94d029d87da57e92fa9160f56708e81031fa30517b2af"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "benzinga.com",
-                "www.salon.com"
+                "techoverflow.net",
+                "thewindowsclub.blog",
+                "www.kinofans.com",
+                "www.ted.com"
             ]
         },
         {
             "rule": "microsoft\\.com\\/OneCollector\\/1\\.0\\/",
-            "cookies": 0.0001,
+            "cookies": 0.000101,
             "fingerprinting": 0,
             "subdomains": [
                 "browser.events.data"
             ],
             "apis": {},
             "sites": 3,
-            "prevalence": 0.000301,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
-                "eedc265f6f737de9f2353133e3b1ea1dd205b37811fa35a471ba890bd1766319",
+                "1ca11e6fcd3335ce1f698bfa31dfc14fe9a7b1e76b8146633d86e468f778ce60",
                 "afd588d7d1c94d797ef932006d524de973f6fc54556e62f0f340412c87f99d58"
             ],
             "type": "XHR",
@@ -86,6 +97,33 @@
                 "www.minecraft.net",
                 "www.trekbikes.com"
             ]
+        },
+        {
+            "rule": "microsoft\\.com\\/js\\/ms_auth_client\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "edge-auth"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 1,
+                "window.localStorage": 1,
+                "window.sessionStorage": 1,
+                "window.indexedDB": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e9564506a7cf33c2079db69afe8da4c5bc8f661c006ef57e84d36e9006f9ebd2"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "newsweek.com",
+                "www.salon.com"
+            ]
         }
     ],
     "categories": [
@@ -95,24 +133,32 @@
         "CDN"
     ],
     "performance": {},
-    "cookies": 0.0001,
+    "cookies": 0.000101,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.7272727272727273
+            "prevalence": 0.42105263157894735
         },
         {
             "domain": "azureedge.net",
-            "prevalence": 0.18181818181818182
+            "prevalence": 0.3157894736842105
+        },
+        {
+            "domain": "doubleclick.net",
+            "prevalence": 0.15789473684210525
+        },
+        {
+            "domain": "marphezis.com",
+            "prevalence": 0.05263157894736842
         },
         {
             "domain": "dynamics.com",
-            "prevalence": 0.09090909090909091
+            "prevalence": 0.05263157894736842
         }
     ],
     "types": {
-        "XHR": 5,
-        "Script": 2
+        "XHR": 6,
+        "Script": 6
     },
     "nameservers": [
         "ns1-39.azure-dns.com",

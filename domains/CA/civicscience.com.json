@@ -7,24 +7,30 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000202,
-    "sites": 2,
+    "prevalence": 0.000302,
+    "sites": 3,
     "subdomains": [
-        "get"
+        "get",
+        "www"
     ],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "civicscience\\.com\\/jspoll\\/5\\/csw-polyfills\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "get"
             ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
+            "apis": {
+                "window.innerHeight": 1,
+                "window.innerWidth": 1,
+                "window.matchMedia(\"prefers-color-scheme\")": 1,
+                "window.localStorage": 1
+            },
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [],
             "type": "Script",
@@ -32,7 +38,30 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "thehill.com",
-                "www.khon2.com"
+                "www.gobankingrates.com",
+                "www.newsnationnow.com"
+            ]
+        },
+        {
+            "rule": "civicscience\\.com\\/jot",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gobankingrates.com",
+                "www.gobankingrates.com"
             ]
         }
     ],
@@ -42,16 +71,25 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.4
+        },
+        {
+            "domain": "datadoghq-browser-agent.com",
+            "prevalence": 0.4
+        },
+        {
+            "domain": "civicscience.com",
+            "prevalence": 0.2
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 3,
+        "Fetch": 2
     },
     "nameservers": [
         "ns-637.awsdns-15.net",
-        "ns-1204.awsdns-22.org",
         "ns-484.awsdns-60.com",
+        "ns-1204.awsdns-22.org",
         "ns-1837.awsdns-37.co.uk"
     ]
 }

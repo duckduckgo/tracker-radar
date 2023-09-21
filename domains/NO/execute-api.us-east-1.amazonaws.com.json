@@ -9,13 +9,20 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.00101,
-    "sites": 10,
+    "prevalence": 0.00151,
+    "sites": 15,
     "subdomains": [
         "pt37ad6f6a",
-        "42ovubzp4f"
+        "oeqepmcz7a",
+        "zu8dpfne01",
+        "d-jgxklccpm2"
     ],
-    "cnames": [],
+    "cnames": [
+        {
+            "original": "alli-gateway.surveymonkey.com",
+            "resolved": "d-jgxklccpm2.execute-api.us-east-1.amazonaws.com"
+        }
+    ],
     "fingerprinting": 0,
     "resources": [
         {
@@ -26,21 +33,19 @@
                 "pt37ad6f6a"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.000404,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
-                "1a71e9c13bda999cbd1fbf87a67e9d116b876be5f9f39ed1929c18e3d6bfd017",
-                "fb8b5f1be2d08c910dcf907f8ce8c9346f78ee5bebace3d098435ac21aa055ee",
-                "76c94bbf5bd489e96529ea086e958a6bf38584abb6a11f215cb1933eb9671fa4"
+                "2af9415f687ec3238e77259afefde2f174ee2a76c2e25bd58dd44edf58484032",
+                "c5cbde761405a61e4cba1d7159bb35343021498ceca72281f4e193e79416281e"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "splunk.com",
-                "www.databricks.com",
-                "www.ivanti.com",
+                "splunkbase.splunk.com",
                 "www.splunk.com"
             ]
         },
@@ -52,8 +57,8 @@
                 "pt37ad6f6a"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.000404,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
@@ -61,31 +66,56 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "splunk.com",
-                "www.databricks.com",
-                "www.ivanti.com",
+                "splunkbase.splunk.com",
                 "www.splunk.com"
             ]
         },
         {
-            "rule": "execute-api\\.us-east-1\\.amazonaws\\.com\\/prod\\/getccodeip",
+            "rule": "execute-api\\.us-east-1\\.amazonaws\\.com\\/beta\\/streams\\/optin\\/records",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "42ovubzp4f"
+                "oeqepmcz7a"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000202,
             "cnames": [],
-            "responseHashes": [
-                "f2e483c562640a21db5790c882fee28270f04f2167d03228de259ad8e23a567d"
-            ],
+            "responseHashes": [],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "systweak.com",
-                "www.systweak.com"
+                "kniveksperten.no",
+                "www.wickedweasel.com"
+            ]
+        },
+        {
+            "rule": "execute-api\\.us-east-1\\.amazonaws\\.com\\/pixel",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "zu8dpfne01",
+                "d-jgxklccpm2"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "alli-gateway.surveymonkey.com",
+                    "resolved": "d-jgxklccpm2.execute-api.us-east-1.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "25b4ecfd3a740f29d76fe930a4cec9d41afa0cfd2bafa70ca4051bd3d5395d74"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "otterbox.com",
+                "www.surveymonkey.com"
             ]
         }
     ],
@@ -97,42 +127,51 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.38461538461538464
-        },
-        {
-            "domain": "mutinycdn.com",
-            "prevalence": 0.15384615384615385
-        },
-        {
-            "domain": "signalfx.com",
-            "prevalence": 0.15384615384615385
+            "prevalence": 0.35
         },
         {
             "domain": "listenloop.com",
-            "prevalence": 0.07692307692307693
-        },
-        {
-            "domain": "ai-widget.s3.amazonaws.com",
-            "prevalence": 0.07692307692307693
-        },
-        {
-            "domain": "pmg.com",
-            "prevalence": 0.07692307692307693
+            "prevalence": 0.1
         },
         {
             "domain": "pushengage.com",
-            "prevalence": 0.07692307692307693
+            "prevalence": 0.1
+        },
+        {
+            "domain": "gammacdn.com",
+            "prevalence": 0.1
+        },
+        {
+            "domain": "pmg.com",
+            "prevalence": 0.1
+        },
+        {
+            "domain": "signalfx.com",
+            "prevalence": 0.1
+        },
+        {
+            "domain": "websuccess-data.com",
+            "prevalence": 0.05
+        },
+        {
+            "domain": "evgnet.com",
+            "prevalence": 0.05
+        },
+        {
+            "domain": "getlighthouse.io",
+            "prevalence": 0.05
         }
     ],
     "types": {
-        "Fetch": 4,
-        "Preflight": 4,
-        "XHR": 2
+        "Fetch": 3,
+        "Preflight": 3,
+        "XHR": 2,
+        "Image": 2
     },
     "nameservers": [
         "ns-1368.awsdns-43.org",
-        "ns-543.awsdns-03.net",
         "ns-1982.awsdns-55.co.uk",
-        "ns-230.awsdns-28.com"
+        "ns-230.awsdns-28.com",
+        "ns-543.awsdns-03.net"
     ]
 }

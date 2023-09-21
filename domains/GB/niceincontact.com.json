@@ -4,11 +4,13 @@
     "source": [
         "DuckDuckGo-GB"
     ],
-    "prevalence": 0.000302,
-    "sites": 3,
+    "prevalence": 0.000403,
+    "sites": 4,
     "subdomains": [
         "home-l32",
-        "app-de-uk1"
+        "livechat-static-de-uk1",
+        "app-de-uk1",
+        "chat-gateway-de-uk1"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -22,7 +24,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000201,
+            "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
                 "e4183d68972e3a2b3df1ef3a1ece1a941cd852e283101e20dfb72a2016699bc5"
@@ -36,6 +38,63 @@
             ]
         },
         {
+            "rule": "niceincontact\\.com\\/4\\/chat\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "livechat-static-de-uk1"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Navigator.prototype.language": 2,
+                "Date.prototype.getTime": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "7219f25e3f886c73d1e430ca219b61b8aeb51e7659fec3ce1e41fc464d023c8c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tritonshowers.co.uk",
+                "www.wolseley.co.uk"
+            ]
+        },
+        {
+            "rule": "niceincontact\\.com\\/4\\/chat-window\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "livechat-static-de-uk1"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Date.prototype.getTime": 2,
+                "window.devicePixelRatio": 2,
+                "Navigator.prototype.language": 2,
+                "window.innerWidth": 2,
+                "window.innerHeight": 2,
+                "Event.prototype.timeStamp": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "a79bb3e6ac661fe90695d1fbb167c38272d28c2029d496fa4a686b9a3b35c863"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tritonshowers.co.uk",
+                "www.wolseley.co.uk"
+            ]
+        },
+        {
             "rule": "niceincontact\\.com\\/logger-public",
             "cookies": 0,
             "fingerprinting": 0,
@@ -44,7 +103,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000201,
+            "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -53,35 +112,79 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "wolseley.co.uk",
+                "tritonshowers.co.uk",
+                "www.wolseley.co.uk"
+            ]
+        },
+        {
+            "rule": "niceincontact\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "chat-gateway-de-uk1"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tritonshowers.co.uk",
+                "www.wolseley.co.uk"
+            ]
+        },
+        {
+            "rule": "niceincontact\\.com\\/4\\/styles\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "livechat-static-de-uk1"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "1cc76066df5ae744d36eaaf04ddbc7831097acce742bf5eb3fa46740fbc536ec"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tritonshowers.co.uk",
                 "www.wolseley.co.uk"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000201,
+    "cookies": 0.000302,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.5
+            "prevalence": 0.45454545454545453
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.3
+            "prevalence": 0.36363636363636365
         },
         {
             "domain": "raygun.io",
-            "prevalence": 0.2
+            "prevalence": 0.18181818181818182
         }
     ],
     "types": {
-        "Stylesheet": 2,
-        "Ping": 2
+        "Stylesheet": 4,
+        "Script": 4,
+        "Ping": 2,
+        "WebSocket": 2
     },
     "nameservers": [
-        "ns-1905.awsdns-46.co.uk",
         "ns-1376.awsdns-44.org",
+        "ns-1905.awsdns-46.co.uk",
         "ns-51.awsdns-06.com",
         "ns-555.awsdns-05.net"
     ]

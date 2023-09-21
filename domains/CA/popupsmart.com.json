@@ -4,14 +4,39 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000303,
-    "sites": 3,
+    "prevalence": 0.000504,
+    "sites": 5,
     "subdomains": [
-        "cdn"
+        "apiv2",
+        "cdn",
+        "handler-api"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "popupsmart\\.com\\/api\\/Bundle\\/360835",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "apiv2"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ckdr.net",
+                "www.ckdr.net",
+                "www.country94.ca"
+            ]
+        },
         {
             "rule": "popupsmart\\.com\\/bundle\\.js",
             "cookies": 0,
@@ -20,26 +45,73 @@
                 "cdn"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 2,
-                "Screen.prototype.width": 1,
-                "Screen.prototype.height": 1,
-                "Navigator.prototype.language": 1,
+                "Navigator.prototype.userAgent": 4,
+                "Document.cookie getter": 4,
+                "Screen.prototype.width": 3,
+                "Screen.prototype.height": 3,
+                "Navigator.prototype.language": 3,
                 "window.localStorage": 1,
                 "window.sessionStorage": 1,
                 "Navigator.prototype.languages": 1
             },
-            "sites": 2,
-            "prevalence": 0.000202,
+            "sites": 4,
+            "prevalence": 0.000403,
             "cnames": [],
             "responseHashes": [
-                "6b19281d5fb4e67278af3ff19039ad3d48d3b0d104f40f4823b12611dbfb612e"
+                "f84c58a274e26e8189411c1a456f675dc98ab3b016abbf38faca07a4660de422"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "jewishvirtuallibrary.org",
+                "ckdr.net",
+                "www.country94.ca",
+                "www.jewishvirtuallibrary.org",
                 "www.nbc.com"
+            ]
+        },
+        {
+            "rule": "popupsmart\\.com\\/accounts\\/75190\\/loader\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "f5049f1947008b909fcaff44aa78deadae800aac0eca031a0eee174e602cd26b"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ckdr.net",
+                "www.country94.ca"
+            ]
+        },
+        {
+            "rule": "popupsmart\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "handler-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "0e03f97ae4697775c8757637d0f2cd95f1aae5bcbe3e97abffc258e5beef50b9"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jewishvirtuallibrary.org",
+                "www.jewishvirtuallibrary.org"
             ]
         }
     ],
@@ -49,15 +121,16 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.8571428571428571
+            "prevalence": 0.9285714285714286
         },
         {
             "domain": "nbcuni.com",
-            "prevalence": 0.14285714285714285
+            "prevalence": 0.07142857142857142
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 7,
+        "Fetch": 4
     },
     "nameservers": [
         "curt.ns.cloudflare.com",

@@ -4,21 +4,16 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000404,
-    "sites": 4,
+    "prevalence": 0.000302,
+    "sites": 3,
     "subdomains": [
-        "arm-prod-public.lb",
         "splunk-elb.lb",
-        "honda-production-lb.lb"
+        "honda-production-b2c-lb.lb"
     ],
     "cnames": [
         {
-            "original": "api.arm.com",
-            "resolved": "arm-prod-public.lb.anypointdns.net"
-        },
-        {
-            "original": "api.services.honda.ca",
-            "resolved": "honda-production-lb.lb.anypointdns.net"
+            "original": "apib2c.services.honda.ca",
+            "resolved": "honda-production-b2c-lb.lb.anypointdns.net"
         },
         {
             "original": "apps-api.splunk.com",
@@ -27,33 +22,6 @@
     ],
     "fingerprinting": 0,
     "resources": [
-        {
-            "rule": "anypointdns\\.net\\/e-coveo-search\\/v1\\/anonToken",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "arm-prod-public.lb"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [
-                {
-                    "original": "api.arm.com",
-                    "resolved": "arm-prod-public.lb.anypointdns.net"
-                }
-            ],
-            "responseHashes": [
-                "bba08f5a8973a9e4e786313335c97ee996670998ec57fd8f02a6d53d35c6fa0a"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "arm.com",
-                "developer.arm.com"
-            ]
-        },
         {
             "rule": "anypointdns\\.net\\/wplt\\/analytics\\/v2\\/tag",
             "cookies": 0,
@@ -81,14 +49,14 @@
         },
         {
             "rule": "anypointdns\\.net\\/wplt\\/analytics\\/v2\\/tag",
-            "cookies": 0.000303,
+            "cookies": 0.000302,
             "fingerprinting": 0,
             "subdomains": [
                 "splunk-elb.lb"
             ],
             "apis": {},
             "sites": 3,
-            "prevalence": 0.000303,
+            "prevalence": 0.000302,
             "cnames": [
                 {
                     "original": "apps-api.splunk.com",
@@ -96,10 +64,39 @@
                 }
             ],
             "responseHashes": [
-                "6e1134115e1ae9360aaf3312ea5516bdde8d2d8651fea3d8dcbd134bba19f2ac",
-                "cf6aff42ef2fcad3611704f892ec610d638bec6efb744da9462888352fc9c420"
+                "69806ec1acf690c4f0c124a983e70a14607480f3b4bf697d3d61868b2e0703c3",
+                "0552b23777f6b077b2fdb273b9d9efe59ea9fc1675fd8b7e7a1f88865e3073ef"
             ],
             "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "splunk.com",
+                "docs.splunk.com",
+                "www.splunk.com"
+            ]
+        },
+        {
+            "rule": "anypointdns\\.net\\/wplt\\/analytics\\/v2\\/track",
+            "cookies": 0.000302,
+            "fingerprinting": 0,
+            "subdomains": [
+                "splunk-elb.lb"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [
+                {
+                    "original": "apps-api.splunk.com",
+                    "resolved": "splunk-elb.lb.anypointdns.net"
+                }
+            ],
+            "responseHashes": [
+                "10f9e05921e66fc0b051d4ce98340ebc9166588b7373b78358eee2968bf7b195",
+                "ac42ae03b64a09adf3d7c4cbdabcda04cc8678300b79d55eea20a9d886f20713"
+            ],
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -113,19 +110,19 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "honda-production-lb.lb"
+                "honda-production-b2c-lb.lb"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000202,
             "cnames": [
                 {
-                    "original": "api.services.honda.ca",
-                    "resolved": "honda-production-lb.lb.anypointdns.net"
+                    "original": "apib2c.services.honda.ca",
+                    "resolved": "honda-production-b2c-lb.lb.anypointdns.net"
                 }
             ],
             "responseHashes": [],
-            "type": "Preflight",
+            "type": "Other",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -138,20 +135,18 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "honda-production-lb.lb"
+                "honda-production-b2c-lb.lb"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000202,
             "cnames": [
                 {
-                    "original": "api.services.honda.ca",
-                    "resolved": "honda-production-lb.lb.anypointdns.net"
+                    "original": "apib2c.services.honda.ca",
+                    "resolved": "honda-production-b2c-lb.lb.anypointdns.net"
                 }
             ],
-            "responseHashes": [
-                "0b83c13e341c10c1d23975ae52a075ae3c12eec8bb048d678e4e9e32f75272f2"
-            ],
+            "responseHashes": [],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -170,18 +165,19 @@
             "prevalence": 0.5
         },
         {
-            "domain": "d221cp5lqk6y64.cloudfront.net",
+            "domain": "d7koym0rxduxm.cloudfront.net",
             "prevalence": 0.3333333333333333
         },
         {
-            "domain": "d7koym0rxduxm.cloudfront.net",
+            "domain": "d221cp5lqk6y64.cloudfront.net",
             "prevalence": 0.16666666666666666
         }
     ],
     "types": {
-        "XHR": 4,
-        "Preflight": 4,
-        "Fetch": 3
+        "Preflight": 2,
+        "Fetch": 3,
+        "XHR": 5,
+        "Other": 2
     },
     "nameservers": [
         "ns-180.awsdns-22.com",

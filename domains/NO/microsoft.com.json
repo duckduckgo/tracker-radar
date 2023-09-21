@@ -9,17 +9,68 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.00121,
-    "sites": 12,
+    "prevalence": 0.00141,
+    "sites": 14,
     "subdomains": [
-        "browser.events.data",
         "wcpstatic",
+        "browser.events.data",
         "browser.pipe.aria",
-        "eu-mobile.events.data"
+        "eu-mobile.events.data",
+        "adsdk",
+        "edge-auth"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "microsoft\\.com\\/mscc\\/lib\\/v2\\/wcp-consent\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "wcpstatic"
+            ],
+            "apis": {
+                "Document.cookie getter": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "c688d3f2135b6b51617a306a0b1a665324402a00a6bceba475881af281503ad9"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "azure.github.io",
+                "microsoft.github.io",
+                "www.minecraft.net"
+            ]
+        },
+        {
+            "rule": "microsoft\\.com\\/OneCollector\\/1\\.0\\/",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "browser.events.data"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "c4fcd8109e156c1edf5dc7f4bb45ed5776be5932b92241356cbabac2eaffe692",
+                "afd588d7d1c94d797ef932006d524de973f6fc54556e62f0f340412c87f99d58"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "azure.github.io",
+                "www.minecraft.net",
+                "www.trekbikes.com"
+            ]
+        },
         {
             "rule": "microsoft\\.com\\/OneCollector\\/1\\.0\\/",
             "cookies": 0,
@@ -36,58 +87,7 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "minecraft.net",
-                "www.minecraft.net"
-            ]
-        },
-        {
-            "rule": "microsoft\\.com\\/OneCollector\\/1\\.0\\/",
-            "cookies": 0.000202,
-            "fingerprinting": 0,
-            "subdomains": [
-                "browser.events.data"
-            ],
-            "apis": {},
-            "sites": 4,
-            "prevalence": 0.000404,
-            "cnames": [],
-            "responseHashes": [
-                "3601c1d1f97af25d4de948655e5c88484adc1ed149e6a5f82cb32379836547b5",
-                "e0ca30929d694cd316632963b63b9f6598b9688f78012af5bfb2f8c9ea9f066b",
-                "afd588d7d1c94d797ef932006d524de973f6fc54556e62f0f340412c87f99d58"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "minecraft.net",
-                "feedback.minecraft.net",
-                "www.minecraft.net",
-                "www.trekbikes.com"
-            ]
-        },
-        {
-            "rule": "microsoft\\.com\\/mscc\\/lib\\/v2\\/wcp-consent\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "wcpstatic"
-            ],
-            "apis": {
-                "Document.cookie getter": 3
-            },
-            "sites": 3,
-            "prevalence": 0.000303,
-            "cnames": [],
-            "responseHashes": [
-                "c688d3f2135b6b51617a306a0b1a665324402a00a6bceba475881af281503ad9"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "microsoft.github.io",
-                "www.flightsimulator.com",
+                "azure.github.io",
                 "www.minecraft.net"
             ]
         },
@@ -101,7 +101,7 @@
             ],
             "apis": {},
             "sites": 4,
-            "prevalence": 0.000404,
+            "prevalence": 0.000403,
             "cnames": [],
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -112,31 +112,63 @@
             "exampleSites": [
                 "clevelandclinic.org",
                 "my.clevelandclinic.org",
-                "www.kristiania.no",
-                "www.ssn.no"
+                "us.ecoflow.com",
+                "www.leatherman.com"
             ]
         },
         {
-            "rule": "microsoft\\.com\\/Collector\\/3\\.0\\/",
+            "rule": "microsoft\\.com\\/native-to-display\\/sdk\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
-                "browser.pipe.aria",
-                "eu-mobile.events.data"
+                "adsdk"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 3,
+                "Date.prototype.getTime": 3,
+                "window.localStorage": 3,
+                "Document.cookie getter": 1
+            },
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "76b63211c7ab2657b9a94d029d87da57e92fa9160f56708e81031fa30517b2af"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wallpapers.com",
+                "www.gamerevolution.com",
+                "www.webcamtaxi.com"
+            ]
+        },
+        {
+            "rule": "microsoft\\.com\\/js\\/ms_auth_client\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "edge-auth"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 1,
+                "window.localStorage": 1,
+                "window.sessionStorage": 1,
+                "window.indexedDB": 1
+            },
             "sites": 2,
             "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                "e9564506a7cf33c2079db69afe8da4c5bc8f661c006ef57e84d36e9006f9ebd2"
             ],
-            "type": "Ping",
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "kristiania.no",
-                "www.kristiania.no"
+                "newsweek.com",
+                "www.salon.com"
             ]
         }
     ],
@@ -150,32 +182,35 @@
     "cookies": 0.000202,
     "topInitiators": [
         {
-            "domain": "azureedge.net",
-            "prevalence": 0.4583333333333333
+            "domain": "first party",
+            "prevalence": 0.39285714285714285
         },
         {
-            "domain": "first party",
-            "prevalence": 0.4166666666666667
+            "domain": "azureedge.net",
+            "prevalence": 0.35714285714285715
         },
         {
             "domain": "azure.com",
-            "prevalence": 0.08333333333333333
+            "prevalence": 0.10714285714285714
+        },
+        {
+            "domain": "doubleclick.net",
+            "prevalence": 0.10714285714285714
         },
         {
             "domain": "dynamics.com",
-            "prevalence": 0.041666666666666664
+            "prevalence": 0.03571428571428571
         }
     ],
     "types": {
-        "Preflight": 2,
-        "XHR": 8,
-        "Script": 3,
-        "Ping": 2
+        "Script": 8,
+        "XHR": 7,
+        "Preflight": 2
     },
     "nameservers": [
-        "ns4-39.azure-dns.info",
         "ns1-39.azure-dns.com",
         "ns2-39.azure-dns.net",
-        "ns3-39.azure-dns.org"
+        "ns3-39.azure-dns.org",
+        "ns4-39.azure-dns.info"
     ]
 }

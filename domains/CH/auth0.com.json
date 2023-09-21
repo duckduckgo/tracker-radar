@@ -7,12 +7,13 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.00111,
-    "sites": 11,
+    "prevalence": 0.00101,
+    "sites": 10,
     "subdomains": [
-        "cdn",
         "arduino-prod-cd-7d4guw5p2tbeio38.edge.tenants",
         "fs24-prod-cd-al9x7xt8mi4bfn23.edge.tenants.eu",
+        "finder-us-prod-cd-ewaqufuvygc5rgwq.edge.tenants",
+        "iberostar.eu",
         "native-prod-cd-q79eqtebyokcrldh.edge.tenants.eu",
         "s-ge-cd-af9zxjj5mj1sab0i.edge.tenants.eu"
     ],
@@ -32,49 +33,29 @@
         {
             "original": "login.financescout24.ch",
             "resolved": "fs24-prod-cd-al9x7xt8mi4bfn23.edge.tenants.eu.auth0.com"
+        },
+        {
+            "original": "login.finder.com",
+            "resolved": "finder-us-prod-cd-ewaqufuvygc5rgwq.edge.tenants.auth0.com"
         }
     ],
     "fingerprinting": 1,
     "resources": [
         {
-            "rule": "auth0\\.com\\/js\\/auth0\\/9\\.11\\/auth0\\.min\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "cdn"
-            ],
-            "apis": {
-                "Navigator.prototype.appName": 2,
-                "Date.prototype.getTime": 2,
-                "Navigator.prototype.userAgent": 2
-            },
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "2ae5aed8aab32ad79a23003eee65fec603ddbeed83b296ba4735ff840e12b005"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "vwr.com",
-                "us.vwr.com"
-            ]
-        },
-        {
             "rule": "auth0\\.com\\/authorize",
-            "cookies": 0.000402,
+            "cookies": 0.000604,
             "fingerprinting": 0,
             "subdomains": [
                 "arduino-prod-cd-7d4guw5p2tbeio38.edge.tenants",
                 "fs24-prod-cd-al9x7xt8mi4bfn23.edge.tenants.eu",
+                "finder-us-prod-cd-ewaqufuvygc5rgwq.edge.tenants",
+                "iberostar.eu",
                 "native-prod-cd-q79eqtebyokcrldh.edge.tenants.eu",
                 "s-ge-cd-af9zxjj5mj1sab0i.edge.tenants.eu"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.000402,
+            "sites": 6,
+            "prevalence": 0.000604,
             "cnames": [
                 {
                     "original": "login.arduino.cc",
@@ -83,6 +64,10 @@
                 {
                     "original": "login.financescout24.ch",
                     "resolved": "fs24-prod-cd-al9x7xt8mi4bfn23.edge.tenants.eu.auth0.com"
+                },
+                {
+                    "original": "login.finder.com",
+                    "resolved": "finder-us-prod-cd-ewaqufuvygc5rgwq.edge.tenants.auth0.com"
                 },
                 {
                     "original": "auth.native-instruments.com",
@@ -94,16 +79,22 @@
                 }
             ],
             "responseHashes": [
-                "891b771586534b16b92cc54e304e93412e57aa6cf7ffaec4ce76a6bafa04aed2",
-                "f5bc11c4bc3b9ee0e74ec1aa047e4e6d09e3e2340679520f4f63e9559adc4ccf",
-                "acc223bfa29509b45c341bd21c0f3aee22a1c895a4c268c8848e6c573ce5d393"
+                "09680ca52ccefe0a96144f848863917b0af671d013721ffe8bf4ccdfe0ffeda7",
+                "a8da98b50f09cafa3965b988fc67f2f31afaca0f23f2047608f41f94ef392103",
+                "f612210ceafc755439aa9fe88336074f5b249ebd9f617381089579aedfeed4e8",
+                "18fdb3d3b29c73b8dd2d91aa79a4ad91d156da67a02c69ea0c3917e911e105e2",
+                "02cce273dc2086a70345ad72f7e43e5707e7aecddab5deeb56e626c423a0e60d"
             ],
             "type": "Document",
             "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
+            "firstPartyCookiesSent": {
+                "session_page_site_origin": 0.00010059350165979277
+            },
             "exampleSites": [
                 "arduino.cc",
                 "www.financescout24.ch",
+                "www.finder.com",
+                "www.iberostar.com",
                 "www.native-instruments.com",
                 "www.s-ge.com"
             ]
@@ -111,24 +102,31 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000402,
+    "cookies": 0.000604,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.6923076923076923
+            "prevalence": 0.42857142857142855
+        },
+        {
+            "domain": "native-instruments.com",
+            "prevalence": 0.21428571428571427
         },
         {
             "domain": "auth0.com",
-            "prevalence": 0.23076923076923078
+            "prevalence": 0.21428571428571427
+        },
+        {
+            "domain": "dvh1deh6tagwk.cloudfront.net",
+            "prevalence": 0.07142857142857142
         },
         {
             "domain": "storage.googleapis.com",
-            "prevalence": 0.07692307692307693
+            "prevalence": 0.07142857142857142
         }
     ],
     "types": {
-        "Script": 2,
-        "Document": 4
+        "Document": 6
     },
     "nameservers": [
         "monroe.ns.cloudflare.com",

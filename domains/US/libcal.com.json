@@ -4,19 +4,44 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000135,
-    "sites": 2,
+    "prevalence": 0.000136,
+    "sites": 20,
     "subdomains": [
         "secure-us",
-        "api3"
+        "api3",
+        "region-us",
+        "syr",
+        "v2",
+        "arlingtonva",
+        "duke"
     ],
     "cnames": [
         {
+            "original": "booking.lib.buffalo.edu",
+            "resolved": "secure-us.libcal.com"
+        },
+        {
+            "original": "calendar.boulderlibrary.org",
+            "resolved": "secure-us.libcal.com"
+        },
+        {
+            "original": "calendar.lib.purdue.edu",
+            "resolved": "v2.libcal.com"
+        },
+        {
+            "original": "calendar.libraryweb.org",
+            "resolved": "region-us.libcal.com"
+        },
+        {
             "original": "libevents.abqlibrary.org",
             "resolved": "secure-us.libcal.com"
+        },
+        {
+            "original": "rooms.himmelfarb.gwu.edu",
+            "resolved": "region-us.libcal.com"
         }
     ],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "libcal\\.com\\/api_events\\.php",
@@ -24,26 +49,189 @@
             "fingerprinting": 0,
             "subdomains": [
                 "secure-us",
-                "api3"
+                "api3",
+                "region-us"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000135,
+            "sites": 7,
+            "prevalence": 0.0000478,
             "cnames": [
                 {
                     "original": "libevents.abqlibrary.org",
                     "resolved": "secure-us.libcal.com"
+                },
+                {
+                    "original": "calendar.libraryweb.org",
+                    "resolved": "region-us.libcal.com"
                 }
             ],
             "responseHashes": [
-                "1befd3fdb3f972d0eb83f5bb7ad1154a93e7200f9ce9524be203498e8f5afcbe"
+                "9c9ab670bc9854ca0bd47bc82fe9494c8a84031eef6ac077118c1ac823765b48",
+                "9fd550f378693a6a02fc3bce62e7042744c16e05343fc7fda704c4b02d02f35a",
+                "35c95ab3bc14da6551508cf411f17f8df212934f8e99938b13279266e9d7fccb",
+                "f698b96ee3f86fcc927d64b8a9a42b28becd6cbdf2c2af9532c10cfb64fd5a85",
+                "d1df34ccf8f748065158a4223d210a19e6f7f0cc816d02777386f09556c539ed",
+                "004ef93559f46c808b8934cffbea579f382a804f9f2f0a591f507404acfd7a6b"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "abqlibrary.org",
-                "azsos.gov"
+                "azsos.gov",
+                "boulderlibrary.org",
+                "library.buffalo.edu",
+                "library.unc.edu",
+                "library.tamu.edu",
+                "libraryweb.org"
+            ]
+        },
+        {
+            "rule": "libcal\\.com\\/api_hours_today\\.php",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "secure-us",
+                "api3",
+                "syr",
+                "v2"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.0000409,
+            "cnames": [
+                {
+                    "original": "calendar.boulderlibrary.org",
+                    "resolved": "secure-us.libcal.com"
+                },
+                {
+                    "original": "calendar.lib.purdue.edu",
+                    "resolved": "v2.libcal.com"
+                }
+            ],
+            "responseHashes": [
+                "9bcfd71b07f3cba30cb2ce3affd14d0afa29c5befa956f957429504ed60e3a91",
+                "7199f781cd95ca228fa85212448c2b55457cb72f390d08e1d77f6fb6ace07318",
+                "ff3f7ddf41bc3d13026bf55c0778915fa26373f4d9c19d294038d6f5ef80fdca",
+                "382edaabdfdcebe955cf1bc7680cd093beaba456c308d9c88a2e6b2b6eac04e4",
+                "d5712859be2cd534123849d498f84c0f970608e9fb9c920a1419871fc865c313"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "boulderlibrary.org",
+                "lib.asu.edu",
+                "library.syracuse.edu",
+                "library.tamu.edu",
+                "tarlton.law.utexas.edu",
+                "www.lib.purdue.edu"
+            ]
+        },
+        {
+            "rule": "libcal\\.com\\/1\\.1\\/oauth\\/token",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "region-us",
+                "arlingtonva"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "rooms.himmelfarb.gwu.edu",
+                    "resolved": "region-us.libcal.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gwu.edu",
+                "library.arlingtonva.us"
+            ]
+        },
+        {
+            "rule": "libcal\\.com\\/1\\.1\\/oauth\\/token",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "region-us",
+                "arlingtonva",
+                "duke"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [
+                {
+                    "original": "rooms.himmelfarb.gwu.edu",
+                    "resolved": "region-us.libcal.com"
+                }
+            ],
+            "responseHashes": [
+                "ad8b9644cb6ae332d19e8e751e3392a7b19a4a1e25edcfe3b479efd1693f8400",
+                "8908c54be0c7eaf87ef148c113c65217ba788dc6e3c7af1714d0f1d606cca7c0"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gwu.edu",
+                "library.arlingtonva.us",
+                "library.duke.edu"
+            ]
+        },
+        {
+            "rule": "libcal\\.com\\/api_hours_today\\.php",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "secure-us"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "booking.lib.buffalo.edu",
+                    "resolved": "secure-us.libcal.com"
+                }
+            ],
+            "responseHashes": [
+                "c01826ef2da7da83da72c6586ca7858d3caf32f86a24f80b6a8ed14b9a844f90"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "buffalo.edu",
+                "library.buffalo.edu"
+            ]
+        },
+        {
+            "rule": "libcal\\.com\\/api\\/1\\.1\\/hours\\/11088,13162",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "duke"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "48105e508143dc56c12c8c637636ad7b545e8212f5b3356ad8cc150120f41328"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "duke.edu",
+                "library.duke.edu"
             ]
         }
     ],
@@ -52,21 +240,39 @@
     "cookies": 0,
     "topInitiators": [
         {
-            "domain": "sirsi.net",
-            "prevalence": 0.5
+            "domain": "first party",
+            "prevalence": 0.8055555555555556
         },
         {
-            "domain": "first party",
-            "prevalence": 0.5
+            "domain": "libguides.com",
+            "prevalence": 0.08333333333333333
+        },
+        {
+            "domain": "sirsi.net",
+            "prevalence": 0.027777777777777776
+        },
+        {
+            "domain": "cloudflare.com",
+            "prevalence": 0.027777777777777776
+        },
+        {
+            "domain": "libcal.com",
+            "prevalence": 0.027777777777777776
+        },
+        {
+            "domain": "ajax.googleapis.com",
+            "prevalence": 0.027777777777777776
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 13,
+        "Preflight": 2,
+        "XHR": 7
     },
     "nameservers": [
-        "ns-1465.awsdns-55.org",
         "ns-1606.awsdns-08.co.uk",
-        "ns-220.awsdns-27.com",
-        "ns-834.awsdns-40.net"
+        "ns-834.awsdns-40.net",
+        "ns-1465.awsdns-55.org",
+        "ns-220.awsdns-27.com"
     ]
 }

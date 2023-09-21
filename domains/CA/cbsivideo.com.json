@@ -4,11 +4,14 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000505,
+    "prevalence": 0.000504,
     "sites": 5,
     "subdomains": [
         "doppler-config",
-        "doppler-tasks"
+        "doppler-tasks",
+        "live74dh3d6.airspace-g",
+        "dopplg510egh.airspace-f",
+        "doppler-beacon"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -21,10 +24,11 @@
                 "doppler-config"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 4
+                "Navigator.prototype.userAgent": 5,
+                "Date.prototype.getTime": 3
             },
             "sites": 5,
-            "prevalence": 0.000505,
+            "prevalence": 0.000504,
             "cnames": [],
             "responseHashes": [
                 "39540ce8354326f059ceebbbf087220def44cf4d10c3dd1cd883e5634358fc1d"
@@ -49,7 +53,7 @@
             ],
             "apis": {},
             "sites": 5,
-            "prevalence": 0.000505,
+            "prevalence": 0.000504,
             "cnames": [],
             "responseHashes": [
                 "39540ce8354326f059ceebbbf087220def44cf4d10c3dd1cd883e5634358fc1d"
@@ -73,17 +77,84 @@
                 "doppler-tasks"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.000404,
+            "sites": 5,
+            "prevalence": 0.000504,
             "cnames": [],
             "responseHashes": [
-                "e11318704b2ca8e4132bc31b7e76b836e1ee619bbbd07388fd5c988649e2d44d"
+                "d8d11a5d4a148c32a6a13ba47f66ddf6ed3aeec0d03d6bf7e18ed4de7bf329e5"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "comicbook.com",
+                "popculture.com",
+                "www.cbsnews.com",
+                "www.cbssports.com",
+                "www.mtv.com"
+            ]
+        },
+        {
+            "rule": "cbsivideo\\.com\\/measurements\\/1536197413045-1555KB\\.ts",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "live74dh3d6.airspace-g",
+                "dopplg510egh.airspace-f"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "popculture.com",
+                "www.cbssports.com",
+                "www.mtv.com"
+            ]
+        },
+        {
+            "rule": "cbsivideo\\.com\\/log",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "doppler-beacon"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "popculture.com",
+                "www.cbssports.com",
+                "www.mtv.com"
+            ]
+        },
+        {
+            "rule": "cbsivideo\\.com\\/log",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "doppler-beacon"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
                 "popculture.com",
                 "www.cbssports.com",
                 "www.mtv.com"
@@ -116,25 +187,26 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.5
+            "prevalence": 0.5263157894736842
         },
         {
             "domain": "tiqcdn.com",
-            "prevalence": 0.42857142857142855
+            "prevalence": 0.3157894736842105
         },
         {
             "domain": "rum.us-east-1.amazonaws.com",
-            "prevalence": 0.07142857142857142
+            "prevalence": 0.15789473684210525
         }
     ],
     "types": {
         "Script": 12,
-        "Fetch": 4
+        "Fetch": 11,
+        "Preflight": 3
     },
     "nameservers": [
+        "ns-399.awsdns-49.com",
         "ns-883.awsdns-46.net",
         "ns-1546.awsdns-01.co.uk",
-        "ns-399.awsdns-49.com",
         "ns-1327.awsdns-37.org"
     ]
 }

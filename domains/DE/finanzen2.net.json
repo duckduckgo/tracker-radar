@@ -4,14 +4,36 @@
     "source": [
         "DuckDuckGo-DE"
     ],
-    "prevalence": 0.000202,
-    "sites": 2,
+    "prevalence": 0.000302,
+    "sites": 3,
     "subdomains": [
+        "pushserver.prod.markets.public",
         "geoip.user.public"
     ],
     "cnames": [],
     "fingerprinting": 0,
     "resources": [
+        {
+            "rule": "finanzen2\\.net\\/socket\\.io\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pushserver.prod.markets.public"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "businessinsider.com",
+                "www.finanzen.net",
+                "www.finanzen.ch"
+            ]
+        },
         {
             "rule": "finanzen2\\.net\\/json\\/",
             "cookies": 0,
@@ -31,8 +53,8 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "finanzen.net",
-                "www.finanzen.ch",
-                "www.finanzen.net"
+                "www.finanzen.net",
+                "www.finanzen.ch"
             ]
         }
     ],
@@ -42,10 +64,15 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.9
+        },
+        {
+            "domain": "gearwom.de",
+            "prevalence": 0.1
         }
     ],
     "types": {
+        "WebSocket": 3,
         "Fetch": 3
     },
     "nameservers": [

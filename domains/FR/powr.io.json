@@ -7,13 +7,15 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000405,
+    "prevalence": 0.000404,
     "sites": 4,
     "subdomains": [
-        "www"
+        "www",
+        "vcdn",
+        "outlet"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "powr\\.io\\/powr\\.js",
@@ -23,35 +25,114 @@
                 "www"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 2
+                "Navigator.prototype.userAgent": 4,
+                "window.innerWidth": 1,
+                "window.innerHeight": 1
             },
-            "sites": 3,
-            "prevalence": 0.000303,
+            "sites": 4,
+            "prevalence": 0.000404,
             "cnames": [],
             "responseHashes": [
-                "a22b1ce795d214b8cd6ed922a45dcf7a9003bfe62fb7c66b100a206050d2b5ab"
+                "7568106ec460840bf97ca424c91d1173814d90b3c88ba3fd372f78ca204ec18e"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "manytoon.com",
-                "fr.saint-james.com",
-                "modelesdebusinessplan.com"
+                "saint-james.com",
+                "lalaaimesaclasse.fr",
+                "modelesdebusinessplan.com",
+                "www.frenchestateagents.com"
+            ]
+        },
+        {
+            "rule": "powr\\.io\\/cdn-cgi\\/scripts\\/7d0fa10a\\/cloudflare-static\\/rocket-loader\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "vcdn"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.vendor": 2,
+                "Date.prototype.getTime": 2,
+                "PerformanceTiming.prototype.navigationStart": 2,
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "ccf00d1923b0131a10e0c6d26f95e5dee6ebf8621a27e83c5a2f68a2e0093142"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "frenchestateagents.com",
+                "www.frenchestateagents.com"
+            ]
+        },
+        {
+            "rule": "powr\\.io\\/social-feed",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "outlet"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "f356ecebc5679451cf6c9ffcd2d0cdd3764e15887f6b44270c068dc68f289f7d"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "frenchestateagents.com",
+                "www.frenchestateagents.com"
+            ]
+        },
+        {
+            "rule": "powr\\.io\\/social-feed",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "outlet"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "frenchestateagents.com",
+                "www.frenchestateagents.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.000101,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.625
+        },
+        {
+            "domain": "powrcdn.com",
+            "prevalence": 0.375
         }
     ],
     "types": {
-        "Script": 3
+        "Script": 6,
+        "XHR": 2,
+        "Preflight": 2
     },
     "nameservers": [
         "jill.ns.cloudflare.com",

@@ -7,40 +7,20 @@
     "prevalence": 0.000201,
     "sites": 2,
     "subdomains": [
-        "prod.xid",
-        "prod.pyxis"
+        "prod.pyxis",
+        "prod.fennec",
+        "test-pulsar.xid",
+        "prod.xid"
     ],
     "cnames": [],
-    "fingerprinting": 3,
+    "fingerprinting": 2,
     "resources": [
         {
-            "rule": "atp\\.fox\\/v2\\/xid",
-            "cookies": 0.000201,
-            "fingerprinting": 0,
-            "subdomains": [
-                "prod.xid"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "8ba41d02567f72f7c41cc8dacdf6fe715bf0ed13b8c28836c5592e48222a26aa"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "foxnews.com",
-                "www.tmz.com"
-            ]
-        },
-        {
-            "rule": "atp\\.fox\\/v2\\/xid",
+            "rule": "atp\\.fox\\/pyxis\\/submit",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "prod.xid"
+                "prod.pyxis"
             ],
             "apis": {},
             "sites": 2,
@@ -66,49 +46,8 @@
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "foxnews.com",
-                "www.tmz.com"
-            ]
-        },
-        {
-            "rule": "atp\\.fox\\/pyxis\\/submit",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "prod.pyxis"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.000301,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "foxnews.com",
-                "www.foxnews.com",
-                "www.tmz.com"
-            ]
-        },
-        {
-            "rule": "atp\\.fox\\/pyxis\\/submit",
-            "cookies": 0.000201,
-            "fingerprinting": 0,
-            "subdomains": [
-                "prod.pyxis"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
             "responseHashes": [
-                "9d6063d56275cfc7bc17c5c3dd9305386c72834384bfbf86e8e38c7ef852c4bb"
+                "7af141077119cc3b41d03bf873926387667c6e28ca3cc8fad9614c5ab11b4c21"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -116,6 +55,109 @@
             "exampleSites": [
                 "foxnews.com",
                 "www.foxnews.com"
+            ]
+        },
+        {
+            "rule": "atp\\.fox\\/js\\/fennec\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 2,
+            "subdomains": [
+                "prod.fennec"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Document.cookie getter": 2,
+                "Navigator.prototype.userAgent": 2,
+                "window.outerWidth": 2,
+                "window.outerHeight": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "d6cdff5d7005f10226ba0697dad25315b8d3eea09403a81bbc668d0200e5dac6"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "xid": {
+                    "ttl": 8640023,
+                    "length": 36,
+                    "prevalence": 0.00020118700331958554,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "foxnews.com",
+                "www.tmz.com"
+            ]
+        },
+        {
+            "rule": "atp\\.fox\\/v2\\/xid",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "test-pulsar.xid",
+                "prod.xid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "a017c84ef020d40571e24bc95e605b973c381aceb5b33c495ffe951133fc7f01"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "foxnews.com",
+                "www.tmz.com"
+            ]
+        },
+        {
+            "rule": "atp\\.fox\\/v2\\/xid",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "test-pulsar.xid",
+                "prod.xid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "foxnews.com",
+                "www.tmz.com"
+            ]
+        },
+        {
+            "rule": "atp\\.fox\\/pyxis\\/submit",
+            "cookies": 0.000302,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prod.pyxis"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "5210c08083dc3140631d14ab7ca1154f4312f6fcfbde654cc08036127b17b3c7"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "foxnews.com",
+                "www.foxnews.com",
+                "www.tmz.com"
             ]
         }
     ],
@@ -125,17 +167,22 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.75
+            "prevalence": 0.6111111111111112
         },
         {
             "domain": "fox.com",
-            "prevalence": 0.25
+            "prevalence": 0.2222222222222222
+        },
+        {
+            "domain": "knotch-cdn.com",
+            "prevalence": 0.16666666666666666
         }
     ],
     "types": {
-        "Fetch": 4,
-        "Preflight": 5,
-        "XHR": 2
+        "Preflight": 4,
+        "XHR": 2,
+        "Script": 2,
+        "Fetch": 5
     },
     "nameservers": [
         "ns01.dns.fox",

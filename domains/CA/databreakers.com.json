@@ -9,9 +9,10 @@
     "subdomains": [
         "publicapi",
         "us-publicapi",
+        "individualizer",
+        "us-individualizer",
         "www",
         "api",
-        "download",
         "us-api"
     ],
     "cnames": [],
@@ -30,7 +31,30 @@
             "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "296bc85fed741fa8e4aad433df6ba91786f820590868ef99d639e311a81f0037"
+                "58dba815c68c7871b8c9fed8b4b1140ae2f610f10a04f01b2343b93573da423c"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "groupon.ca",
+                "www.groupon.com"
+            ]
+        },
+        {
+            "rule": "databreakers\\.com\\/v1\\/individualizer",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "individualizer",
+                "us-individualizer"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "fca891fe25d2a781a3cba63bbf627d01fe757f3e7f7b1bd347374489c7904bd9"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -42,25 +66,27 @@
         },
         {
             "rule": "databreakers\\.com\\/cookie-maker",
-            "cookies": 0.000101,
+            "cookies": 0.000202,
             "fingerprinting": 1,
             "subdomains": [
                 "www"
             ],
             "apis": {
-                "Document.cookie getter": 1,
-                "Document.cookie setter": 1
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2
             },
             "sites": 2,
             "prevalence": 0.000202,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "a66a4234a18b524b8faabaf4948005802ad4ce37e7ab65e9c210252be8c7657c"
+            ],
             "type": "Document",
             "firstPartyCookies": {
                 "db_ui": {
                     "ttl": 157680000,
                     "length": 36,
-                    "prevalence": 0.00010092854259184497,
+                    "prevalence": 0.00020163322915616494,
                     "uniqueness": 1
                 }
             },
@@ -93,60 +119,6 @@
             ]
         },
         {
-            "rule": "databreakers\\.com\\/clients\\/groupon_us\\/default\\.js",
-            "cookies": 0.000202,
-            "fingerprinting": 3,
-            "subdomains": [
-                "download"
-            ],
-            "apis": {
-                "window.localStorage": 2,
-                "Navigator.prototype.userAgent": 2,
-                "Document.cookie getter": 2,
-                "window.innerHeight": 2,
-                "window.innerWidth": 2,
-                "Document.cookie setter": 2,
-                "Screen.prototype.orientation": 2,
-                "Screen.prototype.width": 2,
-                "Screen.prototype.height": 2,
-                "Navigator.prototype.getBattery": 2,
-                "window.sessionStorage": 2,
-                "Navigator.prototype.maxTouchPoints": 2,
-                "Navigator.prototype.hardwareConcurrency": 2,
-                "window.devicePixelRatio": 2,
-                "window.outerWidth": 2,
-                "window.outerHeight": 2,
-                "Navigator.prototype.language": 2,
-                "Navigator.prototype.connection": 2
-            },
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [],
-            "responseHashes": [
-                "0074d7aaf044536990dec726e55c66be020e4c60808766ac8dfc28b3cbdfa9a5"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {
-                "db_ui": {
-                    "ttl": 63072000,
-                    "length": 36,
-                    "prevalence": 0.00020185708518368994,
-                    "uniqueness": 0.5
-                },
-                "db_uicd": {
-                    "ttl": 63072000,
-                    "length": 36,
-                    "prevalence": 0.00020185708518368994,
-                    "uniqueness": 0.5
-                }
-            },
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "groupon.com",
-                "www.groupon.com"
-            ]
-        },
-        {
             "rule": "databreakers\\.com\\/v1\\/groupon_us\\/dataPoint",
             "cookies": 0,
             "fingerprinting": 0,
@@ -175,20 +147,15 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.6
-        },
-        {
-            "domain": "recombee.com",
-            "prevalence": 0.4
+            "prevalence": 1
         }
     ],
     "types": {
-        "XHR": 6,
-        "Document": 2,
-        "Script": 2
+        "XHR": 8,
+        "Document": 2
     },
     "nameservers": [
-        "ns2.ignum.cz",
-        "ns1.ignum.com"
+        "ns1.ignum.com",
+        "ns2.ignum.cz"
     ]
 }

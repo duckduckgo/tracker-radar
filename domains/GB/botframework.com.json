@@ -9,10 +9,11 @@
     "source": [
         "DuckDuckGo-GB"
     ],
-    "prevalence": 0.000906,
-    "sites": 9,
+    "prevalence": 0.00111,
+    "sites": 11,
     "subdomains": [
-        "cdn"
+        "cdn",
+        "directline"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -25,13 +26,13 @@
                 "cdn"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 2,
-                "Navigator.prototype.language": 2,
-                "Navigator.prototype.mediaDevices": 2,
-                "window.localStorage": 2
+                "Navigator.prototype.userAgent": 4,
+                "Navigator.prototype.language": 4,
+                "Navigator.prototype.mediaDevices": 4,
+                "window.localStorage": 4
             },
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 4,
+            "prevalence": 0.000403,
             "cnames": [],
             "responseHashes": [
                 "21c9b88ac85b820f815ee836ea9c432e9cae58bf3f34ef3c1a9286511630bc81"
@@ -41,6 +42,8 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "nhsbsa.nhs.uk",
+                "my.clevelandclinic.org",
+                "rnid.org.uk",
                 "www.aberdeenshire.gov.uk"
             ]
         },
@@ -57,8 +60,8 @@
                 "Navigator.prototype.mediaDevices": 2,
                 "window.localStorage": 2
             },
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
                 "21c9b88ac85b820f815ee836ea9c432e9cae58bf3f34ef3c1a9286511630bc81"
@@ -68,33 +71,50 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "abrsm.org",
-                "www.gateshead.gov.uk"
+                "www.gateshead.gov.uk",
+                "www.saudia.com"
             ]
         },
         {
-            "rule": "botframework\\.com\\/botframework-webchat\\/4\\.13\\.0\\/webchat\\.js",
+            "rule": "botframework\\.com\\/v3\\/directline\\/conversations",
             "cookies": 0,
-            "fingerprinting": 1,
+            "fingerprinting": 0,
             "subdomains": [
-                "cdn"
+                "directline"
             ],
-            "apis": {
-                "Navigator.prototype.userAgent": 2,
-                "window.localStorage": 2,
-                "Navigator.prototype.language": 2
-            },
+            "apis": {},
             "sites": 2,
-            "prevalence": 0.000201,
+            "prevalence": 0.000202,
             "cnames": [],
-            "responseHashes": [
-                "4821dc496ff448b093f0f6d1b458333cb899ce0d816a9ce7379e82ba3262d901"
-            ],
-            "type": "Script",
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "aberdeenairport.com",
-                "www.glasgowairport.com"
+                "lewisham.gov.uk",
+                "www.aberdeencity.gov.uk"
+            ]
+        },
+        {
+            "rule": "botframework\\.com\\/v3\\/directline\\/conversations",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "directline"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "2ec06203ec9df0b68bbd9f53a400e905825f4897ae668a239a60ff4461841aa1"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lewisham.gov.uk",
+                "www.aberdeencity.gov.uk"
             ]
         }
     ],
@@ -104,20 +124,26 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.75
+            "prevalence": 0.5294117647058824
         },
         {
             "domain": "azureedge.net",
-            "prevalence": 0.25
+            "prevalence": 0.23529411764705882
+        },
+        {
+            "domain": "maxchatbot.co.uk",
+            "prevalence": 0.23529411764705882
         }
     ],
     "types": {
-        "Script": 6
+        "Script": 7,
+        "Preflight": 2,
+        "XHR": 2
     },
     "nameservers": [
+        "ns3-205.azure-dns.org",
         "ns1-205.azure-dns.com",
-        "ns2-205.azure-dns.net",
         "ns4-205.azure-dns.info",
-        "ns3-205.azure-dns.org"
+        "ns2-205.azure-dns.net"
     ]
 }

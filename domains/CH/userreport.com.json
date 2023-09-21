@@ -9,12 +9,12 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.00201,
-    "sites": 20,
+    "prevalence": 0.00141,
+    "sites": 14,
     "subdomains": [
-        "audex",
-        "pdw-adf",
         "visitanalytics",
+        "pdw-adf",
+        "audex",
         "sak",
         "tag"
     ],
@@ -22,15 +22,42 @@
     "fingerprinting": 1,
     "resources": [
         {
-            "rule": "userreport\\.com\\/sync\\/put\\/ltm",
+            "rule": "userreport\\.com\\/hit\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "visitanalytics"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "ef77344de6235653148fe34e6af74e8eaff85d924e4d46098f92d2d7361de541"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "lotame_domain_check": 0.00010059350165979277
+            },
+            "exampleSites": [
+                "deutsche-wirtschafts-nachrichten.de",
+                "www.topgear.com"
+            ]
+        },
+        {
+            "rule": "userreport\\.com\\/hit\\.gif",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "audex"
+                "visitanalytics"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.000402,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
                 "77b1d2c0857d4e95d4c2ae7aa0abc5aaafa6bd4581b31203d1592759c26f5c44"
@@ -38,14 +65,35 @@
             "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "_cc_id": 0.0004019696512913275,
-                "LUID": 0.00010049241282283188
+                "lotame_domain_check": 0.00010059350165979277
             },
             "exampleSites": [
-                "radio-canada.ca",
-                "nameberry.com",
-                "www.channelnewsasia.com",
-                "www.news24.com"
+                "deutsche-wirtschafts-nachrichten.de",
+                "www.boligsiden.dk",
+                "www.topgear.com"
+            ]
+        },
+        {
+            "rule": "userreport\\.com\\/hit",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "visitanalytics"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "77b1d2c0857d4e95d4c2ae7aa0abc5aaafa6bd4581b31203d1592759c26f5c44"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "imageresizer.com",
+                "www.falk.de",
+                "www.hamburg.de"
             ]
         },
         {
@@ -56,8 +104,8 @@
                 "pdw-adf"
             ],
             "apis": {},
-            "sites": 11,
-            "prevalence": 0.00111,
+            "sites": 5,
+            "prevalence": 0.000503,
             "cnames": [],
             "responseHashes": [
                 "77b1d2c0857d4e95d4c2ae7aa0abc5aaafa6bd4581b31203d1592759c26f5c44"
@@ -66,25 +114,19 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "sky.ch",
-                "sport.sky.ch",
-                "www.autolina.ch",
+                "autolina.ch",
                 "www.mcoptic.ch",
-                "www.ottos.ch",
                 "www.pkz.ch",
                 "www.sigmaaldrich.com",
-                "www.swisscasinos.ch",
-                "www.tgv-lyria.com",
-                "www.tuttosport.com",
-                "www.yuh.com"
+                "www.tgv-lyria.com"
             ]
         },
         {
-            "rule": "userreport\\.com\\/hit\\.gif",
+            "rule": "userreport\\.com\\/sync\\/put\\/ltm",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "visitanalytics"
+                "audex"
             ],
             "apis": {},
             "sites": 2,
@@ -96,11 +138,12 @@
             "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "lotame_domain_check": 0.00010049241282283188
+                "_cc_id": 0.00020118700331958554,
+                "LUID": 0.00010059350165979277
             },
             "exampleSites": [
-                "boligsiden.dk",
-                "www.topgear.com"
+                "channelnewsasia.com",
+                "www.dailyecho.co.uk"
             ]
         },
         {
@@ -132,13 +175,17 @@
         },
         {
             "rule": "userreport\\.com\\/server\\.html",
-            "cookies": 0,
+            "cookies": 0.000201,
             "fingerprinting": 1,
             "subdomains": [
                 "tag"
             ],
             "apis": {
-                "Date.prototype.getTime": 2
+                "Document.cookie setter": 2,
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2
             },
             "sites": 2,
             "prevalence": 0.000201,
@@ -147,7 +194,14 @@
                 "41c12262453783f916105c53e3513dcf49cfae58b805b09c92eeac8d43b8b022"
             ],
             "type": "Document",
-            "firstPartyCookies": {},
+            "firstPartyCookies": {
+                "cookies.js": {
+                    "ttl": 26,
+                    "length": 9,
+                    "prevalence": 0.00020118700331958554,
+                    "uniqueness": 0.5
+                }
+            },
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "falk.de",
@@ -155,31 +209,8 @@
             ]
         },
         {
-            "rule": "userreport\\.com\\/hit",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "visitanalytics"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.000301,
-            "cnames": [],
-            "responseHashes": [
-                "77b1d2c0857d4e95d4c2ae7aa0abc5aaafa6bd4581b31203d1592759c26f5c44"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "falk.de",
-                "www.hamburg.de",
-                "yts.mx"
-            ]
-        },
-        {
             "rule": "userreport\\.com\\/sync\\/put\\/adex",
-            "cookies": 0,
+            "cookies": 0.000201,
             "fingerprinting": 0,
             "subdomains": [
                 "audex"
@@ -192,38 +223,11 @@
             "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "axd": 0.00020098482564566376
+                "axd": 0.00020118700331958554
             },
             "exampleSites": [
                 "falk.de",
                 "www.hamburg.de"
-            ]
-        },
-        {
-            "rule": "userreport\\.com\\/hit\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "visitanalytics"
-            ],
-            "apis": {
-                "window.localStorage": 2,
-                "Navigator.prototype.userAgent": 2
-            },
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "ef77344de6235653148fe34e6af74e8eaff85d924e4d46098f92d2d7361de541"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {
-                "lotame_domain_check": 0.00020098482564566376
-            },
-            "exampleSites": [
-                "topgear.com",
-                "www.topgear.com"
             ]
         }
     ],
@@ -235,46 +239,50 @@
         "Audience Measurement"
     ],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.000302,
     "topInitiators": [
         {
             "domain": "adform.net",
-            "prevalence": 0.4230769230769231
-        },
-        {
-            "domain": "doubleclick.net",
-            "prevalence": 0.19230769230769232
-        },
-        {
-            "domain": "crwdcntrl.net",
-            "prevalence": 0.15384615384615385
-        },
-        {
-            "domain": "stroeerdigitalgroup.de",
-            "prevalence": 0.07692307692307693
-        },
-        {
-            "domain": "theadex.com",
-            "prevalence": 0.07692307692307693
-        },
-        {
-            "domain": "tiqcdn.com",
-            "prevalence": 0.038461538461538464
+            "prevalence": 0.25925925925925924
         },
         {
             "domain": "first party",
-            "prevalence": 0.038461538461538464
+            "prevalence": 0.2222222222222222
+        },
+        {
+            "domain": "doubleclick.net",
+            "prevalence": 0.18518518518518517
+        },
+        {
+            "domain": "amazon-adsystem.com",
+            "prevalence": 0.07407407407407407
+        },
+        {
+            "domain": "crwdcntrl.net",
+            "prevalence": 0.07407407407407407
+        },
+        {
+            "domain": "stroeerdigitalgroup.de",
+            "prevalence": 0.07407407407407407
+        },
+        {
+            "domain": "theadex.com",
+            "prevalence": 0.07407407407407407
+        },
+        {
+            "domain": "tiqcdn.com",
+            "prevalence": 0.037037037037037035
         }
     ],
     "types": {
-        "Image": 22,
         "Script": 4,
+        "Image": 15,
         "Document": 2
     },
     "nameservers": [
-        "ns-1806.awsdns-33.co.uk",
+        "ns-187.awsdns-23.com",
         "ns-548.awsdns-04.net",
-        "ns-1439.awsdns-51.org",
-        "ns-187.awsdns-23.com"
+        "ns-1806.awsdns-33.co.uk",
+        "ns-1439.awsdns-51.org"
     ]
 }

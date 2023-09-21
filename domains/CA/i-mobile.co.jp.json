@@ -7,13 +7,16 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000202,
-    "sites": 2,
+    "prevalence": 0.000302,
+    "sites": 3,
     "subdomains": [
-        "ssp-sync"
+        "ssp-sync",
+        "imp-adedge",
+        "ssp-bidapi",
+        "spnativeapi-tls"
     ],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "i-mobile\\.co\\.jp\\/sync\\.ashx",
@@ -34,6 +37,73 @@
                 "hinative.com",
                 "www.ana.co.jp"
             ]
+        },
+        {
+            "rule": "i-mobile\\.co\\.jp\\/script\\/v1\\/spot\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "imp-adedge"
+            ],
+            "apis": {
+                "window.name": 2,
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "7a38761ea35d13a048222393da5ab8b7b37d2657c105f90c35d9861cec8a6017"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nicovideo.jp",
+                "www.nicovideo.jp"
+            ]
+        },
+        {
+            "rule": "i-mobile\\.co\\.jp\\/api\\/v1\\/spot\\.ashx",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ssp-bidapi"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "cf3d408e3e76261f88d7ee9466de6db24b11cf6bdcdfe3fac076713701c8da3b"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nicovideo.jp",
+                "www.nicovideo.jp"
+            ]
+        },
+        {
+            "rule": "i-mobile\\.co\\.jp\\/api\\/ad_spot\\.ashx",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "spnativeapi-tls"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nicovideo.jp",
+                "www.nicovideo.jp"
+            ]
         }
     ],
     "categories": [],
@@ -42,16 +112,22 @@
     "topInitiators": [
         {
             "domain": "fout.jp",
-            "prevalence": 1
+            "prevalence": 0.5
+        },
+        {
+            "domain": "doubleclick.net",
+            "prevalence": 0.5
         }
     ],
     "types": {
-        "Image": 2
+        "Image": 2,
+        "Script": 4,
+        "XHR": 2
     },
     "nameservers": [
-        "ns-636.awsdns-15.net",
-        "ns-108.awsdns-13.com",
         "ns-2000.awsdns-58.co.uk",
+        "ns-108.awsdns-13.com",
+        "ns-636.awsdns-15.net",
         "ns-1333.awsdns-38.org"
     ]
 }

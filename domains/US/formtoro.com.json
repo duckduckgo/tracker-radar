@@ -4,16 +4,43 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000135,
-    "sites": 2,
+    "prevalence": 0.0000273,
+    "sites": 4,
     "subdomains": [
-        "sdk"
+        "sdk",
+        "api"
     ],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "formtoro\\.com\\/sdk\\.umd\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "sdk"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "window.sessionStorage": 2,
+                "Document.cookie getter": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "edf6eae6980b2f8c6bd2ebf619dde5a9019553dbf5fe97ebcd0d1eee110bc97b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mariemur.com",
+                "www.laurageller.com"
+            ]
+        },
+        {
+            "rule": "formtoro\\.com\\/components\\/formtoro\\/formtoro\\.esm\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -21,14 +48,78 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000135,
+            "prevalence": 0.0000136,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "4b9e19e302b0ed1010004b40a4b5a2140b1a31e0e7cbdab5d6a21f52f31041cb"
+            ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "laurageller.com",
+                "mariemur.com",
+                "www.laurageller.com"
+            ]
+        },
+        {
+            "rule": "formtoro\\.com\\/components\\/formtoro\\/p-8fb46191\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sdk"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "601f5a037b3125e4dac11f4674b1da1829623ab9d86dd528101e05b0dd188058"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mariemur.com",
+                "www.laurageller.com"
+            ]
+        },
+        {
+            "rule": "formtoro\\.com\\/session\\/start",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mariemur.com",
+                "www.laurageller.com"
+            ]
+        },
+        {
+            "rule": "formtoro\\.com\\/session\\/start",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mariemur.com",
                 "www.laurageller.com"
             ]
         }
@@ -39,11 +130,17 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.9
+        },
+        {
+            "domain": "intelligems.io",
+            "prevalence": 0.1
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 6,
+        "Fetch": 2,
+        "Preflight": 2
     },
     "nameservers": [
         "ns73.domaincontrol.com",
