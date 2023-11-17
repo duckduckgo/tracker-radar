@@ -4,10 +4,11 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000204,
-    "sites": 3,
+    "prevalence": 0.000034,
+    "sites": 5,
     "subdomains": [
-        "verity"
+        "verity",
+        "statics"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -20,18 +21,20 @@
                 "verity"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "sites": 3,
+            "prevalence": 0.0000204,
             "cnames": [],
             "responseHashes": [
-                "81ab2da219471f889a90d75e2bc5f10b7008e0f2de734702291faec77884287f"
+                "81ab2da219471f889a90d75e2bc5f10b7008e0f2de734702291faec77884287f",
+                "515e0ecc2b425b8129cd3ee6f4d014dce3fba909137e28b1dddfafdbf11f332a"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "nyheter24.se",
-                "www.alltforforaldrar.se"
+                "www.alltforforaldrar.se",
+                "www.familjeliv.se"
             ]
         },
         {
@@ -42,18 +45,47 @@
                 "verity"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "sites": 3,
+            "prevalence": 0.0000204,
             "cnames": [],
             "responseHashes": [
-                "7f15e3959ba7e34c3b38b9a24e70d2730fc5f6cd1d609e738f5bca94c5540bf1"
+                "7f15e3959ba7e34c3b38b9a24e70d2730fc5f6cd1d609e738f5bca94c5540bf1",
+                "50c558016d7e6d4cd2249864aded1023938c29727d8e286703666af6cf60b10f"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "nyheter24.se",
-                "www.alltforforaldrar.se"
+                "www.alltforforaldrar.se",
+                "www.familjeliv.se"
+            ]
+        },
+        {
+            "rule": "lifeofsvea\\.se\\/production\\/losjs\\/familjeliv\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "statics"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "window.outerWidth": 2,
+                "Navigator.prototype.userAgent": 1,
+                "Document.cookie getter": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "b52c7ada887788b86e78272b58aa2b705eb18354fabe2190b08445605b51bcea"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "familjeliv.se",
+                "www.familjeliv.se"
             ]
         }
     ],
@@ -63,14 +95,19 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.8
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.2
         }
     ],
     "types": {
-        "Fetch": 4
+        "Fetch": 6,
+        "Script": 2
     },
     "nameservers": [
-        "jay.ns.cloudflare.com",
-        "uma.ns.cloudflare.com"
+        "uma.ns.cloudflare.com",
+        "jay.ns.cloudflare.com"
     ]
 }

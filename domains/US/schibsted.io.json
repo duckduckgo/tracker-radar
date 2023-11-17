@@ -7,11 +7,13 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000817,
-    "sites": 12,
+    "prevalence": 0.000157,
+    "sites": 23,
     "subdomains": [
         "cogwheel.inventory",
-        "collector"
+        "collector",
+        "cdn.inventory",
+        "region-api.inventory"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -27,7 +29,7 @@
                 "Document.cookie getter": 4
             },
             "sites": 5,
-            "prevalence": 0.0000341,
+            "prevalence": 0.000034,
             "cnames": [],
             "responseHashes": [
                 "460bd1927d7aa1fcdbeae60e95f6d4db73f1213d8a19324c151c3c253602c415"
@@ -41,6 +43,35 @@
                 "www.aftenposten.no",
                 "www.bt.no",
                 "www.godare.se"
+            ]
+        },
+        {
+            "rule": "schibsted\\.io\\/prod\\/latest\\/gdpr-bundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cogwheel.inventory"
+            ],
+            "apis": {
+                "Document.cookie getter": 7
+            },
+            "sites": 7,
+            "prevalence": 0.0000477,
+            "cnames": [],
+            "responseHashes": [
+                "f2542c74b42ba0e89ab76721c1c02f830b62b9bb9cf6f4a70131ff82172d02df"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "e24.no",
+                "www.aftenbladet.no",
+                "www.aftenposten.no",
+                "www.blocket.se",
+                "www.finn.no",
+                "www.godt.no",
+                "www.tek.no"
             ]
         },
         {
@@ -88,29 +119,25 @@
             ]
         },
         {
-            "rule": "schibsted\\.io\\/prod\\/latest\\/gdpr-bundle\\.js",
+            "rule": "schibsted\\.io\\/ad-takeover\\/4\\.2\\.1\\/ad-takeover\\.js",
             "cookies": 0,
-            "fingerprinting": 1,
+            "fingerprinting": 0,
             "subdomains": [
-                "cogwheel.inventory"
+                "cdn.inventory"
             ],
-            "apis": {
-                "Document.cookie getter": 4
-            },
-            "sites": 4,
-            "prevalence": 0.0000272,
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "f2542c74b42ba0e89ab76721c1c02f830b62b9bb9cf6f4a70131ff82172d02df"
+                "2a503634d30a7fdc451d77087e65b586e38edf67003ae2cf7010a9c9a32d57d3"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "blocket.se",
-                "www.finn.no",
-                "www.godt.no",
-                "www.tek.no"
+                "www.blocket.se"
             ]
         },
         {
@@ -155,6 +182,28 @@
             "exampleSites": [
                 "bt.no",
                 "www.bt.no"
+            ]
+        },
+        {
+            "rule": "schibsted\\.io\\/api\\/v1\\/track\\/sdrn:schibsted:client:bytbilse",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "collector"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bytbil.com",
+                "www.bytbil.com"
             ]
         },
         {
@@ -244,6 +293,50 @@
                 "tek.no",
                 "www.tek.no"
             ]
+        },
+        {
+            "rule": "schibsted\\.io\\/search\\/locationKeyWordsByIP",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "region-api.inventory"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "5d284e3035c9b28dc6239c2a070f590bbac6fe2f94bab831efe29dd3995bea48"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tv.nu",
+                "www.tv.nu"
+            ]
+        },
+        {
+            "rule": "schibsted\\.io\\/api\\/v1\\/track\\/sdrn:schibsted:client:tvnu",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "collector"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tv.nu",
+                "www.tv.nu"
+            ]
         }
     ],
     "categories": [],
@@ -252,25 +345,30 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.7073170731707317
+            "prevalence": 0.6590909090909091
         },
         {
             "domain": "schibsted.com",
-            "prevalence": 0.2682926829268293
+            "prevalence": 0.23863636363636365
+        },
+        {
+            "domain": "aftenposten.no",
+            "prevalence": 0.07954545454545454
         },
         {
             "domain": "blocketcdn.se",
-            "prevalence": 0.024390243902439025
+            "prevalence": 0.022727272727272728
         }
     ],
     "types": {
-        "Script": 9,
-        "Ping": 16
+        "Script": 14,
+        "Ping": 20,
+        "XHR": 2
     },
     "nameservers": [
-        "ns-1082.awsdns-07.org",
+        "ns-791.awsdns-34.net",
         "ns-2019.awsdns-60.co.uk",
         "ns-182.awsdns-22.com",
-        "ns-791.awsdns-34.net"
+        "ns-1082.awsdns-07.org"
     ]
 }

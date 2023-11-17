@@ -4,11 +4,13 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000136,
-    "sites": 2,
+    "prevalence": 0.000034,
+    "sites": 5,
     "subdomains": [
         "mediamarkt-ch",
-        "mm"
+        "mm",
+        "collector",
+        "teknosa"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -47,7 +49,7 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "e1002cd4444dd6e0dac901e735cd1f1f6d1963960238d931129ffdcce9da8e59"
+                "42635f53bdc6316f8ba475b43be34e02a9a6cd557dfed055141e5e18e7efd269"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -56,6 +58,99 @@
                 "mediamarkt.ch",
                 "www.mediamarkt.com.tr"
             ]
+        },
+        {
+            "rule": "wawlabs\\.com\\/mediamarkt\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "collector"
+            ],
+            "apis": {
+                "window.innerWidth": 2,
+                "Document.cookie getter": 2,
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "bd86befa3f72e06327bff81099ca4876e5766fc134ff3eeb1c4130d334a3fc99"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mediamarkt.com.tr",
+                "www.mediamarkt.com.tr"
+            ]
+        },
+        {
+            "rule": "wawlabs\\.com\\/teknosa\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "collector"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Document.cookie getter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "e7c683f98425d7adf330c511681a8d6aca9443aef5a6da67ef9529be156c43b4"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "teknosa.com",
+                "www.teknosa.com"
+            ]
+        },
+        {
+            "rule": "wawlabs\\.com\\/avx_get_top_searches",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "teknosa"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "teknosa.com",
+                "www.teknosa.com"
+            ]
+        },
+        {
+            "rule": "wawlabs\\.com\\/avx_get_top_searches",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "teknosa"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "c5a10b2f11b47ffdd996968024afefe4e94aa136d7ef2157dd18079d027e2213"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "teknosa.com",
+                "www.teknosa.com"
+            ]
         }
     ],
     "categories": [],
@@ -63,17 +158,18 @@
     "cookies": 0,
     "topInitiators": [
         {
-            "domain": "first party",
-            "prevalence": 0.5
+            "domain": "googletagmanager.com",
+            "prevalence": 0.8
         },
         {
-            "domain": "googletagmanager.com",
-            "prevalence": 0.5
+            "domain": "first party",
+            "prevalence": 0.2
         }
     ],
     "types": {
-        "Preflight": 2,
-        "Fetch": 2
+        "Preflight": 4,
+        "Fetch": 4,
+        "Script": 4
     },
     "nameservers": [
         "glen.ns.cloudflare.com",

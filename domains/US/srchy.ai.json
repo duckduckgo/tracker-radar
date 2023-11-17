@@ -8,7 +8,8 @@
     "sites": 2,
     "subdomains": [
         "analytics",
-        "m1.beacon"
+        "m1.beacon",
+        "analytics.v2.readings"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -33,7 +34,29 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "jgl.com.au",
+                "readings.com.au",
+                "www.readings.com.au"
+            ]
+        },
+        {
+            "rule": "srchy\\.ai\\/readings-v2\\/config-prod\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "analytics"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "d8f7ebb5dd5e5dabdb4d5521b8da0a1346eb45c005a7ff91562f8f2093908c09"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "readings.com.au",
                 "www.readings.com.au"
             ]
         },
@@ -42,11 +65,12 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "m1.beacon"
+                "m1.beacon",
+                "analytics.v2.readings"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000204,
+            "sites": 2,
+            "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -54,11 +78,32 @@
             "type": "Ping",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "IR_gbd": 0.000013624071008658098
+                "$bid": 0.000006809020590478266
             },
             "exampleSites": [
-                "jgl.com.au",
-                "justjeans.jgl.com.au",
+                "readings.com.au",
+                "www.readings.com.au"
+            ]
+        },
+        {
+            "rule": "srchy\\.ai\\/readings-v2\\/custom-functions-prod\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "analytics"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "930ed1b29b9ba8271e87a467e60fbde5a770b3f2b1c14baefb213e32eb6d16dd"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "readings.com.au",
                 "www.readings.com.au"
             ]
         },
@@ -72,8 +117,8 @@
             "apis": {
                 "window.sessionStorage": 2,
                 "Document.cookie getter": 2,
-                "Date.prototype.getTime": 2,
-                "Document.cookie setter": 2
+                "Document.cookie setter": 2,
+                "Date.prototype.getTime": 2
             },
             "sites": 2,
             "prevalence": 0.0000136,
@@ -83,34 +128,34 @@
             ],
             "type": "Script",
             "firstPartyCookies": {
-                "$acv": {
-                    "ttl": 31536009,
-                    "length": 1,
-                    "prevalence": 0.000013624071008658098,
-                    "uniqueness": 1
-                },
                 "$bid": {
-                    "ttl": 31536009,
+                    "ttl": 31536003,
                     "length": 36,
-                    "prevalence": 0.000013624071008658098,
+                    "prevalence": 0.000013618041180956532,
                     "uniqueness": 1
                 },
                 "$ssid": {
                     "ttl": null,
                     "length": 69,
-                    "prevalence": 0.000013624071008658098,
+                    "prevalence": 0.000013618041180956532,
                     "uniqueness": 1
+                },
+                "$acv": {
+                    "ttl": 31536003,
+                    "length": 1,
+                    "prevalence": 0.000013618041180956532,
+                    "uniqueness": 0.5
                 },
                 "$atr": {
                     "ttl": null,
-                    "length": 230,
-                    "prevalence": 0.000013624071008658098,
+                    "length": 221,
+                    "prevalence": 0.000013618041180956532,
                     "uniqueness": 1
                 }
             },
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "jgl.com.au",
+                "readings.com.au",
                 "www.readings.com.au"
             ]
         }
@@ -121,21 +166,18 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.8333333333333334
-        },
-        {
-            "domain": "googletagmanager.com",
-            "prevalence": 0.16666666666666666
+            "prevalence": 1
         }
     ],
     "types": {
-        "Script": 4,
-        "Ping": 3
+        "Script": 6,
+        "Fetch": 2,
+        "Ping": 2
     },
     "nameservers": [
+        "ns-cloud-c4.googledomains.com",
         "ns-cloud-c2.googledomains.com",
         "ns-cloud-c1.googledomains.com",
-        "ns-cloud-c4.googledomains.com",
         "ns-cloud-c3.googledomains.com"
     ]
 }

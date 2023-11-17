@@ -4,15 +4,41 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000477,
-    "sites": 7,
+    "prevalence": 0.0000613,
+    "sites": 9,
     "subdomains": [
         "cdn",
-        "ecommerce-events"
+        "ecommerce-events",
+        "ecommerce-scripts"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "adscale\\.com\\/static\\/ecom_js\\/pit-pit-b2c\\/add_item_to_cart\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "27857d152c6b8ea7a1a501e8ddfbc8fe9042cb68ecdd16581fbd96b9ca729ac1"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "pit-pit.com",
+                "nl.pit-pit.com"
+            ]
+        },
         {
             "rule": "adscale\\.com\\/static\\/ecom_js\\/atomic-defense\\/add_item_to_cart\\.js",
             "cookies": 0,
@@ -28,7 +54,7 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "1652f357a5d8b4e9860921a377f50be0ded9e38e92e384641db218c5f1f3da64"
+                "782f66c4c41f34f130fb9dd3993fbc08e066227e2b9f14e9b4597f5c11130233"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -79,24 +105,117 @@
                 "atomicdefense.com",
                 "www.atomicdefense.com"
             ]
+        },
+        {
+            "rule": "adscale\\.com\\/EcommerceProxy",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ecommerce-events"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000272,
+            "cnames": [],
+            "responseHashes": [
+                "46dd1322653311d8433f33a03f0fa3d245c637eb90455d9f6e08dc2e09f6ffe7"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "boden.co.uk",
+                "www.boden.co.uk",
+                "www.marc-o-polo.com",
+                "www.sparkydirect.com.au"
+            ]
+        },
+        {
+            "rule": "adscale\\.com\\/EcommerceProxy",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ecommerce-events"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "boden.co.uk",
+                "www.boden.co.uk",
+                "www.marc-o-polo.com"
+            ]
+        },
+        {
+            "rule": "adscale\\.com\\/ecommerce\\/script\\/www\\.sparkydirect\\.com\\.au\\.js",
+            "cookies": 0.0000136,
+            "fingerprinting": 1,
+            "subdomains": [
+                "ecommerce-scripts"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "97d89c5dacface12bfab9bc0ae20a0570f70cc0b53170b5b2761635cc71941f0"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "adscale_ad_link": {
+                    "ttl": 7776005,
+                    "length": 42,
+                    "prevalence": 0.000013618041180956532,
+                    "uniqueness": 1
+                },
+                "adscale_ad_link_ts": {
+                    "ttl": 7776005,
+                    "length": 13,
+                    "prevalence": 0.000013618041180956532,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sparkydirect.com.au",
+                "www.sparkydirect.com.au"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.00000681,
+    "cookies": 0.0000136,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.5714285714285714
+        },
+        {
+            "domain": "global-e.com",
+            "prevalence": 0.2857142857142857
+        },
+        {
+            "domain": "azure.com",
+            "prevalence": 0.14285714285714285
         }
     ],
     "types": {
-        "Script": 2,
-        "Preflight": 2,
-        "XHR": 2
+        "Script": 6,
+        "Preflight": 5,
+        "XHR": 6
     },
     "nameservers": [
-        "lisa.ns.cloudflare.com",
-        "hayes.ns.cloudflare.com"
+        "hayes.ns.cloudflare.com",
+        "lisa.ns.cloudflare.com"
     ]
 }

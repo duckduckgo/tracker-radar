@@ -199,6 +199,26 @@
             ]
         },
         {
+            "rule": "share-cdn-prod\\.azureedge\\.net\\/wp-content\\/uploads\\/2023\\/09\\/UPMC-logo_Health-Beat-200x29\\.png\\.webp",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "618dab96be5b00583868ed05d925888793fd7eba549df1f9190cf9d2f7dc5647"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "upmc.com",
+                "share.upmc.com"
+            ]
+        },
+        {
             "rule": "share-cdn-prod\\.azureedge\\.net\\/wp-content\\/themes\\/upmc-healthbeat\\/assets\\/styles\\/main\\.min\\.css",
             "cookies": 0,
             "fingerprinting": 0,
@@ -333,9 +353,11 @@
         {
             "rule": "share-cdn-prod\\.azureedge\\.net\\/wp-content\\/plugins\\/socialized\\/assets\\/scripts\\/vendor\\/stickybits\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 1
+            },
             "sites": 2,
             "prevalence": 0.0000136,
             "cnames": [],
@@ -363,26 +385,6 @@
                 "ed71b5809e2622b7a84c54259249af662c6d892575797f7d3e5f55efe0c53509"
             ],
             "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "upmc.com",
-                "share.upmc.com"
-            ]
-        },
-        {
-            "rule": "share-cdn-prod\\.azureedge\\.net\\/wp-content\\/uploads\\/2023\\/09\\/UPMC-logo_Health-Beat-200x29\\.png\\.webp",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [],
-            "responseHashes": [
-                "618dab96be5b00583868ed05d925888793fd7eba549df1f9190cf9d2f7dc5647"
-            ],
-            "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -539,18 +541,14 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.8928571428571429
-        },
-        {
-            "domain": "cookiebot.com",
-            "prevalence": 0.10714285714285714
+            "prevalence": 1
         }
     ],
     "types": {
         "Stylesheet": 16,
         "Script": 14,
-        "Other": 4,
         "Image": 4,
+        "Other": 4,
         "Font": 12
     },
     "nameservers": []

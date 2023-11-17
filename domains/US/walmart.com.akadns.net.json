@@ -9,13 +9,18 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000409,
-    "sites": 6,
+    "prevalence": 0.0000613,
+    "sites": 9,
     "subdomains": [
         "cdn-csp",
-        "beacon-cdn-custom"
+        "beacon-cdn-custom",
+        "beacon-all"
     ],
     "cnames": [
+        {
+            "original": "beacon.game.co.za",
+            "resolved": "beacon-all.walmart.com.akadns.net"
+        },
         {
             "original": "beacon.walmart.com",
             "resolved": "beacon-cdn-custom.walmart.com.akadns.net"
@@ -60,7 +65,8 @@
             "cookies": 0.0000272,
             "fingerprinting": 2,
             "subdomains": [
-                "beacon-cdn-custom"
+                "beacon-cdn-custom",
+                "beacon-all"
             ],
             "apis": {},
             "sites": 4,
@@ -69,19 +75,54 @@
                 {
                     "original": "beacon.walmart.com",
                     "resolved": "beacon-cdn-custom.walmart.com.akadns.net"
+                },
+                {
+                    "original": "beacon.game.co.za",
+                    "resolved": "beacon-all.walmart.com.akadns.net"
                 }
             ],
-            "responseHashes": [
-                "84e47c6ea3d6b8cd6581de332151b815766494aa5ce3c82cdf75da67c7bfe093",
-                "6284515b04eb70c0eeea16fa21a5dc1d7813301542ca88368b0c45a486165655"
-            ],
+            "responseHashes": [],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "walmart.com",
-                "mystore.walmart.com",
                 "photos3.walmart.com",
+                "www.game.co.za",
+                "www.walmart.com"
+            ]
+        },
+        {
+            "rule": "walmart\\.com\\.akadns\\.net\\/rum\\.gif",
+            "cookies": 0.0000272,
+            "fingerprinting": 0,
+            "subdomains": [
+                "beacon-cdn-custom",
+                "beacon-all"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000272,
+            "cnames": [
+                {
+                    "original": "beacon.walmart.com",
+                    "resolved": "beacon-cdn-custom.walmart.com.akadns.net"
+                },
+                {
+                    "original": "beacon.game.co.za",
+                    "resolved": "beacon-all.walmart.com.akadns.net"
+                }
+            ],
+            "responseHashes": [
+                "13f86bd1a6d578ee82ca0c54a9a634e03d8d7db09380d72590b158f173f53790"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "walmart.com",
+                "mystore.walmart.com",
+                "www.game.co.za",
                 "www.walmart.com"
             ]
         },
@@ -101,43 +142,12 @@
                     "resolved": "beacon-cdn-custom.walmart.com.akadns.net"
                 }
             ],
-            "responseHashes": [
-                "13f86bd1a6d578ee82ca0c54a9a634e03d8d7db09380d72590b158f173f53790"
-            ],
-            "type": "Ping",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "walmart.com",
-                "mystore.walmart.com",
-                "www.walmart.com"
-            ]
-        },
-        {
-            "rule": "walmart\\.com\\.akadns\\.net\\/rum\\.gif",
-            "cookies": 0.0000272,
-            "fingerprinting": 0,
-            "subdomains": [
-                "beacon-cdn-custom"
-            ],
-            "apis": {},
-            "sites": 4,
-            "prevalence": 0.0000272,
-            "cnames": [
-                {
-                    "original": "beacon.walmart.com",
-                    "resolved": "beacon-cdn-custom.walmart.com.akadns.net"
-                }
-            ],
-            "responseHashes": [
-                "13f86bd1a6d578ee82ca0c54a9a634e03d8d7db09380d72590b158f173f53790"
-            ],
+            "responseHashes": [],
             "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "walmart.com",
-                "mystore.walmart.com",
                 "photos3.walmart.com",
                 "www.walmart.com"
             ]
@@ -167,28 +177,59 @@
                 "photos3.walmart.com",
                 "www.walmart.com"
             ]
+        },
+        {
+            "rule": "walmart\\.com\\.akadns\\.net\\/beacon\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "beacon-all"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "beacon.game.co.za",
+                    "resolved": "beacon-all.walmart.com.akadns.net"
+                }
+            ],
+            "responseHashes": [
+                "1f22ef2e22205a4a67ad12ccbe2d6309d9c62cfed695ee429331f28171ab3a42"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "game.co.za",
+                "www.game.co.za"
+            ]
         }
     ],
     "categories": [
         "CDN"
     ],
     "performance": {},
-    "cookies": 0.0000409,
+    "cookies": 0.0000613,
     "topInitiators": [
         {
             "domain": "walmartimages.com",
-            "prevalence": 0.9545454545454546
+            "prevalence": 0.7894736842105263
         },
         {
             "domain": "wal.co",
-            "prevalence": 0.045454545454545456
+            "prevalence": 0.10526315789473684
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.10526315789473684
         }
     ],
     "types": {
         "Other": 3,
-        "Script": 4,
-        "Ping": 3,
-        "Image": 7
+        "Script": 6,
+        "Ping": 4,
+        "Image": 6
     },
     "nameservers": []
 }

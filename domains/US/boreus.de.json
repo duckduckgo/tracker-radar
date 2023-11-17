@@ -4,13 +4,19 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000341,
-    "sites": 5,
+    "prevalence": 0.0000749,
+    "sites": 11,
     "subdomains": [
+        "mga-ca.dns",
+        "lb-nbk-sso.dns",
         "lb-sir-revive.dns",
         "lb-sir-php.dns"
     ],
     "cnames": [
+        {
+            "original": "lr.idowa.de",
+            "resolved": "mga-ca.dns.boreus.de"
+        },
         {
             "original": "pix.stuttgarter-nachrichten.de",
             "resolved": "lb-sir-php.dns.boreus.de"
@@ -20,6 +26,10 @@
             "resolved": "lb-sir-php.dns.boreus.de"
         },
         {
+            "original": "sso.kurier.de",
+            "resolved": "lb-nbk-sso.dns.boreus.de"
+        },
+        {
             "original": "wer.schwarzwaelder-bote.de",
             "resolved": "lb-sir-revive.dns.boreus.de"
         }
@@ -27,7 +37,61 @@
     "fingerprinting": 0,
     "resources": [
         {
-            "rule": "boreus\\.de\\/www\\/delivery\\/lg\\.php",
+            "rule": "boreus\\.de\\/images\\/pic\\.gif",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "mga-ca.dns"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "lr.idowa.de",
+                    "resolved": "mga-ca.dns.boreus.de"
+                }
+            ],
+            "responseHashes": [
+                "27e8e3dd2c535a19a23e9213b3fe48b0b835e6b226bf67712d496bd1acb91f19"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "idowa.de",
+                "www.idowa.de"
+            ]
+        },
+        {
+            "rule": "boreus\\.de\\/auth\\/logonstatus",
+            "cookies": 0.0000136,
+            "fingerprinting": 0,
+            "subdomains": [
+                "lb-nbk-sso.dns"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "sso.kurier.de",
+                    "resolved": "lb-nbk-sso.dns.boreus.de"
+                }
+            ],
+            "responseHashes": [
+                "86b682a4692ad62de4858638a768914cdc7c310efde495d9a165014de50015b1"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kurier.de",
+                "www.kurier.de"
+            ]
+        },
+        {
+            "rule": "boreus\\.de\\/www\\/delivery\\/asyncjs_sb\\.php",
             "cookies": 0.0000136,
             "fingerprinting": 0,
             "subdomains": [
@@ -43,9 +107,9 @@
                 }
             ],
             "responseHashes": [
-                "e963e7196beb9123059ec3534b042ebcd1ef0a470fa568bfbebfeab2f33c4fda"
+                "bcc32934def94d57568826e0f31d2c2f2a371f4bf89d48f2c80e923d4e260dd5"
             ],
-            "type": "Image",
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -55,14 +119,14 @@
         },
         {
             "rule": "boreus\\.de\\/adbl\\/adframe\\.js",
-            "cookies": 0.0000136,
+            "cookies": 0.0000204,
             "fingerprinting": 0,
             "subdomains": [
                 "lb-sir-php.dns"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "sites": 3,
+            "prevalence": 0.0000204,
             "cnames": [
                 {
                     "original": "pix.stuttgarter-nachrichten.de",
@@ -81,21 +145,22 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "stuttgarter-nachrichten.de",
+                "www.stuttgarter-nachrichten.de",
                 "www.stuttgarter-zeitung.de"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0000272,
+    "cookies": 0.0000545,
     "types": {
-        "Image": 2,
-        "Script": 2
+        "XHR": 4,
+        "Script": 5
     },
     "nameservers": [
-        "ns2.boreus.de",
         "ns4.boreus.de",
-        "ns1.boreus.de",
-        "ns3.boreus.de"
+        "ns2.boreus.de",
+        "ns3.boreus.de",
+        "ns1.boreus.de"
     ]
 }
