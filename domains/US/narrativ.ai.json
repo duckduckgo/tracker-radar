@@ -4,10 +4,11 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000341,
-    "sites": 5,
+    "prevalence": 0.0000477,
+    "sites": 7,
     "subdomains": [
-        "api"
+        "api",
+        "cdn"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -28,11 +29,11 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "statenews.com",
-                "www.eastidahonews.com",
+                "eastidahonews.com",
                 "www.redandblack.com",
                 "www.thecrimson.com",
-                "www.thedp.com"
+                "www.thedp.com",
+                "www.washingtonian.com"
             ]
         },
         {
@@ -47,20 +48,20 @@
             "prevalence": 0.0000341,
             "cnames": [],
             "responseHashes": [
-                "7a23c82e615d334a3d77c8b6a7ed1a9655e715c6f1234a7ee8ad7597c13f3fa7",
                 "225820f09ab288861f9435adf9b4b233ee0f05a987d8b3e79118c324ded8bf3f",
                 "bed7ad9b07766e1d4dee8089cd98eccb90acb8a4ff321b5d231accca35182be8",
-                "58c82b934418bcd5b65ae59b3e78b3f5d224c88a716ffedc7776fe2d7edda1f7"
+                "58c82b934418bcd5b65ae59b3e78b3f5d224c88a716ffedc7776fe2d7edda1f7",
+                "6e40869adb7b15840c71653a12fdc50607acabbd2b10e2d45aef06a0089c3672"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "statenews.com",
-                "www.eastidahonews.com",
+                "eastidahonews.com",
                 "www.redandblack.com",
                 "www.thecrimson.com",
-                "www.thedp.com"
+                "www.thedp.com",
+                "www.washingtonian.com"
             ]
         },
         {
@@ -71,8 +72,8 @@
                 "api"
             ],
             "apis": {},
-            "sites": 5,
-            "prevalence": 0.0000341,
+            "sites": 6,
+            "prevalence": 0.0000409,
             "cnames": [],
             "responseHashes": [
                 "08e836831c03f25670f9fb341cbda94faf85d6d96d65504e84071fad0d07b0ee"
@@ -81,11 +82,12 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "statenews.com",
+                "eastidahonews.com",
                 "www.eastidahonews.com",
                 "www.redandblack.com",
                 "www.thecrimson.com",
-                "www.thedp.com"
+                "www.thedp.com",
+                "www.washingtonian.com"
             ]
         },
         {
@@ -96,43 +98,86 @@
                 "api"
             ],
             "apis": {},
-            "sites": 5,
-            "prevalence": 0.0000341,
+            "sites": 6,
+            "prevalence": 0.0000409,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "statenews.com",
+                "eastidahonews.com",
                 "www.eastidahonews.com",
                 "www.redandblack.com",
                 "www.thecrimson.com",
-                "www.thedp.com"
+                "www.thedp.com",
+                "www.washingtonian.com"
+            ]
+        },
+        {
+            "rule": "narrativ\\.ai\\/narrativ-washingtonian-v1\\.0\\.0\\.js",
+            "cookies": 0.00000682,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Document.cookie getter": 1,
+                "Document.cookie setter": 1,
+                "Date.prototype.getTime": 1,
+                "Date.prototype.getTimezoneOffset": 1,
+                "Navigator.prototype.userAgent": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "9c356bebcb34c64dd3bc6c00b3294bd1b0e7ef8539daa8972b7f5805334ad3ad"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "narrativ_session_id": {
+                    "ttl": 2592007,
+                    "length": 36,
+                    "prevalence": 0.000006817887409407321,
+                    "uniqueness": 1
+                },
+                "narrativ_latest_action": {
+                    "ttl": 2592007,
+                    "length": 13,
+                    "prevalence": 0.000006817887409407321,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "washingtonian.com",
+                "www.washingtonian.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.00000681,
+    "cookies": 0.0000136,
     "topInitiators": [
         {
-            "domain": "narrativ-source-public.s3.amazonaws.com",
-            "prevalence": 0.7272727272727273
+            "domain": "first party",
+            "prevalence": 0.5
         },
         {
-            "domain": "first party",
-            "prevalence": 0.2727272727272727
+            "domain": "narrativ-source-public.s3.amazonaws.com",
+            "prevalence": 0.5
         }
     ],
     "types": {
-        "Preflight": 10,
-        "Fetch": 10
+        "Preflight": 11,
+        "Fetch": 11,
+        "Script": 2
     },
     "nameservers": [
-        "ns-1029.awsdns-00.org",
-        "ns-635.awsdns-15.net",
         "ns-1805.awsdns-33.co.uk",
-        "ns-186.awsdns-23.com"
+        "ns-186.awsdns-23.com",
+        "ns-1029.awsdns-00.org",
+        "ns-635.awsdns-15.net"
     ]
 }

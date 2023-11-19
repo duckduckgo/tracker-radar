@@ -7,7 +7,10 @@
     "prevalence": 0.0000409,
     "sites": 6,
     "subdomains": [
-        "qti"
+        "qti",
+        "avqtools",
+        "avqgate",
+        "avqservice"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -21,14 +24,10 @@
             ],
             "apis": {},
             "sites": 4,
-            "prevalence": 0.0000272,
+            "prevalence": 0.0000273,
             "cnames": [],
-            "responseHashes": [
-                "2410236c0b4281e5a7606809576e7bce8ed37677b0ad2e977470f02a866999b4",
-                "096d220f8af2b0a719d02c7a9b8823c1f596bb53e0ca17dabb2bc30ed61aa21c",
-                "ff8800df0ab7bece6b35010fa477031d561e9eba30bb46196ec9afeec050f44a"
-            ],
-            "type": "XHR",
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -47,10 +46,14 @@
             ],
             "apis": {},
             "sites": 4,
-            "prevalence": 0.0000272,
+            "prevalence": 0.0000273,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "c92ddc82a99f77422138a02d8265c718353c211fa2cc1375b804a8dba8d7fff1",
+                "abd68d47e3de0e6a9d61dd8dd8090f6c662a951fab986e6e786cc7b5286921e8",
+                "e2a3f1bcef000467427ae62857dadbc89e43812294602fda025575af0de75213"
+            ],
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -59,11 +62,187 @@
                 "www.pdfforge.org",
                 "www.sodapdf.com"
             ]
+        },
+        {
+            "rule": "avanquest\\.com\\/js\\/v3\\/sodapdf\\.com\\.min\\.js",
+            "cookies": 0.0000136,
+            "fingerprinting": 1,
+            "subdomains": [
+                "avqtools"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "2370f26bba9a5b506f0c5ed7e5ba3c90f6ca03d95dea842b569edb73a6511131"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "sodapdf": {
+                    "ttl": 7776004,
+                    "length": 3,
+                    "prevalence": 0.000006817887409407321,
+                    "uniqueness": 1
+                },
+                "qti": {
+                    "ttl": 31536005,
+                    "length": 47,
+                    "prevalence": 0.000013635774818814642,
+                    "uniqueness": 1
+                },
+                "visitor_id": {
+                    "ttl": 31536005,
+                    "length": 36,
+                    "prevalence": 0.000013635774818814642,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {
+                "lotame_domain_check": 0.000006817887409407321
+            },
+            "exampleSites": [
+                "sodapdf.com",
+                "www.sodapdf.com"
+            ]
+        },
+        {
+            "rule": "avanquest\\.com\\/api\\/visitor\\/",
+            "cookies": 0.0000136,
+            "fingerprinting": 0,
+            "subdomains": [
+                "avqgate"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "7ef628119c655eb445c7a61bfca952b5f6be3c9ac521977a46db3acf92753156"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sodapdf.com",
+                "www.sodapdf.com"
+            ]
+        },
+        {
+            "rule": "avanquest\\.com\\/api\\/v1\\/services\\/user",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "avqservice"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sodapdf.com",
+                "www.sodapdf.com"
+            ]
+        },
+        {
+            "rule": "avanquest\\.com\\/api\\/v1\\/services\\/user",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "avqservice"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sodapdf.com",
+                "www.sodapdf.com"
+            ]
+        },
+        {
+            "rule": "avanquest\\.com\\/api\\/v1\\/services\\/session",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "avqservice"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sodapdf.com",
+                "www.sodapdf.com"
+            ]
+        },
+        {
+            "rule": "avanquest\\.com\\/api\\/v1\\/services\\/session",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "avqservice"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sodapdf.com",
+                "www.sodapdf.com"
+            ]
+        },
+        {
+            "rule": "avanquest\\.com\\/api\\/visitor-js\\/",
+            "cookies": 0.0000136,
+            "fingerprinting": 0,
+            "subdomains": [
+                "avqgate"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "f112b7ac26691e07d4dad2900e04f259d34da84ec3f88698fd6b900498e7e905"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "qti": 0.000013635774818814642,
+                "visitor_id": 0.000013635774818814642,
+                "lotame_domain_check": 0.000006817887409407321
+            },
+            "exampleSites": [
+                "sodapdf.com",
+                "www.sodapdf.com"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.00000681,
+    "cookies": 0.0000136,
     "topInitiators": [
         {
             "domain": "lulusoft.com",
@@ -75,11 +254,13 @@
         }
     ],
     "types": {
+        "Preflight": 8,
         "XHR": 4,
-        "Preflight": 4
+        "Script": 6,
+        "Fetch": 4
     },
     "nameservers": [
-        "henry.ns.cloudflare.com",
-        "lina.ns.cloudflare.com"
+        "lina.ns.cloudflare.com",
+        "henry.ns.cloudflare.com"
     ]
 }

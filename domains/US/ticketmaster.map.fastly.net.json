@@ -9,12 +9,17 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000136,
-    "sites": 2,
+    "prevalence": 0.0000205,
+    "sites": 3,
     "subdomains": [
-        "prod"
+        "prod",
+        "dualstack"
     ],
     "cnames": [
+        {
+            "original": "analytics.ticketmaster.it",
+            "resolved": "dualstack.ticketmaster.map.fastly.net"
+        },
         {
             "original": "identity.ticketmaster.ca",
             "resolved": "prod.ticketmaster.map.fastly.net"
@@ -38,23 +43,50 @@
             "prevalence": 0.0000136,
             "cnames": [
                 {
-                    "original": "identity.ticketmaster.ca",
+                    "original": "identity.ticketmaster.com",
                     "resolved": "prod.ticketmaster.map.fastly.net"
                 },
                 {
-                    "original": "identity.ticketmaster.com",
+                    "original": "identity.ticketmaster.ca",
                     "resolved": "prod.ticketmaster.map.fastly.net"
                 }
             ],
             "responseHashes": [
-                "2dfe5e41e8495723334a5507860df9f20ab0944613ccfaec507e5bcce0e0ce26"
+                "2fb064369395faeeeea0e3c13f41454ec763945f92f0f91ea319da3f09f17af7"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "ticketmaster.ca",
-                "www.ticketmaster.com"
+                "ticketmaster.com",
+                "www.ticketmaster.ca"
+            ]
+        },
+        {
+            "rule": "ticketmaster\\.map\\.fastly\\.net\\/api\\/reports",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dualstack"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "analytics.ticketmaster.it",
+                    "resolved": "dualstack.ticketmaster.map.fastly.net"
+                }
+            ],
+            "responseHashes": [
+                "98c4922bb641c65c7a30b7bcafdf230b9b00b6693631c56146ab25b2786ee4a3"
+            ],
+            "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ticketmaster.it",
+                "www.ticketmaster.it"
             ]
         },
         {
@@ -69,11 +101,11 @@
             "prevalence": 0.0000136,
             "cnames": [
                 {
-                    "original": "identity.ticketmaster.ca",
+                    "original": "identity.ticketmaster.com",
                     "resolved": "prod.ticketmaster.map.fastly.net"
                 },
                 {
-                    "original": "identity.ticketmaster.com",
+                    "original": "identity.ticketmaster.ca",
                     "resolved": "prod.ticketmaster.map.fastly.net"
                 }
             ],
@@ -82,8 +114,8 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "ticketmaster.ca",
-                "www.ticketmaster.com"
+                "ticketmaster.com",
+                "www.ticketmaster.ca"
             ]
         },
         {
@@ -98,11 +130,11 @@
             "prevalence": 0.0000136,
             "cnames": [
                 {
-                    "original": "identity.ticketmaster.ca",
+                    "original": "identity.ticketmaster.com",
                     "resolved": "prod.ticketmaster.map.fastly.net"
                 },
                 {
-                    "original": "identity.ticketmaster.com",
+                    "original": "identity.ticketmaster.ca",
                     "resolved": "prod.ticketmaster.map.fastly.net"
                 }
             ],
@@ -113,8 +145,8 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "ticketmaster.ca",
-                "www.ticketmaster.com"
+                "ticketmaster.com",
+                "www.ticketmaster.ca"
             ]
         }
     ],
@@ -133,11 +165,20 @@
     "topInitiators": [
         {
             "domain": "tmconst.com",
-            "prevalence": 1
+            "prevalence": 0.5555555555555556
+        },
+        {
+            "domain": "sc-static.net",
+            "prevalence": 0.3333333333333333
+        },
+        {
+            "domain": "tiktok.com",
+            "prevalence": 0.1111111111111111
         }
     ],
     "types": {
         "Script": 2,
+        "Other": 2,
         "Preflight": 2,
         "XHR": 2
     },

@@ -9,16 +9,20 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000409,
-    "sites": 6,
+    "prevalence": 0.0000341,
+    "sites": 5,
     "subdomains": [
         "mssdk-sg",
+        "mcs-sg",
+        "ads",
         "api-pns-sg",
-        "api-pns-va",
-        "web-va",
-        "web-i18n"
+        "api-pns-va"
     ],
     "cnames": [
+        {
+            "original": "ads.tiktok.com",
+            "resolved": "ads.tiktok.com.edgekey.net"
+        },
         {
             "original": "api-pns-sg.tiktok.com",
             "resolved": "api-pns-sg.tiktok.com.edgekey.net"
@@ -28,23 +32,19 @@
             "resolved": "api-pns-va.tiktok.com.edgekey.net"
         },
         {
+            "original": "mcs-sg.tiktok.com",
+            "resolved": "mcs-sg.tiktok.com.edgekey.net"
+        },
+        {
             "original": "mssdk-sg.tiktok.com",
             "resolved": "mssdk-sg.tiktok.com.edgekey.net"
-        },
-        {
-            "original": "web-i18n.tiktok.com",
-            "resolved": "web-i18n.tiktok.com.edgekey.net"
-        },
-        {
-            "original": "web-va.tiktok.com",
-            "resolved": "web-va.tiktok.com.edgekey.net"
         }
     ],
     "fingerprinting": 0,
     "resources": [
         {
             "rule": "tiktok\\.com\\.edgekey\\.net\\/web\\/report",
-            "cookies": 0.00000681,
+            "cookies": 0.0000136,
             "fingerprinting": 0,
             "subdomains": [
                 "mssdk-sg"
@@ -58,13 +58,69 @@
                     "resolved": "mssdk-sg.tiktok.com.edgekey.net"
                 }
             ],
-            "responseHashes": [],
+            "responseHashes": [
+                "b097fc471c067f5960fbf018f38f1e00396bb71612d79be26976b8f18cf8da26"
+            ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "tiktok.com",
                 "ads.tiktok.com"
+            ]
+        },
+        {
+            "rule": "tiktok\\.com\\.edgekey\\.net\\/v1\\/list",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "mcs-sg"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "mcs-sg.tiktok.com",
+                    "resolved": "mcs-sg.tiktok.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "fbd787d052fac80ff0f335797487f1f21052cfa2cdbe8a73295f4b3ccfd57678"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tiktok.com",
+                "business.tiktok.com"
+            ]
+        },
+        {
+            "rule": "tiktok\\.com\\.edgekey\\.net\\/i18n_node\\/fe_optimize\\/get_html",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ads"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "ads.tiktok.com",
+                    "resolved": "ads.tiktok.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "645a45d99ef1e54f66099466a137eee206432787a27c103839ec61002b606bd0"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tiktok.com",
+                "business.tiktok.com"
             ]
         },
         {
@@ -128,62 +184,29 @@
                 "tiktok.com",
                 "shop.tiktok.com"
             ]
-        },
-        {
-            "rule": "tiktok\\.com\\.edgekey\\.net\\/passport\\/web\\/store_region\\/",
-            "cookies": 0.0000204,
-            "fingerprinting": 0,
-            "subdomains": [
-                "web-va",
-                "web-i18n"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000204,
-            "cnames": [
-                {
-                    "original": "web-va.tiktok.com",
-                    "resolved": "web-va.tiktok.com.edgekey.net"
-                },
-                {
-                    "original": "web-i18n.tiktok.com",
-                    "resolved": "web-i18n.tiktok.com.edgekey.net"
-                }
-            ],
-            "responseHashes": [
-                "0b1e4cdc8824e1aed9b36a053fcde0837c38bde0962c889f53fc2a796879372b"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "tiktok.com",
-                "m.tiktok.com",
-                "www.tiktok.com"
-            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0000204,
+    "cookies": 0.0000136,
     "topInitiators": [
         {
-            "domain": "ttwstatic.com",
-            "prevalence": 0.6666666666666666
+            "domain": "ibytedtos.com",
+            "prevalence": 0.7
         },
         {
-            "domain": "ibytedtos.com",
-            "prevalence": 0.2222222222222222
+            "domain": "ttwstatic.com",
+            "prevalence": 0.2
         },
         {
             "domain": "oecstatic.com",
-            "prevalence": 0.1111111111111111
+            "prevalence": 0.1
         }
     ],
     "types": {
-        "XHR": 4,
-        "Preflight": 2,
-        "Fetch": 3
+        "XHR": 6,
+        "Fetch": 2,
+        "Preflight": 2
     },
     "nameservers": []
 }

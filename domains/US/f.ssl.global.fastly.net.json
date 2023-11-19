@@ -9,17 +9,48 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000272,
+    "prevalence": 0.0000273,
     "sites": 4,
     "subdomains": [],
     "cnames": [
         {
             "original": "i.businessinsider.com",
             "resolved": "f.ssl.global.fastly.net"
+        },
+        {
+            "original": "markets.businessinsider.com",
+            "resolved": "f.ssl.global.fastly.net"
         }
     ],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "f\\.ssl\\.global\\.fastly\\.net\\/cross-domain",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [
+                {
+                    "original": "markets.businessinsider.com",
+                    "resolved": "f.ssl.global.fastly.net"
+                }
+            ],
+            "responseHashes": [
+                "f074d87ca5f2b8cd1249437a34055f9b2637c97b53542e947b45433a0c32dd05",
+                "816c8c4bcee2203ff87fc756e450c95a3f7b2a0eeae8c1f3fb06be0ae0a53d4e"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "businessinsider.com",
+                "www.businessinsider.com",
+                "www.insider.com"
+            ]
+        },
         {
             "rule": "f\\.ssl\\.global\\.fastly\\.net\\/t\\.gif",
             "cookies": 0,
@@ -27,7 +58,7 @@
             "subdomains": [],
             "apis": {},
             "sites": 3,
-            "prevalence": 0.0000204,
+            "prevalence": 0.0000205,
             "cnames": [
                 {
                     "original": "i.businessinsider.com",
@@ -38,6 +69,34 @@
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
             ],
             "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "permutive-id": 0.000006817887409407321
+            },
+            "exampleSites": [
+                "businessinsider.com",
+                "www.businessinsider.com",
+                "www.insider.com"
+            ]
+        },
+        {
+            "rule": "f\\.ssl\\.global\\.fastly\\.net\\/scripts\\/cross-domain\\.f8744e401646a159de84\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [
+                {
+                    "original": "markets.businessinsider.com",
+                    "resolved": "f.ssl.global.fastly.net"
+                }
+            ],
+            "responseHashes": [
+                "ae6232db99e3a6ae278badc08645d3c6cb3314c728f3b37447c821158b78e579"
+            ],
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -66,7 +125,9 @@
         }
     ],
     "types": {
-        "Ping": 3
+        "Document": 3,
+        "Ping": 3,
+        "Script": 3
     },
     "nameservers": []
 }

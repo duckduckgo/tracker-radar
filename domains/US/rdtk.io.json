@@ -4,12 +4,13 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000341,
-    "sites": 5,
+    "prevalence": 0.0000409,
+    "sites": 6,
     "subdomains": [
         "hnbow",
         "vpfsf",
-        "ckpkg",
+        "kmwai",
+        "idb5a",
         "papcc"
     ],
     "cnames": [
@@ -22,28 +23,34 @@
             "resolved": "vpfsf.rdtk.io"
         },
         {
-            "original": "track.hukitchen.com",
-            "resolved": "hnbow.rdtk.io"
+            "original": "rdt.whitewall.com",
+            "resolved": "idb5a.rdtk.io"
         },
         {
-            "original": "tracker.yolo247.com",
-            "resolved": "ckpkg.rdtk.io"
+            "original": "track.hukitchen.com",
+            "resolved": "hnbow.rdtk.io"
         }
     ],
     "fingerprinting": 1,
     "resources": [
         {
             "rule": "rdtk\\.io\\/uniclick\\.js",
-            "cookies": 0.0000136,
+            "cookies": 0.0000205,
             "fingerprinting": 1,
             "subdomains": [
                 "hnbow",
                 "vpfsf",
-                "ckpkg"
+                "kmwai",
+                "idb5a"
             ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000204,
+            "apis": {
+                "Document.cookie getter": 1,
+                "window.sessionStorage": 1,
+                "Date.prototype.getTime": 1,
+                "Document.cookie setter": 1
+            },
+            "sites": 4,
+            "prevalence": 0.0000273,
             "cnames": [
                 {
                     "original": "track.hukitchen.com",
@@ -54,23 +61,33 @@
                     "resolved": "vpfsf.rdtk.io"
                 },
                 {
-                    "original": "tracker.yolo247.com",
-                    "resolved": "ckpkg.rdtk.io"
+                    "original": "rdt.whitewall.com",
+                    "resolved": "idb5a.rdtk.io"
                 }
             ],
             "responseHashes": [
                 "4b0d42978822d4da827e234aac4dbade8428b0db718ac604a56003d01ac954de",
-                "d2b4d638eb9b8ac6729c7ef938b67a8f70d870639cc462bfce4d5d5dabdbf60a"
+                "49299a0d7329cfd461c2f922ec0c64ec196687e631ec0ab9d8826571bbe022ea",
+                "95f0162dc56d5bc3e6c11c987bff42cc55aeb71aa05434e0ab4b749bee2aad06"
             ],
             "type": "Script",
-            "firstPartyCookies": {},
+            "firstPartyCookies": {
+                "rtkclickid-store": {
+                    "ttl": 2592002,
+                    "length": 24,
+                    "prevalence": 0.000006817887409407321,
+                    "uniqueness": 1
+                }
+            },
             "firstPartyCookiesSent": {
-                "_ju_dm": 0.000006812035504329049
+                "_ju_dm": 0.000006817887409407321,
+                "smc_not": 0.000006817887409407321
             },
             "exampleSites": [
                 "hukitchen.com",
                 "mackeeper.com",
-                "www.yolo247.com"
+                "tofubud.com",
+                "www.whitewall.com"
             ]
         },
         {
@@ -79,11 +96,12 @@
             "fingerprinting": 0,
             "subdomains": [
                 "hnbow",
+                "kmwai",
                 "papcc"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "sites": 3,
+            "prevalence": 0.0000205,
             "cnames": [
                 {
                     "original": "track.hukitchen.com",
@@ -94,12 +112,15 @@
                     "resolved": "papcc.rdtk.io"
                 }
             ],
-            "responseHashes": [],
+            "responseHashes": [
+                "3e07aa57aa90085fa997615d81e81e5598006ab0d91ebfbf634255fe55c3edd4"
+            ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "hukitchen.com",
+                "tofubud.com",
                 "www.mensuas.com"
             ]
         },
@@ -109,19 +130,20 @@
             "fingerprinting": 0,
             "subdomains": [
                 "vpfsf",
-                "ckpkg"
+                "kmwai",
+                "idb5a"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "sites": 3,
+            "prevalence": 0.0000205,
             "cnames": [
                 {
                     "original": "rdt.mackeeper.com",
                     "resolved": "vpfsf.rdtk.io"
                 },
                 {
-                    "original": "tracker.yolo247.com",
-                    "resolved": "ckpkg.rdtk.io"
+                    "original": "rdt.whitewall.com",
+                    "resolved": "idb5a.rdtk.io"
                 }
             ],
             "responseHashes": [
@@ -129,34 +151,45 @@
             ],
             "type": "XHR",
             "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
+            "firstPartyCookiesSent": {
+                "rtkclickid-store": 0.000006817887409407321
+            },
             "exampleSites": [
                 "mackeeper.com",
-                "www.yolo247.com"
+                "tofubud.com",
+                "www.whitewall.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0000204,
+    "cookies": 0.0000273,
     "topInitiators": [
         {
+            "domain": "first party",
+            "prevalence": 0.4
+        },
+        {
             "domain": "sentry-cdn.com",
-            "prevalence": 0.75
+            "prevalence": 0.3
+        },
+        {
+            "domain": "noibu.com",
+            "prevalence": 0.2
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.25
+            "prevalence": 0.1
         }
     ],
     "types": {
-        "Script": 5,
-        "XHR": 2
+        "Script": 7,
+        "XHR": 3
     },
     "nameservers": [
         "ns-1452.awsdns-53.org",
+        "ns-732.awsdns-27.net",
         "ns-239.awsdns-29.com",
-        "ns-1870.awsdns-41.co.uk",
-        "ns-732.awsdns-27.net"
+        "ns-1870.awsdns-41.co.uk"
     ]
 }
