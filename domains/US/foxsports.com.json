@@ -9,12 +9,14 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000477,
-    "sites": 7,
+    "prevalence": 0.000068,
+    "sites": 10,
     "subdomains": [
         "statics",
         "www",
-        "api"
+        "api",
+        "api.nova",
+        "b"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -45,20 +47,21 @@
         },
         {
             "rule": "foxsports\\.com\\/static\\/orion\\/scorestrip\\.js",
-            "cookies": 0.0000136,
+            "cookies": 0.0000272,
             "fingerprinting": 2,
             "subdomains": [
                 "statics"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 3,
-                "Event.prototype.timeStamp": 2,
+                "Navigator.prototype.userAgent": 4,
+                "Event.prototype.timeStamp": 4,
                 "Navigator.prototype.product": 4,
-                "Document.cookie getter": 2,
-                "Document.cookie setter": 2,
+                "Document.cookie getter": 4,
+                "Document.cookie setter": 4,
                 "window.localStorage": 4,
                 "window.innerWidth": 4,
-                "Date.prototype.getTime": 4
+                "Date.prototype.getTime": 4,
+                "window.devicePixelRatio": 1
             },
             "sites": 4,
             "prevalence": 0.0000272,
@@ -78,14 +81,14 @@
         },
         {
             "rule": "foxsports\\.com\\/accounts\\/favorites-modal\\/location\\/",
-            "cookies": 0.00000681,
+            "cookies": 0.0000136,
             "fingerprinting": 0,
             "subdomains": [
                 "www"
             ],
             "apis": {},
             "sites": 5,
-            "prevalence": 0.0000341,
+            "prevalence": 0.000034,
             "cnames": [],
             "responseHashes": [
                 "41a733cd959e7c8c870de4b37c0c71f7552cd4749d10cfe070ef2f39d5712f59"
@@ -110,7 +113,7 @@
             ],
             "apis": {},
             "sites": 5,
-            "prevalence": 0.0000341,
+            "prevalence": 0.000034,
             "cnames": [],
             "responseHashes": [
                 "d0012181146dfa88554f5dc26b985af538b5d467b045001f9d63bf5f1426f4a1"
@@ -125,34 +128,83 @@
                 "www.fox6now.com",
                 "www.livenowfox.com"
             ]
+        },
+        {
+            "rule": "foxsports\\.com\\/v1\\/p",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api.nova"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "12f71cb993958eefc4bdb41d7dbbda490779a9c7aba448f7be52bb63912e0254"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "westminsterkennelclub.org",
+                "www.westminsterkennelclub.org"
+            ]
+        },
+        {
+            "rule": "foxsports\\.com\\/id",
+            "cookies": 0.0000136,
+            "fingerprinting": 0,
+            "subdomains": [
+                "b"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "cdb74f6bef2cac0608e06d639f3e6ecf868f2a7609b64c5cb873ac5ab75afda2"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "westminsterkennelclub.org",
+                "www.westminsterkennelclub.org"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0000272,
+    "cookies": 0.0000544,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.8095238095238095
+            "prevalence": 0.7142857142857143
+        },
+        {
+            "domain": "segment.com",
+            "prevalence": 0.21428571428571427
         },
         {
             "domain": "datadoghq-browser-agent.com",
-            "prevalence": 0.19047619047619047
+            "prevalence": 0.07142857142857142
         }
     ],
     "types": {
         "Stylesheet": 4,
         "Script": 4,
-        "XHR": 10
+        "XHR": 12,
+        "Fetch": 2
     },
     "nameservers": [
-        "ns01.foxdoua.com",
-        "ns02.foxdoua.com",
+        "ns01.dns.fox",
         "ns03.foxdoua.com",
-        "ns04.foxdoua.com",
-        "ns04.dns.fox",
         "ns03.dns.fox",
+        "ns02.foxdoua.com",
         "ns02.dns.fox",
-        "ns01.dns.fox"
+        "ns04.foxdoua.com",
+        "ns01.foxdoua.com",
+        "ns04.dns.fox"
     ]
 }

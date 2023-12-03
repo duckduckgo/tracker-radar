@@ -7,12 +7,15 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.000804,
-    "sites": 8,
+    "prevalence": 0.00101,
+    "sites": 10,
     "subdomains": [
-        "arduino-prod-cd-7d4guw5p2tbeio38.edge.tenants",
+        "docker-prod-cd-egdvd1hron6jfkf7.edge.tenants.us",
+        "fs24-prod-cd-al9x7xt8mi4bfn23.edge.tenants.eu",
         "native-prod-cd-q79eqtebyokcrldh.edge.tenants.eu",
-        "s-ge-cd-af9zxjj5mj1sab0i.edge.tenants.eu"
+        "s-ge-cd-af9zxjj5mj1sab0i.edge.tenants.eu",
+        "techsmith-prod-cd-hjvgzt04v9ctn54n.edge.tenants",
+        "cdn"
     ],
     "cnames": [
         {
@@ -24,28 +27,42 @@
             "resolved": "s-ge-cd-af9zxjj5mj1sab0i.edge.tenants.eu.auth0.com"
         },
         {
-            "original": "login.arduino.cc",
-            "resolved": "arduino-prod-cd-7d4guw5p2tbeio38.edge.tenants.auth0.com"
+            "original": "login.docker.com",
+            "resolved": "docker-prod-cd-egdvd1hron6jfkf7.edge.tenants.us.auth0.com"
+        },
+        {
+            "original": "login.financescout24.ch",
+            "resolved": "fs24-prod-cd-al9x7xt8mi4bfn23.edge.tenants.eu.auth0.com"
+        },
+        {
+            "original": "login.techsmith.com",
+            "resolved": "techsmith-prod-cd-hjvgzt04v9ctn54n.edge.tenants.auth0.com"
         }
     ],
     "fingerprinting": 1,
     "resources": [
         {
             "rule": "auth0\\.com\\/authorize",
-            "cookies": 0.000302,
+            "cookies": 0.000503,
             "fingerprinting": 0,
             "subdomains": [
-                "arduino-prod-cd-7d4guw5p2tbeio38.edge.tenants",
+                "docker-prod-cd-egdvd1hron6jfkf7.edge.tenants.us",
+                "fs24-prod-cd-al9x7xt8mi4bfn23.edge.tenants.eu",
                 "native-prod-cd-q79eqtebyokcrldh.edge.tenants.eu",
-                "s-ge-cd-af9zxjj5mj1sab0i.edge.tenants.eu"
+                "s-ge-cd-af9zxjj5mj1sab0i.edge.tenants.eu",
+                "techsmith-prod-cd-hjvgzt04v9ctn54n.edge.tenants"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000302,
+            "sites": 5,
+            "prevalence": 0.000503,
             "cnames": [
                 {
-                    "original": "login.arduino.cc",
-                    "resolved": "arduino-prod-cd-7d4guw5p2tbeio38.edge.tenants.auth0.com"
+                    "original": "login.docker.com",
+                    "resolved": "docker-prod-cd-egdvd1hron6jfkf7.edge.tenants.us.auth0.com"
+                },
+                {
+                    "original": "login.financescout24.ch",
+                    "resolved": "fs24-prod-cd-al9x7xt8mi4bfn23.edge.tenants.eu.auth0.com"
                 },
                 {
                     "original": "auth.native-instruments.com",
@@ -54,41 +71,82 @@
                 {
                     "original": "auth0.s-ge.com",
                     "resolved": "s-ge-cd-af9zxjj5mj1sab0i.edge.tenants.eu.auth0.com"
+                },
+                {
+                    "original": "login.techsmith.com",
+                    "resolved": "techsmith-prod-cd-hjvgzt04v9ctn54n.edge.tenants.auth0.com"
                 }
             ],
             "responseHashes": [
-                "de4e9fa5de49cfbb19d3333c612855326af0caf3b0b619e3c7b57503c012d501",
-                "eb847b105e49fecbca280f6e68f2f1d7c24d92ceb1285a7182cd8ec07d71b911"
+                "24522432d32dab65f7e8dc684058a61438263f3cbadcd31f1db46fe43b27a16c",
+                "f9d02754b4d4496bb691bfa9435f965aeaa96408dfdd3483194f3d6efc5d0fda",
+                "dcc98d6c04970bc51c7f1ea770438917e58a76e20c8da94a9f5f17a85d120506",
+                "152cb0c29f320d0b897678b65e57ee3687d0653203a21ab14902b0dc3da9aa22"
             ],
             "type": "Document",
             "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "IR_gbd": 0.00010057326762546515
+            },
+            "exampleSites": [
+                "docker.com",
+                "www.financescout24.ch",
+                "www.native-instruments.com",
+                "www.s-ge.com",
+                "www.techsmith.com"
+            ]
+        },
+        {
+            "rule": "auth0\\.com\\/js\\/auth0-spa-js\\/2\\.0\\/auth0-spa-js\\.production\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "16e8addc1c2eee8f9f0b784564dbe090eff5b832017d27d5aac4d58a6bf0951f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "arduino.cc",
-                "www.native-instruments.com",
-                "www.s-ge.com"
+                "techsmith.de",
+                "www.techsmith.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000402,
+    "cookies": 0.000704,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.5
-        },
-        {
-            "domain": "native-instruments.com",
-            "prevalence": 0.25
+            "prevalence": 0.4666666666666667
         },
         {
             "domain": "auth0.com",
-            "prevalence": 0.25
+            "prevalence": 0.26666666666666666
+        },
+        {
+            "domain": "native-instruments.com",
+            "prevalence": 0.2
+        },
+        {
+            "domain": "d36jcksde1wxzq.cloudfront.net",
+            "prevalence": 0.06666666666666667
         }
     ],
     "types": {
-        "Document": 3
+        "Document": 5,
+        "Script": 2
     },
     "nameservers": [
         "monroe.ns.cloudflare.com",

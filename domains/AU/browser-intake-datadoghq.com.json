@@ -12,6 +12,7 @@
     "subdomains": [
         "rum",
         "session-replay",
+        "logs",
         "csp-report"
     ],
     "cnames": [],
@@ -29,68 +30,67 @@
             "prevalence": 0.00372,
             "cnames": [],
             "responseHashes": [
-                "7bcd3b9ab7a7f762a32872a3105369dfccf40a4ece07419dba8c285528fed446",
-                "899266ab955cc09f38ac6515e8328a8b8dc135f303d9d9098055a8a58b48fc76",
-                "81cfbb261a89ef5b90028d5f1f2be1e853a6acc745ee0bdf4ff1ee1d0092dfeb",
-                "5a287d7a5d292418ef65c388cd78c6f926368222d71b31423bee1da39851541d",
-                "8fec301ad3d32ebb865c2f40437cdd1d3ad488d3ae0501548db4f5c6d005fc34",
-                "ed21eb3279e1c3432c6d0514362866bbdc6f8e1715dd5a6024527af6bbad0659",
-                "4cd902cd5b16fffb6c81faa21d8da48c1c525bbdc89f61496328c409dd9bd0a4",
-                "4891a4fa9fc0241cff54278753f988d3948e791f6feec269a6729355ef4cd99a",
-                "ac9c2a5b90bc37dc3bfefc4c65366bf5a78975f8a6f5d471d06f6c9fb7175dd3",
-                "24b3b21f95572ef9e02b817a7ce51411623559045ab246303248824306cb4d2a",
-                "506efd0227313fda25301ffe659d70e5ab49f21cd3df48a6757b9fd921ebf4ad",
-                "fef795fd511a1fa75d4f683d3c3528d61e4737c14c7c000a45ebe00f225269cf",
-                "f8ddb9b726c8f0f4b1ff724a6eb95ebdf7ecd0384f5fafba5d4723fa16981343",
-                "b9148386aad1b4563d15d8b865088951430743ebb4e6529c040bb41ddb0602d8",
-                "c36935108e12e1951e8fd08c166c2bc34e99b723ac57070183ad095987191103",
-                "8ca54efd06b07c17db9ba09ec1f879c52a15ba730bba105fdb5bf860e1349166",
-                "d8def619c21918b1b83cd86650517cd4cd872b7faf2791ee2284a5fd92eedac1",
-                "9a91ddeba58bae7f3aa7660c4501a7466926ea8a5bee08d4c51b93c304959da4",
-                "f702da9b894b93fc267ab36aa5e8de7a899f62c47c8efa797d2144db4726c3b9",
-                "5759b290b54675618dab3cbdc620f92cde3966a3244a1d3447048d06eb6ca30b",
-                "ada86ab5a3b2e54a72ca85c8a2efa04b445425eb8671a8ee817997323fafa697",
-                "d346be4bdba9090a76aa6d24e5a5ff347deacf0d1791019d8f4d23ddf0a882f2",
-                "516f4f5108d20c0747f84ed0b606c9d365bfa8ccc06b647bf04089027929d5ad",
-                "2316f14615c3cd72f8bb3ebfdcb9d3078852de3743abaa47af4830baa5be7608",
-                "a739506346ba00b0d2f4dcd336f0e9943a07c692fed2a55dd25063b2a7ac2a59",
-                "8428f0763382f159bca298a2ab6b0168fac39356c3992f339c01f3e75342fba5",
-                "2529175691021fbe331ef20206958b06490bdff2c2cfce70c0ff64fe46c1b8d6",
-                "a1e12ebaf152afbf447227c37536d3dff14695a529db1affa3b5ec10394deea4",
-                "020e7a948c0cc847dc77314537fd98551f590f99a8644baec944b2bd0b2bd5c1",
-                "aef0cb4e8ce20bbd0a49e7ad573535a994c2ba5baf23e6037abe3f684997a91d",
-                "69c783f4f54aaf5c97f9ccf56bc64d0b40a5b5dadfadc3e196b6aa6c03579fe2",
-                "70dd167ab990d2e1155d7b3572310e3fb598ebb54bde72c0460eb7dad4606ab6",
-                "3d237b6d4bff3eaccb4ae52ca81ed2a6883510dedf8917c17892100e3b0011f6",
-                "f9611540f650ba6fe9c455d44cb36e7bfbaed01c1d268d9854e5fd0c29d445fe",
-                "ed156029f42e2efc2cea195622328b7aafce1db72b2d9a1e05c7e6db6c7d78eb"
+                "8e34bffd0f0206b65b05211db432dab9741bb5c6ff854275844578cf83d85119",
+                "96b95d67b7cb24045f90e46a19d6549262a05c0c3cc5abd819301ab53571dacf",
+                "435019e62bce2f13a82b11d0ee06f8eef2db4f78cba1aa4129e5fd830e5dd35d",
+                "e002c23081ffc07116dceaed538b18769e470d55537f1f95a80967911bf73365",
+                "b11dabe328a06c5178ab3a7c75be75d04feedc682ce8bb33ad68d669e10dfd5e",
+                "9e9cf4afacf12cf86dd78f46c7f951d53c68ba9bde4f23fea069d38ce8039690",
+                "589dfdd5628f0cec58907fda02a22c781ee7ff351132b1fa3c7d11c4a32ad6b7",
+                "6f98ad84fea1432842e5c038d845495c2f3b58057ac9e931d034736780e159e4",
+                "f543843964ca881a1418d5770e66b6386ad3093034dfd3502737557db1565256",
+                "31e10fae18f8bfa93305e3c73a89767fe3f31f1f3ec63789ca08f12e4066d6a0",
+                "1f7c46766638d45d7df3596925b3b6dd6e955274635ef5da88a0ac17b5d7254b",
+                "0ed9637bb809ed4287cdf183c89832b6e1cf2adb178ef6772da24d199d12e88a",
+                "9ea41eae9c9e2b85ba5f7ae1ab873b2d81823e01ee1af6b8e329d915fd20f20e",
+                "bd18afc01225f6f11ea8b35de290b4f4d588fdbbd7fbace23b7146e674932be4",
+                "15d80e750426f28adf4122dcf79877b345b2f847f2b4e3c3c69acf3b1572b7a4",
+                "8f7437e9d852eb7ae5e02b39becdb4e3347d48ec2e35a68140dc43e347827811",
+                "3f0cf9ef8407493219c535a59528b23bf66b6a51831db8845771788846a3175c",
+                "1ec9e57127f983c8b6dba3208e9e7d805d69a58345cff7832873f52669465f48",
+                "bea4d10af790e31ca70213088df842b90d702c2fb202fb1ae63e24defe358126",
+                "f07d3ad387c86bf1cfcf287c1575ab49c33a96334d51ec9945fc3e7f4b428cf6",
+                "9c7c55729d5ba1d6f3512c6a838bfd74863b906462b753b6de503657664d6607",
+                "a6dec621bc0ea40e4689b2abf02bf94215620b6d3ad152c5cf2efdd9dc8362b9",
+                "c436375107795659ca03fe0e64727c1f53604260fa50174dd75f133c370a4c5e",
+                "171ff97852bb0f25aadbea92d8d331f9ff8f30469f1b9f8924c3a41f92218191",
+                "c02f2a124f54b7241d36cd42a3e9e10c71377b45a61ee753053408de17213095",
+                "f4d96fb2d49fa52f3ff254fc875829e11c4bde256b742da2d2ce1cb6d3ca5df7",
+                "f8135e580f992ad778cf48aaec9311133b9f0bff84fda9854e07ed83ff8f7841",
+                "cf76edc675d275594205cacc7dcd9b7c62d366392cf79394ec2cacbd19541686",
+                "6dd35f1fb91504a87688b867969d75f48cfd12dd699619f7d2461dc1009d3f80",
+                "43dbfce59c22f229ca062b1f52a69f2a9f69765397cbeb1e8e96c2b51b5a6c32",
+                "daaa310c7292e8ca4d7d6008142f7dfd957868eaadc5c15e110574b23992568c",
+                "e67a6aaba58ce654c3a3001ddb21f2dd3c0994726e08b047988f64d727fc9447",
+                "1724bd809ab61078646d6339176641a90506d131a1b7099194f84721358e4337",
+                "880855c308ab02e3333d5a36ae300ae04efeec66989ed876b8528c049d9d37b5",
+                "119d015658c878907f8b80768b4c5881cb70ea5dfd5835af703008a60a87918e",
+                "41a3d7ce9f753d9704806a69c40d68e36e4618b0d61d97c871ad41a4b08b634b"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
-            "firstPartyCookiesSent": {
-                "lotame_domain_check": 0.00010052271813429835
-            },
+            "firstPartyCookiesSent": {},
             "exampleSites": [
-                "www.nbcnews.com",
+                "www.expedia.com",
+                "www.resmed.com.au",
+                "www.sparesbox.com.au",
+                "onepass.com.au",
+                "zapier.com",
+                "www.codecademy.com",
                 "www.seekbusiness.com.au",
-                "www.mynrma.com.au",
+                "www.digikey.com.au",
+                "shop.resmed.com.au",
                 "www.lincolnsentry.com.au",
-                "www.plenti.com.au",
                 "www.deputy.com",
-                "www.metservice.com",
-                "www.viki.com",
-                "www.jetstar.com",
-                "sport.optus.com.au",
-                "www.seniors.com.au",
+                "simplywall.st",
                 "squareup.com",
-                "www.aussie.com.au",
-                "www.sharesight.com",
-                "www.pbtech.com",
-                "www.cpapaustralia.com.au",
-                "en.islcollective.com",
-                "www.dailycare.com.au",
-                "www.qantas.com",
-                "www.padi.com"
+                "www.mynrma.com.au",
+                "www.jetstar.com",
+                "buywisely.com.au",
+                "www.loom.com",
+                "www.specialized.com",
+                "www.myfitnesspal.com",
+                "www.seniors.com.au"
             ]
         },
         {
@@ -101,24 +101,26 @@
                 "rum"
             ],
             "apis": {},
-            "sites": 6,
-            "prevalence": 0.000603,
+            "sites": 7,
+            "prevalence": 0.000703,
             "cnames": [],
             "responseHashes": [
-                "07f82f996bb5167fac4e64763c7765a3d30ef68290e56c2135148d3d3ed63911",
-                "344162d27c7caee0d97bf307fcf0ef8bd173070b0eb938b4a88c4802909564c6",
-                "d1102a2b1ed5ce27145113f63dcdd42330c249cc3a0bc81984305f94eb5ac878",
-                "68fdb62ee2c509b2f2bc9026a7b663c96d1aa678c60f6befa780e8fba84de9a7",
-                "37c7c453d64c44c8c01e81470a1d6ba97975f229eb0573fe3bd7dd8af6207aa0"
+                "2caa0f46d7fe6de34bf975ba38f015a57ae3929c23952167c6a009ab61cdd061",
+                "d33da767035462f78e8462a769cb2710b59cef25fd0c09df5c8557be9f64a980",
+                "e2e43e4ec5dbb87dfb1cf19c32b6e965251191f6d0aec8339d169e1500fa5b71",
+                "0388bfe3df65b058fc5a7f3ceb19149a0c28ab7bc8c57f7a6f303bc205f278b8",
+                "fb621d0c95140e5461a22c46a8dda292e17edf19e720387e0a4ddc8a89f60d6f",
+                "18a2e98117f321c64c95cce03f9013e14d8becd9a46d3b60a67a62ad0ef838f4"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "asana.com",
+                "buywisely.com.au",
                 "www.codecademy.com",
-                "www.expedia.com.au",
+                "www.expedia.com",
                 "www.experienceoz.com.au",
+                "www.matchesfashion.com",
                 "www.nrmaparksandresorts.com.au",
                 "www.resmed.com.au"
             ]
@@ -131,59 +133,54 @@
                 "session-replay"
             ],
             "apis": {},
-            "sites": 10,
-            "prevalence": 0.00101,
+            "sites": 9,
+            "prevalence": 0.000904,
             "cnames": [],
             "responseHashes": [
-                "0736057e6e317e8b4958b68a531eda0e67e8723edd6c15949c2fdb652afcb742",
-                "876723696ee2dd72d1bc43dfabafca363d5749e22100a662ac86c6992210ef70",
-                "0799510381a60782dd2a63d01be6e5b21ad9b9d153317decf194b835291b4321",
-                "52aacaeb6aad169c1f8c1b7e6fdc254f3056c73325c75467392c64a1bda3e573",
-                "bc83410f7d9be8eb032845d978790d85bb9e3b9e3314942dfe14856a2a9419d9",
-                "589e25078aaa57e95cabae56668c1339e3bd833201532030289bd091efc495ff",
-                "1256d32ee93feb2a26c1691a8af830a210d0377222ec81d0bf8bf7ad001c53f1",
-                "3fcdbb2ca0fb092c8208849c94703cd45a388d82b0721b3190b99491e48dbb0d",
-                "4cdaa74a8927b503fbfe04d1b89e8118f5872e7e452ce48ce967438654139b49"
+                "c6d2c564982dd1157db68b762d77f3f55c6acd08abcd0c4cc6217775054e3e9b",
+                "53ebcb8d8504b6c2e833c77d1546e59d5b103bdae31b2faa6eab45655a3fec31",
+                "b78cef423c75fa9c3b0171b434636387c7b927684bd0d5ae9da56a7816076aab",
+                "484070949f8f12f8964c9bc058dc2090f52b27e5f06ebdb33ea443694cc71441",
+                "6549be1e0ccab4adf74039909f6b372e3a305b095ca7f7568a092ee59da31d05",
+                "aa1be41de07deb79c8cfcb7544bba96a4f0fd8e0396eb2745f0657e810876d6a",
+                "d2a83057dccb0ac71c56571ab532cc411000051df54b7e89f90eceab4d511371",
+                "41eb52a931dcbf6302244682d2812cb126480e699a9c7863f201d85a85da27de"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
-            "firstPartyCookiesSent": {
-                "lotame_domain_check": 0.00010052271813429835
-            },
+            "firstPartyCookiesSent": {},
             "exampleSites": [
                 "resmed.com.au",
                 "squareup.com",
                 "www.amxsuperstores.com.au",
                 "www.cpapaustralia.com.au",
-                "www.flybuys.com.au",
-                "www.metservice.com",
-                "www.nbc.com",
                 "www.plenti.com.au",
                 "www.resmed.com.au",
-                "www.seekbusiness.com.au"
+                "www.seekbusiness.com.au",
+                "www.sparesbox.com.au",
+                "zapier.com"
             ]
         },
         {
-            "rule": "browser-intake-datadoghq\\.com\\/api\\/v2\\/rum",
+            "rule": "browser-intake-datadoghq\\.com\\/api\\/v2\\/logs",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "rum"
+                "logs"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000302,
+            "sites": 2,
+            "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                "e01df9b2ad8028e708485eab6c601416bc20a2e5a40bea6f096f1f126c022e5b"
             ],
-            "type": "Ping",
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "sydneytools.com.au",
-                "www.allianzstadium.com.au",
-                "www.nbc.com"
+                "cnn.com",
+                "www.my105.com"
             ]
         },
         {
@@ -214,48 +211,43 @@
     "cookies": 0,
     "topInitiators": [
         {
-            "domain": "first party",
-            "prevalence": 0.5254237288135594
+            "domain": "travel-assets.com",
+            "prevalence": 0.5658263305322129
         },
         {
-            "domain": "travel-assets.com",
-            "prevalence": 0.3389830508474576
+            "domain": "first party",
+            "prevalence": 0.33053221288515405
         },
         {
             "domain": "datadoghq-browser-agent.com",
-            "prevalence": 0.09322033898305085
-        },
-        {
-            "domain": "viki.io",
-            "prevalence": 0.01694915254237288
-        },
-        {
-            "domain": "qantas.com",
-            "prevalence": 0.011864406779661017
+            "prevalence": 0.08263305322128851
         },
         {
             "domain": "squarecdn.com",
-            "prevalence": 0.010169491525423728
+            "prevalence": 0.008403361344537815
         },
         {
-            "domain": "carnextdoor.com.au",
-            "prevalence": 0.001694915254237288
+            "domain": "zapier-deployment.com",
+            "prevalence": 0.008403361344537815
+        },
+        {
+            "domain": "sentry-cdn.com",
+            "prevalence": 0.0028011204481792717
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.001694915254237288
+            "prevalence": 0.0014005602240896359
         }
     ],
     "types": {
-        "Fetch": 37,
+        "Fetch": 39,
         "XHR": 16,
-        "Ping": 3,
         "Other": 2
     },
     "nameservers": [
         "ns-1907.awsdns-46.co.uk",
         "ns-560.awsdns-06.net",
-        "ns-1264.awsdns-30.org",
-        "ns-128.awsdns-16.com"
+        "ns-128.awsdns-16.com",
+        "ns-1264.awsdns-30.org"
     ]
 }

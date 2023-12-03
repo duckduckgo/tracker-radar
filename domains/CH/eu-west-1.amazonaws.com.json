@@ -9,15 +9,42 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.00191,
-    "sites": 19,
+    "prevalence": 0.00211,
+    "sites": 21,
     "subdomains": [
         "cognito-identity",
-        "sqs"
+        "kinesis",
+        "s3",
+        "dataplane.rum"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "eu-west-1\\.amazonaws\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cognito-identity",
+                "kinesis"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000603,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "miro.com",
+                "privatedelights.ch",
+                "www.datacamp.com",
+                "www.kan.org.il",
+                "www.selfridges.com",
+                "www.siemens.com"
+            ]
+        },
         {
             "rule": "eu-west-1\\.amazonaws\\.com\\/",
             "cookies": 0,
@@ -29,58 +56,17 @@
             "sites": 3,
             "prevalence": 0.000302,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "miro.com",
-                "www.datacamp.com",
-                "www.siemens.com"
-            ]
-        },
-        {
-            "rule": "eu-west-1\\.amazonaws\\.com\\/",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "cognito-identity"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
             "responseHashes": [
-                "fad1b522f944f4fc8035cda49974d0010dcc5045b5eca403f31ca5c4b7398af9"
+                "8163f6232488e97222dc899ac7af13a636cb5eddf8cba4cb63b3da69f6a7074b",
+                "08fcfd3daab6c93fd44dc7481fd26f87ec8263f2f050dbe85b69be4259756b77"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "miro.com",
+                "www.selfridges.com",
                 "www.siemens.com"
-            ]
-        },
-        {
-            "rule": "eu-west-1\\.amazonaws\\.com\\/037105129183\\/dmt",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "sqs"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "b8f6a964d26126ac19ab62f64f89091e7029654c9702e105f0a3f127c2d14e62"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "apotheken-umschau.de",
-                "www.fuersie.de"
             ]
         },
         {
@@ -88,21 +74,90 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "cognito-identity"
+                "cognito-identity",
+                "kinesis"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "c95d38acfe5484dc7d01c582b2bb77c8272d8cb868b46b922ea3455afdc93b40",
+                "0c12b2ce8359b85e15435f53878b5cd49040a1afc61d7ef3f6fed854daa61caf"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "privatedelights.ch",
+                "www.datacamp.com",
+                "www.kan.org.il"
+            ]
+        },
+        {
+            "rule": "eu-west-1\\.amazonaws\\.com\\/scoutsss\\.prod\\/media-library\\/7e7e6570-61bf-11e7-bbc6-cd7b356496c5\\/Schutzengeli%20square-23f46ad0-3454-11eb-b11a-27a1895f60e7\\.mp4",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "s3"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "93121a8ce56c01521c7d29fa8cbef24e9188a8e4c921932d9f515bd87aba75a6"
+                "84b8b52ed424849626b1706c9db7f97c6b8b4cfc369be88dad8bf3e76f0aac1c"
             ],
-            "type": "XHR",
+            "type": "Media",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "datacamp.com",
-                "www.datacamp.com"
+                "confiserie.ch",
+                "www.confiserie.ch"
+            ]
+        },
+        {
+            "rule": "eu-west-1\\.amazonaws\\.com\\/appmonitors\\/a1ab5746-8840-484d-8093-2ef57e74facb",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dataplane.rum"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "selfridges.com",
+                "www.selfridges.com"
+            ]
+        },
+        {
+            "rule": "eu-west-1\\.amazonaws\\.com\\/appmonitors\\/6247ffd7-d333-47b4-9fa3-e35ee7237f65\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dataplane.rum"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "siemens.com",
+                "www.siemens.com"
             ]
         }
     ],
@@ -110,37 +165,42 @@
         "CDN"
     ],
     "performance": {},
-    "cookies": 0.000101,
+    "cookies": 0.000201,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.8625
+            "prevalence": 0.796875
         },
         {
             "domain": "rum.us-east-1.amazonaws.com",
-            "prevalence": 0.05
+            "prevalence": 0.078125
         },
         {
-            "domain": "botsify.com",
-            "prevalence": 0.0375
+            "domain": "fortcdn.com",
+            "prevalence": 0.046875
         },
         {
-            "domain": "conative.network",
-            "prevalence": 0.025
+            "domain": "dmacnjnna4ptc.cloudfront.net",
+            "prevalence": 0.03125
         },
         {
             "domain": "d3odp2r1osuwn0.cloudfront.net",
-            "prevalence": 0.0125
+            "prevalence": 0.015625
         },
         {
-            "domain": "jquery.com",
-            "prevalence": 0.0125
+            "domain": "scoutsss.com",
+            "prevalence": 0.015625
+        },
+        {
+            "domain": "yoursurprise.com",
+            "prevalence": 0.015625
         }
     ],
     "types": {
-        "Preflight": 3,
-        "Fetch": 2,
-        "XHR": 4
+        "Preflight": 6,
+        "Fetch": 7,
+        "XHR": 3,
+        "Media": 2
     },
     "nameservers": [
         "ns1.amzndns.co.uk",

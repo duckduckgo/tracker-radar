@@ -4,14 +4,48 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.000101,
-    "sites": 1,
+    "prevalence": 0.000201,
+    "sites": 2,
     "subdomains": [
-        "forms"
+        "cdn",
+        "forms",
+        "rj2"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "rejoiner\\.com\\/js\\/v4\\/rj2\\.lib\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "30bce53d11f9d4c1c534e516414e0584fd82f967c28cf8be6c2b77b3082d27b2"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "rj2session": {
+                    "ttl": 3456018,
+                    "length": 36,
+                    "prevalence": 0.00020090406830738323,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "triumph.com",
+                "www.dreamworld.com.au"
+            ]
+        },
         {
             "rule": "rejoiner\\.com\\/api\\/v1\\/oaAz1v9",
             "cookies": 0,
@@ -33,19 +67,48 @@
                 "triumph.com",
                 "au.triumph.com"
             ]
+        },
+        {
+            "rule": "rejoiner\\.com\\/tracker\\/v4\\/page-view\\/create",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rj2"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "6f93f1784f139da5c9854198e3da8535f97eaff62e001240dabf1dc0a56d36c1"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "rj2session": 0.00020090406830738323
+            },
+            "exampleSites": [
+                "triumph.com",
+                "www.dreamworld.com.au"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000101,
+    "cookies": 0.000201,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.8888888888888888
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.1111111111111111
         }
     ],
     "types": {
-        "Fetch": 2
+        "Script": 2,
+        "Fetch": 4
     },
     "nameservers": [
         "ns-1435.awsdns-51.org",

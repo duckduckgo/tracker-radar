@@ -7,16 +7,22 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.000201,
-    "sites": 2,
+    "prevalence": 0.000402,
+    "sites": 4,
     "subdomains": [
         "codecademy",
-        "skillshare"
+        "revzilla",
+        "skillshare",
+        "wine"
     ],
     "cnames": [
         {
             "original": "refer.codecademy.com",
             "resolved": "codecademy.extole.io"
+        },
+        {
+            "original": "refer.wine.com",
+            "resolved": "wine.extole.io"
         },
         {
             "original": "share.skillshare.com",
@@ -27,15 +33,23 @@
     "resources": [
         {
             "rule": "extole\\.io\\/core\\.js",
-            "cookies": 0,
+            "cookies": 0.000201,
             "fingerprinting": 1,
             "subdomains": [
                 "codecademy",
-                "skillshare"
+                "revzilla",
+                "skillshare",
+                "wine"
             ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "apis": {
+                "Date.prototype.getTime": 1,
+                "window.localStorage": 1,
+                "Document.cookie getter": 1,
+                "Document.cookie setter": 1,
+                "document.fonts.check": 1
+            },
+            "sites": 4,
+            "prevalence": 0.000402,
             "cnames": [
                 {
                     "original": "refer.codecademy.com",
@@ -44,17 +58,32 @@
                 {
                     "original": "share.skillshare.com",
                     "resolved": "skillshare.extole.io"
+                },
+                {
+                    "original": "refer.wine.com",
+                    "resolved": "wine.extole.io"
                 }
             ],
             "responseHashes": [
-                "8464d05e02f7e356549fc217ebc50d66aac7cfab3d22d9132691a899ee1f2831"
+                "a9044be4cb55a7931c5f383b59482e98bf3b6849ee4f7fc337c78a5f6f1b7fe7",
+                "2c8977fef13e4ce25c22876c281ca17a984878d4ec7d7d314e1ff4d132657dcb",
+                "7bf9ea02706d0df3c2408df68a801c2dfe35767a922dd19a6fadf7234a690613"
             ],
             "type": "Script",
-            "firstPartyCookies": {},
+            "firstPartyCookies": {
+                "extole_access_token": {
+                    "ttl": 31536005,
+                    "length": 26,
+                    "prevalence": 0.00010057326762546515,
+                    "uniqueness": 1
+                }
+            },
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "codecademy.com",
-                "www.skillshare.com"
+                "www.revzilla.com",
+                "www.skillshare.com",
+                "www.wine.com"
             ]
         },
         {
@@ -86,29 +115,39 @@
         },
         {
             "rule": "extole\\.io\\/zones\\/global_footer",
-            "cookies": 0.000201,
+            "cookies": 0.000402,
             "fingerprinting": 0,
             "subdomains": [
-                "codecademy"
+                "codecademy",
+                "revzilla",
+                "wine"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 4,
+            "prevalence": 0.000402,
             "cnames": [
                 {
                     "original": "refer.codecademy.com",
                     "resolved": "codecademy.extole.io"
+                },
+                {
+                    "original": "refer.wine.com",
+                    "resolved": "wine.extole.io"
                 }
             ],
             "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "c930b4b3d28b4408b50de1f7b92f89665f9ceb665439eb6fcb80b87b3e0508f6",
+                "0ed2b2ec7f6e3152789688e04071a8101eeee067fd7cf1d63252a4866c741af3"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "codecademy.com",
-                "www.codecademy.com"
+                "www.codecademy.com",
+                "www.revzilla.com",
+                "www.wine.com"
             ]
         },
         {
@@ -128,7 +167,7 @@
                 }
             ],
             "responseHashes": [
-                "9632c5c524077989ea0a888cc017374aac9631fa4b79f0b854d3bcbd07cfed13"
+                "67da65db4583ec791ab347fc8c3a072e51d62dbd168278444311651b04de29f6"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -141,20 +180,28 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000101,
+    "cookies": 0.000302,
     "topInitiators": [
         {
             "domain": "xtlo.net",
-            "prevalence": 0.7142857142857143
+            "prevalence": 0.5
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.2857142857142857
+            "prevalence": 0.3
+        },
+        {
+            "domain": "datadoghq-browser-agent.com",
+            "prevalence": 0.1
+        },
+        {
+            "domain": "tiqcdn.com",
+            "prevalence": 0.1
         }
     ],
     "types": {
-        "Script": 2,
-        "XHR": 6
+        "Script": 4,
+        "XHR": 8
     },
     "nameservers": [
         "ns-1510.awsdns-60.org",

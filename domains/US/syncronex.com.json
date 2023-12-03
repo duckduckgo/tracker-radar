@@ -11,13 +11,14 @@
     "sites": 16,
     "subdomains": [
         "cdn",
-        "cdn.stage",
         "syncaccess-hag-cap",
-        "syncaccess-hag-bh",
         "syncaccess-hag-di",
         "syncaccess-wn-pni",
         "syncaccess-on-ljw",
-        "syncaccess-wn-vvn"
+        "syncaccess-wn-vvn",
+        "customers",
+        "identity",
+        "syncaccess-fwn-jg"
     ],
     "cnames": [
         {
@@ -29,16 +30,16 @@
             "resolved": "syncaccess-hag-cap.syncronex.com"
         },
         {
-            "original": "subscribe.columbiabasinherald.com",
-            "resolved": "syncaccess-hag-bh.syncronex.com"
-        },
-        {
             "original": "subscribe.dailyinterlake.com",
             "resolved": "syncaccess-hag-di.syncronex.com"
         },
         {
             "original": "subscribe.dcourier.com",
             "resolved": "syncaccess-wn-pni.syncronex.com"
+        },
+        {
+            "original": "subscribe.journalgazette.net",
+            "resolved": "syncaccess-fwn-jg.syncronex.com"
         },
         {
             "original": "subscribe.verdenews.com",
@@ -49,55 +50,52 @@
     "resources": [
         {
             "rule": "syncronex\\.com\\/libs\\/v1\\.9\\/syncLoginSdk\\.js",
-            "cookies": 0.0000341,
+            "cookies": 0.0000408,
             "fingerprinting": 1,
             "subdomains": [
-                "cdn",
-                "cdn.stage"
+                "cdn"
             ],
             "apis": {
-                "Document.cookie getter": 7,
+                "Document.cookie getter": 8,
                 "Date.prototype.getTime": 6,
-                "Document.cookie setter": 5
+                "Document.cookie setter": 6
             },
-            "sites": 10,
-            "prevalence": 0.0000681,
+            "sites": 9,
+            "prevalence": 0.0000612,
             "cnames": [],
             "responseHashes": [
-                "c4f31a27ff14566721e83c0cd5ee55848a069e0e069fbb45cd290b3d0cd19d6a",
                 "5a21995e90774b36331d7ccee138038383630da031968796bd6baf16789c15a0"
             ],
             "type": "Script",
             "firstPartyCookies": {
                 "ls.authorizationData": {
-                    "ttl": -86382,
+                    "ttl": -86389,
                     "length": 1,
-                    "prevalence": 0.00003406017752164524,
-                    "uniqueness": 0.2
+                    "prevalence": 0.000040797454238855496,
+                    "uniqueness": 0.16666666666666666
                 },
                 "authorizationData": {
-                    "ttl": -86382,
+                    "ttl": -86389,
                     "length": 1,
-                    "prevalence": 0.00003406017752164524,
-                    "uniqueness": 0.2
+                    "prevalence": 0.000040797454238855496,
+                    "uniqueness": 0.16666666666666666
                 },
                 ".ASPXAUTH": {
-                    "ttl": -86382,
+                    "ttl": -86389,
                     "length": 1,
-                    "prevalence": 0.00003406017752164524,
-                    "uniqueness": 0.2
+                    "prevalence": 0.000040797454238855496,
+                    "uniqueness": 0.16666666666666666
                 }
             },
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "cdapress.com",
-                "columbiabasinherald.com",
                 "dailyinterlake.com",
                 "www.dcourier.com",
+                "www.grossepointenews.com",
                 "www.journalgazette.net",
                 "www.ljworld.com",
                 "www.nevadaappeal.com",
-                "www.recordcourier.com",
                 "www.verdenews.com",
                 "www2.ljworld.com"
             ]
@@ -108,23 +106,18 @@
             "fingerprinting": 1,
             "subdomains": [
                 "syncaccess-hag-cap",
-                "syncaccess-hag-bh",
                 "syncaccess-hag-di",
                 "syncaccess-wn-pni",
                 "syncaccess-on-ljw",
                 "syncaccess-wn-vvn"
             ],
             "apis": {},
-            "sites": 7,
-            "prevalence": 0.0000477,
+            "sites": 6,
+            "prevalence": 0.0000408,
             "cnames": [
                 {
                     "original": "subscribe.cdapress.com",
                     "resolved": "syncaccess-hag-cap.syncronex.com"
-                },
-                {
-                    "original": "subscribe.columbiabasinherald.com",
-                    "resolved": "syncaccess-hag-bh.syncronex.com"
                 },
                 {
                     "original": "subscribe.dailyinterlake.com",
@@ -149,7 +142,6 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "cdapress.com",
-                "columbiabasinherald.com",
                 "dailyinterlake.com",
                 "www.dcourier.com",
                 "www.ljworld.com",
@@ -158,41 +150,82 @@
             ]
         },
         {
-            "rule": "syncronex\\.com\\/util\\/Modernizr\\.js",
+            "rule": "syncronex\\.com\\/libs\\/v2\\.0\\/syncJsSdk\\.main\\.js",
             "cookies": 0.0000136,
-            "fingerprinting": 1,
+            "fingerprinting": 3,
             "subdomains": [
                 "cdn"
             ],
             "apis": {
-                "Document.cookie setter": 2,
-                "Document.cookie getter": 2,
+                "Navigator.prototype.userAgent": 2,
                 "window.localStorage": 2,
-                "window.sessionStorage": 2
+                "Navigator.prototype.webdriver": 2,
+                "Navigator.prototype.language": 2,
+                "Screen.prototype.colorDepth": 2,
+                "Navigator.prototype.deviceMemory": 2,
+                "Navigator.prototype.hardwareConcurrency": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "Screen.prototype.availWidth": 2,
+                "Screen.prototype.availHeight": 2,
+                "Date.prototype.getTimezoneOffset": 2,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 2,
+                "window.sessionStorage": 2,
+                "window.indexedDB": 2,
+                "Navigator.prototype.platform": 2,
+                "Navigator.prototype.appName": 2,
+                "Navigator.prototype.plugins": 2,
+                "CanvasRenderingContext2D.prototype.isPointInPath": 2,
+                "HTMLCanvasElement.prototype.toDataURL": 2,
+                "WebGLRenderingContext.prototype.getExtension": 2,
+                "WebGLRenderingContext.prototype.getSupportedExtensions": 2,
+                "WebGLRenderingContext.prototype.getParameter": 2,
+                "WebGLRenderingContext.prototype.getContextAttributes": 2,
+                "WebGLRenderingContext.prototype.getShaderPrecisionFormat": 2,
+                "Navigator.prototype.languages": 2,
+                "Navigator.prototype.maxTouchPoints": 2,
+                "Navigator.prototype.productSub": 2,
+                "OfflineAudioContext.prototype.constructor": 2,
+                "AudioBuffer.prototype.getChannelData": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2
             },
             "sites": 2,
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "e740a6ff4dfcad7f5aa58b6f2b6a03a491f11774b2848514cf8c49264f9c286c"
+                "fdc5a054e82328bf4096fe0799226a934b24c9a2791433c1a15ad6c3570e9a60"
             ],
             "type": "Script",
             "firstPartyCookies": {
-                "cookietest": {
-                    "ttl": -1698875897,
+                "ls.authorizationData": {
+                    "ttl": -86393,
                     "length": 1,
-                    "prevalence": 0.000013624071008658098,
+                    "prevalence": 0.000013599151412951833,
+                    "uniqueness": 0.5
+                },
+                "authorizationData": {
+                    "ttl": -86393,
+                    "length": 1,
+                    "prevalence": 0.000013599151412951833,
+                    "uniqueness": 0.5
+                },
+                ".ASPXAUTH": {
+                    "ttl": -86393,
+                    "length": 1,
+                    "prevalence": 0.000013599151412951833,
                     "uniqueness": 0.5
                 }
             },
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "nevadaappeal.com",
-                "www.recordcourier.com"
+                "journalgazette.net",
+                "www.journalgazette.net"
             ]
         },
         {
-            "rule": "syncronex\\.com\\/util\\/capabilities\\.js",
+            "rule": "syncronex\\.com\\/libs\\/v2\\.0\\/syncJsSdk\\.mockpixellib\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -203,88 +236,193 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "00a45c401bd2f8a25c2bb4103eb0c6299871c0653c523a6f619c6cbfe80afe5e"
+                "92a1b5a1017788e9da94fda517fcab747ffeef5e5a1436667228e00eb9aec00c"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "nevadaappeal.com",
-                "www.recordcourier.com"
+                "journalgazette.net",
+                "www.journalgazette.net"
             ]
         },
         {
-            "rule": "syncronex\\.com\\/libs\\/v1\\.9\\/syncOverlaySdk\\.js",
+            "rule": "syncronex\\.com\\/api\\/v1\\/tenants\\/fwn_jg_prod\\/origin",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "cdn"
+                "customers"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "3feeed2ca2b2b50beb6bef9e258fb4144795d9294ecca3bd9006f1fc8199cc7e"
+                "5247262534343d626a915126cc371a930c814aa89e759a7930496354f3a7f886"
             ],
-            "type": "Script",
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "nevadaappeal.com",
-                "www.recordcourier.com"
+                "journalgazette.net",
+                "www.journalgazette.net"
             ]
         },
         {
-            "rule": "syncronex\\.com\\/libs\\/v1\\.9\\/syncPaymeterSdk\\.js",
+            "rule": "syncronex\\.com\\/api\\/v1\\/tenant\\/fwn_jg_prod\\/applicationOrigin",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "cdn"
+                "identity"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "ecd80b0021f791f3a50245417597e57f5472e99432d982b8efc9fc36a05736ad"
+                "fa4b2f7067f16a6139b7f22398e89460bd8fd41d7221465637accd9c5ad9b655"
             ],
-            "type": "Script",
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "nevadaappeal.com",
-                "www.recordcourier.com"
+                "journalgazette.net",
+                "www.journalgazette.net"
+            ]
+        },
+        {
+            "rule": "syncronex\\.com\\/\\/portal\\/checksyncaccessloginstatus\\.html",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "syncaccess-fwn-jg"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "subscribe.journalgazette.net",
+                    "resolved": "syncaccess-fwn-jg.syncronex.com"
+                }
+            ],
+            "responseHashes": [
+                "38031aeb5dfb666264ab1825535ff2416eb912df0a3af597638ef491db776f06"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "journalgazette.net",
+                "www.journalgazette.net"
+            ]
+        },
+        {
+            "rule": "syncronex\\.com\\/appservices\\/api\\/v2\\/reader",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "syncaccess-fwn-jg"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "subscribe.journalgazette.net",
+                    "resolved": "syncaccess-fwn-jg.syncronex.com"
+                }
+            ],
+            "responseHashes": [
+                "6e4cf6baa4e2c83910739200bb17a3506cd18c038a9220ee03cd319adbf3a460"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "journalgazette.net",
+                "www.journalgazette.net"
+            ]
+        },
+        {
+            "rule": "syncronex\\.com\\/appservices\\/api\\/v2\\/reader",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "syncaccess-fwn-jg"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "subscribe.journalgazette.net",
+                    "resolved": "syncaccess-fwn-jg.syncronex.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "journalgazette.net",
+                "www.journalgazette.net"
+            ]
+        },
+        {
+            "rule": "syncronex\\.com\\/appservices\\/api\\/v1\\/paymeter",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "syncaccess-fwn-jg"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "subscribe.journalgazette.net",
+                    "resolved": "syncaccess-fwn-jg.syncronex.com"
+                }
+            ],
+            "responseHashes": [
+                "857188a451e602afcd1615ab619891b461d1ae6cb32a6d3c4cf12bf859c3a333"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "journalgazette.net",
+                "www.journalgazette.net"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0000817,
+    "cookies": 0.0000816,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.47058823529411764
+            "prevalence": 0.5138888888888888
         },
         {
             "domain": "syncronex.com",
-            "prevalence": 0.4264705882352941
-        },
-        {
-            "domain": "nevadaappeal.com",
-            "prevalence": 0.07352941176470588
+            "prevalence": 0.4583333333333333
         },
         {
             "domain": "adlightning.com",
-            "prevalence": 0.029411764705882353
+            "prevalence": 0.027777777777777776
         }
     ],
     "types": {
-        "Script": 18,
-        "Document": 7
+        "Script": 13,
+        "Document": 8,
+        "Fetch": 6,
+        "XHR": 2,
+        "Preflight": 2
     },
     "nameservers": [
-        "nola.ns.cloudflare.com",
-        "jermaine.ns.cloudflare.com"
+        "jermaine.ns.cloudflare.com",
+        "nola.ns.cloudflare.com"
     ]
 }

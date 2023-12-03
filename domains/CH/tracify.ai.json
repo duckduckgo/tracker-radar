@@ -4,11 +4,12 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.000201,
-    "sites": 2,
+    "prevalence": 0.000402,
+    "sites": 4,
     "subdomains": [
         "before",
-        "beacon"
+        "beacon",
+        "scripting"
     ],
     "cnames": [],
     "fingerprinting": 3,
@@ -21,8 +22,8 @@
                 "before"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
                 "f8b889540704191470b56d58f00d741b3d7eea10cbd4c404ea305f5d4060782d"
@@ -32,7 +33,8 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "feey.ch",
-                "www.liebscher-bracht.com"
+                "www.liebscher-bracht.com",
+                "www.schlossberg.ch"
             ]
         },
         {
@@ -43,8 +45,8 @@
                 "beacon"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
@@ -52,13 +54,69 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "feey.ch",
-                "www.liebscher-bracht.com"
+                "www.liebscher-bracht.com",
+                "www.schlossberg.ch"
+            ]
+        },
+        {
+            "rule": "tracify\\.ai\\/tracifysv2\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 3,
+            "subdomains": [
+                "scripting"
+            ],
+            "apis": {
+                "Navigator.prototype.vendor": 2,
+                "OfflineAudioContext.prototype.constructor": 2,
+                "AudioBuffer.prototype.getChannelData": 2,
+                "Screen.prototype.availTop": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.availWidth": 2,
+                "Screen.prototype.availLeft": 2,
+                "Screen.prototype.height": 2,
+                "Screen.prototype.availHeight": 2,
+                "Navigator.prototype.language": 2,
+                "Navigator.prototype.languages": 2,
+                "Screen.prototype.colorDepth": 2,
+                "Navigator.prototype.deviceMemory": 2,
+                "Navigator.prototype.hardwareConcurrency": 2,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 2,
+                "window.sessionStorage": 2,
+                "window.localStorage": 2,
+                "window.indexedDB": 2,
+                "Navigator.prototype.platform": 2,
+                "Navigator.prototype.plugins": 2,
+                "CanvasRenderingContext2D.prototype.isPointInPath": 2,
+                "HTMLCanvasElement.prototype.toDataURL": 2,
+                "Navigator.prototype.maxTouchPoints": 2,
+                "Document.cookie setter": 2,
+                "Document.cookie getter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "340de1d8e262d6b001410e30b5fae076944a90aff53d5bcb5cb2e0253e6c6295"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "cookietest": {
+                    "ttl": -1701564261,
+                    "length": 1,
+                    "prevalence": 0.0002011465352509303,
+                    "uniqueness": 0.5
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "liebscher-bracht.com",
+                "www.schlossberg.ch"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000101,
+    "cookies": 0.000201,
     "topInitiators": [
         {
             "domain": "first party",
@@ -66,8 +124,9 @@
         }
     ],
     "types": {
-        "XHR": 2,
-        "Preflight": 2
+        "XHR": 3,
+        "Preflight": 3,
+        "Script": 2
     },
     "nameservers": [
         "ns1033.ui-dns.com",

@@ -9,12 +9,17 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000341,
+    "prevalence": 0.000034,
     "sites": 5,
     "subdomains": [
+        "api.anwb",
         "cdn.buienradar"
     ],
     "cnames": [
+        {
+            "original": "api.anwb.nl",
+            "resolved": "api.anwb.nl.edgesuite.net"
+        },
         {
             "original": "cdn.buienradar.nl",
             "resolved": "cdn.buienradar.nl.edgesuite.net"
@@ -22,6 +27,58 @@
     ],
     "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "nl\\.edgesuite\\.net\\/v1\\/iris\\/event\\/onLoad",
+            "cookies": 0.0000136,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api.anwb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "api.anwb.nl",
+                    "resolved": "api.anwb.nl.edgesuite.net"
+                }
+            ],
+            "responseHashes": [
+                "8309827a8418feb485754097adce3d4ebc6c39ab2fd619bc0cc210f48a5bd8d1"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "anwb.nl",
+                "www.anwb.nl"
+            ]
+        },
+        {
+            "rule": "nl\\.edgesuite\\.net\\/v1\\/iris\\/event\\/onLoad",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api.anwb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "api.anwb.nl",
+                    "resolved": "api.anwb.nl.edgesuite.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "anwb.nl",
+                "www.anwb.nl"
+            ]
+        },
         {
             "rule": "nl\\.edgesuite\\.net\\/resources\\/css\\/site\\/buienradar\\.min\\.css",
             "cookies": 0,
@@ -39,7 +96,7 @@
                 }
             ],
             "responseHashes": [
-                "32079a44dba82e28aeb60a171c8865c825dc8b53393b448ef28c13a5f63aa15f"
+                "67f6f0e42617459dfe7218fca4f11f65b5a7cd37068f6bc00efdcae3589f6d9c"
             ],
             "type": "Stylesheet",
             "firstPartyCookies": {},
@@ -93,14 +150,14 @@
                 }
             ],
             "responseHashes": [
-                "f26914693ec8c6ab24be1e85aaf9aea936b5cc68603ea48f3d9c83c53ee3fa0f"
+                "42f645720164925af0c6a5151ff2edf00293fb9083f91db8cd345bd99301da68"
             ],
             "type": "Script",
             "firstPartyCookies": {
                 "br-plus": {
                     "ttl": null,
                     "length": 5,
-                    "prevalence": 0.000006812035504329049,
+                    "prevalence": 0.000006799575706475916,
                     "uniqueness": 1
                 }
             },
@@ -808,8 +865,8 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "buienradar.be",
-                "www.buienradar.nl"
+                "buienradar.nl",
+                "www.buienradar.be"
             ]
         },
         {
@@ -871,14 +928,24 @@
         "CDN"
     ],
     "performance": {},
-    "cookies": 0.0000341,
+    "cookies": 0.000034,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.9333333333333333
+        },
+        {
+            "domain": "6568bd4c5397490008bfdabc--sombrero.netlify.app",
+            "prevalence": 0.03333333333333333
+        },
+        {
+            "domain": "rtl.nl",
+            "prevalence": 0.03333333333333333
         }
     ],
     "types": {
+        "Fetch": 2,
+        "Preflight": 2,
         "Stylesheet": 4,
         "Script": 6,
         "Image": 44,

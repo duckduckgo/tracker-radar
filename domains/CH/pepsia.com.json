@@ -4,8 +4,8 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.000101,
-    "sites": 1,
+    "prevalence": 0.000201,
+    "sites": 2,
     "subdomains": [
         "player"
     ],
@@ -13,24 +13,37 @@
     "fingerprinting": 1,
     "resources": [
         {
-            "rule": "pepsia\\.com\\/v3\\/algov3\\.php",
-            "cookies": 0.000201,
-            "fingerprinting": 0,
+            "rule": "pepsia\\.com\\/sdk\\.js",
+            "cookies": 0.000101,
+            "fingerprinting": 1,
             "subdomains": [
                 "player"
             ],
-            "apis": {},
+            "apis": {
+                "Document.cookie getter": 1,
+                "Date.prototype.getTime": 1,
+                "window.sessionStorage": 1,
+                "Navigator.prototype.appName": 1,
+                "Document.cookie setter": 1
+            },
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "841bfd3cb768401373e0cd19dc59cf3b800dfff9a140c81ee605dc2cf5a8f35f"
+                "82e827d583eb2408ea2947e1552a5f0a931c99b44060d6bbbdbd6016700f7c67"
             ],
-            "type": "XHR",
-            "firstPartyCookies": {},
+            "type": "Script",
+            "firstPartyCookies": {
+                "PepsiaConsent": {
+                    "ttl": 86404,
+                    "length": 412,
+                    "prevalence": 0.00010057326762546515,
+                    "uniqueness": 1
+                }
+            },
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "paroles.net",
+                "lemonde.fr",
                 "www.paroles.net"
             ]
         }
@@ -45,7 +58,7 @@
         }
     ],
     "types": {
-        "XHR": 2
+        "Script": 2
     },
     "nameservers": [
         "ns.dynamixhost.com",

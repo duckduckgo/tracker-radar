@@ -9,31 +9,81 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.000101,
+    "prevalence": 0.0001,
     "sites": 1,
     "subdomains": [
-        "mylogin",
-        "mylogin-test"
+        "collector",
+        "login"
     ],
     "cnames": [],
-    "fingerprinting": 2,
+    "fingerprinting": 3,
     "resources": [
         {
-            "rule": "abc\\.net\\.au\\/js\\/abc\\.mylogin\\.embedded\\.js",
-            "cookies": 0,
+            "rule": "abc\\.net\\.au\\/com\\.snowplowanalytics\\.snowplow\\/tp2",
+            "cookies": 0.000201,
             "fingerprinting": 0,
             "subdomains": [
-                "mylogin",
-                "mylogin-test"
+                "collector"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "7d07d0c2e9e61643f0b86a16df555f175e3d7637e14ab6d1f37b043a784718d4"
+                "2689367b205c16ce32ed4200942b8b8b1e262dfc70d9bc9fbc77c49699a4f1df"
             ],
-            "type": "Script",
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "abcaustralia.net.au",
+                "www.abcaustralia.net.au"
+            ]
+        },
+        {
+            "rule": "abc\\.net\\.au\\/sdk\\.config\\.get",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "login"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "dd43407c0f47b68fd6fd5587e87e9615542bf408804f461e96759d7cfec00f30"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "abcaustralia.net.au",
+                "www.abcaustralia.net.au"
+            ]
+        },
+        {
+            "rule": "abc\\.net\\.au\\/gs\\/sso\\.htm",
+            "cookies": 0.000201,
+            "fingerprinting": 2,
+            "subdomains": [
+                "login"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.appVersion": 2,
+                "Navigator.prototype.mimeTypes": 2,
+                "window.localStorage": 2,
+                "window.sessionStorage": 2,
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Document",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -44,32 +94,30 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000101,
+    "cookies": 0.0001,
     "topInitiators": [
         {
-            "domain": "first party",
-            "prevalence": 0.8333333333333334
-        },
-        {
             "domain": "gigya.com",
-            "prevalence": 0.08333333333333333
+            "prevalence": 0.9230769230769231
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.08333333333333333
+            "prevalence": 0.07692307692307693
         }
     ],
     "types": {
-        "Script": 2
+        "XHR": 2,
+        "Fetch": 2,
+        "Document": 2
     },
     "nameservers": [
-        "usw5.akam.net",
-        "ns1-31.akam.net",
-        "ns1-129.akam.net",
-        "usw1.akam.net",
         "eur2.akam.net",
+        "ns1-31.akam.net",
+        "usw1.akam.net",
+        "usw5.akam.net",
+        "eur5.akam.net",
         "asia1.akam.net",
-        "eur3.akam.net",
-        "eur5.akam.net"
+        "ns1-129.akam.net",
+        "eur3.akam.net"
     ]
 }

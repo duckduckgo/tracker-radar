@@ -7,14 +7,37 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000201,
-    "sites": 2,
+    "prevalence": 0.000906,
+    "sites": 9,
     "subdomains": [
+        "skosm",
         "js"
     ],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "klarna\\.com\\/geolocation\\/v1",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "skosm"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "8bd69d0dddab8bc553263c254faad469c2a3e08bfb0b737e763f7feabe571225"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "reebok.ca",
+                "www.tiptop.ca"
+            ]
+        },
         {
             "rule": "klarna\\.com\\/na\\/cma\\/v3\\/s",
             "cookies": 0,
@@ -23,17 +46,105 @@
                 "js"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 4,
+            "prevalence": 0.000403,
             "cnames": [],
             "responseHashes": [
-                "d1930efd827fe197dbe1432cf3b98a7a419fb0e09c571df1c78d8243c9f8498f"
+                "cabf440663a43b9adad58f820b2592b216fa852dcc34fee70df680c425f8a788",
+                "ae0ce193e20a54d9ff115bd115b5f0ba55aea144bf533383f5abe65c7c18a49e",
+                "f9a6f0ee83db55b412e4a85791f0a8ce902e20685975969deb68b38e54bbdeda"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "tiptop.ca",
+                "reebok.ca",
+                "www.mrbigandtall.ca",
+                "www.rockport.ca",
+                "www.tiptop.ca"
+            ]
+        },
+        {
+            "rule": "klarna\\.com\\/web-sdk\\/config\\/runtime-config\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "js"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000503,
+            "cnames": [],
+            "responseHashes": [
+                "5cc9e43f55f3a21a821d3a747ae31eeb00c529d7a385615bf9cda8d6e9528271"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "harryrosen.com",
+                "www.journeys.ca",
+                "www.littleburgundyshoes.com",
+                "www.westcoastseeds.com",
+                "www.wyze.com"
+            ]
+        },
+        {
+            "rule": "klarna\\.com\\/web-sdk\\/v1\\/0\\.0\\.144\\/sdk\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "js"
+            ],
+            "apis": {
+                "console.memory": 4,
+                "Navigator.prototype.userAgent": 4,
+                "Navigator.prototype.language": 4,
+                "window.localStorage": 1,
+                "Date.prototype.getTime": 2,
+                "window.sessionStorage": 4
+            },
+            "sites": 5,
+            "prevalence": 0.000503,
+            "cnames": [],
+            "responseHashes": [
+                "df633c4124acca0e88dc491fd88caf900eac782222256be9fe1906a8db8ca2f0"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "harryrosen.com",
+                "www.journeys.ca",
+                "www.littleburgundyshoes.com",
+                "www.westcoastseeds.com",
+                "www.wyze.com"
+            ]
+        },
+        {
+            "rule": "klarna\\.com\\/web-sdk\\/v1\\/klarna\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "js"
+            ],
+            "apis": {
+                "window.localStorage": 4,
+                "Navigator.prototype.userAgent": 1
+            },
+            "sites": 4,
+            "prevalence": 0.000403,
+            "cnames": [],
+            "responseHashes": [
+                "9fbd5132cd9c8bf04a74d7f1c0ac49f2df5b31ecaa4d3a78f82db7d12bc5af56"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "journeys.ca",
+                "www.littleburgundyshoes.com",
+                "www.westcoastseeds.com",
                 "www.wyze.com"
             ]
         }
@@ -44,11 +155,16 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.875
+        },
+        {
+            "domain": "klarnaservices.com",
+            "prevalence": 0.125
         }
     ],
     "types": {
-        "Fetch": 2
+        "Fetch": 11,
+        "Script": 9
     },
     "nameservers": [
         "a12-65.akam.net",

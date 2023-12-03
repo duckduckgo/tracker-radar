@@ -4,15 +4,42 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000341,
-    "sites": 5,
+    "prevalence": 0.0000884,
+    "sites": 13,
     "subdomains": [
+        "product-options",
         "bloop-static",
-        "bloop-api"
+        "bloop-api",
+        "product-options-api",
+        "geo-ip-service"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "bsscommerce\\.com\\/js\\/bss-po\\.js",
+            "cookies": 0.0000272,
+            "fingerprinting": 0,
+            "subdomains": [
+                "product-options"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000272,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "adelnaturalcosmetics.com",
+                "ghpgroupinc.com",
+                "tkellknives.com",
+                "www.sam-turner.co.uk"
+            ]
+        },
         {
             "rule": "bsscommerce\\.com\\/bloop-loyalty\\.js",
             "cookies": 0,
@@ -21,20 +48,21 @@
                 "bloop-static"
             ],
             "apis": {
-                "window.localStorage": 2,
+                "window.localStorage": 3,
                 "Screen.prototype.width": 1
             },
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "sites": 3,
+            "prevalence": 0.0000204,
             "cnames": [],
             "responseHashes": [
-                "8f25fed555136efb0a35a7fc1d153dd1a66e8c5e1e2326d90792dec979e66561"
+                "2df37ecc1dacbbbf5eccc409591ed4f45f700cb126eeb2baf5c097a7d9162c3c"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "drsebiscellfood.com",
+                "katzglutenfree.com",
                 "www.bridgecomsystems.com"
             ]
         },
@@ -46,8 +74,8 @@
                 "bloop-api"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "sites": 3,
+            "prevalence": 0.0000204,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
@@ -55,6 +83,7 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "drsebiscellfood.com",
+                "katzglutenfree.com",
                 "www.bridgecomsystems.com"
             ]
         },
@@ -66,10 +95,11 @@
                 "bloop-api"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "sites": 3,
+            "prevalence": 0.0000204,
             "cnames": [],
             "responseHashes": [
+                "fd29bfda0df04735980e39e869c09ed25c00a3a738b4392eaf35ec159b7acc12",
                 "8c79d3e17580ad08cd9878047cd2e11d9a8025f4f7d20d7eaa2c305d133bab53"
             ],
             "type": "XHR",
@@ -77,6 +107,7 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "drsebiscellfood.com",
+                "katzglutenfree.com",
                 "www.bridgecomsystems.com"
             ]
         },
@@ -88,8 +119,8 @@
                 "bloop-static"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "sites": 3,
+            "prevalence": 0.0000204,
             "cnames": [],
             "responseHashes": [
                 "1dd0a2a91b539da3db98679217b212a79261d1ddfa1a058bfc8c6f1912fdb36d"
@@ -99,7 +130,50 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "drsebiscellfood.com",
+                "katzglutenfree.com",
                 "www.bridgecomsystems.com"
+            ]
+        },
+        {
+            "rule": "bsscommerce\\.com\\/market\\/get-market-data",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "product-options-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "e38e3ae25c2db2e0d18ddc24098da75b42c5a349ff58911d37c3a68feea4892a"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mountain-archery.com",
+                "tkellknives.com"
+            ]
+        },
+        {
+            "rule": "bsscommerce\\.com\\/market\\/get-market-data",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "product-options-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mountain-archery.com",
+                "tkellknives.com"
             ]
         },
         {
@@ -143,28 +217,50 @@
                 "bridgecomsystems.com",
                 "www.bridgecomsystems.com"
             ]
+        },
+        {
+            "rule": "bsscommerce\\.com\\/geoip\\/getCountryByIP",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "geo-ip-service"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "ed09b3d0d110d83bdb9a05b1cf63fa2d8650ab4e44ea0d4cf49cb54e4fd58b02"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "everymanjack.com",
+                "www.everymanjack.com"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.000034,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.9411764705882353
+            "prevalence": 0.9333333333333333
         },
         {
             "domain": "minmaxify.com",
-            "prevalence": 0.058823529411764705
+            "prevalence": 0.06666666666666667
         }
     ],
     "types": {
-        "Script": 4,
-        "Preflight": 4,
-        "XHR": 4
+        "Script": 10,
+        "Preflight": 7,
+        "XHR": 9
     },
     "nameservers": [
-        "elinore.ns.cloudflare.com",
-        "jonah.ns.cloudflare.com"
+        "jonah.ns.cloudflare.com",
+        "elinore.ns.cloudflare.com"
     ]
 }

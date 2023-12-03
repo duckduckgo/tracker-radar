@@ -4,22 +4,27 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000272,
-    "sites": 4,
+    "prevalence": 0.0000476,
+    "sites": 7,
     "subdomains": [
-        "files"
+        "files",
+        "ravensburger"
     ],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "queue-fair\\.net\\/queue-fair-adapter\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
+            "cookies": 0.0000068,
+            "fingerprinting": 1,
             "subdomains": [
                 "files"
             ],
-            "apis": {},
+            "apis": {
+                "Document.cookie getter": 1,
+                "Date.prototype.getTime": 1,
+                "Document.cookie setter": 1
+            },
             "sites": 3,
             "prevalence": 0.0000204,
             "cnames": [],
@@ -27,12 +32,39 @@
                 "25ba2f43f9812c590df40520ce061c6c3b1a60e89e922b1326acd623b6f04f2d"
             ],
             "type": "Script",
-            "firstPartyCookies": {},
+            "firstPartyCookies": {
+                "QueueFair-Pass-crazydealshmv": {
+                    "ttl": 9003,
+                    "length": 5,
+                    "prevalence": 0.000006799575706475916,
+                    "uniqueness": 1
+                }
+            },
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "hmv.com",
-                "www.bscyb.ch",
+                "www.ravensburger.org",
                 "www.thompson-morgan.com"
+            ]
+        },
+        {
+            "rule": "queue-fair\\.net\\/queueenus",
+            "cookies": 0.0000136,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ravensburger"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ravensburger.us",
+                "www.ravensburger.us"
             ]
         },
         {
@@ -60,7 +92,7 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.0000272,
     "topInitiators": [
         {
             "domain": "first party",
@@ -68,11 +100,12 @@
         }
     ],
     "types": {
-        "Script": 5
+        "Script": 5,
+        "Document": 2
     },
     "nameservers": [
-        "y.ns.joker.com",
         "x.ns.joker.com",
+        "y.ns.joker.com",
         "z.ns.joker.com"
     ]
 }

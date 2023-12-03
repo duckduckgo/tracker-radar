@@ -9,15 +9,75 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.000603,
-    "sites": 6,
+    "prevalence": 0.00161,
+    "sites": 16,
     "subdomains": [
+        "adsdk",
+        "wcpstatic",
         "browser.pipe.aria",
+        "edge-auth",
         "browser.events.data"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "microsoft\\.com\\/native-to-display\\/sdk\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "adsdk"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 8,
+                "Date.prototype.getTime": 8,
+                "window.localStorage": 8
+            },
+            "sites": 9,
+            "prevalence": 0.000905,
+            "cnames": [],
+            "responseHashes": [
+                "c1e8359c7d9294993fe6c23173407a0a35c6d942b958abcba088201c51269cd1"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "10minutemail.com",
+                "chordify.net",
+                "de.islcollective.com",
+                "planetehockey.com",
+                "ubuntuhandbook.org",
+                "www.gamerevolution.com",
+                "www.garage-pages.ch",
+                "www.kinofans.com",
+                "www.timebie.com"
+            ]
+        },
+        {
+            "rule": "microsoft\\.com\\/mscc\\/lib\\/v2\\/wcp-consent\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "wcpstatic"
+            ],
+            "apis": {
+                "Document.cookie getter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "c688d3f2135b6b51617a306a0b1a665324402a00a6bceba475881af281503ad9"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "microsoft.github.io",
+                "www.minecraft.net"
+            ]
+        },
         {
             "rule": "microsoft\\.com\\/Collector\\/3\\.0\\/",
             "cookies": 0,
@@ -41,6 +101,28 @@
             ]
         },
         {
+            "rule": "microsoft\\.com\\/js\\/ms_auth_client\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "edge-auth"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "be3c14fe2dbf401adaf74f475068623cbbf3c2d73556b088076af6fd3d7ac7ce"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "benzinga.com",
+                "www.salon.com"
+            ]
+        },
+        {
             "rule": "microsoft\\.com\\/OneCollector\\/1\\.0\\/",
             "cookies": 0.000101,
             "fingerprinting": 0,
@@ -52,7 +134,7 @@
             "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
-                "5270a0ca9d86ab1c2cc405054812ee68246dea26ff93b16ac50e380b7857f6b6",
+                "cf62fe084dec3972679db0237673ab8dbc3b99febcf2fd1a9c1a18092af3266a",
                 "afd588d7d1c94d797ef932006d524de973f6fc54556e62f0f340412c87f99d58"
             ],
             "type": "XHR",
@@ -75,25 +157,38 @@
     "cookies": 0.000101,
     "topInitiators": [
         {
-            "domain": "first party",
-            "prevalence": 0.6
+            "domain": "azureedge.net",
+            "prevalence": 0.32142857142857145
         },
         {
-            "domain": "azureedge.net",
-            "prevalence": 0.3
+            "domain": "first party",
+            "prevalence": 0.25
+        },
+        {
+            "domain": "doubleclick.net",
+            "prevalence": 0.21428571428571427
+        },
+        {
+            "domain": "googlesyndication.com",
+            "prevalence": 0.14285714285714285
+        },
+        {
+            "domain": "vlitag.com",
+            "prevalence": 0.03571428571428571
         },
         {
             "domain": "dynamics.com",
-            "prevalence": 0.1
+            "prevalence": 0.03571428571428571
         }
     ],
     "types": {
+        "Script": 13,
         "XHR": 5
     },
     "nameservers": [
         "ns4-39.azure-dns.info",
-        "ns1-39.azure-dns.com",
         "ns3-39.azure-dns.org",
+        "ns1-39.azure-dns.com",
         "ns2-39.azure-dns.net"
     ]
 }

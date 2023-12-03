@@ -8,7 +8,7 @@
     "sites": 2,
     "subdomains": [
         "upsell",
-        "trust"
+        "sticky"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -16,24 +16,27 @@
         {
             "rule": "conversionbear\\.com\\/script",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "upsell",
-                "trust"
+                "sticky"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 1,
+                "Document.cookie getter": 1
+            },
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "40b59a8f43800dbe0cebef7ff75cdade983ed591023e78d2279435b23d547037"
+                "b4cb207823f7e7da7b86ee3295a1e84e52a81ca6aaa1c9fe19eadff162c2b27a"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "theoodie.co.uk",
-                "www.thewoodveneerhub.co.uk"
+                "www.uk-water-filters.co.uk"
             ]
         }
     ],
@@ -42,15 +45,19 @@
     "cookies": 0,
     "topInitiators": [
         {
+            "domain": "shopify.com",
+            "prevalence": 0.6
+        },
+        {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.4
         }
     ],
     "types": {
         "Script": 2
     },
     "nameservers": [
-        "coby.ns.cloudflare.com",
-        "brianna.ns.cloudflare.com"
+        "brianna.ns.cloudflare.com",
+        "coby.ns.cloudflare.com"
     ]
 }

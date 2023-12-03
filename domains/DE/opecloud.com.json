@@ -9,14 +9,17 @@
     "source": [
         "DuckDuckGo-DE"
     ],
-    "prevalence": 0.00363,
-    "sites": 36,
+    "prevalence": 0.00373,
+    "sites": 37,
     "subdomains": [
+        "cdn",
+        "lefigaro.tagger",
         "adalliance.profiles.tagger",
         "ringierch.profiles.tagger",
-        "cdn",
+        "foxus.profiles.tagger",
         "ringierch.tagger",
         "tagger",
+        "foxus.tagger",
         "tagger-scmp"
     ],
     "cnames": [
@@ -28,66 +31,119 @@
     "fingerprinting": 1,
     "resources": [
         {
+            "rule": "opecloud\\.com\\/ope-lefigaro\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Date.prototype.getTimezoneOffset": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "Screen.prototype.colorDepth": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "69bed410fba9b5e150619ddba00a688a8d846dab020f4bc41b4259f85796ed9c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "journaldesfemmes.fr",
+                "www.lefigaro.fr"
+            ]
+        },
+        {
+            "rule": "opecloud\\.com\\/lefigaro\\/v2\\/metrics\\/sdk-consent-delayed",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "lefigaro.tagger"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "journaldesfemmes.fr",
+                "www.lefigaro.fr"
+            ]
+        },
+        {
             "rule": "opecloud\\.com\\/v1\\/targeting",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
                 "adalliance.profiles.tagger",
-                "ringierch.profiles.tagger"
+                "ringierch.profiles.tagger",
+                "foxus.profiles.tagger"
             ],
             "apis": {},
-            "sites": 24,
-            "prevalence": 0.00242,
+            "sites": 26,
+            "prevalence": 0.00262,
             "cnames": [],
             "responseHashes": [
-                "7bb6b15b51b01b73d81a54ebd9428967544dfe273073f0785bf3104317173a92",
-                "90e9c8213d5fd08f7c73e6842e6347bca6bb1bfd0273062b5c64f24495ca7b18",
-                "a25a2adbad40a4bb731ffec11890a33a1b23de71487d5c44530d0e90a3cbfd47",
-                "f625d53d2ff40290372ee560440b06c5861e9d459ecf661d907b0cb955e9f148",
-                "f8ef6e1a884e8d6e83b77359270c58114fb96f71880a3da22038053c7046a264",
-                "1fc59aef136ef7e33314819ed6c2a0123555fd17dc3cad02be6f4ce5731ab833",
-                "1483acfe77e44b6b98c5175d33445f2811885bb5aec921b703e2a5f734107903",
-                "430671a84d09d7a49ddecfaa13f8e9eb7bb30d86c82ef1d70e693832b5507257",
-                "d29c2fa25c173b6fb1311cf8b1671a4017abd29d6b6a161b5b69b8ba9f28fd1a",
-                "ddb46384fa6acf0f59f0f150350b030a04401efbd6984ad18ad8bb93265c2111",
-                "99370a6e8ee8b2a2de9988200aa925c58634db024e3894e75c873d7536593205",
-                "80a947f6172c033b38340a66b9df58f9e286461599e857324b457f0ff629de1c",
-                "4d3324027aaa9777c1acb216d1afc70bbc8ab94b4db852d5a213628aef65562c",
-                "a97091527de69279a9286be6ec3d1ca1d6a3a032718debd8c610c5bef1136e8c",
-                "a41aea4c94a18fca95dbe2305a8bf918fe6386f6c20e760be1a65e8c0623738c",
-                "f2b17cf17cd0ae813b902c5b4a3961c30c1d3aef5b57570f02533db0d9b35af0",
-                "e98af8fbb59d400502c947c6fca63f58506745dad3b5d02d224419aed04bbe55",
-                "729e42d8fa9fb082e5d1eee948151edcc482fb13e33d4d5e86fe3950fc9ad350",
-                "75e26f9e29ca1128f4ffc6a59e937175567d30e6244dcef5f956fb83387b53de",
-                "04e4af2485e62feeb9a75a740a8bbbfcd487a23b1cd3dda5fe5b13bffd2bc8da",
-                "414180a5126af3621eedad8b29d38df53c59551401114f8ffc8a6c61182219e9",
-                "4c517274e81bd519e236f068115da151a254ad7a2ac53484347773c58ce15ba3",
-                "3298ee7de3db15ced14cd845f841f3627508bbc8393514d4307a20d76446da86"
+                "e38a4c7da8345e288179a9affefde017c3eb3fed729d6e94fb6e9c8ba5ee9c13",
+                "2afdafdf3b55c6bdd5be8788299f0b566f2357d00d9e899042a3548195e7bd46",
+                "6c52ca5c05357fe5133f268987fc6b8060a476a81b4cf7852694a1b8f84070d4",
+                "adecb8bc6282e282e603b922f4fea804691be0402885a22b029a070408c86496",
+                "78f38729406024dcdb9efa4d98efa9d47abbdbd54b624e4fdd7d2296c12f4ac8",
+                "555a2f37d9671ab8761dca3e170e37c46520122cf1e9109e01915c0b3f9a2a6b",
+                "312f4de4a0c7b759520bb3cb5cd69e5baa334215eda4b1bcbcecdd7397db380f",
+                "c0524caaebb464369a965ebdca8dcf739ac20a1a7ddbaa21d9d97152bc62674a",
+                "5b1ceea2b1afb4a406da28dc6882524ccdb6803e0d15fd1f8bfc1e0ab8b50aab",
+                "e7fa595ba79843daeb6d91d907ced0fffd565baae0f3a7570bed1ddc46f3b3fd",
+                "b403d9731fba11de702be2ce07f3ac7f81bbc5c9b3a2b8ca36f3ddc6c41cdb1d",
+                "659e9a03168241a417773fe885f3221ab60ad2a625ac981a95bfb2d6373bd5c5",
+                "0fad2ba0aaa5d5f993aca15dadec038d1ccf59fd10b4a1bda49cb8ce9c142af8",
+                "39cde565bf795c536ca64c98a19e97cf37845823bb8311c4a0d4ccfe8bde008f",
+                "74d25bcbe90b5d0e986aac936062b9a18e530cc317aba800abe0275e112df8a3",
+                "dd33aed9d19c8bef73a182d68b1a6b83a00af33fd0904dab0d553bc907a4f98a",
+                "1b85c9b5977241a005865fa4168a49686c4203c5c647abf1b75ac15d20dae5f1",
+                "5cfb1b4e13f3062fa1ce7a45ed437c973469625ca13c907512f1073d5775544d",
+                "94ce5e063d7d27b104d18012e5db0d2cd114defac0b88bca16e90fd7c6dbf435",
+                "601709cb375ecef28a24fe705d0663c9a7f5bfe5ed3db7069fdebb030eb6b7c8",
+                "3250144469b86fba5f4102fe83833a9d6792b39e8b5c89c78f1bbab0eaa858fe",
+                "321d2ccc31f4f5fca7065b38ff64d4119d3517d6a1ba813f93703fd90fddbe19",
+                "f4679c6a7264fcb5c63f5dc2aeeb6ba44aa07aca03919aeb35641b33eee56b40",
+                "5a52dedcf24b6fde59a02f9d6b3af96608f9eebab50a999ea6151e6d26891efa",
+                "b572e8fae7038a072fb58df8c1a6c60df80fe490e07e13eea6ae23bee521797b"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "www.chefkoch.de",
+                "www.foxnews.com",
                 "www.eltern.de",
-                "www.nitro-tv.de",
-                "www.vorname.com",
-                "www.boerse.de",
-                "sso.kabelmail.de",
-                "www.kochbar.de",
-                "www.livingathome.de",
-                "www.essen-und-trinken.de",
-                "vodafone.de",
-                "www.urbia.de",
-                "www.nachhaltigleben.ch",
-                "www.geo.de",
-                "www.brigitte.de",
                 "www.rtl.de",
-                "www.vip.de",
+                "www.brigitte.de",
+                "www.livingathome.de",
+                "www.n-tv.de",
+                "www.geo.de",
                 "www.schoener-wohnen.de",
+                "www.stern.de",
+                "www.gala.de",
+                "www.essen-und-trinken.de",
+                "www.toggo.de",
+                "www.vip.de",
+                "www.vorname.com",
+                "www.bluewin.ch",
                 "www.capital.de",
-                "www.vox.de",
-                "www.stern.de"
+                "spiele.rtl.de",
+                "vodafone.de",
+                "www.kochbar.de"
             ]
         },
         {
@@ -105,10 +161,10 @@
                 "Screen.prototype.colorDepth": 2
             },
             "sites": 2,
-            "prevalence": 0.000202,
+            "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "565479da568ecbd73955071e68c128b4d15b9470304f316b859fd5107ec0874d"
+                "69bed410fba9b5e150619ddba00a688a8d846dab020f4bc41b4259f85796ed9c"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -126,23 +182,24 @@
                 "cdn"
             ],
             "apis": {
-                "window.localStorage": 2,
+                "window.localStorage": 3,
                 "Date.prototype.getTimezoneOffset": 2,
                 "Screen.prototype.width": 2,
                 "Screen.prototype.height": 2,
                 "Screen.prototype.colorDepth": 2
             },
-            "sites": 2,
-            "prevalence": 0.000202,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
-                "565479da568ecbd73955071e68c128b4d15b9470304f316b859fd5107ec0874d"
+                "69bed410fba9b5e150619ddba00a688a8d846dab020f4bc41b4259f85796ed9c"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "search.ch",
+                "www.bluewin.ch",
                 "www.nachhaltigleben.ch"
             ]
         },
@@ -155,7 +212,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000202,
+            "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [],
             "type": "Fetch",
@@ -164,6 +221,91 @@
             "exampleSites": [
                 "bild.de",
                 "www.bild.de"
+            ]
+        },
+        {
+            "rule": "opecloud\\.com\\/ringierch\\/v2\\/custom-no-tagger",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ringierch.tagger"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "ea_uuid": 0.00020143015409406788
+            },
+            "exampleSites": [
+                "bluewin.ch",
+                "www.bluewin.ch"
+            ]
+        },
+        {
+            "rule": "opecloud\\.com\\/appnexus\\/pbfs\\.gif",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ringierch.tagger"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bluewin.ch",
+                "www.nachhaltigleben.ch"
+            ]
+        },
+        {
+            "rule": "opecloud\\.com\\/dbm\\/opecs\\.gif",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tagger"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "1ed70d02696722505ec82915a7dd9fbf2c512366d009b74bdbe37c9869c250a4"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bluewin.ch",
+                "www.nachhaltigleben.ch",
+                "www.scmp.com"
+            ]
+        },
+        {
+            "rule": "opecloud\\.com\\/foxus\\/v2\\/pixel\\.gif",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "foxus.tagger"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "foxnews.com",
+                "www.foxnews.com"
             ]
         },
         {
@@ -181,10 +323,10 @@
                 "Screen.prototype.colorDepth": 2
             },
             "sites": 2,
-            "prevalence": 0.000202,
+            "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "565479da568ecbd73955071e68c128b4d15b9470304f316b859fd5107ec0874d"
+                "69bed410fba9b5e150619ddba00a688a8d846dab020f4bc41b4259f85796ed9c"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -196,14 +338,14 @@
         },
         {
             "rule": "opecloud\\.com\\/ringierch\\/v2\\/pixel\\.gif",
-            "cookies": 0.000202,
+            "cookies": 0.000201,
             "fingerprinting": 0,
             "subdomains": [
                 "ringierch.tagger"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000202,
+            "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [],
             "type": "Image",
@@ -215,35 +357,15 @@
             ]
         },
         {
-            "rule": "opecloud\\.com\\/dbm\\/opecs\\.gif",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "tagger"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "nachhaltigleben.ch",
-                "www.scmp.com"
-            ]
-        },
-        {
             "rule": "opecloud\\.com\\/scmp\\/v2\\/pixel\\.gif",
-            "cookies": 0.000202,
+            "cookies": 0.000201,
             "fingerprinting": 0,
             "subdomains": [
                 "tagger-scmp"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000202,
+            "prevalence": 0.000201,
             "cnames": [
                 {
                     "original": "tagger.ope.scmp.com",
@@ -254,7 +376,7 @@
             "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "_ga": 0.00040326645831232987
+                "_ga": 0.00040286030818813577
             },
             "exampleSites": [
                 "scmp.com",
@@ -263,14 +385,14 @@
         },
         {
             "rule": "opecloud\\.com\\/scmp\\/pcs\\.gif",
-            "cookies": 0.000202,
+            "cookies": 0.000201,
             "fingerprinting": 0,
             "subdomains": [
                 "tagger"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000202,
+            "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [],
             "type": "Image",
@@ -284,58 +406,59 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000202,
+    "cookies": 0.000403,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.4791666666666667
+            "prevalence": 0.45098039215686275
         },
         {
             "domain": "ringier-advertising.ch",
-            "prevalence": 0.125
+            "prevalence": 0.13725490196078433
         },
         {
             "domain": "opecloud.com",
-            "prevalence": 0.08333333333333333
+            "prevalence": 0.0784313725490196
         },
         {
             "domain": "i-scmp.com",
-            "prevalence": 0.08333333333333333
+            "prevalence": 0.0784313725490196
         },
         {
             "domain": "akamaihd.net",
-            "prevalence": 0.0625
-        },
-        {
-            "domain": "bildstatic.de",
-            "prevalence": 0.041666666666666664
+            "prevalence": 0.0392156862745098
         },
         {
             "domain": "vodafone.de",
-            "prevalence": 0.020833333333333332
+            "prevalence": 0.0392156862745098
+        },
+        {
+            "domain": "bildstatic.de",
+            "prevalence": 0.0392156862745098
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.0196078431372549
+        },
+        {
+            "domain": "atp.fox",
+            "prevalence": 0.0196078431372549
         },
         {
             "domain": "knotch-cdn.com",
-            "prevalence": 0.020833333333333332
-        },
-        {
-            "domain": "ay.delivery",
-            "prevalence": 0.020833333333333332
-        },
-        {
-            "domain": "cmadserver.de",
-            "prevalence": 0.020833333333333332
+            "prevalence": 0.0196078431372549
         }
     ],
     "types": {
-        "Fetch": 26,
-        "Script": 6,
-        "Image": 8
+        "Script": 9,
+        "XHR": 2,
+        "Fetch": 28,
+        "Image": 15
     },
     "nameservers": [
-        "ns-353.awsdns-44.com",
-        "ns-899.awsdns-48.net",
+        "ns-1454.awsdns-53.org",
         "ns-1611.awsdns-09.co.uk",
-        "ns-1454.awsdns-53.org"
+        "ns-353.awsdns-44.com",
+        "ns-899.awsdns-48.net"
     ]
 }

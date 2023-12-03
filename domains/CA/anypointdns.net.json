@@ -4,11 +4,11 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000201,
-    "sites": 2,
+    "prevalence": 0.000302,
+    "sites": 3,
     "subdomains": [
-        "honda-production-b2c-lb.lb",
-        "splunk-elb.lb"
+        "splunk-elb.lb",
+        "honda-production-b2c-lb.lb"
     ],
     "cnames": [
         {
@@ -22,6 +22,33 @@
     ],
     "fingerprinting": 0,
     "resources": [
+        {
+            "rule": "anypointdns\\.net\\/wplt\\/analytics\\/v2\\/tag",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "splunk-elb.lb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "apps-api.splunk.com",
+                    "resolved": "splunk-elb.lb.anypointdns.net"
+                }
+            ],
+            "responseHashes": [
+                "5ff5255c76c4e047dc41a7a1706a4696e9cb63dae0e34041339454aea8e4f3e7"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "splunk.com",
+                "docs.splunk.com"
+            ]
+        },
         {
             "rule": "anypointdns\\.net\\/api-honda-hondaweb-exp-api\\/hondaweb-exp-api\\/v1\\/credentials\\/google-maps-javascript-api",
             "cookies": 0,
@@ -64,7 +91,7 @@
                 }
             ],
             "responseHashes": [
-                "7e2e2a211cc2e04078976e60d73b1d86936e7d3ae8ef16e367afd7ce4aed391f"
+                "c159b5518b28e90e13a9157849bdd3b4f941d390991e14b916a166bdcdb7526a"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -73,33 +100,6 @@
                 "honda.ca",
                 "www.honda.ca"
             ]
-        },
-        {
-            "rule": "anypointdns\\.net\\/wplt\\/analytics\\/v2\\/tag",
-            "cookies": 0.000201,
-            "fingerprinting": 0,
-            "subdomains": [
-                "splunk-elb.lb"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [
-                {
-                    "original": "apps-api.splunk.com",
-                    "resolved": "splunk-elb.lb.anypointdns.net"
-                }
-            ],
-            "responseHashes": [
-                "11367a106dd5797bb95d793c2a0e6c57bf323a24c07ad6e759902ea2a9596fc3"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "splunk.com",
-                "www.splunk.com"
-            ]
         }
     ],
     "categories": [],
@@ -107,19 +107,23 @@
     "cookies": 0.000101,
     "topInitiators": [
         {
-            "domain": "signalfx.com",
-            "prevalence": 1
+            "domain": "d221cp5lqk6y64.cloudfront.net",
+            "prevalence": 0.6666666666666666
+        },
+        {
+            "domain": "d7koym0rxduxm.cloudfront.net",
+            "prevalence": 0.3333333333333333
         }
     ],
     "types": {
+        "Fetch": 2,
         "Preflight": 2,
-        "XHR": 2,
-        "Fetch": 2
+        "XHR": 2
     },
     "nameservers": [
         "ns-180.awsdns-22.com",
-        "ns-1343.awsdns-39.org",
         "ns-975.awsdns-57.net",
-        "ns-1546.awsdns-01.co.uk"
+        "ns-1546.awsdns-01.co.uk",
+        "ns-1343.awsdns-39.org"
     ]
 }

@@ -7,18 +7,18 @@
     "prevalence": 0.000302,
     "sites": 3,
     "subdomains": [
-        "ci-bfp.aws-stsd",
+        "tag-assets-r53.aws-stsd",
         "deviceinfo.aws-stsd",
         "potomac.aws-stsd"
     ],
     "cnames": [
         {
-            "original": "bfp.capitalone.com",
-            "resolved": "ci-bfp.aws-stsd.capitalonegslbex.com"
-        },
-        {
             "original": "deviceinfo.capitalone.com",
             "resolved": "deviceinfo.aws-stsd.capitalonegslbex.com"
+        },
+        {
+            "original": "onetms.capitalone.com",
+            "resolved": "tag-assets-r53.aws-stsd.capitalonegslbex.com"
         },
         {
             "original": "potomac-clickstream.capitalone.com",
@@ -28,23 +28,23 @@
     "fingerprinting": 3,
     "resources": [
         {
-            "rule": "capitalonegslbex\\.com\\/browserFingerPrintv1\\.min\\.js",
+            "rule": "capitalonegslbex\\.com\\/ot\\/ot\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
-                "ci-bfp.aws-stsd"
+                "tag-assets-r53.aws-stsd"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [
                 {
-                    "original": "bfp.capitalone.com",
-                    "resolved": "ci-bfp.aws-stsd.capitalonegslbex.com"
+                    "original": "onetms.capitalone.com",
+                    "resolved": "tag-assets-r53.aws-stsd.capitalonegslbex.com"
                 }
             ],
             "responseHashes": [
-                "559d96c9ff8af5055471707c21b22ac1a7bca706d199dc9f5659a65c02d7e944"
+                "faeeb4a7c89900f830f7428e9aec324c586176dcdc575a66443223e5206e48c6"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -71,9 +71,63 @@
                 }
             ],
             "responseHashes": [
-                "a49b49f8dc60759dc5f5aa7cde37575621cbc8c763a4942ea5e569284a26174a"
+                "9ca570a0134ce00f9088e52a0ae30a8c7a29be1c66ea362555742bec2a9bf634"
             ],
             "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "capitalone.com",
+                "www.capitalone.com"
+            ]
+        },
+        {
+            "rule": "capitalonegslbex\\.com\\/potomac\\/2\\.18\\.2\\/sp\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 2,
+            "subdomains": [
+                "tag-assets-r53.aws-stsd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "onetms.capitalone.com",
+                    "resolved": "tag-assets-r53.aws-stsd.capitalonegslbex.com"
+                }
+            ],
+            "responseHashes": [
+                "30f98d6ca38a0d727e1d452ad830fc2896eca7c9a12c87302871f5508c451b52"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "capitalone.com",
+                "www.capitalone.com"
+            ]
+        },
+        {
+            "rule": "capitalonegslbex\\.com\\/udo\\/UDO_Schema_Public\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tag-assets-r53.aws-stsd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "onetms.capitalone.com",
+                    "resolved": "tag-assets-r53.aws-stsd.capitalonegslbex.com"
+                }
+            ],
+            "responseHashes": [
+                "18fefd24cf4b6de6db4bc643ae797db3bc62c600c7ac55a23a8fc2213dcd5e5c"
+            ],
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -110,14 +164,41 @@
         },
         {
             "rule": "capitalonegslbex\\.com\\/com\\.snowplowanalytics\\.snowplow\\/tp2",
-            "cookies": 0.000302,
+            "cookies": 0.000403,
             "fingerprinting": 0,
             "subdomains": [
                 "potomac.aws-stsd"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000302,
+            "sites": 4,
+            "prevalence": 0.000403,
+            "cnames": [
+                {
+                    "original": "potomac-clickstream.capitalone.com",
+                    "resolved": "potomac.aws-stsd.capitalonegslbex.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "capitalone.com",
+                "verified.capitalone.com",
+                "www.capitalone.ca",
+                "www.capitalone.com"
+            ]
+        },
+        {
+            "rule": "capitalonegslbex\\.com\\/com\\.snowplowanalytics\\.snowplow\\/tp2",
+            "cookies": 0.000403,
+            "fingerprinting": 0,
+            "subdomains": [
+                "potomac.aws-stsd"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000403,
             "cnames": [
                 {
                     "original": "potomac-clickstream.capitalone.com",
@@ -132,32 +213,7 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "capitalone.com",
-                "www.capitalone.ca",
-                "www.capitalone.com"
-            ]
-        },
-        {
-            "rule": "capitalonegslbex\\.com\\/com\\.snowplowanalytics\\.snowplow\\/tp2",
-            "cookies": 0.000302,
-            "fingerprinting": 0,
-            "subdomains": [
-                "potomac.aws-stsd"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.000302,
-            "cnames": [
-                {
-                    "original": "potomac-clickstream.capitalone.com",
-                    "resolved": "potomac.aws-stsd.capitalonegslbex.com"
-                }
-            ],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "capitalone.com",
+                "verified.capitalone.com",
                 "www.capitalone.ca",
                 "www.capitalone.com"
             ]
@@ -173,22 +229,11 @@
         }
     ],
     "types": {
-        "Script": 4,
+        "Script": 6,
+        "Fetch": 2,
         "Document": 2,
-        "XHR": 3,
-        "Preflight": 3
+        "Preflight": 4,
+        "XHR": 4
     },
-    "nameservers": [
-        "ns2.capitalone.com",
-        "a7-64.akam.net",
-        "ns3.capitalone.com",
-        "ns1.capitalone.com",
-        "a3-64.akam.net",
-        "ns5.capitalone.com",
-        "a1-219.akam.net",
-        "a18-66.akam.net",
-        "ns4.capitalone.com",
-        "a28-65.akam.net",
-        "a4-67.akam.net"
-    ]
+    "nameservers": []
 }

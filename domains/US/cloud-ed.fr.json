@@ -7,10 +7,15 @@
     "prevalence": 0.0000272,
     "sites": 4,
     "subdomains": [
+        "sentry.etalab",
         "reporterre-stats",
         "stats.lyon"
     ],
     "cnames": [
+        {
+            "original": "errors.data.gouv.fr",
+            "resolved": "sentry.etalab.cloud-ed.fr"
+        },
         {
             "original": "stats.reporterre.net",
             "resolved": "reporterre-stats.cloud-ed.fr"
@@ -18,6 +23,33 @@
     ],
     "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "cloud-ed\\.fr\\/api\\/16\\/envelope\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sentry.etalab"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "errors.data.gouv.fr",
+                    "resolved": "sentry.etalab.cloud-ed.fr"
+                }
+            ],
+            "responseHashes": [
+                "fc9f8406cead221b7a3cb25511e84f53d621407fa0ddd7a3a7c61e58ef81a8b2"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "data.gouv.fr",
+                "annuaire-entreprises.data.gouv.fr"
+            ]
+        },
         {
             "rule": "cloud-ed\\.fr\\/matomo\\.php",
             "cookies": 0,
@@ -57,6 +89,7 @@
         }
     ],
     "types": {
+        "Fetch": 2,
         "Ping": 2
     },
     "nameservers": [

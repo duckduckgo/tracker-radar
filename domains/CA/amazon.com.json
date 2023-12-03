@@ -9,9 +9,11 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000705,
-    "sites": 7,
+    "prevalence": 0.000805,
+    "sites": 8,
     "subdomains": [
+        "code.buywithprime",
+        "order.buywithprime",
         "d2c.aws",
         "vs.aws",
         "aws",
@@ -23,6 +25,63 @@
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "amazon\\.com\\/bwp\\.v1\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 1,
+            "subdomains": [
+                "code.buywithprime"
+            ],
+            "apis": {
+                "PerformanceTiming.prototype.navigationStart": 2,
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "554da2d3346323780ccdd04646ac0c9b11e62ce786c56b3f35e1471b1656f0ad"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "ubid_ovr": {
+                    "ttl": 31536002,
+                    "length": 36,
+                    "prevalence": 0.0002013693113169553,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "casadesante.com",
+                "www.wyze.com"
+            ]
+        },
+        {
+            "rule": "amazon\\.com\\/static\\/storefront-host\\/clickstream\\.fa86740251f1031b5a81\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "order.buywithprime"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "9aa2ddb9df7236b5df043c71d63ecbb0884a55bddf94b62ef5c3e723c01da42c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "casadesante.com",
+                "www.wyze.com"
+            ]
+        },
         {
             "rule": "amazon\\.com\\/client\\/loader\\/v1\\/d2c-load\\.js",
             "cookies": 0,
@@ -104,7 +163,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "994ecf44fb015214b6b943cbea6b9832a75d2cc9de5d74a6bac1e418dce590da"
+                "b0ca3dcdff5218d88370634c957923fd33128d50cca48960a8f6d48dde4b98a0"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -147,7 +206,9 @@
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
             "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -215,8 +276,8 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "abebooks.com",
-                "www.abebooks.co.uk"
+                "abebooks.co.uk",
+                "www.abebooks.com"
             ]
         },
         {
@@ -231,7 +292,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "ec37e274d7fc2a1404de5c406619bd4948a7f4d67bf68e4b2516116fdaf548ab"
+                "e8fc44b3387afdb7cf015f4e3e62b5cf16fe97cad2bed716e1949d1011292865"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -246,8 +307,8 @@
             "cookies": 0.000101,
             "fingerprinting": 0,
             "subdomains": [
-                "payments",
-                "apay-us"
+                "apay-us",
+                "payments"
             ],
             "apis": {},
             "sites": 3,
@@ -275,31 +336,35 @@
         "Embedded Content"
     ],
     "performance": {},
-    "cookies": 0.000504,
+    "cookies": 0.000604,
     "topInitiators": [
         {
             "domain": "awsstatic.com",
-            "prevalence": 0.7625
+            "prevalence": 0.7228915662650602
         },
         {
             "domain": "first party",
-            "prevalence": 0.125
+            "prevalence": 0.13253012048192772
         },
         {
             "domain": "payments-amazon.com",
-            "prevalence": 0.075
+            "prevalence": 0.07228915662650602
         },
         {
             "domain": "abebookscdn.com",
-            "prevalence": 0.025
+            "prevalence": 0.03614457831325301
         },
         {
             "domain": "aws.dev",
-            "prevalence": 0.0125
+            "prevalence": 0.024096385542168676
+        },
+        {
+            "domain": "minmaxify.com",
+            "prevalence": 0.012048192771084338
         }
     ],
     "types": {
-        "Script": 4,
+        "Script": 8,
         "Preflight": 2,
         "Fetch": 4,
         "Image": 4,
@@ -307,13 +372,13 @@
         "Ping": 2
     },
     "nameservers": [
-        "ns1.amzndns.org",
-        "ns2.amzndns.org",
         "ns1.amzndns.co.uk",
-        "ns2.amzndns.co.uk",
-        "ns1.amzndns.net",
-        "ns2.amzndns.net",
         "ns1.amzndns.com",
-        "ns2.amzndns.com"
+        "ns1.amzndns.net",
+        "ns1.amzndns.org",
+        "ns2.amzndns.co.uk",
+        "ns2.amzndns.com",
+        "ns2.amzndns.net",
+        "ns2.amzndns.org"
     ]
 }
