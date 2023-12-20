@@ -13,7 +13,8 @@
     "sites": 73,
     "subdomains": [
         "ap",
-        "ce"
+        "ce",
+        "pxdrop"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -35,13 +36,13 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "9to5mac.com",
-                "electrek.co",
                 "howchoo.com",
+                "imgur.com",
                 "linux.how2shout.com",
                 "nl.automobiledimension.com",
                 "theitbros.com",
-                "vectr.com",
                 "worldstarhiphop.com",
+                "www.alt-codes.net",
                 "www.duplichecker.com",
                 "www.javatpoint.com",
                 "www.picuki.com",
@@ -51,69 +52,107 @@
         },
         {
             "rule": "lijit\\.com\\/rtb\\/bid",
-            "cookies": 0.000301,
+            "cookies": 0.000502,
             "fingerprinting": 0,
             "subdomains": [
                 "ap"
             ],
             "apis": {},
-            "sites": 25,
-            "prevalence": 0.00251,
+            "sites": 23,
+            "prevalence": 0.00231,
             "cnames": [],
             "responseHashes": [
-                "314f60c2e785be2c182948f4d6e8bb37606687eb94e12e1ce707c8ef31e95154",
-                "f89181280f6caccc945a229b2b5f8c2edc6a077c8ea930c9de62f09724dd317c",
-                "ec66a5d31f5c970127308c267eb984ec75c2388edc262a0b77e1509992d22a2f",
-                "a6b1b1bdb38e876a8cf01e07588a3ac71447e43507b9c156044792cbdefb08e3",
-                "948fea8b5930ef2a784c387e3819981457ba98a2b037522cec48a59c89210053",
-                "3359b9829bbba9546171f3f154620fb7a1a881eb6e9baa120914e2c4eef35779",
-                "a11ec947cbc480821caf33ec43d82ddb4ab8afef15531e04b095345edd6aac92",
-                "5f281f4a931bfe92ab4ec0da6a1a224bfc3899908e6e4e2ac610b514eff60ced",
-                "61136cd2860b868806f4acb7c33d0a449a9e0be69f6545c930f7a4fc148d2795",
-                "d3fc8b7dc08bf0b45aed550b2f29f66a9a71af126d0148412b3b23b4bc7dcc58",
-                "481549cf901b4c1075124e139393156a23fe661a0cd2a0eb8aac4ef3e293281b",
-                "4fb31f0a394f54deaf30bd75916dc86bb33789f69d3c6e3be201451944ed6c13",
-                "43d35f2951c3be05c6385ac9f56d1430ed0af3f26f51728ec0df24934e070756",
-                "6adf3f6f987e2deb242eddd54de1e68bde3f941db54d3a555abef3fc76c79602",
-                "17f739500ac2dd14c480db7eecb43713195deb1f7ce4bbdb2b8aa7fd863bd7bb",
-                "a2d9d0c5527b47bba91f2ce37489f78f73bc03820ced686bb3468ae234767900",
-                "8dd654143551e7244e3f44861cfe39152988661e46140dfb397e5e007bac41fc",
-                "829beb1400dd92604e32bc0d1bbf26697bad2ceea38cfbc01d7e65847bff3f17",
-                "b5009c7807a7f4e22d879ba147c538b87b17c887de330a88b005ef2496612a29",
-                "a5c5ba7a206ecb886df6310019678fef6a455544d1c2d189a291a0811946e9c7",
-                "eade1b2a3f9d1b44c9077ff9a1d7e25ac5723c9850003b5850db11365de958e1",
-                "9b0a90d12c51ef1814e929aab24337cde3ba527fdf09f891a599597b4803dd26",
-                "fad472cf6393bfa7de53bfc9b1fb329fdd3697578b8bd46e7d37f2278cf76d1b"
+                "64c1cc57acca1226094762d637751b8b84977680b13f23628e8998a543dde879",
+                "cdb0f589846faad90a70fd3c94623fd413c1721eab80096cec2fdb13249a6960",
+                "44c7413211035bf3386498ab2530cfb4a9ba664703740d1281ce2a6fe0a58246",
+                "e4b108e643de0d35015260bab0099dcfa8b7054e7d7fabad1cbebd6939717394",
+                "042f8bc7ee18d13cc5a2c69bb6603b7b69531edf6b8cb1295c52e1e96eccb929",
+                "fea194150ebd3223600e705324ceb79769e489b231e6d357170954db0b7f44af",
+                "426dad9b28f7b04ebaa92d260dda6c1bee804e7809b896349e3e7cbbbdba5641",
+                "618f96ca772562e0c0f28b11e907ac6c1f06fa249e9f0f477c4aad32cdac032f",
+                "0eb957487c430b9ae48ed8529419c433ffbdd800cd5385c136f0f5c1d6e6db8b",
+                "539be0ed49a1fe1992f4eac850eb900bc5632fd89d2311eda0ba7c20afb140b8",
+                "0ecb21bbc113fabe3b481195da7439cb6fa4ffbe54c2884541073bf5a2d73df9",
+                "d0de75e1daf8eb4fd89e6fa952ff2894b58fd8c76857cf6034c69f0443a9ac0d",
+                "7449d461459726657bc3fe30394dbe0ef8dc7dc49a95919ec346b24e6fdcfc61",
+                "b035de74225e98434ffda5b7dfed79046c4774d32541e24914f31e499a0a70d8",
+                "132b7940f17b13cf21312132727d2b2c48947808876929d8eb16da65f2b06982",
+                "76443328a1e0d39e5f8af28880e4f44ced42cf392f8ba824e87e626005cb3884",
+                "69f91fed701cc85fbde41e026aa961086b7999f0adcf26ef8b6bd21767d0bc28",
+                "287bd26644ad36b5b91db86c112747d13a62d9d36606971af3c3e3617519b124",
+                "ee9ef55db34f9d7d82df67f5c2474fb1ef22343f07cd72f53efeaa1dd2b578b0",
+                "59ec4c6b01601be441483eeed7a986595b5a4a2939add903293fdcbb0af5bb2e",
+                "d1eac5aa5c65fd7c8ecfa02383112696eea529295be188443c67e06b59a70935",
+                "20179e391b8d441c5f6bad350b48b6d7fa877b5196537775d1c99731c453a5ac"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "cplusplus.com",
-                "songmeanings.com",
-                "www.myjewishlearning.com",
-                "gearjunkie.com",
-                "www.onlinegdb.com",
-                "www.wowhead.com",
-                "linuxhandbook.com",
-                "www.avsim.com",
-                "www.coingecko.com",
-                "pureinfotech.com",
-                "www.neoseeker.com",
-                "strategywiki.org",
+                "www.timesofisrael.com",
                 "pokemondb.net",
-                "wh40k.lexicanum.com",
+                "www.spigotmc.org",
+                "riptutorial.com",
+                "appleinsider.com",
+                "www.snbforums.com",
+                "linuxhandbook.com",
+                "www.denofgeek.com",
+                "pythonexamples.org",
+                "www.avsim.com",
+                "www.jta.org",
                 "statisticsbyjim.com",
+                "www.neoseeker.com",
+                "www.javatpoint.com",
                 "www.spanjevandaag.com",
                 "www.pravda.com.ua",
+                "songmeanings.com",
+                "www.ebaumsworld.com",
+                "www.myjewishlearning.com"
+            ]
+        },
+        {
+            "rule": "lijit\\.com\\/beacon",
+            "cookies": 0.000301,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ap",
+                "ce"
+            ],
+            "apis": {},
+            "sites": 18,
+            "prevalence": 0.00181,
+            "cnames": [],
+            "responseHashes": [
+                "ded75aeca82330dc157c77088d1e733ed9f4a1f30c1c3403cea3c7c22cb6b0d4"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "appleinsider.com",
+                "cplusplus.com",
+                "linuxhandbook.com",
+                "mydramalist.com",
+                "pokemondb.net",
+                "pythonexamples.org",
+                "songmeanings.com",
+                "www.avsim.com",
+                "www.denofgeek.com",
+                "www.digminecraft.com",
                 "www.futbin.com",
-                "riptutorial.com",
-                "www.ebaumsworld.com"
+                "www.javatpoint.com",
+                "www.koreaboo.com",
+                "www.movieinsider.com",
+                "www.pravda.com.ua",
+                "www.seat61.com",
+                "www.spanjevandaag.com",
+                "www.spigotmc.org"
             ]
         },
         {
             "rule": "lijit\\.com\\/merge",
-            "cookies": 0.00151,
+            "cookies": 0.0011,
             "fingerprinting": 0,
             "subdomains": [
                 "ce"
@@ -122,26 +161,29 @@
             "sites": 15,
             "prevalence": 0.00151,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "f4eef8263281c0b26486637831251059757bc3fdc4c3a48045a8ef8646b36e8f"
+            ],
             "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "appleinsider.com",
+                "coinmarketcap.com",
                 "cplusplus.com",
                 "garticphone.com",
                 "linuxhandbook.com",
+                "lolbeans.io",
                 "pokemondb.net",
-                "pureinfotech.com",
+                "pythonexamples.org",
                 "riptutorial.com",
                 "shellshock.io",
-                "vectr.com",
+                "www.akc.org",
                 "www.avsim.com",
                 "www.behindthename.com",
-                "www.duplichecker.com",
-                "www.emailnator.com",
+                "www.digminecraft.com",
                 "www.iplocation.net",
-                "www.onlinegdb.com"
+                "www.splunk.com"
             ]
         },
         {
@@ -152,111 +194,122 @@
                 "ap"
             ],
             "apis": {},
-            "sites": 29,
-            "prevalence": 0.00291,
+            "sites": 23,
+            "prevalence": 0.00231,
             "cnames": [],
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
             ],
             "type": "Image",
             "firstPartyCookies": {},
-            "firstPartyCookiesSent": {
-                "lotame_domain_check": 0.00010047221943132724
-            },
+            "firstPartyCookiesSent": {},
             "exampleSites": [
+                "coinmarketcap.com",
                 "cplusplus.com",
-                "riptutorial.com",
-                "www.avsim.com",
-                "www.oracletutorial.com",
-                "www.onlinegdb.com",
-                "theitbros.com",
                 "www.mangaread.org",
+                "garticphone.com",
+                "www.koreaboo.com",
+                "www.behindthename.com",
                 "linuxhandbook.com",
                 "linux.how2shout.com",
-                "www.koreaboo.com",
-                "www.duplichecker.com",
-                "www.pixwox.com",
-                "appleinsider.com",
-                "sms24.me",
-                "www.pewpewtactical.com",
-                "trendnieuws.nl",
+                "www.iplocation.net",
+                "shellshock.io",
+                "www.poferries.com",
+                "www.avsim.com",
+                "www.nasdaq.com",
+                "riptutorial.com",
+                "pokemondb.net",
                 "www.immowelt.de",
-                "www.emailnator.com",
-                "nl.farnell.com",
-                "www.iplocation.net"
+                "pythonexamples.org",
+                "lolbeans.io",
+                "www.moddb.com",
+                "nl.automobiledimension.com"
             ]
         },
         {
             "rule": "lijit\\.com\\/rtb\\/bid",
-            "cookies": 0,
+            "cookies": 0.0001,
             "fingerprinting": 0,
             "subdomains": [
                 "ap"
             ],
             "apis": {},
-            "sites": 18,
-            "prevalence": 0.00181,
+            "sites": 16,
+            "prevalence": 0.00161,
             "cnames": [],
             "responseHashes": [
-                "7784fea47a41fac7dae1047dc6841a71b6e57cb6100386820de09aaabbbca6cc",
-                "d66b411fc5e29812b5193db9c31de13a3ce5ebc43d88a7c2c8db5b0ec4926ea5",
-                "a95142cad097cce010495d129008108c517d6bfcb90c57e4b1f5131f8c97c1cf",
-                "8450ec36f7028ff6289536ba7113ce34775848bc122e3da5505a572110ea56fa",
-                "df65230c04a61d873dbca16dc197d459b1d4ae2b6639f03cf99f3800e6cd8f03",
-                "186182f9da85ef3b6b7246107a58ca71738d03eaeabe9a8f2848abc17bfcfc05",
-                "4af92c09e3a2889893f3c0d2f05b26fc4b2c87d0a412f71c7ba2a448c36758e4",
-                "a13cd2616ad7c46c9f9d46d6c021803458f426d691a3740566dc3e9cc20ef2c9",
-                "0b984a5f5c61599f93f343b4727cccaa3e9633ebd1bb218532eddfa752d9d82f",
-                "70074cd908c682d4975b714c1cd0f3aa0f200b061b11f158e87fb6353cc1a0b1",
-                "fce6a35567852da109d221e6b2fd098b8c452a97bb8d335b415f3f2860c5f708",
-                "ddfb551294f2e19c10b42f0f5a32b058c1c977aab0e2ed4267f2785d383bebc4",
-                "3d4a77dad0c969329c92700f2a16d760c35d54876a6dcc255f99e3ecbfb70035",
-                "3f2adf6d7e50e0e218d9d03bd1f7fa521887257ee89cd401a13951309d7786ed",
-                "1c0aa735cfd5fcf6cfbbb317caa046924c0c54119fd50b2698875cdd2420e07e",
-                "455efa9b76b4ce565f4165d52f22aa2123025c08bfc627ec93788dcb85ff3829"
+                "5011467b3b64c2931c57a04714822e015cdbd123f9f8e1e3a0ac41a23a6a0455",
+                "9f7887e4b5f4419a7a2b0cbc394c88bbe171678b8f2844e08193a49374a4779d",
+                "1c1d43d070b948a4af34fd8d2e229dd28dc8cf8315429514b87536c4ac96addf",
+                "09923510f742f5a696c6d510ec4df1afcc285f24a194568910f90ce78f108cc1",
+                "d5af9a62db261e2844b860cee8917cb941d4d15e9aa0bc88ea205798f6e0e8e2",
+                "c79ad0e9e758e15173f3f53221ab193529a04ff77a3126bece52c17ad904eb66",
+                "56a8003f23d6ebde7eac79c1c9494f22a84d9fb9081939167f35c697411c9890",
+                "540b71f55272bcc8308544cd3c5d8177f9412a85e14551d52c7d43cf915edd2d",
+                "99ded7a044fc39fa5945f957a712a321fa5f115212331f1a8750ba3625fa72b4",
+                "93f4ad73f8f4272efbd063cd05a1fab6c220f9ab2379fcc6cf76ad850a057773",
+                "76170cf4ff945f89139a0c2a00e234383745e44b3d5c632410e285a3fa7b4331",
+                "25a57f91f4c14f7f1bf177cc823fa6d130f6a1c64d8440f0fa036e6c637ccc58",
+                "c9cf1fa3897582a8efc6a880dc7ef1801bcc8d23cf7a03852c40906d64b6c247",
+                "92b03de4313e4fd2546899506f11e6bc7e50196485c994c6f7fd141015ee5e83",
+                "a01d63b790ef344cf2851576835c5cefa09b082799f93394d727a2e70bdc9f8d"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "drudgereport.com",
-                "itexamanswers.net",
                 "lifehacker.com",
                 "mydramalist.com",
                 "nationalpost.com",
                 "panorama.nl",
-                "sms24.me",
-                "www.1001fonts.com",
+                "www.binaryhexconverter.com",
                 "www.digminecraft.com",
                 "www.dpreview.com",
-                "www.kitco.com",
+                "www.gbmb.org",
                 "www.koreaboo.com",
-                "www.mindbodygreen.com",
                 "www.mysqltutorial.org",
                 "www.postgresqltutorial.com",
                 "www.sqlitetutorial.net",
+                "www.sqlservertutorial.net",
                 "www.sqltutorial.org",
-                "www.techonthenet.com"
+                "www.wowhead.com"
             ]
         },
         {
-            "rule": "lijit\\.com\\/dsp\\/google\\/pixelmatch",
-            "cookies": 0.000201,
+            "rule": "lijit\\.com\\/1\\/d\\/t\\.dhj",
+            "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "ap"
+                "pxdrop"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 13,
+            "prevalence": 0.00131,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Image",
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Script",
             "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
+            "firstPartyCookiesSent": {
+                "lotame_domain_check": 0.0009037051912842655,
+                "_li_dcdm_c": 0.00010041168792047395
+            },
             "exampleSites": [
-                "imginn.com",
-                "www.christianity.com"
+                "liveuamap.com",
+                "www.binaryhexconverter.com",
+                "www.gbmb.org",
+                "www.iphonelife.com",
+                "www.jpost.com",
+                "www.mysqltutorial.org",
+                "www.oracletutorial.com",
+                "www.postgresqltutorial.com",
+                "www.pythontutorial.net",
+                "www.ranker.com",
+                "www.sqlitetutorial.net",
+                "www.sqlservertutorial.net",
+                "www.sqltutorial.org"
             ]
         },
         {
@@ -267,12 +320,12 @@
                 "ap"
             ],
             "apis": {
-                "Document.cookie getter": 2,
-                "Navigator.prototype.doNotTrack": 2,
+                "Document.cookie getter": 3,
+                "Navigator.prototype.doNotTrack": 3,
                 "Date.prototype.getTime": 1
             },
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [
                 "b4208c430fb204fc4903653c1c36f9832e2c3bfb742a6828e96878e328d8e26e"
@@ -282,12 +335,13 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "mydramalist.com",
+                "www.movieinsider.com",
                 "www.seat61.com"
             ]
         },
         {
-            "rule": "lijit\\.com\\/beacon",
-            "cookies": 0,
+            "rule": "lijit\\.com\\/merge",
+            "cookies": 0.000201,
             "fingerprinting": 0,
             "subdomains": [
                 "ce"
@@ -301,28 +355,8 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "mydramalist.com",
-                "www.seat61.com"
-            ]
-        },
-        {
-            "rule": "lijit\\.com\\/beacon\\/prebid-server\\/",
-            "cookies": 0.0001,
-            "fingerprinting": 0,
-            "subdomains": [
-                "ap"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Document",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "trendnieuws.nl",
-                "www.avsim.com"
+                "digminecraft.com",
+                "www.digminecraft.com"
             ]
         }
     ],
@@ -335,60 +369,60 @@
         "Action Pixels"
     ],
     "performance": {},
-    "cookies": 0.00201,
+    "cookies": 0.00171,
     "topInitiators": [
         {
             "domain": "servenobid.com",
-            "prevalence": 0.2792207792207792
+            "prevalence": 0.1962025316455696
         },
         {
             "domain": "first party",
-            "prevalence": 0.1038961038961039
+            "prevalence": 0.08860759493670886
         },
         {
-            "domain": "inmobi.com",
-            "prevalence": 0.06493506493506493
-        },
-        {
-            "domain": "omnitagjs.com",
-            "prevalence": 0.05194805194805195
-        },
-        {
-            "domain": "nextmillmedia.com",
-            "prevalence": 0.045454545454545456
+            "domain": "aggle.net",
+            "prevalence": 0.06962025316455696
         },
         {
             "domain": "buysellads.net",
-            "prevalence": 0.03896103896103896
+            "prevalence": 0.056962025316455694
         },
         {
-            "domain": "adpushup.com",
-            "prevalence": 0.032467532467532464
+            "domain": "omnitagjs.com",
+            "prevalence": 0.04430379746835443
         },
         {
-            "domain": "increaserev.com",
-            "prevalence": 0.032467532467532464
+            "domain": "nextmillmedia.com",
+            "prevalence": 0.0379746835443038
         },
         {
-            "domain": "googlesyndication.com",
-            "prevalence": 0.025974025974025976
+            "domain": "pubmatic.com",
+            "prevalence": 0.0379746835443038
+        },
+        {
+            "domain": "inmobi.com",
+            "prevalence": 0.03164556962025317
         },
         {
             "domain": "kiosked.com",
-            "prevalence": 0.025974025974025976
+            "prevalence": 0.03164556962025317
+        },
+        {
+            "domain": "increaserev.com",
+            "prevalence": 0.03164556962025317
         }
     ],
     "types": {
-        "Document": 17,
-        "XHR": 25,
-        "Image": 46,
-        "Fetch": 18,
-        "Script": 2
+        "Document": 33,
+        "XHR": 23,
+        "Image": 38,
+        "Fetch": 16,
+        "Script": 16
     },
     "nameservers": [
-        "dns2.p05.nsone.net",
-        "dns3.p05.nsone.net",
         "dns1.p05.nsone.net",
-        "dns4.p05.nsone.net"
+        "dns2.p05.nsone.net",
+        "dns4.p05.nsone.net",
+        "dns3.p05.nsone.net"
     ]
 }

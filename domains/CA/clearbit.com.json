@@ -7,12 +7,13 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.00211,
-    "sites": 21,
+    "prevalence": 0.00252,
+    "sites": 25,
     "subdomains": [
         "reveal",
         "marketo",
-        "app"
+        "app",
+        "ga"
     ],
     "cnames": [],
     "fingerprinting": 3,
@@ -27,13 +28,14 @@
             "apis": {
                 "window.localStorage": 1
             },
-            "sites": 5,
-            "prevalence": 0.000503,
+            "sites": 7,
+            "prevalence": 0.000705,
             "cnames": [],
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
                 "81533e4dba3d2a3ae4a3567f39db16c19f44820e0c79785a52eb1c68e5654452",
                 "60948ee645784f9780faf986f33918c81c6bd7374ce1269e91918cc985136269",
+                "4db28443e50dc073e181bf7651c1abcf57678338434dbf04984fdf5342f80c46",
                 "d392279e9b1f1c7caa4267799e70091fd2f82c53e10ff958813d19dab4063376"
             ],
             "type": "Script",
@@ -43,8 +45,32 @@
                 "airtable.com",
                 "slack.com",
                 "www.capterra.ca",
+                "www.capterra.com",
                 "www.newstatesman.com",
+                "www.openphone.com",
                 "www.softwareadvice.com"
+            ]
+        },
+        {
+            "rule": "clearbit\\.com\\/v1\\/companies\\/reveal",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "reveal"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "d3221ccec06501fc4f746983c67cf641b5e85e49e381ccd3356370ed6073cdc7"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "calendly.com",
+                "developer.salesforce.com"
             ]
         },
         {
@@ -77,8 +103,8 @@
                 "app"
             ],
             "apis": {},
-            "sites": 14,
-            "prevalence": 0.00141,
+            "sites": 17,
+            "prevalence": 0.00171,
             "cnames": [],
             "responseHashes": [
                 "c955e57777ec0d73639dca6748560d00aa5eb8e12f13ebb2ed9656add3908f97"
@@ -91,16 +117,41 @@
                 "etcher.balena.io",
                 "grafana.com",
                 "redis.io",
-                "riverside.fm",
+                "www.anaconda.com",
+                "www.backblaze.com",
                 "www.betterup.com",
                 "www.cbinsights.com",
                 "www.elastic.co",
+                "www.openphone.com",
+                "www.pandadoc.com",
                 "www.payscale.com",
+                "www.process.st",
                 "www.projectmanager.com",
-                "www.telerik.com",
                 "www.trendhunter.com",
                 "www.upscale.media",
                 "zapier.com"
+            ]
+        },
+        {
+            "rule": "clearbit\\.com\\/v1\\/ga\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ga"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "3b3c7778ba4e247b97d37e9559528c0f1524faf72de80d4312a322e5e2420d65"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "capterra.com",
+                "www.cbinsights.com"
             ]
         }
     ],
@@ -110,49 +161,54 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.5
+            "prevalence": 0.37777777777777777
         },
         {
             "domain": "clearbitjs.com",
-            "prevalence": 0.22727272727272727
+            "prevalence": 0.24444444444444444
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.13636363636363635
-        },
-        {
-            "domain": "fullstory.com",
-            "prevalence": 0.022727272727272728
-        },
-        {
-            "domain": "hubspot.net",
-            "prevalence": 0.022727272727272728
+            "prevalence": 0.17777777777777778
         },
         {
             "domain": "bizible.com",
-            "prevalence": 0.022727272727272728
+            "prevalence": 0.044444444444444446
+        },
+        {
+            "domain": "fullstory.com",
+            "prevalence": 0.022222222222222223
+        },
+        {
+            "domain": "hubspot.net",
+            "prevalence": 0.022222222222222223
+        },
+        {
+            "domain": "clearbitscripts.com",
+            "prevalence": 0.022222222222222223
+        },
+        {
+            "domain": "cdnpandadoc.com",
+            "prevalence": 0.022222222222222223
         },
         {
             "domain": "datadoghq-browser-agent.com",
-            "prevalence": 0.022727272727272728
+            "prevalence": 0.022222222222222223
         },
         {
             "domain": "pixelbin.io",
-            "prevalence": 0.022727272727272728
-        },
-        {
-            "domain": "zapier-deployment.com",
-            "prevalence": 0.022727272727272728
+            "prevalence": 0.022222222222222223
         }
     ],
     "types": {
-        "Script": 7,
-        "XHR": 14
+        "Script": 11,
+        "Fetch": 2,
+        "XHR": 17
     },
     "nameservers": [
-        "ns-285.awsdns-35.com",
-        "ns-696.awsdns-23.net",
+        "ns-1077.awsdns-06.org",
         "ns-2027.awsdns-61.co.uk",
-        "ns-1077.awsdns-06.org"
+        "ns-285.awsdns-35.com",
+        "ns-696.awsdns-23.net"
     ]
 }

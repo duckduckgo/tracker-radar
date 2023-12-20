@@ -7,8 +7,8 @@
     "prevalence": 0.0000204,
     "sites": 3,
     "subdomains": [
-        "prodo-api",
-        "bfw-api-prod"
+        "bfw-api-prod",
+        "prodo-api"
     ],
     "cnames": [
         {
@@ -16,33 +16,8 @@
             "resolved": "bfw-api-prod.ariva-services.de"
         }
     ],
-    "fingerprinting": 1,
+    "fingerprinting": 0,
     "resources": [
-        {
-            "rule": "ariva-services\\.de\\/clientjs\\/ProdoClient\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "prodo-api"
-            ],
-            "apis": {
-                "Document.cookie getter": 1,
-                "Navigator.prototype.userAgent": 1
-            },
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [],
-            "responseHashes": [
-                "862442c9df50e474fc2fe1537d11691da027bf41bec216591b123a79d8337104"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "ariva.de",
-                "www.faz.net"
-            ]
-        },
         {
             "rule": "ariva-services\\.de\\/v1\\/data\\/quote_box\\/single",
             "cookies": 0,
@@ -85,7 +60,7 @@
                 }
             ],
             "responseHashes": [
-                "1e404985bbe04c7db541274ec7c7524f9c4e2f78e31c402368a578b7ed821145"
+                "c8ee899d48bfa7ec72bb2dc8d5832d12fccc9ab33de555b1abb683f10973fef3"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -93,6 +68,78 @@
             "exampleSites": [
                 "boerse-frankfurt.de",
                 "www.boerse-frankfurt.de"
+            ]
+        },
+        {
+            "rule": "ariva-services\\.de\\/v1\\/data\\/quote_box",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "bfw-api-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "api.boerse-frankfurt.de",
+                    "resolved": "bfw-api-prod.ariva-services.de"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "boerse-frankfurt.de",
+                "www.boerse-frankfurt.de"
+            ]
+        },
+        {
+            "rule": "ariva-services\\.de\\/v1\\/data\\/quote_box",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "bfw-api-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "api.boerse-frankfurt.de",
+                    "resolved": "bfw-api-prod.ariva-services.de"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "boerse-frankfurt.de",
+                "www.boerse-frankfurt.de"
+            ]
+        },
+        {
+            "rule": "ariva-services\\.de\\/clientjs\\/ProdoClient\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prodo-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "862442c9df50e474fc2fe1537d11691da027bf41bec216591b123a79d8337104"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "faz.net",
+                "www.faz.net"
             ]
         }
     ],
@@ -106,9 +153,10 @@
         }
     ],
     "types": {
-        "Script": 2,
-        "Preflight": 2,
-        "XHR": 2
+        "Preflight": 4,
+        "XHR": 2,
+        "Fetch": 2,
+        "Script": 2
     },
     "nameservers": [
         "ens1.ariva.de",

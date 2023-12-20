@@ -7,10 +7,11 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.000101,
-    "sites": 1,
+    "prevalence": 0.000201,
+    "sites": 2,
     "subdomains": [
-        "rum"
+        "rum",
+        "session-replay"
     ],
     "cnames": [],
     "fingerprinting": 0,
@@ -23,18 +24,64 @@
                 "rum"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [
-                "6771873221954adad812b2ad0a24b18fde7f2fa6db78d82d567a230be15f2b34"
+                "7a3d740faba0ce8ebab8cb58d1864a44d2cba0da0f85080e61c383c01f89c0d1",
+                "37d16654f4ed2093f3c0e1383d6866d63f6155b76ebbd2bfdd0f8a0aee4d1867"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "cupraofficial.com.au",
-                "www.cupraofficial.com.au"
+                "www.cupraofficial.com.au",
+                "www.lottoland.com.au"
+            ]
+        },
+        {
+            "rule": "browser-intake-datadoghq\\.eu\\/api\\/v2\\/rum",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rum"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "254309f41dee50497b9bf87665c830d93fcec7017c6d0b21db32026f849de959"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cupraofficial.com.au",
+                "www.lottoland.com.au"
+            ]
+        },
+        {
+            "rule": "browser-intake-datadoghq\\.eu\\/api\\/v2\\/replay",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "session-replay"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "443dde3c8964c49f3b87fb7858698e6ddc848ac000a9cb30693a5e00358f5e06"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cupraofficial.com.au",
+                "www.lottoland.com.au"
             ]
         }
     ],
@@ -43,21 +90,22 @@
     "cookies": 0,
     "topInitiators": [
         {
-            "domain": "datadoghq-browser-agent.com",
-            "prevalence": 0.8181818181818182
+            "domain": "first party",
+            "prevalence": 0.6785714285714286
         },
         {
-            "domain": "first party",
-            "prevalence": 0.18181818181818182
+            "domain": "datadoghq-browser-agent.com",
+            "prevalence": 0.32142857142857145
         }
     ],
     "types": {
-        "Fetch": 2
+        "Fetch": 3,
+        "XHR": 4
     },
     "nameservers": [
-        "ns-cloud-e4.googledomains.com",
-        "ns-cloud-e2.googledomains.com",
         "ns-cloud-e3.googledomains.com",
-        "ns-cloud-e1.googledomains.com"
+        "ns-cloud-e4.googledomains.com",
+        "ns-cloud-e1.googledomains.com",
+        "ns-cloud-e2.googledomains.com"
     ]
 }

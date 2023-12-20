@@ -4,10 +4,12 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000402,
-    "sites": 4,
+    "prevalence": 0.000705,
+    "sites": 7,
     "subdomains": [
+        "thd-ca-poc-prod",
         "dell-prod.actioniq",
+        "thd",
         "hp-prod.actioniq",
         "outside"
     ],
@@ -17,6 +19,14 @@
             "resolved": "hp-prod.actioniq.mr-in.com"
         },
         {
+            "original": "mr.homedepot.ca",
+            "resolved": "thd-ca-poc-prod.mr-in.com"
+        },
+        {
+            "original": "mr.homedepot.com",
+            "resolved": "thd.mr-in.com"
+        },
+        {
             "original": "mr.pinkbike.com",
             "resolved": "outside.mr-in.com"
         }
@@ -24,40 +34,28 @@
     "fingerprinting": 0,
     "resources": [
         {
-            "rule": "mr-in\\.com\\/v1\\/sync\\/function",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "dell-prod.actioniq"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "a0231ea71d6c3213cc7cb76e8ecd2e7987c96997d3bdde920be5cb35b7a21652"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "dell.com",
-                "www.dell.com"
-            ]
-        },
-        {
             "rule": "mr-in\\.com\\/v1\\/p",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
+                "thd-ca-poc-prod",
                 "dell-prod.actioniq",
+                "thd",
                 "hp-prod.actioniq",
                 "outside"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.000402,
+            "sites": 7,
+            "prevalence": 0.000705,
             "cnames": [
+                {
+                    "original": "mr.homedepot.ca",
+                    "resolved": "thd-ca-poc-prod.mr-in.com"
+                },
+                {
+                    "original": "mr.homedepot.com",
+                    "resolved": "thd.mr-in.com"
+                },
                 {
                     "original": "aiq-in.ext.hp.com",
                     "resolved": "hp-prod.actioniq.mr-in.com"
@@ -74,10 +72,35 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "dell.com",
+                "homedepot.ca",
+                "i.dell.com",
                 "www.dell.com",
+                "www.homedepot.ca",
+                "www.homedepot.com",
                 "www.hp.com",
                 "www.pinkbike.com"
+            ]
+        },
+        {
+            "rule": "mr-in\\.com\\/v1\\/sync\\/function",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dell-prod.actioniq"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "6c69523bfb71e25589db3dc072d9226e19bf8c0ec31752d29589e646d67512a7"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dell.com",
+                "www.dell.com"
             ]
         },
         {
@@ -109,16 +132,20 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.8571428571428571
+            "prevalence": 0.6666666666666666
+        },
+        {
+            "domain": "thdstatic.com",
+            "prevalence": 0.2222222222222222
         },
         {
             "domain": "metarouter.io",
-            "prevalence": 0.14285714285714285
+            "prevalence": 0.1111111111111111
         }
     ],
     "types": {
-        "Script": 2,
-        "Fetch": 6
+        "Fetch": 9,
+        "Script": 2
     },
     "nameservers": [
         "nelci.ns.cloudflare.com",

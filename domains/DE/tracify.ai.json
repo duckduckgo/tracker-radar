@@ -4,11 +4,14 @@
     "source": [
         "DuckDuckGo-DE"
     ],
-    "prevalence": 0.000302,
-    "sites": 3,
+    "prevalence": 0.000504,
+    "sites": 5,
     "subdomains": [
         "before",
-        "beacon"
+        "devbefore",
+        "beacon",
+        "devbeacon",
+        "scripting"
     ],
     "cnames": [],
     "fingerprinting": 3,
@@ -18,11 +21,12 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "before"
+                "before",
+                "devbefore"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 4,
+            "prevalence": 0.000403,
             "cnames": [],
             "responseHashes": [
                 "3cd79c3c55200c10e9b6a887eddf717fdd9fcf5ca4ee944981d1782792c401fb"
@@ -32,6 +36,8 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "blackroll.com",
+                "hoffmann-germany.de",
+                "www.justspices.de",
                 "www.liebscher-bracht.com"
             ]
         },
@@ -40,11 +46,12 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "beacon"
+                "beacon",
+                "devbeacon"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 4,
+            "prevalence": 0.000403,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
@@ -52,31 +59,89 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "blackroll.com",
+                "hoffmann-germany.de",
+                "www.justspices.de",
                 "www.liebscher-bracht.com"
+            ]
+        },
+        {
+            "rule": "tracify\\.ai\\/tracifyv2\\.js",
+            "cookies": 0.000101,
+            "fingerprinting": 3,
+            "subdomains": [
+                "scripting"
+            ],
+            "apis": {
+                "Navigator.prototype.vendor": 1,
+                "OfflineAudioContext.prototype.constructor": 1,
+                "Screen.prototype.availTop": 1,
+                "Screen.prototype.width": 1,
+                "Screen.prototype.availWidth": 1,
+                "Screen.prototype.availLeft": 1,
+                "Screen.prototype.height": 1,
+                "Screen.prototype.availHeight": 1,
+                "Navigator.prototype.language": 1,
+                "Navigator.prototype.languages": 1,
+                "Screen.prototype.colorDepth": 1,
+                "AudioBuffer.prototype.getChannelData": 1,
+                "Navigator.prototype.deviceMemory": 1,
+                "Navigator.prototype.hardwareConcurrency": 1,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 1,
+                "window.sessionStorage": 1,
+                "window.localStorage": 1,
+                "window.indexedDB": 1,
+                "Navigator.prototype.platform": 1,
+                "Navigator.prototype.plugins": 1,
+                "CanvasRenderingContext2D.prototype.isPointInPath": 1,
+                "HTMLCanvasElement.prototype.toDataURL": 1,
+                "Navigator.prototype.maxTouchPoints": 1,
+                "Document.cookie setter": 1,
+                "Document.cookie getter": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "06c2e5a9cb640aadbaa5d46b62c8bb56ae30d39706b0a7f7e6f0b8e608221e15"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "cookietest": {
+                    "ttl": -1703016207,
+                    "length": 1,
+                    "prevalence": 0.00010070493454179255,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hoffmann-germany.de",
+                "magicholz.de"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000201,
+    "cookies": 0.000403,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.6
+            "prevalence": 0.8181818181818182
         },
         {
             "domain": "pickystory.com",
-            "prevalence": 0.4
+            "prevalence": 0.18181818181818182
         }
     ],
     "types": {
-        "XHR": 2,
-        "Preflight": 2
+        "XHR": 4,
+        "Preflight": 4,
+        "Script": 2
     },
     "nameservers": [
-        "ns1033.ui-dns.com",
+        "ns1109.ui-dns.biz",
         "ns1071.ui-dns.org",
         "ns1109.ui-dns.de",
-        "ns1109.ui-dns.biz"
+        "ns1033.ui-dns.com"
     ]
 }

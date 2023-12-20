@@ -9,11 +9,12 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000204,
-    "sites": 3,
+    "prevalence": 0.0000272,
+    "sites": 4,
     "subdomains": [
-        "mssdk-sg",
-        "api-pns-va"
+        "api-pns-va",
+        "web-va",
+        "web-i18n"
     ],
     "cnames": [
         {
@@ -21,39 +22,16 @@
             "resolved": "api-pns-va.tiktok.com.edgekey.net"
         },
         {
-            "original": "mssdk-sg.tiktok.com",
-            "resolved": "mssdk-sg.tiktok.com.edgekey.net"
+            "original": "web-i18n.tiktok.com",
+            "resolved": "web-i18n.tiktok.com.edgekey.net"
+        },
+        {
+            "original": "web-va.tiktok.com",
+            "resolved": "web-va.tiktok.com.edgekey.net"
         }
     ],
     "fingerprinting": 0,
     "resources": [
-        {
-            "rule": "tiktok\\.com\\.edgekey\\.net\\/web\\/report",
-            "cookies": 0.0000136,
-            "fingerprinting": 0,
-            "subdomains": [
-                "mssdk-sg"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [
-                {
-                    "original": "mssdk-sg.tiktok.com",
-                    "resolved": "mssdk-sg.tiktok.com.edgekey.net"
-                }
-            ],
-            "responseHashes": [
-                "b097fc471c067f5960fbf018f38f1e00396bb71612d79be26976b8f18cf8da26"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "tiktok.com",
-                "ads.tiktok.com"
-            ]
-        },
         {
             "rule": "tiktok\\.com\\.edgekey\\.net\\/node\\/common\\/web-privacy-config",
             "cookies": 0,
@@ -96,7 +74,7 @@
                 }
             ],
             "responseHashes": [
-                "ef34a80889c65eb99f5d8879046917a2910dded28b40a8cadebef3b83679f00f"
+                "271b909cb1ab85c1ae2610487847fbcc211f78ab0d64ae3f5dbfe479bedce952"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -105,24 +83,65 @@
                 "tiktok.com",
                 "shop.tiktok.com"
             ]
+        },
+        {
+            "rule": "tiktok\\.com\\.edgekey\\.net\\/passport\\/web\\/store_region\\/",
+            "cookies": 0.0000136,
+            "fingerprinting": 0,
+            "subdomains": [
+                "web-va",
+                "web-i18n"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "web-va.tiktok.com",
+                    "resolved": "web-va.tiktok.com.edgekey.net"
+                },
+                {
+                    "original": "web-i18n.tiktok.com",
+                    "resolved": "web-i18n.tiktok.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "0b1e4cdc8824e1aed9b36a053fcde0837c38bde0962c889f53fc2a796879372b"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tiktok.com",
+                "www.tiktok.com"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0000068,
+    "cookies": 0.0000136,
     "topInitiators": [
         {
+            "domain": "tiktokcdn-us.com",
+            "prevalence": 0.4
+        },
+        {
             "domain": "ibytedtos.com",
-            "prevalence": 0.75
+            "prevalence": 0.2
         },
         {
             "domain": "oecstatic.com",
-            "prevalence": 0.25
+            "prevalence": 0.2
+        },
+        {
+            "domain": "ttwstatic.com",
+            "prevalence": 0.2
         }
     ],
     "types": {
-        "XHR": 4,
-        "Preflight": 2
+        "Preflight": 2,
+        "XHR": 2,
+        "Fetch": 2
     },
     "nameservers": []
 }

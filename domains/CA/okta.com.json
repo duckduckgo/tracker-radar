@@ -7,15 +7,15 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000704,
-    "sites": 7,
+    "prevalence": 0.00101,
+    "sites": 10,
     "subdomains": [
+        "sas.customdomains",
         "brp-ecommerce-auth.customdomains",
         "onekinship",
-        "astminternational.customdomains",
+        "kohler-b2c",
         "servicenowsignon.customdomains",
-        "churchofjesuschrist.customdomains",
-        "benjaminmoore.customdomains"
+        "churchofjesuschrist.customdomains"
     ],
     "cnames": [
         {
@@ -23,16 +23,12 @@
             "resolved": "brp-ecommerce-auth.customdomains.okta.com"
         },
         {
-            "original": "iam.astm.org",
-            "resolved": "astminternational.customdomains.okta.com"
+            "original": "auth.sas.com",
+            "resolved": "sas.customdomains.okta.com"
         },
         {
             "original": "id.churchofjesuschrist.org",
             "resolved": "churchofjesuschrist.customdomains.okta.com"
-        },
-        {
-            "original": "okta.benjaminmoore.com",
-            "resolved": "benjaminmoore.customdomains.okta.com"
         },
         {
             "original": "ssosignon.servicenow.com",
@@ -42,26 +38,49 @@
     "fingerprinting": 0,
     "resources": [
         {
+            "rule": "okta\\.com\\/api\\/v1\\/users\\/me",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sas.customdomains"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "auth.sas.com",
+                    "resolved": "sas.customdomains.okta.com"
+                }
+            ],
+            "responseHashes": [
+                "bd2727fd00b60019b0d25dfa2a29af9f244e79754d4b808ddba6bcd07e66c029"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sas.com",
+                "support.sas.com"
+            ]
+        },
+        {
             "rule": "okta\\.com\\/api\\/v1\\/sessions\\/me",
-            "cookies": 0.000402,
+            "cookies": 0.000403,
             "fingerprinting": 0,
             "subdomains": [
                 "brp-ecommerce-auth.customdomains",
                 "onekinship",
-                "astminternational.customdomains",
+                "kohler-b2c",
                 "servicenowsignon.customdomains"
             ],
             "apis": {},
             "sites": 4,
-            "prevalence": 0.000402,
+            "prevalence": 0.000403,
             "cnames": [
                 {
                     "original": "auth.brp.com",
                     "resolved": "brp-ecommerce-auth.customdomains.okta.com"
-                },
-                {
-                    "original": "iam.astm.org",
-                    "resolved": "astminternational.customdomains.okta.com"
                 },
                 {
                     "original": "ssosignon.servicenow.com",
@@ -75,23 +94,24 @@
             "exampleSites": [
                 "brp.com",
                 "www.adoptapet.com",
-                "www.astm.org",
+                "www.kohler.ca",
                 "www.servicenow.com"
             ]
         },
         {
             "rule": "okta\\.com\\/api\\/v1\\/sessions\\/me",
-            "cookies": 0.000302,
+            "cookies": 0.000403,
             "fingerprinting": 0,
             "subdomains": [
                 "brp-ecommerce-auth.customdomains",
                 "onekinship",
                 "churchofjesuschrist.customdomains",
+                "kohler-b2c",
                 "servicenowsignon.customdomains"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.000402,
+            "sites": 5,
+            "prevalence": 0.000503,
             "cnames": [
                 {
                     "original": "auth.brp.com",
@@ -107,7 +127,8 @@
                 }
             ],
             "responseHashes": [
-                "a6046946502934f43dbdfb71c7737007ff401ec72b180254051cd5aa398133cf"
+                "80c9bb321063f2fd78fc41ed0dbf451e018aca5578f48afd58fd41c35325aeaf",
+                "46775a815f4775bdd0bda8066c63be4cbef56bd47981e6ef443037483bee131a"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -116,68 +137,41 @@
                 "brp.com",
                 "www.adoptapet.com",
                 "www.churchofjesuschrist.org",
+                "www.kohler.ca",
                 "www.servicenow.com"
-            ]
-        },
-        {
-            "rule": "okta\\.com\\/api\\/v1\\/sessions\\/me",
-            "cookies": 0.000201,
-            "fingerprinting": 0,
-            "subdomains": [
-                "astminternational.customdomains",
-                "benjaminmoore.customdomains"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [
-                {
-                    "original": "iam.astm.org",
-                    "resolved": "astminternational.customdomains.okta.com"
-                },
-                {
-                    "original": "okta.benjaminmoore.com",
-                    "resolved": "benjaminmoore.customdomains.okta.com"
-                }
-            ],
-            "responseHashes": [
-                "f7dac90bedd24e0961c0c893c077496fdb4395b147f99c96f100e88bdf7952d7"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "astm.org",
-                "www.benjaminmoore.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000704,
+    "cookies": 0.00101,
     "topInitiators": [
         {
-            "domain": "oktacdn.com",
-            "prevalence": 0.5
+            "domain": "first party",
+            "prevalence": 0.6
         },
         {
-            "domain": "first party",
-            "prevalence": 0.5
+            "domain": "oktacdn.com",
+            "prevalence": 0.2
+        },
+        {
+            "domain": "adobedtm.com",
+            "prevalence": 0.2
         }
     ],
     "types": {
+        "XHR": 2,
         "Preflight": 4,
-        "Fetch": 4,
-        "XHR": 2
+        "Fetch": 5
     },
     "nameservers": [
-        "edns5.ultradns.com",
-        "edns5.ultradns.org",
-        "ns-1563.awsdns-03.co.uk",
         "edns5.ultradns.biz",
-        "ns-285.awsdns-35.com",
+        "edns5.ultradns.com",
+        "edns5.ultradns.net",
+        "edns5.ultradns.org",
         "ns-1459.awsdns-54.org",
-        "ns-684.awsdns-21.net",
-        "edns5.ultradns.net"
+        "ns-1563.awsdns-03.co.uk",
+        "ns-285.awsdns-35.com",
+        "ns-684.awsdns-21.net"
     ]
 }

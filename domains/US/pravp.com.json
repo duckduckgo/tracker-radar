@@ -4,8 +4,8 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000408,
-    "sites": 6,
+    "prevalence": 0.0000544,
+    "sites": 8,
     "subdomains": [
         "avp",
         "insight",
@@ -14,6 +14,30 @@
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "pravp\\.com\\/whereami",
+            "cookies": 0.0000272,
+            "fingerprinting": 0,
+            "subdomains": [
+                "avp"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000272,
+            "cnames": [],
+            "responseHashes": [
+                "b85f8f2f88d5d3293b669ece14154db316b1a00ac5bf590a91c60e6176639e62"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jeffersonsbourbon.com",
+                "www.jamesonwhiskey.com",
+                "www.kahlua.com",
+                "www.theglenlivet.com"
+            ]
+        },
         {
             "rule": "pravp\\.com\\/absolut",
             "cookies": 0,
@@ -32,7 +56,7 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "6ec5109a9e605cbc1de19defa85fd60353c95b34606dbe56b49b804087d6bb1e"
+                "b7fdd9ced7fbbdfd7094ccacff8c50fd0595bcb8de55c016ed2f6219d9b67cca"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -44,36 +68,14 @@
         },
         {
             "rule": "pravp\\.com\\/analytics",
-            "cookies": 0,
+            "cookies": 0.000034,
             "fingerprinting": 0,
             "subdomains": [
                 "insight"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.0000272,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "absolutdrinks.com",
-                "www.absolutdrinks.com",
-                "www.jamesonwhiskey.com",
-                "www.kahlua.com"
-            ]
-        },
-        {
-            "rule": "pravp\\.com\\/analytics",
-            "cookies": 0.0000272,
-            "fingerprinting": 0,
-            "subdomains": [
-                "insight"
-            ],
-            "apis": {},
-            "sites": 4,
-            "prevalence": 0.0000272,
+            "sites": 5,
+            "prevalence": 0.000034,
             "cnames": [],
             "responseHashes": [],
             "type": "Fetch",
@@ -83,7 +85,8 @@
                 "absolutdrinks.com",
                 "www.absolutdrinks.com",
                 "www.jamesonwhiskey.com",
-                "www.kahlua.com"
+                "www.kahlua.com",
+                "www.theglenlivet.com"
             ]
         },
         {
@@ -131,6 +134,29 @@
             ]
         },
         {
+            "rule": "pravp\\.com\\/analytics",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "insight"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000034,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "absolutdrinks.com",
+                "www.absolutdrinks.com",
+                "www.jamesonwhiskey.com",
+                "www.kahlua.com",
+                "www.theglenlivet.com"
+            ]
+        },
+        {
             "rule": "pravp\\.com\\/jameson-whiskey",
             "cookies": 0,
             "fingerprinting": 1,
@@ -138,7 +164,11 @@
                 "avp"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 1
+                "window.localStorage": 2,
+                "Navigator.prototype.userAgent": 2,
+                "window.sessionStorage": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2
             },
             "sites": 2,
             "prevalence": 0.0000136,
@@ -155,29 +185,6 @@
             ]
         },
         {
-            "rule": "pravp\\.com\\/whereami",
-            "cookies": 0.0000204,
-            "fingerprinting": 0,
-            "subdomains": [
-                "avp"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000204,
-            "cnames": [],
-            "responseHashes": [
-                "b85f8f2f88d5d3293b669ece14154db316b1a00ac5bf590a91c60e6176639e62"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "jamesonwhiskey.com",
-                "www.jamesonwhiskey.com",
-                "www.kahlua.com"
-            ]
-        },
-        {
             "rule": "pravp\\.com\\/kahlua-gcms",
             "cookies": 0,
             "fingerprinting": 1,
@@ -185,11 +192,7 @@
                 "avp"
             ],
             "apis": {
-                "window.localStorage": 2,
-                "Navigator.prototype.userAgent": 2,
-                "window.sessionStorage": 2,
-                "Screen.prototype.width": 2,
-                "Screen.prototype.height": 2
+                "Navigator.prototype.userAgent": 1
             },
             "sites": 2,
             "prevalence": 0.0000136,
@@ -274,7 +277,7 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0000408,
+    "cookies": 0.0000544,
     "topInitiators": [
         {
             "domain": "first party",
@@ -282,17 +285,16 @@
         }
     ],
     "types": {
+        "Fetch": 9,
         "Script": 6,
-        "Preflight": 4,
-        "Fetch": 7,
-        "Font": 10
+        "Font": 10,
+        "Preflight": 5
     },
     "nameservers": [
-        "a2-64.akam.net",
         "a8-67.akam.net",
-        "a12-67.akam.net",
         "a1-30.akam.net",
         "a5-66.akam.net",
-        "a3-65.akam.net"
+        "a2-64.akam.net",
+        "a12-67.akam.net"
     ]
 }

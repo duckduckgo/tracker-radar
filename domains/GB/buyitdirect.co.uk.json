@@ -67,16 +67,18 @@
         },
         {
             "rule": "buyitdirect\\.co\\.uk\\/Scripts\\/bundles\\/bid_desk_bunjs_0\\.min\\.js",
-            "cookies": 0,
+            "cookies": 0.000101,
             "fingerprinting": 1,
             "subdomains": [
                 "scriptsap",
                 "scriptsld"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 1,
+                "Navigator.prototype.userAgent": 2,
                 "Date.prototype.getTime": 2,
-                "Event.prototype.timeStamp": 2
+                "Event.prototype.timeStamp": 2,
+                "Document.cookie getter": 1,
+                "Document.cookie setter": 1
             },
             "sites": 2,
             "prevalence": 0.000201,
@@ -85,7 +87,14 @@
                 "dde86766c2e577b66b69c9d6b46b466f139f411cd0a2cc4e04d181cd6b7087a4"
             ],
             "type": "Script",
-            "firstPartyCookies": {},
+            "firstPartyCookies": {
+                "ExpName_ResponsiveCheckoutAB": {
+                    "ttl": 2592001,
+                    "length": 16,
+                    "prevalence": 0.00010053282396702523,
+                    "uniqueness": 1
+                }
+            },
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "appliancesdirect.co.uk",
@@ -123,13 +132,13 @@
                 "bdgeoip": {
                     "ttl": 172804,
                     "length": 15,
-                    "prevalence": 0.0002011667672500503,
+                    "prevalence": 0.00020106564793405046,
                     "uniqueness": 0.5
                 },
                 "rtb_uid": {
                     "ttl": 2592004,
                     "length": 36,
-                    "prevalence": 0.00010058338362502515,
+                    "prevalence": 0.00010053282396702523,
                     "uniqueness": 1
                 }
             },
@@ -192,14 +201,17 @@
         },
         {
             "rule": "buyitdirect\\.co\\.uk\\/MDC\\/gsmdc\\.html",
-            "cookies": 0,
+            "cookies": 0.000201,
             "fingerprinting": 1,
             "subdomains": [
                 "contentap"
             ],
             "apis": {
                 "Date.prototype.getTime": 3,
-                "Navigator.prototype.userAgent": 2
+                "PerformanceTiming.prototype.navigationStart": 1,
+                "Navigator.prototype.userAgent": 2,
+                "Document.cookie setter": 2,
+                "Document.cookie getter": 2
             },
             "sites": 3,
             "prevalence": 0.000302,
@@ -239,6 +251,29 @@
                 "www.electriq.co.uk",
                 "www.laptopsdirect.co.uk"
             ]
+        },
+        {
+            "rule": "buyitdirect\\.co\\.uk\\/Styles\\/bxslider\\/images\\/bx_loader\\.gif",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "contentap",
+                "contentld"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "df927125f386f4445027d5cc842a764fba383244793e51d491a5e07491f474de"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "appliancesdirect.co.uk",
+                "www.laptopsdirect.co.uk"
+            ]
         }
     ],
     "categories": [],
@@ -253,12 +288,13 @@
     "types": {
         "Stylesheet": 4,
         "Script": 12,
-        "Document": 3
+        "Document": 3,
+        "Image": 2
     },
     "nameservers": [
-        "ns1.no-ip.com",
         "ns2.no-ip.com",
         "ns3.no-ip.com",
-        "ns4.no-ip.com"
+        "ns4.no-ip.com",
+        "ns1.no-ip.com"
     ]
 }

@@ -7,27 +7,33 @@
     "prevalence": 0.000101,
     "sites": 1,
     "subdomains": [
-        "psa",
+        "route",
+        "cdata",
+        "logging",
         "analytics"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
         {
-            "rule": "carambo\\.la\\/getPsa",
+            "rule": "carambo\\.la\\/inimage\\/getlayer",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
-                "psa"
+                "route"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2,
+                "Date.prototype.getTime": 2,
+                "window.innerWidth": 2,
+                "window.innerHeight": 2
+            },
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [
-                "86289780bb39c8efe2e174d5523e99cea4965c1fa0c56acb2564dc2d218cda43"
-            ],
-            "type": "Fetch",
+            "responseHashes": [],
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -36,18 +42,18 @@
             ]
         },
         {
-            "rule": "carambo\\.la\\/getPsa",
+            "rule": "carambo\\.la\\/Layer\\/InImage\\/Prod\\/cbola_platform\\/version_2\\.34\\.0\\/js\\/Carambola_layer_160\\.min\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "psa"
+                "cdata"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "3bf893cd06c71666791c7193b1893c6f6b2e8140976555cab6b0e467bad4630d"
+                "fe41a139e97ffda6c8a707088eca79274f3ea03933a1d35f3d6766689e4fb1be"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -58,11 +64,11 @@
             ]
         },
         {
-            "rule": "carambo\\.la\\/SetLastMile",
+            "rule": "carambo\\.la\\/AddLogs",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "analytics"
+                "logging"
             ],
             "apis": {},
             "sites": 2,
@@ -71,7 +77,27 @@
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
             ],
-            "type": "Script",
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thefreedictionary.com",
+                "www.thefreedictionary.com"
+            ]
+        },
+        {
+            "rule": "carambo\\.la\\/SetPageRequestGeo",
+            "cookies": 0.000101,
+            "fingerprinting": 0,
+            "subdomains": [
+                "analytics"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -90,13 +116,14 @@
         }
     ],
     "types": {
-        "Fetch": 2,
-        "Script": 4
+        "Script": 4,
+        "XHR": 2,
+        "Fetch": 2
     },
     "nameservers": [
         "ns-437.awsdns-54.com",
-        "ns-1315.awsdns-36.org",
+        "ns-1973.awsdns-54.co.uk",
         "ns-774.awsdns-32.net",
-        "ns-1973.awsdns-54.co.uk"
+        "ns-1315.awsdns-36.org"
     ]
 }

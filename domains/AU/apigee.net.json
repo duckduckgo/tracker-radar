@@ -9,10 +9,11 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.00111,
-    "sites": 11,
+    "prevalence": 0.00131,
+    "sites": 13,
     "subdomains": [
         "accor-group-prod-prod",
+        "slnsw-prod",
         "cisco-dsc-prod",
         "adsk-prod",
         "bgl-web-prod",
@@ -33,6 +34,10 @@
             "resolved": "bgl-web-prod.apigee.net"
         },
         {
+            "original": "apiv2.sl.nsw.gov.au",
+            "resolved": "slnsw-prod.apigee.net"
+        },
+        {
             "original": "developer.api.autodesk.com",
             "resolved": "adsk-prod.apigee.net"
         },
@@ -43,6 +48,31 @@
     ],
     "fingerprinting": 0,
     "resources": [
+        {
+            "rule": "apigee\\.net\\/authentication\\/v2\\.0\\/authorization",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "accor-group-prod-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "api.accor.com",
+                    "resolved": "accor-group-prod-prod.apigee.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "accor.com",
+                "all.accor.com"
+            ]
+        },
         {
             "rule": "apigee\\.net\\/referential\\/v1\\/pos\\/\\/currencies",
             "cookies": 0,
@@ -112,7 +142,7 @@
                 }
             ],
             "responseHashes": [
-                "6b3112cfc4804d6e3393b8f09e22fe35047e6f9a28cff921fd5a3a528639fc5c"
+                "2682c2fbd38d0bc925ae56e1bcf15c19ba60d10573d0c93cd35eb18f78658b84"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -148,6 +178,85 @@
             ]
         },
         {
+            "rule": "apigee\\.net\\/collection\\/v2\\/files",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "slnsw-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "apiv2.sl.nsw.gov.au",
+                    "resolved": "slnsw-prod.apigee.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nsw.gov.au",
+                "collection.sl.nsw.gov.au"
+            ]
+        },
+        {
+            "rule": "apigee\\.net\\/collection\\/v2\\/files",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "slnsw-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "apiv2.sl.nsw.gov.au",
+                    "resolved": "slnsw-prod.apigee.net"
+                }
+            ],
+            "responseHashes": [
+                "b61a1d089f77fd21db8c4084974f3010acf4699e8a35ed3729a2948d0daecb65"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nsw.gov.au",
+                "collection.sl.nsw.gov.au"
+            ]
+        },
+        {
+            "rule": "apigee\\.net\\/v1\\/netid",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cisco-dsc-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "dsc.cisco.com",
+                    "resolved": "cisco-dsc-prod.apigee.net"
+                }
+            ],
+            "responseHashes": [
+                "738483fd2407483cca50ae40c5cc81d527ad6e902445dca84c6bb9b735871d6a"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cisco.com",
+                "www.cisco.com"
+            ]
+        },
+        {
             "rule": "apigee\\.net\\/v1\\/netid",
             "cookies": 0,
             "fingerprinting": 0,
@@ -173,42 +282,15 @@
             ]
         },
         {
-            "rule": "apigee\\.net\\/v1\\/netid",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "cisco-dsc-prod"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [
-                {
-                    "original": "dsc.cisco.com",
-                    "resolved": "cisco-dsc-prod.apigee.net"
-                }
-            ],
-            "responseHashes": [
-                "3e4c38d9aa22eecb085992ad181666ee0a82a97c6285ce667c99d4aec8251145"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "cisco.com",
-                "www.cisco.com"
-            ]
-        },
-        {
             "rule": "apigee\\.net\\/authentication\\/v2\\/authorize",
-            "cookies": 0.000302,
+            "cookies": 0.000301,
             "fingerprinting": 0,
             "subdomains": [
                 "adsk-prod"
             ],
             "apis": {},
             "sites": 3,
-            "prevalence": 0.000302,
+            "prevalence": 0.000301,
             "cnames": [
                 {
                     "original": "developer.api.autodesk.com",
@@ -267,7 +349,7 @@
                 }
             ],
             "responseHashes": [
-                "58c79409ab7826fea0a35934d40575256c4abd1cfe51d25bb1101455240b917f"
+                "009a9f3afc1c9fe73b6d68312265c114a516eb0855e72d9e9f04297cdcfcd233"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -319,61 +401,9 @@
                 }
             ],
             "responseHashes": [
-                "e388640089309219744c00b2cd7bfc8a2121c2d7b5b88e442776f214fd342e10"
+                "dcdef8aac609865663f20a01b93be12c310ceb99c198f7f1d7aa2edf7313b3f6"
             ],
             "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "bunnings.com.au",
-                "www.bunnings.com.au"
-            ]
-        },
-        {
-            "rule": "apigee\\.net\\/v1\\/search\\/recommendation",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "bgl-web-prod"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [
-                {
-                    "original": "api.prod.bunnings.com.au",
-                    "resolved": "bgl-web-prod.apigee.net"
-                }
-            ],
-            "responseHashes": [
-                "ca0d7639546c98942917b564a16d9e974c1f66623cd328f9099fa10dcc5c7388"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "bunnings.com.au",
-                "www.bunnings.com.au"
-            ]
-        },
-        {
-            "rule": "apigee\\.net\\/v1\\/search\\/recommendation",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "bgl-web-prod"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [
-                {
-                    "original": "api.prod.bunnings.com.au",
-                    "resolved": "bgl-web-prod.apigee.net"
-                }
-            ],
-            "responseHashes": [],
-            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -445,7 +475,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "73c440a9e0bd7c065dbed771fa011428db2c99176e9c51c59eaaeae239e8c4ce"
+                "a7c193e9ffe05dc4da4789098b1a8afb5afcb0f86054222f4dbe0557e9ad07fa"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -467,7 +497,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "96a5247709cbc8200e7509297c21cb4bb857c246f7c5499a68aca5c4ccf84629"
+                "21a7c3bb543727510eceb2d6a570a62f78ab0e94963fe0165a511c8a628edf48"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -482,7 +512,7 @@
         "CDN"
     ],
     "performance": {},
-    "cookies": 0.000503,
+    "cookies": 0.000603,
     "topInitiators": [
         {
             "domain": "first party",
@@ -502,9 +532,9 @@
         }
     ],
     "types": {
+        "Document": 5,
         "Preflight": 14,
         "Fetch": 6,
-        "Document": 3,
         "XHR": 12
     },
     "nameservers": [

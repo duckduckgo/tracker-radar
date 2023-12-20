@@ -11,6 +11,7 @@
     "sites": 4,
     "subdomains": [
         "www",
+        "splk-hec",
         "smetrics"
     ],
     "cnames": [],
@@ -40,7 +41,7 @@
         },
         {
             "rule": "t-mobile\\.com\\/content\\/dam\\/metro\\/util\\/kpi-manager\\/kpi-manager\\.js",
-            "cookies": 0.0000068,
+            "cookies": 0.0000136,
             "fingerprinting": 1,
             "subdomains": [
                 "www"
@@ -50,7 +51,7 @@
                 "Date.prototype.getTime": 2,
                 "window.sessionStorage": 2,
                 "window.localStorage": 2,
-                "Document.cookie setter": 1
+                "Document.cookie setter": 2
             },
             "sites": 2,
             "prevalence": 0.0000136,
@@ -61,10 +62,10 @@
             "type": "Script",
             "firstPartyCookies": {
                 "KPI_EV": {
-                    "ttl": 1810,
+                    "ttl": 1812,
                     "length": 1,
-                    "prevalence": 0.000006804294870922526,
-                    "uniqueness": 1
+                    "prevalence": 0.00001361016407052787,
+                    "uniqueness": 0.5
                 }
             },
             "firstPartyCookiesSent": {},
@@ -74,19 +75,59 @@
             ]
         },
         {
+            "rule": "t-mobile\\.com\\/services\\/collector\\/event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "splk-hec"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "metrobyt-mobile.com",
+                "www.metrobyt-mobile.com"
+            ]
+        },
+        {
+            "rule": "t-mobile\\.com\\/services\\/collector\\/event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "splk-hec"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "metrobyt-mobile.com",
+                "www.metrobyt-mobile.com"
+            ]
+        },
+        {
             "rule": "t-mobile\\.com\\/content\\/dam\\/tmobile\\/util\\/cdl\\/cdl\\.js",
-            "cookies": 0.0000136,
+            "cookies": 0.00000681,
             "fingerprinting": 1,
             "subdomains": [
                 "www"
             ],
             "apis": {
-                "window.sessionStorage": 2,
-                "Document.cookie getter": 2,
-                "Navigator.prototype.userAgent": 2,
-                "window.localStorage": 2,
+                "window.sessionStorage": 1,
+                "Document.cookie getter": 1,
+                "Navigator.prototype.userAgent": 1,
+                "window.localStorage": 1,
                 "Date.prototype.getTime": 2,
-                "Document.cookie setter": 2
+                "Document.cookie setter": 1
             },
             "sites": 2,
             "prevalence": 0.0000136,
@@ -114,8 +155,8 @@
             "prevalence": 0.0000204,
             "cnames": [],
             "responseHashes": [
-                "c23dab2b999c7820222025beb2397fa8ff8aebc808e66ba31963a5f3efa446ec",
-                "d0d476cc5bac79bf38ab078e3514ca42d3ae2d90844939872953994d33dacc97"
+                "1ecd2d4d4eda3a1eef22435707d24c9f9f34d1e214e4cbf7c129f4439d84b790",
+                "99016571b4242b8541b5dd61758616fd13c2a375d1d6575035b47603c5c9996d"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -133,31 +174,33 @@
     "topInitiators": [
         {
             "domain": "adobedtm.com",
-            "prevalence": 0.5882352941176471
+            "prevalence": 0.5555555555555556
         },
         {
             "domain": "first party",
-            "prevalence": 0.23529411764705882
-        },
-        {
-            "domain": "lpsnmedia.net",
-            "prevalence": 0.11764705882352941
+            "prevalence": 0.2222222222222222
         },
         {
             "domain": "quantummetric.com",
-            "prevalence": 0.058823529411764705
+            "prevalence": 0.1111111111111111
+        },
+        {
+            "domain": "lpsnmedia.net",
+            "prevalence": 0.1111111111111111
         }
     ],
     "types": {
         "Script": 6,
+        "XHR": 2,
+        "Other": 2,
         "Fetch": 3
     },
     "nameservers": [
-        "ns7.customer.level3.net",
-        "ns2.customer.level3.net",
-        "ns10.tmobileus.net",
-        "ns10.zayo.com",
         "ns20.zayo.com",
-        "ns10.tmobileus.com"
+        "ns10.tmobileus.com",
+        "ns2.customer.level3.net",
+        "ns10.zayo.com",
+        "ns7.customer.level3.net",
+        "ns10.tmobileus.net"
     ]
 }

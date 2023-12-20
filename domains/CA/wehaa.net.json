@@ -4,14 +4,37 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000101,
-    "sites": 1,
+    "prevalence": 0.000302,
+    "sites": 3,
     "subdomains": [
+        "latimes-banners.rs.aws",
         "analytics-prd.aws"
     ],
     "cnames": [],
     "fingerprinting": 0,
     "resources": [
+        {
+            "rule": "wehaa\\.net\\/banners\\/promotions\\/homes\\/35\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "latimes-banners.rs.aws"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "5600076124eed51ae7ba364ea6e1cb1077695d9b706407479daa4d31e3f31126"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "latimes.com",
+                "www.latimes.com"
+            ]
+        },
         {
             "rule": "wehaa\\.net\\/api\\/v1\\/trackings",
             "cookies": 0,
@@ -20,15 +43,17 @@
                 "analytics-prd.aws"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 4,
+            "prevalence": 0.000403,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "theprogress.com",
+                "latimes.com",
+                "www.latimes.com",
+                "www.mapleridgenews.com",
                 "www.theprogress.com"
             ]
         },
@@ -44,13 +69,39 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "a57ced8d83da586f4b38f246ba9bbc44610ca8e804d9113adea3c299d3b91093"
+                "bfd4545c7e7d76d05bb4529ce823f45e341bad94e935afd3b6798a1c422fd953"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "latimes.com",
+                "www.latimes.com"
+            ]
+        },
+        {
+            "rule": "wehaa\\.net\\/api\\/v1\\/trackings",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "analytics-prd.aws"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000403,
+            "cnames": [],
+            "responseHashes": [
+                "cf377458a18082638e4f9b2f6e616ad2b032cabb021f51c88852cb574e92df05",
+                "631b510e624e7737ade01412a2b92d6c22084bb4df9748c9a895bc93dc0f1776",
+                "567b4fbfa63508494c1b0004139f3c30ea7c5904e4cd488024b7fb2c1c0d478c"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "theprogress.com",
+                "latimes.com",
+                "www.latimes.com",
+                "www.mapleridgenews.com",
                 "www.theprogress.com"
             ]
         }
@@ -60,26 +111,36 @@
     "cookies": 0,
     "topInitiators": [
         {
+            "domain": "jquery.com",
+            "prevalence": 0.7608695652173914
+        },
+        {
             "domain": "ajax.googleapis.com",
-            "prevalence": 0.6
+            "prevalence": 0.10869565217391304
+        },
+        {
+            "domain": "googlesyndication.com",
+            "prevalence": 0.043478260869565216
         },
         {
             "domain": "doubleclick.net",
-            "prevalence": 0.2
+            "prevalence": 0.043478260869565216
         },
         {
             "domain": "first party",
-            "prevalence": 0.2
+            "prevalence": 0.043478260869565216
         }
     ],
     "types": {
-        "Preflight": 2,
-        "XHR": 2
+        "Script": 2,
+        "Preflight": 4,
+        "Fetch": 2,
+        "XHR": 4
     },
     "nameservers": [
         "ns-457.awsdns-57.com",
+        "ns-1447.awsdns-52.org",
         "ns-1620.awsdns-10.co.uk",
-        "ns-779.awsdns-33.net",
-        "ns-1447.awsdns-52.org"
+        "ns-779.awsdns-33.net"
     ]
 }

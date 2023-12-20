@@ -11,91 +11,21 @@
     "sites": 5,
     "subdomains": [
         "webstatic",
-        "webstatic-sea",
         "sg-public-data-api",
-        "log-upload-os",
         "sentry.eks",
+        "log-upload-os",
         "act",
+        "minor-api-os",
+        "webstatic-sea",
         "genshin",
         "api-os-takumi-static",
         "sg-public-api",
-        "minor-api-os",
-        "abtest-api-data-sg"
+        "abtest-api-data-sg",
+        "fastcdn"
     ],
     "cnames": [],
     "fingerprinting": 3,
     "resources": [
-        {
-            "rule": "hoyoverse\\.com\\/dora\\/biz\\/mihoyo-account-flow-sea\\/v2\\/main\\.js",
-            "cookies": 0.0000068,
-            "fingerprinting": 3,
-            "subdomains": [
-                "webstatic",
-                "webstatic-sea"
-            ],
-            "apis": {
-                "Navigator.prototype.userAgent": 1,
-                "Document.cookie getter": 1,
-                "Document.cookie setter": 1,
-                "Navigator.prototype.appName": 1,
-                "Navigator.prototype.language": 1,
-                "Date.prototype.getTime": 1,
-                "window.outerHeight": 1,
-                "window.outerWidth": 1,
-                "window.devicePixelRatio": 1,
-                "Navigator.prototype.maxTouchPoints": 1,
-                "Navigator.prototype.languages": 1,
-                "Navigator.prototype.platform": 1,
-                "Navigator.prototype.plugins": 1,
-                "Navigator.prototype.deviceMemory": 1,
-                "Navigator.prototype.hardwareConcurrency": 1,
-                "WebGLRenderingContext.prototype.getExtension": 1,
-                "WebGLRenderingContext.prototype.getParameter": 1,
-                "Intl.DateTimeFormat.prototype.resolvedOptions": 1,
-                "Navigator.prototype.doNotTrack": 1,
-                "Screen.prototype.width": 1,
-                "Screen.prototype.availWidth": 1,
-                "Screen.prototype.height": 1,
-                "Screen.prototype.availHeight": 1,
-                "Navigator.prototype.productSub": 1
-            },
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Script",
-            "firstPartyCookies": {
-                "_MHYUUID": {
-                    "ttl": 31536006,
-                    "length": 36,
-                    "prevalence": 0.000006804294870922526,
-                    "uniqueness": 1
-                },
-                "DEVICEFP": {
-                    "ttl": 31536006,
-                    "length": 13,
-                    "prevalence": 0.000006804294870922526,
-                    "uniqueness": 1
-                },
-                "DEVICEFP_SEED_ID": {
-                    "ttl": 31536003,
-                    "length": 16,
-                    "prevalence": 0.000006804294870922526,
-                    "uniqueness": 1
-                },
-                "DEVICEFP_SEED_TIME": {
-                    "ttl": 31536003,
-                    "length": 13,
-                    "prevalence": 0.000006804294870922526,
-                    "uniqueness": 1
-                }
-            },
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "hoyolab.com",
-                "genshin.mihoyo.com"
-            ]
-        },
         {
             "rule": "hoyoverse\\.com\\/dora\\/biz\\/mihoyo-analysis\\/v2\\/main\\.js",
             "cookies": 0.0000204,
@@ -105,7 +35,7 @@
             ],
             "apis": {
                 "Navigator.prototype.userAgent": 3,
-                "Navigator.prototype.language": 3,
+                "Navigator.prototype.language": 2,
                 "Document.cookie getter": 3,
                 "Document.cookie setter": 3,
                 "Navigator.prototype.platform": 3,
@@ -120,9 +50,115 @@
             "type": "Script",
             "firstPartyCookies": {
                 "_MHYUUID": {
-                    "ttl": 31536002,
+                    "ttl": 31536013,
                     "length": 36,
-                    "prevalence": 0.000013608589741845052,
+                    "prevalence": 0.00001361016407052787,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hoyolab.com",
+                "genshin.mihoyo.com",
+                "www.hoyolab.com"
+            ]
+        },
+        {
+            "rule": "hoyoverse\\.com\\/dora\\/biz\\/hoyoverse-account-sdk\\/main\\.js",
+            "cookies": 0.0000204,
+            "fingerprinting": 3,
+            "subdomains": [
+                "webstatic"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 3,
+                "Screen.prototype.orientation": 2,
+                "Navigator.prototype.product": 2,
+                "PerformanceTiming.prototype.navigationStart": 2,
+                "Navigator.prototype.language": 3,
+                "NavigatorUAData.prototype.getHighEntropyValues": 2,
+                "Navigator.prototype.maxTouchPoints": 3,
+                "Document.cookie getter": 3,
+                "Document.cookie setter": 3,
+                "window.outerHeight": 3,
+                "window.outerWidth": 3,
+                "window.devicePixelRatio": 3,
+                "Navigator.prototype.languages": 3,
+                "Navigator.prototype.platform": 3,
+                "Navigator.prototype.plugins": 3,
+                "Navigator.prototype.deviceMemory": 3,
+                "Navigator.prototype.hardwareConcurrency": 3,
+                "WebGLRenderingContext.prototype.getExtension": 3,
+                "WebGLRenderingContext.prototype.getParameter": 3,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 3,
+                "Navigator.prototype.doNotTrack": 3,
+                "Screen.prototype.width": 3,
+                "Screen.prototype.availWidth": 3,
+                "Screen.prototype.height": 3,
+                "Screen.prototype.availHeight": 3,
+                "Navigator.prototype.productSub": 3,
+                "CanvasRenderingContext2D.prototype.isPointInPath": 3,
+                "HTMLCanvasElement.prototype.toDataURL": 3,
+                "Navigator.prototype.webdriver": 3,
+                "Screen.prototype.colorDepth": 3,
+                "WebGLRenderingContext.prototype.getSupportedExtensions": 3,
+                "WebGLRenderingContext.prototype.getContextAttributes": 3,
+                "WebGLRenderingContext.prototype.getShaderPrecisionFormat": 3
+            },
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [],
+            "responseHashes": [
+                "7089f73f43c06d08404e1b39ba0095b9bf817a23b1a6ac7bff2faf34b109e3a7"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "DEVICEFP": {
+                    "ttl": 31536008,
+                    "length": 13,
+                    "prevalence": 0.00001361016407052787,
+                    "uniqueness": 1
+                },
+                "_MHYUUID": {
+                    "ttl": 31536008,
+                    "length": 36,
+                    "prevalence": 0.00001361016407052787,
+                    "uniqueness": 1
+                },
+                "HYV_LOGIN_PLATFORM_LIFECYCLE_ID": {
+                    "ttl": null,
+                    "length": 56,
+                    "prevalence": 0.00001361016407052787,
+                    "uniqueness": 1
+                },
+                "HYV_LOGIN_PLATFORM_OPTIONAL_AGREEMENT": {
+                    "ttl": null,
+                    "length": 18,
+                    "prevalence": 0.00001361016407052787,
+                    "uniqueness": 0.5
+                },
+                "HYV_LOGIN_PLATFORM_LOAD_TIMEOUT": {
+                    "ttl": null,
+                    "length": 2,
+                    "prevalence": 0.00001361016407052787,
+                    "uniqueness": 0.5
+                },
+                "HYV_LOGIN_PLATFORM_TRACKING_MAP": {
+                    "ttl": null,
+                    "length": 82,
+                    "prevalence": 0.00001361016407052787,
+                    "uniqueness": 1
+                },
+                "DEVICEFP_SEED_ID": {
+                    "ttl": 31536007,
+                    "length": 16,
+                    "prevalence": 0.00001361016407052787,
+                    "uniqueness": 1
+                },
+                "DEVICEFP_SEED_TIME": {
+                    "ttl": 31536007,
+                    "length": 13,
+                    "prevalence": 0.00001361016407052787,
                     "uniqueness": 1
                 }
             },
@@ -157,25 +193,28 @@
             ]
         },
         {
-            "rule": "hoyoverse\\.com\\/admin\\/mi18n\\/bh3_global\\/20190812_5d51512fdef47\\/20190812_5d51512fdef47-pt-pt\\.json",
+            "rule": "hoyoverse\\.com\\/dora\\/biz\\/mihoyo-h5log\\/v1\\.0\\/main\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "webstatic"
             ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "apis": {
+                "window.localStorage": 3
+            },
+            "sites": 3,
+            "prevalence": 0.0000204,
             "cnames": [],
             "responseHashes": [
-                "07e7350e5877ddcf4c3d3e5f022e361afacd976df61d714b430e9419254f7f99"
+                "de3f73712d62ccb2233d983ff3a829f8c085cd409a8823f8aca5d4da452d9eca"
             ],
-            "type": "XHR",
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "hoyolab.com",
-                "act.hoyolab.com"
+                "genshin.mihoyo.com",
+                "www.hoyolab.com"
             ]
         },
         {
@@ -197,49 +236,6 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "hoyolab.com",
-                "genshin.mihoyo.com"
-            ]
-        },
-        {
-            "rule": "hoyoverse\\.com\\/h5\\/upload",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "log-upload-os"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "hoyolab.com",
-                "genshin.mihoyo.com"
-            ]
-        },
-        {
-            "rule": "hoyoverse\\.com\\/h5\\/upload",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "log-upload-os"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000204,
-            "cnames": [],
-            "responseHashes": [
-                "7a97b9b4d758a3929b8a2be53fbe189c9ba9378d6fbb8190d37f7cc14f5cf5d3"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "hoyolab.com",
-                "act.hoyolab.com",
                 "genshin.mihoyo.com"
             ]
         },
@@ -301,8 +297,8 @@
             "prevalence": 0.0000204,
             "cnames": [],
             "responseHashes": [
-                "764c9085e10798829492e49136a4fdeedc1afc7c2a3284eb29a295310997c681",
-                "96989c5e11ad5574336a0d76ec342844d96a3786bd2d1e52ec1e2aa4bca9898e"
+                "4c7d8eb8cbd495f931190b51fe7a8058a1dd9298af067bdac27acedccb21b254",
+                "0aa46284695b096578327ab117b86eda9a7117e66139f4a0bcacb8f40c173ddf"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -467,6 +463,50 @@
             ]
         },
         {
+            "rule": "hoyoverse\\.com\\/common\\/h5log\\/log\\/batch",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "minor-api-os"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [],
+            "responseHashes": [
+                "9f6cfe51033e7ce01032230aa1e13620d3d106fb18380b191341d5476aa93789"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hoyolab.com",
+                "genshin.mihoyo.com",
+                "www.hoyolab.com"
+            ]
+        },
+        {
+            "rule": "hoyoverse\\.com\\/common\\/h5log\\/log\\/batch",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "minor-api-os"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hoyolab.com",
+                "genshin.mihoyo.com",
+                "www.hoyolab.com"
+            ]
+        },
+        {
             "rule": "hoyoverse\\.com\\/map_manage\\/20231107\\/02e2b50b7f185528c31831bcd1fc6b92_5466224540744429484\\.png",
             "cookies": 0,
             "fingerprinting": 0,
@@ -625,16 +665,34 @@
             ]
         },
         {
+            "rule": "hoyoverse\\.com\\/dora\\/biz\\/mihoyo-account-flow-sea\\/v2\\/main\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "webstatic-sea"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mihoyo.com",
+                "genshin.mihoyo.com"
+            ]
+        },
+        {
             "rule": "hoyoverse\\.com\\/dora\\/biz\\/hoyoverse-footer\\/v1\\/footer\\.js",
             "cookies": 0,
-            "fingerprinting": 1,
+            "fingerprinting": 0,
             "subdomains": [
                 "webstatic-sea",
                 "webstatic"
             ],
-            "apis": {
-                "Navigator.prototype.userAgent": 1
-            },
+            "apis": {},
             "sites": 2,
             "prevalence": 0.0000136,
             "cnames": [],
@@ -650,7 +708,7 @@
             ]
         },
         {
-            "rule": "hoyoverse\\.com\\/_nuxt\\/14495c3fbcc7e268ce83\\.js",
+            "rule": "hoyoverse\\.com\\/_nuxt\\/71bfad2\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -661,7 +719,7 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "723e0a5d69444d477554b2a3e418f4fad96f69720ae937b2582b9a5f879e0728"
+                "538ea20b245d076777fadcd6f1ca1db17e10efd1439c281e456e4cd793d2c144"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -672,30 +730,28 @@
             ]
         },
         {
-            "rule": "hoyoverse\\.com\\/_nuxt\\/94aa3b9b66c3984c6c15\\.js",
-            "cookies": 0.0000068,
+            "rule": "hoyoverse\\.com\\/_nuxt\\/f10cc5e\\.js",
+            "cookies": 0.00000681,
             "fingerprinting": 1,
             "subdomains": [
                 "genshin"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 2,
-                "Event.prototype.timeStamp": 2,
-                "Navigator.prototype.product": 2,
+                "Navigator.prototype.userAgent": 1,
+                "Event.prototype.timeStamp": 1,
+                "Navigator.prototype.product": 1,
                 "Document.cookie setter": 1
             },
             "sites": 2,
             "prevalence": 0.0000136,
             "cnames": [],
-            "responseHashes": [
-                "09a6a8c01abe14a30f79aaf1a8bece2a68ad1879a6fffe390dc6b2a984b17c49"
-            ],
+            "responseHashes": [],
             "type": "Script",
             "firstPartyCookies": {
                 "genshinLang": {
-                    "ttl": 207360000006,
+                    "ttl": 207360000003,
                     "length": 2,
-                    "prevalence": 0.000006804294870922526,
+                    "prevalence": 0.000006805082035263935,
                     "uniqueness": 1
                 }
             },
@@ -706,25 +762,29 @@
             ]
         },
         {
-            "rule": "hoyoverse\\.com\\/_nuxt\\/4763b83179be0c0caae4\\.js",
+            "rule": "hoyoverse\\.com\\/_nuxt\\/2f6fceb\\.js",
             "cookies": 0,
             "fingerprinting": 2,
             "subdomains": [
                 "genshin"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 2,
-                "Navigator.prototype.language": 2,
-                "Navigator.prototype.platform": 2,
-                "window.devicePixelRatio": 2,
-                "Screen.prototype.orientation": 2,
-                "Document.cookie getter": 2,
-                "window.localStorage": 2,
                 "Date.prototype.getTime": 2,
-                "window.innerWidth": 2,
-                "window.innerHeight": 2,
                 "Screen.prototype.width": 2,
-                "Screen.prototype.height": 2
+                "Screen.prototype.height": 2,
+                "Navigator.prototype.connection": 2,
+                "Navigator.prototype.deviceMemory": 2,
+                "Navigator.prototype.hardwareConcurrency": 2,
+                "Navigator.prototype.userAgent": 2,
+                "PerformanceTiming.prototype.navigationStart": 1,
+                "Navigator.prototype.language": 1,
+                "Navigator.prototype.platform": 1,
+                "window.devicePixelRatio": 1,
+                "Screen.prototype.orientation": 1,
+                "Document.cookie getter": 1,
+                "window.localStorage": 1,
+                "window.innerWidth": 1,
+                "window.innerHeight": 1
             },
             "sites": 2,
             "prevalence": 0.0000136,
@@ -739,17 +799,19 @@
             ]
         },
         {
-            "rule": "hoyoverse\\.com\\/_nuxt\\/050da894d918423a5400\\.js",
+            "rule": "hoyoverse\\.com\\/_nuxt\\/b55c117\\.js",
             "cookies": 0,
-            "fingerprinting": 1,
+            "fingerprinting": 2,
             "subdomains": [
                 "genshin"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 2,
-                "Navigator.prototype.platform": 2,
-                "window.localStorage": 2,
-                "Navigator.prototype.language": 2
+                "Navigator.prototype.userAgent": 1,
+                "Navigator.prototype.platform": 1,
+                "Navigator.prototype.onLine": 1,
+                "window.localStorage": 1,
+                "Navigator.prototype.language": 1,
+                "Navigator.prototype.connection": 1
             },
             "sites": 2,
             "prevalence": 0.0000136,
@@ -764,128 +826,25 @@
             ]
         },
         {
-            "rule": "hoyoverse\\.com\\/dora\\/biz\\/hoyoverse-account-sdk\\/main\\.js",
-            "cookies": 0.0000204,
-            "fingerprinting": 3,
-            "subdomains": [
-                "webstatic"
-            ],
-            "apis": {
-                "Navigator.prototype.userAgent": 3,
-                "Screen.prototype.orientation": 3,
-                "Navigator.prototype.product": 3,
-                "PerformanceTiming.prototype.navigationStart": 3,
-                "Navigator.prototype.language": 3,
-                "NavigatorUAData.prototype.getHighEntropyValues": 3,
-                "Navigator.prototype.maxTouchPoints": 3,
-                "Document.cookie getter": 3,
-                "Document.cookie setter": 3,
-                "window.outerHeight": 3,
-                "window.outerWidth": 3,
-                "window.devicePixelRatio": 3,
-                "Navigator.prototype.languages": 3,
-                "Navigator.prototype.platform": 3,
-                "Navigator.prototype.plugins": 3,
-                "Navigator.prototype.deviceMemory": 3,
-                "Navigator.prototype.hardwareConcurrency": 3,
-                "WebGLRenderingContext.prototype.getExtension": 3,
-                "WebGLRenderingContext.prototype.getParameter": 3,
-                "Intl.DateTimeFormat.prototype.resolvedOptions": 3,
-                "Navigator.prototype.doNotTrack": 3,
-                "Screen.prototype.width": 3,
-                "Screen.prototype.availWidth": 3,
-                "Screen.prototype.height": 3,
-                "Screen.prototype.availHeight": 3,
-                "Navigator.prototype.productSub": 3,
-                "CanvasRenderingContext2D.prototype.isPointInPath": 3,
-                "HTMLCanvasElement.prototype.toDataURL": 3,
-                "Navigator.prototype.webdriver": 3,
-                "Screen.prototype.colorDepth": 3,
-                "WebGLRenderingContext.prototype.getSupportedExtensions": 3,
-                "WebGLRenderingContext.prototype.getContextAttributes": 3,
-                "WebGLRenderingContext.prototype.getShaderPrecisionFormat": 3
-            },
-            "sites": 3,
-            "prevalence": 0.0000204,
-            "cnames": [],
-            "responseHashes": [
-                "f5a1336f29ee85f31689aa814d801054106941bb34eb01d876607806da805433"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {
-                "DEVICEFP": {
-                    "ttl": 31536008,
-                    "length": 13,
-                    "prevalence": 0.000006804294870922526,
-                    "uniqueness": 1
-                },
-                "_MHYUUID": {
-                    "ttl": 31536007,
-                    "length": 36,
-                    "prevalence": 0.000006804294870922526,
-                    "uniqueness": 1
-                },
-                "HYV_LOGIN_PLATFORM_LIFECYCLE_ID": {
-                    "ttl": null,
-                    "length": 56,
-                    "prevalence": 0.000006804294870922526,
-                    "uniqueness": 1
-                },
-                "HYV_LOGIN_PLATFORM_OPTIONAL_AGREEMENT": {
-                    "ttl": null,
-                    "length": 18,
-                    "prevalence": 0.000006804294870922526,
-                    "uniqueness": 1
-                },
-                "HYV_LOGIN_PLATFORM_TRACKING_MAP": {
-                    "ttl": null,
-                    "length": 2,
-                    "prevalence": 0.000006804294870922526,
-                    "uniqueness": 1
-                },
-                "DEVICEFP_SEED_ID": {
-                    "ttl": 31536007,
-                    "length": 16,
-                    "prevalence": 0.000006804294870922526,
-                    "uniqueness": 1
-                },
-                "DEVICEFP_SEED_TIME": {
-                    "ttl": 31536007,
-                    "length": 13,
-                    "prevalence": 0.000006804294870922526,
-                    "uniqueness": 1
-                }
-            },
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "mihoyo.com",
-                "genshin.mihoyo.com",
-                "www.hoyolab.com"
-            ]
-        },
-        {
-            "rule": "hoyoverse\\.com\\/dora\\/biz\\/mihoyo-h5log\\/v1\\.0\\/main\\.js",
+            "rule": "hoyoverse\\.com\\/api\\/98\\/envelope\\/",
             "cookies": 0,
-            "fingerprinting": 1,
+            "fingerprinting": 0,
             "subdomains": [
-                "webstatic"
+                "sentry.eks"
             ],
-            "apis": {
-                "window.localStorage": 3
-            },
-            "sites": 3,
-            "prevalence": 0.0000204,
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "de3f73712d62ccb2233d983ff3a829f8c085cd409a8823f8aca5d4da452d9eca"
+                "a2f3aa70d3eda3270c87da594022e705c53152b5015638441e514d04fe72db9d"
             ],
-            "type": "Script",
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "mihoyo.com",
-                "genshin.mihoyo.com",
-                "www.hoyolab.com"
+                "genshin.mihoyo.com"
             ]
         },
         {
@@ -922,7 +881,7 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "91fc74e18bed1b778139561b383fbfbc66285747ba53ba6d8b9001a7d775c257"
+                "e2806c8b47a9f22dedb71453ef59b9558fc9eb92ba62e24ec58fe4d3c56cb852"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -997,7 +956,7 @@
             ]
         },
         {
-            "rule": "hoyoverse\\.com\\/_nuxt\\/medias\\/video-play\\.06ec9738\\.mp3",
+            "rule": "hoyoverse\\.com\\/_nuxt\\/medias\\/video-play\\.3ba532fa\\.mp3",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -1052,9 +1011,51 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+                "4115f3c880e63eaf10d4d400de2c9d4e82e4bb7497875dc7eb115aee9c51665c"
             ],
             "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mihoyo.com",
+                "genshin.mihoyo.com"
+            ]
+        },
+        {
+            "rule": "hoyoverse\\.com\\/h5\\/upload",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "log-upload-os"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mihoyo.com",
+                "genshin.mihoyo.com"
+            ]
+        },
+        {
+            "rule": "hoyoverse\\.com\\/h5\\/upload",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "log-upload-os"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "7a97b9b4d758a3929b8a2be53fbe189c9ba9378d6fbb8190d37f7cc14f5cf5d3"
+            ],
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -1126,50 +1127,6 @@
             "exampleSites": [
                 "mihoyo.com",
                 "genshin.mihoyo.com"
-            ]
-        },
-        {
-            "rule": "hoyoverse\\.com\\/common\\/h5log\\/log\\/batch",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "minor-api-os"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000204,
-            "cnames": [],
-            "responseHashes": [
-                "9f6cfe51033e7ce01032230aa1e13620d3d106fb18380b191341d5476aa93789"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "mihoyo.com",
-                "genshin.mihoyo.com",
-                "www.hoyolab.com"
-            ]
-        },
-        {
-            "rule": "hoyoverse\\.com\\/common\\/h5log\\/log\\/batch",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "minor-api-os"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000204,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "mihoyo.com",
-                "genshin.mihoyo.com",
-                "www.hoyolab.com"
             ]
         },
         {
@@ -1293,6 +1250,50 @@
             ]
         },
         {
+            "rule": "hoyoverse\\.com\\/_nuxt\\/cd406e3\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "genshin"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "a4622a2dae2eeebfe78ea06178185397a905fed91c017fff9e09b8973cb72dd6"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mihoyo.com",
+                "genshin.mihoyo.com"
+            ]
+        },
+        {
+            "rule": "hoyoverse\\.com\\/_nuxt\\/3ef571f\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "genshin"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "dd0c0e6f82ca13a82dd94fd2d78413d4a1951c59a49e61bda1d15166e01051bf"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mihoyo.com",
+                "genshin.mihoyo.com"
+            ]
+        },
+        {
             "rule": "hoyoverse\\.com\\/dora\\/lib\\/sentry\\/7\\.76\\.0\\/sentry-vue\\.tracing\\.min\\.js",
             "cookies": 0,
             "fingerprinting": 2,
@@ -1381,10 +1382,8 @@
             "sites": 2,
             "prevalence": 0.0000136,
             "cnames": [],
-            "responseHashes": [
-                "339faf0f0993e2cabb90a5e675d7b90f4085a1ca0fa1fa7075ef1d0750d8d665"
-            ],
-            "type": "XHR",
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -1403,8 +1402,10 @@
             "sites": 2,
             "prevalence": 0.0000136,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "8ca118fc0ab4d6afe1ec031284bba2fde3d41c78f775bc4a30072fd920c07df7"
+            ],
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -1424,29 +1425,9 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "58ecd7cf05a77d726159b8e3c3fab863b2a697b81342de544988f5cad5a2c0d6"
+                "709b8d4e0a45f473d679f208ad288e84601ba870eddc5d1fea557f5ca6949241"
             ],
             "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "hoyolab.com",
-                "www.hoyolab.com"
-            ]
-        },
-        {
-            "rule": "hoyoverse\\.com\\/h5\\/dataUpload",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "log-upload-os"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -1477,6 +1458,26 @@
             ]
         },
         {
+            "rule": "hoyoverse\\.com\\/h5\\/dataUpload",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "log-upload-os"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hoyolab.com",
+                "www.hoyolab.com"
+            ]
+        },
+        {
             "rule": "hoyoverse\\.com\\/upload\\/static-resource\\/2022\\/12\\/09\\/fdf41856f1867bc5fd3da3796c6ecdd9_6881435481025294626\\.png",
             "cookies": 0,
             "fingerprinting": 0,
@@ -1489,28 +1490,6 @@
             "cnames": [],
             "responseHashes": [
                 "c18501888d91a455bb6dab4aaed62aa607c9e8cda6110b61f665c9fb71b81e1c"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "hoyolab.com",
-                "www.hoyolab.com"
-            ]
-        },
-        {
-            "rule": "hoyoverse\\.com\\/upload\\/static-resource\\/2022\\/02\\/23\\/03185fd4de1a2eca54e98bddfd104262_8699433121737777339\\.png",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "webstatic-sea"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [],
-            "responseHashes": [
-                "d7560554c31548c2746cd0012850aa3cacc4dc6ebd7fe1a5f54d77f22c92bbab"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -1543,6 +1522,28 @@
             ]
         },
         {
+            "rule": "hoyoverse\\.com\\/upload\\/op-public\\/2022\\/08\\/04\\/eaac1cc05bb7e4102595d217b05fde20_3545560780709862630\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "webstatic"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "de8ed59b7e1c687e2b103971c843d0035d2d89b250bef8add552c83a0e4131e1"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hoyolab.com",
+                "www.hoyolab.com"
+            ]
+        },
+        {
             "rule": "hoyoverse\\.com\\/upload\\/op-public\\/2022\\/08\\/04\\/f474ba482f38a2f2420dc31c1876d155_6640492607556311675\\.png",
             "cookies": 0,
             "fingerprinting": 0,
@@ -1555,28 +1556,6 @@
             "cnames": [],
             "responseHashes": [
                 "a165dab991ed4e160a3da151cd1bbe9bd6f019f666263857121c61c86a8814eb"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "hoyolab.com",
-                "www.hoyolab.com"
-            ]
-        },
-        {
-            "rule": "hoyoverse\\.com\\/upload\\/op-public\\/2022\\/08\\/04\\/ff1419346528dfd64d77c35701ecd106_7596171599082743274\\.png",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "webstatic"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [],
-            "responseHashes": [
-                "3eb4c6a798121cbca87ff170e75bd9f04a709e3e66996cf58eac71d2f6c14612"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -1631,6 +1610,166 @@
             ]
         },
         {
+            "rule": "hoyoverse\\.com\\/upload\\/op-public\\/2022\\/08\\/04\\/ff1419346528dfd64d77c35701ecd106_7596171599082743274\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "webstatic"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "3eb4c6a798121cbca87ff170e75bd9f04a709e3e66996cf58eac71d2f6c14612"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hoyolab.com",
+                "www.hoyolab.com"
+            ]
+        },
+        {
+            "rule": "hoyoverse\\.com\\/upload\\/static-resource\\/2022\\/02\\/23\\/03185fd4de1a2eca54e98bddfd104262_8699433121737777339\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "webstatic-sea"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "d7560554c31548c2746cd0012850aa3cacc4dc6ebd7fe1a5f54d77f22c92bbab"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hoyolab.com",
+                "www.hoyolab.com"
+            ]
+        },
+        {
+            "rule": "hoyoverse\\.com\\/static-resource-v2\\/2023\\/11\\/20\\/20f6c440f0421b6d2e2ffa2de278af3f_454294803653955501\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "fastcdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "67b13417d8c0b90d426b1a30e2f4c0ac77b5afb9fb9ca6e5c44da01e6aade796"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hoyolab.com",
+                "www.hoyolab.com"
+            ]
+        },
+        {
+            "rule": "hoyoverse\\.com\\/static-resource-v2\\/2023\\/11\\/20\\/05a59ae62691830e90040bce929e5a05_481473385811689265\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "fastcdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "a6df7fb3c8afbe49feac96796406c070d87e189e33501bcb0b058d58b8256b2c"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hoyolab.com",
+                "www.hoyolab.com"
+            ]
+        },
+        {
+            "rule": "hoyoverse\\.com\\/dora\\/lib\\/sentry-lazy\\/1\\.3\\.0\\/sentry-lazy\\.global\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "webstatic"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "2344bcf171928d58d59e34f5935b17cef79284e6fa405edfaad839c9a1799df3"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hoyolab.com",
+                "www.hoyolab.com"
+            ]
+        },
+        {
+            "rule": "hoyoverse\\.com\\/admin\\/mi18n\\/plat_oversea\\/m04131715591001\\/m04131715591001-en-us\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "webstatic"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "e269942e75dd21829b66d9fc4b91b5b1b4b536615baabddc1a91430f795bb9a8"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hoyolab.com",
+                "www.hoyolab.com"
+            ]
+        },
+        {
+            "rule": "hoyoverse\\.com\\/dora\\/lib\\/sentry\\/7\\.19\\.0\\/sentry-tracing\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "webstatic"
+            ],
+            "apis": {
+                "PerformanceTiming.prototype.navigationStart": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.connection": 1,
+                "Navigator.prototype.deviceMemory": 1,
+                "Navigator.prototype.hardwareConcurrency": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "317abeabc89780e10dc4b55beb895fe511a3b989ea5cadc91828e14587b0eaab"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hoyolab.com",
+                "www.hoyolab.com"
+            ]
+        },
+        {
             "rule": "hoyoverse\\.com\\/api\\/7\\/envelope\\/",
             "cookies": 0,
             "fingerprinting": 0,
@@ -1642,9 +1781,31 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "77546a39d8ad76f9083943465bcb57415856ed8c151121254ea18552f7776054"
+                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
             ],
             "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hoyolab.com",
+                "www.hoyolab.com"
+            ]
+        },
+        {
+            "rule": "hoyoverse\\.com\\/static-resource-v2\\/2023\\/11\\/20\\/24dd0cb147ab9cad085aa52e984c9d81_3843125351193779071\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "fastcdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "02c2862ecf69e0e126b5b53908a5b6b2832813fa47f2a1bb9e1be3af1b7ab2a8"
+            ],
+            "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -1659,24 +1820,20 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.9892802450229708
+            "prevalence": 0.9912023460410557
         },
         {
             "domain": "hoyoverse.com",
-            "prevalence": 0.009188361408882083
-        },
-        {
-            "domain": "google-analytics.com",
-            "prevalence": 0.0015313935681470138
+            "prevalence": 0.008797653958944282
         }
     ],
     "types": {
-        "Script": 29,
-        "Fetch": 16,
-        "XHR": 26,
-        "Preflight": 14,
+        "Script": 37,
+        "Fetch": 18,
+        "XHR": 25,
         "Ping": 4,
-        "Image": 50,
+        "Preflight": 14,
+        "Image": 58,
         "Stylesheet": 2,
         "Media": 2
     },

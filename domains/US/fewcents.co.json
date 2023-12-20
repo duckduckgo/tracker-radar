@@ -4,34 +4,42 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000204,
-    "sites": 3,
+    "prevalence": 0.0000408,
+    "sites": 6,
     "subdomains": [
+        "paywall",
         "api"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
         {
-            "rule": "fewcents\\.co\\/v2\\/fbid\\/createLoggedOutBid",
+            "rule": "fewcents\\.co\\/static\\/js\\/paywall\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
-                "api"
+                "paywall"
             ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "apis": {
+                "Navigator.prototype.userAgent": 3,
+                "Navigator.prototype.product": 3,
+                "window.localStorage": 3,
+                "PerformanceTiming.prototype.navigationStart": 3,
+                "window.sessionStorage": 2
+            },
+            "sites": 3,
+            "prevalence": 0.0000204,
             "cnames": [],
             "responseHashes": [
-                "011c2ffb2a2cd6cfecf312031260a98ee85e860f2975ab82016be9382d834083"
+                "beecc973c4aeb9a95eb296b006101e267152efba0b0c1addb0ad76db682eca99"
             ],
-            "type": "XHR",
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
+                "agripick.com",
                 "gaming-fans.com",
-                "www.manilatimes.net"
+                "young-machine.com"
             ]
         },
         {
@@ -42,16 +50,44 @@
                 "api"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "sites": 4,
+            "prevalence": 0.0000272,
+            "cnames": [],
+            "responseHashes": [
+                "fbda4ff2a0664919203b6a148b50b5188018f02ee604d850a1940ef7815aa812",
+                "5f9724e0096a25d11f64b7b113b7d8dad0e07e25c1fce056a32f6f99c9a94fd7",
+                "76d352ced25a60ffd4a74006b3173cd7ba852f26d1499d48204c85fb3476b69c"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "agripick.com",
+                "gaming-fans.com",
+                "www.manilatimes.net",
+                "young-machine.com"
+            ]
+        },
+        {
+            "rule": "fewcents\\.co\\/v2\\/fbid\\/createLoggedOutBid",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000272,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
+                "agripick.com",
                 "gaming-fans.com",
-                "www.manilatimes.net"
+                "www.manilatimes.net",
+                "young-machine.com"
             ]
         }
     ],
@@ -65,13 +101,14 @@
         }
     ],
     "types": {
-        "XHR": 2,
-        "Preflight": 2
+        "Script": 3,
+        "XHR": 4,
+        "Preflight": 4
     },
     "nameservers": [
-        "ns-891.awsdns-47.net",
         "ns-1218.awsdns-24.org",
         "ns-1698.awsdns-20.co.uk",
-        "ns-144.awsdns-18.com"
+        "ns-144.awsdns-18.com",
+        "ns-891.awsdns-47.net"
     ]
 }

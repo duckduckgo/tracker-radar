@@ -9,40 +9,18 @@
     "source": [
         "DuckDuckGo-GB"
     ],
-    "prevalence": 0.00131,
-    "sites": 13,
+    "prevalence": 0.00161,
+    "sites": 16,
     "subdomains": [
         "eu-mobile.events.data",
         "browser.events.data",
-        "wcpstatic"
+        "browser.pipe.aria",
+        "wcpstatic",
+        "edge-auth"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
-        {
-            "rule": "microsoft\\.com\\/Collector\\/3\\.0\\/",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "eu-mobile.events.data"
-            ],
-            "apis": {},
-            "sites": 4,
-            "prevalence": 0.000402,
-            "cnames": [],
-            "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "certasenergy.co.uk",
-                "faq.nhsbsa.nhs.uk",
-                "rnid.org.uk",
-                "www.aberdeenshire.gov.uk"
-            ]
-        },
         {
             "rule": "microsoft\\.com\\/OneCollector\\/1\\.0\\/",
             "cookies": 0.000101,
@@ -57,7 +35,7 @@
             "cnames": [],
             "responseHashes": [
                 "afd588d7d1c94d797ef932006d524de973f6fc54556e62f0f340412c87f99d58",
-                "55a8a406129d867b1ed42d8fcc178c3f78d21010aec26c2cc3aa4d5b886c5726"
+                "1a1388ad0b99ba763e23726edd127e5629469efac255b7c75b051acf05173ee6"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -94,6 +72,32 @@
             ]
         },
         {
+            "rule": "microsoft\\.com\\/Collector\\/3\\.0\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "browser.pipe.aria",
+                "eu-mobile.events.data"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000503,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "electoral-register.com",
+                "faq.nhsbsa.nhs.uk",
+                "my.clevelandclinic.org",
+                "rnid.org.uk",
+                "www.aberdeenshire.gov.uk"
+            ]
+        },
+        {
             "rule": "microsoft\\.com\\/OneCollector\\/1\\.0\\/",
             "cookies": 0,
             "fingerprinting": 0,
@@ -121,10 +125,10 @@
                 "wcpstatic"
             ],
             "apis": {
-                "Document.cookie getter": 2
+                "Document.cookie getter": 3
             },
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
                 "c688d3f2135b6b51617a306a0b1a665324402a00a6bceba475881af281503ad9"
@@ -134,7 +138,35 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "microsoft.github.io",
+                "www.flightsimulator.com",
                 "www.minecraft.net"
+            ]
+        },
+        {
+            "rule": "microsoft\\.com\\/js\\/ms_auth_client\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "edge-auth"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 1,
+                "window.localStorage": 1,
+                "window.sessionStorage": 1,
+                "window.indexedDB": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "feb2160dccd8b0345096a272f9753c529fa2f32b843400805851dc714372d9d5"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nationalpost.com",
+                "www.salon.com"
             ]
         }
     ],
@@ -149,35 +181,43 @@
     "topInitiators": [
         {
             "domain": "azureedge.net",
-            "prevalence": 0.4838709677419355
+            "prevalence": 0.45714285714285713
         },
         {
             "domain": "first party",
-            "prevalence": 0.25806451612903225
+            "prevalence": 0.2571428571428571
         },
         {
             "domain": "powerapps.com",
-            "prevalence": 0.1935483870967742
+            "prevalence": 0.17142857142857143
         },
         {
-            "domain": "doubleclick.net",
-            "prevalence": 0.03225806451612903
+            "domain": "skype.com",
+            "prevalence": 0.02857142857142857
+        },
+        {
+            "domain": "postmedia.digital",
+            "prevalence": 0.02857142857142857
+        },
+        {
+            "domain": "googlesyndication.com",
+            "prevalence": 0.02857142857142857
         },
         {
             "domain": "dynamics.com",
-            "prevalence": 0.03225806451612903
+            "prevalence": 0.02857142857142857
         }
     ],
     "types": {
-        "XHR": 9,
+        "XHR": 10,
         "Preflight": 4,
         "Ping": 2,
-        "Script": 2
+        "Script": 5
     },
     "nameservers": [
-        "ns2-39.azure-dns.net",
         "ns3-39.azure-dns.org",
+        "ns4-39.azure-dns.info",
         "ns1-39.azure-dns.com",
-        "ns4-39.azure-dns.info"
+        "ns2-39.azure-dns.net"
     ]
 }

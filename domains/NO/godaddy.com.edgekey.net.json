@@ -9,7 +9,7 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.0001,
+    "prevalence": 0.000101,
     "sites": 1,
     "subdomains": [
         "events.api",
@@ -29,7 +29,34 @@
     "resources": [
         {
             "rule": "godaddy\\.com\\.edgekey\\.net\\/image\\.aspx",
-            "cookies": 0.0001,
+            "cookies": 0.000101,
+            "fingerprinting": 0,
+            "subdomains": [
+                "events.api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "events.api.godaddy.com",
+                    "resolved": "events.api.godaddy.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "f4eef8263281c0b26486637831251059757bc3fdc4c3a48045a8ef8646b36e8f"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "godaddy.com",
+                "www.godaddy.com"
+            ]
+        },
+        {
+            "rule": "godaddy\\.com\\.edgekey\\.net\\/pageEvents\\.aspx",
+            "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
                 "events.api"
@@ -80,25 +107,23 @@
             ]
         },
         {
-            "rule": "godaddy\\.com\\.edgekey\\.net\\/pageEvents\\.aspx",
+            "rule": "godaddy\\.com\\.edgekey\\.net\\/eventbus",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "events.api"
+                "csp"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [
                 {
-                    "original": "events.api.godaddy.com",
-                    "resolved": "events.api.godaddy.com.edgekey.net"
+                    "original": "csp.godaddy.com",
+                    "resolved": "csp.godaddy.com.edgekey.net"
                 }
             ],
-            "responseHashes": [
-                "f4eef8263281c0b26486637831251059757bc3fdc4c3a48045a8ef8646b36e8f"
-            ],
-            "type": "Fetch",
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -109,7 +134,7 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0001,
+    "cookies": 0.000101,
     "topInitiators": [
         {
             "domain": "wsimg.com",
@@ -117,7 +142,8 @@
         }
     ],
     "types": {
-        "Fetch": 6
+        "Fetch": 6,
+        "Preflight": 2
     },
     "nameservers": []
 }

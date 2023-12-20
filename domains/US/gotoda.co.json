@@ -4,14 +4,108 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000068,
-    "sites": 1,
+    "prevalence": 0.0000136,
+    "sites": 2,
     "subdomains": [
-        "trochi"
+        "trochilus-web",
+        "trochi",
+        "sentry"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "gotoda\\.co\\/trochilus-web-sdk-integration\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "trochilus-web"
+            ],
+            "apis": {
+                "BroadcastChannel.prototype.constructor": 2,
+                "window.sessionStorage": 2,
+                "window.indexedDB": 2,
+                "Navigator.prototype.userAgent": 1,
+                "Navigator.prototype.language": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "a6dbc48f7225ddb6443e689b4628e8d73360ba91ce2233431bee7fa6189b4944"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mexc.com",
+                "www.mexc.com"
+            ]
+        },
+        {
+            "rule": "gotoda\\.co\\/api\\/sync",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "trochi"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mexc.com",
+                "www.mexc.com"
+            ]
+        },
+        {
+            "rule": "gotoda\\.co\\/api\\/sync",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "trochi"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "659ec8277afad1f2d8c7191298550018e430820631a3c4ba5966fbb268bdf461"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mexc.com",
+                "www.mexc.com"
+            ]
+        },
+        {
+            "rule": "gotoda\\.co\\/api\\/4\\/envelope\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sentry"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mexc.com",
+                "www.mexc.com"
+            ]
+        },
         {
             "rule": "gotoda\\.co\\/api",
             "cookies": 0,
@@ -33,26 +127,6 @@
                 "mexc.com",
                 "www.mexc.com"
             ]
-        },
-        {
-            "rule": "gotoda\\.co\\/api",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "trochi"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "mexc.com",
-                "www.mexc.com"
-            ]
         }
     ],
     "categories": [],
@@ -65,8 +139,10 @@
         }
     ],
     "types": {
-        "XHR": 2,
-        "Preflight": 2
+        "Script": 2,
+        "Preflight": 2,
+        "XHR": 4,
+        "Fetch": 2
     },
     "nameservers": [
         "ns26.domaincontrol.com",

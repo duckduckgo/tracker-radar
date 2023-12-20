@@ -7,13 +7,64 @@
     "prevalence": 0.000101,
     "sites": 1,
     "subdomains": [
+        "route",
+        "cdata",
         "logging",
-        "psa",
-        "analytics"
+        "analytics",
+        "psa"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "carambo\\.la\\/inimage\\/getlayer",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "route"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2,
+                "Date.prototype.getTime": 2,
+                "window.innerWidth": 2,
+                "window.innerHeight": 2,
+                "window.devicePixelRatio": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thefreedictionary.com",
+                "www.thefreedictionary.com"
+            ]
+        },
+        {
+            "rule": "carambo\\.la\\/Layer\\/InImage\\/Prod\\/cbola_platform\\/version_2\\.34\\.0\\/js\\/Carambola_layer_160\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdata"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "fe41a139e97ffda6c8a707088eca79274f3ea03933a1d35f3d6766689e4fb1be"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thefreedictionary.com",
+                "www.thefreedictionary.com"
+            ]
+        },
         {
             "rule": "carambo\\.la\\/AddLogs",
             "cookies": 0,
@@ -37,18 +88,18 @@
             ]
         },
         {
-            "rule": "carambo\\.la\\/getPsa",
+            "rule": "carambo\\.la\\/SetPageRequestGeo",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "psa"
+                "analytics"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "f32970233fd379288ac96542e9e02d5e2cf426475c14ec32a256c262967feb2a"
+                "a3b59cf3c15a5896f4224c367d24e647fe14e411b8024dcc87aa37783e0cf110"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -70,7 +121,29 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "6dbcf06f433b5738123b0eaae652f3bef04542ae8515abeeb61591f00ee960b4"
+                "5544b6bbd56e3270db2ca7d29f0c8fd8cceaef748b9436365e3213e83e17e72d"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thefreedictionary.com",
+                "www.thefreedictionary.com"
+            ]
+        },
+        {
+            "rule": "carambo\\.la\\/getPsa",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "psa"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "74094a8c35e8a946bb2483ae06a341e65c99b0e913c4b22fef919b71eab5557b"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -113,14 +186,14 @@
         }
     ],
     "types": {
+        "Script": 8,
         "XHR": 2,
-        "Fetch": 2,
-        "Script": 4
+        "Fetch": 4
     },
     "nameservers": [
         "ns-437.awsdns-54.com",
+        "ns-1315.awsdns-36.org",
         "ns-1973.awsdns-54.co.uk",
-        "ns-774.awsdns-32.net",
-        "ns-1315.awsdns-36.org"
+        "ns-774.awsdns-32.net"
     ]
 }

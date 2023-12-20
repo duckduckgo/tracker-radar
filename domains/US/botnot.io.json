@@ -9,7 +9,8 @@
     "subdomains": [
         "static-resources",
         "server.telemetry.svc",
-        "api"
+        "api",
+        "pcap.svc"
     ],
     "cnames": [],
     "fingerprinting": 3,
@@ -23,7 +24,6 @@
             ],
             "apis": {
                 "window.localStorage": 2,
-                "Date.prototype.getTime": 2,
                 "OfflineAudioContext.prototype.constructor": 2,
                 "Navigator.prototype.userAgent": 2,
                 "AudioBuffer.prototype.getChannelData": 2,
@@ -34,7 +34,7 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "026c0a7f19ff69051c837fd623a3a636cb2a2e23e190e3e24c280cf55e60d787"
+                "60a6d5bbf8fdd7f09efa4ce96c249d69a4bef9895d173bd583bd349ef93f9980"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -104,7 +104,7 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "ebb2ddae2aa993cadbb491efd90a4cc7e333b35f35feb2dcc4c3580dde6de8ca"
+                "5c1cc6e1833e34bad1583a8fbde00eed3332578b6cdb09f491d70f0a9d1c8b1b"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -146,7 +146,7 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "1ef03ddf6e157f631366e4c2709faab5231475f605b1d8500a517882549abbdd"
+                "0a72c2f1d0616d33cdaf0c23d2949a93f976b51de82d6a53e4ff605637ba3269"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -210,7 +210,7 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "2d2d543f8ca4929bbbdfbf535ecd865d7597a708cf4e4b3121319f862e0c667c"
+                "2608840ba2a783cc5e4a5b1cd0cf854c9f6e1687db890e5eda0b42c2e2a866bc"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -252,7 +252,7 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "fd22ac6ea51e86321031c95f7ff284adcba95414034bf91be51e90ade04b3606"
+                "82aef6d82eced65f4c88f5289e66993a251025322e5861720372ad5093bc3300"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -264,6 +264,68 @@
         },
         {
             "rule": "botnot\\.io\\/v2\\/sessions",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "server.telemetry.svc"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dtlr.com",
+                "www.dtlr.com"
+            ]
+        },
+        {
+            "rule": "botnot\\.io\\/v2\\/pc",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pcap.svc"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dtlr.com",
+                "www.dtlr.com"
+            ]
+        },
+        {
+            "rule": "botnot\\.io\\/v2\\/pc",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pcap.svc"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "762c2749580c286a68d4528d912a4afa02a17dc2025c6c65b17b0dfab8291408"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dtlr.com",
+                "www.dtlr.com"
+            ]
+        },
+        {
+            "rule": "botnot\\.io\\/v2\\/bundles",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -303,26 +365,6 @@
                 "dtlr.com",
                 "www.dtlr.com"
             ]
-        },
-        {
-            "rule": "botnot\\.io\\/v2\\/bundles",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "server.telemetry.svc"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "dtlr.com",
-                "www.dtlr.com"
-            ]
         }
     ],
     "categories": [],
@@ -336,13 +378,13 @@
     ],
     "types": {
         "Script": 6,
-        "Preflight": 10,
-        "Fetch": 10
+        "Preflight": 12,
+        "Fetch": 12
     },
     "nameservers": [
-        "ns-995.awsdns-60.net",
-        "ns-1063.awsdns-04.org",
         "ns-146.awsdns-18.com",
+        "ns-1063.awsdns-04.org",
+        "ns-995.awsdns-60.net",
         "ns-1649.awsdns-14.co.uk"
     ]
 }

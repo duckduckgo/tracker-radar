@@ -9,10 +9,12 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.00101,
-    "sites": 10,
+    "prevalence": 0.00111,
+    "sites": 11,
     "subdomains": [
-        "cognito-identity"
+        "cognito-identity",
+        "kinesis",
+        "1uf2cfvii9.execute-api"
     ],
     "cnames": [],
     "fingerprinting": 0,
@@ -29,14 +31,80 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "23eec0eb9f91f036d0685c237c3eb463fcb638630259aa703f79d419b30007d2"
+                "83d1e8d8d26932b1243596daba547fb6819bec5c3f493f12fe4f6cc0482a1876"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "talktalk.ch",
-                "www.talktalk.ch"
+                "festo.com",
+                "www.festo.com"
+            ]
+        },
+        {
+            "rule": "eu-central-1\\.amazonaws\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cognito-identity",
+                "kinesis"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "festo.com",
+                "www.festo.com",
+                "www.toolnationschweiz.ch"
+            ]
+        },
+        {
+            "rule": "eu-central-1\\.amazonaws\\.com\\/events\\/1783654",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "1uf2cfvii9.execute-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "839d015bab97cdd5b7de0e111ae6fef53ac9e16a2bd37f890b30bb29b46e10b3"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rsi.ch",
+                "www.rsi.ch"
+            ]
+        },
+        {
+            "rule": "eu-central-1\\.amazonaws\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cognito-identity"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "0963eaf992904c04d1946953f6476b3017166aec57929aa73893c08bd84ff5b9"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "toolnationschweiz.ch",
+                "www.toolnationschweiz.ch"
             ]
         }
     ],
@@ -48,24 +116,34 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.9230769230769231
+            "prevalence": 0.7647058823529411
+        },
+        {
+            "domain": "sooqr.com",
+            "prevalence": 0.11764705882352941
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.07692307692307693
+            "prevalence": 0.058823529411764705
+        },
+        {
+            "domain": "steadycdn.com",
+            "prevalence": 0.058823529411764705
         }
     ],
     "types": {
-        "Fetch": 2
+        "Fetch": 2,
+        "Preflight": 3,
+        "XHR": 4
     },
     "nameservers": [
+        "ns1.amzndns.net",
         "ns1.amzndns.org",
-        "ns2.amzndns.net",
-        "ns1.amzndns.com",
         "ns2.amzndns.co.uk",
+        "ns2.amzndns.com",
+        "ns2.amzndns.net",
         "ns2.amzndns.org",
         "ns1.amzndns.co.uk",
-        "ns2.amzndns.com",
-        "ns1.amzndns.net"
+        "ns1.amzndns.com"
     ]
 }

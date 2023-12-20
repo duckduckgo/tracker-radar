@@ -4,11 +4,12 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.00121,
-    "sites": 12,
+    "prevalence": 0.00141,
+    "sites": 14,
     "subdomains": [
         "consent",
-        "cdn"
+        "cdn",
+        "geo"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -22,11 +23,11 @@
             ],
             "apis": {},
             "sites": 3,
-            "prevalence": 0.000302,
+            "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [
-                "d8e9938a583af24898d5642026ea97e5ed8b4e69d8017b7095821478cefc1062",
-                "055a4ae7daf8af5631e04a68b3330b50d7adea1ca5f28817992ee135ff13a479"
+                "535d24b5fa650aae3588077930f0d4c715a0ba3ead7cbe809c4b182955ebcb4e",
+                "56650f9a705c141abcb73baa83e2ac266528dda6e1e49b67c729c0a11d02572e"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -34,17 +35,19 @@
             "exampleSites": [
                 "fixthephoto.com",
                 "www.247backgammon.org",
-                "www.english-heritage.org.uk"
+                "www.gramophone.co.uk"
             ]
         },
         {
             "rule": "cookie-script\\.com\\/iabtcf\\/2\\.2\\/sdk_cmp\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "cdn"
             ],
-            "apis": {},
+            "apis": {
+                "Date.prototype.getTime": 1
+            },
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
@@ -55,8 +58,8 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "247backgammon.org",
-                "www.english-heritage.org.uk"
+                "fixthephoto.com",
+                "www.247backgammon.org"
             ]
         },
         {
@@ -77,8 +80,30 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "247backgammon.org",
-                "www.english-heritage.org.uk"
+                "fixthephoto.com",
+                "www.247backgammon.org"
+            ]
+        },
+        {
+            "rule": "cookie-script\\.com\\/s\\/9f2e4f3ae272e6239af3325a81c28bb6\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "geo"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "96022c8e725a2aeeaa85644f941281674ee3dee296d3be9026671b8cc617dc9d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "veeam.com",
+                "www.veeam.com"
             ]
         }
     ],
@@ -88,16 +113,16 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.9
+            "prevalence": 0.9523809523809523
         },
         {
             "domain": "msecnd.net",
-            "prevalence": 0.1
+            "prevalence": 0.047619047619047616
         }
     ],
     "types": {
         "XHR": 5,
-        "Script": 2
+        "Script": 4
     },
     "nameservers": [
         "ns1.digitalocean.com",

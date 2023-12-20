@@ -7,11 +7,11 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000748,
+    "prevalence": 0.0000749,
     "sites": 11,
     "subdomains": [
         "cdn2",
-        "service"
+        "content"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -24,10 +24,11 @@
                 "cdn2"
             ],
             "apis": {
-                "window.localStorage": 11
+                "window.localStorage": 11,
+                "Date.prototype.getTime": 10
             },
             "sites": 11,
-            "prevalence": 0.0000748,
+            "prevalence": 0.0000749,
             "cnames": [],
             "responseHashes": [
                 "7fbad2f1796d5bd7eb09e89c70e0fef0de296b56e070b2f49e67fa7602828575"
@@ -38,9 +39,9 @@
             "exampleSites": [
                 "se.pl",
                 "fit.poradnikzdrowie.pl",
-                "forum.muratordom.pl",
                 "lubimyczytac.pl",
                 "muratordom.pl",
+                "polityka.se.pl",
                 "www.eska.pl",
                 "www.mjakmama24.pl",
                 "www.muratorplus.pl",
@@ -50,25 +51,93 @@
             ]
         },
         {
-            "rule": "pollster\\.pl\\/",
+            "rule": "pollster\\.pl\\/iframe_dc\\.html",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
-                "service"
+                "cdn2"
             ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "apis": {
+                "window.localStorage": 7
+            },
+            "sites": 10,
+            "prevalence": 0.0000681,
             "cnames": [],
             "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                "142af9488ccbc4b05bb878f76102cd3e411472fca2987566826e0345ee7b1327"
             ],
-            "type": "Image",
+            "type": "Document",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
+                "se.pl",
+                "fit.poradnikzdrowie.pl",
                 "muratordom.pl",
-                "forum.muratordom.pl"
+                "polityka.se.pl",
+                "www.eska.pl",
+                "www.mjakmama24.pl",
+                "www.muratorplus.pl",
+                "www.poradnikzdrowie.pl",
+                "www.salon24.pl",
+                "www.se.pl"
+            ]
+        },
+        {
+            "rule": "pollster\\.pl\\/consent",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "content"
+            ],
+            "apis": {},
+            "sites": 10,
+            "prevalence": 0.0000681,
+            "cnames": [],
+            "responseHashes": [
+                "a29ee2b15c494311c52521766e44af56a3ad2248e7a8ab465e5206463c13d288"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "se.pl",
+                "fit.poradnikzdrowie.pl",
+                "muratordom.pl",
+                "polityka.se.pl",
+                "www.eska.pl",
+                "www.mjakmama24.pl",
+                "www.muratorplus.pl",
+                "www.poradnikzdrowie.pl",
+                "www.salon24.pl",
+                "www.se.pl"
+            ]
+        },
+        {
+            "rule": "pollster\\.pl\\/consent",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "content"
+            ],
+            "apis": {},
+            "sites": 10,
+            "prevalence": 0.0000681,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "se.pl",
+                "fit.poradnikzdrowie.pl",
+                "muratordom.pl",
+                "polityka.se.pl",
+                "www.eska.pl",
+                "www.mjakmama24.pl",
+                "www.muratorplus.pl",
+                "www.poradnikzdrowie.pl",
+                "www.salon24.pl",
+                "www.se.pl"
             ]
         }
     ],
@@ -77,17 +146,23 @@
     "cookies": 0,
     "topInitiators": [
         {
+            "domain": "idmnet.pl",
+            "prevalence": 0.6451612903225806
+        },
+        {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.3548387096774194
         }
     ],
     "types": {
         "Script": 11,
-        "Image": 2
+        "Document": 10,
+        "XHR": 10,
+        "Preflight": 10
     },
     "nameservers": [
-        "dns2.supermedia.pl",
         "dns1.supermedia.pl",
-        "dns3.supermedia.pl"
+        "dns3.supermedia.pl",
+        "dns2.supermedia.pl"
     ]
 }

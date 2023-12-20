@@ -7,14 +7,63 @@
     "source": [
         "DuckDuckGo-DE"
     ],
-    "prevalence": 0.000101,
-    "sites": 1,
+    "prevalence": 0.000201,
+    "sites": 2,
     "subdomains": [
-        "t"
+        "s",
+        "t",
+        "vis"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "vi-serve\\.com\\/tagLoader\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "s"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "5362d74089e3932a5db3b553ece541bc88b6100ea96e081d305707f1367eb263"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "anime-planet.com",
+                "www.rogerebert.com"
+            ]
+        },
+        {
+            "rule": "vi-serve\\.com\\/source\\.m\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "s"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.doNotTrack": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "57c4484a5ac65f7251dfc6fa60264d766c1a1fa13b0e81a0982d66211b912436"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "anime-planet.com",
+                "www.rogerebert.com"
+            ]
+        },
         {
             "rule": "vi-serve\\.com\\/",
             "cookies": 0,
@@ -23,8 +72,8 @@
                 "t"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -34,7 +83,30 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "anime-planet.com",
-                "www.anime-planet.com"
+                "www.anime-planet.com",
+                "www.rogerebert.com"
+            ]
+        },
+        {
+            "rule": "vi-serve\\.com\\/playlist\\/v2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vis"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "8e236c2da71807f8f827d4a6ba0f55a1d0ae1da50e72517c7a2c65d7077471c9"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "anime-planet.com",
+                "www.rogerebert.com"
             ]
         }
     ],
@@ -44,11 +116,25 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.5238095238095238
+        },
+        {
+            "domain": "adligature.com",
+            "prevalence": 0.3333333333333333
+        },
+        {
+            "domain": "adlightning.com",
+            "prevalence": 0.09523809523809523
+        },
+        {
+            "domain": "outbrain.com",
+            "prevalence": 0.047619047619047616
         }
     ],
     "types": {
-        "Image": 2
+        "Script": 4,
+        "Image": 3,
+        "XHR": 2
     },
     "nameservers": [
         "ns-322.awsdns-40.com",
