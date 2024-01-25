@@ -4,8 +4,8 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.0118,
-    "sites": 117,
+    "prevalence": 0.0119,
+    "sites": 118,
     "subdomains": [
         "t.indeed.com.cdn",
         "api.ni.com.cdn",
@@ -13,18 +13,19 @@
         "static.timesofisrael.com.cdn",
         "cdn-0.lepeupleelectrique.fr.cdn",
         "cdn-0.mon-guide-voiture.fr.cdn",
+        "browserapi.manomano.fr.cdn",
         "graphql.manomano.fr.cdn",
         "api.monoprix.fr.cdn",
         "rql.reverb.com.cdn",
         "cdn.monoprix.fr.cdn",
+        "fonts.garmin.com.cdn",
         "xsso.riotgames.com.cdn",
         "auth.riotgames.com.cdn",
-        "fonts.garmin.com.cdn",
         "my.businessinsider.com.cdn",
         "cfl.dropboxstatic.com.cdn",
         "analytics.notify.elsevier.com.cdn",
-        "static.flashscore.com.cdn",
         "booking.flytap.com.cdn",
+        "static.flashscore.com.cdn",
         "secure.lastminute.com.cdn",
         "services.lastminute.com.cdn",
         "services.garmin.com.cdn",
@@ -69,6 +70,10 @@
         {
             "original": "booking.flytap.com",
             "resolved": "booking.flytap.com.cdn.cloudflare.net"
+        },
+        {
+            "original": "browserapi.manomano.fr",
+            "resolved": "browserapi.manomano.fr.cdn.cloudflare.net"
         },
         {
             "original": "canary.contestimg.wish.com",
@@ -204,8 +209,8 @@
                 "fr.indeed.com",
                 "it.indeed.com",
                 "uk.indeed.com",
-                "www.indeed.com",
-                "www.indeed.fr"
+                "www.indeed.fr",
+                "www.indeed.com"
             ]
         },
         {
@@ -267,8 +272,8 @@
                 "fr.indeed.com",
                 "it.indeed.com",
                 "uk.indeed.com",
-                "www.indeed.com",
-                "www.indeed.fr"
+                "www.indeed.fr",
+                "www.indeed.com"
             ]
         },
         {
@@ -844,6 +849,58 @@
             ]
         },
         {
+            "rule": "cloudflare\\.net\\/ab-test\\/api\\/v1\\/user\\/flags",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "browserapi.manomano.fr.cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "browserapi.manomano.fr",
+                    "resolved": "browserapi.manomano.fr.cdn.cloudflare.net"
+                }
+            ],
+            "responseHashes": [
+                "00f32bcff3c2393507b6850ddf0af4099ea7838e0c0b377927568bab702579f8"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "manomano.fr",
+                "www.manomano.fr"
+            ]
+        },
+        {
+            "rule": "cloudflare\\.net\\/ab-test\\/api\\/v1\\/user\\/flags",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "browserapi.manomano.fr.cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "browserapi.manomano.fr",
+                    "resolved": "browserapi.manomano.fr.cdn.cloudflare.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "manomano.fr",
+                "www.manomano.fr"
+            ]
+        },
+        {
             "rule": "cloudflare\\.net\\/api\\/graphql",
             "cookies": 0.000201,
             "fingerprinting": 0,
@@ -1033,178 +1090,6 @@
             "exampleSites": [
                 "monoprix.fr",
                 "www.monoprix.fr"
-            ]
-        },
-        {
-            "rule": "cloudflare\\.net\\/xsso",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "xsso.riotgames.com.cdn"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [
-                {
-                    "original": "xsso.riotgames.com",
-                    "resolved": "xsso.riotgames.com.cdn.cloudflare.net"
-                }
-            ],
-            "responseHashes": [
-                "225a27901847c80239c45e0c7493124140875f42b7945a8a7b8e665b3b4c0216"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "riotgames.com",
-                "www.riotgames.com"
-            ]
-        },
-        {
-            "rule": "cloudflare\\.net\\/check-session-iframe",
-            "cookies": 0.000201,
-            "fingerprinting": 0,
-            "subdomains": [
-                "xsso.riotgames.com.cdn",
-                "auth.riotgames.com.cdn"
-            ],
-            "apis": {},
-            "sites": 4,
-            "prevalence": 0.000403,
-            "cnames": [
-                {
-                    "original": "xsso.riotgames.com",
-                    "resolved": "xsso.riotgames.com.cdn.cloudflare.net"
-                },
-                {
-                    "original": "auth.riotgames.com",
-                    "resolved": "auth.riotgames.com.cdn.cloudflare.net"
-                }
-            ],
-            "responseHashes": [
-                "c3158d20fd64549133214d340458f166d93fdf7abc55201e1733cf534051b331",
-                "f01aee41a98cfd1398890377c553e7acef766e4c4632689c6f01e4bd96a0e1de",
-                "ae191238127841f9b513d691694ee7f3c040eab67ab46a5fabcdc80e6c5489a9"
-            ],
-            "type": "Document",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "riotgames.com",
-                "support-leagueoflegends.riotgames.com",
-                "www.leagueoflegends.com",
-                "www.riotgames.com"
-            ]
-        },
-        {
-            "rule": "cloudflare\\.net\\/riot-owned-iframe",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "xsso.riotgames.com.cdn"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [
-                {
-                    "original": "xsso.riotgames.com",
-                    "resolved": "xsso.riotgames.com.cdn.cloudflare.net"
-                }
-            ],
-            "responseHashes": [
-                "e7e84b0b603cc42c864140dc414387bb0f0b4607c4e0ff5b61f89199523c2f91"
-            ],
-            "type": "Document",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "riotgames.com",
-                "www.riotgames.com"
-            ]
-        },
-        {
-            "rule": "cloudflare\\.net\\/login",
-            "cookies": 0.000201,
-            "fingerprinting": 0,
-            "subdomains": [
-                "xsso.riotgames.com.cdn"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [
-                {
-                    "original": "xsso.riotgames.com",
-                    "resolved": "xsso.riotgames.com.cdn.cloudflare.net"
-                }
-            ],
-            "responseHashes": [
-                "911b47566407b3cb7bd64a7fe5b05bbc50e11e0b81ee21c2e3ce1a50f52d33af"
-            ],
-            "type": "Document",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "riotgames.com",
-                "www.riotgames.com"
-            ]
-        },
-        {
-            "rule": "cloudflare\\.net\\/authorize",
-            "cookies": 0.000302,
-            "fingerprinting": 0,
-            "subdomains": [
-                "auth.riotgames.com.cdn"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.000302,
-            "cnames": [
-                {
-                    "original": "auth.riotgames.com",
-                    "resolved": "auth.riotgames.com.cdn.cloudflare.net"
-                }
-            ],
-            "responseHashes": [
-                "911b47566407b3cb7bd64a7fe5b05bbc50e11e0b81ee21c2e3ce1a50f52d33af"
-            ],
-            "type": "Document",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "riotgames.com",
-                "www.leagueoflegends.com",
-                "www.riotgames.com"
-            ]
-        },
-        {
-            "rule": "cloudflare\\.net\\/redirect",
-            "cookies": 0.000201,
-            "fingerprinting": 0,
-            "subdomains": [
-                "xsso.riotgames.com.cdn"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [
-                {
-                    "original": "xsso.riotgames.com",
-                    "resolved": "xsso.riotgames.com.cdn.cloudflare.net"
-                }
-            ],
-            "responseHashes": [
-                "911b47566407b3cb7bd64a7fe5b05bbc50e11e0b81ee21c2e3ce1a50f52d33af"
-            ],
-            "type": "Document",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "riotgames.com",
-                "www.riotgames.com"
             ]
         },
         {
@@ -1460,6 +1345,178 @@
             ]
         },
         {
+            "rule": "cloudflare\\.net\\/xsso",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "xsso.riotgames.com.cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "xsso.riotgames.com",
+                    "resolved": "xsso.riotgames.com.cdn.cloudflare.net"
+                }
+            ],
+            "responseHashes": [
+                "225a27901847c80239c45e0c7493124140875f42b7945a8a7b8e665b3b4c0216"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "riotgames.com",
+                "www.riotgames.com"
+            ]
+        },
+        {
+            "rule": "cloudflare\\.net\\/check-session-iframe",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "xsso.riotgames.com.cdn",
+                "auth.riotgames.com.cdn"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000403,
+            "cnames": [
+                {
+                    "original": "xsso.riotgames.com",
+                    "resolved": "xsso.riotgames.com.cdn.cloudflare.net"
+                },
+                {
+                    "original": "auth.riotgames.com",
+                    "resolved": "auth.riotgames.com.cdn.cloudflare.net"
+                }
+            ],
+            "responseHashes": [
+                "c3158d20fd64549133214d340458f166d93fdf7abc55201e1733cf534051b331",
+                "f01aee41a98cfd1398890377c553e7acef766e4c4632689c6f01e4bd96a0e1de",
+                "ae191238127841f9b513d691694ee7f3c040eab67ab46a5fabcdc80e6c5489a9"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "riotgames.com",
+                "support-leagueoflegends.riotgames.com",
+                "www.leagueoflegends.com",
+                "www.riotgames.com"
+            ]
+        },
+        {
+            "rule": "cloudflare\\.net\\/riot-owned-iframe",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "xsso.riotgames.com.cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "xsso.riotgames.com",
+                    "resolved": "xsso.riotgames.com.cdn.cloudflare.net"
+                }
+            ],
+            "responseHashes": [
+                "e7e84b0b603cc42c864140dc414387bb0f0b4607c4e0ff5b61f89199523c2f91"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "riotgames.com",
+                "www.riotgames.com"
+            ]
+        },
+        {
+            "rule": "cloudflare\\.net\\/login",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "xsso.riotgames.com.cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "xsso.riotgames.com",
+                    "resolved": "xsso.riotgames.com.cdn.cloudflare.net"
+                }
+            ],
+            "responseHashes": [
+                "911b47566407b3cb7bd64a7fe5b05bbc50e11e0b81ee21c2e3ce1a50f52d33af"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "riotgames.com",
+                "www.riotgames.com"
+            ]
+        },
+        {
+            "rule": "cloudflare\\.net\\/authorize",
+            "cookies": 0.000302,
+            "fingerprinting": 0,
+            "subdomains": [
+                "auth.riotgames.com.cdn"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [
+                {
+                    "original": "auth.riotgames.com",
+                    "resolved": "auth.riotgames.com.cdn.cloudflare.net"
+                }
+            ],
+            "responseHashes": [
+                "911b47566407b3cb7bd64a7fe5b05bbc50e11e0b81ee21c2e3ce1a50f52d33af"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "riotgames.com",
+                "www.leagueoflegends.com",
+                "www.riotgames.com"
+            ]
+        },
+        {
+            "rule": "cloudflare\\.net\\/redirect",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "xsso.riotgames.com.cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "xsso.riotgames.com",
+                    "resolved": "xsso.riotgames.com.cdn.cloudflare.net"
+                }
+            ],
+            "responseHashes": [
+                "911b47566407b3cb7bd64a7fe5b05bbc50e11e0b81ee21c2e3ce1a50f52d33af"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "riotgames.com",
+                "www.riotgames.com"
+            ]
+        },
+        {
             "rule": "cloudflare\\.net\\/cross-domain",
             "cookies": 0,
             "fingerprinting": 0,
@@ -1508,13 +1565,13 @@
                 "anonymous_id": {
                     "ttl": 7776004,
                     "length": 36,
-                    "prevalence": 0.00010073536818777072,
+                    "prevalence": 0.0001007252215954875,
                     "uniqueness": 1
                 },
                 "myinsider-anonymous-id": {
                     "ttl": 31536004,
                     "length": 36,
-                    "prevalence": 0.00010073536818777072,
+                    "prevalence": 0.0001007252215954875,
                     "uniqueness": 1
                 }
             },
@@ -1899,7 +1956,7 @@
                 "billing_cycle": {
                     "ttl": 432000,
                     "length": 6,
-                    "prevalence": 0.00020147073637554144,
+                    "prevalence": 0.000201450443190975,
                     "uniqueness": 0.5
                 }
             },
@@ -2068,7 +2125,7 @@
                 "__Secure-dbx_consent": {
                     "ttl": 15721207,
                     "length": 167,
-                    "prevalence": 0.00020147073637554144,
+                    "prevalence": 0.000201450443190975,
                     "uniqueness": 0.5
                 }
             },
@@ -2504,6 +2561,214 @@
             "exampleSites": [
                 "elsevier.com",
                 "www.elsevier.com"
+            ]
+        },
+        {
+            "rule": "cloudflare\\.net\\/ibe\\/rest\\/scopes\\/tap\\/modules\\/translations\\/en",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "booking.flytap.com.cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "booking.flytap.com",
+                    "resolved": "booking.flytap.com.cdn.cloudflare.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "flytap.com",
+                "www.flytap.com"
+            ]
+        },
+        {
+            "rule": "cloudflare\\.net\\/ibe\\/rest\\/scopes\\/tap\\/modules\\/translations\\/fr",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "booking.flytap.com.cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "booking.flytap.com",
+                    "resolved": "booking.flytap.com.cdn.cloudflare.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "flytap.com",
+                "www.flytap.com"
+            ]
+        },
+        {
+            "rule": "cloudflare\\.net\\/ibe\\/rest\\/scopes\\/tap\\/modules\\/translations\\/en",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "booking.flytap.com.cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "booking.flytap.com",
+                    "resolved": "booking.flytap.com.cdn.cloudflare.net"
+                }
+            ],
+            "responseHashes": [
+                "e4772863afa9c02b6da4c4b41e81d5fa2da5eab32c94d9712e381535c96fe1a5"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "flytap.com",
+                "www.flytap.com"
+            ]
+        },
+        {
+            "rule": "cloudflare\\.net\\/ibe\\/rest\\/scopes\\/tap\\/modules\\/translations\\/fr",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "booking.flytap.com.cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "booking.flytap.com",
+                    "resolved": "booking.flytap.com.cdn.cloudflare.net"
+                }
+            ],
+            "responseHashes": [
+                "ced13bdc10804900a6cc2b4ac38c4041c3312fcc8623c305054f4ca3b14dc9f2"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "flytap.com",
+                "www.flytap.com"
+            ]
+        },
+        {
+            "rule": "cloudflare\\.net\\/bfm\\/rest\\/journey\\/origin\\/search",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "booking.flytap.com.cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "booking.flytap.com",
+                    "resolved": "booking.flytap.com.cdn.cloudflare.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "flytap.com",
+                "www.flytap.com"
+            ]
+        },
+        {
+            "rule": "cloudflare\\.net\\/bfm\\/rest\\/journey\\/origin\\/search",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "booking.flytap.com.cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "booking.flytap.com",
+                    "resolved": "booking.flytap.com.cdn.cloudflare.net"
+                }
+            ],
+            "responseHashes": [
+                "eb4cfd0b9f6a9564acb41795b9cc61390f846c81d77e415d042ebf5d8f3a745d"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "flytap.com",
+                "www.flytap.com"
+            ]
+        },
+        {
+            "rule": "cloudflare\\.net\\/bfm\\/rest\\/journey\\/destination\\/search",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "booking.flytap.com.cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "booking.flytap.com",
+                    "resolved": "booking.flytap.com.cdn.cloudflare.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "flytap.com",
+                "www.flytap.com"
+            ]
+        },
+        {
+            "rule": "cloudflare\\.net\\/bfm\\/rest\\/journey\\/destination\\/search",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "booking.flytap.com.cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "booking.flytap.com",
+                    "resolved": "booking.flytap.com.cdn.cloudflare.net"
+                }
+            ],
+            "responseHashes": [
+                "6f60e1a66ff6b64613c61fae2fc3a9458a65229bf629ab1dcdb1043cf8f8c014"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "flytap.com",
+                "www.flytap.com"
             ]
         },
         {
@@ -5515,214 +5780,6 @@
             ]
         },
         {
-            "rule": "cloudflare\\.net\\/ibe\\/rest\\/scopes\\/tap\\/modules\\/translations\\/en",
-            "cookies": 0.000201,
-            "fingerprinting": 0,
-            "subdomains": [
-                "booking.flytap.com.cdn"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [
-                {
-                    "original": "booking.flytap.com",
-                    "resolved": "booking.flytap.com.cdn.cloudflare.net"
-                }
-            ],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "flytap.com",
-                "www.flytap.com"
-            ]
-        },
-        {
-            "rule": "cloudflare\\.net\\/ibe\\/rest\\/scopes\\/tap\\/modules\\/translations\\/fr",
-            "cookies": 0.000201,
-            "fingerprinting": 0,
-            "subdomains": [
-                "booking.flytap.com.cdn"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [
-                {
-                    "original": "booking.flytap.com",
-                    "resolved": "booking.flytap.com.cdn.cloudflare.net"
-                }
-            ],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "flytap.com",
-                "www.flytap.com"
-            ]
-        },
-        {
-            "rule": "cloudflare\\.net\\/ibe\\/rest\\/scopes\\/tap\\/modules\\/translations\\/en",
-            "cookies": 0.000201,
-            "fingerprinting": 0,
-            "subdomains": [
-                "booking.flytap.com.cdn"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [
-                {
-                    "original": "booking.flytap.com",
-                    "resolved": "booking.flytap.com.cdn.cloudflare.net"
-                }
-            ],
-            "responseHashes": [
-                "e4772863afa9c02b6da4c4b41e81d5fa2da5eab32c94d9712e381535c96fe1a5"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "flytap.com",
-                "www.flytap.com"
-            ]
-        },
-        {
-            "rule": "cloudflare\\.net\\/ibe\\/rest\\/scopes\\/tap\\/modules\\/translations\\/fr",
-            "cookies": 0.000201,
-            "fingerprinting": 0,
-            "subdomains": [
-                "booking.flytap.com.cdn"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [
-                {
-                    "original": "booking.flytap.com",
-                    "resolved": "booking.flytap.com.cdn.cloudflare.net"
-                }
-            ],
-            "responseHashes": [
-                "ced13bdc10804900a6cc2b4ac38c4041c3312fcc8623c305054f4ca3b14dc9f2"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "flytap.com",
-                "www.flytap.com"
-            ]
-        },
-        {
-            "rule": "cloudflare\\.net\\/bfm\\/rest\\/journey\\/origin\\/search",
-            "cookies": 0.000201,
-            "fingerprinting": 0,
-            "subdomains": [
-                "booking.flytap.com.cdn"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [
-                {
-                    "original": "booking.flytap.com",
-                    "resolved": "booking.flytap.com.cdn.cloudflare.net"
-                }
-            ],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "flytap.com",
-                "www.flytap.com"
-            ]
-        },
-        {
-            "rule": "cloudflare\\.net\\/bfm\\/rest\\/journey\\/origin\\/search",
-            "cookies": 0.000201,
-            "fingerprinting": 0,
-            "subdomains": [
-                "booking.flytap.com.cdn"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [
-                {
-                    "original": "booking.flytap.com",
-                    "resolved": "booking.flytap.com.cdn.cloudflare.net"
-                }
-            ],
-            "responseHashes": [
-                "eb4cfd0b9f6a9564acb41795b9cc61390f846c81d77e415d042ebf5d8f3a745d"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "flytap.com",
-                "www.flytap.com"
-            ]
-        },
-        {
-            "rule": "cloudflare\\.net\\/bfm\\/rest\\/journey\\/destination\\/search",
-            "cookies": 0.000201,
-            "fingerprinting": 0,
-            "subdomains": [
-                "booking.flytap.com.cdn"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [
-                {
-                    "original": "booking.flytap.com",
-                    "resolved": "booking.flytap.com.cdn.cloudflare.net"
-                }
-            ],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "flytap.com",
-                "www.flytap.com"
-            ]
-        },
-        {
-            "rule": "cloudflare\\.net\\/bfm\\/rest\\/journey\\/destination\\/search",
-            "cookies": 0.000201,
-            "fingerprinting": 0,
-            "subdomains": [
-                "booking.flytap.com.cdn"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [
-                {
-                    "original": "booking.flytap.com",
-                    "resolved": "booking.flytap.com.cdn.cloudflare.net"
-                }
-            ],
-            "responseHashes": [
-                "6f60e1a66ff6b64613c61fae2fc3a9458a65229bf629ab1dcdb1043cf8f8c014"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "flytap.com",
-                "www.flytap.com"
-            ]
-        },
-        {
             "rule": "cloudflare\\.net\\/cia-be\\/api\\/v1\\/handshake",
             "cookies": 0.000201,
             "fingerprinting": 0,
@@ -6604,7 +6661,7 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.00564,
+    "cookies": 0.00574,
     "topInitiators": [
         {
             "domain": "first party",
@@ -6650,19 +6707,19 @@
     "types": {
         "Script": 114,
         "Image": 166,
-        "Preflight": 27,
+        "Preflight": 29,
         "Fetch": 37,
         "Stylesheet": 89,
         "Font": 34,
+        "XHR": 20,
         "Document": 19,
-        "XHR": 18,
         "Media": 2
     },
     "nameservers": [
         "ns1.cloudflare.net",
-        "ns4.cloudflare.net",
         "ns2.cloudflare.net",
         "ns3.cloudflare.net",
+        "ns4.cloudflare.net",
         "ns5.cloudflare.net"
     ]
 }
