@@ -4,14 +4,62 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.0001,
-    "sites": 1,
+    "prevalence": 0.000201,
+    "sites": 2,
     "subdomains": [
-        "collector-azsx401.dmp"
+        "tags",
+        "collector-azsx401.dmp",
+        "sync.dmp"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "cnna\\.io\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tags"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "347fa5441c163d93140f593d273188abfb551567c678107d4e05f696b6f38ffd"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "herb.co",
+                "www.leafly.com"
+            ]
+        },
+        {
+            "rule": "cnna\\.io\\/v1\\.c3b85c68\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "tags"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "b5ef7fd6ab45cc6681f5c58e7b2f9c9009dd6823ee530fe7ce06047738b2b195"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "herb.co",
+                "www.leafly.com"
+            ]
+        },
         {
             "rule": "cnna\\.io\\/analytics\\/track",
             "cookies": 0.000201,
@@ -30,26 +78,73 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "leafly.com",
+                "herb.co",
+                "www.leafly.com"
+            ]
+        },
+        {
+            "rule": "cnna\\.io\\/analytics\\/track",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "collector-azsx401.dmp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "herb.co",
+                "www.leafly.com"
+            ]
+        },
+        {
+            "rule": "cnna\\.io\\/hash",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sync.dmp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "herb.co",
                 "www.leafly.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0001,
+    "cookies": 0.000201,
     "topInitiators": [
         {
-            "domain": "first party",
-            "prevalence": 0.6666666666666666
+            "domain": "googletagmanager.com",
+            "prevalence": 0.3333333333333333
         },
         {
-            "domain": "googletagmanager.com",
+            "domain": "dm2q9qfzyjfox.cloudfront.net",
+            "prevalence": 0.3333333333333333
+        },
+        {
+            "domain": "first party",
             "prevalence": 0.3333333333333333
         }
     ],
     "types": {
-        "XHR": 2
+        "Script": 4,
+        "XHR": 2,
+        "Preflight": 2,
+        "Image": 2
     },
     "nameservers": [
         "ns-1204.awsdns-22.org",

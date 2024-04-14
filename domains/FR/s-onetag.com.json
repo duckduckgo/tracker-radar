@@ -9,13 +9,15 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000201,
-    "sites": 2,
+    "prevalence": 0.000402,
+    "sites": 4,
     "subdomains": [
         "get",
         "onetag-geo",
         "signal-beacon",
-        "signal-floors"
+        "signal-floors",
+        "signal-dynamic-pricing-analysis",
+        "signal-metrics-collector-beta"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -35,7 +37,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "8e2f20072a938430ed29786fdbdb7ea3d75464d2af580109ec45c9c8badb3d8a"
+                "fe2cad5f3c6dc64b6f0cb3037544eee626633ab5e0ecbcebe5540a59a2bb3253"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -53,8 +55,8 @@
                 "onetag-geo"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 4,
+            "prevalence": 0.000402,
             "cnames": [],
             "responseHashes": [
                 "326d4bbfe6a6077a85b17a3e6d6e729c128e8d04decbc00310b2aae98df2150d"
@@ -64,7 +66,9 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "cnn.com",
-                "www.cnn.com"
+                "www.cnn.com",
+                "www.gumtree.com",
+                "www.scamadviser.com"
             ]
         },
         {
@@ -75,10 +79,10 @@
                 "signal-beacon"
             ],
             "apis": {
-                "window.localStorage": 2
+                "window.localStorage": 4
             },
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 4,
+            "prevalence": 0.000402,
             "cnames": [],
             "responseHashes": [
                 "c847b5978db290ef7e4636d8ae766c5c4666ba0eefc73aba63b0b1156a8df147"
@@ -88,7 +92,9 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "cnn.com",
-                "www.cnn.com"
+                "www.cnn.com",
+                "www.gumtree.com",
+                "www.scamadviser.com"
             ]
         },
         {
@@ -103,7 +109,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "3b0917f2a339cec2e2311c2360e983cdc9d66ba6bb2ea7c58518f6d10ab1ac9a"
+                "bc31b03079d3118b80746c58e396720837c9b3e7f1c84f74924e79500258e397"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -111,6 +117,29 @@
             "exampleSites": [
                 "cnn.com",
                 "www.cnn.com"
+            ]
+        },
+        {
+            "rule": "s-onetag\\.com\\/metrics",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "signal-dynamic-pricing-analysis",
+                "signal-metrics-collector-beta"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gumtree.com",
+                "www.scamadviser.com"
             ]
         }
     ],
@@ -123,12 +152,25 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.6363636363636364
+        },
+        {
+            "domain": "script.ac",
+            "prevalence": 0.18181818181818182
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.09090909090909091
+        },
+        {
+            "domain": "humix.com",
+            "prevalence": 0.09090909090909091
         }
     ],
     "types": {
-        "Script": 4,
-        "Fetch": 4
+        "Script": 6,
+        "Fetch": 6,
+        "Ping": 2
     },
     "nameservers": [
         "ns-13.awsdns-01.com",

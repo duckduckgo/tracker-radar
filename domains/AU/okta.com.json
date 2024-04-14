@@ -7,14 +7,19 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.000602,
-    "sites": 6,
+    "prevalence": 0.000803,
+    "sites": 8,
     "subdomains": [
         "login",
+        "sas.customdomains",
         "churchofjesuschrist.customdomains",
         "servicenowsignon.customdomains"
     ],
     "cnames": [
+        {
+            "original": "auth.sas.com",
+            "resolved": "sas.customdomains.okta.com"
+        },
         {
             "original": "id.churchofjesuschrist.org",
             "resolved": "churchofjesuschrist.customdomains.okta.com"
@@ -57,8 +62,8 @@
                 "login"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 2,
-                "window.localStorage": 2
+                "Navigator.prototype.userAgent": 3,
+                "window.localStorage": 3
             },
             "sites": 3,
             "prevalence": 0.000301,
@@ -73,6 +78,33 @@
                 "sydney.edu.au",
                 "my.hesta.com.au",
                 "my.unimelb.edu.au"
+            ]
+        },
+        {
+            "rule": "okta\\.com\\/api\\/v1\\/users\\/me",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sas.customdomains"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "auth.sas.com",
+                    "resolved": "sas.customdomains.okta.com"
+                }
+            ],
+            "responseHashes": [
+                "a68730a432e570198f028518472427bacaef6df1be38771ca4d3e2ace7ab314e"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sas.com",
+                "support.sas.com"
             ]
         },
         {
@@ -109,7 +141,7 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000301,
+    "cookies": 0.000502,
     "topInitiators": [
         {
             "domain": "oktacdn.com",
@@ -123,16 +155,17 @@
     "types": {
         "Document": 3,
         "Script": 3,
+        "XHR": 2,
         "Fetch": 3
     },
     "nameservers": [
-        "edns5.ultradns.biz",
         "edns5.ultradns.com",
-        "edns5.ultradns.net",
-        "edns5.ultradns.org",
-        "ns-1459.awsdns-54.org",
-        "ns-1563.awsdns-03.co.uk",
         "ns-285.awsdns-35.com",
-        "ns-684.awsdns-21.net"
+        "ns-1563.awsdns-03.co.uk",
+        "ns-684.awsdns-21.net",
+        "edns5.ultradns.biz",
+        "ns-1459.awsdns-54.org",
+        "edns5.ultradns.net",
+        "edns5.ultradns.org"
     ]
 }

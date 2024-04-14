@@ -7,13 +7,14 @@
     "source": [
         "DuckDuckGo-GB"
     ],
-    "prevalence": 0.00241,
-    "sites": 24,
+    "prevalence": 0.00211,
+    "sites": 21,
     "subdomains": [
         "synchroscript.deliveryengine",
-        "advertisecast-108-adswizz.attribution",
+        "cdn",
+        "delivery-cdn-cf",
+        "synchrobox",
         "octave-2622-adswizz.attribution",
-        "octave-1810-adswizz.attribution",
         "octave-171-adswizz.attribution",
         "octave-2319-adswizz.attribution",
         "octave-1842-adswizz.attribution",
@@ -21,9 +22,6 @@
         "wpromote-4-adswizz.attribution",
         "octave-2218-adswizz.attribution",
         "octave-3478-adswizz.attribution",
-        "cdn",
-        "delivery-cdn-cf",
-        "synchrobox",
         "pixelg"
     ],
     "cnames": [],
@@ -31,14 +29,14 @@
     "resources": [
         {
             "rule": "adswizz\\.com\\/getUID",
-            "cookies": 0.000703,
+            "cookies": 0.000602,
             "fingerprinting": 0,
             "subdomains": [
                 "synchroscript.deliveryengine"
             ],
             "apis": {},
-            "sites": 7,
-            "prevalence": 0.000703,
+            "sites": 6,
+            "prevalence": 0.000602,
             "cnames": [],
             "responseHashes": [
                 "1866961a029c65376fefb7f2ba1e6187e09ff50ea58d97dedfd72c197947d002"
@@ -52,58 +50,22 @@
                 "en.as.com",
                 "english.elpais.com",
                 "uk.whogivesacrap.org",
-                "www.behindthename.com",
                 "www.gardenhealth.com"
             ]
         },
         {
-            "rule": "adswizz\\.com\\/fire",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "advertisecast-108-adswizz.attribution",
-                "octave-2622-adswizz.attribution",
-                "octave-1810-adswizz.attribution",
-                "octave-171-adswizz.attribution",
-                "octave-2319-adswizz.attribution",
-                "octave-1842-adswizz.attribution",
-                "octave-3113-adswizz.attribution",
-                "wpromote-4-adswizz.attribution",
-                "octave-2218-adswizz.attribution",
-                "octave-3478-adswizz.attribution"
-            ],
-            "apis": {},
-            "sites": 10,
-            "prevalence": 0.001,
-            "cnames": [],
-            "responseHashes": [
-                "968b17baf99ffc8097fdbe0d8552113c2f6e7da2a63e3967f24811e2e2e0a312"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "poshmark.com",
-                "www.avogel.co.uk",
-                "www.blenheimpalace.com",
-                "www.closebrothers.com",
-                "www.hendy.co.uk",
-                "www.john-clark.co.uk",
-                "www.kew.org",
-                "www.peacocktv.com",
-                "www.reading-buses.co.uk",
-                "www.showerstoyou.co.uk"
-            ]
-        },
-        {
             "rule": "adswizz\\.com\\/adswizz\\/js\\/SynchroClient2\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
+            "cookies": 0.0001,
+            "fingerprinting": 1,
             "subdomains": [
                 "cdn",
                 "delivery-cdn-cf"
             ],
-            "apis": {},
+            "apis": {
+                "Document.cookie getter": 1,
+                "Date.prototype.getTime": 1,
+                "Document.cookie setter": 1
+            },
             "sites": 5,
             "prevalence": 0.000502,
             "cnames": [],
@@ -111,13 +73,20 @@
                 "dc3a0e2e935e1287780338713472a6ab77cfddcd82259c9d6bb4317de0d93898"
             ],
             "type": "Script",
-            "firstPartyCookies": {},
+            "firstPartyCookies": {
+                "adswizz_oaid": {
+                    "ttl": null,
+                    "length": 33,
+                    "prevalence": 0.00010037137408411121,
+                    "uniqueness": 1
+                }
+            },
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "talk.tv",
                 "tunein.com",
-                "virginradio.co.uk",
                 "www.behindthename.com",
+                "www.connectingsingles.com",
                 "www.sbs.com.au"
             ]
         },
@@ -142,21 +111,21 @@
             "exampleSites": [
                 "talk.tv",
                 "tunein.com",
-                "virginradio.co.uk",
                 "www.behindthename.com",
+                "www.connectingsingles.com",
                 "www.sbs.com.au"
             ]
         },
         {
             "rule": "adswizz\\.com\\/www\\/delivery\\/afr\\.php",
-            "cookies": 0.000502,
+            "cookies": 0.000301,
             "fingerprinting": 0,
             "subdomains": [
                 "synchroscript.deliveryengine"
             ],
             "apis": {},
-            "sites": 5,
-            "prevalence": 0.000502,
+            "sites": 3,
+            "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [
                 "e317d72184f175517e5c71273b70cc53d88e1bf4887e3fac1c1c7e448f83b323"
@@ -167,8 +136,6 @@
             "exampleSites": [
                 "talk.tv",
                 "tunein.com",
-                "virginradio.co.uk",
-                "www.behindthename.com",
                 "www.sbs.com.au"
             ]
         },
@@ -180,12 +147,12 @@
                 "delivery-cdn-cf"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 4,
-                "Navigator.prototype.platform": 4,
-                "Navigator.prototype.plugins": 4
+                "Navigator.prototype.userAgent": 3,
+                "Navigator.prototype.platform": 3,
+                "Navigator.prototype.plugins": 3
             },
-            "sites": 4,
-            "prevalence": 0.000401,
+            "sites": 3,
+            "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [
                 "a18cbdbb0fbb733d7f4cba5d2afd6b2706e3f141c743f491057e5800368cd8e5"
@@ -196,8 +163,42 @@
             "exampleSites": [
                 "talk.tv",
                 "tunein.com",
-                "virginradio.co.uk",
                 "www.sbs.com.au"
+            ]
+        },
+        {
+            "rule": "adswizz\\.com\\/fire",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "octave-2622-adswizz.attribution",
+                "octave-171-adswizz.attribution",
+                "octave-2319-adswizz.attribution",
+                "octave-1842-adswizz.attribution",
+                "octave-3113-adswizz.attribution",
+                "wpromote-4-adswizz.attribution",
+                "octave-2218-adswizz.attribution",
+                "octave-3478-adswizz.attribution"
+            ],
+            "apis": {},
+            "sites": 8,
+            "prevalence": 0.000803,
+            "cnames": [],
+            "responseHashes": [
+                "968b17baf99ffc8097fdbe0d8552113c2f6e7da2a63e3967f24811e2e2e0a312"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "avogel.co.uk",
+                "www.closebrothers.com",
+                "www.hendy.co.uk",
+                "www.john-clark.co.uk",
+                "www.kew.org",
+                "www.peacocktv.com",
+                "www.reading-buses.co.uk",
+                "www.showerstoyou.co.uk"
             ]
         },
         {
@@ -208,8 +209,8 @@
                 "pixelg"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000301,
+            "sites": 2,
+            "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
                 "20c67f429e29ca25cbb2b34f12502458bfd75ccda532df4cfc7ab58cf5a7fdb5"
@@ -218,8 +219,7 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "utilita.co.uk",
-                "www.campingandcaravanningclub.co.uk",
+                "campingandcaravanningclub.co.uk",
                 "www.carshop.co.uk"
             ]
         }
@@ -229,42 +229,38 @@
         "Advertising"
     ],
     "performance": {},
-    "cookies": 0.0011,
+    "cookies": 0.000903,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.65625
-        },
-        {
-            "domain": "adform.net",
-            "prevalence": 0.09375
-        },
-        {
-            "domain": "demdex.net",
-            "prevalence": 0.09375
+            "prevalence": 0.5925925925925926
         },
         {
             "domain": "serverbid.com",
-            "prevalence": 0.09375
+            "prevalence": 0.14814814814814814
         },
         {
-            "domain": "googletagmanager.com",
-            "prevalence": 0.03125
+            "domain": "adform.net",
+            "prevalence": 0.1111111111111111
+        },
+        {
+            "domain": "demdex.net",
+            "prevalence": 0.1111111111111111
         },
         {
             "domain": "doubleclick.net",
-            "prevalence": 0.03125
+            "prevalence": 0.037037037037037035
         }
     ],
     "types": {
-        "Image": 20,
-        "Script": 14,
-        "Document": 5
+        "Image": 16,
+        "Script": 13,
+        "Document": 3
     },
     "nameservers": [
-        "ns-881.awsdns-46.net",
         "ns-1953.awsdns-52.co.uk",
         "ns-269.awsdns-33.com",
+        "ns-881.awsdns-46.net",
         "ns-1356.awsdns-41.org"
     ]
 }

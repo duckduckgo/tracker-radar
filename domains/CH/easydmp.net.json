@@ -7,8 +7,8 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.0001,
-    "sites": 1,
+    "prevalence": 0.000201,
+    "sites": 2,
     "subdomains": [
         "asset"
     ],
@@ -16,7 +16,83 @@
     "fingerprinting": 2,
     "resources": [
         {
+            "rule": "easydmp\\.net\\/js\\/client\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "asset"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "1441485285b921500645ba1a6bca92cbe452ad18307c7d8581909e1c501d43ac"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ktotv.com",
+                "www.letribunaldunet.fr"
+            ]
+        },
+        {
+            "rule": "easydmp\\.net\\/client_iframe\\.html",
+            "cookies": 0.000201,
+            "fingerprinting": 1,
+            "subdomains": [
+                "asset"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2,
+                "window.localStorage": 2,
+                "Document.cookie setter": 2,
+                "window.indexedDB": 2,
+                "Document.cookie getter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "d99b4e9849968001e47761287235416459c70ff6e4fa128a036ec511ad905357"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ktotv.com",
+                "www.letribunaldunet.fr"
+            ]
+        },
+        {
             "rule": "easydmp\\.net\\/etag\\.php",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "asset"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [
+                "fb1f53314e5eab30752092d696aa48d89639f1a62c2e9ca4d835e6bdbb569eb6",
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ktotv.com",
+                "www.ktotv.com",
+                "www.letribunaldunet.fr"
+            ]
+        },
+        {
+            "rule": "easydmp\\.net\\/collect_v3\\.php",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -27,13 +103,37 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "ddc33a93b137fc2da1bb1a008333594e9188a14045447257f4480b7af2c2e72d"
+                "63a887770129e7d29934babe5e9002176f97061ae43e9b4082e885cc00b2d589"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "letribunaldunet.fr",
+                "ktotv.com",
+                "www.letribunaldunet.fr"
+            ]
+        },
+        {
+            "rule": "easydmp\\.net\\/get_delivery_data\\.php",
+            "cookies": 0.000301,
+            "fingerprinting": 0,
+            "subdomains": [
+                "asset"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [
+                "64f65e81a2b8796ca02b7e899a76ac55b5b46e09f317949d4db075b7f26a808b",
+                "8640f0a09a096d09d5d3841e0db1dff57653f491e8492c26455f26f1d0397fe2"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ktotv.com",
+                "www.ktotv.com",
                 "www.letribunaldunet.fr"
             ]
         },
@@ -55,22 +155,28 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "letribunaldunet.fr",
+                "ktotv.com",
                 "www.letribunaldunet.fr"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0001,
+    "cookies": 0.000201,
     "topInitiators": [
         {
+            "domain": "email-match.com",
+            "prevalence": 0.5
+        },
+        {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.5
         }
     ],
     "types": {
-        "XHR": 2,
+        "Script": 2,
+        "Document": 2,
+        "XHR": 8,
         "Image": 2
     },
     "nameservers": [

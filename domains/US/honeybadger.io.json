@@ -7,10 +7,11 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.000191,
-    "sites": 28,
+    "prevalence": 0.000184,
+    "sites": 27,
     "subdomains": [
-        "js"
+        "js",
+        "api"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -23,8 +24,8 @@
                 "js"
             ],
             "apis": {},
-            "sites": 14,
-            "prevalence": 0.0000953,
+            "sites": 16,
+            "prevalence": 0.000109,
             "cnames": [],
             "responseHashes": [
                 "05d911a7ca12d38033369023fd75f8cd35a8c6ae8b3f2821beea8636f0d84643"
@@ -34,6 +35,7 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "suntimes.com",
+                "obits.al.com",
                 "obits.cleveland.com",
                 "obits.dallasnews.com",
                 "obits.gazette.com",
@@ -45,6 +47,7 @@
                 "obits.oregonlive.com",
                 "obits.pennlive.com",
                 "obits.postandcourier.com",
+                "obits.silive.com",
                 "obits.syracuse.com",
                 "obits.theadvocate.com"
             ]
@@ -77,13 +80,15 @@
         {
             "rule": "honeybadger\\.io\\/v3\\.0\\/honeybadger\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "js"
             ],
-            "apis": {},
-            "sites": 4,
-            "prevalence": 0.0000272,
+            "apis": {
+                "Navigator.prototype.userAgent": 1
+            },
+            "sites": 3,
+            "prevalence": 0.0000204,
             "cnames": [],
             "responseHashes": [
                 "18a0c72749f7fc62974ac442882fbf68d83172352b791d3d7a5cebb03a506d3d"
@@ -94,30 +99,7 @@
             "exampleSites": [
                 "hgliving.com",
                 "www.hgliving.com",
-                "www.merrillgardens.com",
                 "www.morgan-properties.com"
-            ]
-        },
-        {
-            "rule": "honeybadger\\.io\\/v1\\.0\\/honeybadger\\.min\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "js"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [],
-            "responseHashes": [
-                "7bab72dca21558a0f2938bf47c54b1b2ca2b43276316863de9787a1fab5efaf4"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "jiffyshirts.com",
-                "www.jiffyshirts.com"
             ]
         },
         {
@@ -141,6 +123,28 @@
                 "moddedeuros.com",
                 "www.moddedeuros.com"
             ]
+        },
+        {
+            "rule": "honeybadger\\.io\\/v1\\/notices\\/js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "666b4bc417600ad6aadff3dddd78b5266009f7973dde146ab28225cb9221581a"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "morgan-properties.com",
+                "www.morgan-properties.com"
+            ]
         }
     ],
     "categories": [],
@@ -149,28 +153,25 @@
     "topInitiators": [
         {
             "domain": "pledge.to",
-            "prevalence": 0.5
+            "prevalence": 0.5714285714285714
         },
         {
             "domain": "first party",
-            "prevalence": 0.35714285714285715
+            "prevalence": 0.39285714285714285
         },
         {
             "domain": "cookielaw.org",
-            "prevalence": 0.07142857142857142
-        },
-        {
-            "domain": "jiffy.com",
-            "prevalence": 0.07142857142857142
+            "prevalence": 0.03571428571428571
         }
     ],
     "types": {
-        "Script": 25
+        "Script": 24,
+        "XHR": 2
     },
     "nameservers": [
         "ns-1478.awsdns-56.org",
         "ns-869.awsdns-44.net",
-        "ns-1637.awsdns-12.co.uk",
-        "ns-157.awsdns-19.com"
+        "ns-157.awsdns-19.com",
+        "ns-1637.awsdns-12.co.uk"
     ]
 }

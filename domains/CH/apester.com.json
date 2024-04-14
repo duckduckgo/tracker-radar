@@ -7,12 +7,13 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.000201,
-    "sites": 2,
+    "prevalence": 0.000301,
+    "sites": 3,
     "subdomains": [
         "static",
         "sdk",
-        "events"
+        "events",
+        "interaction"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -52,18 +53,19 @@
                 "sdk"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [
-                "c881ef0267669cd417d316d278a43f3a43e719ff87407a98fc8ac34879016eaa"
+                "f7b54d3e94c5308a382ab1d6c2dac513778e0a22569cc579e3ed9b708bec3cdf"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "itsfoss.com",
-                "linuxhandbook.com"
+                "linuxhandbook.com",
+                "www.weltfussball.de"
             ]
         },
         {
@@ -74,8 +76,29 @@
                 "events"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "itsfoss.com",
+                "linuxhandbook.com",
+                "www.weltfussball.de"
+            ]
+        },
+        {
+            "rule": "apester\\.com\\/event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "events"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -85,7 +108,36 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "itsfoss.com",
-                "linuxhandbook.com"
+                "linuxhandbook.com",
+                "www.weltfussball.de"
+            ]
+        },
+        {
+            "rule": "apester\\.com\\/js\\/sdk\\/v2\\.0\\/apester-javascript-sdk\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "NavigatorUAData.prototype.platform": 2,
+                "Navigator.prototype.platform": 2,
+                "Navigator.prototype.language": 2,
+                "Screen.prototype.height": 2,
+                "Screen.prototype.width": 2,
+                "window.innerHeight": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "weltfussball.de",
+                "www.weltfussball.de"
             ]
         },
         {
@@ -100,12 +152,32 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [],
-            "type": "Preflight",
+            "type": "Ping",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "itsfoss.com",
-                "linuxhandbook.com"
+                "weltfussball.de",
+                "www.weltfussball.de"
+            ]
+        },
+        {
+            "rule": "apester\\.com\\/interaction-stats\\/61601facd2e797002524798b",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "interaction"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "weltfussball.de",
+                "www.weltfussball.de"
             ]
         }
     ],
@@ -115,18 +187,28 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.8
+        },
+        {
+            "domain": "weltfussball.com",
+            "prevalence": 0.13333333333333333
+        },
+        {
+            "domain": "hs-data.com",
+            "prevalence": 0.06666666666666667
         }
     ],
     "types": {
-        "Script": 4,
-        "XHR": 2,
-        "Preflight": 2
+        "Script": 7,
+        "Preflight": 3,
+        "XHR": 3,
+        "Ping": 2,
+        "Fetch": 2
     },
     "nameservers": [
-        "ns-cloud-c1.googledomains.com",
-        "ns-cloud-c4.googledomains.com",
+        "ns-cloud-c2.googledomains.com",
         "ns-cloud-c3.googledomains.com",
-        "ns-cloud-c2.googledomains.com"
+        "ns-cloud-c4.googledomains.com",
+        "ns-cloud-c1.googledomains.com"
     ]
 }

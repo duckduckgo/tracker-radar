@@ -4,16 +4,44 @@
     "source": [
         "DuckDuckGo-NL"
     ],
-    "prevalence": 0.000301,
-    "sites": 3,
+    "prevalence": 0.000502,
+    "sites": 5,
     "subdomains": [
+        "auth",
         "config"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
         {
-            "rule": "lrcontent\\.com\\/ciam\\/consent",
+            "rule": "lrcontent\\.com\\/v2\\/LoginRadiusV2\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "auth"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2,
+                "window.sessionStorage": 2,
+                "Document.cookie getter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "fdd5eb5886d055428379d1938f01e5a186f7f8dbf3efc851ad9e04914302eb59"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nationalpost.com",
+                "www.cbc.ca"
+            ]
+        },
+        {
+            "rule": "lrcontent\\.com\\/ciam\\/appInfo",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -28,7 +56,50 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "express.co.uk",
+                "nationalpost.com",
+                "www.cbc.ca"
+            ]
+        },
+        {
+            "rule": "lrcontent\\.com\\/ciam\\/appInfo",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "config"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "a068f028f949709d418351d3601efad128477419950576192ac04612431b0d97"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nationalpost.com",
+                "www.cbc.ca"
+            ]
+        },
+        {
+            "rule": "lrcontent\\.com\\/ciam\\/consent",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "config"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dailystar.co.uk",
+                "www.express.co.uk",
                 "www.mirror.co.uk"
             ]
         },
@@ -40,8 +111,8 @@
                 "config"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [
                 "f9b58fd40e2b3ae1a0ccbcd4369afbcb8e39073016622c550077c63e0799363f"
@@ -50,7 +121,8 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "express.co.uk",
+                "dailystar.co.uk",
+                "www.express.co.uk",
                 "www.mirror.co.uk"
             ]
         }
@@ -61,16 +133,22 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.75
+            "prevalence": 0.625
+        },
+        {
+            "domain": "viafoura.net",
+            "prevalence": 0.25
         },
         {
             "domain": "adlightning.com",
-            "prevalence": 0.25
+            "prevalence": 0.125
         }
     ],
     "types": {
-        "Preflight": 2,
-        "Fetch": 2
+        "Script": 2,
+        "Preflight": 5,
+        "XHR": 2,
+        "Fetch": 3
     },
     "nameservers": [
         "noah.ns.cloudflare.com",

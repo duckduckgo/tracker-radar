@@ -7,11 +7,61 @@
     "prevalence": 0.0000204,
     "sites": 3,
     "subdomains": [
+        "reflect-aurora",
+        "reflect-guilfordco-schools",
         "api"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "cablecast\\.tv\\/CablecastAPI\\/Content\\/video-js\\/video-js\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "reflect-aurora",
+                "reflect-guilfordco-schools"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "eea40e26e0692bafcbd7eb889e5947b049c1a7111b2de484bfd50afbcbda1e03"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "auroragov.org",
+                "www.gcsnc.com"
+            ]
+        },
+        {
+            "rule": "cablecast\\.tv\\/CablecastAPI\\/bundles\\/jquery",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "reflect-aurora",
+                "reflect-guilfordco-schools"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "204a4fdbcbd4aaac99e205095350c66823f30bd12277c07552a4f1ab8d191853"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "auroragov.org",
+                "www.gcsnc.com"
+            ]
+        },
         {
             "rule": "cablecast\\.tv\\/bundles\\/reflect",
             "cookies": 0,
@@ -20,10 +70,10 @@
                 "api"
             ],
             "apis": {
-                "window.localStorage": 2
+                "window.localStorage": 1
             },
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "sites": 3,
+            "prevalence": 0.0000204,
             "cnames": [],
             "responseHashes": [
                 "c5e9643dcd20708a1bdf88f7dcc6e3ab2cc83ea3029f0293b8ad6678a62c4e03"
@@ -33,6 +83,7 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "auroragov.org",
+                "www.gcsnc.com",
                 "www.northandoverma.gov"
             ]
         },
@@ -44,17 +95,19 @@
                 "api"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "sites": 3,
+            "prevalence": 0.0000204,
             "cnames": [],
             "responseHashes": [
-                "93f0af27ed096e9cf0431beffb8e57491dc8341bc6e6113bbd5918935084a8bd"
+                "012f18024b815f6f089ac986fff3247dcb8dd0882918d4a8073877574f9affd6",
+                "36c2c520f284209753cc13a40eca7993cd16a38095a9957c75094adad00a8d16"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "auroragov.org",
+                "www.gcsnc.com",
                 "www.northandoverma.gov"
             ]
         },
@@ -66,8 +119,8 @@
                 "api"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "sites": 3,
+            "prevalence": 0.0000204,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
@@ -75,7 +128,28 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "auroragov.org",
+                "www.gcsnc.com",
                 "www.northandoverma.gov"
+            ]
+        },
+        {
+            "rule": "cablecast\\.tv\\/cablecastapi\\/v1\\/livestreams\\/1\\/status",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "reflect-guilfordco-schools"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gcsnc.com",
+                "www.gcsnc.com"
             ]
         }
     ],
@@ -85,22 +159,19 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.9375
-        },
-        {
-            "domain": "civiclive.com",
-            "prevalence": 0.0625
+            "prevalence": 1
         }
     ],
     "types": {
-        "Script": 2,
-        "XHR": 2,
-        "Preflight": 2
+        "Stylesheet": 2,
+        "Script": 5,
+        "XHR": 5,
+        "Preflight": 3
     },
     "nameservers": [
-        "ns-1940.awsdns-50.co.uk",
-        "ns-1158.awsdns-16.org",
         "ns-26.awsdns-03.com",
-        "ns-873.awsdns-45.net"
+        "ns-873.awsdns-45.net",
+        "ns-1158.awsdns-16.org",
+        "ns-1940.awsdns-50.co.uk"
     ]
 }

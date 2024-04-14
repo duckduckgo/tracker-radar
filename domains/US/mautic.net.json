@@ -4,11 +4,13 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000477,
-    "sites": 7,
+    "prevalence": 0.0000681,
+    "sites": 10,
     "subdomains": [
         "mecknc.gov",
+        "bsnsports",
         "cm-corporate.eu",
+        "combe",
         "sharefile-prod",
         "costa-rica-tourism"
     ],
@@ -26,6 +28,14 @@
             "resolved": "mecknc.gov.mautic.net"
         },
         {
+            "original": "go.sfcc.edu",
+            "resolved": "mautic.net"
+        },
+        {
+            "original": "landing.bsnsports.com",
+            "resolved": "bsnsports.mautic.net"
+        },
+        {
             "original": "your.etsu.edu",
             "resolved": "mautic.net"
         }
@@ -34,21 +44,37 @@
     "resources": [
         {
             "rule": "mautic\\.net\\/mtc\\.js",
-            "cookies": 0.0000136,
+            "cookies": 0.0000204,
             "fingerprinting": 2,
             "subdomains": [
                 "mecknc.gov",
+                "bsnsports",
                 "cm-corporate.eu",
+                "combe",
                 "sharefile-prod",
                 "costa-rica-tourism"
             ],
-            "apis": {},
-            "sites": 5,
-            "prevalence": 0.000034,
+            "apis": {
+                "Navigator.prototype.language": 1,
+                "Date.prototype.getTimezoneOffset": 1,
+                "Screen.prototype.width": 1,
+                "Screen.prototype.height": 1,
+                "Navigator.prototype.appVersion": 1,
+                "Navigator.prototype.doNotTrack": 1,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 1,
+                "window.localStorage": 1,
+                "Document.cookie setter": 1
+            },
+            "sites": 8,
+            "prevalence": 0.0000545,
             "cnames": [
                 {
                     "original": "go.mecknc.gov",
                     "resolved": "mecknc.gov.mautic.net"
+                },
+                {
+                    "original": "landing.bsnsports.com",
+                    "resolved": "bsnsports.mautic.net"
                 },
                 {
                     "original": "campaigns.cm.be",
@@ -59,46 +85,85 @@
                     "resolved": "mautic.net"
                 },
                 {
+                    "original": "go.sfcc.edu",
+                    "resolved": "mautic.net"
+                },
+                {
                     "original": "campaignstudio.sharefile.com",
                     "resolved": "sharefile-prod.mautic.net"
                 }
             ],
             "responseHashes": [
+                "dae968fdceadd8802cdab432c4f19408a12996af01c4360e748695f456cff5a3",
                 "3c6fe54982338d69f6e3b5859ce5392ddeca0f6b23e272872ac1fc3522f9d7b5",
+                "4170feb3ead543b7e8e09d92dfbf6c44da7073c29e05f16fb6a923dc61c5c522",
+                "8ed9742069e94d844cffd62a023fd2803c542663b48b365258e646368b1eb742",
                 "88120f98dc200fec6157af4f23f410977d1e21b433eb31f7cdf68556061adac4",
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
             ],
             "type": "Script",
-            "firstPartyCookies": {},
+            "firstPartyCookies": {
+                "mtc_id": {
+                    "ttl": null,
+                    "length": 7,
+                    "prevalence": 0.0000068145422331254896,
+                    "uniqueness": 1
+                },
+                "mtc_sid": {
+                    "ttl": null,
+                    "length": 23,
+                    "prevalence": 0.0000068145422331254896,
+                    "uniqueness": 1
+                },
+                "mautic_device_id": {
+                    "ttl": null,
+                    "length": 23,
+                    "prevalence": 0.0000068145422331254896,
+                    "uniqueness": 1
+                }
+            },
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "mecknc.gov",
+                "www.bsnsports.com",
                 "www.cm.be",
                 "www.etsu.edu",
+                "www.justformen.com",
+                "www.sfcc.edu",
                 "www.sharefile.com",
                 "www.visitcostarica.com"
             ]
         },
         {
             "rule": "mautic\\.net\\/mtc\\/event",
-            "cookies": 0.0000136,
+            "cookies": 0.0000204,
             "fingerprinting": 0,
             "subdomains": [
                 "mecknc.gov",
+                "bsnsports",
                 "cm-corporate.eu",
+                "combe",
                 "sharefile-prod"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000204,
+            "sites": 6,
+            "prevalence": 0.0000409,
             "cnames": [
                 {
                     "original": "go.mecknc.gov",
                     "resolved": "mecknc.gov.mautic.net"
                 },
                 {
+                    "original": "landing.bsnsports.com",
+                    "resolved": "bsnsports.mautic.net"
+                },
+                {
                     "original": "campaigns.cm.be",
                     "resolved": "cm-corporate.eu.mautic.net"
+                },
+                {
+                    "original": "go.sfcc.edu",
+                    "resolved": "mautic.net"
                 },
                 {
                     "original": "campaignstudio.sharefile.com",
@@ -106,15 +171,19 @@
                 }
             ],
             "responseHashes": [
-                "fe88c63290c158025fc45f345a6205161188bcd97471c5b9dd05bb744a54fc47",
-                "a170acde05b48371b09eee0d02ef717f33d1f59e1923c8ddf30301ef24ce8d0a"
+                "f44cf48dab3f534205ce7471cfd31998098035f699d1eb960f5cb68aa51b5abf",
+                "eaa4d63c77ab7ebcd39dcc3b3166d70379d2e3e619dfa7da3c2b064eec04e2bc",
+                "43c65ebd1e44e6243832f2a944de5820d7b5e678f1318bd60a85a0214f3dc9bb"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "mecknc.gov",
+                "www.bsnsports.com",
                 "www.cm.be",
+                "www.justformen.com",
+                "www.sfcc.edu",
                 "www.sharefile.com"
             ]
         },
@@ -124,20 +193,30 @@
             "fingerprinting": 0,
             "subdomains": [
                 "mecknc.gov",
+                "bsnsports",
                 "cm-corporate.eu",
+                "combe",
                 "sharefile-prod"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000204,
+            "sites": 6,
+            "prevalence": 0.0000409,
             "cnames": [
                 {
                     "original": "go.mecknc.gov",
                     "resolved": "mecknc.gov.mautic.net"
                 },
                 {
+                    "original": "landing.bsnsports.com",
+                    "resolved": "bsnsports.mautic.net"
+                },
+                {
                     "original": "campaigns.cm.be",
                     "resolved": "cm-corporate.eu.mautic.net"
+                },
+                {
+                    "original": "go.sfcc.edu",
+                    "resolved": "mautic.net"
                 },
                 {
                     "original": "campaignstudio.sharefile.com",
@@ -150,24 +229,31 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "mecknc.gov",
+                "www.bsnsports.com",
                 "www.cm.be",
+                "www.justformen.com",
+                "www.sfcc.edu",
                 "www.sharefile.com"
             ]
         },
         {
             "rule": "mautic\\.net\\/mtracking\\.gif",
-            "cookies": 0.0000136,
+            "cookies": 0.0000204,
             "fingerprinting": 0,
             "subdomains": [
                 "mecknc.gov"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "sites": 3,
+            "prevalence": 0.0000204,
             "cnames": [
                 {
                     "original": "go.mecknc.gov",
                     "resolved": "mecknc.gov.mautic.net"
+                },
+                {
+                    "original": "go.sfcc.edu",
+                    "resolved": "mautic.net"
                 }
             ],
             "responseHashes": [
@@ -176,37 +262,38 @@
             "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "tc_ptidsource": 0.000013617763010070337
+                "tc_ptidsource": 0.000013629084466250979
             },
             "exampleSites": [
                 "mecknc.gov",
-                "deeds.mecknc.gov"
+                "tax.mecknc.gov",
+                "www.sfcc.edu"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0000204,
+    "cookies": 0.0000341,
     "topInitiators": [
         {
-            "domain": "googletagmanager.com",
-            "prevalence": 0.5
+            "domain": "first party",
+            "prevalence": 0.6666666666666666
         },
         {
-            "domain": "first party",
-            "prevalence": 0.5
+            "domain": "googletagmanager.com",
+            "prevalence": 0.3333333333333333
         }
     ],
     "types": {
-        "Script": 5,
-        "XHR": 3,
-        "Preflight": 3,
-        "Image": 2
+        "Script": 8,
+        "XHR": 6,
+        "Preflight": 6,
+        "Image": 3
     },
     "nameservers": [
-        "ns-cloud-e2.googledomains.com",
-        "ns-cloud-e1.googledomains.com",
+        "ns-cloud-e3.googledomains.com",
         "ns-cloud-e4.googledomains.com",
-        "ns-cloud-e3.googledomains.com"
+        "ns-cloud-e2.googledomains.com",
+        "ns-cloud-e1.googledomains.com"
     ]
 }

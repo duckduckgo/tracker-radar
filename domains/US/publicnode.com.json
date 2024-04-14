@@ -4,11 +4,12 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000204,
-    "sites": 3,
+    "prevalence": 0.0000273,
+    "sites": 4,
     "subdomains": [
         "ethereum",
-        "base"
+        "arbitrum-one-rpc",
+        "optimism-rpc"
     ],
     "cnames": [],
     "fingerprinting": 0,
@@ -19,11 +20,12 @@
             "fingerprinting": 0,
             "subdomains": [
                 "ethereum",
-                "base"
+                "arbitrum-one-rpc",
+                "optimism-rpc"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000204,
+            "sites": 5,
+            "prevalence": 0.0000341,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
@@ -32,7 +34,9 @@
             "exampleSites": [
                 "base.org",
                 "bridge.base.org",
-                "portalbridge.com"
+                "chainlist.org",
+                "stargate.finance",
+                "www.orbiter.finance"
             ]
         },
         {
@@ -40,16 +44,15 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "ethereum",
-                "base"
+                "ethereum"
             ],
             "apis": {},
             "sites": 3,
             "prevalence": 0.0000204,
             "cnames": [],
             "responseHashes": [
-                "97814b178deaea8bd989f8f8f016d7ab456ffcdaa81e8d7d01c4d2295e1d5b4c",
-                "e76f334328c2d180a279500dafaa82a7ec1c43c1e37579cc8ad1c7961b920fe5"
+                "57f9c1a86bd14268ec0a5ce3dff4c619b7320a1227a26b1a3180baabf60e4b93",
+                "cdd29c21c1cc51b9f8191b1bc1b0fcebd08e76d1128940ab32d625aae2dc96e4"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -57,7 +60,30 @@
             "exampleSites": [
                 "base.org",
                 "bridge.base.org",
-                "portalbridge.com"
+                "stargate.finance"
+            ]
+        },
+        {
+            "rule": "publicnode\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "arbitrum-one-rpc",
+                "optimism-rpc"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "f053c5f1734869619e23931126ef808ec23d108ca7b2f9421272465fdbd845a5"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "chainlist.org",
+                "www.orbiter.finance"
             ]
         }
     ],
@@ -71,8 +97,9 @@
         }
     ],
     "types": {
-        "Preflight": 3,
-        "Fetch": 3
+        "Preflight": 5,
+        "Fetch": 3,
+        "XHR": 2
     },
     "nameservers": [
         "amir.ns.cloudflare.com",

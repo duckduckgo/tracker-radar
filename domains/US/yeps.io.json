@@ -4,59 +4,75 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000272,
-    "sites": 4,
+    "prevalence": 0.0000204,
+    "sites": 3,
     "subdomains": [
-        "widget-api-ng",
-        "app",
         "widget",
-        "widget-api"
+        "widget-api",
+        "app"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
-            "rule": "yeps\\.io\\/widget\\/context",
+            "rule": "yeps\\.io\\/yeps\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 2,
             "subdomains": [
-                "widget-api-ng"
+                "widget"
             ],
-            "apis": {},
+            "apis": {
+                "window.localStorage": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.languages": 2,
+                "Screen.prototype.width": 1,
+                "Screen.prototype.height": 1,
+                "window.sessionStorage": 1,
+                "Navigator.prototype.webdriver": 1,
+                "window.indexedDB": 1,
+                "Document.cookie getter": 1,
+                "Navigator.prototype.language": 1,
+                "Navigator.prototype.vendor": 1,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 1,
+                "Navigator.prototype.platform": 1,
+                "NavigatorUAData.prototype.getHighEntropyValues": 1,
+                "NavigatorUAData.prototype.brands": 1,
+                "NavigatorUAData.prototype.platform": 1
+            },
             "sites": 2,
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "61a952f59b662d50d6983bea9d831aee5c0f9b502b81740f430c6f14811cf1b4"
+                "1289bc32f04d082b7e33aa1cd5693ffd99c2597ec8a90e852038fc17636b919c"
             ],
-            "type": "Fetch",
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "crunchlabs.com",
-                "www.crunchlabs.com"
+                "fullfocus.co",
+                "www.redlandcotton.com"
             ]
         },
         {
-            "rule": "yeps\\.io\\/widget\\/onShow",
+            "rule": "yeps\\.io\\/widget\\/pageView",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "widget-api-ng"
+                "widget-api"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+                "5ba914b5846ef9ad503aef9987d087671bb07db30a58e4c4ecfac2ff14c85813"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "crunchlabs.com",
-                "www.crunchlabs.com"
+                "fullfocus.co",
+                "www.redlandcotton.com"
             ]
         },
         {
@@ -80,54 +96,6 @@
                 "redlandcotton.com",
                 "www.redlandcotton.com"
             ]
-        },
-        {
-            "rule": "yeps\\.io\\/yeps\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "widget"
-            ],
-            "apis": {
-                "window.localStorage": 2,
-                "Navigator.prototype.userAgent": 2,
-                "Navigator.prototype.languages": 2
-            },
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [],
-            "responseHashes": [
-                "1289bc32f04d082b7e33aa1cd5693ffd99c2597ec8a90e852038fc17636b919c"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "redlandcotton.com",
-                "www.redlandcotton.com"
-            ]
-        },
-        {
-            "rule": "yeps\\.io\\/widget\\/pageView",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "widget-api"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [],
-            "responseHashes": [
-                "5ba914b5846ef9ad503aef9987d087671bb07db30a58e4c4ecfac2ff14c85813"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "redlandcotton.com",
-                "www.redlandcotton.com"
-            ]
         }
     ],
     "categories": [],
@@ -136,12 +104,16 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.8
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.2
         }
     ],
     "types": {
-        "Fetch": 6,
-        "Script": 4
+        "Script": 4,
+        "Fetch": 2
     },
     "nameservers": [
         "karsyn.ns.cloudflare.com",

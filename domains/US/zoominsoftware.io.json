@@ -4,12 +4,18 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000272,
+    "prevalence": 0.0000273,
     "sites": 4,
     "subdomains": [
-        "cdn"
+        "cdn",
+        "purestorage-be-prod"
     ],
-    "cnames": [],
+    "cnames": [
+        {
+            "original": "support-be.purestorage.com",
+            "resolved": "purestorage-be-prod.zoominsoftware.io"
+        }
+    ],
     "fingerprinting": 3,
     "resources": [
         {
@@ -20,8 +26,8 @@
                 "cdn"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "sites": 3,
+            "prevalence": 0.0000204,
             "cnames": [],
             "responseHashes": [
                 "97706483d02199062a00f07fd1d4dd21f8d1af9122cd13f164b411cec7f479e7"
@@ -31,6 +37,7 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "servicenow.com",
+                "support.purestorage.com",
                 "support.servicenow.com"
             ]
         },
@@ -98,16 +105,16 @@
                 "Navigator.prototype.vendor": 2,
                 "OfflineAudioContext.prototype.constructor": 2,
                 "Element.prototype.getClientRects": 2,
+                "AudioBuffer.prototype.getChannelData": 2,
                 "Screen.prototype.availTop": 2,
                 "Screen.prototype.width": 2,
                 "Screen.prototype.availWidth": 2,
                 "Screen.prototype.availLeft": 2,
                 "Screen.prototype.height": 2,
                 "Screen.prototype.availHeight": 2,
-                "AudioBuffer.prototype.getChannelData": 2,
+                "Event.prototype.timeStamp": 2,
                 "Screen.prototype.colorDepth": 2,
                 "Navigator.prototype.deviceMemory": 2,
-                "Event.prototype.timeStamp": 2,
                 "Navigator.prototype.hardwareConcurrency": 2,
                 "Intl.DateTimeFormat.prototype.resolvedOptions": 2,
                 "window.indexedDB": 2,
@@ -127,9 +134,9 @@
             "type": "Script",
             "firstPartyCookies": {
                 "cookietest": {
-                    "ttl": -1712054110,
+                    "ttl": -1713004214,
                     "length": 1,
-                    "prevalence": 0.000013617763010070337,
+                    "prevalence": 0.000013629084466250979,
                     "uniqueness": 0.5
                 }
             },
@@ -274,22 +281,54 @@
                 "servicenow.com",
                 "support.servicenow.com"
             ]
+        },
+        {
+            "rule": "zoominsoftware\\.io\\/api\\/user\\/permissions",
+            "cookies": 0.0000136,
+            "fingerprinting": 0,
+            "subdomains": [
+                "purestorage-be-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "support-be.purestorage.com",
+                    "resolved": "purestorage-be-prod.zoominsoftware.io"
+                }
+            ],
+            "responseHashes": [
+                "cdb1f1175e03014df037977d8ca2145d11bfa037d52906630535d5452f948fd4"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "purestorage.com",
+                "support.purestorage.com"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0000272,
+    "cookies": 0.0000273,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.7777777777777778
+        },
+        {
+            "domain": "zoominsoftware.io",
+            "prevalence": 0.2222222222222222
         }
     ],
     "types": {
-        "Script": 12,
+        "Script": 13,
         "Stylesheet": 2,
         "Image": 2,
-        "Font": 4
+        "Font": 4,
+        "XHR": 2
     },
     "nameservers": [
         "ns-1237.awsdns-26.org",

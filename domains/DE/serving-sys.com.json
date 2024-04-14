@@ -9,12 +9,12 @@
     "source": [
         "DuckDuckGo-DE"
     ],
-    "prevalence": 0.001,
-    "sites": 10,
+    "prevalence": 0.00121,
+    "sites": 12,
     "subdomains": [
         "bs",
-        "secure-ds",
-        "lm"
+        "lm",
+        "secure-ds"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -42,32 +42,7 @@
             ]
         },
         {
-            "rule": "serving-sys\\.com\\/SemiCachedScripts\\/ebOneTag\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "secure-ds"
-            ],
-            "apis": {
-                "Date.prototype.getTime": 2,
-                "Navigator.prototype.userAgent": 2
-            },
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "4c2e03d0e2d3f21d25a50ac39491f5124a03d778da219ccb65801c522201a370"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "anker.com",
-                "www.supermicro.com"
-            ]
-        },
-        {
-            "rule": "serving-sys\\.com\\/Serving",
+            "rule": "serving-sys\\.com\\/Serving\\/adServer\\.bs",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -77,15 +52,13 @@
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [
-                "5b00993d1c6433701947e6ab1d57debca4e94c42e6fbd7aa18ef6cfd34e42f7e"
-            ],
-            "type": "Script",
+            "responseHashes": [],
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "anker.com",
-                "www.supermicro.com"
+                "time.com",
+                "www.hodinkee.com"
             ]
         },
         {
@@ -131,6 +104,53 @@
             ]
         },
         {
+            "rule": "serving-sys\\.com\\/SemiCachedScripts\\/ebOneTag\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "secure-ds"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "4c2e03d0e2d3f21d25a50ac39491f5124a03d778da219ccb65801c522201a370"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "anker.com",
+                "www.supermicro.com"
+            ]
+        },
+        {
+            "rule": "serving-sys\\.com\\/Serving",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "bs"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "8170e3be583831410949a992d8df31df400d8f484dfe0ee667086b0ebe5dd0bd"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "anker.com",
+                "www.supermicro.com"
+            ]
+        },
+        {
             "rule": "serving-sys\\.com\\/Serving\\/ActivityServer\\.bs",
             "cookies": 0,
             "fingerprinting": 0,
@@ -163,31 +183,36 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.3333333333333333
+            "prevalence": 0.2857142857142857
         },
         {
             "domain": "amazon-adsystem.com",
-            "prevalence": 0.3333333333333333
+            "prevalence": 0.2857142857142857
+        },
+        {
+            "domain": "doubleclick.net",
+            "prevalence": 0.14285714285714285
         },
         {
             "domain": "tiqcdn.com",
-            "prevalence": 0.1111111111111111
+            "prevalence": 0.09523809523809523
         },
         {
             "domain": "go-mpulse.net",
-            "prevalence": 0.1111111111111111
+            "prevalence": 0.09523809523809523
         },
         {
             "domain": "demdex.net",
-            "prevalence": 0.05555555555555555
+            "prevalence": 0.047619047619047616
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.05555555555555555
+            "prevalence": 0.047619047619047616
         }
     ],
     "types": {
         "Script": 6,
+        "Fetch": 2,
         "Image": 9
     },
     "nameservers": [

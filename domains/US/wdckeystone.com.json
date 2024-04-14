@@ -4,10 +4,11 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000136,
-    "sites": 2,
+    "prevalence": 0.0000204,
+    "sites": 3,
     "subdomains": [
-        "prod"
+        "prod",
+        "prod-gateway"
     ],
     "cnames": [],
     "fingerprinting": 0,
@@ -20,16 +21,61 @@
                 "prod"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "sites": 3,
+            "prevalence": 0.0000204,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "42dcc9293ea845cc873f6ccfc0bdc02ddc916e1e330ebeebe0ddbfdaef3c8a7a"
+            ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "mycloud.com",
+                "home.mycloud.com",
                 "www.mycloud.com"
+            ]
+        },
+        {
+            "rule": "wdckeystone\\.com\\/device\\/v1\\/geo",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mycloud.com",
+                "home.mycloud.com"
+            ]
+        },
+        {
+            "rule": "wdckeystone\\.com\\/shares\\/v1\\/shares\\/4ee9237f-15df-4fb3-a4d0-d79d1fec12eb",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prod-gateway"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "c61c814c46b4c68585877626649b128b786900aa184027de146d5293125d0ef6"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mycloud.com",
+                "home.mycloud.com"
             ]
         }
     ],
@@ -43,7 +89,8 @@
         }
     ],
     "types": {
-        "Fetch": 2
+        "Fetch": 5,
+        "Preflight": 2
     },
     "nameservers": [
         "ns-579.awsdns-08.net",

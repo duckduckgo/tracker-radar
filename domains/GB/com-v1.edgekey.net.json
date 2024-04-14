@@ -13,9 +13,14 @@
     "sites": 9,
     "subdomains": [
         "api.wdprapps.disney",
-        "geo.cnbc"
+        "geo.cnbc",
+        "api.foxnews"
     ],
     "cnames": [
+        {
+            "original": "api.foxnews.com",
+            "resolved": "api.foxnews.com-v1.edgekey.net"
+        },
         {
             "original": "api.wdprapps.disney.com",
             "resolved": "api.wdprapps.disney.com-v1.edgekey.net"
@@ -25,7 +30,7 @@
             "resolved": "geo.cnbc.com-v1.edgekey.net"
         }
     ],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "com-v1\\.edgekey\\.net\\/pep\\/content\\/message-center",
@@ -81,14 +86,14 @@
         },
         {
             "rule": "com-v1\\.edgekey\\.net\\/info\\/",
-            "cookies": 0.000502,
+            "cookies": 0.000201,
             "fingerprinting": 0,
             "subdomains": [
                 "geo.cnbc"
             ],
             "apis": {},
-            "sites": 5,
-            "prevalence": 0.000502,
+            "sites": 2,
+            "prevalence": 0.000201,
             "cnames": [
                 {
                     "original": "geo.cnbc.com",
@@ -103,37 +108,74 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "cnbc.com",
-                "www.cnbc.com",
-                "www.msnbc.com",
-                "www.nbcnews.com",
-                "www.today.com"
+                "www.cnbc.com"
+            ]
+        },
+        {
+            "rule": "com-v1\\.edgekey\\.net\\/v3\\/video-player\\/6189191231001",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api.foxnews"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "api.foxnews.com",
+                    "resolved": "api.foxnews.com-v1.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "4222187820f1638662a0e55e969dee02615a19c1dff151579736aa656a387332"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "foxnews.com",
+                "www.foxnews.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000602,
+    "cookies": 0.000401,
     "topInitiators": [
         {
-            "domain": "disneyworld.co.uk",
-            "prevalence": 0.4
+            "domain": "first party",
+            "prevalence": 0.8181818181818182
         },
         {
-            "domain": "adobedtm.com",
-            "prevalence": 0.3
+            "domain": "disneyworld.co.uk",
+            "prevalence": 0.07272727272727272
         },
         {
             "domain": "cnbcfm.com",
-            "prevalence": 0.2
+            "prevalence": 0.03636363636363636
         },
         {
             "domain": "medscapestatic.com",
-            "prevalence": 0.1
+            "prevalence": 0.01818181818181818
+        },
+        {
+            "domain": "toiimg.com",
+            "prevalence": 0.01818181818181818
+        },
+        {
+            "domain": "knotch-cdn.com",
+            "prevalence": 0.01818181818181818
+        },
+        {
+            "domain": "akamaihd.net",
+            "prevalence": 0.01818181818181818
         }
     ],
     "types": {
         "Preflight": 2,
-        "Fetch": 7
+        "Fetch": 4,
+        "Script": 2
     },
     "nameservers": []
 }
