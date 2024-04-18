@@ -9,22 +9,61 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000272,
-    "sites": 4,
+    "prevalence": 0.0000341,
+    "sites": 5,
     "subdomains": [
-        "api"
+        "api",
+        "api0",
+        "api1"
     ],
     "cnames": [
         {
             "original": "api.weather.com",
             "resolved": "api.weather.com.edgesuite.net"
+        },
+        {
+            "original": "api0.weather.com",
+            "resolved": "api0.weather.com.edgesuite.net"
+        },
+        {
+            "original": "api1.weather.com",
+            "resolved": "api1.weather.com.edgesuite.net"
         }
     ],
     "fingerprinting": 0,
     "resources": [
         {
             "rule": "weather\\.com\\.edgesuite\\.net\\/v3\\/location\\/point",
-            "cookies": 0.00000681,
+            "cookies": 0.0000136,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [
+                {
+                    "original": "api.weather.com",
+                    "resolved": "api.weather.com.edgesuite.net"
+                }
+            ],
+            "responseHashes": [
+                "a6da39f3d27f5dd8f1be43339000443f2c46d7294c0013fc6dc355cdf20901e9",
+                "96ad7131a13a171d3d39452d2e8acb16055b773bb2a043634166cc54374bc873"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "intellicast.com",
+                "www.intellicast.com",
+                "www.wunderground.com"
+            ]
+        },
+        {
+            "rule": "weather\\.com\\.edgesuite\\.net\\/v3\\/aggcommon\\/v3alertsHeadlines",
+            "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
                 "api"
@@ -39,7 +78,7 @@
                 }
             ],
             "responseHashes": [
-                "ec8607d07eff5bd71ade9c7bb9bbffa282e05d4d54712529be87ae4b24405fe0"
+                "c54d8ae7bb9961eeb0d1a5f7d793b043f865cf6bd5dea6dc98d9323a4b15d18d"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -47,6 +86,38 @@
             "exampleSites": [
                 "intellicast.com",
                 "www.wunderground.com"
+            ]
+        },
+        {
+            "rule": "weather\\.com\\.edgesuite\\.net\\/v2\\/vector-api\\/products\\/614\\/features",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api0",
+                "api1"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "api0.weather.com",
+                    "resolved": "api0.weather.com.edgesuite.net"
+                },
+                {
+                    "original": "api1.weather.com",
+                    "resolved": "api1.weather.com.edgesuite.net"
+                }
+            ],
+            "responseHashes": [
+                "78747802dc2f7142422340dec9f71afd23dbaf39ac0f5551cd11c06363bb8fcb"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "intellicast.com",
+                "www.intellicast.com"
             ]
         },
         {
@@ -93,7 +164,34 @@
                 }
             ],
             "responseHashes": [
-                "f5bb85dba36ceaca4700a7346819189101b6c28e13f37be68ae0d15ef31d6a28"
+                "ef85cf87ea01d2dcb6e5515798acd9e1560395533c8396fdcc6e1a68929a6380"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wunderground.com",
+                "www.wunderground.com"
+            ]
+        },
+        {
+            "rule": "weather\\.com\\.edgesuite\\.net\\/v2\\/pws\\/observations\\/current",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "api.weather.com",
+                    "resolved": "api.weather.com.edgesuite.net"
+                }
+            ],
+            "responseHashes": [
+                "ef85cf87ea01d2dcb6e5515798acd9e1560395533c8396fdcc6e1a68929a6380"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -105,7 +203,7 @@
         },
         {
             "rule": "weather\\.com\\.edgesuite\\.net\\/v3\\/alerts\\/headlines",
-            "cookies": 0.0000136,
+            "cookies": 0.00000681,
             "fingerprinting": 0,
             "subdomains": [
                 "api"
@@ -135,15 +233,20 @@
         "CDN"
     ],
     "performance": {},
-    "cookies": 0.0000204,
+    "cookies": 0.0000273,
     "topInitiators": [
         {
             "domain": "instana.io",
-            "prevalence": 1
+            "prevalence": 0.8
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.2
         }
     ],
     "types": {
-        "XHR": 8
+        "XHR": 13,
+        "Fetch": 2
     },
     "nameservers": []
 }

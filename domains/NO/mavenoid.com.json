@@ -4,31 +4,43 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.0001,
-    "sites": 1,
+    "prevalence": 0.000201,
+    "sites": 2,
     "subdomains": [
+        "app",
         "api"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
-            "rule": "mavenoid\\.com\\/api\\/graphql",
+            "rule": "mavenoid\\.com\\/embedded\\/embedded\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 2,
             "subdomains": [
-                "api"
+                "app"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "PerformanceTiming.prototype.navigationStart": 2,
+                "window.localStorage": 2,
+                "Navigator.prototype.language": 1,
+                "window.innerHeight": 1,
+                "window.innerWidth": 1,
+                "window.devicePixelRatio": 1,
+                "Navigator.prototype.languages": 2
+            },
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "e7093a19c65d5680f881b779456aead9c155693bdcbcb86b2250f85d2f375f6b"
+            ],
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "easee.com",
+                "zaptec.com",
                 "support.easee.com"
             ]
         },
@@ -40,17 +52,40 @@
                 "api"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "zaptec.com",
+                "help.zaptec.com",
+                "support.easee.com"
+            ]
+        },
+        {
+            "rule": "mavenoid\\.com\\/api\\/graphql",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [
-                "69469373ce42333ddfdccb34731aa3592a0f547ebb5b3681ad0c57c77b867fb0"
+                "9a7d9b9155b3ee0c7275c141f2953e0ef51739e6a088a6e5d510b1e22b26b949",
+                "5bbaec0a200aa8c9f649631861228fee67590d7c62c7bbdf682e5636db0dbe9c"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "easee.com",
+                "zaptec.com",
+                "help.zaptec.com",
                 "support.easee.com"
             ]
         }
@@ -65,8 +100,9 @@
         }
     ],
     "types": {
-        "Preflight": 2,
-        "Fetch": 2
+        "Script": 2,
+        "Preflight": 3,
+        "Fetch": 3
     },
     "nameservers": [
         "crystal.ns.cloudflare.com",

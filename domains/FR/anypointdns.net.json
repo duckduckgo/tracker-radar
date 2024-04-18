@@ -7,14 +7,9 @@
     "prevalence": 0.000201,
     "sites": 2,
     "subdomains": [
-        "arm-prod-public.lb",
         "splunk-elb.lb"
     ],
     "cnames": [
-        {
-            "original": "api.arm.com",
-            "resolved": "arm-prod-public.lb.anypointdns.net"
-        },
         {
             "original": "apps-api.splunk.com",
             "resolved": "splunk-elb.lb.anypointdns.net"
@@ -22,33 +17,6 @@
     ],
     "fingerprinting": 0,
     "resources": [
-        {
-            "rule": "anypointdns\\.net\\/e-coveo-search\\/v1\\/anonToken",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "arm-prod-public.lb"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [
-                {
-                    "original": "api.arm.com",
-                    "resolved": "arm-prod-public.lb.anypointdns.net"
-                }
-            ],
-            "responseHashes": [
-                "4bda99d620113b9efcd882f6a9941d19691a508be68ab4b157758100d39d446e"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "arm.com",
-                "developer.arm.com"
-            ]
-        },
         {
             "rule": "anypointdns\\.net\\/wplt\\/analytics\\/v2\\/tag",
             "cookies": 0,
@@ -71,11 +39,40 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "splunk.com",
-                "docs.splunk.com"
+                "www.splunk.com"
             ]
         },
         {
             "rule": "anypointdns\\.net\\/wplt\\/analytics\\/v2\\/tag",
+            "cookies": 0.000302,
+            "fingerprinting": 0,
+            "subdomains": [
+                "splunk-elb.lb"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [
+                {
+                    "original": "apps-api.splunk.com",
+                    "resolved": "splunk-elb.lb.anypointdns.net"
+                }
+            ],
+            "responseHashes": [
+                "67184ab99a631560982557826ba8d8667339c027ff703c48744cbc89063deea2",
+                "5f2628b70889d7df50e9f3202cffde7a8498d7bee0b93e28c76b443fe52c523e"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "splunk.com",
+                "docs.splunk.com",
+                "www.splunk.com"
+            ]
+        },
+        {
+            "rule": "anypointdns\\.net\\/wplt\\/analytics\\/v2\\/track",
             "cookies": 0.000201,
             "fingerprinting": 0,
             "subdomains": [
@@ -91,38 +88,38 @@
                 }
             ],
             "responseHashes": [
-                "ca04d106da013a4b87c87713cb5d989ab5ded395245a357a006916a83a60d1b0"
+                "79c750b0d0ea37f5d0483836f717174cbfb13da3209b3b920c1b5ae35527c082"
             ],
-            "type": "Fetch",
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "splunk.com",
-                "docs.splunk.com"
+                "www.splunk.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0001,
+    "cookies": 0.000201,
     "topInitiators": [
         {
-            "domain": "go-mpulse.net",
-            "prevalence": 0.7857142857142857
+            "domain": "signalfx.com",
+            "prevalence": 0.6666666666666666
         },
         {
             "domain": "d221cp5lqk6y64.cloudfront.net",
-            "prevalence": 0.14285714285714285
+            "prevalence": 0.2222222222222222
         },
         {
             "domain": "d7koym0rxduxm.cloudfront.net",
-            "prevalence": 0.07142857142857142
+            "prevalence": 0.1111111111111111
         }
     ],
     "types": {
-        "XHR": 2,
         "Preflight": 2,
-        "Fetch": 2
+        "Fetch": 3,
+        "XHR": 2
     },
     "nameservers": [
         "ns-180.awsdns-22.com",

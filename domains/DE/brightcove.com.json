@@ -9,12 +9,13 @@
     "source": [
         "DuckDuckGo-DE"
     ],
-    "prevalence": 0.000703,
-    "sites": 7,
+    "prevalence": 0.001,
+    "sites": 10,
     "subdomains": [
         "metrics",
         "assets.map",
-        "map"
+        "map",
+        "edge.api"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -27,8 +28,8 @@
                 "metrics"
             ],
             "apis": {},
-            "sites": 6,
-            "prevalence": 0.000602,
+            "sites": 8,
+            "prevalence": 0.000804,
             "cnames": [],
             "responseHashes": [
                 "1ed70d02696722505ec82915a7dd9fbf2c512366d009b74bdbe37c9869c250a4"
@@ -39,9 +40,11 @@
             "exampleSites": [
                 "samsung.com",
                 "eu.community.samsung.com",
+                "support.sas.com",
+                "www.aljazeera.net",
+                "www.cartier.com",
                 "www.dws.de",
                 "www.nxp.com",
-                "www.premierleague.com",
                 "www.webex.com"
             ]
         },
@@ -53,10 +56,10 @@
                 "assets.map"
             ],
             "apis": {
-                "Date.prototype.getTime": 2
+                "Date.prototype.getTime": 3
             },
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [
                 "be941e0dd84fbead04815b276a1a777e0ed994b7fd59f07f3f6054bd086e3d28"
@@ -65,30 +68,75 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "nxp.com",
+                "sas.com",
+                "www.nxp.com",
                 "www.webex.com"
             ]
         },
         {
             "rule": "brightcove\\.com\\/config",
-            "cookies": 0.000201,
+            "cookies": 0.000301,
             "fingerprinting": 0,
             "subdomains": [
                 "map"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [
+                "441560913c1a05ee733dd7b4d527984c7551924ce3d8f6cf84e73033d7f920b1",
+                "4e8329357bbc4a396ad4688d67d623cd9caf43a69546597f5e22abe9e9e586c8"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sas.com",
+                "www.nxp.com",
+                "www.webex.com"
+            ]
+        },
+        {
+            "rule": "brightcove\\.com\\/playback\\/v1\\/accounts\\/2744552178001\\/videos\\/6350955982112",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "edge.api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "siemens-healthineers.com",
+                "www.siemens-healthineers.com"
+            ]
+        },
+        {
+            "rule": "brightcove\\.com\\/playback\\/v1\\/accounts\\/2744552178001\\/videos\\/6350955982112",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "edge.api"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "276cf2f37e7da4a0da851cf79b1e73fcaf296301daaee3ab7fec90bde516e318"
+                "57591dc7d507ee4e1e78e6b1f8671be650cfd74d805ede021b1049ee5986db0d"
             ],
-            "type": "Script",
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "nxp.com",
-                "www.webex.com"
+                "siemens-healthineers.com",
+                "www.siemens-healthineers.com"
             ]
         }
     ],
@@ -99,20 +147,22 @@
         "Embedded Content"
     ],
     "performance": {},
-    "cookies": 0.000201,
+    "cookies": 0.000301,
     "topInitiators": [
         {
             "domain": "brightcove.net",
-            "prevalence": 0.7346938775510204
+            "prevalence": 0.5396825396825397
         },
         {
             "domain": "first party",
-            "prevalence": 0.2653061224489796
+            "prevalence": 0.4603174603174603
         }
     ],
     "types": {
-        "Image": 6,
-        "Script": 4
+        "Image": 8,
+        "Script": 6,
+        "Preflight": 2,
+        "Fetch": 2
     },
     "nameservers": [
         "ns-668.awsdns-19.net",

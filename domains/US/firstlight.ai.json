@@ -4,17 +4,89 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.00000681,
-    "sites": 1,
+    "prevalence": 0.0000136,
+    "sites": 2,
     "subdomains": [
+        "auth-platform.api.rsm",
+        "auth-platform.api.aha",
+        "geo-loc.api.rsm",
+        "geo-loc.api.aha",
         "catalog-service-cdn.api.aha",
-        "rg-srv-cdn.api.aha"
+        "device-register-service.api.aha",
+        "playback-auth-service.api.aha"
     ],
     "cnames": [],
     "fingerprinting": 0,
     "resources": [
         {
-            "rule": "firstlight\\.ai\\/catalog\\/storefront\\/landingscreen",
+            "rule": "firstlight\\.ai\\/oauth2\\/token",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "auth-platform.api.rsm",
+                "auth-platform.api.aha"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "e7270b27b45c4a30a72c2096c905203b53a4fd7924f2fb2be836f569ab8168aa"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sportsnet.ca",
+                "www.aha.video"
+            ]
+        },
+        {
+            "rule": "firstlight\\.ai\\/device\\/location\\/lookup",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "geo-loc.api.rsm",
+                "geo-loc.api.aha"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "886820555f7cc9e94bf4806559f1acab4570d8431fc0cd3e21f85d9c7d5de365"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sportsnet.ca",
+                "www.aha.video"
+            ]
+        },
+        {
+            "rule": "firstlight\\.ai\\/device\\/location\\/lookup",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "geo-loc.api.rsm",
+                "geo-loc.api.aha"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sportsnet.ca",
+                "www.aha.video"
+            ]
+        },
+        {
+            "rule": "firstlight\\.ai\\/catalog\\/collection\\/BFF30861-3A8D-4847-8440-7580D828BB73\\/containers",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -25,7 +97,7 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "d30cad5bef465a8f9afbcf86edb52c6fdc7e220b8c300415835295791cba25bc"
+                "51cebd9790fd55852c44e4d3b3b23dc7e6f3cb61fdb9ed4fb1e59c446aff4858"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -36,18 +108,40 @@
             ]
         },
         {
-            "rule": "firstlight\\.ai\\/recommend\\/lookup",
+            "rule": "firstlight\\.ai\\/device\\/app\\/register",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "rg-srv-cdn.api.aha"
+                "device-register-service.api.aha"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "ca0f425278ae905015ac09b47bc0c7e68fb5698fbe85225b4fecfdcc82c9abf0"
+                "0e28493257a41d9c65a19ce3958e5fcfaf1fbd89588334e56a97980995deedfd"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "aha.video",
+                "www.aha.video"
+            ]
+        },
+        {
+            "rule": "firstlight\\.ai\\/media\\/content\\/authorize",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "playback-auth-service.api.aha"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "a0a384382a8633e2945af01ebd404029d8ca77d6bd512ef8afc5f2e5a1d97788"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -68,12 +162,13 @@
         }
     ],
     "types": {
-        "Fetch": 4
+        "Fetch": 10,
+        "Preflight": 2
     },
     "nameservers": [
-        "ns-423.awsdns-52.com",
-        "ns-528.awsdns-02.net",
         "ns-1466.awsdns-55.org",
-        "ns-1864.awsdns-41.co.uk"
+        "ns-423.awsdns-52.com",
+        "ns-1864.awsdns-41.co.uk",
+        "ns-528.awsdns-02.net"
     ]
 }

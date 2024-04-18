@@ -4,13 +4,16 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.000402,
-    "sites": 4,
+    "prevalence": 0.000502,
+    "sites": 5,
     "subdomains": [
-        "deploy"
+        "deploy",
+        "collect",
+        "cacheorcheck",
+        "fonts"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "mopinion\\.com\\/js\\/pastease\\.js",
@@ -20,13 +23,15 @@
                 "deploy"
             ],
             "apis": {
-                "Document.cookie getter": 4,
-                "window.sessionStorage": 4,
-                "Date.prototype.getTime": 4,
-                "window.localStorage": 4
+                "Document.cookie getter": 5,
+                "window.sessionStorage": 5,
+                "Date.prototype.getTime": 5,
+                "window.localStorage": 5,
+                "Navigator.prototype.userAgent": 1,
+                "Navigator.prototype.maxTouchPoints": 1
             },
-            "sites": 4,
-            "prevalence": 0.000402,
+            "sites": 5,
+            "prevalence": 0.000502,
             "cnames": [],
             "responseHashes": [
                 "771c159da61b15616056a5e6a75c7cfc93211df3b6b31ffb9d3eaff5fd438089"
@@ -38,7 +43,8 @@
                 "tomtom.com",
                 "manor.ch",
                 "www.manor.ch",
-                "www.tomtom.com"
+                "www.tomtom.com",
+                "www.ziggo.nl"
             ]
         },
         {
@@ -53,7 +59,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "d306b0f4cdf3b2da5e3bb70ad03da992e3ad38b253e1a41aadb705c9cc97a932"
+                "db76bb53d9afee95e636536c13feb64f3fae9091e718ae35e7b9d9b70e9c2cb9"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -84,6 +90,80 @@
                 "manor.ch",
                 "www.manor.ch"
             ]
+        },
+        {
+            "rule": "mopinion\\.com\\/assets\\/surveys\\/2\\.0\\/js\\/survey\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "collect"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.maxTouchPoints": 2,
+                "Document.cookie getter": 2,
+                "window.innerWidth": 2,
+                "window.sessionStorage": 2,
+                "Date.prototype.getTime": 2,
+                "window.innerHeight": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "74ac09eb0e23ab1533653e124a9bb1a2e682d33c7ac0e74c67a736129a997193"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tomtom.com",
+                "www.ziggo.nl"
+            ]
+        },
+        {
+            "rule": "mopinion\\.com\\/survey\\/public\\/json-config",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cacheorcheck"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "28904f47cd1536645679c78e4c4c244f934f60e874aed3be7d6525de9df0e031"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tomtom.com",
+                "www.ziggo.nl"
+            ]
+        },
+        {
+            "rule": "mopinion\\.com\\/css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "fonts"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "6771cdbaa77c57d3766d898027d5495007952ae022f35427a50c514109a18744"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tomtom.com",
+                "www.ziggo.nl"
+            ]
         }
     ],
     "categories": [],
@@ -91,25 +171,22 @@
     "cookies": 0,
     "topInitiators": [
         {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.5625
+        },
+        {
             "domain": "first party",
-            "prevalence": 0.36363636363636365
+            "prevalence": 0.25
         },
         {
             "domain": "tiqcdn.com",
-            "prevalence": 0.2727272727272727
-        },
-        {
-            "domain": "googletagmanager.com",
-            "prevalence": 0.2727272727272727
-        },
-        {
-            "domain": "contentsquare.net",
-            "prevalence": 0.09090909090909091
+            "prevalence": 0.1875
         }
     ],
     "types": {
-        "Script": 4,
-        "XHR": 4
+        "Script": 7,
+        "XHR": 6,
+        "Stylesheet": 2
     },
     "nameservers": [
         "ns-869.awsdns-44.net",

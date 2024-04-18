@@ -4,11 +4,12 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.000201,
-    "sites": 2,
+    "prevalence": 0.000301,
+    "sites": 3,
     "subdomains": [
         "cas2",
-        "tracking-live"
+        "tracking-live",
+        "borg-live"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -38,21 +39,84 @@
         {
             "rule": "kr3m\\.com\\/js\\/client\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "tracking-live"
+            ],
+            "apis": {
+                "window.sessionStorage": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [
+                "01913c36ff19dcea0ff5ec56b17e537d9a610389db7b01bae8753eec9e1058b5",
+                "e830e4c7699909b1128c59a678d91c302346d75d33367723a1dbc94255b9a79f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "blick.ch",
+                "spiele.spiegel.de",
+                "spiele.nzz.ch"
+            ]
+        },
+        {
+            "rule": "kr3m\\.com\\/matomo\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "borg-live"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "window.name": 2,
+                "Date.prototype.getTime": 2,
+                "NavigatorUAData.prototype.brands": 2,
+                "NavigatorUAData.prototype.platform": 2,
+                "NavigatorUAData.prototype.getHighEntropyValues": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.mimeTypes": 2,
+                "Navigator.prototype.javaEnabled": 2,
+                "Navigator.prototype.cookieEnabled": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "d7fc375178c93a2fc15fd888e30170eedf4ef3d04497e7f951ab7bfe0c921693"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "blick.ch",
+                "spiele.spiegel.de"
+            ]
+        },
+        {
+            "rule": "kr3m\\.com\\/matomo\\.php",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "borg-live"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Script",
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "nzz.ch",
-                "spiele.spiegel.de"
+                "spiegel.de",
+                "spiele.blick.ch"
             ]
         }
     ],
@@ -61,21 +125,22 @@
     "cookies": 0,
     "topInitiators": [
         {
-            "domain": "first party",
-            "prevalence": 0.5714285714285714
+            "domain": "googletagmanager.com",
+            "prevalence": 0.6
         },
         {
-            "domain": "googletagmanager.com",
-            "prevalence": 0.42857142857142855
+            "domain": "first party",
+            "prevalence": 0.4
         }
     ],
     "types": {
         "XHR": 2,
-        "Script": 2
+        "Script": 5,
+        "Ping": 2
     },
     "nameservers": [
-        "ns3.bw-networx.net",
         "ns2.bw-networx.net",
+        "ns3.bw-networx.net",
         "ns1.bw-networx.net"
     ]
 }

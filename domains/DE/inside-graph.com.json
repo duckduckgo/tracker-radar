@@ -11,10 +11,11 @@
     "sites": 2,
     "subdomains": [
         "eu2-track",
-        "eu2-live"
+        "eu2-live",
+        "eu2-cdn"
     ],
     "cnames": [],
-    "fingerprinting": 2,
+    "fingerprinting": 3,
     "resources": [
         {
             "rule": "inside-graph\\.com\\/gtm\\/IN-1000855\\/include\\.js",
@@ -43,7 +44,7 @@
         {
             "rule": "inside-graph\\.com\\/ig\\.js",
             "cookies": 0.000201,
-            "fingerprinting": 1,
+            "fingerprinting": 3,
             "subdomains": [
                 "eu2-track"
             ],
@@ -54,16 +55,30 @@
                 "Navigator.prototype.platform": 2,
                 "window.localStorage": 2,
                 "Date.prototype.getTime": 2,
-                "Document.cookie setter": 2
+                "Document.cookie setter": 2,
+                "Navigator.prototype.language": 2,
+                "Date.prototype.getTimezoneOffset": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "Navigator.prototype.appVersion": 2,
+                "Navigator.prototype.mediaDevices": 2,
+                "MediaDevices.prototype.enumerateDevices": 2
             },
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "dbbb0d9b5f3402cd341a8ceb37abc16009cd32ece7eb45041f053c0f5dbaf982"
+                "058536f80ce95c2a4d67b1385f3a6039396702ec6d2f81d06644fe7dced50173"
             ],
             "type": "Script",
-            "firstPartyCookies": {},
+            "firstPartyCookies": {
+                "inside-eu2": {
+                    "ttl": 31536009,
+                    "length": 78,
+                    "prevalence": 0.0002008838891120932,
+                    "uniqueness": 1
+                }
+            },
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "lenovo.com",
@@ -72,6 +87,28 @@
         },
         {
             "rule": "inside-graph\\.com\\/config",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "eu2-live"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "1c149e6c11d6a9e077288507b938c52d7b11ac01f4d8518a8f0dd9499f35b29d"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lenovo.com",
+                "www.lenovo.com"
+            ]
+        },
+        {
+            "rule": "inside-graph\\.com\\/page\\/cf",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -81,8 +118,30 @@
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "e5382d985e691776597d07a252073e7a6ef8f0ac619ab05b51161c50edb24d43"
+            ],
             "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lenovo.com",
+                "www.lenovo.com"
+            ]
+        },
+        {
+            "rule": "inside-graph\\.com\\/\\/js\\/frontend-framework\\.js\\.bundle",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "eu2-cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -96,22 +155,22 @@
     "cookies": 0.000201,
     "topInitiators": [
         {
-            "domain": "adobedtm.com",
-            "prevalence": 0.5
+            "domain": "go-mpulse.net",
+            "prevalence": 0.75
         },
         {
-            "domain": "go-mpulse.net",
-            "prevalence": 0.5
+            "domain": "adobedtm.com",
+            "prevalence": 0.25
         }
     ],
     "types": {
-        "Script": 4,
-        "XHR": 2
+        "Script": 6,
+        "XHR": 4
     },
     "nameservers": [
-        "ns-1314.awsdns-36.org",
-        "ns-1621.awsdns-10.co.uk",
+        "ns-753.awsdns-30.net",
         "ns-449.awsdns-56.com",
-        "ns-753.awsdns-30.net"
+        "ns-1621.awsdns-10.co.uk",
+        "ns-1314.awsdns-36.org"
     ]
 }

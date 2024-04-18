@@ -9,7 +9,7 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000101,
+    "prevalence": 0.0001,
     "sites": 1,
     "subdomains": [
         "d.sni.us-eu"
@@ -22,6 +22,58 @@
     ],
     "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "fastly\\.net\\/d",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "d.sni.us-eu"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "new-skip.speedrun.com",
+                    "resolved": "d.sni.us-eu.fastly.net"
+                }
+            ],
+            "responseHashes": [
+                "d73bceadf54bf6187bd76077defc0f9172b4a070d1c4aebd35ba24d37a208763"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "speedrun.com",
+                "www.speedrun.com"
+            ]
+        },
+        {
+            "rule": "fastly\\.net\\/d",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "d.sni.us-eu"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "new-skip.speedrun.com",
+                    "resolved": "d.sni.us-eu.fastly.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "speedrun.com",
+                "www.speedrun.com"
+            ]
+        },
         {
             "rule": "fastly\\.net\\/pa",
             "cookies": 0,
@@ -71,12 +123,14 @@
         }
     ],
     "types": {
+        "Fetch": 2,
+        "Preflight": 2,
         "Ping": 2
     },
     "nameservers": [
+        "ns2.fastly.net",
         "ns1.fastly.net",
         "ns4.fastly.net",
-        "ns2.fastly.net",
         "ns3.fastly.net"
     ]
 }

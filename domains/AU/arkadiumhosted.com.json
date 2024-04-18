@@ -7,11 +7,57 @@
     "prevalence": 0.000201,
     "sites": 2,
     "subdomains": [
-        "arenacloud.cdn"
+        "geoip.cdn",
+        "arenacloud.cdn",
+        "ams.cdn"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "arkadiumhosted\\.com\\/json\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "geoip.cdn"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "washingtonpost.com",
+                "games.washingtonpost.com",
+                "www.arkadium.com"
+            ]
+        },
+        {
+            "rule": "arkadiumhosted\\.com\\/json\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "geoip.cdn"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [
+                "8dfa42b91545f4b7c65982933b596290f07b21b03cf557c65e4cf730367a95a0"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "washingtonpost.com",
+                "games.washingtonpost.com",
+                "www.arkadium.com"
+            ]
+        },
         {
             "rule": "arkadiumhosted\\.com\\/arenaxstorage-blob\\/arenax-index\\/_arena-shared-content_\\/arkcom-game-arts\\/word-wipe\\/Game_Tiles\\/webp\\/280x280\\.webp",
             "cookies": 0,
@@ -33,6 +79,50 @@
                 "washingtonpost.com",
                 "www.arkadium.com"
             ]
+        },
+        {
+            "rule": "arkadiumhosted\\.com\\/advertisement\\/jarvis-bundles\\/bundle-jTir7hrFe1uRsu-BQADwh\\.js",
+            "cookies": 0.0001,
+            "fingerprinting": 2,
+            "subdomains": [
+                "ams.cdn"
+            ],
+            "apis": {
+                "NavigatorUAData.prototype.brands": 2,
+                "NavigatorUAData.prototype.platform": 2,
+                "window.sessionStorage": 2,
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.cookieEnabled": 1,
+                "Document.cookie getter": 1,
+                "Document.cookie setter": 1,
+                "window.localStorage": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "f0eed207e5eba6e31137dc78e08c2306cc932270e41baaf6806c9325ae91c2cc"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_pubcid": {
+                    "ttl": 31536024,
+                    "length": 36,
+                    "prevalence": 0.00010039152695512498,
+                    "uniqueness": 1
+                },
+                "_pubcid_cst": {
+                    "ttl": 31536024,
+                    "length": 16,
+                    "prevalence": 0.00010039152695512498,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "washingtonpost.com",
+                "games.washingtonpost.com"
+            ]
         }
     ],
     "categories": [],
@@ -41,18 +131,25 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.96
+            "prevalence": 0.9230769230769231
         },
         {
             "domain": "googlesyndication.com",
-            "prevalence": 0.04
+            "prevalence": 0.038461538461538464
+        },
+        {
+            "domain": "adlightning.com",
+            "prevalence": 0.038461538461538464
         }
     ],
     "types": {
-        "Image": 2
+        "Preflight": 3,
+        "Fetch": 3,
+        "Image": 2,
+        "Script": 2
     },
     "nameservers": [
-        "dns2.stabletransit.com",
-        "dns1.stabletransit.com"
+        "dns1.stabletransit.com",
+        "dns2.stabletransit.com"
     ]
 }

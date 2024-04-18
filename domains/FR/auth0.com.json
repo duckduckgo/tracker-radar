@@ -7,14 +7,19 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000301,
-    "sites": 3,
+    "prevalence": 0.000503,
+    "sites": 5,
     "subdomains": [
-        "cdn",
+        "fr-grandoptical-production-cd-hzmp1marvf8si5kz.edge.tenants.eu",
         "ppyarn-cd-eotbud81oukahjry.edge.tenants.eu",
-        "ireland-cd-h39uezdgwfs4i0nj.edge.tenants.eu"
+        "ireland-cd-h39uezdgwfs4i0nj.edge.tenants.eu",
+        "cdn"
     ],
     "cnames": [
+        {
+            "original": "auth.grandoptical.com",
+            "resolved": "fr-grandoptical-production-cd-hzmp1marvf8si5kz.edge.tenants.eu.auth0.com"
+        },
         {
             "original": "auth.happywool.com",
             "resolved": "ppyarn-cd-eotbud81oukahjry.edge.tenants.eu.auth0.com"
@@ -26,6 +31,45 @@
     ],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "auth0\\.com\\/authorize",
+            "cookies": 0.000302,
+            "fingerprinting": 0,
+            "subdomains": [
+                "fr-grandoptical-production-cd-hzmp1marvf8si5kz.edge.tenants.eu",
+                "ppyarn-cd-eotbud81oukahjry.edge.tenants.eu",
+                "ireland-cd-h39uezdgwfs4i0nj.edge.tenants.eu"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [
+                {
+                    "original": "auth.grandoptical.com",
+                    "resolved": "fr-grandoptical-production-cd-hzmp1marvf8si5kz.edge.tenants.eu.auth0.com"
+                },
+                {
+                    "original": "auth.happywool.com",
+                    "resolved": "ppyarn-cd-eotbud81oukahjry.edge.tenants.eu.auth0.com"
+                },
+                {
+                    "original": "login.ireland.com",
+                    "resolved": "ireland-cd-h39uezdgwfs4i0nj.edge.tenants.eu.auth0.com"
+                }
+            ],
+            "responseHashes": [
+                "e27d65d5a3acd3e9a81816e8bfb1ba308a16bf2dcc2cda89a5601cda8ed550e6",
+                "170fe9695526efefcbec9c3f573901f56f3b8115a3c863f539d077f69fb9fa50"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "grandoptical.com",
+                "www.happywool.com",
+                "www.ireland.com"
+            ]
+        },
         {
             "rule": "auth0\\.com\\/styleguide\\/components\\/1\\.0\\.8\\/media\\/logos\\/img\\/badge\\.png",
             "cookies": 0,
@@ -41,38 +85,6 @@
                 "8ce9f639d0609bbca3d5362034f3d85efc0d75830259b3b1f56e6387fe9153a9"
             ],
             "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "happywool.com",
-                "www.ireland.com"
-            ]
-        },
-        {
-            "rule": "auth0\\.com\\/authorize",
-            "cookies": 0.000201,
-            "fingerprinting": 0,
-            "subdomains": [
-                "ppyarn-cd-eotbud81oukahjry.edge.tenants.eu",
-                "ireland-cd-h39uezdgwfs4i0nj.edge.tenants.eu"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [
-                {
-                    "original": "auth.happywool.com",
-                    "resolved": "ppyarn-cd-eotbud81oukahjry.edge.tenants.eu.auth0.com"
-                },
-                {
-                    "original": "login.ireland.com",
-                    "resolved": "ireland-cd-h39uezdgwfs4i0nj.edge.tenants.eu.auth0.com"
-                }
-            ],
-            "responseHashes": [
-                "170fe9695526efefcbec9c3f573901f56f3b8115a3c863f539d077f69fb9fa50"
-            ],
-            "type": "Document",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -160,22 +172,26 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000201,
+    "cookies": 0.000302,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.8571428571428571
+        },
+        {
+            "domain": "grandvision.io",
+            "prevalence": 0.14285714285714285
         }
     ],
     "types": {
+        "Document": 3,
         "Image": 2,
-        "Document": 2,
         "Preflight": 2,
         "Script": 2,
         "XHR": 2
     },
     "nameservers": [
-        "kolton.ns.cloudflare.com",
-        "monroe.ns.cloudflare.com"
+        "monroe.ns.cloudflare.com",
+        "kolton.ns.cloudflare.com"
     ]
 }

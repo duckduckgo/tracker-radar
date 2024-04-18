@@ -32,8 +32,8 @@
                 "Screen.prototype.height": 4,
                 "Screen.prototype.colorDepth": 4,
                 "Screen.prototype.orientation": 4,
-                "window.innerWidth": 2,
-                "window.innerHeight": 2,
+                "window.innerWidth": 3,
+                "window.innerHeight": 3,
                 "Date.prototype.getTime": 2
             },
             "sites": 4,
@@ -54,12 +54,14 @@
         },
         {
             "rule": "pinpoll\\.com\\/static\\/start\\.html",
-            "cookies": 0,
-            "fingerprinting": 0,
+            "cookies": 0.0001,
+            "fingerprinting": 1,
             "subdomains": [
                 "static"
             ],
-            "apis": {},
+            "apis": {
+                "Document.cookie setter": 1
+            },
             "sites": 5,
             "prevalence": 0.000502,
             "cnames": [],
@@ -67,7 +69,14 @@
                 "38dfcfd29e5bc35eabebb6db93870261846cb9fa1bcd1631c1a7aef3114de24b"
             ],
             "type": "Document",
-            "firstPartyCookies": {},
+            "firstPartyCookies": {
+                "thirdparty": {
+                    "ttl": null,
+                    "length": 3,
+                    "prevalence": 0.0001004419445560466,
+                    "uniqueness": 1
+                }
+            },
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "orf.at",
@@ -127,12 +136,15 @@
         },
         {
             "rule": "pinpoll\\.com\\/static\\/complete\\.html",
-            "cookies": 0,
-            "fingerprinting": 0,
+            "cookies": 0.0001,
+            "fingerprinting": 1,
             "subdomains": [
                 "static"
             ],
-            "apis": {},
+            "apis": {
+                "Document.cookie getter": 1,
+                "Document.cookie setter": 1
+            },
             "sites": 5,
             "prevalence": 0.000502,
             "cnames": [],
@@ -199,7 +211,7 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.000201,
     "topInitiators": [
         {
             "domain": "first party",

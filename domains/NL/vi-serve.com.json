@@ -7,14 +7,63 @@
     "source": [
         "DuckDuckGo-NL"
     ],
-    "prevalence": 0.0001,
-    "sites": 1,
+    "prevalence": 0.000201,
+    "sites": 2,
     "subdomains": [
-        "t"
+        "s",
+        "t",
+        "vis"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "vi-serve\\.com\\/tagLoader\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "s"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "df9d6227be6cbcc4b4823c8ba65bf60534d00b77fb6d5e2607313751c3a7e133"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rogerebert.com",
+                "www.voetbal.com"
+            ]
+        },
+        {
+            "rule": "vi-serve\\.com\\/source\\.m\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "s"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.doNotTrack": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "18256742e8c1455da1c52bc7b4c31231d964d28906cfb6520aa52577970dfd91"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rogerebert.com",
+                "www.voetbal.com"
+            ]
+        },
         {
             "rule": "vi-serve\\.com\\/",
             "cookies": 0,
@@ -23,8 +72,8 @@
                 "t"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -34,7 +83,30 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "rogerebert.com",
-                "www.rogerebert.com"
+                "www.rogerebert.com",
+                "www.voetbal.com"
+            ]
+        },
+        {
+            "rule": "vi-serve\\.com\\/playlist\\/v2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vis"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "ccf20b9c764cd2513df750ff8a071a2386daf6f014a7b2a408e099cb09e838bd"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rogerebert.com",
+                "www.voetbal.com"
             ]
         }
     ],
@@ -43,24 +115,26 @@
     "cookies": 0,
     "topInitiators": [
         {
+            "domain": "first party",
+            "prevalence": 0.5238095238095238
+        },
+        {
             "domain": "adligature.com",
-            "prevalence": 0.6363636363636364
+            "prevalence": 0.3333333333333333
         },
         {
             "domain": "adlightning.com",
-            "prevalence": 0.18181818181818182
-        },
-        {
-            "domain": "first party",
-            "prevalence": 0.09090909090909091
+            "prevalence": 0.09523809523809523
         },
         {
             "domain": "outbrain.com",
-            "prevalence": 0.09090909090909091
+            "prevalence": 0.047619047619047616
         }
     ],
     "types": {
-        "Image": 2
+        "Script": 4,
+        "Image": 3,
+        "XHR": 2
     },
     "nameservers": [
         "ns-322.awsdns-40.com",

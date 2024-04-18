@@ -8,7 +8,8 @@
     "sites": 5,
     "subdomains": [
         "log",
-        "api"
+        "api",
+        "cdn"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -83,6 +84,61 @@
                 "www.trustedreviews.com",
                 "www.wareable.com"
             ]
+        },
+        {
+            "rule": "tagdeliver\\.com\\/hb\\/pbjs\\.d1acfca30497451f\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "NavigatorUAData.prototype.brands": 1,
+                "NavigatorUAData.prototype.platform": 1,
+                "window.sessionStorage": 1,
+                "Navigator.prototype.appName": 2,
+                "Date.prototype.getTime": 2,
+                "window.localStorage": 1,
+                "Navigator.prototype.cookieEnabled": 1,
+                "Document.cookie getter": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "810f0e41726da53a2aeb6ba1f5f4dae1444a54bd5aeaadbdc9412c660d84cc30"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "acmods.net",
+                "amateurphotographer.com"
+            ]
+        },
+        {
+            "rule": "tagdeliver\\.com\\/cihbm\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "window.localStorage": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "cf424fe1562d21c6f5e0861f4350ed616996a21d2f849f51f0daf5bd49ffdd53"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "acmods.net",
+                "amateurphotographer.com"
+            ]
         }
     ],
     "categories": [],
@@ -91,20 +147,17 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.6666666666666666
-        },
-        {
-            "domain": "doubleclick.net",
-            "prevalence": 0.16666666666666666
+            "prevalence": 0.8
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.16666666666666666
+            "prevalence": 0.2
         }
     ],
     "types": {
         "Fetch": 10,
-        "Preflight": 5
+        "Preflight": 5,
+        "Script": 4
     },
     "nameservers": [
         "ns1.digitalocean.com",

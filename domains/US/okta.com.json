@@ -7,16 +7,17 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.000851,
+    "prevalence": 0.000852,
     "sites": 125,
     "subdomains": [
         "ace-identity.customdomains",
+        "cmg",
         "login",
         "benjaminmoore.customdomains",
-        "foremost",
         "bmc",
+        "foremost",
         "servicenowsignon.customdomains",
-        "secureaicpa",
+        "uspto-gov.customdomains",
         "astminternational.customdomains",
         "crowley",
         "fzag-b2c.customdomains",
@@ -34,13 +35,12 @@
         "resmed-ext-2.customdomains",
         "bcbsm-member-auth.customdomains",
         "ccm.customdomains",
+        "secureaicpa",
         "onekinship",
         "logon.customdomains",
-        "glenstone",
         "connectamerica",
         "mira-b2c.customdomains",
         "nuskin.customdomains",
-        "spglobalciam.customdomains",
         "wm.customdomains",
         "churchofjesuschrist.customdomains",
         "servicenow",
@@ -53,7 +53,6 @@
         "aarons.customdomains",
         "mdc-prd.customdomains",
         "osk-idm",
-        "carefirstcustomer.customdomains",
         "athena",
         "albertsons"
     ],
@@ -85,6 +84,10 @@
         {
             "original": "auth.sas.com",
             "resolved": "sas.customdomains.okta.com"
+        },
+        {
+            "original": "auth.uspto.gov",
+            "resolved": "uspto-gov.customdomains.okta.com"
         },
         {
             "original": "axon.myalcon.com",
@@ -119,10 +122,6 @@
             "resolved": "aarons.customdomains.okta.com"
         },
         {
-            "original": "login.carefirst.com",
-            "resolved": "carefirstcustomer.customdomains.okta.com"
-        },
-        {
             "original": "login.medishare.com",
             "resolved": "ccm.customdomains.okta.com"
         },
@@ -141,10 +140,6 @@
         {
             "original": "restauth.opentable.com",
             "resolved": "ot-rest-prod.customdomains.okta.com"
-        },
-        {
-            "original": "secure.login.spglobal.com",
-            "resolved": "spglobalciam.customdomains.okta.com"
         },
         {
             "original": "sso.veritas.com",
@@ -178,7 +173,7 @@
                 }
             ],
             "responseHashes": [
-                "ad6078366d4775c68b89f7d29eefbecdf0090ef81e9e9589f95608edd6e10037"
+                "93eb615cdb8e68728d502fdd47a1ec27a1834774f94da2664085dca1f0209984"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -230,7 +225,7 @@
                 }
             ],
             "responseHashes": [
-                "dbe9d5cd2c718c4051b27f8880c5017437efee7366e89688e34988418982bb9a"
+                "642f8280ca99c2048e466dfec8485f35cbc718ae52dae0eeb51d6950c9f53f48"
             ],
             "type": "Document",
             "firstPartyCookies": {},
@@ -257,7 +252,7 @@
                 }
             ],
             "responseHashes": [
-                "90d9e3e2ac1e9baead64489c86f2fdfab8c02016a3b215306aaa9e0b972be02f"
+                "308735f3d2f86266ee6b9b66478b97e0a4531024e00d0083fa5326a995dbc451"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -318,6 +313,32 @@
             ]
         },
         {
+            "rule": "okta\\.com\\/idp\\/idx\\/introspect",
+            "cookies": 0.0000136,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ace-identity.customdomains",
+                "cmg"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "auth.identity.ace.aaa.com",
+                    "resolved": "ace-identity.customdomains.okta.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "aaa.com",
+                "secure.cmghomeloans.com"
+            ]
+        },
+        {
             "rule": "okta\\.com\\/discovery\\/iframe\\.html",
             "cookies": 0,
             "fingerprinting": 0,
@@ -336,22 +357,22 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "cisco.com",
-                "community.cisco.com",
                 "ernie.erau.edu",
                 "identity.trinet.com",
                 "login.primericaonline.com",
                 "login.principal.com",
+                "login.ticketmaster.com",
                 "my.wsu.edu",
                 "nj.myaccount.pseg.com",
                 "ols.k12.com",
                 "patient.labcorp.com",
                 "recruit-match.ncsasports.org",
-                "sec.cloudapps.cisco.com",
                 "support-google-com.mlprox.csmc.edu",
                 "trinet.hrpassport.com",
-                "www.app.elationemr.com",
-                "www.lms.army.mil",
+                "www.fidium.net",
+                "www.jhnet.com",
                 "www.myworkday.com",
+                "www.novitasphere.com",
                 "www.primericaonline.com"
             ]
         },
@@ -363,11 +384,11 @@
                 "login"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 7,
-                "window.localStorage": 5
+                "Navigator.prototype.userAgent": 5,
+                "window.localStorage": 1
             },
-            "sites": 18,
-            "prevalence": 0.000123,
+            "sites": 17,
+            "prevalence": 0.000116,
             "cnames": [],
             "responseHashes": [
                 "058bb9d17b2131122ad576569715e4e35cc79848433645fba5d768d9627acbd0"
@@ -377,35 +398,34 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "cisco.com",
-                "community.cisco.com",
                 "ernie.erau.edu",
                 "identity.trinet.com",
                 "login.primericaonline.com",
                 "login.principal.com",
+                "login.ticketmaster.com",
                 "my.wsu.edu",
                 "nj.myaccount.pseg.com",
                 "ols.k12.com",
                 "patient.labcorp.com",
                 "recruit-match.ncsasports.org",
-                "sec.cloudapps.cisco.com",
                 "support-google-com.mlprox.csmc.edu",
                 "trinet.hrpassport.com",
-                "www.app.elationemr.com",
-                "www.lms.army.mil",
+                "www.fidium.net",
+                "www.jhnet.com",
                 "www.myworkday.com",
                 "www.primericaonline.com"
             ]
         },
         {
             "rule": "okta\\.com\\/api\\/v1\\/sessions\\/me",
-            "cookies": 0.0000817,
+            "cookies": 0.0000954,
             "fingerprinting": 0,
             "subdomains": [
                 "benjaminmoore.customdomains",
-                "foremost",
                 "bmc",
+                "foremost",
                 "servicenowsignon.customdomains",
-                "secureaicpa",
+                "uspto-gov.customdomains",
                 "astminternational.customdomains",
                 "crowley",
                 "fzag-b2c.customdomains",
@@ -414,8 +434,8 @@
                 "veritassso.customdomains"
             ],
             "apis": {},
-            "sites": 14,
-            "prevalence": 0.0000953,
+            "sites": 16,
+            "prevalence": 0.000109,
             "cnames": [
                 {
                     "original": "okta.benjaminmoore.com",
@@ -424,6 +444,10 @@
                 {
                     "original": "ssosignon.servicenow.com",
                     "resolved": "servicenowsignon.customdomains.okta.com"
+                },
+                {
+                    "original": "auth.uspto.gov",
+                    "resolved": "uspto-gov.customdomains.okta.com"
                 },
                 {
                     "original": "iam.astm.org",
@@ -443,28 +467,32 @@
                 }
             ],
             "responseHashes": [
-                "edbe0d0764364e7ed6d72973ac98ca2a6b54ee1f4d5ee2fce79dd708137223d0",
-                "ca1784ab8d9ce3ef5326cd341574bdecd7e6f700052313810134a7ca98a9a214",
-                "59dbf243f83fedbf9c9cd69537d89e95e5794e7fc215938a44ca818984b560d0",
-                "69101e4a8f57bf1fded62a85e5fb27586776e2c03ff09c52d6430f25115893fb",
-                "e450ea9e8f7112bac19f9fd4675409344babf1a0415caa43e0ad55950a6e1e5c",
-                "d22ccf34efc78375debd7f3eb502e73888fae83b94be8c10453a1e9d3bcf3e4a",
-                "b9a115cce27abe107d0f46c569c7a4f95ffeb94975d3b84c2edb37745194bc68",
-                "0d7da3c0c71fd529f295bb8485024b51de5afaed56baf2ccdcffdd5b61fe4fb6",
-                "06d2d6c29a7f8c41d5404051dd13620c047ddb4fc586b43fb59974773fbd7789",
-                "271678fad5574ee17a162f1e65814a09ac727e9be7d73e0e7eba734a9710396d",
-                "cddeff696e32eaf43f6321da3fe215a8736a66f497efd81e225c1918321eaf34"
+                "7a62d56a529bd4a2dbb48d6b8578d8908861833981f25845c03b456711ee124d",
+                "7f757fee5770be215f3f771b3e1d4fa8068d3063cd333a038da418f73631bf50",
+                "99686883a7d00638d52f53ffa0f3c3ee6809fb8af881909b67dec17d67619166",
+                "95125a3a24bc57aba4958f4d957a979323cb9188fdfdbcfbc301421533d7f7b1",
+                "482aeebe81b585eea5f66e7b02fe1e7eddfe9c5c0291973072f743a40dc98666",
+                "0f7026c8bfa2a5703db97a7eda36914afc0c1ca31e1b749a69807755361c0f37",
+                "ecd4493aefced2a10c79c1114bea47ba7ee22e44785ea503a66ec4cc4b5e2856",
+                "7e5511fb98a4bdc90f7fb0f1be57798da00edc1fc5f903da3a023888ceee961c",
+                "c6b324f1bab778241afc1aeb4656aa197098ed33209547ca361e9ab63175961c",
+                "d373c91d98d4aa7c7d0ff5a3f0a7f5cd597f30a25d8d0743359e393cfbd38ae4",
+                "4cf62af6ec3d6a996a11585ef5b7aab8539e5b0d430a015fada3c55777f1eea3",
+                "fcb5db97748e401ae05e15ad55e9dcc17b33305d606ac6141eaa714ec179ed44",
+                "3b647997e9388a6afc8ba7f966210f45598ea6fbd23136181a7670cc556320ea"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "benjaminmoore.com",
+                "community.bmc.com",
                 "css.foremost.com",
+                "developer.servicenow.com",
                 "docs.bmc.com",
                 "nowlearning.servicenow.com",
                 "store.benjaminmoore.com",
-                "us.aicpa.org",
+                "tmsearch.uspto.gov",
                 "www.astm.org",
                 "www.benjaminmoore.com",
                 "www.crowley.com",
@@ -503,11 +531,12 @@
                 }
             ],
             "responseHashes": [
-                "d3de3439abecf6bae9196d4bdd6b0b9c046af8625e778ce7bef1e15b88eee6d4",
-                "6664acab1947c9b2e32f82983c6d99d002f6acd815ae4f26b077097e0661f729",
-                "d40ad6855cd3710bbe2b6955b736adb7aaeb4aaf8a47f111994e2a7ba023f78d",
-                "b0c4ab2585a311cf312031945696fcf9a1352bd6316db9739ce065763cf93834",
-                "7eb2c73a57a53fe82a68a4b6cff3dc613803b516ae40c0fb21cde5f62a186b6d"
+                "7cf100a74db023bb42d4c290da80b8e3c04e0aefbc37216d91ba084ab5274f56",
+                "30f21168a203d87f10e0afe6f6938fbecf7b3494def435adfd72df291d5f93d1",
+                "4d5dd7fadd09cbb05d82f6bc2b75196f6dec8b171d400f3aae8115027f0c31aa",
+                "af01eb8332fe24112e40085afe2af4de52f62f81831431c3ae19c20e48137b84",
+                "de81cc6e290ae873714f8fa700ef5958f994fd9c94aafb211c6075d7f9b10f88",
+                "627a57089b706caf7ed7a8e346ca25371296505fc81589eb0527e0d4b2667603"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -524,18 +553,18 @@
         },
         {
             "rule": "okta\\.com\\/api\\/v1\\/sessions\\/me",
-            "cookies": 0.000225,
+            "cookies": 0.000211,
             "fingerprinting": 0,
             "subdomains": [
                 "brp-ecommerce-auth.customdomains",
                 "foremost",
+                "servicenowsignon.customdomains",
                 "nafleet-wex",
                 "genesys",
                 "kohler-b2c.customdomains",
                 "resmed-ext-2.customdomains",
                 "bcbsm-member-auth.customdomains",
                 "ccm.customdomains",
-                "servicenowsignon.customdomains",
                 "labcorp.customdomains",
                 "secureaicpa",
                 "onekinship",
@@ -543,22 +572,24 @@
                 "logon.customdomains",
                 "crowley",
                 "fzag-b2c.customdomains",
-                "glenstone",
                 "connectamerica",
                 "mira-b2c.customdomains",
                 "nuskin.customdomains",
                 "sas.customdomains",
-                "spglobalciam.customdomains",
                 "veritassso.customdomains",
                 "wm.customdomains"
             ],
             "apis": {},
-            "sites": 33,
-            "prevalence": 0.000225,
+            "sites": 31,
+            "prevalence": 0.000211,
             "cnames": [
                 {
                     "original": "auth.brp.com",
                     "resolved": "brp-ecommerce-auth.customdomains.okta.com"
+                },
+                {
+                    "original": "ssosignon.servicenow.com",
+                    "resolved": "servicenowsignon.customdomains.okta.com"
                 },
                 {
                     "original": "auth.kohler.com",
@@ -575,10 +606,6 @@
                 {
                     "original": "login.medishare.com",
                     "resolved": "ccm.customdomains.okta.com"
-                },
-                {
-                    "original": "ssosignon.servicenow.com",
-                    "resolved": "servicenowsignon.customdomains.okta.com"
                 },
                 {
                     "original": "login-patient.labcorp.com",
@@ -609,10 +636,6 @@
                     "resolved": "sas.customdomains.okta.com"
                 },
                 {
-                    "original": "secure.login.spglobal.com",
-                    "resolved": "spglobalciam.customdomains.okta.com"
-                },
-                {
                     "original": "sso.veritas.com",
                     "resolved": "veritassso.customdomains.okta.com"
                 },
@@ -626,31 +649,31 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "www.wm.com",
-                "www.lifeline.com",
-                "brp.com",
-                "www.sas.com",
-                "help.mypurecloud.com",
-                "patient.labcorp.com",
-                "www.aicpa-cima.com",
-                "nowlearning.servicenow.com",
-                "www.adoptapet.com",
-                "preview.kohler.com",
-                "www.veritas.com",
-                "member.bcbsm.com",
-                "www.thewildest.com",
-                "www.bcg.com",
-                "www.spglobal.com",
-                "login.airview.resmed.com",
-                "www.servicenow.com",
-                "www.kohler.com",
                 "www.nuskin.com",
-                "sea-doo-shop.brp.com"
+                "patient.labcorp.com",
+                "www.adoptapet.com",
+                "member.medishare.com",
+                "www.kohler.com",
+                "help.mypurecloud.com",
+                "can-am-shop.brp.com",
+                "us.aicpa.org",
+                "www.flughafen-zuerich.ch",
+                "www.thewildest.com",
+                "www.veritas.com",
+                "www.astm.org",
+                "www.servicenow.com",
+                "go.wexonline.com",
+                "member.bcbsm.com",
+                "www.mirashowers.co.uk",
+                "sea-doo-shop.brp.com",
+                "kohler.com",
+                "developer.servicenow.com",
+                "www.sas.com"
             ]
         },
         {
             "rule": "okta\\.com\\/api\\/v1\\/sessions\\/me",
-            "cookies": 0.000218,
+            "cookies": 0.000198,
             "fingerprinting": 0,
             "subdomains": [
                 "brp-ecommerce-auth.customdomains",
@@ -665,18 +688,16 @@
                 "secureaicpa",
                 "onekinship",
                 "logon.customdomains",
-                "glenstone",
                 "connectamerica",
                 "mira-b2c.customdomains",
                 "nuskin.customdomains",
                 "sas.customdomains",
                 "servicenowsignon.customdomains",
-                "spglobalciam.customdomains",
                 "wm.customdomains"
             ],
             "apis": {},
-            "sites": 32,
-            "prevalence": 0.000218,
+            "sites": 29,
+            "prevalence": 0.000198,
             "cnames": [
                 {
                     "original": "auth.brp.com",
@@ -727,64 +748,57 @@
                     "resolved": "servicenowsignon.customdomains.okta.com"
                 },
                 {
-                    "original": "secure.login.spglobal.com",
-                    "resolved": "spglobalciam.customdomains.okta.com"
-                },
-                {
                     "original": "ssologin.wm.com",
                     "resolved": "wm.customdomains.okta.com"
                 }
             ],
             "responseHashes": [
-                "4c84b472a1058588330c694f325c351a814436a4250dbfb652a57b252c9615a3",
-                "0cba4d473c477532b7e4838eb8b61806d1bb878c81d339a0c9e96624c8661b73",
-                "fd81f24e4b74c0e3b9f1434c998696971bcf1304f84797316aa20507c444829e",
-                "b568bedf2035cdcd914e51d4ee7c5cb101bfcc9cbe9228ef3c9f566221d061d3",
-                "6c09b51a7b3fb1d5ea7c544848b995e478677177ccf29c7ff59277fbeeb884c8",
-                "1ea76e210224b373d64027b75b7a076b74a947284a0fa17d7338cd281f6d7bbe",
-                "c927fb70a4d03e059a134eb61e8e7d7f3ac272f7a3b6959ed7c859b54d5c7d8d",
-                "9ad7c124416c926672efec652e3cf93e19412835fd6497dc9893d079e70d088e",
-                "e5ca1a4d3c31571ba68d77589529f9a7b3af41e1b800fb028db6aed6c2ae454a",
-                "2f5cbd7da1155ce8aa475f8a4a4d0b28b780f606e5899fdabdacefe20bf52690",
-                "eb9aeefdc5695299a632f49207ac0ccf09af97cbf8532778a8d15a238b507eed",
-                "4a151d4443f23c76dbb394d41af22c1ef8c2310327c4b519840edad32c9bf8ea",
-                "a50ac015dde07d7b1fc9052999d9ae1f5c593fc1b5ecc233503545e3306fbaee",
-                "e3f6fc857bfec3b045ac07c7fccd7eba396e9eaba0347778b7e213aada1ff03e",
-                "d50944be6804446fef67821095b8878816d06f1758014ddf19803f25053c0677",
-                "921cce288ee55ab4e71b520bfa9eeb126f8e333f087ce49acf08eb48968acb24",
-                "f5fadd5332940a0aa5ac3491448525d4a734ce509451c78b0dec2e64b74fbbbe",
-                "1e1e66529183a22eb402df59d5f0dea9013a15534f2a861f2757fb497092383f",
-                "7e54c69f43c09cc3b9738df8c0ec03cec1ddbe851c20538780af09512605e73d",
-                "d3e42b7bfff3f986313f3fb2c0fe9aac120d3910b682135dc1a83f3c4fdba879",
-                "0775afb11d83aa2df3b687d0db9068af8c211510785ef20495da6a40729db28c",
-                "2d3a2c71646c9b0c31d7c66bc305afe5e20d1ca7745cdce8cc9b5fe1446b582c",
-                "1df70463604f5c1cf66361f33587f2e1ed155ab47221f4de38df28bd33114478",
-                "9cc016c0511794e17b841906c7c15fbf9ce4181856e131eb5fea9007ea7da336"
+                "6fcd41ea592f99d7dce988186cfbd25d2fb3cad67a1529f47d0d3ebcae479e1a",
+                "c9b9e75f2d3a82df368d20fb6c0a3f42085f1e0825b25fa915b2e9bcbf8344d5",
+                "b49daebe7c5c438af7ea4a06cc8dab706561ca1fe7863912afbfa4c5a260010a",
+                "4a90a07fd534326a1c5bf48738f535e4e0bca1e1d5329006ed2b95def74dbc5e",
+                "4636e16a8e9167110779a2b7b378e5da447d7f9ec893c5559aacb3f504d668de",
+                "050f8cad435253f00568920645d3e29563f7c6b98742e5f133f118d868cdae3b",
+                "bf1d2108986fc42702c514256c897eacc61c0864ffd1062267b6f90b408557e8",
+                "3e589ca0a5c7674ac676eb177914e1003633fb38dda429308ba65aaacfdcdd9c",
+                "4607d1ec24de94dce7bfe122b99f2d89e5c881cb85ac680f090456397dc21c90",
+                "b52009f1718e516ea38d599c401c370d7b1484af0e36fdb9c017482a732b8e3a",
+                "5530ff9fd0ebe6c67ec7bc8be98ff80c94b5710d341a43b9c5271d4acbbb8d3b",
+                "b71b35321685fcc04d1b05efb15cbda82d23be34807f89a226c8b091206c23fd",
+                "bc0aa3f4fae700c35cd8b8b45af9d79dc9bdd74990fe33174aa070d43bb06d0c",
+                "b97a8167bdd6fd6e7bf13ee646a10aa7f33516b8e7ceb8aa3d0c31f515bae2a8",
+                "2c3e78ffab329819fa48173288148a90deb82c048c54a30929a21cf0102dee15",
+                "de510c9e6554dddbbc2d8247fd4d0f738efaaf2567b7d0da776e024a6efad9ac",
+                "8f37f9e0cd80c6ca75001e8f0acede6c24050bf64d37e9fec5490418671481fd",
+                "9268115065eac06f3abb3669f7a82fc73b2961c33c0480b268834f5736158fb4",
+                "141590e8a01b55f133c25c470f599d77875b1ae492fd2e5d682147863bd82209",
+                "7f381dbfffc7b3ce3121cfec1a3a5a8969b0d9037eb21c90ed0c82a25bde4479",
+                "af4af74d7619d576530269dbb278054a489175b8b9c2a415358a9a68ef104545"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "member.medishare.com",
-                "kohler.com",
-                "www.aicpa-cima.com",
-                "www.adoptapet.com",
-                "www.glenstone.org",
-                "providentliving.churchofjesuschrist.org",
-                "sea-doo-shop.brp.com",
-                "history.churchofjesuschrist.org",
-                "stores.kohler.com",
-                "www.servicenow.com",
-                "www.lifeline.com",
-                "www.kohler.com",
                 "newsroom.churchofjesuschrist.org",
+                "www.lifeline.com",
+                "www.thewildest.com",
                 "tech.churchofjesuschrist.org",
-                "www.nuskin.com",
+                "member.medishare.com",
+                "patient.labcorp.com",
+                "www.kohler.com",
+                "brp.com",
+                "www.servicenow.com",
+                "www.bcg.com",
+                "providentliving.churchofjesuschrist.org",
+                "www.churchofjesuschrist.org",
                 "preview.kohler.com",
+                "help.mypurecloud.com",
                 "www.mirashowers.co.uk",
+                "member.bcbsm.com",
+                "www.nuskin.com",
                 "www.sas.com",
-                "www.wm.com",
-                "can-am-shop.brp.com"
+                "can-am-shop.brp.com",
+                "kohler.com"
             ]
         },
         {
@@ -837,20 +851,22 @@
         },
         {
             "rule": "okta\\.com\\/idp\\/idx\\/introspect",
-            "cookies": 0.0000204,
+            "cookies": 0.0000273,
             "fingerprinting": 0,
             "subdomains": [
                 "erau",
                 "rchamps",
+                "cmg",
                 "kohls"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000204,
+            "sites": 4,
+            "prevalence": 0.0000273,
             "cnames": [],
             "responseHashes": [
-                "d3231d022000f37fbf592f2f93df7c0ec50c8339fef373ae5d0e4aa1586ce6f0",
-                "872c76fa7c316d3942550cac34f756088d981f1e980f97069c48fe5bcdd192e8"
+                "84a5c90764548d7a7a0dc8d85fde87d53c823c791f4963fdfec868c65e8290af",
+                "e8e463968cd5d9517b073a1227495eecad76ed2d2693bb5f9f49e63be4a9d1f3",
+                "30a189a59f877632e5b37d295ef84b71174ddb59fade097d678559a27a9107fd"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -858,6 +874,7 @@
             "exampleSites": [
                 "erau.edu",
                 "recruit-match.ncsasports.org",
+                "secure.cmghomeloans.com",
                 "www.myworkday.com"
             ]
         },
@@ -894,12 +911,13 @@
             "subdomains": [
                 "ot-rest-prod.customdomains",
                 "realogy",
+                "cmg",
                 "aarons.customdomains",
                 "mdc-prd.customdomains"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.0000272,
+            "sites": 5,
+            "prevalence": 0.0000341,
             "cnames": [
                 {
                     "original": "restauth.opentable.com",
@@ -915,6 +933,7 @@
                 }
             ],
             "responseHashes": [
+                "afaa438eda331e62851bd17805ff6dbed2528ed38710de129e9dc6298ba09632",
                 "e781bbbd10a87bf0ae487e5b5eeb3141479b9d4cda48f1cb7d3d37cd22b5d367",
                 "12314906db35c2fb6dc3af6a71a713c2cebd9ef8dcc7f7513e7adb9719665781"
             ],
@@ -924,6 +943,7 @@
             "exampleSites": [
                 "opentable.com",
                 "mycbdesk.com",
+                "secure.cmghomeloans.com",
                 "www.aarons.com",
                 "www.moodys.com"
             ]
@@ -931,6 +951,40 @@
         {
             "rule": "okta\\.com\\/oauth2\\/default\\/\\.well-known\\/openid-configuration",
             "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "realogy",
+                "cmg",
+                "aarons.customdomains",
+                "mdc-prd.customdomains"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000273,
+            "cnames": [
+                {
+                    "original": "login.aarons.com",
+                    "resolved": "aarons.customdomains.okta.com"
+                },
+                {
+                    "original": "auth.moodys.com",
+                    "resolved": "mdc-prd.customdomains.okta.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mycbdesk.com",
+                "secure.cmghomeloans.com",
+                "www.aarons.com",
+                "www.moodys.com"
+            ]
+        },
+        {
+            "rule": "okta\\.com\\/oauth2\\/default\\/v1\\/authorize",
+            "cookies": 0.0000204,
             "fingerprinting": 0,
             "subdomains": [
                 "realogy",
@@ -950,46 +1004,9 @@
                     "resolved": "mdc-prd.customdomains.okta.com"
                 }
             ],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "mycbdesk.com",
-                "www.aarons.com",
-                "www.moodys.com"
-            ]
-        },
-        {
-            "rule": "okta\\.com\\/oauth2\\/default\\/v1\\/authorize",
-            "cookies": 0.0000272,
-            "fingerprinting": 0,
-            "subdomains": [
-                "realogy",
-                "aarons.customdomains",
-                "churchofjesuschrist.customdomains",
-                "mdc-prd.customdomains"
-            ],
-            "apis": {},
-            "sites": 4,
-            "prevalence": 0.0000272,
-            "cnames": [
-                {
-                    "original": "login.aarons.com",
-                    "resolved": "aarons.customdomains.okta.com"
-                },
-                {
-                    "original": "id.churchofjesuschrist.org",
-                    "resolved": "churchofjesuschrist.customdomains.okta.com"
-                },
-                {
-                    "original": "auth.moodys.com",
-                    "resolved": "mdc-prd.customdomains.okta.com"
-                }
-            ],
             "responseHashes": [
-                "d2f963545cd1924ba32fd355bc0e9443aeb7ee8f7a44f31dc36a17730b83cb74",
-                "2ee932cb3b0c165ad767b05fbd59ceb11f510d3866c40318a0b53a9ca4082849"
+                "db47a12785fdaea54121c7b1c5c0c8d7ef380f1a5dfae9746db77fb8f09d15e2",
+                "cde09bf2a42cbe2ec860a73e3ce664c35ece5b3b78087e6a8fb218666021db37"
             ],
             "type": "Document",
             "firstPartyCookies": {},
@@ -997,27 +1014,23 @@
             "exampleSites": [
                 "mycbdesk.com",
                 "www.aarons.com",
-                "www.churchofjesuschrist.org",
                 "www.moodys.com"
             ]
         },
         {
             "rule": "okta\\.com\\/oauth2\\/v1\\/authorize",
             "cookies": 0.0000136,
-            "fingerprinting": 1,
+            "fingerprinting": 0,
             "subdomains": [
                 "osk-idm",
                 "rchamps"
             ],
-            "apis": {
-                "Navigator.prototype.userAgent": 1,
-                "Navigator.prototype.cookieEnabled": 1
-            },
+            "apis": {},
             "sites": 2,
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "6c34747880c991cb056977dc60e1df6ccab21bcc610dec5eaffd2ad6cb4df14f"
+                "a6c1d51820a19181fd35da02744cd5a1fdc212cde41f9b33a5f46c534035167e"
             ],
             "type": "Document",
             "firstPartyCookies": {},
@@ -1025,31 +1038,6 @@
             "exampleSites": [
                 "jlg.com",
                 "recruit-match.ncsasports.org"
-            ]
-        },
-        {
-            "rule": "okta\\.com\\/app\\/carefirstcustomer_headerssoapp_2\\/exk2tvltzafQRNdAa4h7\\/sso\\/saml",
-            "cookies": 0.0000136,
-            "fingerprinting": 0,
-            "subdomains": [
-                "carefirstcustomer.customdomains"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [
-                {
-                    "original": "login.carefirst.com",
-                    "resolved": "carefirstcustomer.customdomains.okta.com"
-                }
-            ],
-            "responseHashes": [],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "carefirst.com",
-                "provider.carefirst.com"
             ]
         },
         {
@@ -1094,27 +1082,27 @@
         },
         {
             "rule": "okta\\.com\\/api\\/v1\\/sessions\\/me\\/lifecycle\\/refresh",
-            "cookies": 0.0000817,
+            "cookies": 0.0000818,
             "fingerprinting": 0,
             "subdomains": [
                 "albertsons"
             ],
             "apis": {},
             "sites": 12,
-            "prevalence": 0.0000817,
+            "prevalence": 0.0000818,
             "cnames": [],
             "responseHashes": [
-                "112e2d182e19c9916c5fbf25d5f26023ba047eb8f19a3184ad765b6ca78d963b",
-                "d3c9e64221440b9a5cbede2bc36ddd51e1e937b95baae03aa9cdbc6449682472",
-                "ddc192de6ea79e1b3d91e7b019f0c0f0ba64d30cffc24898524dda7d5550c3ca",
-                "0deaec25cbf78e88e25ab3445549745fc0f9df1268727ac541732f55508f4b2d",
-                "4d34fee1372048271f8b422c0b696e85de914b049808e9bb94178b198e4b6004",
-                "55c424cf03f601c676dd16b11acfaceb5ae35d3ca8862ff36d410365757fa936",
-                "c8f651aedc7cf0d13e1fbde9ddc2a9dc11a93ee1c7a8a8b9672cca491a843917",
-                "842a4ee2ea3699b9152d302fd9e95e3b2d038467ba33998ade98fe499dd0dcc5",
-                "7863658422ef16c35cf59536519f24c8c9b8e2758591da9f01ae1fb26ee8e97b",
-                "5d842661b4b34947a5ee7ae39160532e83a7546f0bdf8d59a925d051a6a21bec",
-                "17ddbaf353cb513a910227ac15fd6a63ba53174db23b345ce4a03579700bba11"
+                "e8398a39bf5827e537b383eecf03a9a62b93c3dad265f0f9b99cd4218cf35018",
+                "fcf2971a1c9fe0bcccd1976b602b90bb97f3b4ae8f7a30afe65fc017a8a200dd",
+                "cc70f98f25bdd96749291d58d94fc4ea699ec93e137673313f6ca32acb9fb979",
+                "0867c401a04c2ee090b0aa6122fe5c1f6189840fa82f02081986a4b296f8f941",
+                "a0a7b7c46aa627387170f4989ffff1fcc3e025ca8e2de338add32542124fd51a",
+                "285f54dbcb4fb0d8c73fdd2a2fa00c4230fbbee251cfab88f4951e4feb89928a",
+                "55e08229fe6f9976fce2d71fc0ad5da8c7c654a3df7dbbaf64b9bf974a6e01e3",
+                "b220f7c511efe410b0041984f5c3089a55078b3387230961ea2e983ff96bf204",
+                "9585ba225d1b48027233c6777c41711978c12b3dc06a1a9fd33c9ab7c84a7341",
+                "7374e14c1e4a7b6e37041fad9d469529a14d4af7aca62b170a7d62b1a0fab414",
+                "7bd63e392af594dd88adeb112894c3973581c5a2bdeb03537f4ae26fee504166"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -1150,8 +1138,10 @@
                     "resolved": "sas.customdomains.okta.com"
                 }
             ],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "ea013297cea319e35cef1b2a6c0b8337b77fde3e78a356cbdf9cdf1469506090"
+            ],
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -1175,10 +1165,8 @@
                     "resolved": "sas.customdomains.okta.com"
                 }
             ],
-            "responseHashes": [
-                "ea013297cea319e35cef1b2a6c0b8337b77fde3e78a356cbdf9cdf1469506090"
-            ],
-            "type": "Fetch",
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -1203,7 +1191,7 @@
                 }
             ],
             "responseHashes": [
-                "c184d72be98d52abbda1c1a4ed94a499821fbd38d8ca7b67d13b52182fc3a3b5"
+                "337193936b94653580b8513d1d1515759d819844417af3a79bcc7fb02d80b385"
             ],
             "type": "Document",
             "firstPartyCookies": {},
@@ -1230,7 +1218,7 @@
                 }
             ],
             "responseHashes": [
-                "4984e7adc539c625792a76bdaead4ac913de92ff9ce2931b3feeebb6764e0d7f"
+                "4413fc4bde51b5b07a275a7b34ea06a7982989b4fb44e06a4ba64a3187cfaf16"
             ],
             "type": "Document",
             "firstPartyCookies": {},
@@ -1247,61 +1235,61 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.4777777777777778
+            "prevalence": 0.4731182795698925
         },
         {
             "domain": "oktacdn.com",
-            "prevalence": 0.34444444444444444
+            "prevalence": 0.3548387096774194
         },
         {
             "domain": "walkme.com",
-            "prevalence": 0.022222222222222223
+            "prevalence": 0.021505376344086023
+        },
+        {
+            "domain": "yottaa.com",
+            "prevalence": 0.021505376344086023
         },
         {
             "domain": "instana.io",
-            "prevalence": 0.022222222222222223
+            "prevalence": 0.021505376344086023
         },
         {
             "domain": "appdynamics.com",
-            "prevalence": 0.022222222222222223
+            "prevalence": 0.021505376344086023
         },
         {
             "domain": "myforemostaccount.com",
-            "prevalence": 0.011111111111111112
+            "prevalence": 0.010752688172043012
         },
         {
-            "domain": "msftauth.net",
-            "prevalence": 0.011111111111111112
+            "domain": "azureedge.net",
+            "prevalence": 0.010752688172043012
+        },
+        {
+            "domain": "msauth.net",
+            "prevalence": 0.010752688172043012
         },
         {
             "domain": "sentry-cdn.com",
-            "prevalence": 0.011111111111111112
-        },
-        {
-            "domain": "genesyscsdt.com",
-            "prevalence": 0.011111111111111112
-        },
-        {
-            "domain": "service-now.com",
-            "prevalence": 0.011111111111111112
+            "prevalence": 0.010752688172043012
         }
     ],
     "types": {
-        "Fetch": 45,
-        "Preflight": 46,
-        "Document": 30,
-        "XHR": 37,
-        "Script": 22,
+        "Fetch": 44,
+        "Preflight": 47,
+        "Document": 29,
+        "XHR": 39,
+        "Script": 19,
         "Stylesheet": 3
     },
     "nameservers": [
-        "edns5.ultradns.biz",
+        "ns-1459.awsdns-54.org",
+        "edns5.ultradns.org",
         "edns5.ultradns.com",
         "edns5.ultradns.net",
-        "edns5.ultradns.org",
-        "ns-1459.awsdns-54.org",
-        "ns-1563.awsdns-03.co.uk",
+        "ns-684.awsdns-21.net",
         "ns-285.awsdns-35.com",
-        "ns-684.awsdns-21.net"
+        "edns5.ultradns.biz",
+        "ns-1563.awsdns-03.co.uk"
     ]
 }

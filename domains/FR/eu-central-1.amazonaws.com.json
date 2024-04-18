@@ -9,11 +9,11 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000703,
-    "sites": 7,
+    "prevalence": 0.000402,
+    "sites": 4,
     "subdomains": [
         "cognito-identity",
-        "rkkck31tec.execute-api"
+        "dataplane.rum"
     ],
     "cnames": [],
     "fingerprinting": 0,
@@ -27,15 +27,15 @@
             ],
             "apis": {},
             "sites": 3,
-            "prevalence": 0.000301,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "sensiseeds.com",
-                "www.glady.com",
+                "glady.com",
+                "www.seton.fr",
                 "www.vetostore.com"
             ]
         },
@@ -51,34 +51,58 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "375dfeb7fc3e18cd4fa9dcb24b0378c81138271b9ba846209d1b534f5167575c"
+                "24f951f1fecefb29f799307706acc4c2ea4fc19d01e156217f43da5924521131"
             ],
-            "type": "XHR",
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "sensiseeds.com",
-                "www.vetostore.com"
+                "glady.com",
+                "www.seton.fr"
             ]
         },
         {
-            "rule": "eu-central-1\\.amazonaws\\.com\\/v1\\/beacon",
+            "rule": "eu-central-1\\.amazonaws\\.com\\/appmonitors\\/30a230af-be49-4589-a9a1-980c572ed246",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "rkkck31tec.execute-api"
+                "dataplane.rum"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+            ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "dexerto.fr",
-                "www.woopets.fr"
+                "seton.fr",
+                "www.seton.fr"
+            ]
+        },
+        {
+            "rule": "eu-central-1\\.amazonaws\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cognito-identity"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "17406c3d16cb7a1b80c4b47a4ef126d406dddd30f9728e7189caa23e87c037a4"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vetostore.com",
+                "www.vetostore.com"
             ]
         }
     ],
@@ -89,26 +113,22 @@
     "cookies": 0,
     "topInitiators": [
         {
+            "domain": "rum.us-east-1.amazonaws.com",
+            "prevalence": 0.5555555555555556
+        },
+        {
             "domain": "first party",
-            "prevalence": 0.4
+            "prevalence": 0.3333333333333333
         },
         {
             "domain": "d5yoctgpv4cpx.cloudfront.net",
-            "prevalence": 0.3
-        },
-        {
-            "domain": "sooqr.com",
-            "prevalence": 0.2
-        },
-        {
-            "domain": "api-domain-compado.com",
-            "prevalence": 0.1
+            "prevalence": 0.1111111111111111
         }
     ],
     "types": {
         "Preflight": 3,
-        "XHR": 2,
-        "Fetch": 2
+        "Fetch": 4,
+        "XHR": 2
     },
     "nameservers": [
         "ns1.amzndns.co.uk",

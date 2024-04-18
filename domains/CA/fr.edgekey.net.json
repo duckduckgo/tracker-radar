@@ -9,11 +9,12 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000604,
+    "prevalence": 0.000603,
     "sites": 6,
     "subdomains": [
         "consents.cuisineactuelle",
         "consents.femmeactuelle",
+        "static-v1.francetv",
         "static-lefigaro",
         "api-graphql.lefigaro"
     ],
@@ -29,6 +30,10 @@
         {
             "original": "consents.femmeactuelle.fr",
             "resolved": "consents.femmeactuelle.fr.edgekey.net"
+        },
+        {
+            "original": "static.francetv.fr",
+            "resolved": "static-v1.francetv.fr.edgekey.net"
         },
         {
             "original": "static.lefigaro.fr",
@@ -65,6 +70,33 @@
             "exampleSites": [
                 "cuisineactuelle.fr",
                 "www.femmeactuelle.fr"
+            ]
+        },
+        {
+            "rule": "fr\\.edgekey\\.net\\/magnetoscope\\/main\\.magnetoscope\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "static-v1.francetv"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "static.francetv.fr",
+                    "resolved": "static-v1.francetv.fr.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "6e86b88c1ba47f4ede0dc5f7e5a82c119215d62416c4e9aa491133bd27c9f204"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "francetvinfo.fr",
+                "www.francetvinfo.fr"
             ]
         },
         {
@@ -134,7 +166,7 @@
                 }
             ],
             "responseHashes": [
-                "6d1b349576de92878921c28314537f83b1999a74b0cbf6501d7a66fa06008617"
+                "aa1825c5f531fcd6c721a5946465c71d68dcf6c3ddda3d5423b706a2bbad590f"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -147,19 +179,24 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000302,
+    "cookies": 0.000301,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.875
+            "prevalence": 0.8
+        },
+        {
+            "domain": "francetv.fr",
+            "prevalence": 0.1
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.125
+            "prevalence": 0.1
         }
     ],
     "types": {
         "Document": 2,
+        "Script": 2,
         "Font": 4,
         "Fetch": 2
     },

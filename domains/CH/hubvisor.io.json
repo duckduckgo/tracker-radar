@@ -7,25 +7,93 @@
     "prevalence": 0.00171,
     "sites": 17,
     "subdomains": [
-        "cdn",
-        "beam"
+        "client-context",
+        "c.client-context",
+        "beam",
+        "cdn"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
         {
+            "rule": "hubvisor\\.io\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "client-context"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "6474af9effd464dcabe9adc9132e1f4ba8fd4929054edeee9b9346d9e50f743e"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lefigaro.fr",
+                "www.lepoint.fr"
+            ]
+        },
+        {
+            "rule": "hubvisor\\.io\\/configuration",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "c.client-context"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "007e87ed9cbb3d3bce555b5b9a1eeed7cbf6bb431f28e29d0fab019f117531be"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lefigaro.fr",
+                "www.lepoint.fr"
+            ]
+        },
+        {
+            "rule": "hubvisor\\.io\\/v2\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "beam"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lefigaro.fr",
+                "meteofrance.com",
+                "www.lepoint.fr"
+            ]
+        },
+        {
             "rule": "hubvisor\\.io\\/wrapper\\/01DBFDB3G8049RQWPA1JZ2HSH5\\/hubvisor\\.js",
             "cookies": 0,
-            "fingerprinting": 1,
+            "fingerprinting": 2,
             "subdomains": [
                 "cdn"
             ],
             "apis": {
+                "NavigatorUAData.prototype.brands": 2,
+                "NavigatorUAData.prototype.platform": 2,
                 "window.sessionStorage": 2,
                 "window.localStorage": 2,
                 "Navigator.prototype.userAgent": 2,
-                "NavigatorUAData.prototype.brands": 1,
-                "NavigatorUAData.prototype.platform": 1
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 1
             },
             "sites": 2,
             "prevalence": 0.000201,
@@ -59,8 +127,8 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "eurosport.com",
-                "www.eurosport.de",
+                "eurosport.de",
+                "www.eurosport.com",
                 "www.eurosport.fr"
             ]
         },
@@ -84,34 +152,14 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "95a1bc5cceb073d438d513cd64c118e352ba1f3c8fad9accf0971e129293e8af"
+                "a3833756f8e4f3754862b3fe7d3dd3c7afcbc899cfa85c8ebb23d0409697f45a"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "lachainemeteo.com",
-                "www.lachainemeteo.ch"
-            ]
-        },
-        {
-            "rule": "hubvisor\\.io\\/v2\\/",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "beam"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "lepoint.fr",
-                "www.lepoint.fr"
+                "lachainemeteo.ch",
+                "www.lachainemeteo.com"
             ]
         }
     ],
@@ -121,33 +169,33 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.6666666666666666
+            "prevalence": 0.7272727272727273
         },
         {
             "domain": "lpnt.fr",
-            "prevalence": 0.19047619047619047
+            "prevalence": 0.13636363636363635
         },
         {
             "domain": "20mn.fr",
-            "prevalence": 0.047619047619047616
+            "prevalence": 0.045454545454545456
         },
         {
             "domain": "dmcdn.net",
-            "prevalence": 0.047619047619047616
+            "prevalence": 0.045454545454545456
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.047619047619047616
+            "prevalence": 0.045454545454545456
         }
     ],
     "types": {
-        "Script": 7,
-        "Fetch": 2
+        "Fetch": 7,
+        "Script": 7
     },
     "nameservers": [
-        "ns-cloud-c1.googledomains.com",
-        "ns-cloud-c3.googledomains.com",
         "ns-cloud-c4.googledomains.com",
+        "ns-cloud-c3.googledomains.com",
+        "ns-cloud-c1.googledomains.com",
         "ns-cloud-c2.googledomains.com"
     ]
 }
