@@ -8,10 +8,9 @@
     "sites": 2,
     "subdomains": [
         "assets-bwbx-io.shared",
-        "location.arcus.cm",
+        "eventrecorder.arcus.cm",
         "coordinator.arcus.cm",
         "personalization.bloomberg.com.shared",
-        "eventrecorder.arcus.cm",
         "compass-bloomberg-com.shared"
     ],
     "cnames": [
@@ -32,16 +31,73 @@
             "resolved": "eventrecorder.arcus.cm.bloomberga.com"
         },
         {
-            "original": "location.cm.bloomberg.com",
-            "resolved": "location.arcus.cm.bloomberga.com"
-        },
-        {
             "original": "personalization.bloomberg.com",
             "resolved": "personalization.bloomberg.com.shared.bloomberga.com"
         }
     ],
     "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "bloomberga\\.com\\/s3\\/foundation\\/event-recorder-client\\/1\\.0\\/event-recorder-client\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets-bwbx-io.shared"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "assets.bwbx.io",
+                    "resolved": "assets-bwbx-io.shared.bloomberga.com"
+                }
+            ],
+            "responseHashes": [
+                "cfbe1af14daf374b45e469cfefc6b9975bb9f626a1b323d318960dee744b16df"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bloomberg.com",
+                "www.bloomberg.com"
+            ]
+        },
+        {
+            "rule": "bloomberga\\.com\\/s3\\/foundation\\/cmp-client\\/v3\\/cmp-client\\.min\\.js",
+            "cookies": 0.0000136,
+            "fingerprinting": 1,
+            "subdomains": [
+                "assets-bwbx-io.shared"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "assets.bwbx.io",
+                    "resolved": "assets-bwbx-io.shared.bloomberga.com"
+                }
+            ],
+            "responseHashes": [
+                "78b0756503dbbe94648e9b26d577c582d92c8828995be06f5e8e47bd0491b9ab"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "bbgconsentstring": {
+                    "ttl": 31536003,
+                    "length": 12,
+                    "prevalence": 0.00001362769146906514,
+                    "uniqueness": 0.5
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bloomberg.com",
+                "www.bloomberg.com"
+            ]
+        },
         {
             "rule": "bloomberga\\.com\\/s3\\/abba\\/abba-client\\/latest\\/abba-client\\.js",
             "cookies": 0,
@@ -59,7 +115,7 @@
                 }
             ],
             "responseHashes": [
-                "bd8d86191c77f5c53f2c6318f15cac6eb07ce6f05160072a270f04ddd2a545d9"
+                "81d4573b04d1b03a2e5f4c66f84befc2fd3b5f86f2b06b002ce2a92ad982b7e8"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -113,9 +169,36 @@
                 }
             ],
             "responseHashes": [
-                "6578ce8462eb5414a57d5a035879a210675b569b6037ffcb18a14e0a21f8c447"
+                "c160f314fd194632b77896627537e001800992b5da15e73b8067fcd3495ca881"
             ],
             "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bloomberg.com",
+                "www.bloomberg.com"
+            ]
+        },
+        {
+            "rule": "bloomberga\\.com\\/events\\/record",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "eventrecorder.arcus.cm"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "eventrecorder.cm.bloomberg.com",
+                    "resolved": "eventrecorder.arcus.cm.bloomberga.com"
+                }
+            ],
+            "responseHashes": [
+                "98c4922bb641c65c7a30b7bcafdf230b9b00b6693631c56146ab25b2786ee4a3"
+            ],
+            "type": "Ping",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -259,33 +342,6 @@
             ]
         },
         {
-            "rule": "bloomberga\\.com\\/query",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "location.arcus.cm"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [
-                {
-                    "original": "location.cm.bloomberg.com",
-                    "resolved": "location.arcus.cm.bloomberga.com"
-                }
-            ],
-            "responseHashes": [
-                "3bf1a7882fa0080d17faa288ddace8034de61da8c30247423bd9bef74640ce2e"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "bloomberg.com",
-                "www.bloomberg.com"
-            ]
-        },
-        {
             "rule": "bloomberga\\.com\\/s3\\/abba\\/feed\\/frontend\\.json",
             "cookies": 0,
             "fingerprinting": 0,
@@ -302,7 +358,7 @@
                 }
             ],
             "responseHashes": [
-                "2e651e6c0eb9a2db76dd2a89b5f1bca75d320e8c655d3dc10a477e3bc64b2090"
+                "87b66f45192a02c9d0f5686b8280e909cbd9b1bd3d3bc61742ec6739b5e37e91"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -329,7 +385,7 @@
                 }
             ],
             "responseHashes": [
-                "5ee97ef05236c5a36c0941213f4fd69a9790dc0f82d0d30be2a98bec4a37f2d6"
+                "8206c98c9f25e2b78d3da5b3046d49e2a6801e3474a9314d6c88349ee29f992f"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -340,7 +396,34 @@
             ]
         },
         {
-            "rule": "bloomberga\\.com\\/s3\\/fence\\/plug-client\\/v0\\/app\\.bundle\\.js",
+            "rule": "bloomberga\\.com\\/s3\\/spritz\\/v1\\/spritz\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets-bwbx-io.shared"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "assets.bwbx.io",
+                    "resolved": "assets-bwbx-io.shared.bloomberga.com"
+                }
+            ],
+            "responseHashes": [
+                "3c4b6e87588f3c441dc13c33eea59a7ae41b36e7ac603b0b47ec26955debd421"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bloomberg.com",
+                "www.bloomberg.com"
+            ]
+        },
+        {
+            "rule": "bloomberga\\.com\\/s3\\/multimedia\\/projector\\/latest\\/bplayer\\.js",
             "cookies": 0,
             "fingerprinting": 1,
             "subdomains": [
@@ -356,7 +439,7 @@
                 }
             ],
             "responseHashes": [
-                "d0231616598921e73d3b953ee6749e76dc594ca10a1c05a82444436b601016dd"
+                "6401e8d06abdba3f55ee1c11972ae8a89a3b7d89ebcbd70f62b6c00e17377104"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -383,7 +466,7 @@
                 }
             ],
             "responseHashes": [
-                "0fd81200a0564429f4d9692d198a1d67731b0c2e94dffb42c14939e9d38ce2d3"
+                "f53eb1f15f192fbb2d2eb0090057315752a91e5d01e31bbb28a523b36c1a172a"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -417,7 +500,7 @@
                 "__sppvid": {
                     "ttl": null,
                     "length": 36,
-                    "prevalence": 0.000006808881505035168,
+                    "prevalence": 0.00000681384573453257,
                     "uniqueness": 1
                 }
             },
@@ -444,7 +527,7 @@
                 }
             ],
             "responseHashes": [
-                "ba79ed1b23ddfd1071b4b254a1099d6a43547096e7d38804dfe7dcb342c579ae"
+                "cf6c1c6a6e026bf6d8da6e94b980a34a09a933e117ee4a3d9bf6ff0b4f143492"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -455,25 +538,25 @@
             ]
         },
         {
-            "rule": "bloomberga\\.com\\/events\\/record",
+            "rule": "bloomberga\\.com\\/s3\\/multimedia\\/projector\\/deploy\\/bvp-9b5fd8ed52\\.css",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "eventrecorder.arcus.cm"
+                "assets-bwbx-io.shared"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.0000136,
             "cnames": [
                 {
-                    "original": "eventrecorder.cm.bloomberg.com",
-                    "resolved": "eventrecorder.arcus.cm.bloomberga.com"
+                    "original": "assets.bwbx.io",
+                    "resolved": "assets-bwbx-io.shared.bloomberga.com"
                 }
             ],
             "responseHashes": [
-                "98c4922bb641c65c7a30b7bcafdf230b9b00b6693631c56146ab25b2786ee4a3"
+                "9ad0f6736abe97431f290284bb5e7de0c337ff6abfdc1b65659723f38450f461"
             ],
-            "type": "Ping",
+            "type": "Stylesheet",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -482,7 +565,61 @@
             ]
         },
         {
-            "rule": "bloomberga\\.com\\/ads\\/Image\\/blt4f0e01f7538cbdb5",
+            "rule": "bloomberga\\.com\\/s3\\/multimedia\\/projector\\/deploy\\/app\\/vendor-2e37d17b6c\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "assets-bwbx-io.shared"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "assets.bwbx.io",
+                    "resolved": "assets-bwbx-io.shared.bloomberga.com"
+                }
+            ],
+            "responseHashes": [
+                "8ad1ef83ffbe85b3ae0b2c1dbdb285cf85bfbadb3750ae259e49cddd165e9234"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bloomberg.com",
+                "www.bloomberg.com"
+            ]
+        },
+        {
+            "rule": "bloomberga\\.com\\/s3\\/multimedia\\/projector\\/deploy\\/app\\/app-8ef2bca1e6\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets-bwbx-io.shared"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "assets.bwbx.io",
+                    "resolved": "assets-bwbx-io.shared.bloomberga.com"
+                }
+            ],
+            "responseHashes": [
+                "2cbcb611b38455706dfaedb75efd22f51c420900eb8270940135210c6d73e664"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bloomberg.com",
+                "www.bloomberg.com"
+            ]
+        },
+        {
+            "rule": "bloomberga\\.com\\/ads\\/Image\\/blt7f3e3d423cc754e4",
             "cookies": 0,
             "fingerprinting": 1,
             "subdomains": [
@@ -498,7 +635,7 @@
                 }
             ],
             "responseHashes": [
-                "efa3302c84c354e5193a02ec7bfdd828d87a37ac68810e714ecd084bf7cfb761"
+                "94422eccf5e9fa4e736d8eb486711660fe8fceccf0bf782d11ab818c9245ef14"
             ],
             "type": "Document",
             "firstPartyCookies": {},
@@ -536,7 +673,7 @@
             ]
         },
         {
-            "rule": "bloomberga\\.com\\/s3\\/compassplatform\\/_next\\/static\\/css\\/8010cfc18b4ef0c4\\.css",
+            "rule": "bloomberga\\.com\\/s3\\/compassplatform\\/_next\\/static\\/css\\/134b0e4daa942679\\.css",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -552,7 +689,7 @@
                 }
             ],
             "responseHashes": [
-                "9e5dc3f95fa6bd02003a7184a8d9474910a926fa41bc5d7ceeccc639720c6893"
+                "02f83b286e1eb3b537f358798c803385b60abf4a46575c42b90351968d606ba5"
             ],
             "type": "Stylesheet",
             "firstPartyCookies": {},
@@ -644,7 +781,7 @@
             ]
         },
         {
-            "rule": "bloomberga\\.com\\/s3\\/compassplatform\\/_next\\/static\\/chunks\\/5458\\.f53bee9c34783205\\.js",
+            "rule": "bloomberga\\.com\\/s3\\/compassplatform\\/_next\\/static\\/chunks\\/5458\\.ced28432faa4503a\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -660,7 +797,7 @@
                 }
             ],
             "responseHashes": [
-                "6fc344bde6f3ee773588df15c5cfbec0aa48738ca705d816a6b3ab1ee9adb813"
+                "77a7eaf5ecc2d92e1dd9901522754622b4d135032c907b5d3cdc76ce64820f83"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -671,7 +808,7 @@
             ]
         },
         {
-            "rule": "bloomberga\\.com\\/s3\\/compassplatform\\/_next\\/static\\/chunks\\/webpack-e8badb4cc6048a4c\\.js",
+            "rule": "bloomberga\\.com\\/s3\\/compassplatform\\/_next\\/static\\/chunks\\/webpack-95f1d0667e98f18e\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -687,7 +824,7 @@
                 }
             ],
             "responseHashes": [
-                "d759238451f9f1389dd1250274ef759cc6e6f3e039985bf66c7bcbad1af6bd60"
+                "999718c932261b6762c6e6d4a8d6ebebb93f2611395b7428712d43f77cbdee80"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -806,7 +943,7 @@
             ]
         },
         {
-            "rule": "bloomberga\\.com\\/s3\\/compassplatform\\/_next\\/static\\/chunks\\/3254-20a215980491095e\\.js",
+            "rule": "bloomberga\\.com\\/s3\\/compassplatform\\/_next\\/static\\/chunks\\/4477-2ba086a5578de807\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -822,7 +959,7 @@
                 }
             ],
             "responseHashes": [
-                "742b97078d895dcaff6e40eddb5aa62a255764b7f64b33e3db19dca38f77a2b8"
+                "38ea3089c23b05fad0894359336c30bd83e8d9e0e23357f4fba4f8fbb2dd4c75"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -860,7 +997,7 @@
             ]
         },
         {
-            "rule": "bloomberga\\.com\\/s3\\/compassplatform\\/_next\\/static\\/chunks\\/5904-bad810c2ae5cb803\\.js",
+            "rule": "bloomberga\\.com\\/s3\\/compassplatform\\/_next\\/static\\/chunks\\/6727-d92081367068b76e\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -876,7 +1013,7 @@
                 }
             ],
             "responseHashes": [
-                "80f14b070de30338238db957bcaa7927865100b455bf06d4a815f7df18d80538"
+                "b4e9ed40393a0a3eb5b2616b56f56b10f6146cf81b4f7fca0cf000d6e4cdd1db"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -887,7 +1024,7 @@
             ]
         },
         {
-            "rule": "bloomberga\\.com\\/s3\\/compassplatform\\/_next\\/static\\/chunks\\/1657-4005da632a51708b\\.js",
+            "rule": "bloomberga\\.com\\/s3\\/compassplatform\\/_next\\/static\\/chunks\\/1657-fab8d7743c510cde\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -903,7 +1040,7 @@
                 }
             ],
             "responseHashes": [
-                "65e63e8e4a287f41951b225464074116d5ab26a081a9d3c3fe191861abc3a17c"
+                "2114fb78026c20db08642e8071e52beac030272fa37e04905799727e1b06d344"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -914,7 +1051,7 @@
             ]
         },
         {
-            "rule": "bloomberga\\.com\\/s3\\/compassplatform\\/_next\\/static\\/chunks\\/pages\\/ads\\/%5Badtype%5D\\/%5Buid%5D-dba378737667d172\\.js",
+            "rule": "bloomberga\\.com\\/s3\\/compassplatform\\/_next\\/static\\/chunks\\/pages\\/ads\\/%5Badtype%5D\\/%5Buid%5D-2b47f716ada9619c\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -930,7 +1067,7 @@
                 }
             ],
             "responseHashes": [
-                "f6299c20fa99c907ffa4842e76b5f8d43a5916e530ddf350224f46183b7f5c96"
+                "5a057bdd4f48b136233a0faaaf127957655157453bf53fcffdaa405022275440"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -941,7 +1078,7 @@
             ]
         },
         {
-            "rule": "bloomberga\\.com\\/s3\\/compassplatform\\/_next\\/static\\/XYGLwQViEDQ3Yw1m-yZWZ\\/_buildManifest\\.js",
+            "rule": "bloomberga\\.com\\/s3\\/compassplatform\\/_next\\/static\\/nrz2BSge1OXywdhnkyT7H\\/_buildManifest\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -957,7 +1094,7 @@
                 }
             ],
             "responseHashes": [
-                "228539d5f7437ec5c1783d1aca0014a84d5feeeac924c234cc74ff68a5109813"
+                "8dbfd1e80095b0ee56acb76c139235d5736885aa99a15272151741b2b5d479a4"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -968,7 +1105,7 @@
             ]
         },
         {
-            "rule": "bloomberga\\.com\\/s3\\/compassplatform\\/_next\\/static\\/XYGLwQViEDQ3Yw1m-yZWZ\\/_ssgManifest\\.js",
+            "rule": "bloomberga\\.com\\/s3\\/compassplatform\\/_next\\/static\\/nrz2BSge1OXywdhnkyT7H\\/_ssgManifest\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -1001,29 +1138,29 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.9349112426035503
+            "prevalence": 0.900497512437811
         },
         {
             "domain": "bwbx.io",
-            "prevalence": 0.05917159763313609
+            "prevalence": 0.0945273631840796
         },
         {
             "domain": "doubleclick.net",
-            "prevalence": 0.005917159763313609
+            "prevalence": 0.004975124378109453
         }
     ],
     "types": {
-        "Script": 40,
-        "Font": 10,
-        "Fetch": 10,
+        "Script": 50,
         "Ping": 2,
-        "Document": 2,
-        "Stylesheet": 6
+        "Font": 10,
+        "Fetch": 8,
+        "Stylesheet": 8,
+        "Document": 2
     },
     "nameservers": [
-        "dns2.p07.nsone.net",
-        "dns1.p07.nsone.net",
-        "dns3.p07.nsone.net",
-        "dns4.p07.nsone.net"
+        "dns1.p01.nsone.net",
+        "dns2.p01.nsone.net",
+        "dns3.p01.nsone.net",
+        "dns4.p01.nsone.net"
     ]
 }

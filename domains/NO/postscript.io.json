@@ -4,14 +4,72 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.0001,
-    "sites": 1,
+    "prevalence": 0.000201,
+    "sites": 2,
     "subdomains": [
-        "sdk"
+        "sdk",
+        "sdk-api"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "postscript\\.io\\/sdk\\.bundle\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 1,
+            "subdomains": [
+                "sdk"
+            ],
+            "apis": {
+                "PerformanceTiming.prototype.navigationStart": 2,
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2,
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "a89ae88e9926944d84dcec6a786c3668367ebe4e563493be0be5c86473a29148"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_ps_session": {
+                    "ttl": 86407,
+                    "length": 21,
+                    "prevalence": 0.0002008838891120932,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "silca.cc",
+                "www.epicgardening.com"
+            ]
+        },
+        {
+            "rule": "postscript\\.io\\/sdk\\/config",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sdk-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "ea2e8d1e5c031a55125e0f1aec4e58c2b2665f08e5f6e143cb270326467920e6"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "silca.cc",
+                "www.epicgardening.com"
+            ]
+        },
         {
             "rule": "postscript\\.io\\/desktop\\.html",
             "cookies": 0,
@@ -27,30 +85,110 @@
             "type": "Document",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "_ps_session": 0.00020090406830738323
+                "_ps_session": 0.0002008838891120932
             },
             "exampleSites": [
-                "epicgardening.com",
+                "silca.cc",
+                "www.epicgardening.com"
+            ]
+        },
+        {
+            "rule": "postscript\\.io\\/desktop",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sdk"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "ed455c446a7d5dce7d54021f47950e3572c696b6c5e822d8ee8facf0a5a3e91e"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_ps_session": 0.0002008838891120932
+            },
+            "exampleSites": [
+                "silca.cc",
+                "www.epicgardening.com"
+            ]
+        },
+        {
+            "rule": "postscript\\.io\\/desktop\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sdk"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "a0305b38fb5ca512095ee76ca36207866983f67a84a69d9287cd20cbf5db5b73"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "silca.cc",
+                "www.epicgardening.com"
+            ]
+        },
+        {
+            "rule": "postscript\\.io\\/desktop\\.bundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "sdk"
+            ],
+            "apis": {
+                "PerformanceTiming.prototype.navigationStart": 2,
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "b4b7f7aa9129f792ba7586e1249a62c3126b1b1da445e72537ca15b2d3f6c3e5"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_ps_session": 0.0002008838891120932
+            },
+            "exampleSites": [
+                "silca.cc",
                 "www.epicgardening.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0001,
+    "cookies": 0.000201,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.75
+        },
+        {
+            "domain": "shopify.com",
+            "prevalence": 0.25
         }
     ],
     "types": {
-        "Document": 2
+        "Script": 4,
+        "Fetch": 2,
+        "Document": 4,
+        "Stylesheet": 2
     },
     "nameservers": [
-        "ns-1106.awsdns-10.org",
-        "ns-448.awsdns-56.com",
         "ns-1021.awsdns-63.net",
-        "ns-2022.awsdns-60.co.uk"
+        "ns-1106.awsdns-10.org",
+        "ns-2022.awsdns-60.co.uk",
+        "ns-448.awsdns-56.com"
     ]
 }

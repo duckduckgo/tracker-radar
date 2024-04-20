@@ -137,11 +137,13 @@
         {
             "rule": "mypurecloud\\.ie\\/messenger\\/messenger-renderer\\.html",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "apps"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
             "sites": 3,
             "prevalence": 0.000301,
             "cnames": [],
@@ -149,31 +151,6 @@
                 "659ba08a409e32ea5cdf80bbaba138b7c14a6eb2d35515b11e497e66c508f6fe"
             ],
             "type": "Document",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "komplett.no",
-                "www.komplett.no",
-                "www.komplettbedrift.no"
-            ]
-        },
-        {
-            "rule": "mypurecloud\\.ie\\/messenger\\/newrelic\\/newrelic-agent\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "apps"
-            ],
-            "apis": {
-                "Navigator.prototype.userAgent": 3
-            },
-            "sites": 3,
-            "prevalence": 0.000301,
-            "cnames": [],
-            "responseHashes": [
-                "0d288691da07adf5dccc6f855b849e8f3ddb79d708f46b03b2ac0afd2193fb70"
-            ],
-            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -198,6 +175,31 @@
             "cnames": [],
             "responseHashes": [
                 "d9401522ae14c6b7320184aa7f06d8bdc29a29818c96e34611a3a74f6d8cac5c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "komplett.no",
+                "www.komplett.no",
+                "www.komplettbedrift.no"
+            ]
+        },
+        {
+            "rule": "mypurecloud\\.ie\\/messenger\\/newrelic\\/newrelic-agent\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "apps"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [
+                "0d288691da07adf5dccc6f855b849e8f3ddb79d708f46b03b2ac0afd2193fb70"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -393,8 +395,7 @@
             "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [
-                "7e01f184374c212d1aa48c88b830aaab9aa5c5b3b7dc4bf17925693b3de9a951",
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                "7e01f184374c212d1aa48c88b830aaab9aa5c5b3b7dc4bf17925693b3de9a951"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -438,7 +439,11 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.75
+        },
+        {
+            "domain": "go-mpulse.net",
+            "prevalence": 0.25
         }
     ],
     "types": {
@@ -447,9 +452,9 @@
         "Document": 6
     },
     "nameservers": [
-        "ns-1426.awsdns-50.org",
-        "ns-1704.awsdns-21.co.uk",
         "ns-82.awsdns-10.com",
-        "ns-859.awsdns-43.net"
+        "ns-1426.awsdns-50.org",
+        "ns-859.awsdns-43.net",
+        "ns-1704.awsdns-21.co.uk"
     ]
 }

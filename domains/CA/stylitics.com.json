@@ -4,10 +4,12 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000302,
-    "sites": 3,
+    "prevalence": 0.000603,
+    "sites": 6,
     "subdomains": [
-        "web-assets"
+        "web-assets",
+        "widget-api",
+        "datastream"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -20,16 +22,16 @@
                 "web-assets"
             ],
             "apis": {
-                "Document.cookie getter": 1,
-                "window.localStorage": 1,
-                "Navigator.prototype.userAgent": 1,
-                "Navigator.prototype.maxTouchPoints": 1
+                "window.localStorage": 3,
+                "Document.cookie getter": 3,
+                "Navigator.prototype.userAgent": 3,
+                "Navigator.prototype.maxTouchPoints": 3
             },
-            "sites": 3,
-            "prevalence": 0.000302,
+            "sites": 5,
+            "prevalence": 0.000503,
             "cnames": [],
             "responseHashes": [
-                "b36a70bd1f5bd50d6807ac55d9f86d9d30d7341f1c57eff040af721c80c3065b"
+                "2d56a28dca20c054c1bf7952b93610f1df9c8f80b053c11b7bd563a803b56e6e"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -37,6 +39,8 @@
             "exampleSites": [
                 "childrensplace.com",
                 "www.cleo.ca",
+                "www.newbalance.ca",
+                "www.newbalance.com",
                 "www.rickis.com"
             ]
         },
@@ -52,7 +56,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "3b614dfbef2363a473e9486bcc61b7e3ba647a2c6513b6ad34b8db113f90e018"
+                "f5fbd1d48963f07e9f994e06b19b88cd3d51b9c5b6ff3b6f19569d5be673c3f7"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -60,6 +64,77 @@
             "exampleSites": [
                 "cleo.ca",
                 "www.rickis.com"
+            ]
+        },
+        {
+            "rule": "stylitics\\.com\\/v3-classic\\/0aaf42cd4e\\/classic\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "web-assets"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "e9ab43f5a7bcb51ba6bb4e6af11fed86b2c417595d9e347b09368feff31f20cb"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cleo.ca",
+                "www.newbalance.ca",
+                "www.newbalance.com"
+            ]
+        },
+        {
+            "rule": "stylitics\\.com\\/api\\/outfits",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "widget-api"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "b36f0c01ab46543ffb2e67f2ec6aa2de6d77d1efae45830e6a42b808f2505179",
+                "daef2af7f6decae7c00041e77b5cac77026918d3ed4bfde3598f27c90fc4fb65"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cleo.ca",
+                "www.newbalance.ca",
+                "www.newbalance.com"
+            ]
+        },
+        {
+            "rule": "stylitics\\.com\\/api\\/engagements",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "datastream"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000402,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cleo.ca",
+                "www.newbalance.ca",
+                "www.newbalance.com",
+                "www.revolve.com"
             ]
         }
     ],
@@ -69,16 +144,31 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.9090909090909091
+        },
+        {
+            "domain": "dynatrace.com",
+            "prevalence": 0.030303030303030304
+        },
+        {
+            "domain": "revolveassets.com",
+            "prevalence": 0.030303030303030304
+        },
+        {
+            "domain": "go-mpulse.net",
+            "prevalence": 0.030303030303030304
         }
     ],
     "types": {
-        "Script": 5
+        "Script": 7,
+        "Stylesheet": 3,
+        "Fetch": 3,
+        "Ping": 4
     },
     "nameservers": [
+        "ns1.dnsimple.com",
         "ns2.dnsimple.com",
         "ns3.dnsimple.com",
-        "ns4.dnsimple.com",
-        "ns1.dnsimple.com"
+        "ns4.dnsimple.com"
     ]
 }

@@ -7,10 +7,11 @@
     "prevalence": 0.0000204,
     "sites": 3,
     "subdomains": [
-        "spenden"
+        "spenden",
+        "sentry"
     ],
     "cnames": [],
-    "fingerprinting": 2,
+    "fingerprinting": 3,
     "resources": [
         {
             "rule": "twingle\\.de\\/bundles\\/twinglepublic\\/fonts\\/twingle\\.woff",
@@ -24,7 +25,7 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "39a0d347c9aa2f5ca1af281b41261e71b66fe13c84c0bc611b0b5d0592b3c97d"
+                "d7456e44390fbc6a8f2b99c039acb28b4d05435eeca79c131851d38d70cacfc8"
             ],
             "type": "Font",
             "firstPartyCookies": {},
@@ -105,7 +106,7 @@
         {
             "rule": "twingle\\.de\\/bundles\\/twinglepublic\\/donation-app\\/dist\\/main\\.js",
             "cookies": 0,
-            "fingerprinting": 1,
+            "fingerprinting": 2,
             "subdomains": [
                 "spenden"
             ],
@@ -114,7 +115,10 @@
                 "Navigator.prototype.language": 2,
                 "Navigator.prototype.userAgent": 2,
                 "Navigator.prototype.languages": 2,
-                "window.innerWidth": 2
+                "window.innerWidth": 2,
+                "Navigator.prototype.connection": 2,
+                "Navigator.prototype.deviceMemory": 2,
+                "Navigator.prototype.hardwareConcurrency": 2
             },
             "sites": 2,
             "prevalence": 0.0000136,
@@ -151,6 +155,28 @@
                 "netzpolitik.org",
                 "www.finanztip.de"
             ]
+        },
+        {
+            "rule": "twingle\\.de\\/api\\/1\\/envelope\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sentry"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "36bba39bb097ae21293663dc5896baf5e6d04840b9af87cf111e8f5f2556dd11"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "netzpolitik.org",
+                "www.finanztip.de"
+            ]
         }
     ],
     "categories": [],
@@ -159,21 +185,22 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.75
+            "prevalence": 0.8
         },
         {
             "domain": "consentmanager.net",
-            "prevalence": 0.25
+            "prevalence": 0.2
         }
     ],
     "types": {
         "Font": 4,
         "Script": 6,
-        "XHR": 2
+        "XHR": 2,
+        "Fetch": 2
     },
     "nameservers": [
-        "ns3.inwx.eu",
         "ns2.inwx.de",
+        "ns3.inwx.eu",
         "ns.inwx.de"
     ]
 }

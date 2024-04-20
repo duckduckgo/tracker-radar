@@ -7,11 +7,12 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.001,
-    "sites": 10,
+    "prevalence": 0.0011,
+    "sites": 11,
     "subdomains": [
         "ethereumfoundation",
-        "digitalmeal",
+        "humane",
+        "oilprice",
         "ignytseo",
         "financegovau",
         "ibisworld",
@@ -23,12 +24,67 @@
     "fingerprinting": 2,
     "resources": [
         {
+            "rule": "matomo\\.cloud\\/matomo\\.js",
+            "cookies": 0.0001,
+            "fingerprinting": 2,
+            "subdomains": [
+                "ethereumfoundation",
+                "humane"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.userAgent": 2,
+                "window.innerHeight": 1,
+                "window.innerWidth": 1,
+                "Navigator.prototype.vendor": 2,
+                "Document.cookie getter": 2,
+                "window.name": 2,
+                "NavigatorUAData.prototype.brands": 2,
+                "NavigatorUAData.prototype.platform": 2,
+                "NavigatorUAData.prototype.getHighEntropyValues": 2,
+                "Navigator.prototype.mimeTypes": 2,
+                "Navigator.prototype.javaEnabled": 2,
+                "Navigator.prototype.cookieEnabled": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "Navigator.prototype.platform": 1,
+                "Document.cookie setter": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "a32d06b250b15021d6bcd2119182e6e395e8896f58255ee42f1b94ee3198448c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_pk_id.4.2059": {
+                    "ttl": 33955207,
+                    "length": 28,
+                    "prevalence": 0.00010034115994380895,
+                    "uniqueness": 1
+                },
+                "_pk_ses.4.2059": {
+                    "ttl": 1806,
+                    "length": 1,
+                    "prevalence": 0.00010034115994380895,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ethereum.org",
+                "humane.com"
+            ]
+        },
+        {
             "rule": "matomo\\.cloud\\/matomo\\.php",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
                 "ethereumfoundation",
-                "digitalmeal",
+                "humane",
+                "oilprice",
                 "ignytseo",
                 "financegovau",
                 "ibisworld",
@@ -37,11 +93,12 @@
                 "convivial"
             ],
             "apis": {},
-            "sites": 8,
-            "prevalence": 0.000803,
+            "sites": 9,
+            "prevalence": 0.000903,
             "cnames": [],
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "481beea6f83c5c784276df3bfb8693cc60c0ce8ef0a2cb8f47d624e2d6c9b076",
                 "8b3870645ef8115a00e25ec8b1c7f303d7faa4b23520792fbaf236151914f19f"
             ],
             "type": "Ping",
@@ -49,7 +106,8 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "ethereum.org",
-                "stratagreen.com.au",
+                "humane.com",
+                "oilprice.com",
                 "www.doorsplus.com.au",
                 "www.finance.gov.au",
                 "www.ibisworld.com",
@@ -72,8 +130,8 @@
             "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [
-                "411437df0d4e3ef2e77929b3115d5b0a18196af09a57d071aa13edce3b37535c",
-                "1d36f3af8462f240c8cc851b0f1baf3f86415542868122517d50c46e1e903fb3"
+                "c0a7823b60cb40b4e0335ae2031ba654b61b994d570f45c5052a8df912465b3f",
+                "fc99aae8e8ae46535a5c30db3891302945fb905acae714d9cc0280441ca2d7fc"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -87,29 +145,33 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000703,
+    "cookies": 0.000602,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.5454545454545454
+            "prevalence": 0.5333333333333333
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.36363636363636365
+            "prevalence": 0.3333333333333333
+        },
+        {
+            "domain": "hyros.com",
+            "prevalence": 0.06666666666666667
         },
         {
             "domain": "mediapulse.com.au",
-            "prevalence": 0.09090909090909091
+            "prevalence": 0.06666666666666667
         }
     ],
     "types": {
-        "Ping": 8,
-        "Script": 3
+        "Script": 5,
+        "Ping": 9
     },
     "nameservers": [
-        "ns-1060.awsdns-04.org",
-        "ns-302.awsdns-37.com",
         "ns-1933.awsdns-49.co.uk",
-        "ns-616.awsdns-13.net"
+        "ns-302.awsdns-37.com",
+        "ns-616.awsdns-13.net",
+        "ns-1060.awsdns-04.org"
     ]
 }

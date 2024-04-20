@@ -12,6 +12,7 @@
     "prevalence": 0.0001,
     "sites": 1,
     "subdomains": [
+        "stats",
         "cdn",
         "core-api"
     ],
@@ -23,10 +24,39 @@
         {
             "original": "core-api.nba.com",
             "resolved": "core-api.nba.com.edgekey.net"
+        },
+        {
+            "original": "stats.nba.com",
+            "resolved": "stats.nba.com.edgekey.net"
         }
     ],
     "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "nba\\.com\\.edgekey\\.net\\/stats\\/boxscoresummaryv3",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "stats"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "stats.nba.com",
+                    "resolved": "stats.nba.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nba.com",
+                "www.nba.com"
+            ]
+        },
         {
             "rule": "nba\\.com\\.edgekey\\.net\\/static\\/json\\/liveData\\/odds\\/odds_todaysGames\\.json",
             "cookies": 0.000201,
@@ -44,7 +74,7 @@
                 }
             ],
             "responseHashes": [
-                "0617487d25358dd3086a9a1ab841032b1dc4520c33d43f08775ad5d69b75fb9d"
+                "00820dba0c28f382dcc6dd2da5e6ad48d4096167a6e14b837fbc476a251cc3d5"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -71,34 +101,7 @@
                 }
             ],
             "responseHashes": [
-                "7736b279202f1a4a56982f366027dfb7ef2ecdce758e0974ddde1e862d1264c1"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "nba.com",
-                "www.nba.com"
-            ]
-        },
-        {
-            "rule": "nba\\.com\\.edgekey\\.net\\/static\\/json\\/liveData\\/channels\\/v2\\/channels_00\\.json",
-            "cookies": 0.000201,
-            "fingerprinting": 0,
-            "subdomains": [
-                "cdn"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [
-                {
-                    "original": "cdn.nba.com",
-                    "resolved": "cdn.nba.com.edgekey.net"
-                }
-            ],
-            "responseHashes": [
-                "4892bb643aae617171c9030befc8236d79718f1645a9ec3b912d6ce11aa3763e"
+                "014abf6d0d086f7da87aa57916ca9c9376cd2c4376b26bf8ff9a19350d0ef01c"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -125,9 +128,36 @@
                 }
             ],
             "responseHashes": [
-                "94996c253a1228f1a674122f18fd926853fba8201c0df8577dd804f31f2b0e91"
+                "af4eeac8a1454e5dcae4ba5341723dfa20d9fb31807acf400c4b8776cf7754b8"
             ],
             "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nba.com",
+                "www.nba.com"
+            ]
+        },
+        {
+            "rule": "nba\\.com\\.edgekey\\.net\\/static\\/json\\/liveData\\/channels\\/v2\\/channels_00\\.json",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "cdn.nba.com",
+                    "resolved": "cdn.nba.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "750ac62a62cf011a9c24ce3349b30364482e8ff6c9e463c131ef0e6acb03378b"
+            ],
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -141,12 +171,16 @@
     "cookies": 0.0001,
     "topInitiators": [
         {
+            "domain": "script.ac",
+            "prevalence": 0.875
+        },
+        {
             "domain": "usestoryteller.com",
-            "prevalence": 1
+            "prevalence": 0.125
         }
     ],
     "types": {
-        "Fetch": 6,
+        "Fetch": 8,
         "XHR": 2
     },
     "nameservers": []

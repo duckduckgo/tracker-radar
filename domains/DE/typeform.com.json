@@ -7,22 +7,25 @@
     "source": [
         "DuckDuckGo-DE"
     ],
-    "prevalence": 0.000301,
-    "sites": 3,
+    "prevalence": 0.000201,
+    "sites": 2,
     "subdomains": [
-        "embed"
+        "embed",
+        "rudderstack.cdp.prod.data"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "typeform\\.com\\/next\\/embed\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "embed"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 1
+            },
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
@@ -33,50 +36,75 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "autobatterienbilliger.de",
+                "fandom.com",
                 "sudoku.zeit.de"
             ]
         },
         {
-            "rule": "typeform\\.com\\/next\\/css\\/popup\\.css",
+            "rule": "typeform\\.com\\/v1\\/track",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "embed"
+                "rudderstack.cdp.prod.data"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fandom.com",
+                "diablo.fandom.com"
+            ]
+        },
+        {
+            "rule": "typeform\\.com\\/v1\\/track",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rudderstack.cdp.prod.data"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "0e0701e0ad36569c93a83b77b91cbaca1cdf871945707d6b7d15bd809b2fff85"
+                "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3"
             ],
-            "type": "Stylesheet",
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "autobatterienbilliger.de",
-                "sudoku.zeit.de"
+                "fandom.com",
+                "diablo.fandom.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.0001,
     "topInitiators": [
         {
+            "domain": "rudderlabs.com",
+            "prevalence": 0.625
+        },
+        {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.375
         }
     ],
     "types": {
         "Script": 2,
-        "Stylesheet": 2
+        "Preflight": 2,
+        "XHR": 2
     },
     "nameservers": [
         "ns-14.awsdns-01.com",
-        "ns-1725.awsdns-23.co.uk",
         "ns-1444.awsdns-52.org",
+        "ns-1725.awsdns-23.co.uk",
         "ns-788.awsdns-34.net"
     ]
 }

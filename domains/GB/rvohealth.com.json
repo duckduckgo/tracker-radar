@@ -4,11 +4,12 @@
     "source": [
         "DuckDuckGo-GB"
     ],
-    "prevalence": 0.000401,
+    "prevalence": 0.000402,
     "sites": 4,
     "subdomains": [
         "ingest.make",
-        "cdn"
+        "cdn",
+        "navi"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -22,12 +23,12 @@
             ],
             "apis": {},
             "sites": 4,
-            "prevalence": 0.000401,
+            "prevalence": 0.000402,
             "cnames": [],
             "responseHashes": [
-                "48b869ae7af632e5151f5c1ba78c641acf247e6f1538c7f72b3a477821950deb",
-                "a1acb15d567ecebffd3bec517aa243a375b8aa0edc073e180b01be76940d4b70",
-                "05693f988f9de7f78b5ce17365c67daad47d1343914f93ae4387163ec9a680a8"
+                "2f039c1d6986a2d29dc9e6e9d1ddb68d7f99d75e6a4c88d5d9077280b05f2120",
+                "305e858c0471a21137ac872139e6444bf0ec3a8cb3f78d693b7fcf682b72493c",
+                "5431972bf36f566feadff68eae7e8fa72a07aea52e96f600ffc5cee0cf185e6c"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -48,7 +49,7 @@
             ],
             "apis": {},
             "sites": 4,
-            "prevalence": 0.000401,
+            "prevalence": 0.000402,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
@@ -70,7 +71,7 @@
             ],
             "apis": {},
             "sites": 4,
-            "prevalence": 0.000401,
+            "prevalence": 0.000402,
             "cnames": [],
             "responseHashes": [
                 "f74071d4a8436cc22b7e436067a7c97f24b19279ec686dd5e14530818c76e945"
@@ -94,12 +95,12 @@
             ],
             "apis": {},
             "sites": 4,
-            "prevalence": 0.000401,
+            "prevalence": 0.000402,
             "cnames": [],
             "responseHashes": [
-                "7437f413d6e2199127ecd65a6f73b7d2a83232f2e51a94e2031d190a3468d8be",
-                "1d7871c44293847e52f69908729d24f290aa6a2c131de7ce3521b70276e55280",
-                "d56fedcf17ab0b04214407287bc44dbf5ed4a5fbd0b40f5c58e17e8cb803ed68"
+                "537540bfb3eefe672236e3d0f3f5f05e76b22cb5714c0a3cf24a71ab12f5b30e",
+                "12ddaad14c5d2dca0e0458ac0c79bed25bd662c4dde34d59e1b25a08e0b17a39",
+                "95a58bc01c210f3578c2838a7d4bc1b045ba6062c20fcdb235a23132a10c1d97"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -113,16 +114,18 @@
         },
         {
             "rule": "rvohealth\\.com\\/cohesion\\/xs1\\.html",
-            "cookies": 0,
+            "cookies": 0.000201,
             "fingerprinting": 1,
             "subdomains": [
                 "cdn"
             ],
             "apis": {
-                "Date.prototype.getTime": 4
+                "Date.prototype.getTime": 4,
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2
             },
             "sites": 4,
-            "prevalence": 0.000401,
+            "prevalence": 0.000402,
             "cnames": [],
             "responseHashes": [
                 "8edbaff0f06b9a7dd980e4d8bc65c8a024273d78a7018632ba6969d3cea43c45"
@@ -140,13 +143,15 @@
         {
             "rule": "rvohealth\\.com\\/cohesion\\/xs2\\.html",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "cdn"
             ],
-            "apis": {},
+            "apis": {
+                "Document.cookie getter": 1
+            },
             "sites": 4,
-            "prevalence": 0.000401,
+            "prevalence": 0.000402,
             "cnames": [],
             "responseHashes": [
                 "9ae13ddab63acb296700ae3579ebf12ca93759bcf6285822acc5f831fc6f62f0"
@@ -170,7 +175,7 @@
             ],
             "apis": {},
             "sites": 4,
-            "prevalence": 0.000401,
+            "prevalence": 0.000402,
             "cnames": [],
             "responseHashes": [
                 "27badc983df1780b60c2b3fa9d3a19a00e46aac798451f0febdca52920faaddf"
@@ -184,11 +189,33 @@
                 "www.healthline.com",
                 "www.medicalnewstoday.com"
             ]
+        },
+        {
+            "rule": "rvohealth\\.com\\/rum",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "navi"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "1866961a029c65376fefb7f2ba1e6187e09ff50ea58d97dedfd72c197947d002"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "greatist.com",
+                "psychcentral.com"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.000201,
     "topInitiators": [
         {
             "domain": "first party",
@@ -199,12 +226,13 @@
         "XHR": 12,
         "Preflight": 4,
         "Script": 4,
-        "Document": 8
+        "Document": 8,
+        "Image": 2
     },
     "nameservers": [
-        "ns-675.awsdns-20.net",
-        "ns-454.awsdns-56.com",
+        "ns-1078.awsdns-06.org",
         "ns-1652.awsdns-14.co.uk",
-        "ns-1078.awsdns-06.org"
+        "ns-454.awsdns-56.com",
+        "ns-675.awsdns-20.net"
     ]
 }

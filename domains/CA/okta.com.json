@@ -7,9 +7,10 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000604,
-    "sites": 6,
+    "prevalence": 0.00101,
+    "sites": 10,
     "subdomains": [
+        "sas.customdomains",
         "onekinship",
         "astminternational.customdomains",
         "kohler-b2c.customdomains",
@@ -21,6 +22,10 @@
         {
             "original": "auth.kohler.ca",
             "resolved": "kohler-b2c.customdomains.okta.com"
+        },
+        {
+            "original": "auth.sas.com",
+            "resolved": "sas.customdomains.okta.com"
         },
         {
             "original": "iam.astm.org",
@@ -41,6 +46,33 @@
     ],
     "fingerprinting": 0,
     "resources": [
+        {
+            "rule": "okta\\.com\\/api\\/v1\\/users\\/me",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sas.customdomains"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "auth.sas.com",
+                    "resolved": "sas.customdomains.okta.com"
+                }
+            ],
+            "responseHashes": [
+                "c215c45427e3f612ff00a8186d30b31f4f6ef556353a725a89ca3db16de7b5e7"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sas.com",
+                "support.sas.com"
+            ]
+        },
         {
             "rule": "okta\\.com\\/api\\/v1\\/sessions\\/me",
             "cookies": 0.000402,
@@ -107,7 +139,7 @@
                 }
             ],
             "responseHashes": [
-                "a094f801663e8eca9a25e94dfa7b35d3dceaeeb2be5b124720302d883638f949"
+                "1d0fb14a82e0a4b94758e4285e907cc569bc6507dc24cf064c88f8318c8b94c6"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -141,7 +173,7 @@
                 }
             ],
             "responseHashes": [
-                "ccc5ec9198b8e515fed76642fec0cf56a491b79fa688b2e70be25294dc2d7fc1"
+                "433dd7ebde5b5a2db3d175e223726481d58bbea278fbb577b244a9c805e0ada6"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -154,26 +186,34 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000604,
+    "cookies": 0.00101,
     "topInitiators": [
         {
+            "domain": "adobedtm.com",
+            "prevalence": 0.3333333333333333
+        },
+        {
+            "domain": "aapdev.org",
+            "prevalence": 0.3333333333333333
+        },
+        {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.3333333333333333
         }
     ],
     "types": {
+        "XHR": 4,
         "Preflight": 4,
-        "Fetch": 4,
-        "XHR": 2
+        "Fetch": 4
     },
     "nameservers": [
-        "ns-684.awsdns-21.net",
-        "ns-1563.awsdns-03.co.uk",
-        "edns5.ultradns.net",
-        "edns5.ultradns.org",
-        "ns-285.awsdns-35.com",
         "edns5.ultradns.biz",
         "edns5.ultradns.com",
-        "ns-1459.awsdns-54.org"
+        "edns5.ultradns.net",
+        "edns5.ultradns.org",
+        "ns-1459.awsdns-54.org",
+        "ns-1563.awsdns-03.co.uk",
+        "ns-285.awsdns-35.com",
+        "ns-684.awsdns-21.net"
     ]
 }

@@ -9,19 +9,82 @@
     "source": [
         "DuckDuckGo-GB"
     ],
-    "prevalence": 0.000502,
-    "sites": 5,
+    "prevalence": 0.000803,
+    "sites": 8,
     "subdomains": [
-        "foxus.tagger",
         "cdn",
-        "foxus.profiles.tagger",
-        "pdmp.profiles.tagger",
-        "foxus.dcapi.tagger",
-        "pdmp.dcapi.tagger"
+        "pdmp.papi-public.eu-central-1.tagger",
+        "foxus.papi-public.us-east-1.tagger",
+        "foxus.tagger",
+        "foxus.dcapi.tagger"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "opecloud\\.com\\/ope-pdmp\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "window.localStorage": 4,
+                "Date.prototype.getTimezoneOffset": 4,
+                "Screen.prototype.width": 4,
+                "Screen.prototype.height": 4,
+                "Screen.prototype.colorDepth": 4
+            },
+            "sites": 4,
+            "prevalence": 0.000402,
+            "cnames": [],
+            "responseHashes": [
+                "af7772706caeeb4d8d1089c5852e2f9f42ac3858d76563a4d6eda23dcc94a3f2"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "citethisforme.com",
+                "www.easybib.com",
+                "www.legacy.com",
+                "www.mathway.com"
+            ]
+        },
+        {
+            "rule": "opecloud\\.com\\/v1\\/targeting",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pdmp.papi-public.eu-central-1.tagger",
+                "foxus.papi-public.us-east-1.tagger"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000602,
+            "cnames": [],
+            "responseHashes": [
+                "16b07488d330caf5f8fafeeca1ae5646a60f3ce8f9f901b261fe7dae60bde418",
+                "e1dd30ecac260ea28aba1a649fbdd9760cf6253d18462cd4c7627f08fed54c0c",
+                "ead6822ab6eccbd203dd61cf100ef9b6142e4e374c2ba496a18a6c6506460641",
+                "eb3eec563e570ffc4db5c403cae314fd0595216318480e0ee17590c91a06a2bc",
+                "0e860437d7bb4fc3339e7870f6eed8f4eb6bb0882d229833732e71629ad22eaf"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_li_dcdm_c": 0.00010040160642570282,
+                "lotame_domain_check": 0.00020080321285140563
+            },
+            "exampleSites": [
+                "citethisforme.com",
+                "www.easybib.com",
+                "www.foxnews.com",
+                "www.legacy.com",
+                "www.mathway.com",
+                "www.salon.com"
+            ]
+        },
         {
             "rule": "opecloud\\.com\\/foxus\\/v2\\/uid",
             "cookies": 0,
@@ -45,116 +108,25 @@
             ]
         },
         {
-            "rule": "opecloud\\.com\\/ope-foxus\\.js",
-            "cookies": 0,
-            "fingerprinting": 2,
+            "rule": "opecloud\\.com\\/web\\/visit",
+            "cookies": 0.0001,
+            "fingerprinting": 0,
             "subdomains": [
-                "cdn"
+                "foxus.dcapi.tagger"
             ],
-            "apis": {
-                "window.localStorage": 2,
-                "Date.prototype.getTimezoneOffset": 2,
-                "Screen.prototype.width": 2,
-                "Screen.prototype.height": 2,
-                "Screen.prototype.colorDepth": 2
-            },
+            "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "d0f80ebefd2c8f46590f00c52dcdebb6107ec358b598018a47954ca5276e78b2"
+                "d7e83e28a04b537e64424546b14caf9b67bad2f28dabce68116e0d372319fa00"
             ],
-            "type": "Script",
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "foxnews.com",
                 "www.foxnews.com"
-            ]
-        },
-        {
-            "rule": "opecloud\\.com\\/v1\\/targeting",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "foxus.profiles.tagger",
-                "pdmp.profiles.tagger"
-            ],
-            "apis": {},
-            "sites": 4,
-            "prevalence": 0.000401,
-            "cnames": [],
-            "responseHashes": [
-                "c3813ae7346c8eeecb28fe1b94b4090047d8d80fb79b1ef7513d36ba00c9a4e1",
-                "b987e9b2c1a4ca282734658d3d6845135d5f14c4c6139ccf2065c4053dc26a1e",
-                "6b0624a7f935b25105bba0b655ae09403fbcfbd24e1ce57f1fc544278c91757c"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {
-                "_li_dcdm_c": 0.0002007226013649137,
-                "lotame_domain_check": 0.00010036130068245685
-            },
-            "exampleSites": [
-                "foxnews.com",
-                "www.legacy.com",
-                "www.mathway.com",
-                "www.salon.com"
-            ]
-        },
-        {
-            "rule": "opecloud\\.com\\/web\\/visit",
-            "cookies": 0.0001,
-            "fingerprinting": 0,
-            "subdomains": [
-                "foxus.dcapi.tagger",
-                "pdmp.dcapi.tagger"
-            ],
-            "apis": {},
-            "sites": 5,
-            "prevalence": 0.000502,
-            "cnames": [],
-            "responseHashes": [
-                "d7e83e28a04b537e64424546b14caf9b67bad2f28dabce68116e0d372319fa00",
-                "293551a28c5aa12199db2273a236c8e394bfd3865fc25c5b4682b54e208cb525"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "foxnews.com",
-                "www.foxnews.com",
-                "www.legacy.com",
-                "www.mathway.com",
-                "www.salon.com"
-            ]
-        },
-        {
-            "rule": "opecloud\\.com\\/ope-pdmp\\.js",
-            "cookies": 0,
-            "fingerprinting": 2,
-            "subdomains": [
-                "cdn"
-            ],
-            "apis": {
-                "window.localStorage": 2,
-                "Date.prototype.getTimezoneOffset": 2,
-                "Screen.prototype.width": 2,
-                "Screen.prototype.height": 2,
-                "Screen.prototype.colorDepth": 2
-            },
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "0a8723b1dce9933eeb3841541c1746cbf86b9b08b31e871d852fd63f96dfd41b"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "legacy.com",
-                "www.mathway.com"
             ]
         }
     ],
@@ -163,38 +135,42 @@
     "cookies": 0.0001,
     "topInitiators": [
         {
-            "domain": "knotch-cdn.com",
-            "prevalence": 0.36363636363636365
+            "domain": "first party",
+            "prevalence": 0.4
         },
         {
-            "domain": "first party",
-            "prevalence": 0.18181818181818182
+            "domain": "knotch-cdn.com",
+            "prevalence": 0.26666666666666666
         },
         {
             "domain": "atp.fox",
-            "prevalence": 0.18181818181818182
+            "prevalence": 0.06666666666666667
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.09090909090909091
+            "prevalence": 0.06666666666666667
         },
         {
             "domain": "studybreakmedia.com",
-            "prevalence": 0.09090909090909091
+            "prevalence": 0.06666666666666667
+        },
+        {
+            "domain": "kataweb.it",
+            "prevalence": 0.06666666666666667
         },
         {
             "domain": "fox.com",
-            "prevalence": 0.09090909090909091
+            "prevalence": 0.06666666666666667
         }
     ],
     "types": {
-        "Fetch": 11,
-        "Script": 4
+        "Script": 4,
+        "Fetch": 10
     },
     "nameservers": [
-        "ns-1454.awsdns-53.org",
         "ns-353.awsdns-44.com",
         "ns-899.awsdns-48.net",
-        "ns-1611.awsdns-09.co.uk"
+        "ns-1611.awsdns-09.co.uk",
+        "ns-1454.awsdns-53.org"
     ]
 }

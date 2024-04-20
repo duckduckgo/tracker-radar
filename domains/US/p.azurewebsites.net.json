@@ -9,14 +9,104 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000136,
-    "sites": 2,
+    "prevalence": 0.0000204,
+    "sites": 3,
     "subdomains": [
+        "prod-sm-corp.prod-servicelayer-ase",
+        "prod-sm-cdn.prod-servicelayer-ase",
         "rf-aisvesselmap-production.ase-bookit"
     ],
-    "cnames": [],
-    "fingerprinting": 0,
+    "cnames": [
+        {
+            "original": "cdn.servicemacusa.com",
+            "resolved": "prod-sm-cdn.prod-servicelayer-ase.p.azurewebsites.net"
+        },
+        {
+            "original": "corp.servicemacusa.com",
+            "resolved": "prod-sm-corp.prod-servicelayer-ase.p.azurewebsites.net"
+        }
+    ],
+    "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "p\\.azurewebsites\\.net\\/\\/api\\/corpmanagement\\/RenderWidget",
+            "cookies": 0.0000136,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prod-sm-corp.prod-servicelayer-ase"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "corp.servicemacusa.com",
+                    "resolved": "prod-sm-corp.prod-servicelayer-ase.p.azurewebsites.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "servicemacusa.com",
+                "lp-homepoint.servicemacusa.com"
+            ]
+        },
+        {
+            "rule": "p\\.azurewebsites\\.net\\/\\/api\\/corpmanagement\\/RenderWidget",
+            "cookies": 0.0000136,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prod-sm-corp.prod-servicelayer-ase"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "corp.servicemacusa.com",
+                    "resolved": "prod-sm-corp.prod-servicelayer-ase.p.azurewebsites.net"
+                }
+            ],
+            "responseHashes": [
+                "c77fb3b781873f16f6e52e5f6ff4b508960ce53694f57be4d7a634c959e76062"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "servicemacusa.com",
+                "lp-homepoint.servicemacusa.com"
+            ]
+        },
+        {
+            "rule": "p\\.azurewebsites\\.net\\/Content\\/cdn\\/ckeditor_4\\.13\\.1\\/plugins\\/tableselection\\/styles\\/tableselection\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prod-sm-cdn.prod-servicelayer-ase"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "cdn.servicemacusa.com",
+                    "resolved": "prod-sm-cdn.prod-servicelayer-ase.p.azurewebsites.net"
+                }
+            ],
+            "responseHashes": [
+                "4e9d6995e37ce82b7d76c8a250b91adcb8822bcce06a672d59eedbd4272ca347"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "servicemacusa.com",
+                "lp-homepoint.servicemacusa.com"
+            ]
+        },
         {
             "rule": "p\\.azurewebsites\\.net\\/home\\/boats",
             "cookies": 0,
@@ -29,7 +119,7 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "a364e728a28d1b9a7d04a25bfdd0a9bedfac6f363e00666fecc71dfc78e6fdaf"
+                "5db50d920631cb87a3f519498806344df21732340692f946dfa5b78d8513b742"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -44,7 +134,7 @@
         "CDN"
     ],
     "performance": {},
-    "cookies": 0.0000136,
+    "cookies": 0.0000204,
     "topInitiators": [
         {
             "domain": "first party",
@@ -52,7 +142,9 @@
         }
     ],
     "types": {
-        "XHR": 2
+        "Preflight": 2,
+        "XHR": 4,
+        "Stylesheet": 2
     },
     "nameservers": []
 }

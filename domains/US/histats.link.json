@@ -8,10 +8,53 @@
     "sites": 3,
     "subdomains": [],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
         {
-            "rule": "histats\\.link\\/matomo\\.php",
+            "rule": "histats\\.link\\/random-string\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [],
+            "apis": {
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "Navigator.prototype.language": 2,
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "2060ea6361315777b98005b5db141cd4eb6a16e4052abefdca8d28f11a17cd92"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gayvids.tube",
+                "gayvidsclub.com"
+            ]
+        },
+        {
+            "rule": "histats\\.link\\/api\\/send",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gayvids.tube",
+                "gayvidsclub.com"
+            ]
+        },
+        {
+            "rule": "histats\\.link\\/api\\/send",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [],
@@ -20,9 +63,9 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "d346801abbf9bb4e9e9a055239053d4ab5596514304f601a6c70604187acb744"
+                "e4262e6d65cae6ee3a4b93d89b0a8209f1cb936471683f2bc5d02a5dcb8b5c70"
             ],
-            "type": "Image",
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -41,7 +84,9 @@
         }
     ],
     "types": {
-        "Image": 2
+        "Script": 2,
+        "Preflight": 2,
+        "Fetch": 2
     },
     "nameservers": [
         "buck.ns.cloudflare.com",

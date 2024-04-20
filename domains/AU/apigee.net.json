@@ -9,19 +9,15 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.000602,
-    "sites": 6,
+    "prevalence": 0.000803,
+    "sites": 8,
     "subdomains": [
-        "accor-group-prod-prod",
+        "slnsw-prod",
         "cisco-dsc-prod",
         "bgl-web-prod",
         "mns-00.dn"
     ],
     "cnames": [
-        {
-            "original": "api.accor.com",
-            "resolved": "accor-group-prod-prod.apigee.net"
-        },
         {
             "original": "api.marksandspencer.com",
             "resolved": "mns-00.dn.apigee.net"
@@ -31,6 +27,10 @@
             "resolved": "bgl-web-prod.apigee.net"
         },
         {
+            "original": "apiv2.sl.nsw.gov.au",
+            "resolved": "slnsw-prod.apigee.net"
+        },
+        {
             "original": "dsc.cisco.com",
             "resolved": "cisco-dsc-prod.apigee.net"
         }
@@ -38,44 +38,19 @@
     "fingerprinting": 0,
     "resources": [
         {
-            "rule": "apigee\\.net\\/authentication\\/v2\\.0\\/authorization",
-            "cookies": 0.000201,
-            "fingerprinting": 0,
-            "subdomains": [
-                "accor-group-prod-prod"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [
-                {
-                    "original": "api.accor.com",
-                    "resolved": "accor-group-prod-prod.apigee.net"
-                }
-            ],
-            "responseHashes": [],
-            "type": "Document",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "accor.com",
-                "all.accor.com"
-            ]
-        },
-        {
-            "rule": "apigee\\.net\\/v1\\/netid",
+            "rule": "apigee\\.net\\/collection\\/v2\\/files",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "cisco-dsc-prod"
+                "slnsw-prod"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [
                 {
-                    "original": "dsc.cisco.com",
-                    "resolved": "cisco-dsc-prod.apigee.net"
+                    "original": "apiv2.sl.nsw.gov.au",
+                    "resolved": "slnsw-prod.apigee.net"
                 }
             ],
             "responseHashes": [],
@@ -83,33 +58,35 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "cisco.com",
-                "www.cisco.com"
+                "nsw.gov.au",
+                "collection.sl.nsw.gov.au"
             ]
         },
         {
-            "rule": "apigee\\.net\\/v1\\/netid\\/cdc_cloud",
+            "rule": "apigee\\.net\\/collection\\/v2\\/files",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "cisco-dsc-prod"
+                "slnsw-prod"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [
                 {
-                    "original": "dsc.cisco.com",
-                    "resolved": "cisco-dsc-prod.apigee.net"
+                    "original": "apiv2.sl.nsw.gov.au",
+                    "resolved": "slnsw-prod.apigee.net"
                 }
             ],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "853b038550a7d5074a2e93bab25522f9d6ecf3aeecdf561dfd399d69e816b9df"
+            ],
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "cisco.com",
-                "www.cisco.com"
+                "nsw.gov.au",
+                "collection.sl.nsw.gov.au"
             ]
         },
         {
@@ -129,7 +106,7 @@
                 }
             ],
             "responseHashes": [
-                "679f0de2a27825a421fd483a0d7c4500bb7a078722061fb83a0318dc64d2b6c4"
+                "afaaf4ae51bb4dc2a9de9833c8c4bb25a0bae3b384ed824e47c70adede590d0b"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -167,6 +144,56 @@
             ]
         },
         {
+            "rule": "apigee\\.net\\/v1\\/netid",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cisco-dsc-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "dsc.cisco.com",
+                    "resolved": "cisco-dsc-prod.apigee.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cisco.com",
+                "www.cisco.com"
+            ]
+        },
+        {
+            "rule": "apigee\\.net\\/v1\\/netid\\/cdc_cloud",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cisco-dsc-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "dsc.cisco.com",
+                    "resolved": "cisco-dsc-prod.apigee.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cisco.com",
+                "www.cisco.com"
+            ]
+        },
+        {
             "rule": "apigee\\.net\\/v1\\/trade\\/search\\/recommendation",
             "cookies": 0,
             "fingerprinting": 0,
@@ -208,7 +235,7 @@
                 }
             ],
             "responseHashes": [
-                "0776790d1f80e87ff7274fa670c5cde0fcc4cf01c86196f4234c9b579cf06eba"
+                "f9ba3769eee02d7dc5a6366ad1da472929ad6b9698724459840c56f78d9c1cc7"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -235,7 +262,7 @@
                 }
             ],
             "responseHashes": [
-                "1eaeeddfdc68b857a0cc217688e92a93f98ce6e06d0ca8933a8fb5ff5282eeec"
+                "e5070e00af40540f1315b84cb10c56093746665dcee21b2aff499dbc701d3232"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -287,7 +314,7 @@
                 }
             ],
             "responseHashes": [
-                "9909b0933454325e81925f644c6887fe711080c6b073eba4bee9ec082a5da505"
+                "a321a100ef36e19576447a331c0b99e42325d9bbc4ed57063984b521bb973c93"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -324,7 +351,7 @@
         },
         {
             "rule": "apigee\\.net\\/phoenix-eventcollector\\/v1\\/event\\/mparticle",
-            "cookies": 0.000201,
+            "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
                 "mns-00.dn"
@@ -354,7 +381,7 @@
         "CDN"
     ],
     "performance": {},
-    "cookies": 0.000301,
+    "cookies": 0.000201,
     "topInitiators": [
         {
             "domain": "tiqcdn.com",
@@ -370,15 +397,14 @@
         }
     ],
     "types": {
-        "Document": 2,
-        "Preflight": 10,
-        "Fetch": 4,
-        "XHR": 8
+        "Preflight": 12,
+        "XHR": 10,
+        "Fetch": 4
     },
     "nameservers": [
         "ns-1441.awsdns-52.org",
-        "ns-1907.awsdns-46.co.uk",
+        "ns-670.awsdns-19.net",
         "ns-116.awsdns-14.com",
-        "ns-670.awsdns-19.net"
+        "ns-1907.awsdns-46.co.uk"
     ]
 }

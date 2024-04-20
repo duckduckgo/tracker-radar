@@ -14,14 +14,16 @@
     "resources": [
         {
             "rule": "verint-cdn\\.com\\/files\\/sites\\/next-bahn-de\\/live\\/sdk\\.js",
-            "cookies": 0,
+            "cookies": 0.0001,
             "fingerprinting": 1,
             "subdomains": [
                 "ucm-eu"
             ],
             "apis": {
                 "Navigator.prototype.userAgent": 2,
-                "Navigator.prototype.cookieEnabled": 2
+                "Navigator.prototype.cookieEnabled": 2,
+                "Document.cookie getter": 1,
+                "Document.cookie setter": 1
             },
             "sites": 2,
             "prevalence": 0.000201,
@@ -30,7 +32,38 @@
                 "91d41722669cebe9c974d9a3eb39185f6e1777d4bd71eb6f312a2ab888965504"
             ],
             "type": "Script",
-            "firstPartyCookies": {},
+            "firstPartyCookies": {
+                "uws_visitor": {
+                    "ttl": 604803,
+                    "length": 106,
+                    "prevalence": 0.00010029084344599338,
+                    "uniqueness": 1
+                },
+                "uws_session": {
+                    "ttl": 1803,
+                    "length": 95,
+                    "prevalence": 0.00010029084344599338,
+                    "uniqueness": 1
+                },
+                "uws_rate_comparators": {
+                    "ttl": 1803,
+                    "length": 111,
+                    "prevalence": 0.00010029084344599338,
+                    "uniqueness": 1
+                },
+                "uws_story_Start_Server_Recording": {
+                    "ttl": 1803,
+                    "length": 65,
+                    "prevalence": 0.00010029084344599338,
+                    "uniqueness": 1
+                },
+                "uws_story_Start_Record_StartSeite": {
+                    "ttl": 1803,
+                    "length": 65,
+                    "prevalence": 0.00010029084344599338,
+                    "uniqueness": 1
+                }
+            },
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "bahn.de",
@@ -49,7 +82,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "025b38e2d79817f18a69d1f9a60915bc2a23c9635c9307ab11ed2cf83c7e1f4e"
+                "6123140fd59e26e3dd85825068888eeed6047cb199e416d960c0cf8a66d77a8e"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -73,7 +106,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "64c1e2336fac56859f415dd5674da904fe11e68cd15acb5b1be50d3a81ec8c6a"
+                "e33e04c2a0274a7a23e82160dbf47a876d29e17a3f528e627c573589d4ca1e9c"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -138,11 +171,15 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.0001,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.5
+        },
+        {
+            "domain": "static-bahn.de",
+            "prevalence": 0.5
         }
     ],
     "types": {
@@ -150,9 +187,9 @@
         "Fetch": 2
     },
     "nameservers": [
-        "ns-150.awsdns-18.com",
-        "ns-1879.awsdns-42.co.uk",
+        "ns-528.awsdns-02.net",
         "ns-1246.awsdns-27.org",
-        "ns-528.awsdns-02.net"
+        "ns-1879.awsdns-42.co.uk",
+        "ns-150.awsdns-18.com"
     ]
 }

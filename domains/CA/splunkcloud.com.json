@@ -7,10 +7,12 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000201,
-    "sites": 2,
+    "prevalence": 0.000402,
+    "sites": 4,
     "subdomains": [
         "http-inputs-itv",
+        "http-inputs-joann",
+        "http-inputs-rover",
         "http-inputs-notion"
     ],
     "cnames": [],
@@ -59,6 +61,50 @@
             ]
         },
         {
+            "rule": "splunkcloud\\.com\\/services\\/collector\\/event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "http-inputs-joann",
+                "http-inputs-rover"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "3c88e3c57f69e3a02a1c89ddad501cd370fae7012bf522ee4632d4852e7f5c4b"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "joann.com",
+                "www.rover.com"
+            ]
+        },
+        {
+            "rule": "splunkcloud\\.com\\/services\\/collector\\/event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "http-inputs-joann",
+                "http-inputs-rover"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "joann.com",
+                "www.rover.com"
+            ]
+        },
+        {
             "rule": "splunkcloud\\.com\\/services\\/collector\\/raw",
             "cookies": 0,
             "fingerprinting": 0,
@@ -87,21 +133,26 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.875
+        },
+        {
+            "domain": "contentsquare.net",
+            "prevalence": 0.125
         }
     ],
     "types": {
-        "Preflight": 2,
-        "Fetch": 4
+        "Preflight": 4,
+        "Fetch": 4,
+        "XHR": 2
     },
     "nameservers": [
-        "ns-4-2-4.splunkdns.net",
+        "ns-4-2-2.splunkdns.net",
         "ns-4-2-6.splunkdns.net",
         "ns-4-2-7.splunkdns.net",
-        "ns-4-2-5.splunkdns.net",
-        "ns-4-2-1.splunkdns.net",
-        "ns-4-2-2.splunkdns.net",
+        "ns-4-2-4.splunkdns.net",
         "ns-4-2-3.splunkdns.net",
+        "ns-4-2-1.splunkdns.net",
+        "ns-4-2-5.splunkdns.net",
         "ns-4-2-8.splunkdns.net"
     ]
 }

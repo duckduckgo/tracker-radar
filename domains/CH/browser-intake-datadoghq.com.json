@@ -7,10 +7,12 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.000804,
-    "sites": 8,
+    "prevalence": 0.00151,
+    "sites": 15,
     "subdomains": [
-        "rum"
+        "rum",
+        "csp-report",
+        "logs"
     ],
     "cnames": [],
     "fingerprinting": 0,
@@ -23,30 +25,59 @@
                 "rum"
             ],
             "apis": {},
-            "sites": 8,
-            "prevalence": 0.000804,
+            "sites": 11,
+            "prevalence": 0.0011,
             "cnames": [],
             "responseHashes": [
-                "cfa072abd332b009320ddb300120ee2a99484c377e8f79a04f6fdaf7a4c4be08",
-                "a6ab5605c7f637c81bcb22e0cca8e649984d121551ea8613250a4cebc9219294",
-                "f3c79d4a0477bd9c236f4246c29accf725eb0401d09ae60a893e6a71326d569f",
-                "37585790aca8f6b10263b34569f064c674582f79c905ae9356a4e6d4186f59e1",
-                "5c282ec50fff7f6cb232a47aa3b1f2af066c8e1860c69559d6bfab034f9ffebc",
-                "341fa28ece0ad814b46a49ea5bb88e973ab8d4123ba77625f16b8dcc49eca947",
-                "88e531bbff77016c141ed6ea751021fe53fc4387ef2fa7108a83875885f0798f"
+                "0b3c13418b8e4744cc0cef9255b83273d47ba4150f82bdb48e85d2508ac6485b",
+                "538c86bed805fd8553524fd68eff6c2fef2626310ee067fa71b8971f889cda26",
+                "12f9a23df82111e540ee1ea146d18e30feca0d8c5360b0238157acf43ae29905",
+                "7c172caf271f5e1383ec83b3f5027d8c2b1c8b8506bc41705e68490d5f8a0515",
+                "99090e2ec4702bdb584d4aa7b0867f403f9d9a837f3a1b4b658fb7ab6d567853",
+                "9de974a41ed14c67814096df9f5df0c9f07f7c781a238e22fa849842c3f12a12",
+                "69c81c98df11706cf3101efea9bf9c0fb1b57ba586570020757613a3de3c4989",
+                "153ce522f4f8503d8ef9ea2ad85280a6ac11d89ce8b5e7ffa37227aa09264b96",
+                "2b549d1ff6a4fc2d960746768d75af269c60cafb556a169f869cbcc4a28ee25b",
+                "2e93844f3375454429067a518089e78535012cdad5725a877fe49fe6feef2066"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "1password.com",
-                "account.samsung.com",
-                "asana.com",
-                "coolrom.com",
                 "developer.hashicorp.com",
                 "opensea.io",
+                "picsart.com",
+                "themeforest.net",
                 "www.codecademy.com",
-                "www.mytheresa.com"
+                "www.disneyplus.com",
+                "www.expedia.com",
+                "www.ghacks.net",
+                "www.toptal.com",
+                "www.whoop.com"
+            ]
+        },
+        {
+            "rule": "browser-intake-datadoghq\\.com\\/api\\/v2\\/logs",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "csp-report"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "humane.com",
+                "opensea.io",
+                "www.rei.com"
             ]
         },
         {
@@ -57,18 +88,40 @@
                 "rum"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [
-                "6362bba683be4b2a9b2af8746a2dec73f40fdbae73203cc9c54f10d7ecdd4162"
+                "f2836d65fff9745b4d8576c49dd586a4c5d66b4ed5e26524227f17677eb5818f",
+                "703dc3c0b7c086f613a7f49f2d9d80a52bdce62aa76b2f52e819cdbaa46ee700"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "asana.com",
-                "www.codecademy.com"
+                "picsart.com",
+                "www.codecademy.com",
+                "www.ghacks.net"
+            ]
+        },
+        {
+            "rule": "browser-intake-datadoghq\\.com\\/api\\/v2\\/logs",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "logs"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gq.com",
+                "www.self.com"
             ]
         }
     ],
@@ -78,25 +131,46 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.9121621621621622
+            "prevalence": 0.564625850340136
         },
         {
             "domain": "datadoghq-browser-agent.com",
-            "prevalence": 0.07432432432432433
+            "prevalence": 0.24489795918367346
+        },
+        {
+            "domain": "optifyr.com",
+            "prevalence": 0.08163265306122448
+        },
+        {
+            "domain": "travel-assets.com",
+            "prevalence": 0.047619047619047616
+        },
+        {
+            "domain": "envato-static.com",
+            "prevalence": 0.027210884353741496
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.013605442176870748
         },
         {
             "domain": "privy.io",
-            "prevalence": 0.013513513513513514
+            "prevalence": 0.013605442176870748
+        },
+        {
+            "domain": "doubleclick.net",
+            "prevalence": 0.006802721088435374
         }
     ],
     "types": {
-        "Fetch": 8,
-        "XHR": 2
+        "Fetch": 13,
+        "Other": 3,
+        "XHR": 3
     },
     "nameservers": [
-        "ns-1907.awsdns-46.co.uk",
         "ns-560.awsdns-06.net",
         "ns-1264.awsdns-30.org",
-        "ns-128.awsdns-16.com"
+        "ns-128.awsdns-16.com",
+        "ns-1907.awsdns-46.co.uk"
     ]
 }
