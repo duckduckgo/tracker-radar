@@ -7,9 +7,15 @@
     "prevalence": 0.0000204,
     "sites": 3,
     "subdomains": [
-        "prodo-api"
+        "prodo-api",
+        "bfw-cms-prod"
     ],
-    "cnames": [],
+    "cnames": [
+        {
+            "original": "cms.boerse-frankfurt.de",
+            "resolved": "bfw-cms-prod.ariva-services.de"
+        }
+    ],
     "fingerprinting": 1,
     "resources": [
         {
@@ -26,15 +32,65 @@
             "sites": 2,
             "prevalence": 0.0000136,
             "cnames": [],
-            "responseHashes": [
-                "862442c9df50e474fc2fe1537d11691da027bf41bec216591b123a79d8337104"
-            ],
+            "responseHashes": [],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "ariva.de",
                 "www.faz.net"
+            ]
+        },
+        {
+            "rule": "ariva-services\\.de\\/widgets\\/banner",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "bfw-cms-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "cms.boerse-frankfurt.de",
+                    "resolved": "bfw-cms-prod.ariva-services.de"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "boerse-frankfurt.de",
+                "www.boerse-frankfurt.de"
+            ]
+        },
+        {
+            "rule": "ariva-services\\.de\\/widgets\\/banner",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "bfw-cms-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "cms.boerse-frankfurt.de",
+                    "resolved": "bfw-cms-prod.ariva-services.de"
+                }
+            ],
+            "responseHashes": [
+                "0aa56b608c2cd05ff725b977ffda84b27dac44d04ff6947557dcb2c12cf635fc"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "boerse-frankfurt.de",
+                "www.boerse-frankfurt.de"
             ]
         }
     ],
@@ -48,7 +104,9 @@
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 2,
+        "Preflight": 2,
+        "XHR": 2
     },
     "nameservers": [
         "ens1.ariva.de",

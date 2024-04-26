@@ -7,10 +7,11 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000703,
-    "sites": 7,
+    "prevalence": 0.001,
+    "sites": 10,
     "subdomains": [
-        "rum"
+        "rum",
+        "session-replay"
     ],
     "cnames": [],
     "fingerprinting": 0,
@@ -23,15 +24,18 @@
                 "rum"
             ],
             "apis": {},
-            "sites": 6,
-            "prevalence": 0.000603,
+            "sites": 9,
+            "prevalence": 0.000904,
             "cnames": [],
             "responseHashes": [
-                "989547491c77431f95d3e4191734ffe52228c7faf44eb3405035eceda833da50",
-                "a7a26da1f9b624be7c03d6a513d84f2c82ff7fe130b1127088fe6a0c159c5a70",
-                "6118e14c58727194ebaa9178084820e854c878e1c5ef118c67e0f41ce6c7a420",
-                "7b73951059e2647e16a1f1aefc009fbe3e5cc23e4ab07e1f647aca2154ffaf62",
-                "15239cac25f6def4ac8eab95990c5063c54dffba9af305889eeeac1bdd8e8e4e"
+                "f602975fed56e5b8199e6a8b56a85171569fc8d36a129e2c97c73ae59c61ef59",
+                "8ac3648eae0ff96d5252f69d7ea337e936f68c6c202aa97e5abe04324a8a538c",
+                "f4562c10c4156b6363b2228e8eec3c4c2dc8757dacb7b6eb53b4ed5b9b384779",
+                "97e0188a28509f337a946cda6bc8ea1c9d285da8447cd771a3828a97291f08ae",
+                "a9d57b46e11c2426b15ed60bce2391e75408ef816a0b305913f6bce68d74e5eb",
+                "80a4b4450899f9a262ea4f130446ec79e264fce29f943dd73dd07a33519bc85f",
+                "11d814097222b68c6f2a9cf6cfbaed45f776aeebfea89773e024909e66e68ed1",
+                "79e30aa812fdaa6294c10e1ac3e6505aa31568b77f5fd6becd027a74c8faf9fb"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -39,74 +43,37 @@
             "exampleSites": [
                 "mollerbil.no",
                 "www.adamsmatkasse.no",
-                "www.bruktbil.no",
+                "www.boozt.com",
+                "www.flixbus.com",
                 "www.godtlevert.no",
-                "www.lefigaro.fr",
-                "www.watski.no"
-            ]
-        },
-        {
-            "rule": "browser-intake-datadoghq\\.eu\\/api\\/v2\\/rum",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "rum"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-            ],
-            "type": "Ping",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "bilka.dk",
-                "www.bilka.dk"
+                "www.komoot.com",
+                "www.lexus.no",
+                "www.mittbilhold.no",
+                "www.ns.nl"
             ]
         },
         {
             "rule": "browser-intake-datadoghq\\.eu\\/api\\/v2\\/replay",
             "cookies": 0,
             "fingerprinting": 0,
-            "subdomains": [],
+            "subdomains": [
+                "session-replay"
+            ],
             "apis": {},
             "sites": 3,
             "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [
-                "acb9f196cfa6a7b9d0e8f7f9ca82265247b11690e54196b48ea22c3485ac9113",
-                "f55f1c4f21656120dcf3bceaf34d83a80c9bbe6a8deecc56e518795d6feec7c0"
+                "5eab5b8296023cfe2013697db1de295dc8281c6d1b17f2e529cff4a3c885cb05",
+                "ee036c1028e3bc46e1b40edfd4023170f1ea8d5be7417e9e16e25a1f404590ee"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "bruktbil.no",
-                "www.lefigaro.fr",
-                "www.watski.no"
-            ]
-        },
-        {
-            "rule": "browser-intake-datadoghq\\.eu\\/api\\/v2\\/rum",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "d1c952f5c6dc6bc3cf27f9395669edff57458cbf349599f6b179cd1401860458"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "lefigaro.fr",
-                "www.watski.no"
+                "mittbilhold.no",
+                "www.mittbilhold.no",
+                "www.ns.nl"
             ]
         }
     ],
@@ -115,23 +82,22 @@
     "cookies": 0,
     "topInitiators": [
         {
-            "domain": "first party",
-            "prevalence": 0.6764705882352942
+            "domain": "datadoghq-browser-agent.com",
+            "prevalence": 0.59375
         },
         {
-            "domain": "datadoghq-browser-agent.com",
-            "prevalence": 0.3235294117647059
+            "domain": "first party",
+            "prevalence": 0.40625
         }
     ],
     "types": {
-        "Fetch": 6,
-        "Ping": 2,
-        "XHR": 5
+        "Fetch": 9,
+        "XHR": 3
     },
     "nameservers": [
-        "ns-cloud-e1.googledomains.com",
-        "ns-cloud-e3.googledomains.com",
+        "ns-cloud-e4.googledomains.com",
         "ns-cloud-e2.googledomains.com",
-        "ns-cloud-e4.googledomains.com"
+        "ns-cloud-e3.googledomains.com",
+        "ns-cloud-e1.googledomains.com"
     ]
 }

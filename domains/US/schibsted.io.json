@@ -7,36 +7,15 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000749,
+    "prevalence": 0.000075,
     "sites": 11,
     "subdomains": [
-        "collector"
+        "collector",
+        "cogwheel.inventory"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
-        {
-            "rule": "schibsted\\.io\\/api\\/v1\\/track\\/sdrn:schibsted:client:blocketbostad",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "collector"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [],
-            "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-            ],
-            "type": "Ping",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "blocket.se",
-                "bostad.blocket.se"
-            ]
-        },
         {
             "rule": "schibsted\\.io\\/api\\/v1\\/track\\/sdrn:schibsted:client:stavangeraftenblad",
             "cookies": 0,
@@ -82,6 +61,30 @@
             ]
         },
         {
+            "rule": "schibsted\\.io\\/prod\\/latest\\/gdpr-bundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cogwheel.inventory"
+            ],
+            "apis": {
+                "Document.cookie getter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "335aad7117499de1b29a5394980a0a5fc3ed140cc2868794d2e7fbb8c1d820a1"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "blocket.se",
+                "www.finn.no"
+            ]
+        },
+        {
             "rule": "schibsted\\.io\\/api\\/v1\\/track\\/sdrn:schibsted:client:bt",
             "cookies": 0,
             "fingerprinting": 0,
@@ -123,6 +126,28 @@
             "exampleSites": [
                 "bytbil.com",
                 "www.bytbil.com"
+            ]
+        },
+        {
+            "rule": "schibsted\\.io\\/api\\/v1\\/track\\/sdrn:schibsted:client:finn",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "collector"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "finn.no",
+                "www.finn.no"
             ]
         },
         {
@@ -188,12 +213,13 @@
         }
     ],
     "types": {
-        "Ping": 14
+        "Ping": 14,
+        "Script": 2
     },
     "nameservers": [
-        "ns-1082.awsdns-07.org",
-        "ns-2019.awsdns-60.co.uk",
         "ns-182.awsdns-22.com",
-        "ns-791.awsdns-34.net"
+        "ns-2019.awsdns-60.co.uk",
+        "ns-791.awsdns-34.net",
+        "ns-1082.awsdns-07.org"
     ]
 }

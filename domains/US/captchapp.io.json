@@ -11,7 +11,7 @@
         "tbfp-backend"
     ],
     "cnames": [],
-    "fingerprinting": 3,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "captchapp\\.io\\/tbfp\\.html",
@@ -60,11 +60,16 @@
         {
             "rule": "captchapp\\.io\\/api\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 2,
             "subdomains": [
                 "tbfp"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.platform": 1,
+                "Navigator.prototype.language": 1,
+                "Navigator.prototype.connection": 1,
+                "window.localStorage": 1
+            },
             "sites": 2,
             "prevalence": 0.0000136,
             "cnames": [],
@@ -104,60 +109,17 @@
         {
             "rule": "captchapp\\.io\\/v2\\/2\\.4\\.0\\/enforcement\\.2e633b2c7bb736a0ee9965af3d9393cb\\.js",
             "cookies": 0,
-            "fingerprinting": 3,
+            "fingerprinting": 1,
             "subdomains": [
                 "tbfp"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 2,
-                "Navigator.prototype.connection": 2,
-                "Navigator.prototype.languages": 2,
                 "window.matchMedia(\"prefers-color-scheme\")": 2,
-                "Navigator.prototype.doNotTrack": 2,
-                "Navigator.prototype.language": 2,
                 "Date.prototype.getTimezoneOffset": 2,
-                "Navigator.prototype.platform": 2,
-                "Navigator.prototype.productSub": 2,
-                "Navigator.prototype.appName": 2,
-                "Navigator.prototype.maxTouchPoints": 2,
-                "Navigator.prototype.hardwareConcurrency": 2,
-                "Navigator.prototype.cookieEnabled": 2,
-                "Navigator.prototype.getBattery": 2,
-                "Date.prototype.getTime": 2,
-                "WebGLRenderingContext.prototype.getSupportedExtensions": 1,
-                "WebGLRenderingContext.prototype.getParameter": 1,
-                "WebGLRenderingContext.prototype.getContextAttributes": 1,
-                "WebGLRenderingContext.prototype.getExtension": 1,
-                "WebGLRenderingContext.prototype.getShaderPrecisionFormat": 1,
-                "HTMLMediaElement.prototype.canPlayType": 1,
-                "MediaSource.isTypeSupported": 1,
-                "NavigatorUAData.prototype.brands": 1,
-                "Screen.prototype.pixelDepth": 1,
-                "Navigator.prototype.deviceMemory": 1,
-                "window.innerWidth": 1,
-                "window.innerHeight": 1,
-                "window.outerWidth": 1,
-                "window.outerHeight": 1,
-                "Navigator.prototype.mediaDevices": 1,
-                "Navigator.prototype.webdriver": 1,
-                "Screen.prototype.orientation": 1,
-                "Screen.prototype.colorDepth": 1,
-                "window.devicePixelRatio": 1,
-                "Screen.prototype.height": 1,
-                "Screen.prototype.width": 1,
-                "Screen.prototype.availWidth": 1,
-                "Screen.prototype.availHeight": 1,
-                "window.sessionStorage": 1,
-                "window.localStorage": 1,
-                "window.indexedDB": 1,
-                "CanvasRenderingContext2D.prototype.isPointInPath": 1,
-                "HTMLCanvasElement.prototype.toDataURL": 1,
-                "Navigator.prototype.plugins": 1,
-                "OfflineAudioContext.prototype.constructor": 1,
-                "Navigator.prototype.permissions": 1,
-                "MediaDevices.prototype.enumerateDevices": 1,
-                "speechSynthesis.__proto__.getVoices": 1,
-                "AudioBuffer.prototype.getChannelData": 1
+                "speechSynthesis.__proto__.getVoices": 2,
+                "window.localStorage": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Date.prototype.getTime": 2
             },
             "sites": 2,
             "prevalence": 0.0000136,
@@ -184,8 +146,10 @@
             "sites": 2,
             "prevalence": 0.0000136,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Other",
+            "responseHashes": [
+                "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3"
+            ],
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -205,7 +169,7 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [],
-            "type": "Fetch",
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -226,8 +190,8 @@
     "types": {
         "Document": 6,
         "Script": 4,
-        "Other": 2,
-        "Fetch": 2
+        "Fetch": 2,
+        "Preflight": 2
     },
     "nameservers": [
         "aldo.ns.cloudflare.com",

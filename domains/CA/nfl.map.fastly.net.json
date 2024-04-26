@@ -12,16 +12,48 @@
     "prevalence": 0.000101,
     "sites": 1,
     "subdomains": [
+        "global",
         "http2.global"
     ],
     "cnames": [
         {
             "original": "api.nfl.com",
             "resolved": "http2.global.nfl.map.fastly.net"
+        },
+        {
+            "original": "flags.api.nfl.com",
+            "resolved": "global.nfl.map.fastly.net"
         }
     ],
     "fingerprinting": 3,
     "resources": [
+        {
+            "rule": "nfl\\.map\\.fastly\\.net\\/api\\/v1\\/flags\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "global"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "flags.api.nfl.com",
+                    "resolved": "global.nfl.map.fastly.net"
+                }
+            ],
+            "responseHashes": [
+                "145d0da431c6fdc55c7b63a73cbc32d9b8a98ea05fe62a2a64904c0b1d6f55ff"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nfl.com",
+                "www.nfl.com"
+            ]
+        },
         {
             "rule": "nfl\\.map\\.fastly\\.net\\/live\\/v1\\/livestreams",
             "cookies": 0,
@@ -88,14 +120,15 @@
     "topInitiators": [
         {
             "domain": "nfltags.com",
-            "prevalence": 0.5833333333333334
+            "prevalence": 0.7272727272727273
         },
         {
             "domain": "first party",
-            "prevalence": 0.4166666666666667
+            "prevalence": 0.2727272727272727
         }
     ],
     "types": {
+        "XHR": 2,
         "Fetch": 2,
         "Preflight": 2
     },

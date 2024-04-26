@@ -7,15 +7,54 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000136,
-    "sites": 2,
+    "prevalence": 0.0000204,
+    "sites": 3,
     "subdomains": [
+        "ws-front",
         "booster",
         "leonardo"
     ],
-    "cnames": [],
+    "cnames": [
+        {
+            "original": "ws-sio.dtf.ru",
+            "resolved": "ws-front.osnova.io"
+        },
+        {
+            "original": "ws-sio.vc.ru",
+            "resolved": "ws-front.osnova.io"
+        }
+    ],
     "fingerprinting": 0,
     "resources": [
+        {
+            "rule": "osnova\\.io\\/socket\\.io\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ws-front"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [
+                {
+                    "original": "ws-sio.dtf.ru",
+                    "resolved": "ws-front.osnova.io"
+                },
+                {
+                    "original": "ws-sio.vc.ru",
+                    "resolved": "ws-front.osnova.io"
+                }
+            ],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dtf.ru",
+                "vc.ru"
+            ]
+        },
         {
             "rule": "osnova\\.io\\/a\\/relevant",
             "cookies": 0,
@@ -28,7 +67,7 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "600d15653d323d90602d9cfe2408af9627112a985f1c318aad7e4b2d4130df53"
+                "a99c654499a1955a50caf30ad27a067c0e63c73087ad5a66af69f1c8246301fc"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -67,18 +106,19 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.7073170731707317
+            "prevalence": 0.723404255319149
         },
         {
             "domain": "trbcdn.net",
-            "prevalence": 0.24390243902439024
+            "prevalence": 0.23404255319148937
         },
         {
             "domain": "yastatic.net",
-            "prevalence": 0.04878048780487805
+            "prevalence": 0.0425531914893617
         }
     ],
     "types": {
+        "WebSocket": 2,
         "Fetch": 2,
         "Image": 2
     },

@@ -7,15 +7,16 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000704,
-    "sites": 7,
+    "prevalence": 0.000905,
+    "sites": 9,
     "subdomains": [
         "www",
         "governmentofbc.maps",
         "hubcdn",
+        "cdn",
+        "js",
         "utility",
-        "services6",
-        "js"
+        "services6"
     ],
     "cnames": [],
     "fingerprinting": 3,
@@ -88,6 +89,50 @@
             ]
         },
         {
+            "rule": "arcgis\\.com\\/sharing\\/rest\\/content\\/items\\/63c47b7177f946b49902c24129b87252\\/resources\\/sprites\\/sprite\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "39b4e8274dd2ef4052777beea8318d253a6d73e3d2a81af85d3404e2d2354ba0"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "congress.gov",
+                "www.sitesandtrailsbc.ca"
+            ]
+        },
+        {
+            "rule": "arcgis\\.com\\/4\\.14\\/dojo\\/dojo-lite\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "js"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "64105cf664758338061553de831e8ce200286c0907144346f3d26d3ae863ab84"
+            ],
+            "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "congress.gov",
+                "www.congress.gov"
+            ]
+        },
+        {
             "rule": "arcgis\\.com\\/sharing\\/rest\\/content\\/items\\/4e9f5f3a722b45c8a86696f6c91d09c6",
             "cookies": 0,
             "fingerprinting": 0,
@@ -99,7 +144,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "4e9aea97999da8220d311ad5e805a20af8fc192ea6bafe7c50b21205fd4f325b"
+                "e3e9057abdc6a130bac895428403244ca79bf7d2f3dc6585f6932dd671bdc1d8"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -231,7 +276,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "ed2c5c71ccda5c7b20cf234b4f254938f536b085902b2dcec1322a69e1f2b42d"
+                "9b8133eec88fc7cf03b0877dbe15e4a4e9807a3d9ba253cb3335bf5dca8ca723"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -253,7 +298,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "99e30f744122b1ca56801ddab0512f77bd2e3d2f8155cf20538edb387eece49c"
+                "a4ea9b56d65a684f6c0266ba0440edaaeaa2282e44dc46bcc05550b0fd6c939e"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -300,28 +345,6 @@
                 "5303d4b7dbb9b27165fbc14fd2fa9eb0a1cb7c9c09b44d17c2088be67b42dab1"
             ],
             "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "sitesandtrailsbc.ca",
-                "www.sitesandtrailsbc.ca"
-            ]
-        },
-        {
-            "rule": "arcgis\\.com\\/3\\.46\\/dgrid\\/css\\/dgrid\\.css",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "js"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "58ca31fd3608bf7630b4b565e2eba10004eb602453e25b34a29e7e2c6c69255d"
-            ],
-            "type": "Stylesheet",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -394,6 +417,28 @@
                 "sitesandtrailsbc.ca",
                 "www.sitesandtrailsbc.ca"
             ]
+        },
+        {
+            "rule": "arcgis\\.com\\/3\\.46\\/dgrid\\/css\\/dgrid\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "js"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "58ca31fd3608bf7630b4b565e2eba10004eb602453e25b34a29e7e2c6c69255d"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sitesandtrailsbc.ca",
+                "www.sitesandtrailsbc.ca"
+            ]
         }
     ],
     "categories": [
@@ -406,24 +451,21 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.9411764705882353
-        },
-        {
-            "domain": "adobedtm.com",
-            "prevalence": 0.058823529411764705
+            "prevalence": 1
         }
     ],
     "types": {
         "XHR": 23,
         "Preflight": 3,
         "Fetch": 2,
-        "Stylesheet": 2,
-        "Other": 6
+        "Image": 2,
+        "Other": 8,
+        "Stylesheet": 2
     },
     "nameservers": [
-        "ns-423.awsdns-52.com",
-        "ns-982.awsdns-58.net",
+        "ns-1882.awsdns-43.co.uk",
         "ns-1062.awsdns-04.org",
-        "ns-1882.awsdns-43.co.uk"
+        "ns-982.awsdns-58.net",
+        "ns-423.awsdns-52.com"
     ]
 }

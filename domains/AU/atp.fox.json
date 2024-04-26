@@ -15,30 +15,6 @@
     "resources": [
         {
             "rule": "atp\\.fox\\/pyxis\\/submit",
-            "cookies": 0.000301,
-            "fingerprinting": 0,
-            "subdomains": [
-                "prod.pyxis"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.000301,
-            "cnames": [],
-            "responseHashes": [
-                "18eb83bf79010578902db5b959d210aa5cf12eeb7bc42292a7e442dae01fafce",
-                "e14b078d04b33eecae48d1ac31f32390d9f49cddbf5156eafd49a63f0920e282"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "foxnews.com",
-                "www.foxnews.com",
-                "www.tmz.com"
-            ]
-        },
-        {
-            "rule": "atp\\.fox\\/pyxis\\/submit",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -58,6 +34,30 @@
             ]
         },
         {
+            "rule": "atp\\.fox\\/pyxis\\/submit",
+            "cookies": 0.000301,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prod.pyxis"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [
+                "9f023a9c4ed6ecd5049ff23bbfcbce585f1c89ba50b6ea6272424d36d2a27fc4",
+                "fde09ac67ebb82609e3e106724f3494f626cfad4a44957f40ee0c5974e094d14"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "foxnews.com",
+                "www.foxnews.com",
+                "www.tmz.com"
+            ]
+        },
+        {
             "rule": "atp\\.fox\\/js\\/fennec\\.js",
             "cookies": 0,
             "fingerprinting": 2,
@@ -65,20 +65,18 @@
                 "prod.fennec"
             ],
             "apis": {
-                "window.localStorage": 2,
                 "Document.cookie getter": 2,
+                "window.localStorage": 2,
                 "Navigator.prototype.userAgent": 2,
                 "window.outerWidth": 2,
                 "window.outerHeight": 2,
-                "window.innerWidth": 2,
-                "window.innerHeight": 2
+                "window.innerHeight": 2,
+                "window.innerWidth": 2
             },
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [
-                "51e727750ebc0cfea1e9fd3fe2f1318e356750b5f7c81d3a3ca01356ee885f8f"
-            ],
+            "responseHashes": [],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -88,7 +86,27 @@
             ]
         },
         {
-            "rule": "atp\\.fox\\/config\\/boi\\.json",
+            "rule": "atp\\.fox\\/config\\/v2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prod.fennec"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "foxnews.com",
+                "www.tmz.com"
+            ]
+        },
+        {
+            "rule": "atp\\.fox\\/config\\/v2",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -99,9 +117,9 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "246fb5e5d9f9dc726f14cf9bd190d79cef86652eb836c4900ef233c2d31717a2"
+                "0845e3c24ad3d778c000b0519e864f2066a187dad7985517fdf1a8c62f421cec"
             ],
-            "type": "Fetch",
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -116,34 +134,35 @@
     "topInitiators": [
         {
             "domain": "fox.com",
-            "prevalence": 0.5
-        },
-        {
-            "domain": "knotch-cdn.com",
-            "prevalence": 0.3
+            "prevalence": 0.4444444444444444
         },
         {
             "domain": "first party",
-            "prevalence": 0.1
+            "prevalence": 0.2222222222222222
+        },
+        {
+            "domain": "knotch-cdn.com",
+            "prevalence": 0.2222222222222222
         },
         {
             "domain": "webcontentassessor.global.ssl.fastly.net",
-            "prevalence": 0.1
+            "prevalence": 0.1111111111111111
         }
     ],
     "types": {
-        "Fetch": 5,
-        "Preflight": 2,
-        "Script": 2
+        "Preflight": 4,
+        "Fetch": 3,
+        "Script": 2,
+        "XHR": 2
     },
     "nameservers": [
-        "ns01.dns.fox",
-        "ns02.dns.fox",
-        "ns03.dns.fox",
-        "ns04.dns.fox",
         "ns01.foxdoua.com",
-        "ns02.foxdoua.com",
+        "ns02.dns.fox",
         "ns03.foxdoua.com",
-        "ns04.foxdoua.com"
+        "ns01.dns.fox",
+        "ns04.foxdoua.com",
+        "ns02.foxdoua.com",
+        "ns04.dns.fox",
+        "ns03.dns.fox"
     ]
 }

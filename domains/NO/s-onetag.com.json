@@ -9,14 +9,16 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000904,
-    "sites": 9,
+    "prevalence": 0.0011,
+    "sites": 11,
     "subdomains": [
         "onetag-geo",
         "signal-beacon",
         "get",
         "signal-floors",
-        "connect-metrics-collector"
+        "connect-metrics-collector",
+        "signal-metrics-collector-beta",
+        "signal-segments"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -29,8 +31,8 @@
                 "onetag-geo"
             ],
             "apis": {},
-            "sites": 9,
-            "prevalence": 0.000904,
+            "sites": 11,
+            "prevalence": 0.0011,
             "cnames": [],
             "responseHashes": [
                 "6448132c9d86748cc71e9e2d5b4f0241a5dd9385a2baadcf99dc6675fd7870bf"
@@ -39,15 +41,17 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "convertcase.net",
+                "dotnettutorials.net",
                 "edition.cnn.com",
                 "liveuamap.com",
-                "londonist.com",
-                "nationalpost.com",
+                "sentence.yourdictionary.com",
+                "www.barstoolsports.com",
+                "www.barchart.com",
+                "www.carls-fallout-4-guide.com",
                 "www.cnn.com",
-                "www.dk-kogebogen.dk",
-                "www.mumsnet.com",
-                "www.myjewishlearning.com"
+                "www.myjewishlearning.com",
+                "www.puzzle-nonograms.com",
+                "www.randomlists.com"
             ]
         },
         {
@@ -58,10 +62,11 @@
                 "signal-beacon"
             ],
             "apis": {
-                "window.localStorage": 9
+                "window.localStorage": 11,
+                "window.innerHeight": 1
             },
-            "sites": 9,
-            "prevalence": 0.000904,
+            "sites": 11,
+            "prevalence": 0.0011,
             "cnames": [],
             "responseHashes": [
                 "c847b5978db290ef7e4636d8ae766c5c4666ba0eefc73aba63b0b1156a8df147"
@@ -70,15 +75,17 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "convertcase.net",
+                "dotnettutorials.net",
                 "edition.cnn.com",
                 "liveuamap.com",
-                "londonist.com",
-                "nationalpost.com",
+                "sentence.yourdictionary.com",
+                "www.barstoolsports.com",
+                "www.barchart.com",
+                "www.carls-fallout-4-guide.com",
                 "www.cnn.com",
-                "www.dk-kogebogen.dk",
-                "www.mumsnet.com",
-                "www.myjewishlearning.com"
+                "www.myjewishlearning.com",
+                "www.puzzle-nonograms.com",
+                "www.randomlists.com"
             ]
         },
         {
@@ -96,7 +103,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "8e2f20072a938430ed29786fdbdb7ea3d75464d2af580109ec45c9c8badb3d8a"
+                "040a1d25443bd4b0d86cefa182716e4dfaf2c0cbeac6faa47c264d9e42b6103e"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -118,7 +125,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "3b0917f2a339cec2e2311c2360e983cdc9d66ba6bb2ea7c58518f6d10ab1ac9a"
+                "e19e2094e9ea176cb6f3c66321791e7d6df351f38eedc59afa644765e945193a"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -133,11 +140,12 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "connect-metrics-collector"
+                "connect-metrics-collector",
+                "signal-metrics-collector-beta"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 5,
+            "prevalence": 0.000502,
             "cnames": [],
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -147,7 +155,32 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "liveuamap.com",
-                "londonist.com"
+                "sentence.yourdictionary.com",
+                "www.barstoolsports.com",
+                "www.barchart.com",
+                "www.randomlists.com"
+            ]
+        },
+        {
+            "rule": "s-onetag\\.com\\/desktop\\/www\\.carls-fallout-4-guide\\.com\\/%2F",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "signal-segments"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "0b572e61ae0be87473cce7f4b304efb6f02fb95eb45c48d60e23aa975bc00e44"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "carls-fallout-4-guide.com",
+                "www.carls-fallout-4-guide.com"
             ]
         }
     ],
@@ -160,22 +193,46 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.6923076923076923
+            "prevalence": 0.5384615384615384
+        },
+        {
+            "domain": "script.ac",
+            "prevalence": 0.19230769230769232
+        },
+        {
+            "domain": "ezojs.com",
+            "prevalence": 0.07692307692307693
+        },
+        {
+            "domain": "htlbid.com",
+            "prevalence": 0.038461538461538464
+        },
+        {
+            "domain": "adlightning.com",
+            "prevalence": 0.038461538461538464
+        },
+        {
+            "domain": "investingchannel.com",
+            "prevalence": 0.038461538461538464
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.3076923076923077
+            "prevalence": 0.038461538461538464
+        },
+        {
+            "domain": "pixfuture.com",
+            "prevalence": 0.038461538461538464
         }
     ],
     "types": {
-        "Fetch": 11,
-        "Script": 11,
-        "Ping": 2
+        "Fetch": 15,
+        "Script": 13,
+        "Ping": 5
     },
     "nameservers": [
-        "ns-1395.awsdns-46.org",
-        "ns-1550.awsdns-01.co.uk",
+        "ns-13.awsdns-01.com",
         "ns-697.awsdns-23.net",
-        "ns-13.awsdns-01.com"
+        "ns-1550.awsdns-01.co.uk",
+        "ns-1395.awsdns-46.org"
     ]
 }

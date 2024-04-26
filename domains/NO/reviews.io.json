@@ -10,12 +10,79 @@
     "prevalence": 0.000201,
     "sites": 2,
     "subdomains": [
-        "api",
-        "assets"
+        "assets",
+        "widget",
+        "api"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 0,
     "resources": [
+        {
+            "rule": "reviews\\.io\\/css\\/widgets\\/carousel-widget\\.css",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "409cc538e66d415fdfe44ec1606ef45b08983a1d3425c8654db1ba88ed19b1d6"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bildeler.no",
+                "www.bildeler.no"
+            ]
+        },
+        {
+            "rule": "reviews\\.io\\/iconfont\\/reviewsio-icons\\/style\\.css",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "773f276bbe2baa05cb28b2cf0d4f251292841ac6e9b90b76b054126603fec4e7"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bildeler.no",
+                "www.bildeler.no"
+            ]
+        },
+        {
+            "rule": "reviews\\.io\\/carousel-inline-iframeless\\/dist\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "widget"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "be0ef0666e0a510d0e8139398b11865dbfd1be79631a05e4202936d42ec664a3"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bildeler.no",
+                "www.bildeler.no"
+            ]
+        },
         {
             "rule": "reviews\\.io\\/product\\/rating-batch",
             "cookies": 0.000201,
@@ -28,9 +95,31 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "0c259190e9633ab13e223f384baa19bb83f03c67e51f89ee077f8bd12be9af20"
+                "6be00f8762a40a8d505f73be984f6e09465ada6d5c653f937eb97e6f577b178b"
             ],
             "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bildeler.no",
+                "www.bildeler.no"
+            ]
+        },
+        {
+            "rule": "reviews\\.io\\/timeline\\/data",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "b14c8f5eeff2d5e596318d2c8808d2fae397fd98ecb9543da50b51b0b88367af"
+            ],
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -50,14 +139,14 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "97f49459880310c9a869b6aa3b4deded7cf7dd132032d542ea0c28b19b396a14"
+                "84ee1f806995cba3bd7a680585fbf419d82d46dd31b3a209b2d6d7f589645e77"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "bildeler.no",
-                "www.varmeokonomi.no"
+                "www.bildeler.no"
             ]
         },
         {
@@ -79,7 +168,29 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "bildeler.no",
-                "www.varmeokonomi.no"
+                "www.bildeler.no"
+            ]
+        },
+        {
+            "rule": "reviews\\.io\\/iconfont\\/reviewsio-icons\\/fonts\\/reviewsio-font\\.woff2",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "3eef7b1cc92715b47bbcd98f803527f7c04d48927900cfeecc0e213e87728156"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bildeler.no",
+                "www.bildeler.no"
             ]
         }
     ],
@@ -89,24 +200,19 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.8571428571428571
-        },
-        {
-            "domain": "ajax.googleapis.com",
-            "prevalence": 0.07142857142857142
-        },
-        {
-            "domain": "influence.io",
-            "prevalence": 0.07142857142857142
+            "prevalence": 1
         }
     ],
     "types": {
+        "Stylesheet": 4,
+        "Script": 2,
         "Fetch": 2,
-        "XHR": 2,
-        "Image": 2
+        "XHR": 4,
+        "Image": 2,
+        "Font": 2
     },
     "nameservers": [
-        "adrian.ns.cloudflare.com",
-        "jeremy.ns.cloudflare.com"
+        "jeremy.ns.cloudflare.com",
+        "adrian.ns.cloudflare.com"
     ]
 }

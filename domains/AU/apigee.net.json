@@ -9,18 +9,19 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.000602,
-    "sites": 6,
+    "prevalence": 0.000904,
+    "sites": 9,
     "subdomains": [
-        "accor-group-prod-prod",
+        "slnsw-prod",
         "cisco-dsc-prod",
+        "flybuys-api-platform-prod",
         "bgl-web-prod",
         "mns-00.dn"
     ],
     "cnames": [
         {
-            "original": "api.accor.com",
-            "resolved": "accor-group-prod-prod.apigee.net"
+            "original": "ahsapi.flybuys.com.au",
+            "resolved": "flybuys-api-platform-prod.apigee.net"
         },
         {
             "original": "api.marksandspencer.com",
@@ -31,6 +32,10 @@
             "resolved": "bgl-web-prod.apigee.net"
         },
         {
+            "original": "apiv2.sl.nsw.gov.au",
+            "resolved": "slnsw-prod.apigee.net"
+        },
+        {
             "original": "dsc.cisco.com",
             "resolved": "cisco-dsc-prod.apigee.net"
         }
@@ -38,44 +43,19 @@
     "fingerprinting": 0,
     "resources": [
         {
-            "rule": "apigee\\.net\\/authentication\\/v2\\.0\\/authorization",
-            "cookies": 0.000201,
-            "fingerprinting": 0,
-            "subdomains": [
-                "accor-group-prod-prod"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [
-                {
-                    "original": "api.accor.com",
-                    "resolved": "accor-group-prod-prod.apigee.net"
-                }
-            ],
-            "responseHashes": [],
-            "type": "Document",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "accor.com",
-                "all.accor.com"
-            ]
-        },
-        {
-            "rule": "apigee\\.net\\/v1\\/netid",
+            "rule": "apigee\\.net\\/collection\\/v2\\/files",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "cisco-dsc-prod"
+                "slnsw-prod"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [
                 {
-                    "original": "dsc.cisco.com",
-                    "resolved": "cisco-dsc-prod.apigee.net"
+                    "original": "apiv2.sl.nsw.gov.au",
+                    "resolved": "slnsw-prod.apigee.net"
                 }
             ],
             "responseHashes": [],
@@ -83,12 +63,39 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "cisco.com",
-                "www.cisco.com"
+                "nsw.gov.au",
+                "collection.sl.nsw.gov.au"
             ]
         },
         {
-            "rule": "apigee\\.net\\/v1\\/netid\\/cdc_cloud",
+            "rule": "apigee\\.net\\/collection\\/v2\\/files",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "slnsw-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "apiv2.sl.nsw.gov.au",
+                    "resolved": "slnsw-prod.apigee.net"
+                }
+            ],
+            "responseHashes": [
+                "cb1f7f55214bc8dabb70fa73272948198e0d32be4dbbe72d8f9d743723ceb8dd"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nsw.gov.au",
+                "collection.sl.nsw.gov.au"
+            ]
+        },
+        {
+            "rule": "apigee\\.net\\/v1\\/netid",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -129,7 +136,7 @@
                 }
             ],
             "responseHashes": [
-                "679f0de2a27825a421fd483a0d7c4500bb7a078722061fb83a0318dc64d2b6c4"
+                "5f6dcb688d1ec7ecfb08b0230aca8e767f6a7023043996ceff7d105ad04f11b3"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -167,6 +174,58 @@
             ]
         },
         {
+            "rule": "apigee\\.net\\/v1\\/netid\\/cdc_cloud",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cisco-dsc-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "dsc.cisco.com",
+                    "resolved": "cisco-dsc-prod.apigee.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cisco.com",
+                "www.cisco.com"
+            ]
+        },
+        {
+            "rule": "apigee\\.net\\/digital\\/flybuysmicrositebff\\/v1\\/categories",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "flybuys-api-platform-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "ahsapi.flybuys.com.au",
+                    "resolved": "flybuys-api-platform-prod.apigee.net"
+                }
+            ],
+            "responseHashes": [
+                "bfccd8bbfd5e2132466a07578d7ceb543896249acad15970a6cab0d2a6f8b68e"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "flybuys.com.au",
+                "www.flybuys.com.au"
+            ]
+        },
+        {
             "rule": "apigee\\.net\\/v1\\/trade\\/search\\/recommendation",
             "cookies": 0,
             "fingerprinting": 0,
@@ -208,7 +267,7 @@
                 }
             ],
             "responseHashes": [
-                "0776790d1f80e87ff7274fa670c5cde0fcc4cf01c86196f4234c9b579cf06eba"
+                "fd31eb12897c3fb9412b450278cd4ab1eee041203694a5905b63b56cf2d38586"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -216,6 +275,31 @@
             "exampleSites": [
                 "bunnings.com.au",
                 "trade.bunnings.com.au"
+            ]
+        },
+        {
+            "rule": "apigee\\.net\\/v1\\/stores\\/checkActiveStore",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "bgl-web-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "api.prod.bunnings.com.au",
+                    "resolved": "bgl-web-prod.apigee.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bunnings.com.au",
+                "www.bunnings.com.au"
             ]
         },
         {
@@ -235,7 +319,7 @@
                 }
             ],
             "responseHashes": [
-                "1eaeeddfdc68b857a0cc217688e92a93f98ce6e06d0ca8933a8fb5ff5282eeec"
+                "39fde7a7c5baec16f1cbd352cd1ac1375aa875405e3b07fb59988509a7c79941"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -287,7 +371,7 @@
                 }
             ],
             "responseHashes": [
-                "9909b0933454325e81925f644c6887fe711080c6b073eba4bee9ec082a5da505"
+                "f9916a7a9cbabbf7862fb9e5ef550e06139f835e7e75c059954e906c95cfac2b"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -324,7 +408,7 @@
         },
         {
             "rule": "apigee\\.net\\/phoenix-eventcollector\\/v1\\/event\\/mparticle",
-            "cookies": 0.000201,
+            "cookies": 0.0001,
             "fingerprinting": 0,
             "subdomains": [
                 "mns-00.dn"
@@ -370,15 +454,14 @@
         }
     ],
     "types": {
-        "Document": 2,
-        "Preflight": 10,
-        "Fetch": 4,
-        "XHR": 8
+        "Preflight": 14,
+        "XHR": 12,
+        "Fetch": 4
     },
     "nameservers": [
+        "ns-116.awsdns-14.com",
         "ns-1441.awsdns-52.org",
         "ns-1907.awsdns-46.co.uk",
-        "ns-116.awsdns-14.com",
         "ns-670.awsdns-19.net"
     ]
 }

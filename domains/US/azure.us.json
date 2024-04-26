@@ -4,20 +4,23 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.000034,
-    "sites": 5,
+    "prevalence": 0.0000409,
+    "sites": 6,
     "subdomains": [
+        "directline.botframework",
+        "webchat.botframework",
         "usgovvirginia-1.in.applicationinsights"
     ],
     "cnames": [],
     "fingerprinting": 0,
     "resources": [
         {
-            "rule": "azure\\.us\\/v2\\/track",
+            "rule": "azure\\.us\\/v3\\/directline\\/conversations",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "usgovvirginia-1.in.applicationinsights"
+                "directline.botframework",
+                "webchat.botframework"
             ],
             "apis": {},
             "sites": 2,
@@ -28,7 +31,51 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
+                "azmvdnow.gov",
+                "cops.usdoj.gov"
+            ]
+        },
+        {
+            "rule": "azure\\.us\\/v3\\/directline\\/conversations",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "directline.botframework",
+                "webchat.botframework"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "f41065d55d163fef75286b9761bc3d74aad12e7013dcd4f297cc621ddf4064c8"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "azmvdnow.gov",
+                "cops.usdoj.gov"
+            ]
+        },
+        {
+            "rule": "azure\\.us\\/v2\\/track",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "usgovvirginia-1.in.applicationinsights"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
                 "communitycrimemap.com",
+                "www.amphenol-aerospace.com",
                 "www.hrc.army.mil"
             ]
         },
@@ -40,60 +87,20 @@
                 "usgovvirginia-1.in.applicationinsights"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
+            "sites": 3,
+            "prevalence": 0.0000204,
             "cnames": [],
             "responseHashes": [
-                "5e5fbeccb2c4426dbdd4d70dac039d69223ab935c9a43226b24b3ca75a32b637"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "communitycrimemap.com",
-                "www.hrc.army.mil"
-            ]
-        },
-        {
-            "rule": "azure\\.us\\/\\/v2\\/track",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "usgovvirginia-1.in.applicationinsights"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [],
-            "responseHashes": [
+                "5e5fbeccb2c4426dbdd4d70dac039d69223ab935c9a43226b24b3ca75a32b637",
                 "b5a6b8f8dced09bf18920a311f765abe1ee41b3153a14ac76cad8e42e7b8a563"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "pa.gov",
-                "www.meganslaw.psp.pa.gov"
-            ]
-        },
-        {
-            "rule": "azure\\.us\\/\\/v2\\/track",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "usgovvirginia-1.in.applicationinsights"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "pa.gov",
-                "www.meganslaw.psp.pa.gov"
+                "communitycrimemap.com",
+                "www.amphenol-aerospace.com",
+                "www.hrc.army.mil"
             ]
         }
     ],
@@ -103,17 +110,25 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.6363636363636364
+        },
+        {
+            "domain": "botframework.com",
+            "prevalence": 0.2727272727272727
+        },
+        {
+            "domain": "azure.com",
+            "prevalence": 0.09090909090909091
         }
     ],
     "types": {
-        "Preflight": 4,
-        "XHR": 4
+        "Preflight": 5,
+        "XHR": 5
     },
     "nameservers": [
-        "ns1-07.azuregov-dns.us",
-        "ns2-07.azuregov-dns.us",
         "ns3-07.azuregov-dns.us",
-        "ns4-07.azuregov-dns.us"
+        "ns4-07.azuregov-dns.us",
+        "ns1-07.azuregov-dns.us",
+        "ns2-07.azuregov-dns.us"
     ]
 }

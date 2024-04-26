@@ -11,8 +11,8 @@
     "sites": 3,
     "subdomains": [
         "usecag.apm",
-        "m.dm",
-        "www"
+        "www",
+        "m.dm"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -35,6 +35,33 @@
             "exampleSites": [
                 "kitchenaid.ca",
                 "www.kitchenaid.ca",
+                "www.maytag.ca",
+                "www.whirlpool.ca"
+            ]
+        },
+        {
+            "rule": "whirlpool\\.com\\/akamai\\/mpulse\\.html",
+            "cookies": 0.000302,
+            "fingerprinting": 1,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 3,
+                "Event.prototype.timeStamp": 1
+            },
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "7e9ee739a9bc137033e5915ccf3d0073503635e3db7f33875cd516949835cc72",
+                "abee50b03c45a5ff5e0120aa5467bb20a813a44a1bee6210e6c1fb80e42820e9"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kitchenaid.ca",
                 "www.maytag.ca",
                 "www.whirlpool.ca"
             ]
@@ -81,33 +108,6 @@
                 "ece6528b0c47a67247485c6ad814e96a3c7eeb9cf414c25d13dc581bf9fc457b"
             ],
             "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "kitchenaid.ca",
-                "www.maytag.ca",
-                "www.whirlpool.ca"
-            ]
-        },
-        {
-            "rule": "whirlpool\\.com\\/akamai\\/mpulse\\.html",
-            "cookies": 0.000302,
-            "fingerprinting": 1,
-            "subdomains": [
-                "www"
-            ],
-            "apis": {
-                "Date.prototype.getTime": 3,
-                "Event.prototype.timeStamp": 1
-            },
-            "sites": 3,
-            "prevalence": 0.000302,
-            "cnames": [],
-            "responseHashes": [
-                "e6c2b97f895acb58018a5d443c1d9982ac889c9788b7a3b0b1325d10baa99c01",
-                "6fd84eb39d5df8e0e4a6f0808345cfeecb537b4255fe93f57e1331f49e8ae13f"
-            ],
-            "type": "Document",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -166,13 +166,17 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.8846153846153846
+        },
+        {
+            "domain": "go-mpulse.net",
+            "prevalence": 0.11538461538461539
         }
     ],
     "types": {
         "Fetch": 4,
-        "Script": 6,
         "Document": 3,
+        "Script": 6,
         "Font": 3,
         "Other": 2
     },

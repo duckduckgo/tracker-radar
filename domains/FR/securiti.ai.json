@@ -4,15 +4,42 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000201,
-    "sites": 2,
+    "prevalence": 0.000402,
+    "sites": 4,
     "subdomains": [
+        "app",
+        "app.eu",
         "cdn-prod.eu",
-        "app.eu"
+        "cdn-prod"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "securiti\\.ai\\/core\\/v1\\/utils\\/geo\\/location",
+            "cookies": 0.000402,
+            "fingerprinting": 0,
+            "subdomains": [
+                "app",
+                "app.eu"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000402,
+            "cnames": [],
+            "responseHashes": [
+                "f908c481b82885c91445264bbe1e8fa90e65a2852398966e3bf7f1ae6387e20f"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "clickhouse.com",
+                "www.dell.com",
+                "www.hertz.fr",
+                "www.xfinity.com"
+            ]
+        },
         {
             "rule": "securiti\\.ai\\/consent\\/cookie-consent-1\\.99\\.0\\.css",
             "cookies": 0,
@@ -36,44 +63,54 @@
             ]
         },
         {
-            "rule": "securiti\\.ai\\/core\\/v1\\/utils\\/geo\\/location",
-            "cookies": 0.000201,
-            "fingerprinting": 0,
+            "rule": "securiti\\.ai\\/consent\\/cookie-consent-sdk\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
             "subdomains": [
-                "app.eu"
+                "cdn-prod.eu",
+                "cdn-prod"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 1,
+                "Document.cookie getter": 1,
+                "Navigator.prototype.cookieEnabled": 1
+            },
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "f908c481b82885c91445264bbe1e8fa90e65a2852398966e3bf7f1ae6387e20f"
+                "ee5bc370f85710c82353160a1d13a3629e467bf8190b1fd0833a0d6c720ddb52"
             ],
-            "type": "XHR",
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "dell.com",
-                "www.hertz.fr"
+                "hertz.fr",
+                "www.xfinity.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000201,
+    "cookies": 0.000402,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.8571428571428571
+            "prevalence": 0.7894736842105263
         },
         {
             "domain": "hertz.io",
-            "prevalence": 0.14285714285714285
+            "prevalence": 0.10526315789473684
+        },
+        {
+            "domain": "cimcontent.net",
+            "prevalence": 0.10526315789473684
         }
     ],
     "types": {
+        "XHR": 4,
         "Stylesheet": 2,
-        "XHR": 2
+        "Script": 2
     },
     "nameservers": [
         "elly.ns.cloudflare.com",

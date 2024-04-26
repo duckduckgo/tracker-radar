@@ -11,6 +11,8 @@
     "sites": 10,
     "subdomains": [
         "cas.avalon",
+        "validate",
+        "captcha",
         "cdn"
     ],
     "cnames": [],
@@ -28,15 +30,15 @@
             "prevalence": 0.001,
             "cnames": [],
             "responseHashes": [
-                "c89eaa008f155d17847ccf5547215e0fa38d82d58770ffde674daee9443c33ad",
-                "766112bcad9bc7d0420744289c34da9e949c786ac80ed50f449917f799400209",
-                "fecb06c74700cafb7cf0215f2d09bcc32834f901f717b2514fbda19354255c2c",
-                "5fc927e69ba2e503de23a043107fe1bd68bcd75803c80cf12bd1ce2e3092135e",
-                "5e7423ad899de967e05e921eb636b9abe638ee0b342f6ed038f30a254cc640ef",
-                "5d3e902bfe7dea5f03ecf4972a1e3358e3cb48bb94845b475e6dcf110eaa47c4",
-                "d0ea02ae13d25be63c0284accac9de6683c1edd9845375effb1dcd24b85d2864",
-                "b50970e00be72faf64cecfaa5bd68b4d1db0f8aac300e9b9d021e8f1014bb297",
-                "e0ad1d64500e23fbeed85a007045c0cd003444f24349b44cdab9fbb4a7083929"
+                "6c1ad5d9d189de77b400fd0e8c6eb4b305cd670d472752725e6d54784007ccdb",
+                "9056bfc332a1e4305e414cacd77161fbaaa6d8331790571897c2fb5514c281c4",
+                "53be7f28e2818ed36ee38fa2c47a3c556273cb8ee2ca4e9952caa485daffaf0a",
+                "207cf6457a5477322a95b6a15ea9b56ae5f38ec0b7c1d202ed999afecbd86d6c",
+                "9bc34c4a9564bb0e5171cafcdbd985d7ef72d00265cee909e1c4585d2c04a920",
+                "00cf25832b01e54bd89b4fcee5f708339ab9f67222941b2b39ef5a1c2a4f4e21",
+                "f4e62f656e24bafcdbceeecae3745bb46eb2549c6040c73f89e40f32e68ce83d",
+                "d5abd7f7fb2a260bfd9620d38d7871f953e159c754e7f69129d55ab40ed86106",
+                "bc6f7f726ab636a42755b9a04657828a91220130656e8fbfd44cc73a4e78f2a3"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -44,14 +46,120 @@
             "exampleSites": [
                 "ebay.de",
                 "esth.bundesfinanzministerium.de",
-                "iopscience.iop.org",
                 "signin.ebay.de",
+                "usth.bundesfinanzministerium.de",
+                "www.ebay.ca",
                 "www.ebay.de",
                 "www.ebay.com",
-                "www.ebay.ch",
-                "www.ebay.co.uk",
                 "www.ebay.at",
+                "www.ebay.co.uk",
                 "www.songfacts.com"
+            ]
+        },
+        {
+            "rule": "perfdrive\\.com\\/",
+            "cookies": 0.000201,
+            "fingerprinting": 1,
+            "subdomains": [
+                "validate"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "00e9172686485bd0239732906f0933acda2a0f427e610e73964eff9d3839487b"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {
+                "cbfmc2fe8": {
+                    "ttl": 127,
+                    "length": 9,
+                    "prevalence": 0.00010040160642570282,
+                    "uniqueness": 1
+                },
+                "cbftc2fe8": {
+                    "ttl": 127,
+                    "length": 9,
+                    "prevalence": 0.00010040160642570282,
+                    "uniqueness": 1
+                },
+                "cbfclc2fe8": {
+                    "ttl": 127,
+                    "length": 95,
+                    "prevalence": 0.00010040160642570282,
+                    "uniqueness": 1
+                },
+                "cbfm76c3b": {
+                    "ttl": 126,
+                    "length": 9,
+                    "prevalence": 0.00010040160642570282,
+                    "uniqueness": 1
+                },
+                "cbft76c3b": {
+                    "ttl": 127,
+                    "length": 9,
+                    "prevalence": 0.00010040160642570282,
+                    "uniqueness": 1
+                },
+                "cbfcl76c3b": {
+                    "ttl": 127,
+                    "length": 95,
+                    "prevalence": 0.00010040160642570282,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bundesfinanzministerium.de",
+                "usth.bundesfinanzministerium.de"
+            ]
+        },
+        {
+            "rule": "perfdrive\\.com\\/captcha-public\\/css\\/shieldsquare_styles\\.min\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "captcha"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "2fcdc3b4f2aed79bbe5b2bb0b20ee2054efde2b66244387b69c6ca030635de31"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bundesfinanzministerium.de",
+                "usth.bundesfinanzministerium.de"
+            ]
+        },
+        {
+            "rule": "perfdrive\\.com\\/captcha-public\\/images\\/ss_captcha\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "captcha"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "0b2379960ae45dd67797331f1415f803d0acd9a6fd08a21acb3934ec1c9c2488"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bundesfinanzministerium.de",
+                "usth.bundesfinanzministerium.de"
             ]
         },
         {
@@ -111,52 +219,52 @@
             "type": "Script",
             "firstPartyCookies": {
                 "__sstester": {
-                    "ttl": -1712074350,
+                    "ttl": -1714062715,
                     "length": 1,
-                    "prevalence": 0.0003012350637614218,
-                    "uniqueness": 0.3333333333333333
+                    "prevalence": 0.00010040160642570282,
+                    "uniqueness": 1
                 },
                 "__ssds": {
-                    "ttl": 15552002,
+                    "ttl": 15552004,
                     "length": 1,
-                    "prevalence": 0.0003012350637614218,
-                    "uniqueness": 0.3333333333333333
+                    "prevalence": 0.00010040160642570282,
+                    "uniqueness": 1
                 },
                 "__ssuzjsr2": {
-                    "ttl": 15552003,
+                    "ttl": 15552004,
                     "length": 9,
-                    "prevalence": 0.0003012350637614218,
-                    "uniqueness": 0.3333333333333333
+                    "prevalence": 0.00010040160642570282,
+                    "uniqueness": 1
                 },
                 "__uzmaj2": {
-                    "ttl": 15552003,
+                    "ttl": 15552004,
                     "length": 36,
-                    "prevalence": 0.0003012350637614218,
+                    "prevalence": 0.00010040160642570282,
                     "uniqueness": 1
                 },
                 "__uzmbj2": {
-                    "ttl": 15552003,
+                    "ttl": 15552004,
                     "length": 10,
-                    "prevalence": 0.0003012350637614218,
+                    "prevalence": 0.00010040160642570282,
                     "uniqueness": 1
                 },
                 "__uzmcj2": {
-                    "ttl": 15552003,
+                    "ttl": 15552004,
                     "length": 12,
-                    "prevalence": 0.0003012350637614218,
+                    "prevalence": 0.00010040160642570282,
                     "uniqueness": 1
                 },
                 "__uzmdj2": {
-                    "ttl": 15552003,
+                    "ttl": 15552004,
                     "length": 10,
-                    "prevalence": 0.0003012350637614218,
+                    "prevalence": 0.00010040160642570282,
                     "uniqueness": 1
                 }
             },
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "bundesfinanzministerium.de",
-                "iopscience.iop.org",
+                "usth.bundesfinanzministerium.de",
                 "www.songfacts.com"
             ]
         }
@@ -167,21 +275,24 @@
     "topInitiators": [
         {
             "domain": "ebaystatic.com",
-            "prevalence": 0.8333333333333334
+            "prevalence": 0.9
         },
         {
             "domain": "first party",
-            "prevalence": 0.16666666666666666
+            "prevalence": 0.1
         }
     ],
     "types": {
         "XHR": 10,
+        "Document": 2,
+        "Stylesheet": 2,
+        "Image": 2,
         "Script": 3
     },
     "nameservers": [
-        "ns-1220.awsdns-24.org",
-        "ns-1846.awsdns-38.co.uk",
+        "ns-546.awsdns-04.net",
         "ns-458.awsdns-57.com",
-        "ns-546.awsdns-04.net"
+        "ns-1220.awsdns-24.org",
+        "ns-1846.awsdns-38.co.uk"
     ]
 }
