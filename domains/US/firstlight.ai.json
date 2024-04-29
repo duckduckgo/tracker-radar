@@ -4,9 +4,14 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.00000681,
-    "sites": 1,
+    "prevalence": 0.0000136,
+    "sites": 2,
     "subdomains": [
+        "auth-platform.api.rsm",
+        "auth-platform.api.aha",
+        "geo-loc.api.rsm",
+        "geo-loc.api.aha",
+        "data-store-cdn.api.aha",
         "catalog-service-cdn.api.aha",
         "rg-srv-cdn.api.aha"
     ],
@@ -14,7 +19,96 @@
     "fingerprinting": 0,
     "resources": [
         {
-            "rule": "firstlight\\.ai\\/catalog\\/storefront\\/landingscreen",
+            "rule": "firstlight\\.ai\\/oauth2\\/token",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "auth-platform.api.rsm",
+                "auth-platform.api.aha"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "c09921780096949f183a0dfa5967674765745d19e14c2b69a5937d86f60f5c81"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sportsnet.ca",
+                "www.aha.video"
+            ]
+        },
+        {
+            "rule": "firstlight\\.ai\\/device\\/location\\/lookup",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "geo-loc.api.rsm",
+                "geo-loc.api.aha"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sportsnet.ca",
+                "www.aha.video"
+            ]
+        },
+        {
+            "rule": "firstlight\\.ai\\/device\\/location\\/lookup",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "geo-loc.api.rsm",
+                "geo-loc.api.aha"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "2700ffe6d5264b0d666681fe18be64ac59909c8ef64b2b06ecffeb887c86b2fa"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sportsnet.ca",
+                "www.aha.video"
+            ]
+        },
+        {
+            "rule": "firstlight\\.ai\\/content\\/urn\\/resource\\/catalog\\/movie\\/sardar-tamil",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "data-store-cdn.api.aha"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "3ca752f78303b41c6805a4e04f85a0dde1e70a091f17572e6aac3a3f3ee1bc7e"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "aha.video",
+                "www.aha.video"
+            ]
+        },
+        {
+            "rule": "firstlight\\.ai\\/catalog\\/collection\\/BFF30861-3A8D-4847-8440-7580D828BB73\\/containers",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -25,7 +119,7 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "d30cad5bef465a8f9afbcf86edb52c6fdc7e220b8c300415835295791cba25bc"
+                "6f032861b6a647d009c36e4c2d40c8b267776d43d5acd7c1de0f95ef55142c93"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -47,7 +141,7 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "ca0f425278ae905015ac09b47bc0c7e68fb5698fbe85225b4fecfdcc82c9abf0"
+                "bc774a58f272920465547807f442f82c04b5481e4b4f0284a5e95cb73bb171cd"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -68,12 +162,13 @@
         }
     ],
     "types": {
-        "Fetch": 4
+        "Fetch": 10,
+        "Preflight": 2
     },
     "nameservers": [
-        "ns-423.awsdns-52.com",
-        "ns-528.awsdns-02.net",
         "ns-1466.awsdns-55.org",
-        "ns-1864.awsdns-41.co.uk"
+        "ns-423.awsdns-52.com",
+        "ns-1864.awsdns-41.co.uk",
+        "ns-528.awsdns-02.net"
     ]
 }

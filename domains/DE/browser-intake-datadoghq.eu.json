@@ -7,11 +7,11 @@
     "source": [
         "DuckDuckGo-DE"
     ],
-    "prevalence": 0.000602,
-    "sites": 6,
+    "prevalence": 0.000803,
+    "sites": 8,
     "subdomains": [
         "rum",
-        "session-replay"
+        "logs"
     ],
     "cnames": [],
     "fingerprinting": 0,
@@ -24,15 +24,14 @@
                 "rum"
             ],
             "apis": {},
-            "sites": 6,
-            "prevalence": 0.000602,
+            "sites": 5,
+            "prevalence": 0.000502,
             "cnames": [],
             "responseHashes": [
-                "3cee3decc0e3b7dfc9b4c4dd7a75e2266c40f2ad99a319d9982ba8f0766882c5",
-                "edfdec5284d43568997f6ec9fcf7ce66e54112a59af4104fc522b33e6f98f148",
-                "ac28bf16118960f1fda076c4c060a26ae8187468db96002de3094a56d324f966",
-                "af566fa4c313c60aa17e7c895e319871b67960b696a3f3e942fd65f30c56775d",
-                "4a63115f56955f3a5cfa8586a93186fef951a304e23607bc08f54b30f0df32d7"
+                "21a3bfac44452699202da095b90d66eca0e4de2698d3e3f160d4d787f46c9310",
+                "6b7efadf4c6f71336bbba2aca2db7f1997591e99c163c31ebb5e88c21a79cb3a",
+                "62d65c319bfdbf924ecf39816c7450182163cdafcad25dae8c6cc501209ba463",
+                "bb160924a466c1b5545d165b2e9151cbbcc18115b0ce97d23ec4cc49905f2afe"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -40,52 +39,75 @@
             "exampleSites": [
                 "knauf.de",
                 "downloads.knauf.de",
+                "knauf.com",
                 "my.tui.com",
-                "wolt.com",
-                "www.cupraofficial.de",
-                "www.lefigaro.fr"
+                "www.cupraofficial.de"
+            ]
+        },
+        {
+            "rule": "browser-intake-datadoghq\\.eu\\/\\/api\\/v2\\/rum",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rum"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "9956ba638cdb2438107cff63f542b3bf7f939fbf9d5c2b652561d55c87c19102"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tchibo.de",
+                "www.tchibo.de"
+            ]
+        },
+        {
+            "rule": "browser-intake-datadoghq\\.eu\\/\\/api\\/v2\\/rum",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rum"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tchibo.de",
+                "www.tchibo.de"
             ]
         },
         {
             "rule": "browser-intake-datadoghq\\.eu\\/api\\/v2\\/logs",
             "cookies": 0,
             "fingerprinting": 0,
-            "subdomains": [],
+            "subdomains": [
+                "logs"
+            ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [
-                "d6db02a5665b13a57fb3ae6fef25ffbf500c957843cea82b2d19e09e9ad006cb"
+                "45726ae010263d97c53d383c50eb8b478f4050a7f0f5a3403944c0b855c478bd",
+                "3bdd8493abad0199cc386a2a34e4051f2db6741aa43e430792f1063cda8a0abd"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "blablacar.de",
-                "www.blablacar.de"
-            ]
-        },
-        {
-            "rule": "browser-intake-datadoghq\\.eu\\/api\\/v2\\/replay",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "session-replay"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "8e64fa2db759e746ddd3b2c28e594867fa6a6e9d0b734d7cc02e143fc1001bea"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "cupraofficial.de",
-                "www.lefigaro.fr"
+                "www.blablacar.de",
+                "www.directferries.de"
             ]
         }
     ],
@@ -95,29 +117,33 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.6363636363636364
+            "prevalence": 0.42857142857142855
         },
         {
             "domain": "datadoghq-browser-agent.com",
-            "prevalence": 0.18181818181818182
+            "prevalence": 0.21428571428571427
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.14285714285714285
         },
         {
             "domain": "knauf.com",
-            "prevalence": 0.09090909090909091
+            "prevalence": 0.10714285714285714
         },
         {
             "domain": "blablacar.com",
-            "prevalence": 0.09090909090909091
+            "prevalence": 0.10714285714285714
         }
     ],
     "types": {
-        "Fetch": 8,
-        "XHR": 2
+        "Fetch": 10,
+        "Preflight": 2
     },
     "nameservers": [
-        "ns-cloud-e1.googledomains.com",
-        "ns-cloud-e3.googledomains.com",
         "ns-cloud-e2.googledomains.com",
-        "ns-cloud-e4.googledomains.com"
+        "ns-cloud-e3.googledomains.com",
+        "ns-cloud-e4.googledomains.com",
+        "ns-cloud-e1.googledomains.com"
     ]
 }

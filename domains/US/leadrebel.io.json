@@ -10,26 +10,30 @@
         "app"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "leadrebel\\.io\\/t\\/script\\.js",
             "cookies": 0,
-            "fingerprinting": 1,
+            "fingerprinting": 2,
             "subdomains": [
                 "app"
             ],
             "apis": {
-                "Document.cookie getter": 2,
                 "window.localStorage": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Document.cookie getter": 2,
                 "URL.createObjectURL": 2,
-                "window.sessionStorage": 2
+                "window.sessionStorage": 2,
+                "Navigator.prototype.product": 2,
+                "window.innerWidth": 2,
+                "window.innerHeight": 2
             },
             "sites": 3,
             "prevalence": 0.0000204,
             "cnames": [],
             "responseHashes": [
-                "45e3cfa528f08324a6484dee16129d6ece13e953bcf3d592503d583a226bdbcc",
+                "cb850948e65b527538210d292057ba6edfb1caf038268346654ccc29fee08667",
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
             ],
             "type": "Script",
@@ -42,7 +46,7 @@
             ]
         },
         {
-            "rule": "leadrebel\\.io\\/t\\/data",
+            "rule": "leadrebel\\.io\\/socket\\.io\\/",
             "cookies": 0.0000136,
             "fingerprinting": 0,
             "subdomains": [
@@ -52,8 +56,30 @@
             "sites": 2,
             "prevalence": 0.0000136,
             "cnames": [],
+            "responseHashes": [
+                "2689367b205c16ce32ed4200942b8b8b1e262dfc70d9bc9fbc77c49699a4f1df"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "industryarena.com",
+                "en.industryarena.com"
+            ]
+        },
+        {
+            "rule": "leadrebel\\.io\\/socket\\.io\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "app"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
             "responseHashes": [],
-            "type": "Fetch",
+            "type": "WebSocket",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -73,11 +99,12 @@
     ],
     "types": {
         "Script": 3,
-        "Fetch": 2
+        "XHR": 2,
+        "WebSocket": 2
     },
     "nameservers": [
-        "cns1.alfahosting.info",
+        "cns2.alfahosting.info",
         "cns3.alfahosting.info",
-        "cns2.alfahosting.info"
+        "cns1.alfahosting.info"
     ]
 }

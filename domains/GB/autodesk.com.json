@@ -10,37 +10,18 @@
     "prevalence": 0.0001,
     "sites": 1,
     "subdomains": [
-        "ipm-aem",
         "swc",
+        "developer.api",
         "api.digital-help-prd",
+        "ipm-aem",
+        "auth",
+        "accounts",
         "app.ua",
         "psg-prd.apm"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
-        {
-            "rule": "autodesk\\.com\\/services\\/universal-header\\/content-services",
-            "cookies": 0.000201,
-            "fingerprinting": 0,
-            "subdomains": [
-                "ipm-aem"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "5af4823fd021e77a22b2c87e7360364a5a61ec28488e45ffbf46daa7ac46f1f0"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "autodesk.co.uk",
-                "www.autodesk.co.uk"
-            ]
-        },
         {
             "rule": "autodesk\\.com\\/pharmacopeia\\/fonts\\/ArtifaktElement\\/v1\\.0\\/WOFF2\\/Artifakt%20Element%20Regular\\.woff2",
             "cookies": 0,
@@ -64,6 +45,26 @@
             ]
         },
         {
+            "rule": "autodesk\\.com\\/authentication\\/v2\\/authorize",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "developer.api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "autodesk.co.uk",
+                "www.autodesk.co.uk"
+            ]
+        },
+        {
             "rule": "autodesk\\.com\\/services\\/v1\\/sites-config",
             "cookies": 0,
             "fingerprinting": 0,
@@ -75,7 +76,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "c08b6d443e20170360d989a11c5494599f64f6d7e2882d2c1175b7794f8e9ef2"
+                "eca0b4ccd6818f510a3741c900797224c414a30ea4c2c88c263ddee742b57ff6"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -86,7 +87,69 @@
             ]
         },
         {
-            "rule": "autodesk\\.com\\/universal-assistant\\/0\\.30\\.41\\/4bb0c5b0c56e82f9a010\\.worker\\.js",
+            "rule": "autodesk\\.com\\/content\\/experience-fragments\\/content-services\\/universal\\/europe\\/en_GB\\/flyout\\/master\\.content\\.html",
+            "cookies": 0.0001,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ipm-aem"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "4f771b3ee170743df2f6c3ec505b22e0d8375a41e60d28f395c3824e9ab50396"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "autodesk.co.uk",
+                "www.autodesk.co.uk"
+            ]
+        },
+        {
+            "rule": "autodesk\\.com\\/as\\/authorization\\.oauth2",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "auth"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "autodesk.co.uk",
+                "www.autodesk.co.uk"
+            ]
+        },
+        {
+            "rule": "autodesk\\.com\\/logon",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "accounts"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "autodesk.co.uk",
+                "www.autodesk.co.uk"
+            ]
+        },
+        {
+            "rule": "autodesk\\.com\\/universal-assistant\\/current\\/580badc631ceba880918\\.worker\\.js",
             "cookies": 0.0001,
             "fingerprinting": 0,
             "subdomains": [
@@ -97,7 +160,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "2a8074bd0852ad4d0a3231475b51d74a0e9e211c628b0de06b35adb4d80034bd"
+                "a4385265e65f1c4c3bae67e5403bd3a009859efd646698ce299fd9e5ff5ab5db"
             ],
             "type": "Other",
             "firstPartyCookies": {},
@@ -134,21 +197,22 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.7567567567567568
+            "prevalence": 0.7857142857142857
         },
         {
             "domain": "autodesk.net",
-            "prevalence": 0.21621621621621623
+            "prevalence": 0.16666666666666666
         },
         {
             "domain": "tiqcdn.com",
-            "prevalence": 0.02702702702702703
+            "prevalence": 0.047619047619047616
         }
     ],
     "types": {
-        "XHR": 2,
         "Font": 2,
+        "Document": 6,
         "Fetch": 4,
+        "XHR": 2,
         "Other": 2
     },
     "nameservers": [

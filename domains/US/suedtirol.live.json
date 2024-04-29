@@ -8,10 +8,12 @@
     "sites": 2,
     "subdomains": [
         "connect",
-        "clients.connect"
+        "clients.connect",
+        "delivery.connect",
+        "cdn"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "suedtirol\\.live\\/slc\\.js",
@@ -27,9 +29,29 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "9c6b73fa9513fd77e1e2358eee1b984c97d477ff26d551bfcd3cc2516ae51e61"
+                "ad7b2171938cd8866e107d5b03d373e4ed5af57e0d38d0e17c00a43a84d536ab"
             ],
             "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "stol.it",
+                "www.suedtirolnews.it"
+            ]
+        },
+        {
+            "rule": "suedtirol\\.live\\/pageView",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "connect"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -60,26 +82,6 @@
             ]
         },
         {
-            "rule": "suedtirol\\.live\\/pageView",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "connect"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "stol.it",
-                "www.suedtirolnews.it"
-            ]
-        },
-        {
             "rule": "suedtirol\\.live\\/api\\/s",
             "cookies": 0,
             "fingerprinting": 0,
@@ -91,7 +93,7 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "58cf138ce0afe904423d2d94d417c87810ee5546749754f758b12af832fbfd8c"
+                "25d25e3c60853dfb435550c0b49522cd5e3775bdd479bb32c6e35a74cf11f035"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -135,13 +137,55 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "4e7dc9f36f9965224c6a8ca5372e915ff314f4a466110f7d3b00a88bb6fe240c"
+                "2ea55ec2138e16eb0e3c1684a0aaf800b1ca2e9752912fbc40d473cd24591354"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "stol.it",
+                "www.suedtirolnews.it"
+            ]
+        },
+        {
+            "rule": "suedtirol\\.live\\/js\\/EmbedCanvas\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "delivery.connect"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "c3ace62d7b7a62cab196149b6f781d4facb7d8f70a36d8d67a44cb9a112b735c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "suedtirolnews.it",
+                "www.suedtirolnews.it"
+            ]
+        },
+        {
+            "rule": "suedtirol\\.live\\/assets\\/logo\\/display_small\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "suedtirolnews.it",
                 "www.suedtirolnews.it"
             ]
         }
@@ -164,14 +208,15 @@
         }
     ],
     "types": {
-        "Script": 4,
+        "Script": 6,
+        "Preflight": 4,
         "XHR": 4,
-        "Preflight": 4
+        "Image": 2
     },
     "nameservers": [
-        "ns-1672.awsdns-17.co.uk",
         "ns-198.awsdns-24.com",
         "ns-708.awsdns-24.net",
+        "ns-1672.awsdns-17.co.uk",
         "ns-1353.awsdns-41.org"
     ]
 }

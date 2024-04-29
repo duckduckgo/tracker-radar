@@ -7,7 +7,8 @@
     "prevalence": 0.0000204,
     "sites": 3,
     "subdomains": [
-        "cdn"
+        "cdn",
+        "log"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -26,7 +27,7 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "a759b1082716f2ca9884b8e06ae49bd4f204b124491eecb7556f6fffaa551995"
+                "ffecedc99e1a1fde8126a9c5649edc02205db1362dd689c83d4b803f87c644a6"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -48,7 +49,7 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "50c68ed0324e55c56b212889feaeb7affe6a0e14025ab79f144e54f91eed74c7"
+                "3bd6b07c6351696b4dca1172ca334341707b88d0208f02f588d164810fe5b0d5"
             ],
             "type": "Stylesheet",
             "firstPartyCookies": {},
@@ -66,14 +67,40 @@
                 "cdn"
             ],
             "apis": {
-                "Navigator.prototype.languages": 1,
-                "Intl.DateTimeFormat.prototype.resolvedOptions": 1
+                "Navigator.prototype.languages": 2,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 2,
+                "Date.prototype.getTime": 1
             },
             "sites": 2,
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "c6a249eb9f2e6b4aab3e4775d0eb702c6222f465d3d8c04c2930f43ca9e1a13a"
+                "0aeec7b048210900a2b8948ead2536b4e0eaa64c43d3dd97c91d4079e07019a0"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "drafttek.com",
+                "statesymbolsusa.org"
+            ]
+        },
+        {
+            "rule": "strawpoll\\.com\\/js\\/script\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "log"
+            ],
+            "apis": {
+                "Navigator.prototype.webdriver": 2,
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "021f0fd27042b279a49e982215c6dc3c3ab84e95b35553a119dfdbd50af6be94"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -104,6 +131,26 @@
                 "drafttek.com",
                 "statesymbolsusa.org"
             ]
+        },
+        {
+            "rule": "strawpoll\\.com\\/api\\/event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "log"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "drafttek.com",
+                "statesymbolsusa.org"
+            ]
         }
     ],
     "categories": [],
@@ -116,9 +163,10 @@
         }
     ],
     "types": {
-        "Script": 4,
+        "Script": 6,
         "Stylesheet": 2,
-        "Font": 2
+        "Font": 2,
+        "XHR": 2
     },
     "nameservers": [
         "kate.ns.cloudflare.com",

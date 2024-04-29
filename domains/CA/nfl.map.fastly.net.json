@@ -9,21 +9,92 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000101,
-    "sites": 1,
+    "prevalence": 0.000301,
+    "sites": 3,
     "subdomains": [
+        "global",
         "http2.global"
     ],
     "cnames": [
         {
             "original": "api.nfl.com",
             "resolved": "http2.global.nfl.map.fastly.net"
+        },
+        {
+            "original": "p.nfltags.com",
+            "resolved": "global.nfl.map.fastly.net"
+        },
+        {
+            "original": "static.www.nfl.com",
+            "resolved": "global.nfl.map.fastly.net"
         }
     ],
     "fingerprinting": 3,
     "resources": [
         {
-            "rule": "nfl\\.map\\.fastly\\.net\\/live\\/v1\\/livestreams",
+            "rule": "nfl\\.map\\.fastly\\.net\\/nfl\\/live\\/NflUmdComponents\\.NFLToken\\.js",
+            "cookies": 0.000301,
+            "fingerprinting": 2,
+            "subdomains": [
+                "global"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [
+                {
+                    "original": "p.nfltags.com",
+                    "resolved": "global.nfl.map.fastly.net"
+                }
+            ],
+            "responseHashes": [
+                "3374fe82df41fc351587fc6163b7a3cd7cdd957de459cac0d6d8562aabd08c2f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "nflcs.prod.crossDomainStorageCleared": {
+                    "ttl": 31536010,
+                    "length": 4,
+                    "prevalence": 0.00010049241282283188,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "buffalobills.com",
+                "www.nfl.com",
+                "www.seahawks.com"
+            ]
+        },
+        {
+            "rule": "nfl\\.map\\.fastly\\.net\\/t_q-best\\/league\\/api\\/clubs\\/logos\\/BUF",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "global"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "static.www.nfl.com",
+                    "resolved": "global.nfl.map.fastly.net"
+                }
+            ],
+            "responseHashes": [
+                "7435e26708e19716595a36fb48e5f62fdf4548b7a8e42745487864441d6284df"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "buffalobills.com",
+                "www.nfl.com"
+            ]
+        },
+        {
+            "rule": "nfl\\.map\\.fastly\\.net\\/identity\\/v3\\/token",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -38,17 +109,19 @@
                     "resolved": "http2.global.nfl.map.fastly.net"
                 }
             ],
-            "responseHashes": [],
+            "responseHashes": [
+                "b99b2ce4c41f345e8e0487a0829c0916be04484236fefa23db649f8ea0156569"
+            ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "nfl.com",
+                "buffalobills.com",
                 "www.nfl.com"
             ]
         },
         {
-            "rule": "nfl\\.map\\.fastly\\.net\\/live\\/v1\\/livestreams",
+            "rule": "nfl\\.map\\.fastly\\.net\\/identity\\/v3\\/token",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -68,8 +141,35 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "nfl.com",
+                "buffalobills.com",
                 "www.nfl.com"
+            ]
+        },
+        {
+            "rule": "nfl\\.map\\.fastly\\.net\\/t_q-best\\/league\\/api\\/clubs\\/logos\\/SEA",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "global"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "static.www.nfl.com",
+                    "resolved": "global.nfl.map.fastly.net"
+                }
+            ],
+            "responseHashes": [
+                "9e4e9f13ae5552297ddfb7733fa1ea7cca66aa12e571c7841d254bdcb88fda54"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nfl.com",
+                "www.seahawks.com"
             ]
         }
     ],
@@ -84,18 +184,20 @@
         "Session Replay"
     ],
     "performance": {},
-    "cookies": 0.000101,
+    "cookies": 0.000301,
     "topInitiators": [
         {
-            "domain": "nfltags.com",
-            "prevalence": 0.5833333333333334
+            "domain": "first party",
+            "prevalence": 0.9316239316239316
         },
         {
-            "domain": "first party",
-            "prevalence": 0.4166666666666667
+            "domain": "nfltags.com",
+            "prevalence": 0.06837606837606838
         }
     ],
     "types": {
+        "Script": 3,
+        "Image": 4,
         "Fetch": 2,
         "Preflight": 2
     },

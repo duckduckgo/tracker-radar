@@ -4,11 +4,14 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000272,
+    "prevalence": 0.0000273,
     "sites": 4,
     "subdomains": [
         "lh",
+        "dev-lh",
         "analytics-cf",
+        "dev-analytics-cf",
+        "dev-ship",
         "ship",
         "usync"
     ],
@@ -18,9 +21,10 @@
         {
             "rule": "bigcrunch\\.com\\/main\\.js",
             "cookies": 0.0000136,
-            "fingerprinting": 1,
+            "fingerprinting": 2,
             "subdomains": [
-                "lh"
+                "lh",
+                "dev-lh"
             ],
             "apis": {
                 "Navigator.prototype.userAgent": 2,
@@ -35,14 +39,14 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "88e7fb525a3193362e3d274882941c9499719a53c9234d22323eee0e3e9aedfe"
+                "328800e331357998969cc12dce5286eea802f32989d36d413cab3221f7e91ce2"
             ],
             "type": "Script",
             "firstPartyCookies": {
                 "__bc_lh_session_id": {
                     "ttl": 1800,
                     "length": 36,
-                    "prevalence": 0.000013617763010070337,
+                    "prevalence": 0.000013630942238882263,
                     "uniqueness": 1
                 }
             },
@@ -57,7 +61,29 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "analytics-cf"
+                "analytics-cf",
+                "dev-analytics-cf"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tvtropes.org",
+                "www.snopes.com"
+            ]
+        },
+        {
+            "rule": "bigcrunch\\.com\\/session-pages",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "analytics-cf",
+                "dev-analytics-cf"
             ],
             "apis": {},
             "sites": 2,
@@ -75,30 +101,11 @@
             ]
         },
         {
-            "rule": "bigcrunch\\.com\\/session-pages",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "analytics-cf"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000136,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "tvtropes.org",
-                "www.snopes.com"
-            ]
-        },
-        {
             "rule": "bigcrunch\\.com\\/config\\/7baaa297-8659-496c-ab3a-63eff8584214\\.json",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
+                "dev-ship",
                 "ship"
             ],
             "apis": {},
@@ -106,7 +113,7 @@
             "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "b3fa426f0979c46d8c72e13ad015c835bc08c09694e405c1b4faafe549485bcf"
+                "5fb7ef724975f089308354eafb83ad533aa65e30e89802446a12f90af9cb63a5"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -117,8 +124,56 @@
             ]
         },
         {
+            "rule": "bigcrunch\\.com\\/extra_js\\/7baaa297-8659-496c-ab3a-63eff8584214\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "dev-ship",
+                "ship"
+            ],
+            "apis": {
+                "window.innerWidth": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "d6d0ea9b23723cbf78f82b8369cf95c3c1e1aab25d62014be6315ee4a3f8ad27"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "snopes.com",
+                "www.snopes.com"
+            ]
+        },
+        {
+            "rule": "bigcrunch\\.com\\/extra_css\\/7baaa297-8659-496c-ab3a-63eff8584214\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dev-ship",
+                "ship"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "572a9eaa7f12848c5b867a045bd698879566e046ff0d5a47faca85b01de58e6b"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "snopes.com",
+                "www.snopes.com"
+            ]
+        },
+        {
             "rule": "bigcrunch\\.com\\/s2s\\/userSync",
-            "cookies": 0.0000136,
+            "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
                 "usync"
@@ -127,9 +182,7 @@
             "sites": 2,
             "prevalence": 0.0000136,
             "cnames": [],
-            "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-            ],
+            "responseHashes": [],
             "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -141,21 +194,34 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0000272,
+    "cookies": 0.0000273,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.6666666666666666
+            "prevalence": 0.5333333333333333
+        },
+        {
+            "domain": "doubleclick.net",
+            "prevalence": 0.13333333333333333
+        },
+        {
+            "domain": "3lift.com",
+            "prevalence": 0.13333333333333333
         },
         {
             "domain": "casalemedia.com",
-            "prevalence": 0.3333333333333333
+            "prevalence": 0.13333333333333333
+        },
+        {
+            "domain": "htlbid.com",
+            "prevalence": 0.06666666666666667
         }
     ],
     "types": {
-        "Script": 2,
-        "Fetch": 4,
+        "Script": 4,
         "Preflight": 2,
+        "Fetch": 4,
+        "Stylesheet": 2,
         "Image": 2
     },
     "nameservers": [

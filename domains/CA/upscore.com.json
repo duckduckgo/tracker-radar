@@ -7,14 +7,70 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000101,
-    "sites": 1,
+    "prevalence": 0.000201,
+    "sites": 2,
     "subdomains": [
+        "hl",
+        "files",
         "hit-pool"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "upscore\\.com\\/config\\/b92\\.net\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "hl",
+                "files"
+            ],
+            "apis": {
+                "window.localStorage": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "fde0274b5ca85f4ed64b4335800482f99200ace690fbfa827947b7dca482fac8"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "b92.net",
+                "www.b92.net"
+            ]
+        },
+        {
+            "rule": "upscore\\.com\\/async\\/upScore\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "files"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2,
+                "Date.prototype.getTime": 2,
+                "window.innerHeight": 2,
+                "PerformanceTiming.prototype.navigationStart": 2,
+                "window.innerWidth": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "9338a7943da5b548278809378a73b05a65e416d373db96b9b25676e3f63856ec"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "b92.net",
+                "www.jutarnji.hr"
+            ]
+        },
         {
             "rule": "upscore\\.com\\/",
             "cookies": 0,
@@ -23,8 +79,8 @@
                 "hit-pool"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [
                 "a12b7cb43c9d9134b5bb1b35e9096b66775d9e92e7611d1cc92b02edd6782a87"
@@ -34,7 +90,8 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "b92.net",
-                "www.b92.net"
+                "www.b92.net",
+                "www.jutarnji.hr"
             ]
         }
     ],
@@ -44,14 +101,19 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.5
+        },
+        {
+            "domain": "privacy-center.org",
+            "prevalence": 0.5
         }
     ],
     "types": {
-        "Ping": 2
+        "Script": 4,
+        "Ping": 3
     },
     "nameservers": [
-        "dorthy.ns.cloudflare.com",
-        "duke.ns.cloudflare.com"
+        "duke.ns.cloudflare.com",
+        "dorthy.ns.cloudflare.com"
     ]
 }

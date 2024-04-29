@@ -7,35 +7,68 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.0001,
-    "sites": 1,
+    "prevalence": 0.000201,
+    "sites": 2,
     "subdomains": [
-        "individualizer",
+        "publicapi",
+        "www",
         "api"
     ],
     "cnames": [],
     "fingerprinting": 3,
     "resources": [
         {
-            "rule": "databreakers\\.com\\/v1\\/individualizer",
+            "rule": "databreakers\\.com\\/v2\\/gatherer-data-provider",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "individualizer"
+                "publicapi"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "e7c32a333c7071e49bef8e5620dfac9d1c21afad1d0be5d46cd67cf66bf5e022"
+                "b25f643ff13a7eba1d652e175fc7448b2fd34eeb4ae1b1816cdc3f0c73e89011"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "groupon.fr",
-                "www.groupon.fr"
+                "www.notino.fr"
+            ]
+        },
+        {
+            "rule": "databreakers\\.com\\/cookie-maker",
+            "cookies": 0.000201,
+            "fingerprinting": 1,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "a66a4234a18b524b8faabaf4948005802ad4ce37e7ab65e9c210252be8c7657c"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {
+                "db_ui": {
+                    "ttl": 157680000,
+                    "length": 36,
+                    "prevalence": 0.00020126798832645668,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "groupon.fr",
+                "www.notino.fr"
             ]
         },
         {
@@ -63,18 +96,23 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0001,
+    "cookies": 0.000201,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.6666666666666666
+        },
+        {
+            "domain": "notinoimg.com",
+            "prevalence": 0.3333333333333333
         }
     ],
     "types": {
-        "XHR": 4
+        "XHR": 4,
+        "Document": 2
     },
     "nameservers": [
-        "ns2.ignum.cz",
-        "ns1.ignum.com"
+        "ns1.ignum.com",
+        "ns2.ignum.cz"
     ]
 }

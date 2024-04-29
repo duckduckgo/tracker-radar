@@ -7,8 +7,8 @@
     "source": [
         "DuckDuckGo-NL"
     ],
-    "prevalence": 0.000201,
-    "sites": 2,
+    "prevalence": 0.0001,
+    "sites": 1,
     "subdomains": [
         "cdn",
         "ad"
@@ -39,7 +39,7 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "miamiopen.com",
+                "stereonet.com",
                 "www.stereonet.com"
             ]
         },
@@ -70,11 +70,13 @@
         {
             "rule": "broadstreetads\\.com\\/zdisplay\\/68321\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "ad"
             ],
-            "apis": {},
+            "apis": {
+                "Date.prototype.getTime": 1
+            },
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
@@ -88,18 +90,42 @@
             ]
         },
         {
-            "rule": "broadstreetads\\.com\\/zdisplay\\/65449\\.js",
+            "rule": "broadstreetads\\.com\\/cdn-cgi\\/rum",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "ad"
+                "cdn"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "512b17975862d5555e3668732740b089f67e2a8d0e540c2405ef9107a028fa7f"
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "stereonet.com",
+                "www.stereonet.com"
+            ]
+        },
+        {
+            "rule": "broadstreetads\\.com\\/zdisplay\\/65449\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "ad"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "924035b6230b8b56706e9ed308586c5639557ba5259bdf50a32ea5de44528692"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -112,18 +138,27 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000201,
+    "cookies": 0.0001,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.4166666666666667
+        },
+        {
+            "domain": "createjs.com",
+            "prevalence": 0.3333333333333333
+        },
+        {
+            "domain": "cloudflareinsights.com",
+            "prevalence": 0.25
         }
     ],
     "types": {
-        "Script": 8
+        "Script": 8,
+        "XHR": 2
     },
     "nameservers": [
-        "jay.ns.cloudflare.com",
-        "tara.ns.cloudflare.com"
+        "tara.ns.cloudflare.com",
+        "jay.ns.cloudflare.com"
     ]
 }

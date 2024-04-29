@@ -7,21 +7,21 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.000602,
-    "sites": 6,
+    "prevalence": 0.000803,
+    "sites": 8,
     "subdomains": [
         "login",
-        "churchofjesuschrist.customdomains",
-        "servicenowsignon.customdomains"
+        "sas.customdomains",
+        "churchofjesuschrist.customdomains"
     ],
     "cnames": [
         {
-            "original": "id.churchofjesuschrist.org",
-            "resolved": "churchofjesuschrist.customdomains.okta.com"
+            "original": "auth.sas.com",
+            "resolved": "sas.customdomains.okta.com"
         },
         {
-            "original": "ssosignon.servicenow.com",
-            "resolved": "servicenowsignon.customdomains.okta.com"
+            "original": "id.churchofjesuschrist.org",
+            "resolved": "churchofjesuschrist.customdomains.okta.com"
         }
     ],
     "fingerprinting": 1,
@@ -57,8 +57,8 @@
                 "login"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 2,
-                "window.localStorage": 2
+                "Navigator.prototype.userAgent": 3,
+                "window.localStorage": 3
             },
             "sites": 3,
             "prevalence": 0.000301,
@@ -76,24 +76,46 @@
             ]
         },
         {
-            "rule": "okta\\.com\\/api\\/v1\\/sessions\\/me",
-            "cookies": 0.000301,
+            "rule": "okta\\.com\\/api\\/v1\\/users\\/me",
+            "cookies": 0.000201,
             "fingerprinting": 0,
             "subdomains": [
-                "churchofjesuschrist.customdomains",
-                "servicenowsignon.customdomains"
+                "sas.customdomains"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000301,
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "auth.sas.com",
+                    "resolved": "sas.customdomains.okta.com"
+                }
+            ],
+            "responseHashes": [
+                "01ff2ff2448496feb2b505de9c94edacc42d05bc07fb6e9e764374fcf5d895b8"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sas.com",
+                "support.sas.com"
+            ]
+        },
+        {
+            "rule": "okta\\.com\\/api\\/v1\\/sessions\\/me",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "churchofjesuschrist.customdomains"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
             "cnames": [
                 {
                     "original": "id.churchofjesuschrist.org",
                     "resolved": "churchofjesuschrist.customdomains.okta.com"
-                },
-                {
-                    "original": "ssosignon.servicenow.com",
-                    "resolved": "servicenowsignon.customdomains.okta.com"
                 }
             ],
             "responseHashes": [],
@@ -102,28 +124,32 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "churchofjesuschrist.org",
-                "www.churchofjesuschrist.org",
-                "www.servicenow.com"
+                "www.churchofjesuschrist.org"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000301,
+    "cookies": 0.000502,
     "topInitiators": [
         {
             "domain": "oktacdn.com",
-            "prevalence": 0.75
+            "prevalence": 0.6
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.2
         },
         {
             "domain": "adobedtm.com",
-            "prevalence": 0.25
+            "prevalence": 0.2
         }
     ],
     "types": {
         "Document": 3,
         "Script": 3,
-        "Fetch": 3
+        "XHR": 2,
+        "Fetch": 2
     },
     "nameservers": [
         "edns5.ultradns.biz",

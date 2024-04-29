@@ -9,19 +9,25 @@
     "source": [
         "DuckDuckGo-NL"
     ],
-    "prevalence": 0.00351,
-    "sites": 35,
+    "prevalence": 0.00362,
+    "sites": 36,
     "subdomains": [
         "sleeknotestaticcontent.s3",
         "o9tt6h08li.execute-api",
         "nl-prod-drupal-v2.s3",
+        "prod-ses-proxy-ext-lb-9287c7c2cf3220a1.elb",
         "d-0lwbjq4h8d.execute-api",
-        "xaln7hk625.execute-api"
+        "cognito-identity",
+        "firehose"
     ],
     "cnames": [
         {
             "original": "api.coop.nl",
             "resolved": "d-0lwbjq4h8d.execute-api.eu-west-1.amazonaws.com"
+        },
+        {
+            "original": "mediaweb.musicradio.com",
+            "resolved": "prod-ses-proxy-ext-lb-9287c7c2cf3220a1.elb.eu-west-1.amazonaws.com"
         }
     ],
     "fingerprinting": 1,
@@ -85,25 +91,25 @@
                 "SNS": {
                     "ttl": null,
                     "length": 1,
-                    "prevalence": 0.00030099327781679544,
+                    "prevalence": 0.0003013258336681398,
                     "uniqueness": 0.3333333333333333
                 },
                 "_sn_m": {
-                    "ttl": 31536005,
+                    "ttl": 31536006,
                     "length": 13,
-                    "prevalence": 0.00030099327781679544,
+                    "prevalence": 0.0003013258336681398,
                     "uniqueness": 0.3333333333333333
                 },
                 "_sn_a": {
-                    "ttl": 31536005,
+                    "ttl": 31536006,
                     "length": 71,
-                    "prevalence": 0.00030099327781679544,
+                    "prevalence": 0.0003013258336681398,
                     "uniqueness": 1
                 },
                 "_sn_n": {
-                    "ttl": 31536005,
+                    "ttl": 31536006,
                     "length": 112,
-                    "prevalence": 0.00030099327781679544,
+                    "prevalence": 0.0003013258336681398,
                     "uniqueness": 1
                 }
             },
@@ -211,27 +217,29 @@
         },
         {
             "rule": "eu-west-1\\.amazonaws\\.com\\/v1\\/event\\/setup",
-            "cookies": 0.000602,
+            "cookies": 0.000703,
             "fingerprinting": 0,
             "subdomains": [
                 "o9tt6h08li.execute-api"
             ],
             "apis": {},
-            "sites": 6,
-            "prevalence": 0.000602,
+            "sites": 7,
+            "prevalence": 0.000703,
             "cnames": [],
             "responseHashes": [
-                "04909ede72d937f01675f61f77894ff384f11e812cbaa907bfa85651b43e2bab",
-                "2b44bb492fe9f218417f4827b55b404fe5801b2f378f0f334ab0dcc3d4c00084",
-                "534f2f1d7fdb122d7d1b54fcf7533ffcbad23116d45ad1a1ec12e5c81f07128a",
-                "e2e2ae6c98c004bc16cf510d16e179c3faeede167a3224325fef74bff48cf778",
-                "15f96c996af3c99f087279a8cd907be217f9df0df2f24b5761c76f1c04a0ca22"
+                "25efc92123e3c19e39fc18d17afedb61c21b930b3246c5bb3d5fe8bcf5f002ce",
+                "1cea26c73e84eb63244ed7e6523c27227cc710b65e65d3b8d24c37c3be6e188e",
+                "a0a8a9800f4ce63d9497b0b5b0faf7743df26f7680c66c2bdcd1ae4131c1d249",
+                "cac8cad366d2eab1b03b8937cdf412c99510e00f82c733360f178ccd4e00a012",
+                "6b8c7880dacec25adf3f15bb1b1c4adf961e1aaa4da6ee12f664224b405853cb",
+                "3c584de6ef9b67e893213a2ea5a66477235720954ef148d6d62b4a1d8fa103f3"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "ns.nl",
+                "odido.nl",
+                "community.ns.nl",
                 "en.community.sonos.com",
                 "forum.kindertelefoon.nl",
                 "forum.kpn.com",
@@ -247,8 +255,8 @@
                 "o9tt6h08li.execute-api"
             ],
             "apis": {},
-            "sites": 6,
-            "prevalence": 0.000602,
+            "sites": 7,
+            "prevalence": 0.000703,
             "cnames": [],
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -257,7 +265,8 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "ns.nl",
+                "odido.nl",
+                "community.ns.nl",
                 "en.community.sonos.com",
                 "forum.kindertelefoon.nl",
                 "forum.kpn.com",
@@ -273,15 +282,16 @@
                 "o9tt6h08li.execute-api"
             ],
             "apis": {},
-            "sites": 6,
-            "prevalence": 0.000602,
+            "sites": 7,
+            "prevalence": 0.000703,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "ns.nl",
+                "odido.nl",
+                "community.ns.nl",
                 "en.community.sonos.com",
                 "forum.kindertelefoon.nl",
                 "forum.kpn.com",
@@ -290,7 +300,7 @@
             ]
         },
         {
-            "rule": "eu-west-1\\.amazonaws\\.com\\/drupal\\/s3fs-public\\/styles\\/banner\\/public\\/2021-10\\/hero6\\.jpg",
+            "rule": "eu-west-1\\.amazonaws\\.com\\/drupal\\/s3fs-public\\/styles\\/banner\\/public\\/2024-04\\/Carglass-0885-min\\.jpg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -301,7 +311,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "b86502cc22fe1af544c8d2ab9d12ed53fc65de4fe09ab8414514609879ac2059"
+                "e2cf086bf9aec62bef99f3b29f508996bb39275a7674e175139009964cdb8276"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -309,6 +319,33 @@
             "exampleSites": [
                 "carglass.nl",
                 "www.carglass.nl"
+            ]
+        },
+        {
+            "rule": "eu-west-1\\.amazonaws\\.com\\/player\\/image\\.aspx",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prod-ses-proxy-ext-lb-9287c7c2cf3220a1.elb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "mediaweb.musicradio.com",
+                    "resolved": "prod-ses-proxy-ext-lb-9287c7c2cf3220a1.elb.eu-west-1.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "cbec53fad461f56066f235dff8ad364d391c6ee08130c4ee879c58ac678ae644"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "classicfm.com",
+                "www.smoothradio.com"
             ]
         },
         {
@@ -364,25 +401,46 @@
             ]
         },
         {
-            "rule": "eu-west-1\\.amazonaws\\.com\\/dev",
+            "rule": "eu-west-1\\.amazonaws\\.com\\/",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "xaln7hk625.execute-api"
+                "cognito-identity"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                "9ebafd392d778f7229106cbb1aba6c86be6c3b86c8d8635a502ad253bc74f2df"
             ],
-            "type": "Other",
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "which.co.uk",
-                "www.which.co.uk"
+                "opticsplanet.com",
+                "www.opticsplanet.com"
+            ]
+        },
+        {
+            "rule": "eu-west-1\\.amazonaws\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cognito-identity",
+                "firehose"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "opticsplanet.com",
+                "www.opticsplanet.com"
             ]
         }
     ],
@@ -390,56 +448,47 @@
         "CDN"
     ],
     "performance": {},
-    "cookies": 0.001,
+    "cookies": 0.0011,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.7593220338983051
+            "prevalence": 0.7508090614886731
         },
         {
             "domain": "cookiebot.com",
-            "prevalence": 0.15593220338983052
+            "prevalence": 0.16828478964401294
         },
         {
             "domain": "d3odp2r1osuwn0.cloudfront.net",
-            "prevalence": 0.04067796610169491
+            "prevalence": 0.045307443365695796
         },
         {
             "domain": "webeyez.com",
-            "prevalence": 0.013559322033898305
+            "prevalence": 0.016181229773462782
         },
         {
             "domain": "sleeknote.com",
-            "prevalence": 0.010169491525423728
-        },
-        {
-            "domain": "googletagmanager.com",
-            "prevalence": 0.006779661016949152
+            "prevalence": 0.009708737864077669
         },
         {
             "domain": "uqd.io",
-            "prevalence": 0.003389830508474576
+            "prevalence": 0.003236245954692557
         },
         {
             "domain": "inmobi.com",
-            "prevalence": 0.003389830508474576
-        },
-        {
-            "domain": "zonneplan.cloud",
-            "prevalence": 0.003389830508474576
+            "prevalence": 0.003236245954692557
         },
         {
             "domain": "yoursurprise.com",
-            "prevalence": 0.003389830508474576
+            "prevalence": 0.003236245954692557
         }
     ],
     "types": {
         "Script": 13,
-        "Fetch": 2,
-        "XHR": 14,
-        "Preflight": 8,
-        "Image": 2,
-        "Other": 2
+        "Fetch": 4,
+        "XHR": 16,
+        "Preflight": 11,
+        "Image": 4
     },
     "nameservers": [
         "ns1.amzndns.co.uk",

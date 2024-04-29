@@ -4,11 +4,12 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000201,
-    "sites": 2,
+    "prevalence": 0.000302,
+    "sites": 3,
     "subdomains": [
         "static",
-        "api"
+        "api",
+        "m"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -21,17 +22,52 @@
                 "static"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
-                "e0790583436de96d75dc4194fc4900d8c2e3b890f5e69a03f3c23d40a2e6d25c"
+                "1320216da6be14762af012f47aab7fb789561c3d11a40f5ab2be870bea37592d"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "camif.fr",
+                "www.lip.fr",
+                "www.rascol.com"
+            ]
+        },
+        {
+            "rule": "photoslurp\\.com\\/widget\\/v3\\/widget-gallery\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2,
+                "Element.prototype.getClientRects": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "cfb43dd5990713e34754607bcf09d0638f85f41508762ba9cc7de5c5661288f2"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "ps_analytics": {
+                    "ttl": 2592007,
+                    "length": 20,
+                    "prevalence": 0.00020126798832645668,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lip.fr",
                 "www.rascol.com"
             ]
         },
@@ -53,7 +89,29 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "camif.fr",
+                "lip.fr",
+                "www.rascol.com"
+            ]
+        },
+        {
+            "rule": "photoslurp\\.com\\/widget\\/v3\\/themes\\/modern-gallery\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "2f39705c71c1a25352db5a24bc760fef55637502eb8a6121335547912721336d"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lip.fr",
                 "www.rascol.com"
             ]
         },
@@ -65,16 +123,39 @@
                 "api"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "camif.fr",
+                "lip.fr",
+                "www.lip.fr",
                 "www.rascol.com"
+            ]
+        },
+        {
+            "rule": "photoslurp\\.com\\/i\\/fit",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "m"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "76dc4aa91f406bf89701476cebb988ae130e0822973069c603c06a79e26aa658"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lip.fr",
+                "www.lip.fr"
             ]
         }
     ],
@@ -88,9 +169,10 @@
         }
     ],
     "types": {
-        "Script": 2,
-        "Stylesheet": 2,
-        "Fetch": 2
+        "Script": 5,
+        "Stylesheet": 4,
+        "Fetch": 3,
+        "Image": 2
     },
     "nameservers": [
         "clark.ns.cloudflare.com",

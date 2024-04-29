@@ -7,10 +7,11 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000703,
+    "prevalence": 0.000704,
     "sites": 7,
     "subdomains": [
-        "cdn"
+        "cdn",
+        "api"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -23,8 +24,8 @@
                 "cdn"
             ],
             "apis": {
-                "console.memory": 2,
-                "Date.prototype.getTime": 2
+                "Date.prototype.getTime": 2,
+                "console.memory": 1
             },
             "sites": 2,
             "prevalence": 0.000201,
@@ -41,28 +42,45 @@
             ]
         },
         {
-            "rule": "rollbar\\.com\\/rollbarjs\\/refs\\/tags\\/v2\\.23\\.0\\/rollbar\\.min\\.js",
+            "rule": "rollbar\\.com\\/api\\/1\\/item\\/",
             "cookies": 0,
-            "fingerprinting": 1,
+            "fingerprinting": 0,
             "subdomains": [
-                "cdn"
+                "api"
             ],
-            "apis": {
-                "console.memory": 2,
-                "Date.prototype.getTime": 2
-            },
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "on.com",
+                "www.on.com"
+            ]
+        },
+        {
+            "rule": "rollbar\\.com\\/api\\/1\\/item\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "c25355cf2e7bec93c43a0ab8bd19ba779ba9cc901924cbc9312d1c6de8c04c8e"
+                "c7e9668aee2c8b78a36f70073ef78fc973a82237009cbeba975c3a2c426afc12"
             ],
-            "type": "Script",
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "doctrine.fr",
-                "www.makerist.fr"
+                "on.com",
+                "www.on.com"
             ]
         }
     ],
@@ -76,7 +94,9 @@
         }
     ],
     "types": {
-        "Script": 4
+        "Script": 2,
+        "Preflight": 2,
+        "XHR": 2
     },
     "nameservers": [
         "tori.ns.cloudflare.com",

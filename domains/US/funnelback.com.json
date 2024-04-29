@@ -7,10 +7,10 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.000123,
-    "sites": 18,
+    "prevalence": 0.000129,
+    "sites": 19,
     "subdomains": [
-        "curtin-search.clients",
+        "delawaregov-search.clients.us",
         "evmsedu-search.clients.us",
         "fortlewis-search.clients.us",
         "gettysburg-search.clients.us",
@@ -19,13 +19,10 @@
         "regis-search.clients.us",
         "highmonkey-search.clients.us",
         "transurban-search.clients",
-        "unsw-search.clients"
+        "unsw-search.clients",
+        "tamucc-search.clients.us"
     ],
     "cnames": [
-        {
-            "original": "search.curtin.edu.au",
-            "resolved": "curtin-search.clients.funnelback.com"
-        },
         {
             "original": "search.evms.edu",
             "resolved": "evmsedu-search.clients.us.funnelback.com"
@@ -42,30 +39,25 @@
     "fingerprinting": 1,
     "resources": [
         {
-            "rule": "funnelback\\.com\\/s\\/suggest\\.json",
+            "rule": "funnelback\\.com\\/s\\/search\\.html",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "curtin-search.clients"
+                "delawaregov-search.clients.us"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.0000136,
-            "cnames": [
-                {
-                    "original": "search.curtin.edu.au",
-                    "resolved": "curtin-search.clients.funnelback.com"
-                }
-            ],
+            "cnames": [],
             "responseHashes": [
-                "5cada29124805d8e0454dc5b67225bbf87075cffd53418e9c56f674708220e2c"
+                "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
             ],
-            "type": "Fetch",
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "curtin.edu.au",
-                "www.curtin.edu.au"
+                "delaware.gov",
+                "www.dhss.delaware.gov"
             ]
         },
         {
@@ -81,7 +73,7 @@
                 "regis-search.clients.us"
             ],
             "apis": {
-                "window.localStorage": 3,
+                "window.localStorage": 4,
                 "Navigator.prototype.userAgent": 4
             },
             "sites": 6,
@@ -202,7 +194,7 @@
                 }
             ],
             "responseHashes": [
-                "3141ca29d368079291d46004474f193a251abdff1c64a232ff1db05aa22489e4"
+                "89c551611db71b0f9bda14e6898534bac8e10e7fee78d00b101bdb9e8a9c6307"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -258,6 +250,72 @@
                 "rcu.org",
                 "www.rcu.org"
             ]
+        },
+        {
+            "rule": "funnelback\\.com\\/s\\/resources\\/tamucc-meta\\/_default\\/css\\/customer-typeahead\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tamucc-search.clients.us"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "e648ef35e529a7e89ff0c650c70fc434d828059229750641de68a4c2e0237fd7"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tamucc.edu",
+                "www.tamucc.edu"
+            ]
+        },
+        {
+            "rule": "funnelback\\.com\\/s\\/resources\\/tamucc-meta\\/_default\\/js\\/handlebars-helpers\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tamucc-search.clients.us"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "856e96e28124c0e042904d063bd5cf5b24b524e54656b485e72449824d7ae6b1"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tamucc.edu",
+                "www.tamucc.edu"
+            ]
+        },
+        {
+            "rule": "funnelback\\.com\\/s\\/resources\\/tamucc-meta\\/_default\\/js\\/funnelback\\.autocompletion-2\\.6\\.0\\.stencils\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tamucc-search.clients.us"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "ad11f394cc4a0bbd69ac7187635e08723a9dc11c3b49fecf70fe554b8ec162c7"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tamucc.edu",
+                "www.tamucc.edu"
+            ]
         }
     ],
     "categories": [],
@@ -270,13 +328,15 @@
         }
     ],
     "types": {
-        "Fetch": 4,
-        "Script": 16
+        "XHR": 2,
+        "Script": 20,
+        "Fetch": 2,
+        "Stylesheet": 2
     },
     "nameservers": [
-        "ns-140.awsdns-17.com",
-        "ns-1282.awsdns-32.org",
         "ns-597.awsdns-10.net",
-        "ns-1974.awsdns-54.co.uk"
+        "ns-1974.awsdns-54.co.uk",
+        "ns-140.awsdns-17.com",
+        "ns-1282.awsdns-32.org"
     ]
 }

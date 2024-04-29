@@ -7,11 +7,12 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000136,
-    "sites": 2,
+    "prevalence": 0.0000204,
+    "sites": 3,
     "subdomains": [
         "iad-dynamic-assets",
-        "cdnjs"
+        "cdnjs",
+        "analytics"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -69,7 +70,7 @@
             ],
             "apis": {
                 "Date.prototype.getTime": 2,
-                "Navigator.prototype.userAgent": 1
+                "Navigator.prototype.userAgent": 2
             },
             "sites": 2,
             "prevalence": 0.0000136,
@@ -93,9 +94,9 @@
                 "cdnjs"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 1,
-                "window.localStorage": 1,
-                "window.innerWidth": 1
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2,
+                "window.innerWidth": 2
             },
             "sites": 2,
             "prevalence": 0.0000136,
@@ -110,6 +111,48 @@
                 "bikesignup.com",
                 "www.trisignup.com"
             ]
+        },
+        {
+            "rule": "runsignup\\.com\\/prod\\/streams\\/analytics\\/event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "analytics"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "trisignup.com",
+                "www.trisignup.com"
+            ]
+        },
+        {
+            "rule": "runsignup\\.com\\/prod\\/streams\\/analytics\\/event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "analytics"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "8939b0b5748550459bbe23ead61d1bbd5d75b82ecfba0853d04a784de99c7297"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "trisignup.com",
+                "www.trisignup.com"
+            ]
         }
     ],
     "categories": [],
@@ -118,12 +161,18 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.8666666666666667
+        },
+        {
+            "domain": "d368g9lw5ileu7.cloudfront.net",
+            "prevalence": 0.13333333333333333
         }
     ],
     "types": {
         "Stylesheet": 2,
-        "Script": 6
+        "Script": 6,
+        "Preflight": 2,
+        "XHR": 2
     },
     "nameservers": [
         "ns-652.awsdns-17.net",

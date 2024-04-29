@@ -9,13 +9,15 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000201,
-    "sites": 2,
+    "prevalence": 0.000503,
+    "sites": 5,
     "subdomains": [
         "get",
         "onetag-geo",
         "signal-beacon",
-        "signal-floors"
+        "signal-floors",
+        "connect-metrics-collector",
+        "signal-dynamic-pricing-analysis"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -35,7 +37,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "8e2f20072a938430ed29786fdbdb7ea3d75464d2af580109ec45c9c8badb3d8a"
+                "040a1d25443bd4b0d86cefa182716e4dfaf2c0cbeac6faa47c264d9e42b6103e"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -53,8 +55,8 @@
                 "onetag-geo"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 5,
+            "prevalence": 0.000503,
             "cnames": [],
             "responseHashes": [
                 "326d4bbfe6a6077a85b17a3e6d6e729c128e8d04decbc00310b2aae98df2150d"
@@ -64,7 +66,10 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "cnn.com",
-                "www.cnn.com"
+                "liveuamap.com",
+                "www.cnn.com",
+                "www.gumtree.com",
+                "www.lanacion.com.ar"
             ]
         },
         {
@@ -75,10 +80,10 @@
                 "signal-beacon"
             ],
             "apis": {
-                "window.localStorage": 2
+                "window.localStorage": 5
             },
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 5,
+            "prevalence": 0.000503,
             "cnames": [],
             "responseHashes": [
                 "c847b5978db290ef7e4636d8ae766c5c4666ba0eefc73aba63b0b1156a8df147"
@@ -88,7 +93,10 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "cnn.com",
-                "www.cnn.com"
+                "liveuamap.com",
+                "www.cnn.com",
+                "www.gumtree.com",
+                "www.lanacion.com.ar"
             ]
         },
         {
@@ -103,7 +111,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "3b0917f2a339cec2e2311c2360e983cdc9d66ba6bb2ea7c58518f6d10ab1ac9a"
+                "ad5692ecce9cf929db7884d1a68ff5320815d27831a281c4be20dc4000eb2c03"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -111,6 +119,30 @@
             "exampleSites": [
                 "cnn.com",
                 "www.cnn.com"
+            ]
+        },
+        {
+            "rule": "s-onetag\\.com\\/metrics",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "connect-metrics-collector",
+                "signal-dynamic-pricing-analysis"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "liveuamap.com",
+                "www.gumtree.com",
+                "www.lanacion.com.ar"
             ]
         }
     ],
@@ -123,12 +155,25 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.5714285714285714
+        },
+        {
+            "domain": "script.ac",
+            "prevalence": 0.14285714285714285
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.14285714285714285
+        },
+        {
+            "domain": "datadoghq-browser-agent.com",
+            "prevalence": 0.14285714285714285
         }
     ],
     "types": {
-        "Script": 4,
-        "Fetch": 4
+        "Script": 7,
+        "Fetch": 7,
+        "Ping": 3
     },
     "nameservers": [
         "ns-13.awsdns-01.com",

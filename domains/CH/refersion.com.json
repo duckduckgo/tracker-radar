@@ -12,7 +12,8 @@
     "subdomains": [
         "tracking",
         "pub-ff8495c9ec635f6d582b.tracking",
-        "pub-7d894854e1e45db79d4a.tracking"
+        "pub-7d894854e1e45db79d4a.tracking",
+        "cdn"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -29,7 +30,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "90d4b4ec8c2d6b560924f61699e90c3ebd15a8de1dbeda38a1ee94f8cb0b2540"
+                "8c0633e70a8d2259a53dba0bebfdc3e50b9546f151a370b5f6b1184dabc74f9a"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -71,7 +72,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "57317b5b698167134dffb112afe131a444ecb06d48543328ddae298726b566ea"
+                "3ee4d8c0bbf14f7904fe8a8ab0b4604c61fa1cc9143e45784422cc0cff93d377"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -104,12 +105,14 @@
         {
             "rule": "refersion\\.com\\/r\\.html",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "pub-ff8495c9ec635f6d582b.tracking",
                 "pub-7d894854e1e45db79d4a.tracking"
             ],
-            "apis": {},
+            "apis": {
+                "window.localStorage": 1
+            },
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
@@ -117,6 +120,30 @@
                 "588794e29465c271a0ad76362f89ce1a8c3706e71fa8f906257377dc3bc27270"
             ],
             "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mindbodygreen.com",
+                "www.myfonts.com"
+            ]
+        },
+        {
+            "rule": "refersion\\.com\\/xdlspma\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "window.localStorage": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "bd3a2ff5820c53c4fba21ec7beb8c3b752875693f720ba4a2e70a35b9d75dbdd"
+            ],
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -141,10 +168,11 @@
     "types": {
         "XHR": 4,
         "Preflight": 4,
-        "Document": 2
+        "Document": 2,
+        "Script": 2
     },
     "nameservers": [
-        "sharon.ns.cloudflare.com",
-        "beau.ns.cloudflare.com"
+        "beau.ns.cloudflare.com",
+        "sharon.ns.cloudflare.com"
     ]
 }

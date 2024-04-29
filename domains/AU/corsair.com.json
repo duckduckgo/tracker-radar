@@ -7,14 +7,48 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.0001,
-    "sites": 1,
+    "prevalence": 0.000201,
+    "sites": 2,
     "subdomains": [
+        "brands",
         "gigya"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "corsair\\.com\\/sites\\/index\\.html",
+            "cookies": 0.0001,
+            "fingerprinting": 1,
+            "subdomains": [
+                "brands"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 1,
+                "Document.cookie setter": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "a9a444d250761a96d6db89d3d8ef5e904ec55dda71c3d627f123255e8b4de1f9"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {
+                "sharedCookie": {
+                    "ttl": 63072009,
+                    "length": 26,
+                    "prevalence": 0.0001003814495081309,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "drop.com",
+                "www.elgato.com"
+            ]
+        },
         {
             "rule": "corsair\\.com\\/sdk\\.config\\.get",
             "cookies": 0,
@@ -27,7 +61,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "e2ce2e92b5cab4140494428c85b200b0da75d405109eaab8049c8251ea320ac6"
+                "634d3862131a4a1b349807917d687ff824dbded2099e2762f68100528ea10661"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -39,8 +73,8 @@
         },
         {
             "rule": "corsair\\.com\\/gs\\/sso\\.htm",
-            "cookies": 0.000201,
-            "fingerprinting": 2,
+            "cookies": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "gigya"
             ],
@@ -48,16 +82,15 @@
                 "Navigator.prototype.userAgent": 2,
                 "Navigator.prototype.appVersion": 2,
                 "Navigator.prototype.mimeTypes": 2,
-                "Document.cookie getter": 2,
-                "Date.prototype.getTime": 2,
-                "Document.cookie setter": 2,
                 "window.localStorage": 2,
                 "window.sessionStorage": 2
             },
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "3701c066a72992902f9dfe2e4c99eeeee25782a4b67eac4d64cc7024e463a000"
+            ],
             "type": "Document",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -73,16 +106,20 @@
     "topInitiators": [
         {
             "domain": "gigya.com",
-            "prevalence": 0.75
+            "prevalence": 0.6666666666666666
         },
         {
             "domain": "first party",
             "prevalence": 0.25
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.08333333333333333
         }
     ],
     "types": {
-        "Fetch": 2,
-        "Document": 2
+        "Document": 4,
+        "Fetch": 2
     },
     "nameservers": [
         "huxley.ns.cloudflare.com",

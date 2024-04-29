@@ -4,19 +4,51 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000201,
-    "sites": 2,
+    "prevalence": 0.000301,
+    "sites": 3,
     "subdomains": [
+        "splunk-elb.lb",
         "honda-production-b2c-lb.lb"
     ],
     "cnames": [
         {
             "original": "apib2c.services.honda.ca",
             "resolved": "honda-production-b2c-lb.lb.anypointdns.net"
+        },
+        {
+            "original": "apps-api.splunk.com",
+            "resolved": "splunk-elb.lb.anypointdns.net"
         }
     ],
     "fingerprinting": 0,
     "resources": [
+        {
+            "rule": "anypointdns\\.net\\/wplt\\/analytics\\/v2\\/tag",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "splunk-elb.lb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "apps-api.splunk.com",
+                    "resolved": "splunk-elb.lb.anypointdns.net"
+                }
+            ],
+            "responseHashes": [
+                "89da976b5ce455a577f9230e5ebcc957bf2362534193392abe4c9f1378639b30"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "splunk.com",
+                "docs.splunk.com"
+            ]
+        },
         {
             "rule": "anypointdns\\.net\\/api-honda-hondaweb-exp-api\\/hondaweb-exp-api\\/v1\\/credentials\\/google-maps-javascript-api",
             "cookies": 0,
@@ -59,7 +91,7 @@
                 }
             ],
             "responseHashes": [
-                "3910975e91a4781d689c3e953fa6f9857338206c6db9752bd76dad47bacba7f2"
+                "28ed43423fa249222634240181a7979cdbbc623f49e43d829ba5c08249098ca0"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -72,8 +104,19 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.0001,
+    "topInitiators": [
+        {
+            "domain": "d221cp5lqk6y64.cloudfront.net",
+            "prevalence": 0.6666666666666666
+        },
+        {
+            "domain": "d7koym0rxduxm.cloudfront.net",
+            "prevalence": 0.3333333333333333
+        }
+    ],
     "types": {
+        "Fetch": 2,
         "Preflight": 2,
         "XHR": 2
     },

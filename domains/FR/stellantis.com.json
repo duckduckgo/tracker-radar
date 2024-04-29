@@ -4,14 +4,66 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.0001,
-    "sites": 1,
+    "prevalence": 0.000201,
+    "sites": 2,
     "subdomains": [
+        "login",
         "assets"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "stellantis\\.com\\/sdk\\.config\\.get",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "login"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "640e2963c6ab9a779c02b2b89ab2d2250b71d28a635d2682d2be272e4ceab2da"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fiat.fr",
+                "store.fiat.fr"
+            ]
+        },
+        {
+            "rule": "stellantis\\.com\\/gs\\/sso\\.htm",
+            "cookies": 0.000201,
+            "fingerprinting": 2,
+            "subdomains": [
+                "login"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.appVersion": 2,
+                "Navigator.prototype.mimeTypes": 2,
+                "window.localStorage": 2,
+                "window.sessionStorage": 2,
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fiat.fr",
+                "store.fiat.fr"
+            ]
+        },
         {
             "rule": "stellantis\\.com\\/is\\/image\\/stellantis\\/Video-DS",
             "cookies": 0,
@@ -79,17 +131,22 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.000101,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.875
+        },
+        {
+            "domain": "canary.js",
+            "prevalence": 0.125
         }
     ],
     "types": {
+        "Fetch": 4,
+        "Document": 2,
         "XHR": 2,
-        "Image": 2,
-        "Fetch": 2
+        "Image": 2
     },
     "nameservers": [
         "ns-125-a.gandi.net",
