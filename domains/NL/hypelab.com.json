@@ -4,16 +4,56 @@
     "source": [
         "DuckDuckGo-NL"
     ],
-    "prevalence": 0.000201,
-    "sites": 2,
+    "prevalence": 0.0000406,
+    "sites": 4,
     "subdomains": [
         "api"
     ],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 3,
     "resources": [
         {
-            "rule": "hypelab\\.com\\/v1\\/prebid_requests",
+            "rule": "hypelab\\.com\\/v1\\/scripts\\/hp-sdk\\.js",
+            "cookies": 0,
+            "fingerprinting": 3,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Date.prototype.getTime": 2,
+                "CanvasRenderingContext2D.prototype.getImageData": 2,
+                "WebGLRenderingContext.prototype.getParameter": 2,
+                "WebGLRenderingContext.prototype.readPixels": 2,
+                "WebGLRenderingContext.prototype.getSupportedExtensions": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "Screen.prototype.availWidth": 2,
+                "Screen.prototype.availHeight": 2,
+                "Screen.prototype.colorDepth": 2,
+                "Screen.prototype.pixelDepth": 2,
+                "window.devicePixelRatio": 2,
+                "Screen.prototype.availTop": 2,
+                "Screen.prototype.availLeft": 2,
+                "Date.prototype.getTimezoneOffset": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.plugins": 2,
+                "HTMLMediaElement.prototype.canPlayType": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000203,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "chainlist.org",
+                "www.pixels.tips"
+            ]
+        },
+        {
+            "rule": "hypelab\\.com\\/v1\\/requests",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -21,15 +61,37 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000201,
+            "prevalence": 0.0000203,
+            "cnames": [],
+            "responseHashes": [
+                "7f5d580ab59997e1346a6c5681dd4d9e94e0dc555ee7310b0b6f2bdfd26a4b72"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "chainlist.org",
+                "www.pixels.tips"
+            ]
+        },
+        {
+            "rule": "hypelab\\.com\\/v1\\/requests",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000203,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "stocktwits.com",
-                "www.coingecko.com"
+                "chainlist.org",
+                "www.pixels.tips"
             ]
         },
         {
@@ -41,7 +103,27 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000201,
+            "prevalence": 0.0000203,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "stocktwits.com",
+                "www.bitcoinmining.com"
+            ]
+        },
+        {
+            "rule": "hypelab\\.com\\/v1\\/prebid_requests",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000203,
             "cnames": [],
             "responseHashes": [
                 "7f5d580ab59997e1346a6c5681dd4d9e94e0dc555ee7310b0b6f2bdfd26a4b72"
@@ -51,7 +133,7 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "stocktwits.com",
-                "www.coingecko.com"
+                "www.bitcoinmining.com"
             ]
         }
     ],
@@ -61,12 +143,21 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.5
+        },
+        {
+            "domain": "stocktwits-cdn.com",
+            "prevalence": 0.25
+        },
+        {
+            "domain": "buysellads.net",
+            "prevalence": 0.25
         }
     ],
     "types": {
-        "Preflight": 2,
-        "Fetch": 2
+        "Script": 2,
+        "Fetch": 4,
+        "Preflight": 4
     },
     "nameservers": [
         "aria.ns.cloudflare.com",

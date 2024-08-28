@@ -9,13 +9,23 @@
     "source": [
         "DuckDuckGo-NL"
     ],
-    "prevalence": 0.000702,
-    "sites": 7,
+    "prevalence": 0.000101,
+    "sites": 10,
     "subdomains": [
         "static",
-        "sso-new"
+        "sso-new",
+        "id",
+        "issues"
     ],
     "cnames": [
+        {
+            "original": "id.redhat.com",
+            "resolved": "id.redhat.com.edgekey.net"
+        },
+        {
+            "original": "issues.redhat.com",
+            "resolved": "issues.redhat.com.edgekey.net"
+        },
         {
             "original": "sso.redhat.com",
             "resolved": "sso-new.redhat.com.edgekey.net"
@@ -35,8 +45,8 @@
                 "static"
             ],
             "apis": {},
-            "sites": 6,
-            "prevalence": 0.000602,
+            "sites": 8,
+            "prevalence": 0.0000812,
             "cnames": [
                 {
                     "original": "static.redhat.com",
@@ -51,10 +61,12 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "redhat.com",
+                "access.redhat.com",
                 "developers.redhat.com",
                 "docs.openshift.com",
                 "docs.redhat.com",
                 "opensource.com",
+                "www.ansible.com",
                 "www.redhat.com"
             ]
         },
@@ -67,7 +79,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000201,
+            "prevalence": 0.0000203,
             "cnames": [
                 {
                     "original": "static.redhat.com",
@@ -87,14 +99,14 @@
         },
         {
             "rule": "redhat\\.com\\.edgekey\\.net\\/auth\\/realms\\/redhat-external\\/protocol\\/openid-connect\\/3p-cookies\\/step1\\.html",
-            "cookies": 0.000201,
-            "fingerprinting": 0,
+            "cookies": 0.0000203,
+            "fingerprinting": 1,
             "subdomains": [
                 "sso-new"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000201,
+            "prevalence": 0.0000203,
             "cnames": [
                 {
                     "original": "sso.redhat.com",
@@ -114,14 +126,14 @@
         },
         {
             "rule": "redhat\\.com\\.edgekey\\.net\\/auth\\/realms\\/redhat-external\\/protocol\\/openid-connect\\/3p-cookies\\/step2\\.html",
-            "cookies": 0.000201,
+            "cookies": 0.0000203,
             "fingerprinting": 1,
             "subdomains": [
                 "sso-new"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000201,
+            "prevalence": 0.0000203,
             "cnames": [
                 {
                     "original": "sso.redhat.com",
@@ -140,15 +152,40 @@
             ]
         },
         {
+            "rule": "redhat\\.com\\.edgekey\\.net\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "id"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000203,
+            "cnames": [
+                {
+                    "original": "id.redhat.com",
+                    "resolved": "id.redhat.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "redhat.com",
+                "access.redhat.com"
+            ]
+        },
+        {
             "rule": "redhat\\.com\\.edgekey\\.net\\/libs\\/@redhat\\/marketing\\/latest\\/rh\\.mktg\\.js",
-            "cookies": 0.000201,
+            "cookies": 0.0000406,
             "fingerprinting": 1,
             "subdomains": [
                 "static"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 6,
+            "prevalence": 0.0000609,
             "cnames": [
                 {
                     "original": "static.redhat.com",
@@ -161,32 +198,224 @@
             "type": "Script",
             "firstPartyCookies": {
                 "rh_omni_tc": {
-                    "ttl": 2592002,
+                    "ttl": 2592003,
                     "length": 18,
-                    "prevalence": 0.00010033109260559848,
+                    "prevalence": 0.000020287885089418854,
                     "uniqueness": 1
                 }
             },
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "ansible.com",
+                "redhat.com",
+                "developer.jboss.org",
+                "docs.ansible.com",
+                "opensource.com",
+                "www.ansible.com",
                 "www.redhat.com"
+            ]
+        },
+        {
+            "rule": "redhat\\.com\\.edgekey\\.net\\/auth\\/js\\/keycloak\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "sso-new"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000203,
+            "cnames": [
+                {
+                    "original": "sso.redhat.com",
+                    "resolved": "sso-new.redhat.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "redhat.com",
+                "developers.redhat.com"
+            ]
+        },
+        {
+            "rule": "redhat\\.com\\.edgekey\\.net\\/plugins\\/servlet\\/issueCollectorBootstrap\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "issues"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000203,
+            "cnames": [
+                {
+                    "original": "issues.redhat.com",
+                    "resolved": "issues.redhat.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "redhat.com",
+                "developers.redhat.com"
+            ]
+        },
+        {
+            "rule": "redhat\\.com\\.edgekey\\.net\\/libs\\/redhat\\/redhat-font\\/2\\.0\\.0\\/webfonts\\/red-hat-font\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000203,
+            "cnames": [
+                {
+                    "original": "static.redhat.com",
+                    "resolved": "static.redhat.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "3afa0a3d0e990f08604cb110d41325e3122abc1a56b26a1dfba692fa3d5e5e78"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ansible.com",
+                "www.ansible.com"
+            ]
+        },
+        {
+            "rule": "redhat\\.com\\.edgekey\\.net\\/libs\\/redhat\\/redhat-font\\/2\\.0\\.0\\/webfonts\\/RedHatText\\/RedHatText-Regular\\.woff",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000203,
+            "cnames": [
+                {
+                    "original": "static.redhat.com",
+                    "resolved": "static.redhat.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "dc5bb2fe497c9c48d76a88ec62266915310c2f0114027dd9b25368bdd49ed14f"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ansible.com",
+                "www.ansible.com"
+            ]
+        },
+        {
+            "rule": "redhat\\.com\\.edgekey\\.net\\/libs\\/redhat\\/redhat-font\\/2\\.0\\.0\\/webfonts\\/RedHatDisplay\\/RedHatDisplay-Medium\\.woff",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000203,
+            "cnames": [
+                {
+                    "original": "static.redhat.com",
+                    "resolved": "static.redhat.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "c56481cacbc6d31a4d36a4db1e64fbe6b44e7d6eac751417a2ccdb942217273e"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ansible.com",
+                "www.ansible.com"
+            ]
+        },
+        {
+            "rule": "redhat\\.com\\.edgekey\\.net\\/libs\\/redhat\\/redhat-font\\/2\\.0\\.0\\/webfonts\\/RedHatDisplay\\/RedHatDisplay-Bold\\.woff",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000203,
+            "cnames": [
+                {
+                    "original": "static.redhat.com",
+                    "resolved": "static.redhat.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ansible.com",
+                "www.ansible.com"
+            ]
+        },
+        {
+            "rule": "redhat\\.com\\.edgekey\\.net\\/libs\\/redhat\\/redhat-font\\/2\\.0\\.0\\/webfonts\\/RedHatText\\/RedHatText-Medium\\.woff",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000203,
+            "cnames": [
+                {
+                    "original": "static.redhat.com",
+                    "resolved": "static.redhat.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ansible.com",
+                "www.ansible.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000401,
+    "cookies": 0.0000507,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.8888888888888888
+        },
+        {
+            "domain": "redhatofficial.github.io",
+            "prevalence": 0.1111111111111111
         }
     ],
     "types": {
-        "Script": 8,
+        "Script": 18,
         "Image": 2,
-        "Document": 4
+        "Document": 4,
+        "Fetch": 2,
+        "Stylesheet": 2,
+        "Font": 8
     },
     "nameservers": []
 }
