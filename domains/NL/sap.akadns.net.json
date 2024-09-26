@@ -9,8 +9,8 @@
     "source": [
         "DuckDuckGo-NL"
     ],
-    "prevalence": 0.0000304,
-    "sites": 3,
+    "prevalence": 0.0000503,
+    "sites": 5,
     "subdomains": [
         "accounts.sap.com.cloud"
     ],
@@ -23,6 +23,58 @@
     "fingerprinting": 1,
     "resources": [
         {
+            "rule": "sap\\.akadns\\.net\\/\\.well-known\\/openid-configuration",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "accounts.sap.com.cloud"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000201,
+            "cnames": [
+                {
+                    "original": "accounts.sap.com",
+                    "resolved": "accounts.sap.com.cloud.sap.akadns.net"
+                }
+            ],
+            "responseHashes": [
+                "df10408fbb43b1635cdd9cdb161c1e6d2f709e97a9d5aa2ef61deddabe061970"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sap.com",
+                "community.sap.com"
+            ]
+        },
+        {
+            "rule": "sap\\.akadns\\.net\\/oauth2\\/authorize",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "accounts.sap.com.cloud"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000201,
+            "cnames": [
+                {
+                    "original": "accounts.sap.com",
+                    "resolved": "accounts.sap.com.cloud.sap.akadns.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sap.com",
+                "community.sap.com"
+            ]
+        },
+        {
             "rule": "sap\\.akadns\\.net\\/ui\\/resources\\/javascripts\\/SAP_IDS\\.js",
             "cookies": 0,
             "fingerprinting": 1,
@@ -30,8 +82,8 @@
                 "accounts.sap.com.cloud"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000203,
+            "sites": 3,
+            "prevalence": 0.0000302,
             "cnames": [
                 {
                     "original": "accounts.sap.com",
@@ -46,6 +98,7 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "sap.com",
+                "support.sap.com",
                 "userapps.support.sap.com"
             ]
         }
@@ -62,7 +115,9 @@
         }
     ],
     "types": {
-        "Script": 2
+        "Fetch": 2,
+        "Document": 2,
+        "Script": 3
     },
     "nameservers": []
 }
