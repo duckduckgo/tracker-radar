@@ -4,78 +4,28 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.000602,
-    "sites": 6,
+    "prevalence": 0.000703,
+    "sites": 7,
     "subdomains": [
-        "tracking-sales-pop",
-        "sales-pop",
         "app-spinner",
-        "tracking-app-sas"
+        "tracking-app-sas",
+        "tracking-sales-pop"
     ],
     "cnames": [],
-    "fingerprinting": 2,
+    "fingerprinting": 1,
     "resources": [
-        {
-            "rule": "carecart\\.io\\/index\\.php\\/FrontController\\/checkStore\\/",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "tracking-sales-pop"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "56871ac5ad0af5193bf352e4c7596cffb299427294f250d439301a46cf071ade"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {
-                "_hjTLDTest": 0.0001003814495081309
-            },
-            "exampleSites": [
-                "australianorganicproducts.com.au",
-                "www.myautoparts.com.au"
-            ]
-        },
-        {
-            "rule": "carecart\\.io\\/public\\/front_assets\\/new-ui\\/css\\/notif-box\\.css",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "sales-pop"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "fb78f4e498cd8beaee49ed0ec513ef98d9d9fdf2da6df743b9573e6954ee186b"
-            ],
-            "type": "Stylesheet",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "australianorganicproducts.com.au",
-                "www.myautoparts.com.au"
-            ]
-        },
         {
             "rule": "carecart\\.io\\/library\\/carecartSpinnerApp\\.js",
             "cookies": 0,
-            "fingerprinting": 2,
+            "fingerprinting": 1,
             "subdomains": [
                 "app-spinner"
             ],
             "apis": {
-                "window.localStorage": 2,
-                "Document.cookie getter": 2,
-                "Date.prototype.getTime": 2,
-                "Navigator.prototype.userAgent": 2,
-                "window.innerWidth": 1,
-                "Screen.prototype.width": 1,
-                "window.outerWidth": 1
+                "window.localStorage": 1,
+                "Document.cookie getter": 1,
+                "Date.prototype.getTime": 1,
+                "Navigator.prototype.userAgent": 1
             },
             "sites": 2,
             "prevalence": 0.000201,
@@ -83,10 +33,12 @@
             "responseHashes": [],
             "type": "Script",
             "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
+            "firstPartyCookiesSent": {
+                "checkout_shop": 0.00010041168792047395
+            },
             "exampleSites": [
-                "australiansportsnutrition.com.au",
-                "www.camec.com.au"
+                "dangerfield.com.au",
+                "www.australiansportsnutrition.com.au"
             ]
         },
         {
@@ -106,9 +58,9 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "australiansportsnutrition.com.au",
+                "frankie4.com",
+                "www.australiansportsnutrition.com.au",
                 "www.bathwaredirect.com.au",
-                "www.camec.com.au",
                 "www.megavitamins.com.au"
             ]
         },
@@ -126,17 +78,38 @@
             "cnames": [],
             "responseHashes": [
                 "a30a3e24751b834d8daff511f541147877cdfaee63c57ed20771773f4910bc80",
-                "8353854a11613999f5af07eabccbfc3136bafbbcac4ac395edc48a1a26a01a47",
                 "525249d2d0ea507fcb764036a7bd6bead5c3e16fc7a51d2aa4f61edfc710320e"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "australiansportsnutrition.com.au",
+                "frankie4.com",
+                "www.australiansportsnutrition.com.au",
                 "www.bathwaredirect.com.au",
-                "www.camec.com.au",
                 "www.megavitamins.com.au"
+            ]
+        },
+        {
+            "rule": "carecart\\.io\\/index\\.php\\/FrontController\\/checkStore\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tracking-sales-pop"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "5180e84cae2064452f62fd58995f27b5d82fd3e9fa21fca3ebaa7d7e77120d92"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "petpawz.com.au",
+                "www.myautoparts.com.au"
             ]
         }
     ],
@@ -146,16 +119,19 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.5555555555555556
+            "prevalence": 0.5
         },
         {
             "domain": "jquery.com",
-            "prevalence": 0.4444444444444444
+            "prevalence": 0.3333333333333333
+        },
+        {
+            "domain": "jsdelivr.net",
+            "prevalence": 0.16666666666666666
         }
     ],
     "types": {
         "Script": 4,
-        "Stylesheet": 2,
         "Preflight": 4,
         "XHR": 4
     },

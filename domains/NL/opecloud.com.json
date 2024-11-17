@@ -9,15 +9,64 @@
     "source": [
         "DuckDuckGo-NL"
     ],
-    "prevalence": 0.0012,
-    "sites": 12,
+    "prevalence": 0.000903,
+    "sites": 9,
     "subdomains": [
-        "adalliance.profiles.tagger",
-        "cdn"
+        "cdn",
+        "lefigaro.tagger",
+        "adalliance.profiles.tagger"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "opecloud\\.com\\/ope-lefigaro\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Date.prototype.getTimezoneOffset": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "Screen.prototype.colorDepth": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "ff55f86f5dd0251be07d00b78b3aec4ac31c1fe22710eb18e1837e16a919c69a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "commentcamarche.net",
+                "www.lefigaro.fr"
+            ]
+        },
+        {
+            "rule": "opecloud\\.com\\/lefigaro\\/v2\\/metrics\\/sdk-consent-delayed",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "lefigaro.tagger"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "commentcamarche.net",
+                "www.lefigaro.fr"
+            ]
+        },
         {
             "rule": "opecloud\\.com\\/v1\\/targeting",
             "cookies": 0,
@@ -26,13 +75,12 @@
                 "adalliance.profiles.tagger"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.000401,
+            "sites": 3,
+            "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [
-                "6b676fbb99df2d4e479543998b8d443bab47f46745a82ce4c5c2007f1b38b7fe",
-                "649ba50dafff51532cb2dafd5a79668332887defaa865a424e4995070dd46d36",
-                "c1cdbe1527710421cc365933e9e3563c5a3bb44fc2013d65acc8d6f8d7bd5661"
+                "0b33155e32eaddb766d17d75e7f7f7869a5c447000e1919a8d0b2f2f07182dd6",
+                "932bc01810167e6a687e656d492a072147861c92a671836367c3b19dff37578b"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -40,37 +88,7 @@
             "exampleSites": [
                 "chefkoch.de",
                 "www.n-tv.de",
-                "www.rtl.de",
                 "www.stern.de"
-            ]
-        },
-        {
-            "rule": "opecloud\\.com\\/ope-pdmp\\.js",
-            "cookies": 0,
-            "fingerprinting": 2,
-            "subdomains": [
-                "cdn"
-            ],
-            "apis": {
-                "window.localStorage": 3,
-                "Date.prototype.getTimezoneOffset": 3,
-                "Screen.prototype.width": 3,
-                "Screen.prototype.height": 3,
-                "Screen.prototype.colorDepth": 3
-            },
-            "sites": 3,
-            "prevalence": 0.000301,
-            "cnames": [],
-            "responseHashes": [
-                "085ef01f1615bbfea70e1814b8661f099e8d0e432ae4ed22be2a8f64e21ad599"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "citationmachine.net",
-                "www.easybib.com",
-                "www.mathway.com"
             ]
         }
     ],
@@ -80,29 +98,30 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.75
+            "prevalence": 0.6666666666666666
+        },
+        {
+            "domain": "ccmbg.com",
+            "prevalence": 0.1111111111111111
         },
         {
             "domain": "bildstatic.de",
-            "prevalence": 0.08333333333333333
+            "prevalence": 0.1111111111111111
         },
         {
             "domain": "studybreakmedia.com",
-            "prevalence": 0.08333333333333333
-        },
-        {
-            "domain": "kataweb.it",
-            "prevalence": 0.08333333333333333
+            "prevalence": 0.1111111111111111
         }
     ],
     "types": {
-        "Fetch": 4,
-        "Script": 3
+        "Script": 2,
+        "XHR": 2,
+        "Fetch": 3
     },
     "nameservers": [
-        "ns-1454.awsdns-53.org",
-        "ns-1611.awsdns-09.co.uk",
         "ns-353.awsdns-44.com",
-        "ns-899.awsdns-48.net"
+        "ns-899.awsdns-48.net",
+        "ns-1611.awsdns-09.co.uk",
+        "ns-1454.awsdns-53.org"
     ]
 }

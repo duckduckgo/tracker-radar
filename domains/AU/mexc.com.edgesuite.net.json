@@ -12,16 +12,48 @@
     "prevalence": 0.0001,
     "sites": 1,
     "subdomains": [
+        "otc",
         "futures"
     ],
     "cnames": [
         {
             "original": "futures.mexc.com",
             "resolved": "futures.mexc.com.edgesuite.net"
+        },
+        {
+            "original": "otc.mexc.com",
+            "resolved": "otc.mexc.com.edgesuite.net"
         }
     ],
     "fingerprinting": 0,
     "resources": [
+        {
+            "rule": "mexc\\.com\\.edgesuite\\.net\\/api\\/asset\\/fiat_switch\\/v2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "otc"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "otc.mexc.com",
+                    "resolved": "otc.mexc.com.edgesuite.net"
+                }
+            ],
+            "responseHashes": [
+                "77d46b7ce92c7ec0cd385f7c26cc21e085d983aca7a20620ad894938e404e04e"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mexc.com",
+                "www.mexc.com"
+            ]
+        },
         {
             "rule": "mexc\\.com\\.edgesuite\\.net\\/api\\/v1\\/contract\\/detail",
             "cookies": 0,
@@ -64,7 +96,59 @@
                 }
             ],
             "responseHashes": [
-                "edba716f0d64decc65e6bbc8be73faefdb03239ce787a27abfee38fbfbc4798c"
+                "84168ad85d5e960dd740710964ba5f5841d5e1383c3cdda30bc56a3db2f059da"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mexc.com",
+                "www.mexc.com"
+            ]
+        },
+        {
+            "rule": "mexc\\.com\\.edgesuite\\.net\\/api\\/v1\\/contract\\/rise_fall_rate\\/sort",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "futures"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "futures.mexc.com",
+                    "resolved": "futures.mexc.com.edgesuite.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mexc.com",
+                "www.mexc.com"
+            ]
+        },
+        {
+            "rule": "mexc\\.com\\.edgesuite\\.net\\/api\\/v1\\/contract\\/rise_fall_rate\\/sort",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "futures"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "futures.mexc.com",
+                    "resolved": "futures.mexc.com.edgesuite.net"
+                }
+            ],
+            "responseHashes": [
+                "49f7aa6411f874ff1f24fcbaebb80b85e121b69b7204acf1dd3bc230dc270da3"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -83,16 +167,16 @@
     "topInitiators": [
         {
             "domain": "gotoda.co",
-            "prevalence": 0.7142857142857143
+            "prevalence": 0.8181818181818182
         },
         {
             "domain": "mocortech.com",
-            "prevalence": 0.2857142857142857
+            "prevalence": 0.18181818181818182
         }
     ],
     "types": {
-        "Preflight": 2,
-        "Fetch": 2
+        "Fetch": 6,
+        "Preflight": 4
     },
     "nameservers": []
 }

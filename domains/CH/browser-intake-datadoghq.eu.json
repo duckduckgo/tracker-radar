@@ -11,9 +11,9 @@
     "sites": 12,
     "subdomains": [
         "session-replay",
-        "logs",
         "rum",
-        "csp-report"
+        "csp-report",
+        "logs"
     ],
     "cnames": [],
     "fingerprinting": 0,
@@ -28,22 +28,42 @@
             "prevalence": 0.000603,
             "cnames": [],
             "responseHashes": [
-                "5b2a3f5639b01b35a9530cf84eb272bdf333ff72304bed4a1b87822997c04938",
-                "fe80f805a42836b50db1077680596c54793678b57cd8ff907512f404548fbb8a",
-                "8155b055137a197ac1a0515cd612eb91279a2389b9077e594cdfd3a8424081d3",
-                "3b6a33a8024ea1527907ff2b9dcfda89a6df592afca46da19b4f867fb542679b",
-                "24bc5bd5845c1aebe67a33d860d6b35fb7ad84af05e69ea04c1f86822febd467"
+                "977c6ddcbbbff308aa438906c15986c7dac377f6d2a9404994068663c382377b",
+                "4547e100ba162663fdedae4dbbfbdf647cbbd0fb005db74290935e11a2fb78a8",
+                "d2f7c195f26807515cd631dfad1b7a6a58bcbdd60a38b4838a57eaa601d97c0c",
+                "d181e695eebfed1eda4e87f1c90d3d60927bfdcdc7f7cdc527354832f1a076c5",
+                "5713cfcef0e6b24491a496bd9fb7aaa43a8c28eafe463303f85dc1323ce8a5fe"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "lexus.ch",
-                "de.lexus.ch",
+                "toyota.ch",
                 "de.toyota.ch",
                 "fr.toyota.ch",
                 "knauf.com",
-                "www.just-eat.ch"
+                "migros.ch",
+                "www.hessnatur.com"
+            ]
+        },
+        {
+            "rule": "browser-intake-datadoghq\\.eu\\/api\\/v2\\/rum",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "ebaa6611a783e1c749840a1ab35b4c1813c3fa567ce76e8b97df3a0e21dbd58f"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "toyota.ch",
+                "www.hessnatur.com"
             ]
         },
         {
@@ -54,61 +74,44 @@
                 "session-replay"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 4,
+            "prevalence": 0.000402,
             "cnames": [],
             "responseHashes": [
-                "fe683d06de43b97e79fab00602e7c0bb72b62cec72933e35beb53e0eb4e61d12"
+                "616793eaefa87269a13491fb7328fa301f2709ff3ac4831200859c4b7f74618d",
+                "61f3adaa65eeb381b6e79702347f902e63c21f98e4182d0cd6b0ae9df1632fdd",
+                "6ab410d8a43d29f10b48dc327666269fdc4ad4271f4b3351651ff4198e37a76b"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "lexus.ch",
-                "parkingportal.ch"
+                "toyota.ch",
+                "fr.toyota.ch",
+                "parkingportal.ch",
+                "www.hessnatur.com"
             ]
         },
         {
-            "rule": "browser-intake-datadoghq\\.eu\\/api\\/v2\\/logs",
+            "rule": "browser-intake-datadoghq\\.eu\\/api\\/v2\\/replay",
             "cookies": 0,
             "fingerprinting": 0,
-            "subdomains": [
-                "logs"
-            ],
+            "subdomains": [],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [
-                "f6d6343945a2c505d66ca7ba088c2122e948bda87130528701e7fc724fa57de7"
+                "b955fcf93eeb1a6def2dcd70bf11d1ba541cd9d5027b28a990c0c2cfdabd1fd5",
+                "d5c886ddef66d5efc12c4f533ef74a09d322ce5c221c7fd8425363a9cace2862"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "polymarket.com",
-                "www.directferries.de"
-            ]
-        },
-        {
-            "rule": "browser-intake-datadoghq\\.eu\\/\\/api\\/v2\\/rum",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "rum"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.000301,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "tchibo.ch",
-                "www.tchibo.ch",
-                "www.tchibo.de"
+                "toyota.ch",
+                "de.toyota.ch",
+                "fr.toyota.ch"
             ]
         },
         {
@@ -135,6 +138,27 @@
             ]
         },
         {
+            "rule": "browser-intake-datadoghq\\.eu\\/\\/api\\/v2\\/rum",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rum"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tchibo.ch",
+                "www.tchibo.ch",
+                "www.tchibo.de"
+            ]
+        },
+        {
             "rule": "browser-intake-datadoghq\\.eu\\/api\\/v2\\/logs",
             "cookies": 0,
             "fingerprinting": 0,
@@ -142,8 +166,8 @@
                 "csp-report"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -152,8 +176,31 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "eurowings.com",
+                "atelierdeschefs.fr",
+                "www.atelierdeschefs.fr",
                 "www.eurowings.com"
+            ]
+        },
+        {
+            "rule": "browser-intake-datadoghq\\.eu\\/api\\/v2\\/logs",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "logs"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "296407384ed3cdc88fd5f0ad63b8f49561f05fea2d5177e9277b20304f335c4f"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "directferries.de",
+                "www.directferries.de"
             ]
         }
     ],
@@ -163,27 +210,31 @@
     "topInitiators": [
         {
             "domain": "datadoghq-browser-agent.com",
-            "prevalence": 0.6444444444444445
+            "prevalence": 0.5384615384615384
         },
         {
             "domain": "first party",
-            "prevalence": 0.28888888888888886
+            "prevalence": 0.36538461538461536
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.06666666666666667
+            "prevalence": 0.057692307692307696
+        },
+        {
+            "domain": "axept.io",
+            "prevalence": 0.038461538461538464
         }
     ],
     "types": {
-        "Fetch": 11,
-        "XHR": 2,
+        "Fetch": 14,
+        "XHR": 6,
         "Preflight": 3,
-        "Other": 2
+        "Other": 3
     },
     "nameservers": [
         "ns-cloud-e1.googledomains.com",
-        "ns-cloud-e3.googledomains.com",
         "ns-cloud-e2.googledomains.com",
+        "ns-cloud-e3.googledomains.com",
         "ns-cloud-e4.googledomains.com"
     ]
 }

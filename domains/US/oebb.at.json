@@ -11,7 +11,8 @@
     "sites": 1,
     "subdomains": [
         "image-service.web",
-        "pv-apps.web"
+        "pv-apps.web",
+        "analytics-pv"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -40,28 +41,6 @@
         },
         {
             "rule": "oebb\\.at\\/www\\.nightjet\\.com\\/\\.imaging\\/default\\/dam\\/nightjet\\/hero-header\\/header-overlay-1422x800\\/laender-und-staedte-1422x800\\/venedig-canal-grande\\.jpg\\/jcr:content\\.jpg",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "image-service.web"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "2987e1f67a2315ae566a78c28a252d0b8018242914ff53d911412d0df999400e"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "nightjet.com",
-                "www.nightjet.com"
-            ]
-        },
-        {
-            "rule": "oebb\\.at\\/www\\.nightjet\\.com\\/\\.imaging\\/default\\/dam\\/nightjet\\/hero-header\\/header-overlay-1422x800\\/oebb-angebote-1422x800\\/nightjet-privatabteil-frau\\.jpg\\/jcr:content\\.jpg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -101,6 +80,26 @@
                 "nightjet.com",
                 "www.nightjet.com"
             ]
+        },
+        {
+            "rule": "oebb\\.at\\/matomo\\/piwik\\.php",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "analytics-pv"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nightjet.com",
+                "www.nightjet.com"
+            ]
         }
     ],
     "categories": [],
@@ -113,13 +112,14 @@
         }
     ],
     "types": {
-        "Image": 6,
-        "Fetch": 2
+        "Image": 4,
+        "Fetch": 2,
+        "Ping": 2
     },
     "nameservers": [
-        "sec2.rcode0.net",
-        "sec1.rcode0.net",
         "dns1.oebb.at",
+        "sec1.rcode0.net",
+        "sec2.rcode0.net",
         "dns2.oebb.at"
     ]
 }

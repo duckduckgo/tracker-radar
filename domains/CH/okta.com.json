@@ -7,54 +7,68 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.000402,
-    "sites": 4,
+    "prevalence": 0.000502,
+    "sites": 5,
     "subdomains": [
+        "logon.customdomains",
+        "churchofjesuschrist.customdomains",
         "servicenowsignon.customdomains",
         "fzag-b2c.customdomains"
     ],
     "cnames": [
         {
+            "original": "id.churchofjesuschrist.org",
+            "resolved": "churchofjesuschrist.customdomains.okta.com"
+        },
+        {
             "original": "id.flughafen-zuerich.ch",
             "resolved": "fzag-b2c.customdomains.okta.com"
+        },
+        {
+            "original": "logon.bcg.com",
+            "resolved": "logon.customdomains.okta.com"
         },
         {
             "original": "ssosignon.servicenow.com",
             "resolved": "servicenowsignon.customdomains.okta.com"
         }
     ],
-    "fingerprinting": 1,
+    "fingerprinting": 0,
     "resources": [
         {
             "rule": "okta\\.com\\/api\\/v1\\/sessions\\/me",
-            "cookies": 0.000201,
+            "cookies": 0.000301,
             "fingerprinting": 0,
             "subdomains": [
-                "servicenowsignon.customdomains",
-                "fzag-b2c.customdomains"
+                "logon.customdomains",
+                "churchofjesuschrist.customdomains",
+                "servicenowsignon.customdomains"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000301,
             "cnames": [
+                {
+                    "original": "logon.bcg.com",
+                    "resolved": "logon.customdomains.okta.com"
+                },
+                {
+                    "original": "id.churchofjesuschrist.org",
+                    "resolved": "churchofjesuschrist.customdomains.okta.com"
+                },
                 {
                     "original": "ssosignon.servicenow.com",
                     "resolved": "servicenowsignon.customdomains.okta.com"
-                },
-                {
-                    "original": "id.flughafen-zuerich.ch",
-                    "resolved": "fzag-b2c.customdomains.okta.com"
                 }
             ],
-            "responseHashes": [
-                "cef246bb2d1870cef619e22aa34408b64391d667e1e40ad5f0a0095bc334d431"
-            ],
-            "type": "XHR",
+            "responseHashes": [],
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "servicenow.com",
-                "www.flughafen-zuerich.ch"
+                "bcg.com",
+                "www.churchofjesuschrist.org",
+                "www.servicenow.com"
             ]
         },
         {
@@ -62,20 +76,25 @@
             "cookies": 0.000301,
             "fingerprinting": 0,
             "subdomains": [
-                "servicenowsignon.customdomains",
-                "fzag-b2c.customdomains"
+                "logon.customdomains",
+                "fzag-b2c.customdomains",
+                "servicenowsignon.customdomains"
             ],
             "apis": {},
             "sites": 3,
             "prevalence": 0.000301,
             "cnames": [
                 {
-                    "original": "ssosignon.servicenow.com",
-                    "resolved": "servicenowsignon.customdomains.okta.com"
+                    "original": "logon.bcg.com",
+                    "resolved": "logon.customdomains.okta.com"
                 },
                 {
                     "original": "id.flughafen-zuerich.ch",
                     "resolved": "fzag-b2c.customdomains.okta.com"
+                },
+                {
+                    "original": "ssosignon.servicenow.com",
+                    "resolved": "servicenowsignon.customdomains.okta.com"
                 }
             ],
             "responseHashes": [],
@@ -83,7 +102,7 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "servicenow.com",
+                "bcg.com",
                 "www.flughafen-zuerich.ch",
                 "www.servicenow.com"
             ]
@@ -91,19 +110,9 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000301,
-    "topInitiators": [
-        {
-            "domain": "first party",
-            "prevalence": 0.5
-        },
-        {
-            "domain": "service-now.com",
-            "prevalence": 0.5
-        }
-    ],
+    "cookies": 0.000502,
     "types": {
-        "XHR": 2,
+        "Fetch": 3,
         "Preflight": 3
     },
     "nameservers": [

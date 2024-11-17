@@ -8,9 +8,14 @@
     "sites": 4,
     "subdomains": [
         "prodo-api",
-        "bfw-cms-prod"
+        "bfw-cms-prod",
+        "bfw-api-prod"
     ],
     "cnames": [
+        {
+            "original": "api.boerse-frankfurt.de",
+            "resolved": "bfw-api-prod.ariva-services.de"
+        },
         {
             "original": "cms.boerse-frankfurt.de",
             "resolved": "bfw-cms-prod.ariva-services.de"
@@ -26,14 +31,14 @@
                 "prodo-api"
             ],
             "apis": {
-                "Document.cookie getter": 2,
-                "Navigator.prototype.userAgent": 2
+                "Document.cookie getter": 1,
+                "Navigator.prototype.userAgent": 1
             },
             "sites": 3,
             "prevalence": 0.0000205,
             "cnames": [],
             "responseHashes": [
-                "b5f44cf899764c3d130a419e84cbfa67458e235b94926d1b935cca09630ec269"
+                "570e32093d7973cf49aeb74b33b68d478d661fc5c1fbc2258e40007cf3cd7800"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -87,6 +92,33 @@
             ],
             "responseHashes": [],
             "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "boerse-frankfurt.de",
+                "www.boerse-frankfurt.de"
+            ]
+        },
+        {
+            "rule": "ariva-services\\.de\\/v1\\/pi\\/measure",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "bfw-api-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "api.boerse-frankfurt.de",
+                    "resolved": "bfw-api-prod.ariva-services.de"
+                }
+            ],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -161,10 +193,10 @@
     "types": {
         "Script": 3,
         "Preflight": 4,
-        "XHR": 4
+        "XHR": 6
     },
     "nameservers": [
-        "ens1.ariva.de",
-        "ens2.ariva.de"
+        "ens2.ariva.de",
+        "ens1.ariva.de"
     ]
 }

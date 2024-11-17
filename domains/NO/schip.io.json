@@ -7,91 +7,100 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.0001,
-    "sites": 1,
+    "prevalence": 0.000201,
+    "sites": 2,
     "subdomains": [
-        "ka.lrs.liberty"
+        "kleinanzeigen-legacy.sgtm-pro",
+        "marktplaats.sgtm-pro"
     ],
-    "cnames": [],
-    "fingerprinting": 1,
+    "cnames": [
+        {
+            "original": "server.sgtm-legacy.kleinanzeigen.de",
+            "resolved": "kleinanzeigen-legacy.sgtm-pro.schip.io"
+        },
+        {
+            "original": "server.sgtm.marktplaats.nl",
+            "resolved": "marktplaats.sgtm-pro.schip.io"
+        }
+    ],
+    "fingerprinting": 2,
     "resources": [
         {
-            "rule": "schip\\.io\\/liberty-metrics\\/ad-requests",
-            "cookies": 0,
-            "fingerprinting": 0,
+            "rule": "schip\\.io\\/gtm\\.js",
+            "cookies": 0.0001,
+            "fingerprinting": 1,
             "subdomains": [
-                "ka.lrs.liberty"
+                "kleinanzeigen-legacy.sgtm-pro",
+                "marktplaats.sgtm-pro"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "cnames": [
+                {
+                    "original": "server.sgtm-legacy.kleinanzeigen.de",
+                    "resolved": "kleinanzeigen-legacy.sgtm-pro.schip.io"
+                },
+                {
+                    "original": "server.sgtm.marktplaats.nl",
+                    "resolved": "marktplaats.sgtm-pro.schip.io"
+                }
+            ],
+            "responseHashes": [
+                "078b7ca0670890dd75bdf1f0b87b7060bde7771c6657085012962419922f379e"
+            ],
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "kleinanzeigen.de",
-                "www.kleinanzeigen.de"
+                "www.marktplaats.nl"
             ]
         },
         {
-            "rule": "schip\\.io\\/liberty-metrics\\/ad-requests",
-            "cookies": 0,
+            "rule": "schip\\.io\\/g\\/collect",
+            "cookies": 0.000201,
             "fingerprinting": 0,
             "subdomains": [
-                "ka.lrs.liberty"
+                "marktplaats.sgtm-pro"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "kleinanzeigen.de",
-                "www.kleinanzeigen.de"
-            ]
-        },
-        {
-            "rule": "schip\\.io\\/liberty-metrics\\/ad-impressions",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "ka.lrs.liberty"
+            "cnames": [
+                {
+                    "original": "server.sgtm.marktplaats.nl",
+                    "resolved": "marktplaats.sgtm-pro.schip.io"
+                }
             ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Fetch",
+            "responseHashes": [
+                "e64954dc34e12c7190cc2338a54b07644ff0f102aa71cc7209bcbb49c3009f7c"
+            ],
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "kleinanzeigen.de",
-                "www.kleinanzeigen.de"
+                "marktplaats.nl",
+                "www.marktplaats.nl"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.0001,
     "topInitiators": [
         {
-            "domain": "first party",
+            "domain": "datadoghq-browser-agent.com",
             "prevalence": 1
         }
     ],
     "types": {
-        "Preflight": 2,
-        "Fetch": 4
+        "Script": 2,
+        "XHR": 2
     },
     "nameservers": [
-        "ns-588.awsdns-09.net",
         "ns-1356.awsdns-41.org",
+        "ns-588.awsdns-09.net",
         "ns-1999.awsdns-57.co.uk",
         "ns-100.awsdns-12.com"
     ]

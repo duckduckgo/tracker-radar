@@ -7,11 +7,83 @@
     "prevalence": 0.0001,
     "sites": 1,
     "subdomains": [
+        "trochilus-web",
+        "trochi",
         "sentry"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "gotoda\\.co\\/trochilus-web-sdk-integration\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "trochilus-web"
+            ],
+            "apis": {
+                "BroadcastChannel.prototype.constructor": 2,
+                "window.sessionStorage": 2,
+                "window.indexedDB": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.language": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "477226e6887de8c3ee82c0ac70cd15210a0ab043b98daced6152119ee9209b90"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mexc.com",
+                "www.mexc.com"
+            ]
+        },
+        {
+            "rule": "gotoda\\.co\\/api\\/sync",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "trochi"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mexc.com",
+                "www.mexc.com"
+            ]
+        },
+        {
+            "rule": "gotoda\\.co\\/api\\/sync",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "trochi"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "b4daf19e805631a5efa9221a9795e4960c7484b33d0ea721dc6c99af4f2cc978"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mexc.com",
+                "www.mexc.com"
+            ]
+        },
         {
             "rule": "gotoda\\.co\\/api\\/4\\/envelope\\/",
             "cookies": 0,
@@ -31,6 +103,48 @@
                 "mexc.com",
                 "www.mexc.com"
             ]
+        },
+        {
+            "rule": "gotoda\\.co\\/api",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "trochi"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mexc.com",
+                "www.mexc.com"
+            ]
+        },
+        {
+            "rule": "gotoda\\.co\\/api",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "trochi"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mexc.com",
+                "www.mexc.com"
+            ]
         }
     ],
     "categories": [],
@@ -43,12 +157,15 @@
         }
     ],
     "types": {
+        "Script": 2,
+        "Preflight": 4,
+        "XHR": 4,
         "Fetch": 2
     },
     "nameservers": [
-        "ns-1683.awsdns-18.co.uk",
-        "ns-835.awsdns-40.net",
         "ns-198.awsdns-24.com",
-        "ns-1205.awsdns-22.org"
+        "ns-1205.awsdns-22.org",
+        "ns-835.awsdns-40.net",
+        "ns-1683.awsdns-18.co.uk"
     ]
 }

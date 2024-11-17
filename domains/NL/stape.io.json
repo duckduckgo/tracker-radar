@@ -7,9 +7,11 @@
     "prevalence": 0.00161,
     "sites": 16,
     "subdomains": [
+        "leu",
+        "ust",
         "eu",
-        "rriimoqj.ust",
-        "cdn"
+        "cdn",
+        "eul"
     ],
     "cnames": [
         {
@@ -17,16 +19,56 @@
             "resolved": "eu.stape.io"
         },
         {
+            "original": "load.gtm.guidetoiceland.is",
+            "resolved": "leu.stape.io"
+        },
+        {
             "original": "ss.avogel.nl",
             "resolved": "eu.stape.io"
         },
         {
-            "original": "sst.bmn.nl",
-            "resolved": "eu.stape.io"
+            "original": "ssdata.submagic.co",
+            "resolved": "ust.stape.io"
+        },
+        {
+            "original": "sst.wolky.nl",
+            "resolved": "eul.stape.io"
         }
     ],
     "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "stape\\.io\\/gtag\\/destination",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "leu",
+                "ust"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "load.gtm.guidetoiceland.is",
+                    "resolved": "leu.stape.io"
+                },
+                {
+                    "original": "ssdata.submagic.co",
+                    "resolved": "ust.stape.io"
+                }
+            ],
+            "responseHashes": [
+                "454741577148662d5b18891adc108c6b7418439bee67a244836746b96459f024"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "guidetoiceland.is",
+                "www.submagic.co"
+            ]
+        },
         {
             "rule": "stape\\.io\\/data",
             "cookies": 0.000201,
@@ -48,7 +90,7 @@
                 }
             ],
             "responseHashes": [
-                "ae4ffa4c3a0297c5b3d408125824c21fce4172f1a366662eaa118fe79b50b714"
+                "aaa903bb9109bf703bd3e464d307fa94fa2e637ca129e313d568569ed007550e"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -59,56 +101,20 @@
             ]
         },
         {
-            "rule": "stape\\.io\\/g\\/collect",
-            "cookies": 0.0001,
-            "fingerprinting": 0,
-            "subdomains": [
-                "eu",
-                "rriimoqj.ust"
-            ],
-            "apis": {},
-            "sites": 4,
-            "prevalence": 0.000401,
-            "cnames": [
-                {
-                    "original": "ss.avogel.nl",
-                    "resolved": "eu.stape.io"
-                },
-                {
-                    "original": "sst.bmn.nl",
-                    "resolved": "eu.stape.io"
-                }
-            ],
-            "responseHashes": [
-                "e64954dc34e12c7190cc2338a54b07644ff0f102aa71cc7209bcbb49c3009f7c"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {
-                "_ga": 0.00010036130068245685
-            },
-            "exampleSites": [
-                "avogel.nl",
-                "www.avogel.nl",
-                "www.bmn.nl",
-                "www.ganymedes.nl"
-            ]
-        },
-        {
             "rule": "stape\\.io\\/dtag\\/v8\\.js",
-            "cookies": 0.000201,
+            "cookies": 0.000301,
             "fingerprinting": 1,
             "subdomains": [
                 "cdn"
             ],
             "apis": {
-                "window.innerWidth": 2,
-                "window.innerHeight": 2,
-                "Screen.prototype.width": 2,
-                "Screen.prototype.height": 2
+                "window.innerWidth": 3,
+                "window.innerHeight": 3,
+                "Screen.prototype.width": 3,
+                "Screen.prototype.height": 3
             },
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [
                 "99f2d8044a24b9817bc31c4e3f6c34c24ff4e05557ca70dcd2631f790785d8a9"
@@ -117,8 +123,68 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "peek-cloppenburg.nl",
+                "nordpass.com",
+                "www.peek-cloppenburg.nl",
                 "www.test-aankoop.be"
+            ]
+        },
+        {
+            "rule": "stape\\.io\\/g\\/collect",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "eu"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "ss.avogel.nl",
+                    "resolved": "eu.stape.io"
+                }
+            ],
+            "responseHashes": [
+                "e64954dc34e12c7190cc2338a54b07644ff0f102aa71cc7209bcbb49c3009f7c"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "avogel.nl",
+                "www.avogel.nl"
+            ]
+        },
+        {
+            "rule": "stape\\.io\\/gpt_ads-public\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ust",
+                "eul"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "ssdata.submagic.co",
+                    "resolved": "ust.stape.io"
+                },
+                {
+                    "original": "sst.wolky.nl",
+                    "resolved": "eul.stape.io"
+                }
+            ],
+            "responseHashes": [
+                "60cb051e5a90fb89b3dd953d5eb8a121a0d6d54f5c49a174997190aaf013e3af"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "submagic.co",
+                "www.wolky.nl"
             ]
         }
     ],
@@ -128,23 +194,28 @@
     "topInitiators": [
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.5454545454545454
+            "prevalence": 0.375
         },
         {
             "domain": "stapecdn.com",
-            "prevalence": 0.2727272727272727
+            "prevalence": 0.25
         },
         {
             "domain": "first party",
-            "prevalence": 0.18181818181818182
+            "prevalence": 0.25
+        },
+        {
+            "domain": "axept.io",
+            "prevalence": 0.125
         }
     ],
     "types": {
-        "XHR": 6,
-        "Script": 2
+        "Script": 7,
+        "XHR": 2,
+        "Fetch": 2
     },
     "nameservers": [
-        "aida.ns.cloudflare.com",
-        "donald.ns.cloudflare.com"
+        "donald.ns.cloudflare.com",
+        "aida.ns.cloudflare.com"
     ]
 }

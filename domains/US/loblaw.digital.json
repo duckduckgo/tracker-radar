@@ -4,10 +4,11 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000614,
+    "prevalence": 0.0000615,
     "sites": 9,
     "subdomains": [
-        "sentry-prod"
+        "sentry-prod",
+        "prod-sdm-bff.api"
     ],
     "cnames": [],
     "fingerprinting": 0,
@@ -24,6 +25,7 @@
             "prevalence": 0.000041,
             "cnames": [],
             "responseHashes": [
+                "470f7dd778291a025d70d7aa4ba523fae996369a524bf2e8152cee4b58efdb72",
                 "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
             ],
             "type": "Fetch",
@@ -32,31 +34,6 @@
             "exampleSites": [
                 "loblaws.ca",
                 "www.loblaws.ca",
-                "www.maxi.ca",
-                "www.nofrills.ca",
-                "www.realcanadiansuperstore.ca",
-                "www.yourindependentgrocer.ca"
-            ]
-        },
-        {
-            "rule": "loblaw\\.digital\\/api\\/2\\/store\\/",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "sentry-prod"
-            ],
-            "apis": {},
-            "sites": 5,
-            "prevalence": 0.0000341,
-            "cnames": [],
-            "responseHashes": [
-                "77e29e7c2ef665fb66daa4adbd5a877ad518b9698c165e1a486813acf9ee84f2"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "loblaws.ca",
                 "www.maxi.ca",
                 "www.nofrills.ca",
                 "www.realcanadiansuperstore.ca",
@@ -75,7 +52,7 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "d1843cefa1d135d214a7a48ec961820985f328626aadeba22985e60b7a70986c"
+                "5e5f5e8c6b12bb278997776b83851587e8ab6197c3d556bfe3b57531fbd068e4"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -86,24 +63,44 @@
             ]
         },
         {
-            "rule": "loblaw\\.digital\\/api\\/3\\/envelope\\/",
+            "rule": "loblaw\\.digital\\/beauty\\/v2\\/sdui\\/views\\/m4",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "sentry-prod"
+                "prod-sdm-bff.api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "pharmaprix.ca",
+                "www.shoppersdrugmart.ca"
+            ]
+        },
+        {
+            "rule": "loblaw\\.digital\\/beauty\\/v2\\/sdui\\/views\\/m4",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prod-sdm-bff.api"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "ca3f1b5586e3e11678db1218add80bda9360e7273003e718fe71d7c3bfb6c0b6"
+                "004166ad71349fc50078af4d9e85e0f5ed5ae45eaa23c46804f8dcad760c5ac6"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "shoppersdrugmart.ca",
+                "pharmaprix.ca",
                 "www.shoppersdrugmart.ca"
             ]
         }
@@ -118,12 +115,13 @@
         }
     ],
     "types": {
-        "Fetch": 15
+        "Fetch": 10,
+        "Preflight": 2
     },
     "nameservers": [
-        "ns-cloud-e4.googledomains.com",
-        "ns-cloud-e2.googledomains.com",
         "ns-cloud-e3.googledomains.com",
+        "ns-cloud-e2.googledomains.com",
+        "ns-cloud-e4.googledomains.com",
         "ns-cloud-e1.googledomains.com"
     ]
 }

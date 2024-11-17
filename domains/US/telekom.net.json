@@ -4,37 +4,20 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000205,
-    "sites": 3,
+    "prevalence": 0.0000273,
+    "sites": 4,
     "subdomains": [
-        "search.voicecast.ng",
-        "cdnap"
+        "cdnap",
+        "login.production-v.p5x"
     ],
-    "cnames": [],
+    "cnames": [
+        {
+            "original": "accounts.login.idm.telekom.com",
+            "resolved": "login.production-v.p5x.telekom.net"
+        }
+    ],
     "fingerprinting": 0,
     "resources": [
-        {
-            "rule": "telekom\\.net\\/search\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "search.voicecast.ng"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "telekom.de",
-                "geschaeftskunden.telekom.de"
-            ]
-        },
         {
             "rule": "telekom\\.net\\/resources\\/sites\\/phoenix\\/style\\/font\\/teleneo-variable\\.woff2",
             "cookies": 0.0000137,
@@ -56,11 +39,58 @@
                 "telekom.de",
                 "geschaeftskunden.telekom.de"
             ]
+        },
+        {
+            "rule": "telekom\\.net\\/oauth2\\/auth",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "login.production-v.p5x"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "accounts.login.idm.telekom.com",
+                    "resolved": "login.production-v.p5x.telekom.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "telekom.de",
+                "www.telekom.de"
+            ]
+        },
+        {
+            "rule": "telekom\\.net\\/hilfe\\/ruxitagentjs_ICA7NVfhqrtux_10301241007103824\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdnap"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "34d701e4aea84de285fc33285e2f0ba75c04a947af304849442be533c676fec2"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "telekom.de",
+                "www.telekom.de"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0000205,
+    "cookies": 0.0000273,
     "topInitiators": [
         {
             "domain": "first party",
@@ -72,13 +102,14 @@
         }
     ],
     "types": {
-        "Script": 2,
-        "Font": 2
+        "Font": 2,
+        "Document": 2,
+        "Script": 2
     },
     "nameservers": [
-        "dns1.telekom.de",
         "ns1.telekom.net",
         "dns2.telekom.de",
-        "pns.dtag.de"
+        "pns.dtag.de",
+        "dns1.telekom.de"
     ]
 }

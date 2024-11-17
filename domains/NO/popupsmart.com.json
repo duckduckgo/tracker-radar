@@ -4,10 +4,12 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000502,
-    "sites": 5,
+    "prevalence": 0.000603,
+    "sites": 6,
     "subdomains": [
-        "cdn"
+        "cdn",
+        "handler-api",
+        "apiv2"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -21,29 +23,138 @@
             ],
             "apis": {
                 "Navigator.prototype.userAgent": 5,
-                "Document.cookie getter": 5,
+                "Document.cookie getter": 4,
                 "Screen.prototype.width": 4,
                 "Screen.prototype.height": 4,
                 "Navigator.prototype.language": 4,
+                "window.localStorage": 2,
                 "window.sessionStorage": 4,
-                "window.localStorage": 1,
+                "window.innerWidth": 1,
                 "Navigator.prototype.languages": 1
             },
             "sites": 5,
             "prevalence": 0.000502,
             "cnames": [],
             "responseHashes": [
-                "3b62544311fae11cea4d3f2e562d72b075223f723c855101f1a2773b6b18c40f"
+                "284181d59afda854d87d8f729531b7c1fb0247c54f6148fecf2fdedc2a4844a7"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "reliefweb.int",
-                "www.boatinternational.com",
+                "elfa.com",
                 "www.foto.no",
                 "www.jewishvirtuallibrary.org",
-                "www.nbc.com"
+                "www.nbc.com",
+                "www.skisporet.no"
+            ]
+        },
+        {
+            "rule": "popupsmart\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "handler-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "0e03f97ae4697775c8757637d0f2cd95f1aae5bcbe3e97abffc258e5beef50b9"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "elfa.com",
+                "www.jewishvirtuallibrary.org"
+            ]
+        },
+        {
+            "rule": "popupsmart\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "handler-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "elfa.com",
+                "www.jewishvirtuallibrary.org"
+            ]
+        },
+        {
+            "rule": "popupsmart\\.com\\/assets\\/empty\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "a021081560948537e921376c9a32773a9ab20ac2076587418e379794296a2ba4"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "elfa.com",
+                "www.jewishvirtuallibrary.org"
+            ]
+        },
+        {
+            "rule": "popupsmart\\.com\\/api\\/Bundle\\/356919",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "apiv2"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "machinelearningplus.com",
+                "www.machinelearningplus.com"
+            ]
+        },
+        {
+            "rule": "popupsmart\\.com\\/accounts\\/75274\\/loader\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "6526e35bb5f2784a410b126d4d1578df73b9c5f649e3251736f621eaa2e1308e"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "skisporet.no",
+                "www.skisporet.no"
             ]
         }
     ],
@@ -52,23 +163,26 @@
     "cookies": 0,
     "topInitiators": [
         {
-            "domain": "googletagmanager.com",
-            "prevalence": 0.5
+            "domain": "first party",
+            "prevalence": 0.625
         },
         {
-            "domain": "first party",
-            "prevalence": 0.3333333333333333
+            "domain": "googletagmanager.com",
+            "prevalence": 0.25
         },
         {
             "domain": "nbcuni.com",
-            "prevalence": 0.16666666666666666
+            "prevalence": 0.125
         }
     ],
     "types": {
-        "Script": 5
+        "Script": 7,
+        "Fetch": 4,
+        "Preflight": 2,
+        "Image": 2
     },
     "nameservers": [
-        "curt.ns.cloudflare.com",
-        "autumn.ns.cloudflare.com"
+        "autumn.ns.cloudflare.com",
+        "curt.ns.cloudflare.com"
     ]
 }

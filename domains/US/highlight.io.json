@@ -4,11 +4,12 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000546,
-    "sites": 8,
+    "prevalence": 0.000082,
+    "sites": 12,
     "subdomains": [
         "static",
-        "pub"
+        "pub",
+        "otel"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -49,17 +50,25 @@
                 "pub"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.0000273,
+            "sites": 7,
+            "prevalence": 0.0000478,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "9d7f4adde22871989bbd60ec54f58a13b69756de9e157d5585fda8ffb7f3f021",
+                "bdd8c36c0c0a48165d734732e0b62e36c24236d7d5ab599e76f1ec7beccd75f0",
+                "6d8b59a9a60d89d62e23571fd27bc8b6843ed840d31aced33af18a65d3090aeb"
+            ],
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
+                "callawaygolf.com",
+                "odyssey.callawaygolf.com",
                 "upgradedpoints.com",
                 "whop.com",
                 "www.caliber.com",
+                "www.callawaygolf.com",
                 "www.rmpbs.org"
             ]
         },
@@ -71,21 +80,115 @@
                 "pub"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.0000273,
+            "sites": 7,
+            "prevalence": 0.0000478,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "callawaygolf.com",
+                "odyssey.callawaygolf.com",
+                "upgradedpoints.com",
+                "whop.com",
+                "www.caliber.com",
+                "www.callawaygolf.com",
+                "www.rmpbs.org"
+            ]
+        },
+        {
+            "rule": "highlight\\.io\\/v1\\/traces",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "otel"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
             "cnames": [],
             "responseHashes": [
-                "bdd8c36c0c0a48165d734732e0b62e36c24236d7d5ab599e76f1ec7beccd75f0",
-                "b36c13d018d279ac89234cc90fa3871bf8ee269d19ca44c7b0468ae44a36dee5"
+                "f56b35823a693646bf987ca07c9cbc4ff72a83b79b34595b20546b539795fdf0"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "callawaygolf.com",
+                "odyssey.callawaygolf.com",
+                "www.callawaygolf.com"
+            ]
+        },
+        {
+            "rule": "highlight\\.io\\/v1\\/traces",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "otel"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "callawaygolf.com",
+                "www.callawaygolf.com"
+            ]
+        },
+        {
+            "rule": "highlight\\.io\\/v1\\/traces",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "otel"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "f56b35823a693646bf987ca07c9cbc4ff72a83b79b34595b20546b539795fdf0"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "upgradedpoints.com",
-                "whop.com",
-                "www.caliber.com",
-                "www.rmpbs.org"
+                "callawaygolf.com",
+                "odyssey.callawaygolf.com",
+                "www.callawaygolf.com"
+            ]
+        },
+        {
+            "rule": "highlight\\.io\\/v8\\.9\\.0\\/index\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2,
+                "Date.prototype.getTime": 2,
+                "URL.createObjectURL": 1,
+                "Navigator.prototype.webdriver": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "f30c3bf1a5908b22b6c1fa705696c623a1c9f192910977df6ef10e772f99e28b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "caliber.com",
+                "www.caliber.com"
             ]
         }
     ],
@@ -99,14 +202,15 @@
         }
     ],
     "types": {
-        "Script": 2,
-        "Preflight": 4,
-        "XHR": 4
+        "Script": 4,
+        "XHR": 10,
+        "Preflight": 9,
+        "Ping": 3
     },
     "nameservers": [
-        "ns-cloud-c1.googledomains.com",
         "ns-cloud-c4.googledomains.com",
         "ns-cloud-c3.googledomains.com",
-        "ns-cloud-c2.googledomains.com"
+        "ns-cloud-c2.googledomains.com",
+        "ns-cloud-c1.googledomains.com"
     ]
 }

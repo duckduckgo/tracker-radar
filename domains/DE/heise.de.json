@@ -8,6 +8,7 @@
     "sites": 2,
     "subdomains": [
         "responder.wt",
+        "www",
         "reichweite",
         "prophet"
     ],
@@ -44,8 +45,8 @@
                 "window.innerWidth": 2,
                 "Navigator.prototype.javaEnabled": 2,
                 "Navigator.prototype.plugins": 2,
-                "Document.cookie setter": 2,
-                "window.localStorage": 2
+                "window.localStorage": 2,
+                "Document.cookie setter": 2
             },
             "sites": 2,
             "prevalence": 0.000201,
@@ -55,22 +56,22 @@
             ],
             "type": "Script",
             "firstPartyCookies": {
-                "wt_rla": {
-                    "ttl": null,
-                    "length": 35,
-                    "prevalence": 0.00020118700331958554,
-                    "uniqueness": 1
-                },
                 "wt_nv": {
-                    "ttl": 15552003,
+                    "ttl": 15552002,
                     "length": 1,
-                    "prevalence": 0.00010059350165979277,
+                    "prevalence": 0.00010047221943132724,
                     "uniqueness": 1
                 },
                 "wt_nv_s": {
                     "ttl": null,
                     "length": 1,
-                    "prevalence": 0.00010059350165979277,
+                    "prevalence": 0.00010047221943132724,
+                    "uniqueness": 1
+                },
+                "wt_rla": {
+                    "ttl": null,
+                    "length": 35,
+                    "prevalence": 0.00010047221943132724,
                     "uniqueness": 1
                 }
             },
@@ -78,6 +79,28 @@
             "exampleSites": [
                 "techstage.de",
                 "www.telepolis.de"
+            ]
+        },
+        {
+            "rule": "heise\\.de\\/assets\\/styles\\/fonts\\/ss3vf\\.d8a\\.ltc\\.woff2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "5efcd047cdbdcbd577221cac43a6a10978e3c9a5046d885cfd5489f4e07b42c6"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "techstage.de",
+                "www.techstage.de"
             ]
         },
         {
@@ -101,7 +124,7 @@
                 }
             ],
             "responseHashes": [
-                "c10f63ec13fee1244a50f7658a1ddea3e7d03408ed8531d179cae6cfb643e549"
+                "49073dcdc5463811e99acdf526059021849945b9b98d33e617659e354d823b47"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -154,9 +177,38 @@
                 }
             ],
             "responseHashes": [
-                "692cc996435cf57385e0022a80802ad8a90c53e5cd32dddb900db948fea65433"
+                "7e14a6e5b6093bf2bc4d24a4a4e6a53b70ab2156a9e734529f2fd8c916b9a2fd"
             ],
             "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "techstage.de",
+                "www.telepolis.de"
+            ]
+        },
+        {
+            "rule": "heise\\.de\\/base\\.io",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "reichweite"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "data-fb7f8b3ae8.techstage.de",
+                    "resolved": "reichweite.heise.de"
+                },
+                {
+                    "original": "data-fb7f8b3ae8.telepolis.de",
+                    "resolved": "reichweite.heise.de"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -194,35 +246,6 @@
                 "techstage.de",
                 "www.telepolis.de"
             ]
-        },
-        {
-            "rule": "heise\\.de\\/base\\.io",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "reichweite"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [
-                {
-                    "original": "data-fb7f8b3ae8.techstage.de",
-                    "resolved": "reichweite.heise.de"
-                },
-                {
-                    "original": "data-fb7f8b3ae8.telepolis.de",
-                    "resolved": "reichweite.heise.de"
-                }
-            ],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "techstage.de",
-                "www.telepolis.de"
-            ]
         }
     ],
     "categories": [],
@@ -230,21 +253,26 @@
     "cookies": 0.000201,
     "topInitiators": [
         {
+            "domain": "heise.de",
+            "prevalence": 0.5
+        },
+        {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.5
         }
     ],
     "types": {
         "Script": 6,
+        "Font": 2,
         "Image": 2,
-        "XHR": 2,
-        "Preflight": 2
+        "Preflight": 2,
+        "XHR": 2
     },
     "nameservers": [
-        "ns.pop-hannover.de",
-        "ns.heise.de",
-        "ns.plusline.de",
         "ns.s.plusline.de",
-        "ns2.pop-hannover.net"
+        "ns.pop-hannover.de",
+        "ns2.pop-hannover.net",
+        "ns.plusline.de",
+        "ns.heise.de"
     ]
 }

@@ -14,9 +14,9 @@
     "subdomains": [
         "afd-b2c-iibozyiouoyi4.z01",
         "fde-smp-swn-cdn-prd01-hbh0afa7a3gsetb7.z01",
+        "flysascom-gtm-prod-endpoint-cvapaegcgwaecfg0.z01",
         "pbhmg-cow-hb-cdn-endpoint-aaf4b5gxg0bkedh4.z01",
-        "hbpulse",
-        "sd-tagging",
+        "pbhmg-cow-ww-cdn-endpoint-f6ethjfha0evaee5.a03",
         "cdn-valais-prod-bff-e2a8hsaefef7gcac.z01"
     ],
     "cnames": [
@@ -33,8 +33,12 @@
             "resolved": "pbhmg-cow-hb-cdn-endpoint-aaf4b5gxg0bkedh4.z01.azurefd.net"
         },
         {
-            "original": "norkon.handelsblatt.com",
-            "resolved": "hbpulse.azurefd.net"
+            "original": "content.www.wiwo.de",
+            "resolved": "pbhmg-cow-ww-cdn-endpoint-f6ethjfha0evaee5.a03.azurefd.net"
+        },
+        {
+            "original": "gtm.flysas.com",
+            "resolved": "flysascom-gtm-prod-endpoint-cvapaegcgwaecfg0.z01.azurefd.net"
         }
     ],
     "fingerprinting": 1,
@@ -92,11 +96,39 @@
             ]
         },
         {
+            "rule": "azurefd\\.net\\/gtag\\/js",
+            "cookies": 0.000201,
+            "fingerprinting": 1,
+            "subdomains": [
+                "flysascom-gtm-prod-endpoint-cvapaegcgwaecfg0.z01"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "gtm.flysas.com",
+                    "resolved": "flysascom-gtm-prod-endpoint-cvapaegcgwaecfg0.z01.azurefd.net"
+                }
+            ],
+            "responseHashes": [
+                "efec34ee3bbff6db323219e9df6a7450d54ce04008224262bb77f649076bdc42"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "flysas.com",
+                "www.flysas.com"
+            ]
+        },
+        {
             "rule": "azurefd\\.net\\/api\\/content\\/eager\\/",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "pbhmg-cow-hb-cdn-endpoint-aaf4b5gxg0bkedh4.z01"
+                "pbhmg-cow-hb-cdn-endpoint-aaf4b5gxg0bkedh4.z01",
+                "pbhmg-cow-ww-cdn-endpoint-f6ethjfha0evaee5.a03"
             ],
             "apis": {},
             "sites": 2,
@@ -105,88 +137,21 @@
                 {
                     "original": "content.www.handelsblatt.com",
                     "resolved": "pbhmg-cow-hb-cdn-endpoint-aaf4b5gxg0bkedh4.z01.azurefd.net"
-                }
-            ],
-            "responseHashes": [
-                "1e07aa717c6e48f50cd9bd65281d3b26d8defd3fcdd945186d7ada79069f1baa"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "handelsblatt.com",
-                "www.handelsblatt.com"
-            ]
-        },
-        {
-            "rule": "azurefd\\.net\\/api\\/v1\\/models\\/hb-front",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "hbpulse"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [
+                },
                 {
-                    "original": "norkon.handelsblatt.com",
-                    "resolved": "hbpulse.azurefd.net"
+                    "original": "content.www.wiwo.de",
+                    "resolved": "pbhmg-cow-ww-cdn-endpoint-f6ethjfha0evaee5.a03.azurefd.net"
                 }
             ],
             "responseHashes": [
-                "630b566500b3cded114ce8fc5ecb4c4935ae6fb0f1748fc5ba1c6075aaf99df9"
+                "d134ffeb631ce245a8c9f743da7e9f08a2da3b029c67130e752337d2edbb3ac4"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "handelsblatt.com",
-                "www.handelsblatt.com"
-            ]
-        },
-        {
-            "rule": "azurefd\\.net\\/id\\/3pc",
-            "cookies": 0.000201,
-            "fingerprinting": 0,
-            "subdomains": [
-                "sd-tagging"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "5ea61356cfbc1c300508083b65f8d3f66f95d3c7f583e09e2ccaf34c92163a6d"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "toyota.com",
-                "www.toyota.com"
-            ]
-        },
-        {
-            "rule": "azurefd\\.net\\/endpoint\\/toyota\\/1x1\\.gif",
-            "cookies": 0.000201,
-            "fingerprinting": 0,
-            "subdomains": [
-                "sd-tagging"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "a11732bf41736baed4d00a1f73d63d0f9314f7917649d47143edc062cdc29658"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "toyota.com",
-                "www.toyota.com"
+                "www.wiwo.de"
             ]
         },
         {
@@ -221,7 +186,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "610da6571f122a39640d9ef8cac903a54281c5bfdb8c15a382508584e70a5bba"
+                "72d809cf12b8780e448f89e78e82788018c4af0af34fe7cb5189cd2d8d1c36ab"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -234,37 +199,36 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0011,
+    "cookies": 0.00111,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.7941176470588235
+            "prevalence": 0.8421052631578947
         },
         {
-            "domain": "azureedge.net",
-            "prevalence": 0.14705882352941177
+            "domain": "go-mpulse.net",
+            "prevalence": 0.05263157894736842
         },
         {
             "domain": "windows.net",
-            "prevalence": 0.029411764705882353
+            "prevalence": 0.05263157894736842
         },
         {
             "domain": "tiqcdn.com",
-            "prevalence": 0.029411764705882353
+            "prevalence": 0.05263157894736842
         }
     ],
     "types": {
         "Document": 2,
         "Stylesheet": 2,
-        "Fetch": 6,
         "Script": 2,
-        "Image": 2,
+        "Fetch": 4,
         "Preflight": 2
     },
     "nameservers": [
-        "ns1-37.azure-dns.com",
         "ns2-37.azure-dns.net",
-        "ns4-37.azure-dns.info",
-        "ns3-37.azure-dns.org"
+        "ns1-37.azure-dns.com",
+        "ns3-37.azure-dns.org",
+        "ns4-37.azure-dns.info"
     ]
 }

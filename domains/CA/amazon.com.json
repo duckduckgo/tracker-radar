@@ -16,11 +16,10 @@
         "fls-na",
         "aws",
         "unagi",
-        "payments",
         "apay-us"
     ],
     "cnames": [],
-    "fingerprinting": 2,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "amazon\\.com\\/client\\/loader\\/v1\\/d2c-load\\.js",
@@ -111,6 +110,27 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
+                "repost.aws",
+                "s3.amazonaws.com"
+            ]
+        },
+        {
+            "rule": "amazon\\.com\\/csds\\/collector\\/v1\\/events\\/batch",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "d2c.aws"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "repost.aws",
                 "s3.amazonaws.com"
             ]
         },
@@ -178,6 +198,48 @@
             ]
         },
         {
+            "rule": "amazon\\.com\\/1\\/action-impressions\\/1\\/OE\\/aws-mktg\\/action\\/awsm_:tm_TargetRequesterXHRSuccess@v=2050:u=ms",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "fls-na"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "s3.amazonaws.com"
+            ]
+        },
+        {
+            "rule": "amazon\\.com\\/1\\/action-impressions\\/1\\/OE\\/aws-mktg\\/action\\/awsm_:tm_TargetRequesterXHRSuccess@v=2032:u=ms",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "fls-na"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "s3.amazonaws.com"
+            ]
+        },
+        {
             "rule": "amazon\\.com\\/api\\/dirs\\/typeahead-suggestions\\/items",
             "cookies": 0.000201,
             "fingerprinting": 0,
@@ -189,7 +251,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "4766ae7c1a37f110a66f2104c8155f733d06b4d2dd0214448d03c4e21029c2dd"
+                "668b86fe91abe21d5246bc9cce3845beeb2091daf8e97d1557188a86246fec3c"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -288,7 +350,6 @@
             "cookies": 0.000101,
             "fingerprinting": 0,
             "subdomains": [
-                "payments",
                 "apay-us"
             ],
             "apis": {},
@@ -320,44 +381,41 @@
     "topInitiators": [
         {
             "domain": "awsstatic.com",
-            "prevalence": 0.8291139240506329
+            "prevalence": 0.83125
         },
         {
             "domain": "first party",
-            "prevalence": 0.12025316455696203
+            "prevalence": 0.125
         },
         {
             "domain": "payments-amazon.com",
-            "prevalence": 0.02531645569620253
+            "prevalence": 0.025
         },
         {
             "domain": "abebookscdn.com",
-            "prevalence": 0.012658227848101266
-        },
-        {
-            "domain": "minmaxify.com",
-            "prevalence": 0.006329113924050633
+            "prevalence": 0.0125
         },
         {
             "domain": "aws.dev",
-            "prevalence": 0.006329113924050633
+            "prevalence": 0.00625
         }
     ],
     "types": {
         "Script": 6,
         "Fetch": 2,
-        "Image": 12,
+        "Preflight": 2,
+        "Image": 16,
         "XHR": 4,
         "Ping": 2
     },
     "nameservers": [
-        "ns1.amzndns.co.uk",
-        "ns1.amzndns.com",
         "ns1.amzndns.net",
-        "ns1.amzndns.org",
-        "ns2.amzndns.co.uk",
-        "ns2.amzndns.com",
+        "ns1.amzndns.com",
         "ns2.amzndns.net",
-        "ns2.amzndns.org"
+        "ns2.amzndns.co.uk",
+        "ns1.amzndns.org",
+        "ns1.amzndns.co.uk",
+        "ns2.amzndns.org",
+        "ns2.amzndns.com"
     ]
 }

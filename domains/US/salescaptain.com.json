@@ -4,16 +4,17 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.00000683,
-    "sites": 1,
+    "prevalence": 0.0000137,
+    "sites": 2,
     "subdomains": [
-        "app"
+        "app",
+        "socket"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
         {
-            "rule": "salescaptain\\.com\\/api\\/v1\\/chat\\/get-multilocation\\/46bc05cf-1d29-4fa2-be63-26ac536718d5",
+            "rule": "salescaptain\\.com\\/api\\/v1\\/user\\/parsed-webchat-v2-css-string",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -23,12 +24,34 @@
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "9e9bc51bff884b33704a7cf11ac406d435ca670e9c646faf4905dccc4a4ec9f4"
+            ],
+            "type": "Stylesheet",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "freedomtrading.com",
+                "guitars.com",
+                "www.freedomtrading.com"
+            ]
+        },
+        {
+            "rule": "salescaptain\\.com\\/socket\\.io\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "socket"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "guitars.com",
                 "www.freedomtrading.com"
             ]
         },
@@ -53,6 +76,26 @@
                 "freedomtrading.com",
                 "www.freedomtrading.com"
             ]
+        },
+        {
+            "rule": "salescaptain\\.com\\/api\\/v1\\/chat\\/get-multilocation\\/46bc05cf-1d29-4fa2-be63-26ac536718d5",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "app"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "freedomtrading.com",
+                "www.freedomtrading.com"
+            ]
         }
     ],
     "categories": [],
@@ -60,13 +103,19 @@
     "cookies": 0,
     "topInitiators": [
         {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.5
+        },
+        {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.5
         }
     ],
     "types": {
-        "Preflight": 2,
-        "XHR": 2
+        "Stylesheet": 2,
+        "WebSocket": 2,
+        "XHR": 2,
+        "Preflight": 2
     },
     "nameservers": [
         "veda.ns.cloudflare.com",

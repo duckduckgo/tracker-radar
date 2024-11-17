@@ -7,10 +7,11 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000704,
-    "sites": 7,
+    "prevalence": 0.00111,
+    "sites": 11,
     "subdomains": [
         "rum",
+        "csp-report",
         "logs"
     ],
     "cnames": [],
@@ -24,24 +25,54 @@
                 "rum"
             ],
             "apis": {},
-            "sites": 5,
-            "prevalence": 0.000503,
+            "sites": 9,
+            "prevalence": 0.000907,
             "cnames": [],
             "responseHashes": [
-                "8be12d7d19ac32a3a455353ccf6064f78243675e980aa695b0c4f38143997efa",
-                "43870c5daefd95503b7d09642c2de75e6e33e7e3d4fe288bcdb3ec56575e9907",
-                "9a3a624387856e5143963b80484b584cee7d9ddc11cc7c7b2496cf2d05d0b1e4",
-                "c851c0b0ee0fa06e0fe7a54854b51d86463c722b68a196e9d126a01e211be7f9"
+                "a8f47ddfb5f452267dbcbffd4987472d261decda2ff9d185b62c5c3ffe5234ab",
+                "09871453a9d711d920d2abbcef236caab1490f856692c22976ae05a112bac379",
+                "71216efc2219daf2989c056154ebda886210156c02a0d5e99af13e89d2e915bf",
+                "74741f4ae25286f30188075f7eac3c60f7f58da46461ba6395d2c816b97cac6d",
+                "543dbbe779194ab624c252cba3dd6b113a919e6cd2b2ce965f4297b8d93f9330",
+                "cbfaea6fdb1b0b2577e00bd31d2f48ab571dbc0b8316f3d9f91deb3d7ca7fd57",
+                "61537d57626cae3978f06ec3bf95f40b5105a5df69c130a0f91842feb3af29ef",
+                "8ed67030e3179d774b66e837ab0c04576cba6dfe0238ac38f39bb96e3642b069"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "kiabi.com",
-                "murfy.fr",
+                "knauf.com",
+                "www.blablacar.fr",
+                "www.corsematin.com",
+                "www.flixbus.fr",
+                "www.flixbus.com",
                 "www.kiabi.com",
                 "www.kozikaza.com",
-                "www.lexus.fr"
+                "www.lexus.fr",
+                "www.toyota.fr"
+            ]
+        },
+        {
+            "rule": "browser-intake-datadoghq\\.eu\\/api\\/v2\\/logs",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "csp-report"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "atelierdeschefs.fr",
+                "www.atelierdeschefs.fr"
             ]
         },
         {
@@ -56,8 +87,8 @@
             "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
-                "cf45de7fbef79f73df96413caf5f79d380857fe41bf4ea13e129f9a9fd916538",
-                "f7720c329271972b77d325e253ece8d1849f961b95eac5a7615e32aeed488786"
+                "dafaaadc832400e071ca9119af5eacf88a69d7da1449c7ab4104f67a196e339a",
+                "4d1a47c9bea0b4b0886e097d52079420e80f2e5d76c2ff5821d4be0355b43b6e"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -67,6 +98,28 @@
                 "www.blablacar.fr",
                 "www.directferries.fr"
             ]
+        },
+        {
+            "rule": "browser-intake-datadoghq\\.eu\\/api\\/v2\\/rum",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rum"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "fef9788ef0371e51aa5299eca0483a86cf37fcccfc2d48e872e02a1bad2b4d39"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "corsematin.com",
+                "www.lexus.fr"
+            ]
         }
     ],
     "categories": [],
@@ -75,19 +128,25 @@
     "topInitiators": [
         {
             "domain": "datadoghq-browser-agent.com",
-            "prevalence": 0.45161290322580644
+            "prevalence": 0.625
         },
         {
             "domain": "first party",
-            "prevalence": 0.3870967741935484
+            "prevalence": 0.20833333333333334
         },
         {
             "domain": "blablacar.com",
-            "prevalence": 0.16129032258064516
+            "prevalence": 0.125
+        },
+        {
+            "domain": "axept.io",
+            "prevalence": 0.041666666666666664
         }
     ],
     "types": {
-        "Fetch": 8
+        "Fetch": 12,
+        "Other": 2,
+        "XHR": 2
     },
     "nameservers": [
         "ns-cloud-e1.googledomains.com",

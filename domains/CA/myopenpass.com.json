@@ -4,14 +4,35 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000302,
-    "sites": 3,
+    "prevalence": 0.000402,
+    "sites": 4,
     "subdomains": [
-        "auth"
+        "auth",
+        "cdn"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "myopenpass\\.com\\/v1\\/api\\/telemetry\\/event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "auth"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "marketrealist.com",
+                "www.fixya.com"
+            ]
+        },
         {
             "rule": "myopenpass\\.com\\/v1\\/api\\/telemetry\\/event",
             "cookies": 0.000201,
@@ -33,23 +54,25 @@
             ]
         },
         {
-            "rule": "myopenpass\\.com\\/v1\\/api\\/telemetry\\/event",
+            "rule": "myopenpass\\.com\\/openpass-js-sdk\\/v2\\/openpass-js-sdk\\.min\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "auth"
+                "cdn"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "f87aeeee3e371e6fac10e5b2c45f8ed6e411dc0be13dbf5ff3c36407b8c32aaf"
+            ],
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "marketrealist.com",
-                "www.fixya.com"
+                "radaronline.com",
+                "www.distractify.com"
             ]
         }
     ],
@@ -63,8 +86,9 @@
         }
     ],
     "types": {
+        "Preflight": 2,
         "Fetch": 2,
-        "Preflight": 2
+        "Script": 2
     },
     "nameservers": [
         "ns-457.awsdns-57.com",

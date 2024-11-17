@@ -7,8 +7,9 @@
     "prevalence": 0.0000137,
     "sites": 2,
     "subdomains": [
-        "mufg",
-        "iijmio"
+        "dinos",
+        "iijmio",
+        "analytics"
     ],
     "cnames": [],
     "fingerprinting": 3,
@@ -18,13 +19,13 @@
             "cookies": 0,
             "fingerprinting": 1,
             "subdomains": [
-                "mufg",
+                "dinos",
                 "iijmio"
             ],
             "apis": {
-                "Navigator.prototype.product": 1,
-                "Navigator.prototype.userAgent": 1,
-                "Date.prototype.getTime": 1,
+                "Navigator.prototype.product": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Date.prototype.getTime": 2,
                 "window.localStorage": 1,
                 "window.innerHeight": 1
             },
@@ -38,7 +39,61 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "mufg.jp",
+                "dinos.co.jp",
+                "www.iijmio.jp"
+            ]
+        },
+        {
+            "rule": "karakuri\\.ai\\/v1\\/analytics\\.js",
+            "cookies": 0,
+            "fingerprinting": 3,
+            "subdomains": [
+                "analytics"
+            ],
+            "apis": {
+                "window.localStorage": 1,
+                "window.devicePixelRatio": 1,
+                "window.innerHeight": 1,
+                "window.innerWidth": 1,
+                "window.outerHeight": 1,
+                "window.outerWidth": 1,
+                "Navigator.prototype.userAgent": 1,
+                "Navigator.prototype.language": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "96e26892c40000771d43dce44926d1d1194c728e1a8c3dcea3bc15182aadd8a0"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dinos.co.jp",
+                "www.iijmio.jp"
+            ]
+        },
+        {
+            "rule": "karakuri\\.ai\\/api\\/action",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dinos",
+                "iijmio"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "ce2d3a443a80ee641c8d0f0348ec513ed610b61ce24a0eb93031f7c7e0a67e1a"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dinos.co.jp",
                 "www.iijmio.jp"
             ]
         }
@@ -57,12 +112,13 @@
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 4,
+        "Fetch": 2
     },
     "nameservers": [
-        "ns-702.awsdns-23.net",
         "ns-1874.awsdns-42.co.uk",
-        "ns-102.awsdns-12.com",
-        "ns-1147.awsdns-15.org"
+        "ns-702.awsdns-23.net",
+        "ns-1147.awsdns-15.org",
+        "ns-102.awsdns-12.com"
     ]
 }
