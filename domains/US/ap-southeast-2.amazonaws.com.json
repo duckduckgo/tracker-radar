@@ -9,17 +9,15 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.000403,
-    "sites": 59,
+    "prevalence": 0.000253,
+    "sites": 35,
     "subdomains": [
         "2izdf50zr2.execute-api",
+        "assets-iconic-live.s3",
         "k8s-infrastr-nginxext-ff1d54d30d-dc8a55b2479619ce.elb",
-        "domain-static.s3",
         "d-maiw32tky3.execute-api",
         "zitcha-snowplow.s3",
-        "pa7fysgn9d.execute-api",
-        "yrfpohh3u5.execute-api",
-        "fc-apse2-00-pics-bkt-00.s3"
+        "pa7fysgn9d.execute-api"
     ],
     "cnames": [
         {
@@ -31,7 +29,7 @@
             "resolved": "d-maiw32tky3.execute-api.ap-southeast-2.amazonaws.com"
         }
     ],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "ap-southeast-2\\.amazonaws\\.com\\/live\\/uuid",
@@ -42,10 +40,10 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000145,
             "cnames": [],
             "responseHashes": [
-                "7269f635eaaf366dde5109535c0eb23dcc9512238bb9f68a18e16c45e8e15a90"
+                "87d7084d67236c15738f1f3f35f6239433168a8aa16f3f7f0a04d8909e04340e"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -64,7 +62,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000145,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
@@ -84,10 +82,30 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000145,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "monash.edu",
+                "lens.monash.edu"
+            ]
+        },
+        {
+            "rule": "ap-southeast-2\\.amazonaws\\.com\\/live\\/stats",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "2izdf50zr2.execute-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000145,
             "cnames": [],
             "responseHashes": [
-                "37ba61635290d90456d72df270ec9d438494cdbcfa7a3dba634c84259e076abf"
+                "ee9743e655d66ea3427e883ec79336ed7cdfabecd7ee7c28de255fd2ec7d6893"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -98,23 +116,46 @@
             ]
         },
         {
-            "rule": "ap-southeast-2\\.amazonaws\\.com\\/live\\/stats",
-            "cookies": 0,
-            "fingerprinting": 0,
+            "rule": "ap-southeast-2\\.amazonaws\\.com\\/ravelin\\/ravelin-1\\.2\\.0-core%2Btrack%2Bencrypt%2Bpromise\\.min\\.js",
+            "cookies": 0.00000723,
+            "fingerprinting": 3,
             "subdomains": [
-                "2izdf50zr2.execute-api"
+                "assets-iconic-live.s3"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.appName": 1,
+                "Navigator.prototype.appVersion": 1,
+                "Date.prototype.getTime": 1,
+                "Document.cookie getter": 1,
+                "Navigator.prototype.userAgent": 1,
+                "Document.cookie setter": 1,
+                "window.outerWidth": 1,
+                "window.outerHeight": 1,
+                "DeviceMotionEvent.prototype.accelerationIncludingGravity": 1
+            },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000145,
             "cnames": [],
             "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
+            "type": "Script",
+            "firstPartyCookies": {
+                "ravelinSessionId": {
+                    "ttl": null,
+                    "length": 36,
+                    "prevalence": 0.000007225015895034969,
+                    "uniqueness": 1
+                },
+                "ravelinDeviceId": {
+                    "ttl": 31536029,
+                    "length": 40,
+                    "prevalence": 0.000007225015895034969,
+                    "uniqueness": 1
+                }
+            },
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "monash.edu",
-                "lens.monash.edu"
+                "theiconic.com.au",
+                "www.theiconic.com.au"
             ]
         },
         {
@@ -125,8 +166,8 @@
                 "k8s-infrastr-nginxext-ff1d54d30d-dc8a55b2479619ce.elb"
             ],
             "apis": {},
-            "sites": 6,
-            "prevalence": 0.000041,
+            "sites": 5,
+            "prevalence": 0.0000361,
             "cnames": [
                 {
                     "original": "l.ffx.io",
@@ -140,7 +181,6 @@
             "exampleSites": [
                 "afr.com",
                 "www.afr.com",
-                "www.brisbanetimes.com.au",
                 "www.smh.com.au",
                 "www.theage.com.au",
                 "www.watoday.com.au"
@@ -154,8 +194,8 @@
                 "k8s-infrastr-nginxext-ff1d54d30d-dc8a55b2479619ce.elb"
             ],
             "apis": {},
-            "sites": 6,
-            "prevalence": 0.000041,
+            "sites": 5,
+            "prevalence": 0.0000361,
             "cnames": [
                 {
                     "original": "l.ffx.io",
@@ -171,32 +211,9 @@
             "exampleSites": [
                 "afr.com",
                 "www.afr.com",
-                "www.brisbanetimes.com.au",
                 "www.smh.com.au",
                 "www.theage.com.au",
                 "www.watoday.com.au"
-            ]
-        },
-        {
-            "rule": "ap-southeast-2\\.amazonaws\\.com\\/domain\\/domain-insights\\.png",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "domain-static.s3"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "1cb9b4068aeedf9002eb9eb6bfa2a68393819e38dba3c83a7f928b68ec330bb5"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "domain.com.au",
-                "www.domain.com.au"
             ]
         },
         {
@@ -208,7 +225,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000145,
             "cnames": [
                 {
                     "original": "web-api.hungryjacks.com.au",
@@ -233,7 +250,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000145,
             "cnames": [
                 {
                     "original": "web-api.hungryjacks.com.au",
@@ -251,7 +268,7 @@
         },
         {
             "rule": "ap-southeast-2\\.amazonaws\\.com\\/snowplow-zitcha\\.js",
-            "cookies": 0.0000205,
+            "cookies": 0.0000217,
             "fingerprinting": 2,
             "subdomains": [
                 "zitcha-snowplow.s3"
@@ -273,7 +290,7 @@
                 "window.innerHeight": 3
             },
             "sites": 3,
-            "prevalence": 0.0000205,
+            "prevalence": 0.0000217,
             "cnames": [],
             "responseHashes": [
                 "e89e1861f1050742b223daeeed0b2503669695fa024e5eb9d46f72eaa0dded32"
@@ -281,39 +298,39 @@
             "type": "Script",
             "firstPartyCookies": {
                 "_sp_ses.3144": {
-                    "ttl": 1807,
+                    "ttl": 1812,
                     "length": 1,
-                    "prevalence": 0.000006832654622974118,
+                    "prevalence": 0.000007225015895034969,
                     "uniqueness": 1
                 },
                 "_sp_id.3144": {
-                    "ttl": 63072007,
+                    "ttl": 63072012,
                     "length": 152,
-                    "prevalence": 0.000006832654622974118,
+                    "prevalence": 0.000007225015895034969,
                     "uniqueness": 1
                 },
                 "_sp_ses.bcd1": {
-                    "ttl": 1812,
+                    "ttl": 1814,
                     "length": 1,
-                    "prevalence": 0.000006832654622974118,
+                    "prevalence": 0.000007225015895034969,
                     "uniqueness": 1
                 },
                 "_sp_id.bcd1": {
-                    "ttl": 63072012,
+                    "ttl": 63072014,
                     "length": 152,
-                    "prevalence": 0.000006832654622974118,
+                    "prevalence": 0.000007225015895034969,
                     "uniqueness": 1
                 },
                 "_sp_ses.621b": {
-                    "ttl": 1809,
+                    "ttl": 1811,
                     "length": 1,
-                    "prevalence": 0.000006832654622974118,
+                    "prevalence": 0.000007225015895034969,
                     "uniqueness": 1
                 },
                 "_sp_id.621b": {
-                    "ttl": 63072009,
+                    "ttl": 63072011,
                     "length": 152,
-                    "prevalence": 0.000006832654622974118,
+                    "prevalence": 0.000007225015895034969,
                     "uniqueness": 1
                 }
             },
@@ -333,7 +350,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000145,
             "cnames": [],
             "responseHashes": [
                 "a94d3a8b10da400e8742a35cef6636f543b4f152004742e19ce963b92690ba92"
@@ -345,201 +362,32 @@
                 "salvosstores.com.au",
                 "www.salvosstores.com.au"
             ]
-        },
-        {
-            "rule": "ap-southeast-2\\.amazonaws\\.com\\/v1-0-1",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "yrfpohh3u5.execute-api"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "suzuki.com.au",
-                "www.suzuki.com.au"
-            ]
-        },
-        {
-            "rule": "ap-southeast-2\\.amazonaws\\.com\\/v1-0-1",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "yrfpohh3u5.execute-api"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "640f58103b80912c546327b0c70ade4d50d3e5895e1ba9f4d4794663f4fbc28e"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "suzuki.com.au",
-                "www.suzuki.com.au"
-            ]
-        },
-        {
-            "rule": "ap-southeast-2\\.amazonaws\\.com\\/dfef6139ff0c3d2829372fe050c557449d39c8ee61a5ef08726b59f75729b292\\/f_marketingpicFull\\/u_e5348e53af3a8786fb66a7607745402d4165b340cb6c2c3151779ffe0dd26262\\/img_ls8q5nvl8q_89e968a3f367d0305f36b158a3cda3a2a83d4ab1f775abdcd76a78e17a12470a\\.png",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "fc-apse2-00-pics-bkt-00.s3"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "f621073d48f5f893a1de21cb1fc69efffefd84902dbebad06df24ac2f4edf33c"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "teachstarter.com",
-                "www.teachstarter.com"
-            ]
-        },
-        {
-            "rule": "ap-southeast-2\\.amazonaws\\.com\\/dfef6139ff0c3d2829372fe050c557449d39c8ee61a5ef08726b59f75729b292\\/f_appLevelPicFull\\/img_jcrshm7cgj_c2f9ec49366106059955069d4e2da2836aec76a2a1cf31a5b5a8e915610bf601\\.png",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "fc-apse2-00-pics-bkt-00.s3"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "21c8a22e3ff843c1fddabdbbe519bff8eff1828c93c5ec0bf4bee53ffb6982da"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "teachstarter.com",
-                "www.teachstarter.com"
-            ]
-        },
-        {
-            "rule": "ap-southeast-2\\.amazonaws\\.com\\/dfef6139ff0c3d2829372fe050c557449d39c8ee61a5ef08726b59f75729b292\\/f_marketingpicFull\\/u_276fab31713b32e4ae8d74b723c13dbdd59d0d83ecf3aaff9bf9a047043fba35\\/img_3q0k2sbjka_0b3dde04f908464609dcf5779ea561d7a0fe3b8c0d271a0966be05876c1e5d95\\.png",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "fc-apse2-00-pics-bkt-00.s3"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "fccb030f691a2a149961c7de15a03d1e84f3bca99fff49c35cc06bff323489a4"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "teachstarter.com",
-                "www.teachstarter.com"
-            ]
-        },
-        {
-            "rule": "ap-southeast-2\\.amazonaws\\.com\\/dfef6139ff0c3d2829372fe050c557449d39c8ee61a5ef08726b59f75729b292\\/f_marketingpicFull\\/u_276fab31713b32e4ae8d74b723c13dbdd59d0d83ecf3aaff9bf9a047043fba35\\/img_p4gqrrt55v_d90cd9bb8f67c4a559819c75941a15d58195080ade465ecb07b24c574eb39e04\\.png",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "fc-apse2-00-pics-bkt-00.s3"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "1ae40afedb9e5a97118cc58453612bafe4cfaf61b85eda5093027aec525d8f93"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "teachstarter.com",
-                "www.teachstarter.com"
-            ]
-        },
-        {
-            "rule": "ap-southeast-2\\.amazonaws\\.com\\/dfef6139ff0c3d2829372fe050c557449d39c8ee61a5ef08726b59f75729b292\\/f_marketingpicFull\\/u_276fab31713b32e4ae8d74b723c13dbdd59d0d83ecf3aaff9bf9a047043fba35\\/img_21naffjnj7_94d5f650c34a45dde8b4f792425eeb3000eaee2579c36e42d6a6184f73ffe9e6\\.png",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "fc-apse2-00-pics-bkt-00.s3"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "ea79193358fc4bc023c7a35601be5b64310290bcf8d9de88575e535f71d5c388"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "teachstarter.com",
-                "www.teachstarter.com"
-            ]
         }
     ],
     "categories": [
         "CDN"
     ],
     "performance": {},
-    "cookies": 0.0000205,
+    "cookies": 0.0000289,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.7721518987341772
-        },
-        {
-            "domain": "freshchat.com",
-            "prevalence": 0.13924050632911392
+            "prevalence": 0.957345971563981
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.03164556962025317
+            "prevalence": 0.023696682464454975
         },
         {
             "domain": "d31nhj1t453igc.cloudfront.net",
-            "prevalence": 0.02531645569620253
-        },
-        {
-            "domain": "jsdelivr.net",
-            "prevalence": 0.0189873417721519
-        },
-        {
-            "domain": "wufoo.com",
-            "prevalence": 0.006329113924050633
-        },
-        {
-            "domain": "appdynamics.com",
-            "prevalence": 0.006329113924050633
+            "prevalence": 0.018957345971563982
         }
     ],
     "types": {
-        "XHR": 12,
-        "Preflight": 14,
-        "Image": 12,
-        "Fetch": 4,
-        "Script": 3
+        "XHR": 11,
+        "Preflight": 11,
+        "Script": 5,
+        "Fetch": 2
     },
     "nameservers": [
         "ns1.amzndns.co.uk",

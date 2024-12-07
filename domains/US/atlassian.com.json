@@ -7,31 +7,29 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000342,
-    "sites": 5,
+    "prevalence": 0.0000289,
+    "sites": 4,
     "subdomains": [
         "jsd-widget",
-        "api-private",
         "atl-onetrust-wrapper",
         "api",
         "atl-global",
-        "xxid"
+        "xxid",
+        "api-private"
     ],
     "cnames": [],
-    "fingerprinting": 2,
+    "fingerprinting": 3,
     "resources": [
         {
             "rule": "atlassian\\.com\\/assets\\/embed\\.js",
             "cookies": 0,
-            "fingerprinting": 1,
+            "fingerprinting": 0,
             "subdomains": [
                 "jsd-widget"
             ],
-            "apis": {
-                "Navigator.prototype.userAgent": 1
-            },
+            "apis": {},
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000145,
             "cnames": [],
             "responseHashes": [
                 "d521c39b6d6f50f757125111f05562bbabd1258739755e3a8302dee43cdd2657"
@@ -40,35 +38,13 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "ctbids.com",
+                "jointcommission.org",
                 "www.jointcommission.org"
             ]
         },
         {
-            "rule": "atlassian\\.com\\/gasv3\\/api\\/v1\\/batch",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "api-private"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "bc3cd92d3d302ba1fa240fd41a803d65f43e86a780957dea8c6430c4cbec9b9b"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "ctbids.com",
-                "www.loom.com"
-            ]
-        },
-        {
             "rule": "atlassian\\.com\\/assets\\/atl-onetrust-wrapper\\.min\\.js",
-            "cookies": 0.0000137,
+            "cookies": 0.0000145,
             "fingerprinting": 1,
             "subdomains": [
                 "atl-onetrust-wrapper"
@@ -79,10 +55,10 @@
                 "Document.cookie setter": 2
             },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000145,
             "cnames": [],
             "responseHashes": [
-                "ac852bcd751165435884c24a3070f76f81cde28a8d98a3f72cd2ffc8839cfeea"
+                "c70ce1fbfcea03e39d0bdacc8ab62ff541c2a5b8bad32db795675d8e6f50ce1e"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -101,7 +77,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000145,
             "cnames": [],
             "responseHashes": [
                 "a878ffa226675d06d45cfe765dbc4a89038c7e019bbbfd3c52c7effaf9a8dae4"
@@ -123,7 +99,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000145,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
@@ -136,7 +112,7 @@
         },
         {
             "rule": "atlassian\\.com\\/js\\/atl-global\\.min\\.js",
-            "cookies": 0.0000137,
+            "cookies": 0.0000145,
             "fingerprinting": 1,
             "subdomains": [
                 "atl-global"
@@ -148,35 +124,29 @@
                 "Document.cookie setter": 2
             },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000145,
             "cnames": [],
             "responseHashes": [
                 "00a246adcd1ab0edb2a641f0c93e30fbebd48b2da62013eabf32cb4263586f3b"
             ],
             "type": "Script",
             "firstPartyCookies": {
-                "ajs_anonymous_id": {
-                    "ttl": null,
-                    "length": 42,
-                    "prevalence": 0.000006832654622974118,
-                    "uniqueness": 1
-                },
                 "atlCohort": {
-                    "ttl": 315360007,
+                    "ttl": 315360020,
                     "length": 96,
-                    "prevalence": 0.000013665309245948236,
+                    "prevalence": 0.000014450031790069938,
                     "uniqueness": 1
                 },
                 "atl_session": {
-                    "ttl": 1807,
+                    "ttl": 1820,
                     "length": 36,
-                    "prevalence": 0.000013665309245948236,
+                    "prevalence": 0.000014450031790069938,
                     "uniqueness": 1
                 },
                 "atlUserHash": {
-                    "ttl": 315360009,
+                    "ttl": 315360021,
                     "length": 10,
-                    "prevalence": 0.000013665309245948236,
+                    "prevalence": 0.000014450031790069938,
                     "uniqueness": 0.5
                 }
             },
@@ -188,8 +158,8 @@
         },
         {
             "rule": "atlassian\\.com\\/js\\/2\\.219\\.0\\/xid\\/atl-xid\\.js",
-            "cookies": 0.0000137,
-            "fingerprinting": 1,
+            "cookies": 0.0000145,
+            "fingerprinting": 3,
             "subdomains": [
                 "atl-global"
             ],
@@ -197,10 +167,27 @@
                 "Document.cookie getter": 2,
                 "window.localStorage": 2,
                 "Date.prototype.getTime": 2,
-                "Document.cookie setter": 2
+                "Document.cookie setter": 2,
+                "Navigator.prototype.vendor": 1,
+                "Navigator.prototype.hardwareConcurrency": 1,
+                "Navigator.prototype.language": 1,
+                "Navigator.prototype.platform": 1,
+                "Navigator.prototype.appName": 1,
+                "Navigator.prototype.userAgent": 1,
+                "Navigator.prototype.plugins": 1,
+                "Navigator.prototype.productSub": 1,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 1,
+                "Date.prototype.getTimezoneOffset": 1,
+                "window.indexedDB": 1,
+                "window.sessionStorage": 1,
+                "Navigator.prototype.webdriver": 1,
+                "CanvasRenderingContext2D.prototype.isPointInPath": 1,
+                "HTMLCanvasElement.prototype.toDataURL": 1,
+                "WebGLRenderingContext.prototype.getExtension": 1,
+                "WebGLRenderingContext.prototype.getParameter": 1
             },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000145,
             "cnames": [],
             "responseHashes": [
                 "237a1ec3e8d928f9aa8c7740c00a41925abbfe5743091146c6ad016266b54daf"
@@ -208,15 +195,21 @@
             "type": "Script",
             "firstPartyCookies": {
                 "atl_xid.ts": {
-                    "ttl": 31536006,
+                    "ttl": 31536020,
                     "length": 13,
-                    "prevalence": 0.000013665309245948236,
+                    "prevalence": 0.000014450031790069938,
                     "uniqueness": 1
                 },
                 "atl_xid.current": {
-                    "ttl": 31536006,
-                    "length": 147,
-                    "prevalence": 0.000013665309245948236,
+                    "ttl": 31536020,
+                    "length": 146,
+                    "prevalence": 0.000014450031790069938,
+                    "uniqueness": 1
+                },
+                "cookietest": {
+                    "ttl": -1733512642,
+                    "length": 1,
+                    "prevalence": 0.000007225015895034969,
                     "uniqueness": 1
                 }
             },
@@ -239,7 +232,7 @@
                 "Navigator.prototype.doNotTrack": 2
             },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000145,
             "cnames": [],
             "responseHashes": [
                 "c356cfe09e16ba6892b9966e34ca97b030e7622bf0f521178c835161ef6c16ea"
@@ -261,7 +254,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000145,
             "cnames": [],
             "responseHashes": [
                 "bdc4fd0410a4195dde1c1f9362a7dd135aa4a13fd78d1916b114b52bb6d4fd1d"
@@ -286,7 +279,7 @@
                 "Navigator.prototype.cookieEnabled": 2
             },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000145,
             "cnames": [],
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -311,7 +304,7 @@
                 "Navigator.prototype.cookieEnabled": 2
             },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000145,
             "cnames": [],
             "responseHashes": [
                 "a89929133880f990f06ddaf8320213946293d61ab0441809f4361b322ec7df79"
@@ -326,7 +319,7 @@
         },
         {
             "rule": "atlassian\\.com\\/js\\/2\\.219\\.0\\/gasv3\\/analytics-web-client\\.with-deps\\.amd\\.min\\.js",
-            "cookies": 0.00000683,
+            "cookies": 0.00000723,
             "fingerprinting": 2,
             "subdomains": [
                 "atl-global"
@@ -338,14 +331,14 @@
                 "window.sessionStorage": 2,
                 "window.localStorage": 2,
                 "window.indexedDB": 2,
+                "Document.cookie setter": 1,
                 "Document.cookie getter": 2,
                 "Navigator.prototype.userAgent": 2,
-                "Navigator.prototype.onLine": 2,
-                "Document.cookie setter": 1,
-                "Date.prototype.getTime": 1
+                "Date.prototype.getTime": 1,
+                "Navigator.prototype.onLine": 2
             },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000145,
             "cnames": [],
             "responseHashes": [
                 "3db9cbd3cb4ed27e56a0421efea8062587c1f82636800fef1059a9b50ff8a921"
@@ -353,12 +346,34 @@
             "type": "Script",
             "firstPartyCookies": {
                 "ajs_anonymous_id": {
-                    "ttl": 31536009,
+                    "ttl": 31536012,
                     "length": 42,
-                    "prevalence": 0.000006832654622974118,
+                    "prevalence": 0.000007225015895034969,
                     "uniqueness": 1
                 }
             },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "loom.com",
+                "www.loom.com"
+            ]
+        },
+        {
+            "rule": "atlassian\\.com\\/gasv3\\/api\\/v1\\/batch",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-private"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000145,
+            "cnames": [],
+            "responseHashes": [
+                "bc3cd92d3d302ba1fa240fd41a803d65f43e86a780957dea8c6430c4cbec9b9b"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "loom.com",
@@ -368,15 +383,15 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0000137,
+    "cookies": 0.0000145,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.8666666666666667
+            "prevalence": 0.8571428571428571
         },
         {
             "domain": "osano.com",
-            "prevalence": 0.13333333333333333
+            "prevalence": 0.14285714285714285
         }
     ],
     "types": {
@@ -387,9 +402,9 @@
         "XHR": 2
     },
     "nameservers": [
+        "ns-112.awsdns-14.com",
         "ns-595.awsdns-10.net",
-        "ns-2018.awsdns-60.co.uk",
         "ns-1388.awsdns-45.org",
-        "ns-112.awsdns-14.com"
+        "ns-2018.awsdns-60.co.uk"
     ]
 }
