@@ -9,12 +9,14 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.00288,
-    "sites": 422,
+    "prevalence": 0.00284,
+    "sites": 393,
     "subdomains": [
         "scripts",
+        "tag-logger",
         "api",
-        "tag"
+        "tag",
+        "autocomplete"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -22,13 +24,15 @@
         {
             "rule": "demandbase\\.com\\/DZlgJRFL\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "scripts"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 3
+            },
             "sites": 3,
-            "prevalence": 0.0000205,
+            "prevalence": 0.0000217,
             "cnames": [],
             "responseHashes": [
                 "860ac6a9cb9e729fe9ce2157440c18bffeba77b220e4c578f55cac318af7cf5c"
@@ -43,22 +47,61 @@
             ]
         },
         {
+            "rule": "demandbase\\.com\\/bg9s",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tag-logger"
+            ],
+            "apis": {},
+            "sites": 232,
+            "prevalence": 0.00168,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ups.com",
+                "www.infor.com",
+                "hphconnect.harvardpilgrim.org",
+                "sezzle.com",
+                "us.dealertrack.com",
+                "www.onemedical.com",
+                "docs.zebra.com",
+                "www.cdw.com",
+                "www.parker.com",
+                "business.whatsapp.com",
+                "www.freshworks.com",
+                "www.trane.com",
+                "www.edmentum.com",
+                "www.docusign.com",
+                "www.comerica.com",
+                "www.cbre.com",
+                "www.buildgp.com",
+                "www.kroll.com",
+                "www.freddiemac.com",
+                "www.business.att.com"
+            ]
+        },
+        {
             "rule": "demandbase\\.com\\/api\\/v2\\/ip\\.json",
-            "cookies": 0.0000137,
+            "cookies": 0.0000217,
             "fingerprinting": 1,
             "subdomains": [
                 "api"
             ],
             "apis": {
-                "Date.prototype.getTime": 2,
-                "window.sessionStorage": 2,
-                "Document.cookie setter": 2
+                "Date.prototype.getTime": 3,
+                "window.sessionStorage": 3,
+                "Document.cookie setter": 3
             },
-            "sites": 5,
-            "prevalence": 0.0000342,
+            "sites": 6,
+            "prevalence": 0.0000433,
             "cnames": [],
             "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
                 "6b11e514b5416aecb6fb7ee7a2371f46b50b10f05e2be69d189f06f2deb0f3e3",
                 "43f45d8285704b3aeca395d5be9b05b59feb41b9b49f3f42fccd5991ca1773d8"
             ],
@@ -67,8 +110,8 @@
                 "dmdbase": {
                     "ttl": null,
                     "length": 173,
-                    "prevalence": 0.000013665309245948236,
-                    "uniqueness": 0.5
+                    "prevalence": 0.000021674891083672303,
+                    "uniqueness": 0.3333333333333333
                 }
             },
             "firstPartyCookiesSent": {},
@@ -76,6 +119,7 @@
                 "acrobatusers.com",
                 "answers.acrobatusers.com",
                 "ez.analog.com",
+                "wiki.analog.com",
                 "www.analog.com",
                 "www.athenahealth.com"
             ]
@@ -88,67 +132,45 @@
                 "api"
             ],
             "apis": {},
-            "sites": 12,
-            "prevalence": 0.000082,
+            "sites": 9,
+            "prevalence": 0.000065,
             "cnames": [],
             "responseHashes": [
-                "1cb0e91f997177644a2f4ab503dd6c4f94f37123c478dee478a453372876a54c",
-                "a4e2524dc3606d69b4408a3be626ee01d1246b84f64b5568ad1f1ece7c7b3f75",
-                "69d9a82022eb55a3db48bb76fecb4b8629295750d35637ac6c73266e6c962ee0",
-                "b706b00d461ac64427899f63c9ff032372e992a848f89f0f28226110bea8aca6",
-                "3a30696f3b87d3c01fea14b3d0a04b4bb00427a13034978dfc12a6bf613d8b0f",
-                "cf77067fc551fbe2ac48d65e0683a81cb3da5f0fcfd1fdf4e647e205b5cc3f0b"
+                "d179777e7bbedc734f19c6032a1e41ea98344634861bc518e49dc6a971b09893",
+                "7aaf88f2d3bff4610614ac07cb099472567d13588db381530187054436b9e309",
+                "eeab1c30d460e1b443d006cedb83a00a25a15f73c50634c768ec62c33f387e69",
+                "1544edc80a5a74b3958bd993d79a8c919f6268e06211a7bda9b0ee9756757d0b",
+                "cf77067fc551fbe2ac48d65e0683a81cb3da5f0fcfd1fdf4e647e205b5cc3f0b",
+                "b286dc376becd834dd2326c3f89cf7eb6f3a17a4db9e00c3e52656be850f493f",
+                "1effe9c7fc59fcd1f7f0ff04dfd0cd22306e2f009799f809fe3ea00e7df33e3c"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "adobe.com",
-                "acrobat.adobe.com",
-                "blog.adobe.com",
-                "business.adobe.com",
                 "express.adobe.com",
                 "fonts.adobe.com",
-                "get.adobe.com",
                 "helpx.adobe.com",
                 "lightroom.adobe.com",
                 "slack.com",
                 "www.adobe.com",
-                "www.elastic.co"
-            ]
-        },
-        {
-            "rule": "demandbase\\.com\\/7a74493ac463cfbf\\.min\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "tag"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "446c46d839e53564084473bef5a48ffb4a2cdd50bb18ce3af8d7c09f4a12f89f"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "adobe.com",
-                "creativecloud.adobe.com"
+                "www.mimecast.com",
+                "www.photoshop.com"
             ]
         },
         {
             "rule": "demandbase\\.com\\/yctzT6hf\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "tag"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 3
+            },
             "sites": 3,
-            "prevalence": 0.0000205,
+            "prevalence": 0.0000217,
             "cnames": [],
             "responseHashes": [
                 "ca43cf2713d659a9cad5b0f422a9d2a141c7d20a6012e30bd0fed7484c3eca83"
@@ -163,37 +185,66 @@
             ]
         },
         {
-            "rule": "demandbase\\.com\\/1d3dd066\\.min\\.js",
+            "rule": "demandbase\\.com\\/S4IiL5sd\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "tag"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 1
+            },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000144,
             "cnames": [],
             "responseHashes": [
-                "e27d5870ef07029de0eb7d48e2b5314d71c87913a5511a75a5a9b89621f66e92"
+                "6e79a8012dbe131f00151d0d4b81ee6ebe3761ff916ad12bed3eb75d210c1f3a"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "arcb.com",
-                "www.abfs.com"
+                "tiaa.org",
+                "auth.tiaa.org"
+            ]
+        },
+        {
+            "rule": "demandbase\\.com\\/7acc19e1b17b93f2\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "tag"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 1
+            },
+            "sites": 3,
+            "prevalence": 0.0000217,
+            "cnames": [],
+            "responseHashes": [
+                "081e784c55dfd215d36e5aa51b7eb0855f9acf457fa139edd661bdbecdae3a3d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "service-now.com",
+                "docs.bentley.com",
+                "www.bentley.com"
             ]
         },
         {
             "rule": "demandbase\\.com\\/ee38c350\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "tag"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000144,
             "cnames": [],
             "responseHashes": [
                 "f448dae9c8fd28df5b17b0fcd1463a0b657ac4b197ccc1c81659a3fcb138ec76"
@@ -207,37 +258,41 @@
             ]
         },
         {
-            "rule": "demandbase\\.com\\/7ce1259718ae2d4c\\.min\\.js",
+            "rule": "demandbase\\.com\\/2691ff64b0cf6713\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "tag"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 1
+            },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000144,
             "cnames": [],
             "responseHashes": [
-                "5119ec02920e104ca96b14f8459686ca68c3634d09aa763c25f59f27304239c9"
+                "951a3f6b077800c0d6d33aa8b9e7d6ceab8ea1d63a2e2635de892d2a6d314ad7"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "honeywell.com",
-                "buildings.honeywell.com"
+                "whatsapp.com",
+                "business.whatsapp.com"
             ]
         },
         {
             "rule": "demandbase\\.com\\/fBZKrAPM\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "tag"
             ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "apis": {
+                "Navigator.prototype.userAgent": 3
+            },
+            "sites": 3,
+            "prevalence": 0.0000217,
             "cnames": [],
             "responseHashes": [
                 "486c5421aacd5b4846ea8bf0dd457bca51845db0f784314be1a73f30cc252929"
@@ -247,7 +302,8 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "cdw.com",
-                "www.cdw.com"
+                "www.cdw.com",
+                "www.cdwg.com"
             ]
         },
         {
@@ -258,8 +314,8 @@
                 "scripts"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "sites": 3,
+            "prevalence": 0.0000217,
             "cnames": [],
             "responseHashes": [
                 "027de33aae5c4427409a95ce894ac6e01e92813a2d7e03ef04e3fcf5e3a48ffd"
@@ -269,7 +325,35 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "cdw.com",
-                "www.cdw.com"
+                "www.cdw.com",
+                "www.cdwg.com"
+            ]
+        },
+        {
+            "rule": "demandbase\\.com\\/ab057a07\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "scripts"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 4
+            },
+            "sites": 5,
+            "prevalence": 0.0000361,
+            "cnames": [],
+            "responseHashes": [
+                "0394db950a1c0454da89e9392df03060e368214cdd895f0a0f7a3c206d83cedb"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ibm.com",
+                "community.ibm.com",
+                "developer.ibm.com",
+                "research.ibm.com",
+                "www.ibm.com"
             ]
         },
         {
@@ -281,7 +365,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000144,
             "cnames": [],
             "responseHashes": [
                 "62ff60786a98d5231496d3e68947fddecc6bd3b7658ffa45fe85b371773b0959"
@@ -297,13 +381,15 @@
         {
             "rule": "demandbase\\.com\\/Ffkbjwm1\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "scripts"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000144,
             "cnames": [],
             "responseHashes": [
                 "3c24ac412fdca2878a4d54949e802d9df4bbbed2432394322471cd82d6ed5847"
@@ -325,7 +411,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000144,
             "cnames": [],
             "responseHashes": [
                 "a6d1bd5ec985a48760f50d0ade429fc6308ae8edd985012e393b5dd0c6ac1b03"
@@ -339,60 +425,18 @@
             ]
         },
         {
-            "rule": "demandbase\\.com\\/4d7mpJHG\\.min\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "scripts"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "98749287a9a979a7f6f17eba69f5aac4e916a5b4a5f692e0ad10b54863e222b2"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "concur.com",
-                "www.concur.com"
-            ]
-        },
-        {
-            "rule": "demandbase\\.com\\/1IEYtQv1\\.min\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "tag"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "83014761375665316ed515220283ab49d61107634a1c2bb2a7959f7e1bd70d6a"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "docusign.com",
-                "www.docusign.com"
-            ]
-        },
-        {
             "rule": "demandbase\\.com\\/pscSDsz4\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "scripts",
                 "tag"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 4
+            },
             "sites": 5,
-            "prevalence": 0.0000342,
+            "prevalence": 0.0000361,
             "cnames": [],
             "responseHashes": [
                 "6dd1b41b3b923765a412197ef6456cb7567d280853274c27b47b5e999612eb16"
@@ -409,15 +453,41 @@
             ]
         },
         {
+            "rule": "demandbase\\.com\\/1IEYtQv1\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "tag"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000144,
+            "cnames": [],
+            "responseHashes": [
+                "83014761375665316ed515220283ab49d61107634a1c2bb2a7959f7e1bd70d6a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "docusign.com",
+                "www.docusign.com"
+            ]
+        },
+        {
             "rule": "demandbase\\.com\\/wRPiG49f\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "scripts"
             ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000205,
+            "apis": {
+                "Navigator.prototype.userAgent": 4
+            },
+            "sites": 4,
+            "prevalence": 0.0000289,
             "cnames": [],
             "responseHashes": [
                 "0c1b52ff85e41bb9114e0eec9ec7344c75bc652e1539be75ccbcdc3563242d57"
@@ -427,33 +497,33 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "juniper.net",
+                "community.juniper.net",
                 "supportportal.juniper.net",
                 "www.juniper.net"
             ]
         },
         {
-            "rule": "demandbase\\.com\\/ab057a07\\.min\\.js",
+            "rule": "demandbase\\.com\\/d6f8cbc5\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
-                "scripts"
+                "tag"
             ],
-            "apis": {},
-            "sites": 5,
-            "prevalence": 0.0000342,
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000144,
             "cnames": [],
             "responseHashes": [
-                "0394db950a1c0454da89e9392df03060e368214cdd895f0a0f7a3c206d83cedb"
+                "ec1e19f34f6272e28235b991bfb20ce2010e8a03b227c149a0a4ad8fddb8a31f"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "ibm.com",
-                "community.ibm.com",
-                "developer.ibm.com",
-                "research.ibm.com",
-                "www.ibm.com"
+                "mimecast.com",
+                "www.mimecast.com"
             ]
         },
         {
@@ -464,11 +534,10 @@
                 "tag"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 2,
-                "Document.prototype.interestCohort": 2
+                "Navigator.prototype.userAgent": 2
             },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000144,
             "cnames": [],
             "responseHashes": [
                 "e937953070afb12bde82c5e31a3f06edd813299ce9d83405674bf6d2bebcb301"
@@ -482,15 +551,42 @@
             ]
         },
         {
+            "rule": "demandbase\\.com\\/4sNyFtNi\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "tag"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 3
+            },
+            "sites": 3,
+            "prevalence": 0.0000217,
+            "cnames": [],
+            "responseHashes": [
+                "cb5c2ad9e06a947c159c8e3d41f0cb2920a5111bd57e9ca8bdee29df207ab6bd"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "netapp.com",
+                "docs.netapp.com",
+                "www.netapp.com"
+            ]
+        },
+        {
             "rule": "demandbase\\.com\\/WuEFNglz\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "scripts"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 3
+            },
             "sites": 3,
-            "prevalence": 0.0000205,
+            "prevalence": 0.0000217,
             "cnames": [],
             "responseHashes": [
                 "a871d3dac654d1460f6086b82038a51362b58211cdacb3abd8543ac5794d8324"
@@ -507,13 +603,15 @@
         {
             "rule": "demandbase\\.com\\/n1qTRo0B\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "tag"
             ],
-            "apis": {},
-            "sites": 8,
-            "prevalence": 0.0000547,
+            "apis": {
+                "Navigator.prototype.userAgent": 7
+            },
+            "sites": 9,
+            "prevalence": 0.000065,
             "cnames": [],
             "responseHashes": [
                 "8c9f1f64e136847654c6f7fb78c8bbc503cbddfb1e472a0c2932ad44af340219"
@@ -524,6 +622,7 @@
             "exampleSites": [
                 "tableau.com",
                 "community.tableau.com",
+                "docs.mulesoft.com",
                 "help.mulesoft.com",
                 "help.tableau.com",
                 "kb.tableau.com",
@@ -533,41 +632,41 @@
             ]
         },
         {
-            "rule": "demandbase\\.com\\/7fade2c894d1088f\\.min\\.js",
+            "rule": "demandbase\\.com\\/7a74493ac463cfbf\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "tag"
             ],
-            "apis": {},
-            "sites": 6,
-            "prevalence": 0.000041,
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000144,
             "cnames": [],
             "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                "446c46d839e53564084473bef5a48ffb4a2cdd50bb18ce3af8d7c09f4a12f89f"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "nyc.gov",
-                "council.nyc.gov",
-                "livestream.com",
-                "www.austinisd.org",
-                "www.laurelpark.com",
-                "www.valottery.com"
+                "adobe.com",
+                "www.adobe.com"
             ]
         },
         {
             "rule": "demandbase\\.com\\/e5737616348cbfe8\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "tag"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
             "sites": 3,
-            "prevalence": 0.0000205,
+            "prevalence": 0.0000217,
             "cnames": [],
             "responseHashes": [
                 "810751fea7230cedf25ff48c6a9278e904d6d417316aec42beb0d2eb32c419ab"
@@ -584,13 +683,15 @@
         {
             "rule": "demandbase\\.com\\/e8eb94c57118720c\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "tag"
             ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000205,
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000144,
             "cnames": [],
             "responseHashes": [
                 "bb657d41beed373e37cbc0f719bd28fb44c2028e12eac21e7e285c40a7a602d4"
@@ -600,42 +701,21 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "elastic.co",
-                "discuss.elastic.co",
-                "www.elastic.co"
-            ]
-        },
-        {
-            "rule": "demandbase\\.com\\/7acc19e1b17b93f2\\.min\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "tag"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "081e784c55dfd215d36e5aa51b7eb0855f9acf457fa139edd661bdbecdae3a3d"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "bentley.com",
-                "www.bentley.com"
+                "discuss.elastic.co"
             ]
         },
         {
             "rule": "demandbase\\.com\\/705a93ad66faead7\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "tag"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 3
+            },
             "sites": 3,
-            "prevalence": 0.0000205,
+            "prevalence": 0.0000217,
             "cnames": [],
             "responseHashes": [
                 "ff9c84727354e9cf64b1b09b1eda59213c5756d40b64dacd7e15f91b1725bc48"
@@ -650,43 +730,20 @@
             ]
         },
         {
-            "rule": "demandbase\\.com\\/4sNyFtNi\\.min\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "tag"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000205,
-            "cnames": [],
-            "responseHashes": [
-                "cb5c2ad9e06a947c159c8e3d41f0cb2920a5111bd57e9ca8bdee29df207ab6bd"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "netapp.com",
-                "docs.netapp.com",
-                "www.netapp.com"
-            ]
-        },
-        {
             "rule": "demandbase\\.com\\/adobeanalytics\\/e78feef73ff94c88\\.min\\.js",
-            "cookies": 0.0000273,
+            "cookies": 0.0000217,
             "fingerprinting": 1,
             "subdomains": [
                 "scripts"
             ],
             "apis": {
-                "window.sessionStorage": 4,
-                "Document.cookie getter": 4,
-                "Date.prototype.getTime": 4,
-                "Document.cookie setter": 4
+                "window.sessionStorage": 3,
+                "Document.cookie getter": 3,
+                "Date.prototype.getTime": 3,
+                "Document.cookie setter": 3
             },
-            "sites": 4,
-            "prevalence": 0.0000273,
+            "sites": 3,
+            "prevalence": 0.0000217,
             "cnames": [],
             "responseHashes": [
                 "f38eb48171eed2313e3952632eab4dc722602c444a46827cac9a9b0e99e83aff"
@@ -694,30 +751,31 @@
             "type": "Script",
             "firstPartyCookies": {
                 "dmdbase_cdc": {
-                    "ttl": 1805,
+                    "ttl": 1804,
                     "length": 5,
-                    "prevalence": 0.000027330618491896473,
-                    "uniqueness": 0.25
+                    "prevalence": 0.000021674891083672303,
+                    "uniqueness": 0.3333333333333333
                 }
             },
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "paloaltonetworks.com",
                 "docs.paloaltonetworks.com",
-                "live.paloaltonetworks.com",
-                "www.paloaltonetworks.com"
+                "live.paloaltonetworks.com"
             ]
         },
         {
             "rule": "demandbase\\.com\\/e78feef73ff94c88\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "tag"
             ],
-            "apis": {},
-            "sites": 4,
-            "prevalence": 0.0000273,
+            "apis": {
+                "Navigator.prototype.userAgent": 3
+            },
+            "sites": 3,
+            "prevalence": 0.0000217,
             "cnames": [],
             "responseHashes": [
                 "28d1817dd039d6780197ca68c679b4e5cc41fee1cd319dc0e129137fd7d76b2a"
@@ -728,20 +786,45 @@
             "exampleSites": [
                 "paloaltonetworks.com",
                 "docs.paloaltonetworks.com",
-                "live.paloaltonetworks.com",
-                "www.paloaltonetworks.com"
+                "live.paloaltonetworks.com"
+            ]
+        },
+        {
+            "rule": "demandbase\\.com\\/73PwKbIO\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "scripts"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000144,
+            "cnames": [],
+            "responseHashes": [
+                "62b897f8864b81539e9cb1da1924db54b2e31f925a98cccb354187ab06017327"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "zebra.com",
+                "www.zebra.com"
             ]
         },
         {
             "rule": "demandbase\\.com\\/127cd254d55fd63f\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "scripts"
             ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000205,
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000144,
             "cnames": [],
             "responseHashes": [
                 "938543c55a63191c702b424a4205825a5f0e93c9a5b7f33788843a0564ddbf60"
@@ -751,20 +834,21 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "ti.com",
-                "e2e.ti.com",
                 "www.ti.com"
             ]
         },
         {
             "rule": "demandbase\\.com\\/ecd5031b2a829b2e\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "tag"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000144,
             "cnames": [],
             "responseHashes": [
                 "403f5dfca805833a939d11032804251a46d3a5e9534f4a25ff90d8e238ffcd2d"
@@ -780,13 +864,15 @@
         {
             "rule": "demandbase\\.com\\/88ae4155af0e4c59\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "tag"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 4
+            },
             "sites": 4,
-            "prevalence": 0.0000273,
+            "prevalence": 0.0000289,
             "cnames": [],
             "responseHashes": [
                 "90dec1d98d0c3b7939d5029652db6dc42feecda40def58878671051b7caa2ec1"
@@ -804,13 +890,15 @@
         {
             "rule": "demandbase\\.com\\/cd3d45883815b51b\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "scripts"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000144,
             "cnames": [],
             "responseHashes": [
                 "b7f57d3ff44cb27bee3a6e2a75fafad08ed2abaaa3a6ed0639bbe31c6d8ebb57"
@@ -826,13 +914,15 @@
         {
             "rule": "demandbase\\.com\\/cae72688\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "tag"
             ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "apis": {
+                "Navigator.prototype.userAgent": 4
+            },
+            "sites": 4,
+            "prevalence": 0.0000289,
             "cnames": [],
             "responseHashes": [
                 "30b815686027c10e85270df5b76e39ef727c7fabced69b29617f0dd3620b37a0"
@@ -842,19 +932,71 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "analog.com",
+                "ez.analog.com",
+                "wiki.analog.com",
                 "www.analog.com"
+            ]
+        },
+        {
+            "rule": "demandbase\\.com\\/caf4db56dfc44b6b\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "tag"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000144,
+            "cnames": [],
+            "responseHashes": [
+                "ead7a39053463b94ad61a04e8cb92121db63db6b05be9c533f8ed10a0fe29755"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "harvardpilgrim.org",
+                "www.harvardpilgrim.org"
+            ]
+        },
+        {
+            "rule": "demandbase\\.com\\/7fade2c894d1088f\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tag"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.0000433,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "livestream.com",
+                "vinnews.com",
+                "www.austinisd.org",
+                "www.espncricinfo.com",
+                "www.palottery.pa.gov",
+                "www.palottery.state.pa.us"
             ]
         },
         {
             "rule": "demandbase\\.com\\/bf0ed706\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "scripts"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000144,
             "cnames": [],
             "responseHashes": [
                 "0c5320da639294cd83c48326f5f477ad2c9bd9b66e33867cb42613acadec40d3"
@@ -875,10 +1017,10 @@
                 "tag"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 3
+                "Navigator.prototype.userAgent": 2
             },
-            "sites": 3,
-            "prevalence": 0.0000205,
+            "sites": 2,
+            "prevalence": 0.0000144,
             "cnames": [],
             "responseHashes": [
                 "53c2441b2d16ac7f604632d57f44a7579a015eb9efeeb692e148e63dd949046d"
@@ -888,20 +1030,21 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "centerpointenergy.com",
-                "midwest.centerpointenergy.com",
                 "www.centerpointenergy.com"
             ]
         },
         {
             "rule": "demandbase\\.com\\/6c08e6331b0ae73c\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "tag"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000144,
             "cnames": [],
             "responseHashes": [
                 "37040a4336484f2c0f3b526bb4a1a16c8ef85375ec04ccbb94c61be5bd545e15"
@@ -917,13 +1060,15 @@
         {
             "rule": "demandbase\\.com\\/4JEx3Zyu\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "tag"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 3
+            },
             "sites": 3,
-            "prevalence": 0.0000205,
+            "prevalence": 0.0000217,
             "cnames": [],
             "responseHashes": [
                 "bce0b5a8c03ee13165fc3c6b56df64c962db8801024b1d9ae30e6661adbc42b3"
@@ -938,37 +1083,41 @@
             ]
         },
         {
-            "rule": "demandbase\\.com\\/a50c4ab5\\.min\\.js",
+            "rule": "demandbase\\.com\\/b01e0bcf02a2a19f\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "tag"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000144,
             "cnames": [],
             "responseHashes": [
-                "7c1d33b7f9abb9c5900b456a391b2e44362d6e449b188d80a6eeec6292fc97f5"
+                "d1f1c120fb5a760862e616e575bae0fdc368876d1b0ea326e034aae378094eb0"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "freddiemac.com",
-                "www.freddiemac.com"
+                "acs.org",
+                "pubs.acs.org"
             ]
         },
         {
             "rule": "demandbase\\.com\\/00a5112a4d483f5f\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "tag"
             ],
-            "apis": {},
-            "sites": 5,
-            "prevalence": 0.0000342,
+            "apis": {
+                "Navigator.prototype.userAgent": 4
+            },
+            "sites": 4,
+            "prevalence": 0.0000289,
             "cnames": [],
             "responseHashes": [
                 "9720883304c922787e1c7ad6f50522dafd509d2229c8ff08cb890db6d08ff185"
@@ -978,22 +1127,23 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "staplesadvantage.com",
-                "staples.com",
                 "stores.staples.com",
-                "www.staples.com",
-                "www.staplesadvantage.com"
+                "www.staplesadvantage.com",
+                "www.staples.com"
             ]
         },
         {
             "rule": "demandbase\\.com\\/b6ebea0e\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "tag"
             ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "apis": {
+                "Navigator.prototype.userAgent": 3
+            },
+            "sites": 3,
+            "prevalence": 0.0000217,
             "cnames": [],
             "responseHashes": [
                 "8adcfd3eb44a69436ff5bfd058e283dc5bbcbb453caddbf2c952f3a064387c9b"
@@ -1003,6 +1153,7 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "trane.com",
+                "support.trane.com",
                 "www.trane.com"
             ]
         },
@@ -1015,7 +1166,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000144,
             "cnames": [],
             "responseHashes": [
                 "6c9286358843b8d157307e1a88f08cf6c56737905d7c7c28e1662450891a07e3"
@@ -1031,16 +1182,18 @@
         {
             "rule": "demandbase\\.com\\/a896517f2cb7e07e\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "tag"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000144,
             "cnames": [],
             "responseHashes": [
-                "6ab808e5e97f54631949c4e49308b4653126d2d38fad758e0e32f6346c11c0bf"
+                "104848f8e1714fe46e7dbeaefe6523089c9efd94d13e8348e577130a41c888c6"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -1053,13 +1206,15 @@
         {
             "rule": "demandbase\\.com\\/60389bd5bf04ac8b\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "tag"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 3
+            },
             "sites": 3,
-            "prevalence": 0.0000205,
+            "prevalence": 0.0000217,
             "cnames": [],
             "responseHashes": [
                 "3b7e6b324134daa6137ee02272d887efaa3334ed432731c79bedbdc6d90bf2e3"
@@ -1074,38 +1229,17 @@
             ]
         },
         {
-            "rule": "demandbase\\.com\\/BwkB5d1U\\.min\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "tag",
-                "scripts"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "42d863aab4d53d6940ea6711298f374e204a6682eca49081ada26275799e5151"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "trello.com",
-                "www.atlassian.com"
-            ]
-        },
-        {
             "rule": "demandbase\\.com\\/CYQJ73kQ\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "tag"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000144,
             "cnames": [],
             "responseHashes": [
                 "3cffdcf2bba5d36723cafc3c7672aba0a00f95a3818813a1565c5c6654c1cee5"
@@ -1121,13 +1255,15 @@
         {
             "rule": "demandbase\\.com\\/d5f90caec016070d\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "tag"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000144,
             "cnames": [],
             "responseHashes": [
                 "90520c0534f82949f29ef5aa1d6510dfc466883173ec1edb72316813c5a30c6d"
@@ -1141,15 +1277,41 @@
             ]
         },
         {
-            "rule": "demandbase\\.com\\/77a86ae61230cc9c\\.min\\.js",
+            "rule": "demandbase\\.com\\/aaf6d968\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "tag"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000144,
+            "cnames": [],
+            "responseHashes": [
+                "234c1d2861d60b0c0602615621bdbe2e876bf9eddac8661e8763e76d365590b8"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "anixter.com",
+                "www.anixter.com"
+            ]
+        },
+        {
+            "rule": "demandbase\\.com\\/77a86ae61230cc9c\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "tag"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000144,
             "cnames": [],
             "responseHashes": [
                 "9f2593894bc9fef108b8bb765a3602c4973c8f565e89868d28bc58a69a4f117b"
@@ -1163,96 +1325,17 @@
             ]
         },
         {
-            "rule": "demandbase\\.com\\/8LZz885G\\.min\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "scripts"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "cb83b7d43743f5080cd97691f6dfbbb38908b8bea7fd2b801738d3994605eb39"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "athenahealth.com",
-                "www.athenahealth.com"
-            ]
-        },
-        {
-            "rule": "demandbase\\.com\\/adobeanalytics\\/8LZz885G\\.min\\.js",
-            "cookies": 0.0000137,
-            "fingerprinting": 1,
-            "subdomains": [
-                "scripts"
-            ],
-            "apis": {
-                "window.sessionStorage": 2,
-                "Document.cookie getter": 2,
-                "Date.prototype.getTime": 2,
-                "Document.cookie setter": 2
-            },
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "fd790835a18bc97f7ce5c2170efe78859671af7e2708a126749828a6b5eef08c"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {
-                "dmdbase_cdc": {
-                    "ttl": 1811,
-                    "length": 5,
-                    "prevalence": 0.000013665309245948236,
-                    "uniqueness": 0.5
-                }
-            },
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "athenahealth.com",
-                "www.athenahealth.com"
-            ]
-        },
-        {
-            "rule": "demandbase\\.com\\/d21616ac58cf0e4e\\.min\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "tag"
-            ],
-            "apis": {
-                "Navigator.prototype.userAgent": 2,
-                "Document.prototype.interestCohort": 1
-            },
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "c1b6f75440e84852c22860c1f77e14ca8b42ceecafff2895511efcae1fb8537f"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "axon.com",
-                "www.axon.com"
-            ]
-        },
-        {
             "rule": "demandbase\\.com\\/c32acae3de4fb1b4\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "tag"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000144,
             "cnames": [],
             "responseHashes": [
                 "66befd8333ae6a0c3fcd5d645412b4ec83c19c8b7aa7dc5cd1813114e18f0525"
@@ -1266,15 +1349,41 @@
             ]
         },
         {
+            "rule": "demandbase\\.com\\/0c7d219b5126c2ab\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "scripts"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000144,
+            "cnames": [],
+            "responseHashes": [
+                "5d08146a0d5c1d26eeba3d45c1525342096fed225c665e99adde00a7bdc38a35"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "blackbaud.com",
+                "www.blackbaud.com"
+            ]
+        },
+        {
             "rule": "demandbase\\.com\\/9d1dfed45c02d6ef\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "tag"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 3
+            },
             "sites": 3,
-            "prevalence": 0.0000205,
+            "prevalence": 0.0000217,
             "cnames": [],
             "responseHashes": [
                 "596c8145420c22812d5152f01123b8a0ee8437c7fab4da12ff8123b9c17f83b2"
@@ -1291,13 +1400,15 @@
         {
             "rule": "demandbase\\.com\\/f4988cc9184723a0\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "tag"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000144,
             "cnames": [],
             "responseHashes": [
                 "374ce3030e58942b7c4ae72c47087a9372ba2012b403cc79d28bdf604321ae9e"
@@ -1313,13 +1424,15 @@
         {
             "rule": "demandbase\\.com\\/514ab96b23f79725\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "tag"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000144,
             "cnames": [],
             "responseHashes": [
                 "b0d696af887a5b29b6378bc95e870a31cc2c492298ec7208ef549833fa24acea"
@@ -1335,13 +1448,15 @@
         {
             "rule": "demandbase\\.com\\/1bC4B2mo\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "tag"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000144,
             "cnames": [],
             "responseHashes": [
                 "f28a1b41ec15b838d9475e202e65f4c74e7ba5f4e56812291f9cd12ab62c0559"
@@ -1355,37 +1470,17 @@
             ]
         },
         {
-            "rule": "demandbase\\.com\\/538f1e6d0e2edc11\\.min\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "tag"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "c6388d6802348ff960eab67868afb33e0812e545b6e21f56192191fda1f9c179"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "cefconnect.com",
-                "www.nuveen.com"
-            ]
-        },
-        {
             "rule": "demandbase\\.com\\/0407b7fa47067ef0\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "tag"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 3
+            },
             "sites": 3,
-            "prevalence": 0.0000205,
+            "prevalence": 0.0000217,
             "cnames": [],
             "responseHashes": [
                 "6d705321d168e29e1726ca49f2510ebc5f4b2e8dd41351f4d0ab42189358d03b"
@@ -1400,37 +1495,17 @@
             ]
         },
         {
-            "rule": "demandbase\\.com\\/6cc9dab8f7f388e8\\.min\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "tag"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "76f74901f661faae477a13b4b1b4363f409232c2e278562af71fa143ef15601f"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "certainteed.com",
-                "www.certainteed.com"
-            ]
-        },
-        {
             "rule": "demandbase\\.com\\/5wDCfOAs\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "tag"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000144,
             "cnames": [],
             "responseHashes": [
                 "7eb2eb6f95a4aa0e19caf8a09b6e4785fbd4f5dc5139a70361ff2bd38b0a082a"
@@ -1446,13 +1521,15 @@
         {
             "rule": "demandbase\\.com\\/d2f4727db0c87a51\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "tag"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 3
+            },
             "sites": 3,
-            "prevalence": 0.0000205,
+            "prevalence": 0.0000217,
             "cnames": [],
             "responseHashes": [
                 "2ecbe5462b533f4ff6f0d2bf9c2fb3b4b821bcb2a3cc56c3ed29202499a034c0"
@@ -1469,13 +1546,15 @@
         {
             "rule": "demandbase\\.com\\/1be41a80498a5b73\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "tag"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000144,
             "cnames": [],
             "responseHashes": [
                 "b8fc31fef975a9072ed688961f3708261574c8d97e4308a82a58add422cb67bc"
@@ -1491,13 +1570,15 @@
         {
             "rule": "demandbase\\.com\\/3sR4ZtpP\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "scripts"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000144,
             "cnames": [],
             "responseHashes": [
                 "6840f4ae1bb903009c226287209d9c49176661bfac2edae71bdcad65eae22fbe"
@@ -1511,81 +1592,17 @@
             ]
         },
         {
-            "rule": "demandbase\\.com\\/4b636bf0\\.min\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "tag"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "b75a9f4b8eb2249430a2ea4155d734b9a156948a74e71b748ed40a17debf55ea"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "costar.com",
-                "www.costar.com"
-            ]
-        },
-        {
-            "rule": "demandbase\\.com\\/b140f87bf0f0946e\\.min\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "tag"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "e59bcba11d3ab0af6a7c96ec6b443ca309f3d1496597f273c6cf7e20778e0ae4"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "deel.com",
-                "www.deel.com"
-            ]
-        },
-        {
-            "rule": "demandbase\\.com\\/232e2bcc30cde5c3\\.min\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "tag"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "5625581f40132f8386e7dfbcc00a8f09af2963e891d19b3b2496ef10d1ab3d4d"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "deloitte.com",
-                "www2.deloitte.com"
-            ]
-        },
-        {
             "rule": "demandbase\\.com\\/1e3693e7\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "tag"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000144,
             "cnames": [],
             "responseHashes": [
                 "377c902a05557d7549dd56d00450a411bac4ab5434727663273b60972ddd2749"
@@ -1601,13 +1618,15 @@
         {
             "rule": "demandbase\\.com\\/3a7c6250edf0a339\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "tag"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000144,
             "cnames": [],
             "responseHashes": [
                 "d57f588a46925c64c2ce35e11f58b94adf64bff2bff9e569a806639ce6211190"
@@ -1621,61 +1640,41 @@
             ]
         },
         {
-            "rule": "demandbase\\.com\\/4c2784a0f94427f4\\.min\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "tag"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000205,
-            "cnames": [],
-            "responseHashes": [
-                "5400595ebee515713030302a009bbb80cad82701fe2e247128ecfa5daa9813c1"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "elkay.com",
-                "www.elkay.com",
-                "www.zurn.com"
-            ]
-        },
-        {
             "rule": "demandbase\\.com\\/bccb5bc7\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "tag"
             ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000205,
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000144,
             "cnames": [],
             "responseHashes": [
-                "f41681134468c0700e861e0a9548791f9411225d8d9934b032138569a6a19d47"
+                "f6b6620ca736d77d37516b3c1e12bd6c93f2df12be8d973f2a3191d9345f24eb"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "emdmillipore.com",
-                "www.merckmillipore.com",
-                "www.sigmaaldrich.com"
+                "www.merckmillipore.com"
             ]
         },
         {
             "rule": "demandbase\\.com\\/a6774e5118e358f2\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "tag"
             ],
-            "apis": {},
-            "sites": 6,
-            "prevalence": 0.000041,
+            "apis": {
+                "Navigator.prototype.userAgent": 3
+            },
+            "sites": 3,
+            "prevalence": 0.0000217,
             "cnames": [],
             "responseHashes": [
                 "aeb93b037df67931e1c1d72d9dc7625bbc7e3932aa5ac5e37ca323ccf911ac51"
@@ -1684,38 +1683,57 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "epson.co.uk",
-                "www.epson.de",
-                "www.epson.eu",
-                "www.epson.fr",
+                "epson.de",
                 "www.epson.it",
                 "www.epson.nl"
             ]
         },
         {
+            "rule": "demandbase\\.com\\/autocomplete",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "autocomplete"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000144,
+            "cnames": [],
+            "responseHashes": [
+                "610898790f196e6ee0805a198eb3dfe517e4e482da66339bcd94f5d2ec4a9c07"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "esri.com",
+                "www.esri.com"
+            ]
+        },
+        {
             "rule": "demandbase\\.com\\/adobeanalytics\\/pscSDsz4\\.min\\.js",
-            "cookies": 0.00000683,
+            "cookies": 0.0000144,
             "fingerprinting": 1,
             "subdomains": [
                 "scripts"
             ],
             "apis": {
-                "window.sessionStorage": 1,
-                "Document.cookie getter": 1,
-                "Date.prototype.getTime": 1,
-                "Document.cookie setter": 1
+                "window.sessionStorage": 2,
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2
             },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000144,
             "cnames": [],
             "responseHashes": [],
             "type": "Fetch",
             "firstPartyCookies": {
                 "dmdbase_cdc": {
-                    "ttl": 1803,
+                    "ttl": 1805,
                     "length": 5,
-                    "prevalence": 0.000006832654622974118,
-                    "uniqueness": 1
+                    "prevalence": 0.00001444992738911487,
+                    "uniqueness": 0.5
                 }
             },
             "firstPartyCookiesSent": {},
@@ -1725,37 +1743,75 @@
             ]
         },
         {
-            "rule": "demandbase\\.com\\/6adfd30ea959ca4e\\.min\\.js",
+            "rule": "demandbase\\.com\\/adobeanalytics\\/pscSDsz4\\.min\\.js",
+            "cookies": 0.0000144,
+            "fingerprinting": 1,
+            "subdomains": [
+                "scripts"
+            ],
+            "apis": {
+                "window.sessionStorage": 2,
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000144,
+            "cnames": [],
+            "responseHashes": [
+                "90f983231d473a62d70d1051c0c69258aa7d5f7e8b46f9fb4211d055e5db2d75"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "dmdbase_cdc": {
+                    "ttl": 1805,
+                    "length": 5,
+                    "prevalence": 0.00001444992738911487,
+                    "uniqueness": 0.5
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "f5.com",
+                "www.f5.com"
+            ]
+        },
+        {
+            "rule": "demandbase\\.com\\/de11a366\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "tag"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000144,
             "cnames": [],
             "responseHashes": [
-                "88e0cb7ea31422a32f9ebc6df7975e983437de40636452471dd6bf85f368a2c7"
+                "fb9fee00627c967f0803bc63115206fab322d1ead18b8a341048d09bc7bf8c15"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "ferguson.com",
-                "www.ferguson.com"
+                "fiserv.com",
+                "www.fiserv.com"
             ]
         },
         {
             "rule": "demandbase\\.com\\/cff363a9\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "tag"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000144,
             "cnames": [],
             "responseHashes": [
                 "95a2d89d2330ac1b20166377600e496a566169925288f3875eefebc96c4d569a"
@@ -1769,81 +1825,17 @@
             ]
         },
         {
-            "rule": "demandbase\\.com\\/960ab0a0f20fb102\\.min\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "tag"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "991c71a6ab651a0d26bece6716c6f66f6836118917fbb9fb036323b695df9768"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "hashicorp.com",
-                "www.hashicorp.com"
-            ]
-        },
-        {
-            "rule": "demandbase\\.com\\/5800b36b198ddbd2\\.min\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "tag"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "62bdace3f7b8588cd769aa0c2567c43c04e437674c05d67301e5104bda569805"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "illumina.com",
-                "www.illumina.com"
-            ]
-        },
-        {
-            "rule": "demandbase\\.com\\/38c8aa58f7e5940a\\.min\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "scripts"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "ee598ff17afe9df89a5c9869227e1755436d041ada6481b674a77c1db7ca3ccd"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "infosecinstitute.com",
-                "www.infosecinstitute.com"
-            ]
-        },
-        {
             "rule": "demandbase\\.com\\/fe4bab47ab8e698a\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "tag"
             ],
-            "apis": {},
-            "sites": 6,
-            "prevalence": 0.000041,
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000144,
             "cnames": [],
             "responseHashes": [
                 "37ec091f9bda4258b44ef5c624f9f264626648bd122096066525875b87af17a6"
@@ -1853,23 +1845,21 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "itpro.com",
-                "www.itpro.com",
-                "www.mby.com",
-                "www.pbo.co.uk",
-                "www.yachtingmonthly.com",
-                "www.yachtingworld.com"
+                "www.yachtingmonthly.com"
             ]
         },
         {
             "rule": "demandbase\\.com\\/e5ad31fc24389a77\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "tag"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 1
+            },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000144,
             "cnames": [],
             "responseHashes": [
                 "4e1eb5c9e694e1f23108f9d4f1727b2a87b6b3d0c80b601fb8d2f0bbaec44b91"
@@ -1883,37 +1873,17 @@
             ]
         },
         {
-            "rule": "demandbase\\.com\\/7a41018c86e36f43\\.min\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "tag"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "402123d92d09cc138a32ab6b577293797bfb5b23b72a5a7001226282f515c530"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "keysight.com",
-                "www.keysight.com"
-            ]
-        },
-        {
             "rule": "demandbase\\.com\\/FDwiyD6L\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "tag"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 1
+            },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000144,
             "cnames": [],
             "responseHashes": [
                 "b7fa6577e0f6a5a2e499261686d522b4a8b89a7ee82722423825a466b40af6db"
@@ -1934,11 +1904,10 @@
                 "tag"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 2,
-                "Document.prototype.interestCohort": 2
+                "Navigator.prototype.userAgent": 2
             },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000144,
             "cnames": [],
             "responseHashes": [
                 "6b13086d0710966b0b3326df0da58418d79b57fd1a03d01a014c4e81fe680f6a"
@@ -1954,13 +1923,15 @@
         {
             "rule": "demandbase\\.com\\/31241db7\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "tag"
             ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000205,
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000144,
             "cnames": [],
             "responseHashes": [
                 "c98ee04211a4bceca8c9b688cccf8ec45a6c340a57434e03f201300255e0e817"
@@ -1970,35 +1941,12 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "londonstockexchange.com",
-                "www.londonstockexchange.com",
-                "www.lseg.com"
-            ]
-        },
-        {
-            "rule": "demandbase\\.com\\/67afcf5062f3d53f\\.min\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "tag"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "1751ea5e7f25b28693218861f7546de20a3da807d78f71a2ef80550d66c786a2"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "lucidchart.com",
-                "www.lucidchart.com"
+                "www.londonstockexchange.com"
             ]
         },
         {
             "rule": "demandbase\\.com\\/adobeanalytics\\/muGZc1pV\\.min\\.js",
-            "cookies": 0.0000137,
+            "cookies": 0.0000144,
             "fingerprinting": 1,
             "subdomains": [
                 "scripts"
@@ -2010,7 +1958,7 @@
                 "Document.cookie setter": 2
             },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000144,
             "cnames": [],
             "responseHashes": [
                 "892a007739c3177010cc3b41c1b816bba265b38a4c93327c5120d88fe8cec5ff"
@@ -2018,9 +1966,9 @@
             "type": "Script",
             "firstPartyCookies": {
                 "dmdbase_cdc": {
-                    "ttl": 1803,
+                    "ttl": 1807,
                     "length": 5,
-                    "prevalence": 0.000013665309245948236,
+                    "prevalence": 0.00001444992738911487,
                     "uniqueness": 0.5
                 }
             },
@@ -2033,13 +1981,15 @@
         {
             "rule": "demandbase\\.com\\/muGZc1pV\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "scripts"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000144,
             "cnames": [],
             "responseHashes": [
                 "1f3d2899ceef549234513f46f48024ad1063763c8ef0fd007b515596b8faba00"
@@ -2053,59 +2003,41 @@
             ]
         },
         {
-            "rule": "demandbase\\.com\\/482ef058aaad5d4a\\.min\\.js",
+            "rule": "demandbase\\.com\\/538f1e6d0e2edc11\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "tag"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000144,
             "cnames": [],
             "responseHashes": [
-                "9fef25c7925113953fb02cb454538d6cbb8e7b6fc076a8d487eb286e4590b18d"
+                "c6388d6802348ff960eab67868afb33e0812e545b6e21f56192191fda1f9c179"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "micron.com",
-                "www.micron.com"
-            ]
-        },
-        {
-            "rule": "demandbase\\.com\\/ZZ0uJOFM\\.min\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "tag"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "2b4641984231da39eb3a8e31ecb9018196b792c47831fbe2695d916ac60680c0"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "msci.com",
-                "www.msci.com"
+                "nuveen.com",
+                "www.nuveen.com"
             ]
         },
         {
             "rule": "demandbase\\.com\\/f7ed9b13fc8f6e29\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "tag"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000144,
             "cnames": [],
             "responseHashes": [
                 "e3ee9d6e0fc095233403117c0a54f27834fd8490fdbc0f5dd7fe39d26fbfcbe0"
@@ -2126,11 +2058,10 @@
                 "tag"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 2,
-                "Document.prototype.interestCohort": 2
+                "Navigator.prototype.userAgent": 2
             },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000144,
             "cnames": [],
             "responseHashes": [
                 "54e655ea640204727e28c8865c47f04d4433b6b35893b3e44fec0b6d79163bc9"
@@ -2146,13 +2077,15 @@
         {
             "rule": "demandbase\\.com\\/a365c97aa138d00f\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "tag"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000144,
             "cnames": [],
             "responseHashes": [
                 "7eec1540ac5fa572ec6b06d930fae8765da7cb7f50b77488d65512c107c6104c"
@@ -2168,13 +2101,15 @@
         {
             "rule": "demandbase\\.com\\/d29776d456f1cf49\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "tag"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000144,
             "cnames": [],
             "responseHashes": [
                 "202265a7e886ac7fac6cb39f98c887435dd352684e7fcafc16ce99a0aadbdbcf"
@@ -2188,6 +2123,31 @@
             ]
         },
         {
+            "rule": "demandbase\\.com\\/shared\\/forms_98359448aa\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "tag"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 3
+            },
+            "sites": 3,
+            "prevalence": 0.0000217,
+            "cnames": [],
+            "responseHashes": [
+                "78d53a1a264d7b37a64165ad9730a194e39fa5f0791dd8741592fb6cccd801ca"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "pagerduty.com",
+                "www.servicenow.com",
+                "www.verizonconnect.com"
+            ]
+        },
+        {
             "rule": "demandbase\\.com\\/2c152149\\.min\\.js",
             "cookies": 0,
             "fingerprinting": 1,
@@ -2195,11 +2155,10 @@
                 "tag"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 3,
-                "Document.prototype.interestCohort": 3
+                "Navigator.prototype.userAgent": 3
             },
             "sites": 3,
-            "prevalence": 0.0000205,
+            "prevalence": 0.0000217,
             "cnames": [],
             "responseHashes": [
                 "ec27167da1a4929ee8f8718c9228773fbe8b807ed475652da0cbe5e247762823"
@@ -2216,13 +2175,15 @@
         {
             "rule": "demandbase\\.com\\/84803e1f6d3f957f\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "tag"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 1
+            },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000144,
             "cnames": [],
             "responseHashes": [
                 "11c440ee2e1cfbc80206f63680be9d0cdc78226153294ca3107ff59cb8ab785c"
@@ -2238,13 +2199,15 @@
         {
             "rule": "demandbase\\.com\\/Btmxkl2k\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "tag"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000144,
             "cnames": [],
             "responseHashes": [
                 "866a86244e6dc18b4ddd682a30734f6f093381d5b67ea41cf86c817bac0eb135"
@@ -2260,13 +2223,15 @@
         {
             "rule": "demandbase\\.com\\/X4PVAXm1\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "scripts"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000144,
             "cnames": [],
             "responseHashes": [
                 "16a9f11e3b1f6c1553c6eca6b0c0f012bf0142fd93b35fd07714cee489f7d83e"
@@ -2282,13 +2247,15 @@
         {
             "rule": "demandbase\\.com\\/de7103183993b2bf\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "tag"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000144,
             "cnames": [],
             "responseHashes": [
                 "07587442207676e74687723de1d223d534275ccd9c5991f9186666f4306aa974"
@@ -2304,13 +2271,15 @@
         {
             "rule": "demandbase\\.com\\/19fbc406\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "tag"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000144,
             "cnames": [],
             "responseHashes": [
                 "0bf005b5f927e361a5abe96a58bfb365166d01d8a6ffc0d8b2f97442a7fc2d1c"
@@ -2326,13 +2295,15 @@
         {
             "rule": "demandbase\\.com\\/b63ce7a56736cb2a\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "tag"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000144,
             "cnames": [],
             "responseHashes": [
                 "90269778a44323a75bbcc906c81684cd0f1100e3df7f00222c5892028bbd0419"
@@ -2348,13 +2319,15 @@
         {
             "rule": "demandbase\\.com\\/d16b1fea0b2ed64f\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "tag"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000144,
             "cnames": [],
             "responseHashes": [
                 "87f1663f215b3953206abc62b8b644ac6c98306d9abbe1c8f28ec920511979a9"
@@ -2368,15 +2341,41 @@
             ]
         },
         {
-            "rule": "demandbase\\.com\\/838a4cb17c4ade4c\\.min\\.js",
+            "rule": "demandbase\\.com\\/0a97fa39\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "tag"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000144,
+            "cnames": [],
+            "responseHashes": [
+                "5f237aa1ded78a1d353fa01bfe7c47ac7c899e97948b270251491f2bb71d60eb"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "slb.com",
+                "www.slb.com"
+            ]
+        },
+        {
+            "rule": "demandbase\\.com\\/838a4cb17c4ade4c\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "tag"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000144,
             "cnames": [],
             "responseHashes": [
                 "78f4550bd503b061725c6cc087d3e7b430f0eefcaf7b41c8c4cc1c3def5e5e6b"
@@ -2398,12 +2397,34 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000144,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "st.com",
+                "www.st.com"
+            ]
+        },
+        {
+            "rule": "demandbase\\.com\\/shared\\/forms_90863e4c19\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "tag"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000144,
             "cnames": [],
             "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                "27bb42f41653c6fd0083ae3497bb047725e08b77af36b63361858e64caf0c3d2"
             ],
-            "type": "Other",
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -2419,11 +2440,10 @@
                 "tag"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 2,
-                "Document.prototype.interestCohort": 2
+                "Navigator.prototype.userAgent": 2
             },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000144,
             "cnames": [],
             "responseHashes": [
                 "bd5c0d4288ab49f1d50290f2c790beb42090cfcbd44a4b0ca8082f378f7edf58"
@@ -2439,13 +2459,16 @@
         {
             "rule": "demandbase\\.com\\/d522da51\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "tag"
             ],
-            "apis": {},
+            "apis": {
+                "Document.cookie getter": 2,
+                "Navigator.prototype.userAgent": 2
+            },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000144,
             "cnames": [],
             "responseHashes": [
                 "11a34fcd3f2eea1e0028b147660e99b202bc658d3ded7a4e4eea6007f165b095"
@@ -2459,37 +2482,17 @@
             ]
         },
         {
-            "rule": "demandbase\\.com\\/GTFfZFcF\\.min\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "scripts"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "5912bca912953839b192bef6f7fe085dfb01ab7717f7bbcdcb78a6b625f572d2"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "tenable.com",
-                "www.tenable.com"
-            ]
-        },
-        {
             "rule": "demandbase\\.com\\/37a1476369a811bc\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "tag"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000144,
             "cnames": [],
             "responseHashes": [
                 "56663d456248eb477ea14e9449e490b1398096166abf264e20c1a62d241ccf7a"
@@ -2505,13 +2508,15 @@
         {
             "rule": "demandbase\\.com\\/20792de43befb885\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "tag"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000144,
             "cnames": [],
             "responseHashes": [
                 "9b7e16fce1047ce5209135029bcb0312291c88bb55328b7b47bc2855f06b1eb5"
@@ -2525,7 +2530,7 @@
             ]
         },
         {
-            "rule": "demandbase\\.com\\/af734fb5\\.min\\.js",
+            "rule": "demandbase\\.com\\/5d5551eb1c06a3ef\\.min\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -2533,10 +2538,34 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000144,
             "cnames": [],
             "responseHashes": [
-                "799674f952e7c35232612aab661eb8d02934bc983148d0e5a460962d983bc931"
+                "61a6fba796bedd40325ba4d8288375d898b7a1cb4481069378c632b7346c5025"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "trinet.com",
+                "www.trinet.com"
+            ]
+        },
+        {
+            "rule": "demandbase\\.com\\/af734fb5\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "tag"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000144,
+            "cnames": [],
+            "responseHashes": [
+                "9851deaec7c900803e41d5d82283504885de0532015ea2993c723a64f5322b50"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -2544,6 +2573,30 @@
             "exampleSites": [
                 "ukg.com",
                 "www.ukg.com"
+            ]
+        },
+        {
+            "rule": "demandbase\\.com\\/ef78a027a9bcb542\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "tag"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000144,
+            "cnames": [],
+            "responseHashes": [
+                "8ba2f7e04e030bf04893e307d23eb7104246d016fd10951c0156a25cf2a5827c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "unitedrentals.com",
+                "www.unitedrentals.com"
             ]
         },
         {
@@ -2557,7 +2610,7 @@
                 "Navigator.prototype.userAgent": 2
             },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000144,
             "cnames": [],
             "responseHashes": [
                 "765412c9d113968f91103e7b6fabe370d163057595e926b7db64712a0889a9f9"
@@ -2572,7 +2625,7 @@
         },
         {
             "rule": "demandbase\\.com\\/adobeanalytics\\/B6W1lvCU\\.min\\.js",
-            "cookies": 0.0000137,
+            "cookies": 0.0000144,
             "fingerprinting": 1,
             "subdomains": [
                 "scripts"
@@ -2584,7 +2637,7 @@
                 "Document.cookie setter": 2
             },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000144,
             "cnames": [],
             "responseHashes": [
                 "5348188fdbe58fec96e4a1fd478d3b6ca91f52fd54f22bc36b2b46ad6b514c96"
@@ -2592,9 +2645,9 @@
             "type": "Script",
             "firstPartyCookies": {
                 "dmdbase_cdc": {
-                    "ttl": 1810,
+                    "ttl": 1804,
                     "length": 5,
-                    "prevalence": 0.000013665309245948236,
+                    "prevalence": 0.00001444992738911487,
                     "uniqueness": 0.5
                 }
             },
@@ -2607,13 +2660,15 @@
         {
             "rule": "demandbase\\.com\\/B6W1lvCU\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "scripts"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000144,
             "cnames": [],
             "responseHashes": [
                 "315cbf36b391bb37dab2df06fc806488e69ea1b3d134518505d773fb20430aa7"
@@ -2629,13 +2684,15 @@
         {
             "rule": "demandbase\\.com\\/4cdf254ff02939a3\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "tag"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000144,
             "cnames": [],
             "responseHashes": [
                 "99cebdd23ee68fa1cdddf15562a4520615e709ab621dbd2c206ef106a798b116"
@@ -2656,15 +2713,12 @@
                 "tag"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 2,
-                "Document.prototype.interestCohort": 2
+                "Navigator.prototype.userAgent": 2
             },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000144,
             "cnames": [],
-            "responseHashes": [
-                "7e6e3f98d677f8ae99fd0900adb7c36444f1213574bf71c2cc22063b3e5d4c24"
-            ],
+            "responseHashes": [],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -2674,25 +2728,27 @@
             ]
         },
         {
-            "rule": "demandbase\\.com\\/73PwKbIO\\.min\\.js",
+            "rule": "demandbase\\.com\\/4c2784a0f94427f4\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
-                "scripts"
+                "tag"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000144,
             "cnames": [],
             "responseHashes": [
-                "62b897f8864b81539e9cb1da1924db54b2e31f925a98cccb354187ab06017327"
+                "5400595ebee515713030302a009bbb80cad82701fe2e247128ecfa5daa9813c1"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "zebra.com",
-                "www.zebra.com"
+                "zurn.com",
+                "www.zurn.com"
             ]
         }
     ],
@@ -2704,59 +2760,59 @@
         "Action Pixels"
     ],
     "performance": {},
-    "cookies": 0.000116,
+    "cookies": 0.000137,
     "topInitiators": [
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.4978448275862069
+            "prevalence": 0.3606837606837607
         },
         {
             "domain": "first party",
-            "prevalence": 0.21336206896551724
+            "prevalence": 0.3435897435897436
         },
         {
             "domain": "adobedtm.com",
-            "prevalence": 0.20689655172413793
+            "prevalence": 0.14188034188034188
         },
         {
             "domain": "tiqcdn.com",
-            "prevalence": 0.040948275862068964
+            "prevalence": 0.035897435897435895
+        },
+        {
+            "domain": "bizible.com",
+            "prevalence": 0.03418803418803419
+        },
+        {
+            "domain": "go-mpulse.net",
+            "prevalence": 0.011965811965811967
+        },
+        {
+            "domain": "azure.com",
+            "prevalence": 0.008547008547008548
         },
         {
             "domain": "osano.com",
-            "prevalence": 0.008620689655172414
+            "prevalence": 0.006837606837606838
         },
         {
-            "domain": "cookielaw.org",
-            "prevalence": 0.00646551724137931
+            "domain": "gbqofs.com",
+            "prevalence": 0.005128205128205128
         },
         {
-            "domain": "msecnd.net",
-            "prevalence": 0.004310344827586207
-        },
-        {
-            "domain": "piwik.pro",
-            "prevalence": 0.004310344827586207
-        },
-        {
-            "domain": "optimizely.com",
-            "prevalence": 0.004310344827586207
-        },
-        {
-            "domain": "appdynamics.com",
-            "prevalence": 0.004310344827586207
+            "domain": "fullstory.com",
+            "prevalence": 0.005128205128205128
         }
     ],
     "types": {
-        "Script": 285,
-        "XHR": 4,
+        "Script": 262,
+        "XHR": 238,
         "Fetch": 2,
         "Other": 2
     },
     "nameservers": [
-        "ns-1260.awsdns-29.org",
+        "ns-578.awsdns-08.net",
         "ns-1982.awsdns-55.co.uk",
         "ns-320.awsdns-40.com",
-        "ns-578.awsdns-08.net"
+        "ns-1260.awsdns-29.org"
     ]
 }

@@ -4,14 +4,36 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.00000683,
-    "sites": 1,
+    "prevalence": 0.0000144,
+    "sites": 2,
     "subdomains": [
         "api-ingest"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "pocustrack\\.com\\/pocus\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [],
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000144,
+            "cnames": [],
+            "responseHashes": [
+                "31e46b51e495f3214d209a601483ecc9d471b712039823d343ba8ebe410bacbb"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "openphone.com",
+                "www.pinecone.io"
+            ]
+        },
         {
             "rule": "pocustrack\\.com\\/v1\\/visitor-events\\/enqueue",
             "cookies": 0,
@@ -20,8 +42,29 @@
                 "api-ingest"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "sites": 3,
+            "prevalence": 0.0000217,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "openphone.com",
+                "www.openphone.com",
+                "www.pinecone.io"
+            ]
+        },
+        {
+            "rule": "pocustrack\\.com\\/v1\\/visitor-events\\/enqueue",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-ingest"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000217,
             "cnames": [],
             "responseHashes": [
                 "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b"
@@ -31,7 +74,8 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "openphone.com",
-                "www.openphone.com"
+                "www.openphone.com",
+                "www.pinecone.io"
             ]
         }
     ],
@@ -41,18 +85,24 @@
     "topInitiators": [
         {
             "domain": "mutinycdn.com",
-            "prevalence": 0.6666666666666666
+            "prevalence": 0.5
         },
         {
             "domain": "first party",
-            "prevalence": 0.3333333333333333
+            "prevalence": 0.25
+        },
+        {
+            "domain": "osano.com",
+            "prevalence": 0.25
         }
     ],
     "types": {
-        "Fetch": 2
+        "Script": 2,
+        "Preflight": 3,
+        "Fetch": 3
     },
     "nameservers": [
-        "adele.ns.cloudflare.com",
-        "coby.ns.cloudflare.com"
+        "coby.ns.cloudflare.com",
+        "adele.ns.cloudflare.com"
     ]
 }

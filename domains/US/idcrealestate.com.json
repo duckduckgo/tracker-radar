@@ -4,10 +4,11 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000137,
-    "sites": 2,
+    "prevalence": 0.0000217,
+    "sites": 3,
     "subdomains": [
-        "avm-service"
+        "avm-service",
+        "ip-service"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -21,7 +22,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000144,
             "cnames": [],
             "responseHashes": [
                 "10b29da2272cf2a33e8afaa3258a193a913fb062f527c57c163833c42d5a09ce"
@@ -33,6 +34,48 @@
                 "premiersothebysrealty.com",
                 "www.premiersothebysrealty.com"
             ]
+        },
+        {
+            "rule": "idcrealestate\\.com\\/ip",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ip-service"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000144,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "theagencyre.com",
+                "www.theagencyre.com"
+            ]
+        },
+        {
+            "rule": "idcrealestate\\.com\\/ip",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ip-service"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000144,
+            "cnames": [],
+            "responseHashes": [
+                "0125ca76da941b90eeeb2991f11d7547651d579fea0bfd657ad6005dce5910eb"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "theagencyre.com",
+                "www.theagencyre.com"
+            ]
         }
     ],
     "categories": [],
@@ -41,11 +84,17 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.75
+        },
+        {
+            "domain": "jsdelivr.net",
+            "prevalence": 0.25
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 2,
+        "Preflight": 2,
+        "Fetch": 2
     },
     "nameservers": [
         "ns27.worldnic.com",
