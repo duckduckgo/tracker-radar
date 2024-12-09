@@ -9,12 +9,13 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.00221,
-    "sites": 22,
+    "prevalence": 0.00231,
+    "sites": 23,
     "subdomains": [
         "afd-b2c-iibozyiouoyi4.z01",
         "caz-prod-b2c-frontdoorpremium",
         "fde-smp-swn-cdn-prd01-hbh0afa7a3gsetb7.z01",
+        "sgmt-ffhs-tagging-g5gqbpgkbsg0cafq.a01",
         "flysascom-gtm-prod-endpoint-cvapaegcgwaecfg0.z01",
         "pbhmg-cow-ww-cdn-endpoint-f6ethjfha0evaee5.a03"
     ],
@@ -38,6 +39,10 @@
         {
             "original": "sec-api-b2c.app.mobiliar.ch",
             "resolved": "caz-prod-b2c-frontdoorpremium.azurefd.net"
+        },
+        {
+            "original": "sst.ffhs.ch",
+            "resolved": "sgmt-ffhs-tagging-g5gqbpgkbsg0cafq.a01.azurefd.net"
         }
     ],
     "fingerprinting": 1,
@@ -122,10 +127,11 @@
             ]
         },
         {
-            "rule": "azurefd\\.net\\/gtag\\/js",
+            "rule": "azurefd\\.net\\/gtm\\.js",
             "cookies": 0.000201,
             "fingerprinting": 1,
             "subdomains": [
+                "sgmt-ffhs-tagging-g5gqbpgkbsg0cafq.a01",
                 "flysascom-gtm-prod-endpoint-cvapaegcgwaecfg0.z01"
             ],
             "apis": {},
@@ -133,18 +139,115 @@
             "prevalence": 0.000201,
             "cnames": [
                 {
+                    "original": "sst.ffhs.ch",
+                    "resolved": "sgmt-ffhs-tagging-g5gqbpgkbsg0cafq.a01.azurefd.net"
+                },
+                {
                     "original": "gtm.flysas.com",
                     "resolved": "flysascom-gtm-prod-endpoint-cvapaegcgwaecfg0.z01.azurefd.net"
                 }
             ],
             "responseHashes": [
-                "ddc624e27260fe9a8d7bd84d93aa8a27187f725c9697eeb25a2d76293dd0119b"
+                "c01bac831c41b2b9201314306764f16355bb665c3b5029b72534041b33278173"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "flysas.com",
+                "ffhs.ch",
+                "www.flysas.com"
+            ]
+        },
+        {
+            "rule": "azurefd\\.net\\/gtag\\/js",
+            "cookies": 0.000201,
+            "fingerprinting": 1,
+            "subdomains": [
+                "sgmt-ffhs-tagging-g5gqbpgkbsg0cafq.a01",
+                "flysascom-gtm-prod-endpoint-cvapaegcgwaecfg0.z01"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "sst.ffhs.ch",
+                    "resolved": "sgmt-ffhs-tagging-g5gqbpgkbsg0cafq.a01.azurefd.net"
+                },
+                {
+                    "original": "gtm.flysas.com",
+                    "resolved": "flysascom-gtm-prod-endpoint-cvapaegcgwaecfg0.z01.azurefd.net"
+                }
+            ],
+            "responseHashes": [
+                "8886e85dcebc789ecec9ae466d2e115d9e67d0c35b663bb17c4217bc4901ca3f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ffhs.ch",
+                "www.flysas.com"
+            ]
+        },
+        {
+            "rule": "azurefd\\.net\\/gtag\\/destination",
+            "cookies": 0.000201,
+            "fingerprinting": 1,
+            "subdomains": [
+                "sgmt-ffhs-tagging-g5gqbpgkbsg0cafq.a01"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "sst.ffhs.ch",
+                    "resolved": "sgmt-ffhs-tagging-g5gqbpgkbsg0cafq.a01.azurefd.net"
+                }
+            ],
+            "responseHashes": [
+                "ef11d7dd2b076d368e0289dc4ff76ab0f32e4ea9b21eaa644e19ab47e9c38d6b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ffhs.ch",
+                "www.ffhs.ch"
+            ]
+        },
+        {
+            "rule": "azurefd\\.net\\/g\\/collect",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sgmt-ffhs-tagging-g5gqbpgkbsg0cafq.a01",
+                "flysascom-gtm-prod-endpoint-cvapaegcgwaecfg0.z01"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [
+                {
+                    "original": "sst.ffhs.ch",
+                    "resolved": "sgmt-ffhs-tagging-g5gqbpgkbsg0cafq.a01.azurefd.net"
+                },
+                {
+                    "original": "gtm.flysas.com",
+                    "resolved": "flysascom-gtm-prod-endpoint-cvapaegcgwaecfg0.z01.azurefd.net"
+                }
+            ],
+            "responseHashes": [
+                "5afba3e9e494ce32bc2b59a01fc941a8660310acc30971ab09b3b53121163d9d",
+                "e64954dc34e12c7190cc2338a54b07644ff0f102aa71cc7209bcbb49c3009f7c"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ffhs.ch",
+                "www.ffhs.ch",
                 "www.flysas.com"
             ]
         },
@@ -207,36 +310,40 @@
         "CDN"
     ],
     "performance": {},
-    "cookies": 0.0011,
+    "cookies": 0.00121,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.7894736842105263
+            "prevalence": 0.75
         },
         {
             "domain": "tiqcdn.com",
-            "prevalence": 0.10526315789473684
+            "prevalence": 0.1
         },
         {
             "domain": "windows.net",
-            "prevalence": 0.05263157894736842
+            "prevalence": 0.05
+        },
+        {
+            "domain": "consentmanager.net",
+            "prevalence": 0.05
         },
         {
             "domain": "handelsblatt.com",
-            "prevalence": 0.05263157894736842
+            "prevalence": 0.05
         }
     ],
     "types": {
         "Document": 2,
         "XHR": 2,
         "Stylesheet": 2,
-        "Script": 2,
-        "Fetch": 4
+        "Script": 6,
+        "Fetch": 7
     },
     "nameservers": [
-        "ns4-37.azure-dns.info",
         "ns1-37.azure-dns.com",
-        "ns3-37.azure-dns.org",
-        "ns2-37.azure-dns.net"
+        "ns4-37.azure-dns.info",
+        "ns2-37.azure-dns.net",
+        "ns3-37.azure-dns.org"
     ]
 }
