@@ -4,15 +4,19 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.000342,
-    "sites": 50,
+    "prevalence": 0.000353,
+    "sites": 52,
     "subdomains": [
         "tr",
         "cd",
-        "cds"
+        "cds",
+        "capi",
+        "vid",
+        "ins",
+        "img"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "thecontentserver\\.com\\/tr\\/si",
@@ -23,8 +27,8 @@
                 "cd"
             ],
             "apis": {},
-            "sites": 14,
-            "prevalence": 0.0000957,
+            "sites": 16,
+            "prevalence": 0.000109,
             "cnames": [],
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -44,6 +48,8 @@
                 "www.islandpacket.com",
                 "www.kansas.com",
                 "www.kansascity.com",
+                "www.ratemyprofessors.com",
+                "www.sacbee.com",
                 "www.sanluisobispo.com",
                 "www.sunherald.com",
                 "www.thenewstribune.com"
@@ -57,76 +63,602 @@
                 "cd"
             ],
             "apis": {},
-            "sites": 33,
-            "prevalence": 0.000225,
+            "sites": 36,
+            "prevalence": 0.000245,
             "cnames": [],
             "responseHashes": [
-                "378312fdcd17813ee55300a913318d4d644512ff010f450e6add05c7d8003437",
-                "23f58c72fe130904b42abae228b8ae7b357cfd255fd50eac643c8bbd2bc2f0ad",
-                "a806fd0123aeb8c0488c141ac466c70bba8f00addfbb1c8b9ecbe551d90019c2",
-                "7c3fb28171d818599ff9161755f3fef18d6f1435c1eb02ed2c17a608991cb7c0",
-                "9d85d829bceef35670961d68eba58cbccef787189a3e5b9eac497148f492d9c4",
-                "6c55891ad40a417b89611f321b644de479cfc45752e7f3bc3ef687e21c5fd018",
-                "e850f4aaca1216ab21c4131e3e53c24551b0ffeb0e63efeb86f23f101f78980c",
-                "5b63cbc1605a54922ece29b6a2589bb87cc1a69b5886d54d670295266733827d",
-                "73b68fff3a6747ba572f5c6215afd177bec9c9dbe88d09da04674a3afe6fad61",
-                "b9c88b34ec3217e537cc2863a7e2e0cdf34abc08c736f6332939bd1c93280d6f",
-                "d705d89d952290b9be1dd4b3c6e5fcd4f3345383d110148c827d5a0eaae206fd",
-                "e04b52719415b407b706d7503e7461389d073f4607646f2bcc6d973c439885c8",
-                "9dd0a50015e48974dd02d13ae2bc40ecdc378c24e4f139ef3cd28fabd7813fc8",
-                "07f10ffbe1cbec84e624901ee877b8c2665edb162d2637de249953aaafab6ec5",
-                "b7ba2370252f0f4a13ba08e09247d94864f8d5b8e0c82d6e832faf88bf488c5f",
-                "06362bdde5a272aebd14d4d9752f3c9d8ef7c4b070c13212c47db1da1263593c",
-                "4e3140652ddf539e9bdf88a638d5823b71f3fb3cfdb41c59cd3429bf1ff74ec5",
-                "1d12316b5fca98a35070ef9ebe085b26845df4f515a407f959d74cf7fab85c8a",
-                "bf54d952468f4b63c9ca75ae4be30c5851325abda7345ad35fa36e85509a7782",
-                "ec7ae8f245366c8e28244b269d9a6e371900d00c504a757f3186f4d97be660ef",
-                "d590f75b3c288c37fd90ef5ddffcee6465148c5faab212881902d9749738e03e",
-                "0d98f4669be77ee1995f8367b299cc088a86a984ef2b162aed86816fa8f6fd29",
-                "0a16636a7077cfba5044531cedcbcf13e8551dffb6e9c0dd0ceb905f4fe91fd1",
-                "b29db5c03a349bb22f0c73114584bbcadbba2ca3b8cffec39e21567f7ef3326d",
-                "5f0f9759e5bf8114ae3d2616f3acce4d2bcbcadce899fa4af2c0b54180e6d5f0",
-                "9560cee16561348f0eb38f766d5c3e57b0c6ff0848498099133b17c58997de9a",
-                "49b55a47ba09349178b5f1e5150cd00912166f6a7f43507ee51952c80c123725"
+                "0c5c8e2964908b3e35b18baf664564ae6f03c5a240950070999a2ce8711bc2a1",
+                "a8f08aa84f8ffd457eb2b09ee5fe43f052b89698481d3853b199e6216c91f0fb",
+                "22a1b604dd1727ec3b6546755c643a398f8491b66a9fcdd7ee3d03a425602b8d",
+                "0ed490d202e13d4922da3573397fcaeba58a071810f6165dd71a893d8e4cb99c",
+                "dbeaa552c90ce85334bd045b93818dea8a9e5dfe9047f8e2047555026b8e05ff",
+                "2a5ecb8e37994d808e36a026feeaa8bd197b518ea818344ca1486bf29e05f8b6",
+                "185d0f79324b9acded71f9dbb4ce6616a3081bd8a8f337924458949660f9c415",
+                "c01260a6e52f829faab0a658f5e49579c1c7c2939f5f7c57b2ae9e9ea8a53efe",
+                "8611104dbb64b9049d8a9a88bf0cc0c419dfa5f155ca6290350b13b2caec66a0",
+                "5985b9187e091adf2c931d48998b15840fe6200966cbba7d5f2b97796f5ee3c8",
+                "25036551d4e9da9a9350b04e61f663bd0c2ab40d90724bea846b0b29401f2f4e",
+                "f0f31c3317d5402127cc7c6135907cc58f3b95693440b6ddf1db2ad32acaf265",
+                "88f0446d94d5f3b59f05439cc238ae9ff17ca463bf18fc5b0c4e6e23f6e41271",
+                "4febd6aa4f376bf90322efb65e1da18cfbdb354499f212aa7c8b04918669e0c6",
+                "c94aafd061228a10625afaf6091cb9b390a0bb6bc6d861a2339afbf434cf1b8f",
+                "6df32cf6eae2a8ff4dd1fc7e9f76af636ec6eebaf61eb505e9b2534de6d77b63",
+                "be14b94d73e0837885a6430f9a9c51bca1abca6e2040ab0415679291fa331585",
+                "8c8ee248ddf754feeff8db4e75800917cf44619ddcd1cb11c5e6e4b15c1b5d14",
+                "dc31659d429446a303d7d9ee0c33d9b0cec22f98e7ca52f954a473f041456a7d",
+                "8334927c70877d7cf494c08ca027ee35cb4f59c2ecf2fb854aa4412829acaaf1",
+                "bc9cac4860842fe360c8c29cd44ca6dcdb16b0b30d1ff5add720a6c44da88ea2",
+                "06e5fd7c4b1711f2e1cc60f15cfa5f9d8ad3391d6e5b9be56a6766177db36b88",
+                "9d455a51ca38857d29dbcc3838cb509f471fa5e627fe815f8e6086b838623358",
+                "d956128009298f4bb8ea67d7f6ee364710c8770181acfe7392a6ffe40c8ab9f2",
+                "5e1ea7a1ccf8bb2e3ae3204e63505c43d8f834a970279dab24d33cbcc0a8f15f",
+                "5fc358cc87cb5ddf9bb994b546be3ca1cbd785591682eeabb1b3fd5aabae891f",
+                "cbb6a158508f1ac806c9d8585c6c22aaf3821756199056683633bd5617f67ed7",
+                "4930b57a441cbef6e7dd675b6ae6a850d16733cd8c76ed5e91dcbd05461aa126",
+                "909bd89945327a800ebe0d0ffa4c0958e069f2e2eb052b3894071070e028e58c",
+                "57d780d1f81d46d9a006a99eb9bc98e08a8454d41890c7fcaca36464ddd16e17",
+                "0dbfb9e40064326ab41106e539db7df854bb856b1b76ba68b5c238ecf570299d"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "www.huffingtonpost.com",
-                "www.charlotteobserver.com",
-                "www.kentucky.com",
-                "www.huffingtonpost.co.uk",
-                "www.thenewstribune.com",
-                "www.kansascity.com",
-                "www.macon.com",
-                "www.tri-cityherald.com",
-                "www.sanluisobispo.com",
-                "www.huffpost.com",
-                "www.bradenton.com",
-                "www.fresnobee.com",
-                "www.islandpacket.com",
-                "www.heraldonline.com",
+                "montrealgazette.com",
                 "www.thestate.com",
-                "www.bnd.com",
-                "www.sunherald.com",
+                "www.mercedsunstar.com",
+                "asiatimes.com",
+                "www.ledger-enquirer.com",
+                "www.bellinghamherald.com",
+                "www.charlotteobserver.com",
+                "www.sacbee.com",
                 "www.star-telegram.com",
+                "www.flkeysnews.com",
+                "www.tri-cityherald.com",
+                "food52.com",
+                "www.heraldsun.com",
                 "www.newsobserver.com",
-                "www.myrtlebeachonline.com"
+                "www.kentucky.com",
+                "www.thenewstribune.com",
+                "www.bradenton.com",
+                "www.miamiherald.com",
+                "www.huffingtonpost.co.uk"
             ]
         },
         {
-            "rule": "thecontentserver\\.com\\/p\\/569566\\/elLoader\\.js",
+            "rule": "thecontentserver\\.com\\/p\\/571125\\/elLoader\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cds"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [],
+            "responseHashes": [
+                "467ca9423488cbb51ac246d7213349451092ebd9358688eeaf4abbfc5b92ea6b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "asiatimes.com",
+                "www.bnd.com",
+                "www.sunherald.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/p\\/571125\\/player\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "cds"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 3,
+                "Performance.prototype.memory": 3,
+                "Date.prototype.getTime": 3,
+                "window.localStorage": 3,
+                "Date.prototype.getTimezoneOffset": 3,
+                "Navigator.prototype.doNotTrack": 3,
+                "window.innerHeight": 3,
+                "window.innerWidth": 3,
+                "Navigator.prototype.connection": 3,
+                "NavigatorUAData.prototype.getHighEntropyValues": 3
+            },
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [],
+            "responseHashes": [
+                "b648804e45f4c93759dfd9feb71ce78aea56027468d5de37b8a290c16dabb111"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "asiatimes.com",
+                "www.bnd.com",
+                "www.sunherald.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/p\\/571125\\/player\\.renderer\\.js",
             "cookies": 0,
             "fingerprinting": 1,
             "subdomains": [
                 "cds"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 11
+                "MediaSource.isTypeSupported": 3,
+                "Notification.permission": 1,
+                "Navigator.prototype.plugins": 1
             },
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [],
+            "responseHashes": [
+                "9be46bfe6759378e6841aa6702899397621db53fd939e8cdbe31a86e74c6fb57"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "asiatimes.com",
+                "www.bnd.com",
+                "www.sunherald.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/a\\/player\\.style\\.78da420eeda316d4a031\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cds"
+            ],
+            "apis": {},
+            "sites": 16,
+            "prevalence": 0.000109,
+            "cnames": [],
+            "responseHashes": [
+                "8d7b4e53d11f293d19abb6a4ef22bf96750e27757aef0ee100337ec4baedfb01"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "asiatimes.com",
+                "food52.com",
+                "www.bnd.com",
+                "www.bradenton.com",
+                "www.huffingtonpost.co.uk",
+                "www.huffingtonpost.com",
+                "www.huffpost.com",
+                "www.idahostatesman.com",
+                "www.islandpacket.com",
+                "www.kansas.com",
+                "www.kansascity.com",
+                "www.ratemyprofessors.com",
+                "www.sacbee.com",
+                "www.sanluisobispo.com",
+                "www.sunherald.com",
+                "www.thenewstribune.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/a\\/player\\.hls\\.51d763ece1435ffde630\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cds"
+            ],
+            "apis": {
+                "URL.createObjectURL": 3,
+                "Navigator.prototype.userAgent": 1,
+                "MediaSource.isTypeSupported": 3
+            },
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [],
+            "responseHashes": [
+                "f48924c0ff2cfdf0d9d860f3983e301f9424c5e8571ea7fd3f43da4d0c58aedb"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "asiatimes.com",
+                "www.bnd.com",
+                "www.sunherald.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/core\\/pls",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "capi"
+            ],
+            "apis": {},
+            "sites": 16,
+            "prevalence": 0.000109,
+            "cnames": [],
+            "responseHashes": [
+                "6e846553b709a2291882f7818831973674ff6559e31cad3f8b59589675404406",
+                "0a9cb2c26cca26c94a6c709a90af14cb167413af1e0ec277eb11d1ababd822d6",
+                "f5b3a46e7e2f41a2d3200f2841dbb9d9595de9e8a0f84eaa25a2d60789128171",
+                "4db1415811f9e49099a2faf7a04eb0e3ce78516f49de4d6c4de7b1d19f8d6d73",
+                "9bde74735164aa79696ac1d0d5729c4a72e1d28accb818b1bbc24db1dbd8e60e",
+                "01032b900f989651416be2dcf3dba14a42366de133003ab4b7c1e98f28c044ff",
+                "8aa6f9f0aca3854544665720df4efb84e9eb5211a9b941b6a61d90f2196d88a6",
+                "bb25965d486296c848a8f6fd66df5dfa3a1c6749ba6fa223af7dd860a3be7ed0",
+                "9e50712e8afc6939a242bb7796c5863ba06f8a41e7d5ddc4417b6c15d9bc02db",
+                "a967eacc8efe531e760357dfbaf9496ebb9044e1b089be51e7c2ae2d42f367a9",
+                "9175a66a99b6bd61726cc2c8d29c03cbe17f69920cd0635406ab67533b2f8f12",
+                "a84d53893062af98b776217791b468cdff5ece1675513f9c2e92d52fe3f59df9",
+                "c1ed62dcdbcbb3a04c1df826bc038f74419cfff0c14fb56c49203c05814e77f9",
+                "0982a0050b82f9d7e67d1d1fb15adf5e2a0b90fd0ad0eceda797945bc05ac8e1",
+                "8c9f842c56d5b1dc8314a1698b0d459940becb1f476cedcfbd572fe55cb8655e"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "asiatimes.com",
+                "food52.com",
+                "www.bnd.com",
+                "www.bradenton.com",
+                "www.huffingtonpost.co.uk",
+                "www.huffingtonpost.com",
+                "www.huffpost.com",
+                "www.idahostatesman.com",
+                "www.islandpacket.com",
+                "www.kansas.com",
+                "www.kansascity.com",
+                "www.ratemyprofessors.com",
+                "www.sacbee.com",
+                "www.sanluisobispo.com",
+                "www.sunherald.com",
+                "www.thenewstribune.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/a\\/player\\.iframe\\.integration\\.destroy\\.480db3f83e39d4d042e3\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cds"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [],
+            "responseHashes": [
+                "9caf30a685efea1a95f4b427b2cc754ebd330cc150b55a37e3e7bd1d0f72ad54"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "asiatimes.com",
+                "www.bnd.com",
+                "www.sunherald.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/p\\/571125\\/player\\.lit\\.ui\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cds"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [],
+            "responseHashes": [
+                "f2d17d0fd99e3b74453fd96227f09cd8cd03460116f126e0c047e60fdde7f273"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "asiatimes.com",
+                "www.bnd.com",
+                "www.sunherald.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/tr\\/sr",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tr"
+            ],
+            "apis": {},
+            "sites": 15,
+            "prevalence": 0.000102,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "asiatimes.com",
+                "www.bnd.com",
+                "www.bradenton.com",
+                "www.huffingtonpost.co.uk",
+                "www.huffingtonpost.com",
+                "www.huffpost.com",
+                "www.idahostatesman.com",
+                "www.islandpacket.com",
+                "www.kansas.com",
+                "www.kansascity.com",
+                "www.ratemyprofessors.com",
+                "www.sacbee.com",
+                "www.sanluisobispo.com",
+                "www.sunherald.com",
+                "www.thenewstribune.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/tr\\/st",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tr"
+            ],
+            "apis": {},
+            "sites": 14,
+            "prevalence": 0.0000951,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "asiatimes.com",
+                "www.bnd.com",
+                "www.bradenton.com",
+                "www.huffingtonpost.co.uk",
+                "www.huffpost.com",
+                "www.huffingtonpost.com",
+                "www.idahostatesman.com",
+                "www.islandpacket.com",
+                "www.kansas.com",
+                "www.kansascity.com",
+                "www.sacbee.com",
+                "www.sanluisobispo.com",
+                "www.sunherald.com",
+                "www.thenewstribune.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/tr\\/mq",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tr"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.0000408,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "asiatimes.com",
+                "www.bnd.com",
+                "www.idahostatesman.com",
+                "www.islandpacket.com",
+                "www.kansas.com",
+                "www.sanluisobispo.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/tr\\/ps",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tr"
+            ],
+            "apis": {},
+            "sites": 10,
+            "prevalence": 0.0000679,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "asiatimes.com",
+                "www.bnd.com",
+                "www.bradenton.com",
+                "www.huffingtonpost.com",
+                "www.huffpost.com",
+                "www.idahostatesman.com",
+                "www.islandpacket.com",
+                "www.kansas.com",
+                "www.sanluisobispo.com",
+                "www.sunherald.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/p\\/571015\\/elLoader\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cds"
+            ],
+            "apis": {},
+            "sites": 10,
+            "prevalence": 0.0000679,
+            "cnames": [],
+            "responseHashes": [
+                "467ca9423488cbb51ac246d7213349451092ebd9358688eeaf4abbfc5b92ea6b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "food52.com",
+                "www.charlotteobserver.com",
+                "www.huffpost.com",
+                "www.idahostatesman.com",
+                "www.kansas.com",
+                "www.kansascity.com",
+                "www.kentucky.com",
+                "www.miamiherald.com",
+                "www.ratemyprofessors.com",
+                "www.sacbee.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/p\\/571015\\/player\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "cds"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 10,
+                "Performance.prototype.memory": 6,
+                "Date.prototype.getTime": 6,
+                "window.localStorage": 6,
+                "Date.prototype.getTimezoneOffset": 6,
+                "Navigator.prototype.doNotTrack": 5,
+                "window.innerHeight": 5,
+                "window.innerWidth": 5,
+                "Navigator.prototype.connection": 4,
+                "NavigatorUAData.prototype.getHighEntropyValues": 4
+            },
+            "sites": 10,
+            "prevalence": 0.0000679,
+            "cnames": [],
+            "responseHashes": [
+                "541d06c6e64daee9b7958e15dbc05caeee2aec80f7c5b9b7a39d4d8db91fbccd"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "food52.com",
+                "www.charlotteobserver.com",
+                "www.huffpost.com",
+                "www.idahostatesman.com",
+                "www.kansas.com",
+                "www.kansascity.com",
+                "www.kentucky.com",
+                "www.miamiherald.com",
+                "www.ratemyprofessors.com",
+                "www.sacbee.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/p\\/571015\\/player\\.renderer\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cds"
+            ],
+            "apis": {
+                "MediaSource.isTypeSupported": 4,
+                "Notification.permission": 1,
+                "Navigator.prototype.plugins": 1
+            },
+            "sites": 6,
+            "prevalence": 0.0000408,
+            "cnames": [],
+            "responseHashes": [
+                "34e02cc48fe6d3da77e27e387bb29de8c29ababdcf2a79cfb615ab59fee1c455"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "food52.com",
+                "www.huffpost.com",
+                "www.idahostatesman.com",
+                "www.kansas.com",
+                "www.kansascity.com",
+                "www.ratemyprofessors.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/a\\/player\\.hls\\.0b5cdb1db969e3da1aa7\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cds"
+            ],
+            "apis": {
+                "URL.createObjectURL": 4,
+                "Navigator.prototype.userAgent": 3,
+                "MediaSource.isTypeSupported": 3
+            },
+            "sites": 6,
+            "prevalence": 0.0000408,
+            "cnames": [],
+            "responseHashes": [
+                "2f79ae0dc519b98680eff029c4b5983d25907719523d63b23897035071813d22"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "food52.com",
+                "www.huffpost.com",
+                "www.idahostatesman.com",
+                "www.kansas.com",
+                "www.kansascity.com",
+                "www.ratemyprofessors.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/p\\/571126\\/elLoader\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cds"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000034,
+            "cnames": [],
+            "responseHashes": [
+                "467ca9423488cbb51ac246d7213349451092ebd9358688eeaf4abbfc5b92ea6b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "montrealgazette.com",
+                "www.bellinghamherald.com",
+                "www.islandpacket.com",
+                "www.myrtlebeachonline.com",
+                "www.sanluisobispo.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/p\\/571047\\/elLoader\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cds"
+            ],
+            "apis": {},
             "sites": 33,
-            "prevalence": 0.000225,
+            "prevalence": 0.000224,
             "cnames": [],
             "responseHashes": [
                 "467ca9423488cbb51ac246d7213349451092ebd9358688eeaf4abbfc5b92ea6b"
@@ -136,67 +668,3664 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "www.huffingtonpost.com",
-                "www.bradenton.com",
-                "www.myrtlebeachonline.com",
-                "www.centredaily.com",
-                "www.mcclatchydc.com",
-                "www.thenewstribune.com",
-                "www.miamiherald.com",
-                "www.tri-cityherald.com",
+                "www.sacbee.com",
+                "www.newsobserver.com",
                 "www.kentucky.com",
-                "www.theolympian.com",
-                "www.sanluisobispo.com",
-                "www.ledger-enquirer.com",
-                "food52.com",
                 "www.modbee.com",
-                "www.huffingtonpost.co.uk",
-                "www.thestate.com",
-                "www.sunherald.com",
-                "www.huffpost.com",
                 "www.star-telegram.com",
-                "www.macon.com"
+                "www.kansas.com",
+                "www.centredaily.com",
+                "www.sunherald.com",
+                "www.tri-cityherald.com",
+                "www.idahostatesman.com",
+                "www.charlotteobserver.com",
+                "www.fresnobee.com",
+                "www.heraldsun.com",
+                "www.flkeysnews.com",
+                "www.mercedsunstar.com",
+                "www.islandpacket.com",
+                "www.ledger-enquirer.com",
+                "www.heraldonline.com",
+                "www.miamiherald.com"
             ]
         },
         {
-            "rule": "thecontentserver\\.com\\/p\\/569566\\/player\\.js",
+            "rule": "thecontentserver\\.com\\/p\\/571126\\/player\\.js",
             "cookies": 0,
-            "fingerprinting": 1,
+            "fingerprinting": 2,
             "subdomains": [
                 "cds"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 33
+                "Navigator.prototype.userAgent": 5,
+                "Performance.prototype.memory": 2,
+                "Date.prototype.getTime": 2,
+                "window.localStorage": 2,
+                "Date.prototype.getTimezoneOffset": 2,
+                "Navigator.prototype.doNotTrack": 2,
+                "window.innerHeight": 2,
+                "window.innerWidth": 2,
+                "Navigator.prototype.connection": 2,
+                "NavigatorUAData.prototype.getHighEntropyValues": 2
             },
-            "sites": 33,
-            "prevalence": 0.000225,
+            "sites": 5,
+            "prevalence": 0.000034,
             "cnames": [],
             "responseHashes": [
-                "14438a4b0b858a2c6ee00393b6af985d6536d7591f976cd146b573168243a0e5"
+                "598c82a140b2ab6b305b66d8848a3dfb612e12758a5e39ab35de48dc49e2a2a1"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "montrealgazette.com",
+                "www.bellinghamherald.com",
+                "www.islandpacket.com",
+                "www.myrtlebeachonline.com",
+                "www.sanluisobispo.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/p\\/571047\\/player\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "cds"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 33,
+                "Performance.prototype.memory": 6,
+                "Date.prototype.getTime": 6,
+                "window.localStorage": 6,
+                "Date.prototype.getTimezoneOffset": 6,
+                "Navigator.prototype.doNotTrack": 6,
+                "window.innerHeight": 6,
+                "window.innerWidth": 6,
+                "Navigator.prototype.connection": 5,
+                "NavigatorUAData.prototype.getHighEntropyValues": 5
+            },
+            "sites": 33,
+            "prevalence": 0.000224,
+            "cnames": [],
+            "responseHashes": [
+                "bff0fded341b7a7256f7f681016c754416c92ada53f3433ddb00a0888ea4d6b6"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "www.huffingtonpost.com",
-                "www.fresnobee.com",
-                "www.mcclatchydc.com",
-                "asiatimes.com",
-                "www.sunherald.com",
-                "www.newsobserver.com",
-                "www.huffpost.com",
-                "www.myrtlebeachonline.com",
-                "www.thenewstribune.com",
-                "www.islandpacket.com",
                 "www.theolympian.com",
-                "www.miamiherald.com",
-                "www.sacbee.com",
+                "www.macon.com",
                 "montrealgazette.com",
+                "www.huffingtonpost.co.uk",
+                "www.bnd.com",
+                "www.modbee.com",
                 "www.thestate.com",
-                "www.kentucky.com",
+                "www.miamiherald.com",
+                "www.sanluisobispo.com",
+                "www.bellinghamherald.com",
+                "www.bradenton.com",
+                "www.huffpost.com",
+                "www.tri-cityherald.com",
+                "www.islandpacket.com",
                 "www.star-telegram.com",
-                "www.kansas.com",
-                "www.charlotteobserver.com",
+                "www.heraldonline.com",
+                "www.heraldsun.com",
+                "www.myrtlebeachonline.com",
+                "www.thenewstribune.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-3e38606d-e632-4f73-9236-af2a0346e3b5\\/203535e1-68dd-4b03-ae4f-bb14a238ac00\\/mmid-f41e4fd0-0dc9-f61b-b740-e4eac0e377f8\\/2\\.mp4",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "8792f57d012cf905d6c4cbce92086aab7977641e5c651dbf65e4d7102be26486"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bnd.com",
                 "www.bnd.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/p\\/571047\\/player\\.renderer\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cds"
+            ],
+            "apis": {
+                "MediaSource.isTypeSupported": 6,
+                "Notification.permission": 2,
+                "Navigator.prototype.plugins": 2
+            },
+            "sites": 6,
+            "prevalence": 0.0000408,
+            "cnames": [],
+            "responseHashes": [
+                "5a2633a5bd1fff5ad5fa33c0564261e5d9fc7d1b27ef4cb7e48822920366e0d6"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bradenton.com",
+                "www.huffingtonpost.co.uk",
+                "www.huffingtonpost.com",
+                "www.huffpost.com",
+                "www.sacbee.com",
+                "www.thenewstribune.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/a\\/player\\.hls\\.a76cd8c24e3ca7e50a8b\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cds"
+            ],
+            "apis": {
+                "URL.createObjectURL": 6,
+                "MediaSource.isTypeSupported": 5,
+                "Navigator.prototype.userAgent": 4,
+                "Navigator.prototype.onLine": 1
+            },
+            "sites": 6,
+            "prevalence": 0.0000408,
+            "cnames": [],
+            "responseHashes": [
+                "eb0f11ad1f0698c1e88b20b82ad63c796ee22f9d9b746de291f76c4ab40ac8a1"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bradenton.com",
+                "www.huffingtonpost.co.uk",
+                "www.huffingtonpost.com",
+                "www.huffpost.com",
+                "www.sacbee.com",
+                "www.thenewstribune.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/a\\/player\\.iframe\\.integration\\.destroy\\.bdd2e12c3db81098fe01\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cds"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.0000408,
+            "cnames": [],
+            "responseHashes": [
+                "e19d4704f5459743ce4be1f32a0b87cb9a5d497742ecadd8598022e3b4d353a0"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bradenton.com",
+                "www.huffingtonpost.co.uk",
+                "www.huffingtonpost.com",
+                "www.huffpost.com",
+                "www.sacbee.com",
+                "www.thenewstribune.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/p\\/571047\\/player\\.lit\\.ui\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cds"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.0000408,
+            "cnames": [],
+            "responseHashes": [
+                "922e69d8433d9463138dbeae1de8e8cace35f15846b4e1a972c7d150bccc0a37"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bradenton.com",
+                "www.huffingtonpost.co.uk",
+                "www.huffingtonpost.com",
+                "www.huffpost.com",
+                "www.sacbee.com",
+                "www.thenewstribune.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-bc413aa5-47c1-459b-bf06-82a61bffa60f\\/0cf799c7-ebea-46f1-abb2-a71c3545a66b\\/mmid-d2ecad08-7665-b26b-c479-744233dc9921\\/2\\.mp4",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "673ad26ee98d94253f16d2f2c99b34a5004276faa8abb70e2568f8754ba012f8"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bradenton.com",
+                "www.bradenton.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/6124bf30-f5ae-4fe3-8abe-808e08a05a4d\\/4\\/insights\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ins"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [],
+            "responseHashes": [
+                "3d098897c2d6b65ec09ba76b3afa48c16771e3aa55cb8ada80bfe0c67f2d619b"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.co.uk",
+                "www.huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/60c5351d-247c-4d0a-95c2-46c082057797\\/7\\/insights\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ins"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [],
+            "responseHashes": [
+                "98781309d225024882746575f85ba779e2fa3a81ad9e7510f79c26d2c8591094"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.co.uk",
+                "www.huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/83d35435-59b4-4c21-a29d-2f6f75c34e77\\/4\\/insights\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ins"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [],
+            "responseHashes": [
+                "b04bd5a6a9ae15826e1ec3ff7e6aaa978918b1cba4e36e90ef692bcde4248438"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.co.uk",
+                "www.huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/8b55b491-7152-4aa0-8e93-6d4b55e15000\\/3\\/insights\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ins"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [],
+            "responseHashes": [
+                "31e1833c195950bbf77ef8d8fbc168462b840d5262a433d6daed1555d2024b9a"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.co.uk",
+                "www.huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/ad802779-d43e-4ffb-833a-56a86a8f786d\\/4\\/insights\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ins"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [],
+            "responseHashes": [
+                "5812ad2c26f9571dab5cb955d5c93deec4bdbc73152a76874c000c5be961d39f"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.co.uk",
+                "www.huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/39a9ea13-33d7-44cd-8487-e21c6abf7ac4\\/3\\/insights\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ins"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [],
+            "responseHashes": [
+                "9ce88f4b2e3bed2123e2995ebe6aa5f26113733dbff7c3588fc029d4707f3145"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.co.uk",
+                "www.huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/9b64c0b0-5efa-42ae-babc-a07c695c9880\\/4\\/insights\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ins"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [],
+            "responseHashes": [
+                "8acd5bfb923f34cc8182458fc15f6f3b33379851967917bb7408295859e0ba1f"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.co.uk",
+                "www.huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/27fc4054-bd00-4176-9d18-b58beb229eef\\/4\\/insights\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ins"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [],
+            "responseHashes": [
+                "c24950f2bd35aaf3751b6514fecad633c866d3207f73ea3754cc4225f2c5f2d4"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.co.uk",
+                "www.huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/9a2958c2-2d10-4789-9abf-1e496c5571d4\\/3\\/insights\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ins"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [],
+            "responseHashes": [
+                "4a3381992bd99a55167bd9bd56403ad12a1d41683f4d5975f2093c046ec4a8ec"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.co.uk",
+                "www.huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/aca841da-6a3a-4b0b-a653-580c1389385e\\/4\\/insights\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ins"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [],
+            "responseHashes": [
+                "7c1138da54da4a0650e86a854b9a60d80683c95e1842348c6655115391bf5730"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.co.uk",
+                "www.huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/c65fc5ea-2d3d-49cc-a184-452e997889ca\\/3\\/insights\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ins"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [],
+            "responseHashes": [
+                "920c0cace26cfc5e7564237bfbf7690d0588cbac119d34a4ad7e88f5e5c6649b"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.co.uk",
+                "www.huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/f473f6ed-ed05-495d-bb05-aae34adcb99a\\/5\\/insights\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ins"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [],
+            "responseHashes": [
+                "7f008bb13307a19763ef41a75f7af1190637f09a4b16c65bd9922bee18017251"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.co.uk",
+                "www.huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/3dc38a54-9556-4aa8-88f1-3d932090b775\\/3\\/insights\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ins"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [],
+            "responseHashes": [
+                "472ba4a44c455816ed9e683e65efba47e845a16686c317a4f220db367522b888"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.co.uk",
+                "www.huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/bc7ba98c-4d9c-4c72-99e7-e63d79b77064\\/4\\/insights\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ins"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [],
+            "responseHashes": [
+                "a390494856d8a98b98d16c88aae4ccaa2a74c50b5a93a1a8aa441a7b9f1358f7"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.co.uk",
+                "www.huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/66f81a76-c0c1-47b5-a999-b31345a4c0fd\\/4\\/insights\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ins"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [],
+            "responseHashes": [
+                "53f4dcab2e78cb5297e1c1bcc3b0361417d9b9435ed4cae1791188c7c1dcf970"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.co.uk",
+                "www.huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/8dcce8d5-23d1-4178-8536-b5d321e21806\\/9\\/insights\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ins"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [],
+            "responseHashes": [
+                "6c912cdca5b568fb39ba108751ddf4fb7fa3c170198f646a5fbdf6b7c1aa8fa0"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.co.uk",
+                "www.huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/720ad95b-814e-418b-a0d9-ab722b49cd82\\/4\\/insights\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ins"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [],
+            "responseHashes": [
+                "1d80cadcfce95a456c56a1b70d75b5cf3017a48fd6f69394277669ddf8adcbf5"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.co.uk",
+                "www.huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/cf096c75-c72c-47d0-8378-17ff12b37489\\/4\\/insights\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ins"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [],
+            "responseHashes": [
+                "be4bcc4bf6249b13109c56693eccec61cf5510d31f0e637265a8b73d3c5b7abc"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.co.uk",
+                "www.huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/0896e3d4-d507-447c-8cfe-d37bf9eb038b\\/4\\/insights\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ins"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [],
+            "responseHashes": [
+                "9459af399bb7d57b9d9a1c36f1046e9226709dedfc33f95f672dea428f11c8ed"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.co.uk",
+                "www.huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/9c0da354-9ddc-4390-8674-d0cb479ac85e\\/4\\/insights\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ins"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [],
+            "responseHashes": [
+                "7ddf135a8a29a00a5d5f7f81801d94c3a854587b12ba30825bcdc4fa97cf0e6d"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.co.uk",
+                "www.huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/465f3729-900b-4502-a428-0ed98c26bcac\\/4\\/insights\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ins"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [],
+            "responseHashes": [
+                "e506901e215cbb388544c3acd59766644205403dcbd3a0d14276701cade1910c"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.co.uk",
+                "www.huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/3000d7d2-362e-4dab-afa3-3cd83ba187d1\\/4\\/insights\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ins"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [],
+            "responseHashes": [
+                "c82376bd9ab581dcc75896442ec027527ff40bb568cb19f890d664b19aec46f2"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.co.uk",
+                "www.huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/d6448d4b-594f-4762-b25e-222c7a4f2289\\/8\\/insights\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ins"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [],
+            "responseHashes": [
+                "74dff1ea9a4a79ace19881a7e54d4e0e06408247c405ed618542bdea1f645437"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.co.uk",
+                "www.huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/43651a68-e57f-43aa-b31b-87e192403eda\\/4\\/insights\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ins"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [],
+            "responseHashes": [
+                "66af2349009a28f88403f19fda659e58c641eb0348470661027f38b768e0e8b4"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.co.uk",
+                "www.huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/f3f53fd0-c691-4ace-9ec0-27d7c801322c\\/4\\/insights\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ins"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [],
+            "responseHashes": [
+                "1a4157dcbf4cede399e03eb4e5a00ab21eadbf6f878c7366634273297babef42"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.co.uk",
+                "www.huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/7c94f24c-1673-4ee1-8813-8382a42980cd\\/4\\/insights\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ins"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [],
+            "responseHashes": [
+                "4bf1d4a4cb8ca3ce6adbe47abce6798ada1f00649a5b4194c9c3ba85487511a7"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.co.uk",
+                "www.huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/46bf1e22-bbb5-4c23-8854-ae3e8d100636\\/4\\/insights\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ins"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [],
+            "responseHashes": [
+                "c85d2c286b7ab64c6d91d6fde66727bafcfc505a24c4dc97a38ea0006cb0f89b"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.co.uk",
+                "www.huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/8363449a-50ca-4a4f-9e18-eaca45aae627\\/3\\/insights\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ins"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [],
+            "responseHashes": [
+                "02d132737d70ffb896cb6c9509174649d7eda287fca102dc1afdc62adc2ee45f"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.co.uk",
+                "www.huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/ce990082-46d1-4c31-8446-5bc63da52b09\\/11\\/insights\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ins"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [],
+            "responseHashes": [
+                "85be1939c6abe59744e4b28fdeea751a8d5c9f029f55ef2a9c2aa6efc838896a"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.co.uk",
+                "www.huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/e7b63b6a-1aa7-4365-9261-07918a2d9ca3\\/4\\/insights\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ins"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [],
+            "responseHashes": [
+                "c46661d5f8ef26ab1a6797dda07ea570cbc84213f4f25061edde4630ccca7ef1"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.co.uk",
+                "www.huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/c5f1cdff-9173-4385-93e0-724ebd076827\\/3\\/insights\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ins"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [],
+            "responseHashes": [
+                "ae21e6f96f89d23753fed917993159a82660d515626c8df280cae9372f3263aa"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.co.uk",
+                "www.huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/4aa7fbc9-9681-47d4-8e4a-ba12db1fc8be\\/3\\/insights\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ins"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [],
+            "responseHashes": [
+                "cdcde27fa7b7d5e0414ce1f158faa6586b6c7cf8c0aa0565c6ef1ee4eb6ff12d"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.co.uk",
+                "www.huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/7156c908-e712-45a5-b266-7e780440e408\\/3\\/insights\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ins"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [],
+            "responseHashes": [
+                "9dc7096f1b7be7b45000eb04d247152342ae30aa7c5ce6bd2631cd758a312bc3"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.co.uk",
+                "www.huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/33c3e1d0-3849-4b5d-a171-df39bffa4de0\\/4\\/insights\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ins"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [],
+            "responseHashes": [
+                "9f0696f2f9661197f29bd21ac3188368d2280c9af75aac73f5fce8efde1eaae6"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.co.uk",
+                "www.huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/22116550-6f25-44b6-94ab-df8a6aa3bbb8\\/7\\/insights\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ins"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [],
+            "responseHashes": [
+                "0b994ac64d4bb7e2df30df065a64cffed75ccdcd72e17cf51b3317e55cdf94ec"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.co.uk",
+                "www.huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/805aa3b8-eec1-4a05-b3d1-2b5bfbbf0fb9\\/3\\/insights\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ins"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [],
+            "responseHashes": [
+                "5256c68bf0659ebd94836e230b4c735ae97984134503d3a73b1ab3e4c8118239"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.co.uk",
+                "www.huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/9f6d8353-6813-48bb-a228-7aacd9c01677\\/4\\/insights\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ins"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [],
+            "responseHashes": [
+                "a69d3d87f4a7ffa6c49bfcc0c0d046174694ed315577852f87843747e8deea3a"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.co.uk",
+                "www.huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/24f80971-61cf-40dd-9e9f-a5f911c6be93\\/3\\/insights\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ins"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [],
+            "responseHashes": [
+                "d4a3254393ea6c591cf28b625b3a132b89d6e35c128567e71cd63afb83747242"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.co.uk",
+                "www.huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/d3a86ca8-e796-4254-aa43-d8e6e268b364\\/7\\/insights\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ins"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [],
+            "responseHashes": [
+                "6e7931ecc8e8ffe28afb35b4fc6d495ccf7949825a67a990a48bbe48e09d09ce"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.co.uk",
+                "www.huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/60326445-c368-4858-abad-183bfdeae522\\/4\\/insights\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ins"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [],
+            "responseHashes": [
+                "02b3018d76897b8d1434c56eeb30f346f9e24239917c9dcd106765a0d9f6aa24"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.co.uk",
+                "www.huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/08c47b08-59c0-421b-b5c3-0f92d35c4cdb\\/4\\/insights\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ins"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [],
+            "responseHashes": [
+                "0737b65bb485e1678df1d9800265b57487d047b5403ea2bd697f74d6963671bd"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.co.uk",
+                "www.huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/65d7b424-f851-4322-9396-5c7069aa30ad\\/3\\/insights\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ins"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [],
+            "responseHashes": [
+                "b65252ac95d1981281c0fc99c79d343a55aacd759823c25de4459149e6d69de7"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.co.uk",
+                "www.huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/744f97ad-c78e-4eaf-8376-4fe9f0a13089\\/4\\/insights\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ins"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [],
+            "responseHashes": [
+                "85d30ef5ca50fa55164173ea1b89a4d2fc678339f9b430e12ce4d23185a117be"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.co.uk",
+                "www.huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/p\\/571047\\/player\\.floating\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cds"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [],
+            "responseHashes": [
+                "80b3e6015359991635ee3d0ac1fab5e681cfc4ba915bc1da5ea2a73bfaf58040"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.co.uk",
+                "www.huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-75373d5b-adb7-431e-b89e-e883827a9eb1\\/6124bf30-f5ae-4fe3-8abe-808e08a05a4d\\/mmid-d51eee02-87ed-c9a7-984e-71b32ad15ccf\\/0\\.mp4",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "aa2f017573adde885594d63dfd2e2d594e1d8e9ff861fecd43ea7285a2326d46"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.co.uk",
+                "www.huffingtonpost.co.uk"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-75373d5b-adb7-431e-b89e-e883827a9eb1\\/6124bf30-f5ae-4fe3-8abe-808e08a05a4d\\/mmid-d51eee02-87ed-c9a7-984e-71b32ad15ccf\\/2\\.mp4",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "3ce9ad706616b2c0b694a0caa290d4cc97a0f138184730f0d37ba31b00110f8e"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.co.uk",
+                "www.huffingtonpost.co.uk"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/6124bf30-f5ae-4fe3-8abe-808e08a05a4d\\/4_media\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "e6ff09c1c7e857522bc8ba36a03ac1808f79aaf25c8b3e0198060cd6e60ce192"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/c542a6964d48e539ef831a37e1a7ab14\\/insights\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ins"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "522e9d1f7f10f48f432bf73145dd795429dbfac452d0ce02b0fdbc9a8b9394e5"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/60c5351d-247c-4d0a-95c2-46c082057797\\/7_media\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "6d74db85d4c2a0906463457b5b40644e3d968727306906ca81c014099719f9b2"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/83d35435-59b4-4c21-a29d-2f6f75c34e77\\/4_media\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "a6bb48709b3565b67984f082a60ceb3bd60aafe2ce83b21618ceb6fc1c89de2b"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/8b55b491-7152-4aa0-8e93-6d4b55e15000\\/3_media\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "f2658dc442bb9a8af02d95be574ec9dc519d1324944b9d44778ea946203a983f"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/ad802779-d43e-4ffb-833a-56a86a8f786d\\/4_media\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "f452be6effe26f4926dbd1099e7fcd321a3933651808fc34586e9138d3906332"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/39a9ea13-33d7-44cd-8487-e21c6abf7ac4\\/3_media\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "0ffc03421d67df2cf2f137da7b0543306ba302011265ac83d86a10b1f8dc5a41"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/9b64c0b0-5efa-42ae-babc-a07c695c9880\\/4_media\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "1344cf329fa2248e31a0a13257d8059c40375d127e213e1fb8ac7cc72f48f1bd"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/27fc4054-bd00-4176-9d18-b58beb229eef\\/4_media\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "478ce54bbffb06277de19a2e3f21fd29588d835c89da8efd0c6b5477a5bfb51e"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/9a2958c2-2d10-4789-9abf-1e496c5571d4\\/3_media\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "067c9d9da9ae0d0eb1bf901efc6e1aa9ba0424f5dc3d64db8b875123f0f9be8c"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/aca841da-6a3a-4b0b-a653-580c1389385e\\/4_media\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "639bc76848b1cd2fe0d0b11c9939c87a1737e7dcd5d72a8807c4979e6b357915"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/c65fc5ea-2d3d-49cc-a184-452e997889ca\\/3_media\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "23a3f215bdc9934fe4fa0b972b68696ff989748ccf4aa156538427331dc39f08"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/f473f6ed-ed05-495d-bb05-aae34adcb99a\\/5_media\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "27d2e591555486f3e8cf0732ca5bebdfeddfae268a2c1aa9079c6c5d1ce1ae11"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/3dc38a54-9556-4aa8-88f1-3d932090b775\\/3_media\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "415aae68a30b5d1b15ce6aeba3134d1e7137d05d55fd9926d5de5b103320c2a8"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/bc7ba98c-4d9c-4c72-99e7-e63d79b77064\\/4_media\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "c4f05f4ce7765e3f870c311c92839007734190823b8fd907405e1a3be277db6c"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/66f81a76-c0c1-47b5-a999-b31345a4c0fd\\/4_media\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "6fdd11b4991695386e5c304f9a9b72308c1718b1ef86ebfc80b1d06f677da51d"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/8dcce8d5-23d1-4178-8536-b5d321e21806\\/9_media\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "c2545fc57d89a09178df357a16bbbf7cb0e51602ad9d905a2f4d2f5156ad1b86"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/720ad95b-814e-418b-a0d9-ab722b49cd82\\/4_media\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "427ce55bb4b7612d7308735d5eefbb6468709e47834aa9aca48b62ed0b45371f"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/cf096c75-c72c-47d0-8378-17ff12b37489\\/4_media\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "663cf2fc1672cabc89bc405f1f7ac2b8ba8b2fe2b1c57b51331b804617ed332f"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/0896e3d4-d507-447c-8cfe-d37bf9eb038b\\/4_media\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "45c828e1f4e24ea79433f28835b8615a64025e1b87261be55f7f3f6be38f636a"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/9c0da354-9ddc-4390-8674-d0cb479ac85e\\/4_media\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "fccffd199e6a0dc1b648cf39a37eb8aaffa08ee13ef089ec3224d95c507597e2"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/465f3729-900b-4502-a428-0ed98c26bcac\\/4_media\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "6e556a53453959c6a133b06606324e68cb4ecc67a9ff271397b28fbed26eb331"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/3000d7d2-362e-4dab-afa3-3cd83ba187d1\\/4_media\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "7d4f53168879a68838de00bfdd874c4192370c709a64595f653599f75d1386d8"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/d6448d4b-594f-4762-b25e-222c7a4f2289\\/8_media\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "cc3153a3ea7506af5f6f7b7a53fe6b90dcd3b0b9e95d96cde49fda23818fd0b3"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/43651a68-e57f-43aa-b31b-87e192403eda\\/4_media\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "96ff1067e25668b942167b0bf660e14f7167ba7e2af566902910cae2a1773c7e"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/f3f53fd0-c691-4ace-9ec0-27d7c801322c\\/4_media\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "7131f582d3f8c043398d5943b06045503b906837192502c04f1c7b4a95786bcf"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/7c94f24c-1673-4ee1-8813-8382a42980cd\\/4_media\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "4a6e8e6332804a0dbf860edfd7403b52572cada00d552813de97fdf4dc7d4bb6"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/46bf1e22-bbb5-4c23-8854-ae3e8d100636\\/4_media\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "53e743f0b55c7603d8f87fb29cb0b44e6c1c0ef0fa1f12a01597b7ba30f8f1a0"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/8363449a-50ca-4a4f-9e18-eaca45aae627\\/3_media\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "48e6b172cefdf31856f2b370c9faad4cfd3b85575153f1ada0cf3a7cc7e10a46"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/ce990082-46d1-4c31-8446-5bc63da52b09\\/11_media\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "3945425d6caec7c20ea432523293b1cc0d8bb7a550a1702526abcf7086fd6754"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/e7b63b6a-1aa7-4365-9261-07918a2d9ca3\\/4_media\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "4fdc3376112cd8b413455a84f3b9217e4b2ccd90e4824f594186bb9700d41d83"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/c5f1cdff-9173-4385-93e0-724ebd076827\\/3_media\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "9d84b0a4d41307e7b48b2848767a38786590f0909fbf772e1339f766096ec791"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/4aa7fbc9-9681-47d4-8e4a-ba12db1fc8be\\/3_media\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "3f24e1e8ca9cee62369672dabc7f5497dfc689fe7c0664ead8bd93da1d1e6c98"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/7156c908-e712-45a5-b266-7e780440e408\\/3_media\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "29b87243f0fce81edeb1200b1889131d15f22f660126099484913da8c671cfb5"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/33c3e1d0-3849-4b5d-a171-df39bffa4de0\\/4_media\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "dec191221de1a5cd6694d5d8d8a32c48e3dc081318e2e443e67e746774fe68ad"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/22116550-6f25-44b6-94ab-df8a6aa3bbb8\\/7_media\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "999a107c5a6597ba22ed1371d7405e517a806056aa33404fa49b4d83d8dffb22"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/805aa3b8-eec1-4a05-b3d1-2b5bfbbf0fb9\\/3_media\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "48d3964032bfdae2fae834b94639faa36e79481d63e5a6e2ccfc50af27f436da"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/9f6d8353-6813-48bb-a228-7aacd9c01677\\/4_media\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "16c96cb1473b5fae3ded9303b3efe985f1dae514609b8d379bd1ba3efa7224ad"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/24f80971-61cf-40dd-9e9f-a5f911c6be93\\/3_media\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "aba87080d90ee85b52f4dd35123949175a8d0fc705e9be10f64ce0fcfee9ad02"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/d3a86ca8-e796-4254-aa43-d8e6e268b364\\/7_media\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "d76e4f320841596900d07d9eb84b6fe8c047a886f5422428db8332aec0869d8c"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/60326445-c368-4858-abad-183bfdeae522\\/4_media\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "79c568b5ba37b536cfa2eb00082172d1c2676c7d9ad8927e5209399f9a19af4c"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/08c47b08-59c0-421b-b5c3-0f92d35c4cdb\\/4_media\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "e38e6cecfaac7addf06f1f46c995632ed894c2ed72c73060f9017a816fbe400c"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/65d7b424-f851-4322-9396-5c7069aa30ad\\/3_media\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "fe9de5d1a8e297d2fb255afaf26d0287a3db44bec4cbdd27d92b7d817e9498b8"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/744f97ad-c78e-4eaf-8376-4fe9f0a13089\\/4_media\\.bin",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "a724106d4682a53bcd197c952e1824b903c3dfb71c5cdf3a8c5ee075e13b5d4b"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/6124bf30-f5ae-4fe3-8abe-808e08a05a4d\\/1_th\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "img"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "b5841aa987cf64fdfdde091727092ffe8d9372832a6507f884331f810fb8caf7"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/ad802779-d43e-4ffb-833a-56a86a8f786d\\/1_th\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "img"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "919d292a8241923cdc046554efaabf2f2905a1504631459b7c8e81b2bc2ad1f4"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/9a2958c2-2d10-4789-9abf-1e496c5571d4\\/1_th\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "img"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "1be97d3cd5cd66116cd65d4ad2f9aaf2db346141e50b3a02cf68cfba506aa7fb"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/c65fc5ea-2d3d-49cc-a184-452e997889ca\\/1_th\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "img"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "2f4a58f12abb7a56020e94bc662b25666a34a238b75647ca9d48f3cae4412719"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/8b55b491-7152-4aa0-8e93-6d4b55e15000\\/1_th\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "img"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "a675b320597fd259f2025f0bd41158f29ea679a01ddd5e3055403b59e418da0e"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/60c5351d-247c-4d0a-95c2-46c082057797\\/2_th\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "img"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "e60f8170f7d9031a66bca515b145c37e11f9c065edd3f3d0977bb77b917ac3d9"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/f473f6ed-ed05-495d-bb05-aae34adcb99a\\/1_th\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "img"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "a7bf61786ca9a4c34d8bb3b67f0d5f56fbf4e7a3ffb19e70d00c01c3f9ba49c7"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/9b64c0b0-5efa-42ae-babc-a07c695c9880\\/1_th\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "img"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "f7fba39b734372a5e755c33dec86ba7cd1bbf405016ade1317cbd0ff70074394"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/aca841da-6a3a-4b0b-a653-580c1389385e\\/1_th\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "img"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "d54613660f9dde0132a125b1d3b48ac7227a4173b76a42bd042934da9278538d"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/9c0da354-9ddc-4390-8674-d0cb479ac85e\\/1_th\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "img"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "b965e2e77da112fe1f609bde72ce1f6bfb763b5e4ca7874f4cd6563a1fa0e80f"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/8dcce8d5-23d1-4178-8536-b5d321e21806\\/1_th\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "img"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "8fe49804690cf3d93940dc24262c5cf8c38ab37279bdf300246a33d36284ccf7"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/66f81a76-c0c1-47b5-a999-b31345a4c0fd\\/1_th\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "img"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "de9ad7104c8ce347154f7513b0096508c1a806f0f16ea4a8525da4750a054ddd"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/3dc38a54-9556-4aa8-88f1-3d932090b775\\/1_th\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "img"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "8b3655e247814d360ac0da94c9ebbda4c6f76a8f02b04edccb8a03133daad45f"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/83d35435-59b4-4c21-a29d-2f6f75c34e77\\/1_th\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "img"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "129a24039a8d9b556d584bc22cb28cf7483eda819405e9e235a97e4ddefcf968"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/0896e3d4-d507-447c-8cfe-d37bf9eb038b\\/1_th\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "img"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "7f3cc6134f6336709757ec74b1d6fd8210ebd86d3be54f7696441b9cda93cb5d"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/cf096c75-c72c-47d0-8378-17ff12b37489\\/1_th\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "img"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "8be1fed52e6341d751a7fe2360f87a7e9139023aecb0528603c105d599a168a7"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/bc7ba98c-4d9c-4c72-99e7-e63d79b77064\\/1_th\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "img"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "be6791e47cd3b6a072efa56de2434c03d11004b1584477ea58c458a9746bcff3"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/e7b63b6a-1aa7-4365-9261-07918a2d9ca3\\/1_th\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "img"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "e4e7aef7ebbd3cbf71c04b11a126cd90631a930b8cabd05c8a0a16ac89423b67"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/d6448d4b-594f-4762-b25e-222c7a4f2289\\/1_th\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "img"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "3d35024c85bdf1b53c9e3f118f7e3392b4bda1b9ce771925ebd402ef46d9e2e2"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/27fc4054-bd00-4176-9d18-b58beb229eef\\/1_th\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "img"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "3cd32b0af3b685013366d198b42d7de8d8d1815539278e66f0064ee1c9c8aa49"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/ce990082-46d1-4c31-8446-5bc63da52b09\\/2_th\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "img"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "9e3aebf105e3717b646ef9e7884afe065d8947d4e3d4f85325ba355498e38b30"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/d3a86ca8-e796-4254-aa43-d8e6e268b364\\/1_th\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "img"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "b966666bf5dd5e5d3de8d967af1c1514e05c1993fcfdbf578bc86acf291600c8"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/465f3729-900b-4502-a428-0ed98c26bcac\\/1_th\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "img"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "08a3eea5fb92685144b2ba6d17ccf2829368f26d599c323e91da215facb2b1d2"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/c5f1cdff-9173-4385-93e0-724ebd076827\\/1_th\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "img"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "65d4c1b5c039677eaebac49a8399190a08bed845137b5ecd8900f600c8d06a2e"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/8363449a-50ca-4a4f-9e18-eaca45aae627\\/1_th\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "img"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "742d0ade9acba95f07e88f0908b5bf81a3d91e66a746a04aaee5462e38537985"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/f3f53fd0-c691-4ace-9ec0-27d7c801322c\\/1_th\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "img"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "0ead14cccdfb71010909432f5fc565cfa4e1e69c010a9b8d163426ca4f6b51e9"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/33c3e1d0-3849-4b5d-a171-df39bffa4de0\\/1_th\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "img"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "11fb5705561123f2b2345be0f5b6950c56ecc2abff6d93b53d144bab119e23fe"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/4aa7fbc9-9681-47d4-8e4a-ba12db1fc8be\\/1_th\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "img"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "823d3560eb14a3e1ba111b1d742eb2432b3ac16168e28be39ed9b49ed6a40b14"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/08c47b08-59c0-421b-b5c3-0f92d35c4cdb\\/1_th\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "img"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "cc5f8c1a3ad9f35a7150dcd7e986b180738a224d6a91cf4b5c826d41674039ff"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/805aa3b8-eec1-4a05-b3d1-2b5bfbbf0fb9\\/1_th\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "img"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "11ec3c761ebd3594d65cd4e9c067d1246e4d2cd5d31be0fc8c076a4fc8a2be83"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/7156c908-e712-45a5-b266-7e780440e408\\/1_th\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "img"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "0b02d2b73206cd3a83d246f7797b8c5dbb16431cc677dfb2068b01c03722745e"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/720ad95b-814e-418b-a0d9-ab722b49cd82\\/1_th\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "img"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "3af524ef392b832131701ee903a3256f0c4048f93c4554df5598de3cd106ece0"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/43651a68-e57f-43aa-b31b-87e192403eda\\/1_th\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "img"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "75c8d672e61b176a8ea13375e6eb5942d99032da6c0c1890695e9cab4e7fbfc0"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/7c94f24c-1673-4ee1-8813-8382a42980cd\\/1_th\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "img"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "fab0bb6d0666637b111a11bb825d2a5cace6fc494109cd8a531f7045d7a64ba8"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/60326445-c368-4858-abad-183bfdeae522\\/1_th\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "img"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "316d73512cc015855f2705652481ef3a2f7334a3a7cb465fb7c3a6067562a36c"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/65d7b424-f851-4322-9396-5c7069aa30ad\\/1_th\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "img"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "22bbda014d5458653b27ffe09f1ff77e2d5a6d04655189b1ad4bbcffb16a6d79"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/3000d7d2-362e-4dab-afa3-3cd83ba187d1\\/1_th\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "img"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "e11d2b1d5db942d2ec1093b130b7f670ae9ebcedafc9c8dedef434e27d185c23"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/22116550-6f25-44b6-94ab-df8a6aa3bbb8\\/1_th\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "img"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "e9fabf31f20689be69c3b74eb59a30e90c33bbf5dda810e85c133623af8f429e"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/46bf1e22-bbb5-4c23-8854-ae3e8d100636\\/1_th\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "img"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "30b9218c3a6c9cc673ea0bc13eaddb41b2a0c2dedfa680b12b2a448ce8d9fec8"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/9f6d8353-6813-48bb-a228-7aacd9c01677\\/1_th\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "img"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "b3d7b153a4a46121031e2a9444836f31758b95c051ccd9c586118f00972f3f11"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/744f97ad-c78e-4eaf-8376-4fe9f0a13089\\/1_th\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "img"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "01d744f2f96883ed822c73d8aba1bfd31164189bb2c5d98c881780be91e28906"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/24f80971-61cf-40dd-9e9f-a5f911c6be93\\/1_th\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "img"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "af01202194653a3201ff6c343412f07b8cc06d79141ea91a509b902c21cb3388"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/39a9ea13-33d7-44cd-8487-e21c6abf7ac4\\/1_th\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "img"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "caaad5b5d700c4efea2a0e55fa2a300baf29d76110f08c0ad68152be95317788"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/6124bf30-f5ae-4fe3-8abe-808e08a05a4d\\/5f40cf23-d23f-42a6-9f8e-8af1af2a3eae_1_tr\\.vtt",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "7751a304ba6d5dc707adc8b8ca5eac1bdfdaa54b9ac9da88f412cbea854afc4c"
+            ],
+            "type": "TextTrack",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/6124bf30-f5ae-4fe3-8abe-808e08a05a4d\\/mmid-d51eee02-87ed-c9a7-984e-71b32ad15ccf\\/playlist\\.m3u8",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "9ecf119c4aa538aad25ca6c9568fc9f96bcaee011a0358610139af4a33639ef7"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/6124bf30-f5ae-4fe3-8abe-808e08a05a4d\\/mmid-d51eee02-87ed-c9a7-984e-71b32ad15ccf\\/0\\.m3u8",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "d2cb09f908fbafcb2c13d070e9936ae3f6c1fed6e1c717c248255b1431ec373c"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-08c32caf-3de9-4dec-b089-28af763b377b\\/6124bf30-f5ae-4fe3-8abe-808e08a05a4d\\/mmid-d51eee02-87ed-c9a7-984e-71b32ad15ccf\\/0\\.mp4",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vid"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [],
+            "responseHashes": [
+                "aa2f017573adde885594d63dfd2e2d594e1d8e9ff861fecd43ea7285a2326d46",
+                "4c7ba09b6672e14bd6414d339d6d502c069512eac2217e8ebd9f67c541b4a803"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffingtonpost.com",
+                "www.huffingtonpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/a\\/player\\.iframe\\.integration\\.destroy\\.08462f3ebe82381f1444\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cds"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000272,
+            "cnames": [],
+            "responseHashes": [
+                "17bbd93ff98928cb2e119328aa4e5d82eee4bf97ec9e8bdbd96bd0b54d81d259"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffpost.com",
+                "www.idahostatesman.com",
+                "www.kansas.com",
+                "www.kansascity.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/p\\/571015\\/player\\.lit\\.ui\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cds"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000034,
+            "cnames": [],
+            "responseHashes": [
+                "342294b5649b88e002ae61b9fe5b288ab4c74602f7c45f4b466a6c0e9911988e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffpost.com",
+                "www.idahostatesman.com",
+                "www.kansas.com",
+                "www.kansascity.com",
+                "www.ratemyprofessors.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-ff7fdddc-5441-4253-abc4-f12a33fad58b\\/465f3729-900b-4502-a428-0ed98c26bcac\\/mmid-3a356b33-37ea-8cac-7a12-4f3ca373f7ec\\/0\\.mp4",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "huffpost.com",
+                "www.huffpost.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-da11a3fe-4176-473c-a710-1414fafbed62\\/fa87d444-56a0-4cb7-afee-75d46f8d8ea2\\/mmid-8f34c360-6167-6fc3-253f-b317078f4e94\\/0\\.mp4",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "de7d81941c2f25d47b5f1de44bb2fea61b4151560644e96d5b370ccc5d26dc8b"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "idahostatesman.com",
+                "www.idahostatesman.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/p\\/571126\\/player\\.renderer\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cds"
+            ],
+            "apis": {
+                "MediaSource.isTypeSupported": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "3e07d6764d40774e0a666ca118e3fd670a822d31fc4bc2595198ed8939a40d57"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "islandpacket.com",
+                "www.sanluisobispo.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/a\\/player\\.hls\\.8132e568eead27dc63be\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "cds"
+            ],
+            "apis": {
+                "URL.createObjectURL": 2,
+                "MediaSource.isTypeSupported": 2,
+                "Navigator.prototype.onLine": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "7f722c0ad1a0b38769f5ecf502cfc2fdb1ae348a377891bbba2ffeaa2e678a19"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "islandpacket.com",
+                "www.sanluisobispo.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/a\\/player\\.iframe\\.integration\\.destroy\\.808f83e5d2cb1bde9e75\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cds"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "a2888a1ead245b3d08f04e4b1d8cd925db3a41ee68566af701def0b32af0713e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "islandpacket.com",
+                "www.sanluisobispo.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/p\\/571126\\/player\\.lit\\.ui\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cds"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "c982b76f47b3b6724e22437ada1108aea791fb143ce62dc2d1a53727c3f44d29"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "islandpacket.com",
+                "www.sanluisobispo.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-2dc1ce6e-9c3a-4238-bb0f-53ddcc38f7e1\\/9721e51e-2462-45d8-968c-3edd3056024b\\/mmid-989d4ba5-02e7-988b-59e5-5f8e8158c220\\/2\\.mp4",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "64fdb0ff1f4faa7c95f75c4d8beeef75f557b47fe70de9b2bea9e62dceb28328"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "islandpacket.com",
+                "www.islandpacket.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-1565d9b5-8f05-4adf-b72e-dce5c7806fc4\\/05c82947-e8b0-4292-be55-8fbd2b2a4787\\/mmid-f2428cf6-15aa-d5ca-b512-4908f2bf5ea3\\/2\\.mp4",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "91e17db91e54e6494f3946b569e76083487d6142d4298147fc89c0324c068446"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kansas.com",
+                "www.kansas.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-88d4644b-bf54-4155-b202-6f20df793521\\/03f86bcc-e9e8-4d08-8e0a-933547d7f6a4\\/mmid-58154163-4352-ab32-d95e-6ab0015e59f0\\/2\\.mp4",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "7315ad6e5ae077954e0740bfc129fed20e76a43067901c1791e4c2bdc6632024"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kansascity.com",
+                "www.kansascity.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-a5384e01-d9ee-444b-b779-538bcdaa550d\\/6871b40f-bb5a-4080-8d2c-26e97c1460cc\\/mmid-074f778f-6290-80e7-a73f-40b17032c2cf\\/2\\.mp4",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sacbee.com",
+                "www.sacbee.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-a673da61-1c19-4ff6-bffa-03e9418b2db0\\/e010fc7d-36a5-4ccd-aea3-17f7d33c89a5\\/mmid-d10fd587-dec3-e558-74c0-954b269be873\\/2\\.mp4",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sanluisobispo.com",
+                "www.sanluisobispo.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-a673da61-1c19-4ff6-bffa-03e9418b2db0\\/e010fc7d-36a5-4ccd-aea3-17f7d33c89a5\\/mmid-d10fd587-dec3-e558-74c0-954b269be873\\/1\\.mp4",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "8df6cdd0147e68a4903959e75aa7de8acbc353f471b2383f8a2ac0ecea44830f"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sanluisobispo.com",
+                "www.sanluisobispo.com"
+            ]
+        },
+        {
+            "rule": "thecontentserver\\.com\\/pid-a44d1d54-bdce-4113-be09-3f29b7eb1e4e\\/a2516c5f-e4e2-4524-9c41-8662dc122bf7\\/mmid-084f0175-a575-2c42-80d7-3b797b67085e\\/2\\.mp4",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "7b2c595ef6f9656f5dea648e52f310e1a430d9f9d97714e2826d16e833548be9"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sunherald.com",
+                "www.sunherald.com"
             ]
         }
     ],
@@ -206,29 +4335,40 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.4722222222222222
-        },
-        {
-            "domain": "osano.com",
-            "prevalence": 0.4583333333333333
-        },
-        {
-            "domain": "jwplayer.com",
-            "prevalence": 0.041666666666666664
+            "prevalence": 0.664
         },
         {
             "domain": "huffpost.com",
-            "prevalence": 0.027777777777777776
+            "prevalence": 0.18266666666666667
+        },
+        {
+            "domain": "osano.com",
+            "prevalence": 0.1
+        },
+        {
+            "domain": "adlightning.com",
+            "prevalence": 0.021333333333333333
+        },
+        {
+            "domain": "jwplayer.com",
+            "prevalence": 0.02
+        },
+        {
+            "domain": "connatix.com",
+            "prevalence": 0.012
         }
     ],
     "types": {
-        "Image": 14,
-        "Script": 99
+        "Image": 102,
+        "Script": 206,
+        "Stylesheet": 16,
+        "XHR": 311,
+        "TextTrack": 2
     },
     "nameservers": [
-        "ns-1513.awsdns-61.org",
-        "ns-1602.awsdns-08.co.uk",
         "ns-52.awsdns-06.com",
-        "ns-592.awsdns-10.net"
+        "ns-592.awsdns-10.net",
+        "ns-1602.awsdns-08.co.uk",
+        "ns-1513.awsdns-61.org"
     ]
 }

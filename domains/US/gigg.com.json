@@ -4,13 +4,14 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000137,
-    "sites": 2,
+    "prevalence": 0.0000204,
+    "sites": 3,
     "subdomains": [
-        "my"
+        "my",
+        "events-prod"
     ],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "gigg\\.com\\/bragify\\.min\\.js",
@@ -20,8 +21,8 @@
                 "my"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "sites": 3,
+            "prevalence": 0.0000204,
             "cnames": [],
             "responseHashes": [
                 "70b78a92d7d320834992838c1d7ab76360d47048a952d91af3904b953da8ea69"
@@ -31,19 +32,24 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "erau.edu",
-                "prescott.erau.edu"
+                "prescott.erau.edu",
+                "www.sinclair.edu"
             ]
         },
         {
             "rule": "gigg\\.com\\/sdks\\/gigg-analytics-sdk\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "my"
             ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "apis": {
+                "Document.cookie getter": 1,
+                "window.localStorage": 1,
+                "Date.prototype.getTime": 1
+            },
+            "sites": 3,
+            "prevalence": 0.0000204,
             "cnames": [],
             "responseHashes": [
                 "f38a20b66a789d89b07449c35476a6f2f9ceaf6960f3f68f325a02de7192ac10"
@@ -53,7 +59,50 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "erau.edu",
-                "prescott.erau.edu"
+                "prescott.erau.edu",
+                "www.sinclair.edu"
+            ]
+        },
+        {
+            "rule": "gigg\\.com\\/analytics-v1-events\\/events",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "events-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sinclair.edu",
+                "www.sinclair.edu"
+            ]
+        },
+        {
+            "rule": "gigg\\.com\\/analytics-v1-events\\/events",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "events-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "2cbe79bc1ce3786ff505e83e323408dacea4b48b3b051a8bef195248a0766250"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sinclair.edu",
+                "www.sinclair.edu"
             ]
         }
     ],
@@ -67,7 +116,9 @@
         }
     ],
     "types": {
-        "Script": 4
+        "Script": 6,
+        "Preflight": 2,
+        "Fetch": 2
     },
     "nameservers": [
         "ns-145.awsdns-18.com",

@@ -4,12 +4,13 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000273,
+    "prevalence": 0.0000272,
     "sites": 4,
     "subdomains": [
         "static",
         "analytics-v2-prod",
-        "analytics"
+        "analytics",
+        "public"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -17,13 +18,16 @@
         {
             "rule": "kargovideo\\.com\\/fvp-loader\\/stable\\/loader\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "static"
             ],
-            "apis": {},
+            "apis": {
+                "Notification.permission": 2,
+                "Navigator.prototype.plugins": 2
+            },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
                 "15efbfcc200bbb4ca414b6c0d7b25d289374b4f6cad9b22f0beaaa5948c1acb0"
@@ -45,7 +49,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
@@ -65,7 +69,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
                 "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
@@ -106,7 +110,7 @@
                 "Navigator.prototype.vendor": 2
             },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
                 "70ea4e0a976da6bea894ed314e663723b68575a11173db746a9a82d504990104"
@@ -137,10 +141,10 @@
                 "window.localStorage": 2
             },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
-                "14a488110fe10bbc22fc91e43e494515d5af0b7b28ab8084a1254bc706cb7c57"
+                "c50b101bdc830350129104fc83d6fb925a2ee9c33a3c83d5e98cedcce34c847b"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -159,7 +163,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
@@ -179,10 +183,32 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
                 "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "greenmatters.com",
+                "www.greenmatters.com"
+            ]
+        },
+        {
+            "rule": "kargovideo\\.com\\/api\\/v1\\/ad\\/cache",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "public"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "35c67aa95c8336a78a5400e0603c8983f2c4ff74118f4a4ba2b6d1a38f0fb96f"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -198,23 +224,27 @@
     "cookies": 0,
     "topInitiators": [
         {
-            "domain": "lngtdv.com",
+            "domain": "imasdk.googleapis.com",
             "prevalence": 0.5
         },
         {
+            "domain": "lngtdv.com",
+            "prevalence": 0.25
+        },
+        {
             "domain": "kargo.com",
-            "prevalence": 0.5
+            "prevalence": 0.25
         }
     ],
     "types": {
         "Script": 6,
         "Preflight": 4,
-        "Fetch": 4
+        "Fetch": 6
     },
     "nameservers": [
-        "ns-737.awsdns-28.net",
         "ns-1847.awsdns-38.co.uk",
         "ns-320.awsdns-40.com",
-        "ns-1343.awsdns-39.org"
+        "ns-1343.awsdns-39.org",
+        "ns-737.awsdns-28.net"
     ]
 }

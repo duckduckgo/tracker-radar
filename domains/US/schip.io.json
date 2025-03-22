@@ -7,13 +7,15 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000547,
-    "sites": 8,
+    "prevalence": 0.0000747,
+    "sites": 11,
     "subdomains": [
         "kleinanzeigen-legacy.sgtm-pro",
         "tweedehands.sgtm-pro",
         "kijijiautos.sgtm-pro",
-        "marktplaats.sgtm-pro"
+        "kijiji.sgtm-pro",
+        "marktplaats.sgtm-pro",
+        "ka.lrs.liberty"
     ],
     "cnames": [
         {
@@ -29,6 +31,10 @@
             "resolved": "tweedehands.sgtm-pro.schip.io"
         },
         {
+            "original": "server.sgtm.kijiji.ca",
+            "resolved": "kijiji.sgtm-pro.schip.io"
+        },
+        {
             "original": "server.sgtm.kijijiautos.ca",
             "resolved": "kijijiautos.sgtm-pro.schip.io"
         },
@@ -41,7 +47,7 @@
     "resources": [
         {
             "rule": "schip\\.io\\/gtm\\.js",
-            "cookies": 0.00000683,
+            "cookies": 0.00000679,
             "fingerprinting": 1,
             "subdomains": [
                 "kleinanzeigen-legacy.sgtm-pro",
@@ -50,7 +56,7 @@
             ],
             "apis": {},
             "sites": 5,
-            "prevalence": 0.0000342,
+            "prevalence": 0.000034,
             "cnames": [
                 {
                     "original": "server.sgtm-legacy.kleinanzeigen.de",
@@ -66,10 +72,10 @@
                 }
             ],
             "responseHashes": [
-                "5dcfc185a9901555903cf925b4f338a9d1d1aff88c52513d414edc0ea51da5c6",
-                "b7ae97fd3c98ea7df91dde9c8390c9e98ae1ea16dd9d38e8f48bb5b77b73f3d1",
-                "0e089a661765c0e595916e81aff7d546f71c3e4b5c48c7e05cd9337cf9a9fadd",
-                "8ee3c7692d95a83360dd170824256ecc4401efa4534491e03a194148ee147c6e"
+                "41d962ace4047dc3c3e2c32cf643d71625a99c2d5ee964d4b8d6ac15070ccfca",
+                "7c19713aade17d3dba92cc230f5569343adb605c924168a96e0c08c81876c384",
+                "b645561315c2cc7ec33038a5abd6b14e7244ed43cf14dd8610da9735bf59c569",
+                "8d701769afab7909d20beab2660c4942790204fc8ad64aeba61ed3122285dd2a"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -84,19 +90,29 @@
         },
         {
             "rule": "schip\\.io\\/g\\/collect",
-            "cookies": 0.00000683,
+            "cookies": 0.0000204,
             "fingerprinting": 0,
             "subdomains": [
                 "tweedehands.sgtm-pro",
+                "kijijiautos.sgtm-pro",
+                "kijiji.sgtm-pro",
                 "marktplaats.sgtm-pro"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000205,
+            "sites": 5,
+            "prevalence": 0.000034,
             "cnames": [
                 {
                     "original": "server.sgtm.2dehands.be",
                     "resolved": "tweedehands.sgtm-pro.schip.io"
+                },
+                {
+                    "original": "server.sgtm.kijijiautos.ca",
+                    "resolved": "kijijiautos.sgtm-pro.schip.io"
+                },
+                {
+                    "original": "server.sgtm.kijiji.ca",
+                    "resolved": "kijiji.sgtm-pro.schip.io"
                 },
                 {
                     "original": "server.sgtm.marktplaats.nl",
@@ -104,41 +120,202 @@
                 }
             ],
             "responseHashes": [
-                "e64954dc34e12c7190cc2338a54b07644ff0f102aa71cc7209bcbb49c3009f7c"
+                "e64954dc34e12c7190cc2338a54b07644ff0f102aa71cc7209bcbb49c3009f7c",
+                "7ee4def54d14214760f9ef5216bad9599de61e51c456b96e225021410766afc4"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "_ga": 0.000006832841368754783
+                "_ga": 0.000013588802826470989
             },
             "exampleSites": [
                 "2dehands.be",
                 "www.2dehands.be",
+                "www.kijijiautos.ca",
+                "www.kijiji.ca",
                 "www.marktplaats.nl"
+            ]
+        },
+        {
+            "rule": "schip\\.io\\/liberty-metrics\\/init",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ka.lrs.liberty"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ebay-kleinanzeigen.de",
+                "www.kleinanzeigen.de"
+            ]
+        },
+        {
+            "rule": "schip\\.io\\/liberty-metrics\\/init",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ka.lrs.liberty"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ebay-kleinanzeigen.de",
+                "www.kleinanzeigen.de"
+            ]
+        },
+        {
+            "rule": "schip\\.io\\/liberty-metrics\\/ad-requests",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ka.lrs.liberty"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ebay-kleinanzeigen.de",
+                "www.ebay-kleinanzeigen.de",
+                "www.kleinanzeigen.de"
+            ]
+        },
+        {
+            "rule": "schip\\.io\\/liberty-metrics\\/ad-requests",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ka.lrs.liberty"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ebay-kleinanzeigen.de",
+                "www.ebay-kleinanzeigen.de",
+                "www.kleinanzeigen.de"
+            ]
+        },
+        {
+            "rule": "schip\\.io\\/_\\/service_worker\\/53k0\\/sw_iframe\\.html",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "kijijiautos.sgtm-pro",
+                "kijiji.sgtm-pro",
+                "marktplaats.sgtm-pro"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [
+                {
+                    "original": "server.sgtm.kijijiautos.ca",
+                    "resolved": "kijijiautos.sgtm-pro.schip.io"
+                },
+                {
+                    "original": "server.sgtm.kijiji.ca",
+                    "resolved": "kijiji.sgtm-pro.schip.io"
+                },
+                {
+                    "original": "server.sgtm.marktplaats.nl",
+                    "resolved": "marktplaats.sgtm-pro.schip.io"
+                }
+            ],
+            "responseHashes": [
+                "70f5b11c1870cf90201a6d5f770ca318a3fa5827c74a8765ede22b487f7d4532"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kijijiautos.ca",
+                "www.kijiji.ca",
+                "www.marktplaats.nl"
+            ]
+        },
+        {
+            "rule": "schip\\.io\\/liberty-metrics\\/ad-impressions",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ka.lrs.liberty"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kleinanzeigen.de",
+                "www.kleinanzeigen.de"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0000137,
+    "cookies": 0.0000272,
     "topInitiators": [
         {
+            "domain": "kleinanzeigen.de",
+            "prevalence": 0.2916666666666667
+        },
+        {
             "domain": "datadoghq-browser-agent.com",
-            "prevalence": 0.9
+            "prevalence": 0.1875
+        },
+        {
+            "domain": "classifiedscloud.io",
+            "prevalence": 0.1875
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.16666666666666666
+        },
+        {
+            "domain": "trackjs.com",
+            "prevalence": 0.10416666666666667
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.1
+            "prevalence": 0.0625
         }
     ],
     "types": {
         "Script": 5,
-        "Fetch": 3
+        "Fetch": 12,
+        "Preflight": 5,
+        "Document": 3
     },
     "nameservers": [
-        "ns-1356.awsdns-41.org",
-        "ns-588.awsdns-09.net",
         "ns-100.awsdns-12.com",
+        "ns-588.awsdns-09.net",
+        "ns-1356.awsdns-41.org",
         "ns-1999.awsdns-57.co.uk"
     ]
 }

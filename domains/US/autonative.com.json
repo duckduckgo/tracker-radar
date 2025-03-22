@@ -4,32 +4,64 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.00000683,
-    "sites": 1,
+    "prevalence": 0.0000136,
+    "sites": 2,
     "subdomains": [
+        "partindexer",
         "partindexerinfomedia"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
         {
-            "rule": "autonative\\.com\\/api\\/v1\\/vehicles",
+            "rule": "autonative\\.com\\/js\\/frontend\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
+                "partindexer",
                 "partindexerinfomedia"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Event.prototype.timeStamp": 2,
+                "Navigator.prototype.product": 2,
+                "window.localStorage": 2
+            },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000136,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "b1c3c0aa97a9ed7ee4d2bb3cc8e234d7f8cf450a750b0f4ab2de47d1071e00f9"
+            ],
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "ford.co.uk",
-                "shop.ford.co.uk"
+                "shop.ford.de"
+            ]
+        },
+        {
+            "rule": "autonative\\.com\\/css\\/frontend\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "partindexer",
+                "partindexerinfomedia"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000136,
+            "cnames": [],
+            "responseHashes": [
+                "093194664d8e7530845f23361d46fa0f3163c47b67028fbeb0e3111ff1f00410"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ford.co.uk",
+                "shop.ford.de"
             ]
         },
         {
@@ -37,21 +69,46 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
+                "partindexer",
                 "partindexerinfomedia"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "sites": 3,
+            "prevalence": 0.0000204,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ford.co.uk",
+                "shop.ford.co.uk",
+                "shop.ford.de"
+            ]
+        },
+        {
+            "rule": "autonative\\.com\\/api\\/v1\\/vehicles",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "partindexer",
+                "partindexerinfomedia"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000204,
             "cnames": [],
             "responseHashes": [
-                "78d030811aadf73599c84cb8ffd7dce2ba6ce46a945cf78f22e6ff917f92f364"
+                "b87c9fe8db2208b137ae8fa87ba59ca1602a3614f793a2af205de9316a0e3938",
+                "bac7dc3049955a1fed4563c28e2a8e0ad01de068d53615228f9ae497545554a5"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "ford.co.uk",
-                "shop.ford.co.uk"
+                "shop.ford.co.uk",
+                "shop.ford.de"
             ]
         }
     ],
@@ -65,8 +122,10 @@
         }
     ],
     "types": {
-        "Preflight": 2,
-        "XHR": 2
+        "Script": 2,
+        "Stylesheet": 2,
+        "Preflight": 3,
+        "XHR": 3
     },
     "nameservers": [
         "alex.ns.cloudflare.com",

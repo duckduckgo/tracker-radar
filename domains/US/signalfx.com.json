@@ -4,8 +4,8 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.000342,
-    "sites": 50,
+    "prevalence": 0.000265,
+    "sites": 39,
     "subdomains": [
         "cdn",
         "rum-ingest.us1",
@@ -17,30 +17,32 @@
     "resources": [
         {
             "rule": "signalfx\\.com\\/o11y-gdi-rum\\/v0\\.17\\.0\\/splunk-otel-web\\.js",
-            "cookies": 0.00000683,
+            "cookies": 0.0000136,
             "fingerprinting": 1,
             "subdomains": [
                 "cdn"
             ],
             "apis": {
-                "Document.cookie getter": 1,
-                "Document.cookie setter": 1,
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2,
                 "Navigator.prototype.userAgent": 2,
-                "Screen.prototype.width": 1,
-                "Screen.prototype.height": 1,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
                 "Event.prototype.timeStamp": 2
             },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000136,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "d4347b72a491a9d26a281e59e26e22c3727e37c7f865c6146c111dc1d1743e46"
+            ],
             "type": "Script",
             "firstPartyCookies": {
                 "_splunk_rum_sid": {
                     "ttl": 900,
                     "length": 89,
-                    "prevalence": 0.000006832841368754783,
-                    "uniqueness": 1
+                    "prevalence": 0.000013588802826470989,
+                    "uniqueness": 0.5
                 }
             },
             "firstPartyCookiesSent": {},
@@ -58,10 +60,11 @@
                 "rum-ingest.us0"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000205,
+            "sites": 4,
+            "prevalence": 0.0000272,
             "cnames": [],
             "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
                 "98c4922bb641c65c7a30b7bcafdf230b9b00b6693631c56146ab25b2786ee4a3"
             ],
             "type": "Ping",
@@ -70,6 +73,7 @@
             "exampleSites": [
                 "aaa.com",
                 "account.app.ace.aaa.com",
+                "www.hpsmart.com",
                 "www.jeniusbank.com"
             ]
         },
@@ -79,8 +83,8 @@
             "fingerprinting": 0,
             "subdomains": [
                 "rum-ingest.us1",
-                "rum-ingest.us0",
-                "rum-ingest.eu0"
+                "rum-ingest.eu0",
+                "rum-ingest.us0"
             ],
             "apis": {},
             "sites": 17,
@@ -95,38 +99,40 @@
             "exampleSites": [
                 "aaa.com",
                 "account.app.ace.aaa.com",
+                "aerospace.honeywell.com",
+                "all.accor.com",
                 "disclosure.spglobal.com",
-                "help.surveymonkey.com",
                 "instantink.hpconnected.com",
                 "lillydirect.lilly.com",
                 "secure.cruisingpower.com",
+                "splunkbase.splunk.com",
                 "www.arbys.com",
                 "www.buffalowildwings.com",
                 "www.citroen.fr",
-                "www.honeywell.com",
                 "www.kennametal.com",
                 "www.nuskin.com",
                 "www.renttherunway.com",
                 "www.sonicdrivein.com",
-                "www.surveymonkey.com",
                 "www.tommyjohn.com"
             ]
         },
         {
             "rule": "signalfx\\.com\\/o11y-gdi-rum\\/v0\\.19\\.0\\/splunk-otel-web\\.js",
-            "cookies": 0.0000342,
+            "cookies": 0.0000408,
             "fingerprinting": 1,
             "subdomains": [
                 "cdn"
             ],
             "apis": {
-                "Document.cookie getter": 5,
-                "Document.cookie setter": 5,
-                "Navigator.prototype.userAgent": 5,
+                "Document.cookie getter": 6,
+                "Document.cookie setter": 6,
+                "Navigator.prototype.userAgent": 6,
+                "Screen.prototype.width": 1,
+                "Screen.prototype.height": 1,
                 "Date.prototype.getTime": 1
             },
-            "sites": 5,
-            "prevalence": 0.0000342,
+            "sites": 6,
+            "prevalence": 0.0000408,
             "cnames": [],
             "responseHashes": [
                 "e94fd424f456fe3d3fb2471f78d0ce2588c3ee10674ca4d028703e231f616868"
@@ -136,13 +142,14 @@
                 "_splunk_rum_sid": {
                     "ttl": 900,
                     "length": 89,
-                    "prevalence": 0.000034164206843773914,
+                    "prevalence": 0.00004076640847941296,
                     "uniqueness": 1
                 }
             },
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "honeywell.com",
+                "aerospace.honeywell.com",
                 "automation.honeywell.com",
                 "buildings.honeywell.com",
                 "www.medibank.com.au",
@@ -152,13 +159,16 @@
         {
             "rule": "signalfx\\.com\\/o11y-gdi-rum\\/v0\\.19\\.0\\/splunk-otel-web-session-recorder\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "cdn"
             ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000205,
+            "apis": {
+                "window.innerWidth": 1,
+                "window.innerHeight": 1
+            },
+            "sites": 4,
+            "prevalence": 0.0000272,
             "cnames": [],
             "responseHashes": [
                 "7d506ebd65628a1258474e3d595a20e1604cecd4cccbfa4aea47d89ba232ceb8"
@@ -168,27 +178,80 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "honeywell.com",
+                "aerospace.honeywell.com",
                 "automation.honeywell.com",
                 "buildings.honeywell.com"
             ]
         },
         {
+            "rule": "signalfx\\.com\\/v1\\/rumreplay",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rum-ingest.us1",
+                "rum-ingest.eu0"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.0000408,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "honeywell.com",
+                "all.accor.com",
+                "lillydirect.lilly.com",
+                "secure.cruisingpower.com",
+                "www.nuskin.com",
+                "www.tommyjohn.com"
+            ]
+        },
+        {
+            "rule": "signalfx\\.com\\/v1\\/rumreplay",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rum-ingest.us1",
+                "rum-ingest.eu0"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.0000408,
+            "cnames": [],
+            "responseHashes": [
+                "98c4922bb641c65c7a30b7bcafdf230b9b00b6693631c56146ab25b2786ee4a3"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "honeywell.com",
+                "all.accor.com",
+                "lillydirect.lilly.com",
+                "secure.cruisingpower.com",
+                "www.nuskin.com",
+                "www.tommyjohn.com"
+            ]
+        },
+        {
             "rule": "signalfx\\.com\\/o11y-gdi-rum\\/latest\\/splunk-otel-web\\.js",
-            "cookies": 0.0000752,
+            "cookies": 0.0000272,
             "fingerprinting": 1,
             "subdomains": [
                 "cdn"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 13,
-                "window.sessionStorage": 11,
-                "Document.cookie getter": 12,
-                "Document.cookie setter": 11,
-                "Screen.prototype.width": 3,
-                "Screen.prototype.height": 3
+                "Navigator.prototype.userAgent": 5,
+                "window.sessionStorage": 4,
+                "Document.cookie getter": 4,
+                "Document.cookie setter": 4,
+                "Screen.prototype.width": 4,
+                "Screen.prototype.height": 4
             },
-            "sites": 13,
-            "prevalence": 0.0000888,
+            "sites": 5,
+            "prevalence": 0.000034,
             "cnames": [],
             "responseHashes": [
                 "57dcafec57bda3c3b167abf2b1fef8651d16449f84468e0d9bb4c38f1ccae2da"
@@ -198,60 +261,17 @@
                 "_splunk_rum_sid": {
                     "ttl": 900,
                     "length": 123,
-                    "prevalence": 0.00007516125505630261,
+                    "prevalence": 0.000027177605652941977,
                     "uniqueness": 1
                 }
             },
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "dadsdivorce.com",
-                "eriehome.com",
+                "lilly.com",
                 "lillydirect.lilly.com",
-                "ucnj.org",
-                "www.bethel.edu",
                 "www.citroen.fr",
-                "www.harveynorman.co.nz",
-                "www.heathceramics.com",
-                "www.mundenfuneralhome.com",
-                "www.projectorscreen.com",
-                "www.restaurantweekboston.com",
                 "www.splunk.com",
                 "www.tommyjohn.com"
-            ]
-        },
-        {
-            "rule": "signalfx\\.com\\/o11y-gdi-rum\\/v0\\.19\\.3\\/splunk-otel-web\\.js",
-            "cookies": 0.0000205,
-            "fingerprinting": 1,
-            "subdomains": [
-                "cdn"
-            ],
-            "apis": {
-                "window.sessionStorage": 3,
-                "Document.cookie getter": 3,
-                "Document.cookie setter": 3,
-                "Navigator.prototype.userAgent": 3
-            },
-            "sites": 3,
-            "prevalence": 0.0000205,
-            "cnames": [],
-            "responseHashes": [
-                "1ea3096580924b4dd2acdc63b34bf988a4ecf1e233c08226fd182fc3b29a0bf2"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {
-                "_splunk_rum_sid": {
-                    "ttl": 900,
-                    "length": 89,
-                    "prevalence": 0.000020498524106264348,
-                    "uniqueness": 1
-                }
-            },
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "qt.io",
-                "ttc.lacounty.gov",
-                "www.broadviewfcu.com"
             ]
         },
         {
@@ -266,7 +286,7 @@
                 "window.innerHeight": 3
             },
             "sites": 4,
-            "prevalence": 0.0000273,
+            "prevalence": 0.0000272,
             "cnames": [],
             "responseHashes": [
                 "a261c59a1605edc0c5c3aef32f34b4b59091521a8018b70fabf338f92c0546da"
@@ -282,54 +302,8 @@
             ]
         },
         {
-            "rule": "signalfx\\.com\\/v1\\/rumreplay",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "rum-ingest.us1"
-            ],
-            "apis": {},
-            "sites": 4,
-            "prevalence": 0.0000273,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "lilly.com",
-                "lillydirect.lilly.com",
-                "www.honeywell.com",
-                "www.nuskin.com"
-            ]
-        },
-        {
-            "rule": "signalfx\\.com\\/v1\\/rumreplay",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "rum-ingest.us1"
-            ],
-            "apis": {},
-            "sites": 4,
-            "prevalence": 0.0000273,
-            "cnames": [],
-            "responseHashes": [
-                "98c4922bb641c65c7a30b7bcafdf230b9b00b6693631c56146ab25b2786ee4a3"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "lilly.com",
-                "lillydirect.lilly.com",
-                "www.honeywell.com",
-                "www.nuskin.com"
-            ]
-        },
-        {
             "rule": "signalfx\\.com\\/o11y-gdi-rum\\/v0\\.16\\.3\\/splunk-otel-web\\.js",
-            "cookies": 0.0000137,
+            "cookies": 0.0000136,
             "fingerprinting": 1,
             "subdomains": [
                 "cdn"
@@ -337,12 +311,10 @@
             "apis": {
                 "Document.cookie getter": 2,
                 "Document.cookie setter": 2,
-                "Navigator.prototype.userAgent": 2,
-                "Screen.prototype.width": 1,
-                "Screen.prototype.height": 1
+                "Navigator.prototype.userAgent": 2
             },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
                 "04777f9242a476f8a1ad3b1488943bf771ecc84e3b9c83dc472a3133364a7c84"
@@ -352,7 +324,7 @@
                 "_splunk_rum_sid": {
                     "ttl": 900,
                     "length": 89,
-                    "prevalence": 0.000013665682737509566,
+                    "prevalence": 0.000013588802826470989,
                     "uniqueness": 1
                 }
             },
@@ -365,16 +337,13 @@
         {
             "rule": "signalfx\\.com\\/o11y-gdi-rum\\/v0\\.16\\.3\\/splunk-otel-web-session-recorder\\.js",
             "cookies": 0,
-            "fingerprinting": 1,
+            "fingerprinting": 0,
             "subdomains": [
                 "cdn"
             ],
-            "apis": {
-                "window.innerWidth": 1,
-                "window.innerHeight": 1
-            },
+            "apis": {},
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
                 "6ada278b5bca238dae69a75ac71922779b471489210231b9b79345e2803f6e3a"
@@ -389,7 +358,7 @@
         },
         {
             "rule": "signalfx\\.com\\/o11y-gdi-rum\\/v0\\.19\\.1\\/splunk-otel-web\\.js",
-            "cookies": 0.0000137,
+            "cookies": 0.0000136,
             "fingerprinting": 1,
             "subdomains": [
                 "cdn"
@@ -400,7 +369,7 @@
                 "Navigator.prototype.userAgent": 2
             },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
                 "71a62bb3150b7a5f2691e992657ab8368fc08ffebc9567b475a4b5b4e7c4618c"
@@ -410,7 +379,7 @@
                 "_splunk_rum_sid": {
                     "ttl": 900,
                     "length": 89,
-                    "prevalence": 0.000013665682737509566,
+                    "prevalence": 0.000013588802826470989,
                     "uniqueness": 1
                 }
             },
@@ -429,7 +398,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000136,
             "cnames": [],
             "responseHashes": [
                 "08bb79e37ab06787f9d30a1f3cdaa4acee77548bc168035f47f130a6248bba30"
@@ -445,55 +414,51 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000191,
+    "cookies": 0.000143,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.6423357664233577
+            "prevalence": 0.6304347826086957
         },
         {
             "domain": "instana.io",
-            "prevalence": 0.10218978102189781
+            "prevalence": 0.17391304347826086
         },
         {
             "domain": "adobedtm.com",
-            "prevalence": 0.072992700729927
-        },
-        {
-            "domain": "wufoo.com",
-            "prevalence": 0.072992700729927
+            "prevalence": 0.08695652173913043
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.043795620437956206
+            "prevalence": 0.043478260869565216
+        },
+        {
+            "domain": "sentry-cdn.com",
+            "prevalence": 0.021739130434782608
         },
         {
             "domain": "instantink.com",
-            "prevalence": 0.021897810218978103
-        },
-        {
-            "domain": "surveymonkey.com",
-            "prevalence": 0.014598540145985401
-        },
-        {
-            "domain": "research.net",
-            "prevalence": 0.014598540145985401
+            "prevalence": 0.014492753623188406
         },
         {
             "domain": "dscrutpyu4zff.cloudfront.net",
-            "prevalence": 0.0072992700729927005
+            "prevalence": 0.014492753623188406
+        },
+        {
+            "domain": "dynatrace.com",
+            "prevalence": 0.007246376811594203
         },
         {
             "domain": "tiqcdn.com",
-            "prevalence": 0.0072992700729927005
+            "prevalence": 0.007246376811594203
         }
     ],
     "types": {
-        "Script": 38,
-        "Ping": 3,
+        "Script": 29,
+        "Ping": 4,
         "XHR": 17,
-        "Preflight": 4,
-        "Fetch": 4
+        "Preflight": 6,
+        "Fetch": 6
     },
     "nameservers": [
         "ns-5.awsdns-00.com",
