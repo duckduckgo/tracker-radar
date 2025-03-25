@@ -4,13 +4,14 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000137,
+    "prevalence": 0.0000138,
     "sites": 2,
     "subdomains": [
-        "my"
+        "my",
+        "events-prod"
     ],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "gigg\\.com\\/bragify\\.min\\.js",
@@ -21,7 +22,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000138,
             "cnames": [],
             "responseHashes": [
                 "70b78a92d7d320834992838c1d7ab76360d47048a952d91af3904b953da8ea69"
@@ -31,35 +32,101 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "erau.edu",
-                "prescott.erau.edu"
+                "www.sinclair.edu"
             ]
         },
         {
             "rule": "gigg\\.com\\/sdks\\/gigg-analytics-sdk\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
+            "cookies": 0.00000689,
+            "fingerprinting": 1,
             "subdomains": [
                 "my"
             ],
-            "apis": {},
+            "apis": {
+                "Document.cookie getter": 1,
+                "window.localStorage": 1,
+                "Date.prototype.getTime": 1,
+                "Document.cookie setter": 1
+            },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000138,
             "cnames": [],
             "responseHashes": [
                 "f38a20b66a789d89b07449c35476a6f2f9ceaf6960f3f68f325a02de7192ac10"
             ],
             "type": "Script",
-            "firstPartyCookies": {},
+            "firstPartyCookies": {
+                "gigg-analytics_deviceId": {
+                    "ttl": 59999999942,
+                    "length": 36,
+                    "prevalence": 0.0000068886653899673475,
+                    "uniqueness": 1
+                },
+                "gigg-analytics_sessionId": {
+                    "ttl": 3602,
+                    "length": 36,
+                    "prevalence": 0.0000068886653899673475,
+                    "uniqueness": 1
+                },
+                "gigg-analytics_sessionKey": {
+                    "ttl": 59999999942,
+                    "length": 36,
+                    "prevalence": 0.0000068886653899673475,
+                    "uniqueness": 1
+                }
+            },
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "erau.edu",
-                "prescott.erau.edu"
+                "www.sinclair.edu"
+            ]
+        },
+        {
+            "rule": "gigg\\.com\\/analytics-v1-events\\/events",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "events-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000138,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sinclair.edu",
+                "www.sinclair.edu"
+            ]
+        },
+        {
+            "rule": "gigg\\.com\\/analytics-v1-events\\/events",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "events-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000138,
+            "cnames": [],
+            "responseHashes": [
+                "d595130bda4de90afab55736ce030c85d0aba14b62e36c6c81bf2aeac813049d"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sinclair.edu",
+                "www.sinclair.edu"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.00000689,
     "topInitiators": [
         {
             "domain": "first party",
@@ -67,7 +134,9 @@
         }
     ],
     "types": {
-        "Script": 4
+        "Script": 4,
+        "Preflight": 2,
+        "Fetch": 2
     },
     "nameservers": [
         "ns-145.awsdns-18.com",

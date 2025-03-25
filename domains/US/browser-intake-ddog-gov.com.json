@@ -4,10 +4,11 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000547,
+    "prevalence": 0.0000551,
     "sites": 8,
     "subdomains": [
-        "rum"
+        "rum",
+        "session-replay"
     ],
     "cnames": [],
     "fingerprinting": 0,
@@ -21,14 +22,14 @@
             ],
             "apis": {},
             "sites": 6,
-            "prevalence": 0.000041,
+            "prevalence": 0.0000413,
             "cnames": [],
             "responseHashes": [
-                "97fed03ff710ecb72a4910a9714ccdbff7a147cb97144c5c82c02322654fe0e5",
-                "73e80f0bf0733dfb824971ac0956b63d690087e3a7c46e07f603377e7e0a8579",
-                "20166a253c7f369056a0b9fa19b6202a0c724d7dfab622ecfbfab17ead058e15",
-                "cb3058594ed24940aae6133fb0b8d6068188ad20991436a8cadc64edabbbcf9f",
-                "11c9de7886f61b7e4f7bfa34f0ce453bba430d2a907c1388c620da58e13b5e26"
+                "fea1aeb8cf30a9b3029fd1c34ef1ac62919899aa17630b81ccc9434ffa6a40e2",
+                "318768ab0c7fbb74c3bb860d6c7b5bf655ac69fb8f6976ad658af5974d8aefe2",
+                "d5fea24f148e972438e1ed1e165de3ad2c1c6bb9b1a1ad01589f4097714c7d6e",
+                "74b18026f11b78db589c34efcb605f243743e7c0af5226aecf4e422af1872f59",
+                "e87215bcbc4ea4ff827dcccce2426f321e9a07d4e1659058341fdb5efaf56b19"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -38,8 +39,52 @@
                 "content.next.westlaw.com",
                 "inciweb.wildfire.gov",
                 "qpp.cms.gov",
-                "sam.gov",
-                "uk.practicallaw.thomsonreuters.com"
+                "uk.practicallaw.thomsonreuters.com",
+                "www.medmutual.com"
+            ]
+        },
+        {
+            "rule": "browser-intake-ddog-gov\\.com\\/api\\/v2\\/rum",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000138,
+            "cnames": [],
+            "responseHashes": [
+                "65238f69eb780458e603e0ad5728397b8beae2318f02cd96c8cda45cd6fe73ef"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wildfire.gov",
+                "inciweb.wildfire.gov"
+            ]
+        },
+        {
+            "rule": "browser-intake-ddog-gov\\.com\\/api\\/v2\\/replay",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "session-replay"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000207,
+            "cnames": [],
+            "responseHashes": [
+                "3133c963674225104e9d8049f78a31f1a035a5330521daa4163c730d894ce360",
+                "c0c6f45974d09d908c624e9c961631f65ee3bafdb91df17e660f4dc691a1f80a"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wildfire.gov",
+                "qpp.cms.gov",
+                "www.medmutual.com"
             ]
         },
         {
@@ -49,11 +94,9 @@
             "subdomains": [],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000138,
             "cnames": [],
-            "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-            ],
+            "responseHashes": [],
             "type": "Other",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -69,15 +112,20 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.9130434782608695
+            "prevalence": 0.6585365853658537
+        },
+        {
+            "domain": "datadoghq-browser-agent.com",
+            "prevalence": 0.2682926829268293
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.08695652173913043
+            "prevalence": 0.07317073170731707
         }
     ],
     "types": {
         "Fetch": 6,
+        "XHR": 5,
         "Other": 2
     },
     "nameservers": [
