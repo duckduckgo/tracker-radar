@@ -7,9 +7,10 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000342,
-    "sites": 5,
+    "prevalence": 0.0000554,
+    "sites": 8,
     "subdomains": [
+        "rt",
         "cs",
         "s",
         "b"
@@ -18,6 +19,50 @@
     "fingerprinting": 1,
     "resources": [
         {
+            "rule": "ns1p\\.net\\/v1\\/decision",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rt"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000208,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "history.com",
+                "roots.history.com",
+                "www.history.com"
+            ]
+        },
+        {
+            "rule": "ns1p\\.net\\/v1\\/decision",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rt"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000208,
+            "cnames": [],
+            "responseHashes": [
+                "3376bc2805472c8b8891bbd02b1c2dbb4a7b21e24b3c2ec186067a3989f2b021"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "history.com",
+                "roots.history.com",
+                "www.history.com"
+            ]
+        },
+        {
             "rule": "ns1p\\.net\\/p\\.js",
             "cookies": 0,
             "fingerprinting": 1,
@@ -25,10 +70,10 @@
                 "cs"
             ],
             "apis": {
-                "Date.prototype.getTime": 3
+                "Date.prototype.getTime": 1
             },
             "sites": 3,
-            "prevalence": 0.0000205,
+            "prevalence": 0.0000208,
             "cnames": [],
             "responseHashes": [
                 "3f5479ec31a06584b33450b875452ac3923666e27c87ec472abca67c6dd80212"
@@ -52,12 +97,11 @@
             ],
             "apis": {},
             "sites": 4,
-            "prevalence": 0.0000273,
+            "prevalence": 0.0000277,
             "cnames": [],
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-                "b4409c0df965d787cbfc55aaf32f8c02400a7582a89507209999c9018ca2460f",
-                "7c18d0985b548cb6eb45354ae6d543421c032a15c8c18a2efa920f2957f159a3"
+                "d7cd5b52186a6394b2d1cb06dbd65447845f151584468564ee045cb89931b638"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -68,6 +112,29 @@
                 "starzplay.com",
                 "www.fox.com"
             ]
+        },
+        {
+            "rule": "ns1p\\.net\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "b"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000208,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cc.com",
+                "southpark.cc.com",
+                "www.cbs.com"
+            ]
         }
     ],
     "categories": [],
@@ -76,17 +143,24 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.7692307692307693
+        },
+        {
+            "domain": "cbsivideo.com",
+            "prevalence": 0.23076923076923078
         }
     ],
     "types": {
+        "Preflight": 3,
+        "Fetch": 3,
         "Script": 3,
-        "XHR": 4
+        "XHR": 4,
+        "Ping": 3
     },
     "nameservers": [
-        "dns4.p07.nsone.net",
-        "dns3.p07.nsone.net",
+        "dns1.p07.nsone.net",
         "dns2.p07.nsone.net",
-        "dns1.p07.nsone.net"
+        "dns3.p07.nsone.net",
+        "dns4.p07.nsone.net"
     ]
 }
