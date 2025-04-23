@@ -9,14 +9,19 @@
     "source": [
         "DuckDuckGo-DE"
     ],
-    "prevalence": 0.00111,
-    "sites": 11,
+    "prevalence": 0.00122,
+    "sites": 12,
     "subdomains": [
         "p2iqhncxyh.execute-api",
         "cognito-identity",
-        "dataplane.rum"
+        "cf-proxy-cf-eu10-004-ca8ff5b93d5f2e9b.elb"
     ],
-    "cnames": [],
+    "cnames": [
+        {
+            "original": "check.cfapps.eu10-004.hana.ondemand.com",
+            "resolved": "cf-proxy-cf-eu10-004-ca8ff5b93d5f2e9b.elb.eu-central-1.amazonaws.com"
+        }
+    ],
     "fingerprinting": 0,
     "resources": [
         {
@@ -28,19 +33,19 @@
             ],
             "apis": {},
             "sites": 6,
-            "prevalence": 0.000604,
+            "prevalence": 0.000609,
             "cnames": [],
             "responseHashes": [],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "handyhuellen.de",
+                "degussa-goldhandel.de",
+                "ankauf.degussa-goldhandel.de",
                 "shop.degussa-goldhandel.de",
                 "www.avery-zweckform.com",
-                "www.dexerto.com",
-                "www.handyhuellen.de",
-                "www.schuelerhilfe.de"
+                "www.enpal.de",
+                "www.handyhuellen.de"
             ]
         },
         {
@@ -51,20 +56,19 @@
                 "p2iqhncxyh.execute-api"
             ],
             "apis": {},
-            "sites": 6,
-            "prevalence": 0.000604,
+            "sites": 5,
+            "prevalence": 0.000508,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "handyhuellen.de",
+                "degussa-goldhandel.de",
                 "shop.degussa-goldhandel.de",
                 "www.avery-zweckform.com",
-                "www.dexerto.com",
-                "www.handyhuellen.de",
-                "www.schuelerhilfe.de"
+                "www.enpal.de",
+                "www.handyhuellen.de"
             ]
         },
         {
@@ -75,40 +79,49 @@
                 "cognito-identity"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000305,
             "cnames": [],
-            "responseHashes": [
-                "d34b15f9f7adf72e5f199047ca0098c89533c631bedb079ce5fb87766c5ac510"
-            ],
-            "type": "Fetch",
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "interrail.eu",
+                "festo.com",
+                "www.festo.com",
                 "www.interrail.eu"
             ]
         },
         {
-            "rule": "eu-central-1\\.amazonaws\\.com\\/appmonitors\\/5fcc1a11-bfd4-4058-9355-089947b5da27",
+            "rule": "eu-central-1\\.amazonaws\\.com\\/",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "dataplane.rum"
+                "cognito-identity",
+                "cf-proxy-cf-eu10-004-ca8ff5b93d5f2e9b.elb"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
+            "sites": 4,
+            "prevalence": 0.000406,
+            "cnames": [
+                {
+                    "original": "check.cfapps.eu10-004.hana.ondemand.com",
+                    "resolved": "cf-proxy-cf-eu10-004-ca8ff5b93d5f2e9b.elb.eu-central-1.amazonaws.com"
+                }
+            ],
             "responseHashes": [
-                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+                "5979b39e450e50da82d135dbcad0da96d18306cb3ffc281dc2eae7f79a82305f",
+                "986b375130ee07379d08afb15cba524bc510ac75ab1cf69583803e0592c4cda5",
+                "3cd79c3c55200c10e9b6a887eddf717fdd9fcf5ca4ee944981d1782792c401fb"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "interrail.eu",
-                "www.interrail.eu"
+                "festo.com",
+                "www.festo.com",
+                "www.interrail.eu",
+                "www.sap.com"
             ]
         }
     ],
@@ -116,32 +129,24 @@
         "CDN"
     ],
     "performance": {},
-    "cookies": 0.000101,
+    "cookies": 0,
     "topInitiators": [
         {
+            "domain": "first party",
+            "prevalence": 0.4827586206896552
+        },
+        {
             "domain": "d5yoctgpv4cpx.cloudfront.net",
-            "prevalence": 0.4375
+            "prevalence": 0.3793103448275862
         },
         {
             "domain": "rum.us-east-1.amazonaws.com",
-            "prevalence": 0.3125
-        },
-        {
-            "domain": "first party",
-            "prevalence": 0.125
-        },
-        {
-            "domain": "steadycdn.com",
-            "prevalence": 0.0625
-        },
-        {
-            "domain": "script.ac",
-            "prevalence": 0.0625
+            "prevalence": 0.13793103448275862
         }
     ],
     "types": {
         "Fetch": 10,
-        "Preflight": 6
+        "Preflight": 8
     },
     "nameservers": [
         "ns1.amzndns.co.uk",

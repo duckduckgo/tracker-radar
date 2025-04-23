@@ -7,12 +7,15 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000342,
-    "sites": 5,
+    "prevalence": 0.000105,
+    "sites": 15,
     "subdomains": [
         "cs",
         "s",
-        "b"
+        "b",
+        "px-us-w-2",
+        "px-ap-se-1",
+        "rt"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -25,10 +28,10 @@
                 "cs"
             ],
             "apis": {
-                "Date.prototype.getTime": 3
+                "Date.prototype.getTime": 2
             },
-            "sites": 3,
-            "prevalence": 0.0000205,
+            "sites": 8,
+            "prevalence": 0.0000561,
             "cnames": [],
             "responseHashes": [
                 "3f5479ec31a06584b33450b875452ac3923666e27c87ec472abca67c6dd80212"
@@ -37,9 +40,14 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "foxnews.com",
+                "ibm.com",
+                "community.ibm.com",
+                "developer.ibm.com",
+                "nation.foxnews.com",
+                "research.ibm.com",
                 "starzplay.com",
-                "www.fox.com"
+                "www.fox.com",
+                "www.redbooks.ibm.com"
             ]
         },
         {
@@ -51,22 +59,113 @@
                 "b"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.0000273,
+            "sites": 5,
+            "prevalence": 0.0000351,
             "cnames": [],
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-                "b4409c0df965d787cbfc55aaf32f8c02400a7582a89507209999c9018ca2460f",
-                "7c18d0985b548cb6eb45354ae6d543421c032a15c8c18a2efa920f2957f159a3"
+                "302c4ef444c3832a167a2aab4e3ba5c6d05a0993703d5a98ac4b55de96b64ab0",
+                "5320eba378aeaea280a307d56001a294981c226b7f2de66a8c98d1ccb5e17ae3"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "foxnews.com",
-                "nation.foxnews.com",
-                "starzplay.com",
-                "www.fox.com"
+                "ibm.com",
+                "community.ibm.com",
+                "developer.ibm.com",
+                "research.ibm.com",
+                "www.redbooks.ibm.com"
+            ]
+        },
+        {
+            "rule": "ns1p\\.net\\/a\\/l\\.gif",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "px-us-w-2",
+                "px-ap-se-1"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000021,
+            "cnames": [],
+            "responseHashes": [
+                "77b1d2c0857d4e95d4c2ae7aa0abc5aaafa6bd4581b31203d1592759c26f5c44"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ibm.com",
+                "developer.ibm.com",
+                "www.redbooks.ibm.com"
+            ]
+        },
+        {
+            "rule": "ns1p\\.net\\/v1\\/decision",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rt"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000014,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "history.com",
+                "www.history.com"
+            ]
+        },
+        {
+            "rule": "ns1p\\.net\\/v1\\/decision",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rt"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000014,
+            "cnames": [],
+            "responseHashes": [
+                "3376bc2805472c8b8891bbd02b1c2dbb4a7b21e24b3c2ec186067a3989f2b021"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "history.com",
+                "www.history.com"
+            ]
+        },
+        {
+            "rule": "ns1p\\.net\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "b"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000028,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cc.com",
+                "www.cbs.com",
+                "www.cc.com",
+                "www.paramountpluswithshowtime.com"
             ]
         }
     ],
@@ -76,17 +175,29 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.4
+        },
+        {
+            "domain": "tiqcdn.com",
+            "prevalence": 0.3333333333333333
+        },
+        {
+            "domain": "cbsivideo.com",
+            "prevalence": 0.26666666666666666
         }
     ],
     "types": {
-        "Script": 3,
-        "XHR": 4
+        "Script": 8,
+        "XHR": 5,
+        "Image": 3,
+        "Preflight": 2,
+        "Fetch": 2,
+        "Ping": 4
     },
     "nameservers": [
-        "dns4.p07.nsone.net",
-        "dns3.p07.nsone.net",
+        "dns1.p07.nsone.net",
         "dns2.p07.nsone.net",
-        "dns1.p07.nsone.net"
+        "dns3.p07.nsone.net",
+        "dns4.p07.nsone.net"
     ]
 }

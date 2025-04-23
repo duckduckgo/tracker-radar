@@ -4,9 +4,10 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000101,
-    "sites": 1,
+    "prevalence": 0.000209,
+    "sites": 2,
     "subdomains": [
+        "i.w",
         "a.w"
     ],
     "cnames": [
@@ -17,10 +18,41 @@
         {
             "original": "cm.bilibili.com",
             "resolved": "a.w.bilicdn1.com"
+        },
+        {
+            "original": "data.bilibili.tv",
+            "resolved": "i.w.bilicdn1.com"
         }
     ],
     "fingerprinting": 0,
     "resources": [
+        {
+            "rule": "bilicdn1\\.com\\/log\\/web",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "i.w"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000209,
+            "cnames": [
+                {
+                    "original": "data.bilibili.tv",
+                    "resolved": "i.w.bilicdn1.com"
+                }
+            ],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bilibili.tv",
+                "www.bilibili.tv"
+            ]
+        },
         {
             "rule": "bilicdn1\\.com\\/x\\/kv-frontend\\/namespace\\/data",
             "cookies": 0,
@@ -30,7 +62,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000201,
+            "prevalence": 0.000209,
             "cnames": [
                 {
                     "original": "api.bilibili.com",
@@ -49,7 +81,7 @@
             ]
         },
         {
-            "rule": "bilicdn1\\.com\\/cm\\/api\\/receive\\/content\\/pc",
+            "rule": "bilicdn1\\.com\\/cm\\/api\\/fees\\/pc",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -57,7 +89,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000201,
+            "prevalence": 0.000209,
             "cnames": [
                 {
                     "original": "cm.bilibili.com",
@@ -84,7 +116,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000201,
+            "prevalence": 0.000209,
             "cnames": [
                 {
                     "original": "api.bilibili.com",
@@ -111,7 +143,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000201,
+            "prevalence": 0.000209,
             "cnames": [
                 {
                     "original": "api.bilibili.com",
@@ -119,36 +151,9 @@
                 }
             ],
             "responseHashes": [
-                "00396e7b1075b6a6c9b6d2583943bff63575ffa5520d641cd5d5cf5e7e0e0acf"
+                "b1f8a67a65cb9cca09bf470d6342657f6e90e24cfe5da9a1b041038ce5cc492d"
             ],
             "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "bilibili.com",
-                "www.bilibili.com"
-            ]
-        },
-        {
-            "rule": "bilicdn1\\.com\\/cm\\/api\\/fees\\/pc",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "a.w"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [
-                {
-                    "original": "cm.bilibili.com",
-                    "resolved": "a.w.bilicdn1.com"
-                }
-            ],
-            "responseHashes": [
-                "7a97b9b4d758a3929b8a2be53fbe189c9ba9378d6fbb8190d37f7cc14f5cf5d3"
-            ],
-            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -163,11 +168,16 @@
     "topInitiators": [
         {
             "domain": "hdslb.com",
-            "prevalence": 1
+            "prevalence": 0.6304347826086957
+        },
+        {
+            "domain": "bstarstatic.com",
+            "prevalence": 0.3695652173913043
         }
     ],
     "types": {
-        "XHR": 6,
+        "Ping": 2,
+        "XHR": 4,
         "Fetch": 4
     },
     "nameservers": [

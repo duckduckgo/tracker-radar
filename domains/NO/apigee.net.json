@@ -9,15 +9,20 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000301,
-    "sites": 3,
+    "prevalence": 0.000407,
+    "sites": 4,
     "subdomains": [
-        "mns-00.dn"
+        "mns-00.dn",
+        "tesco-production"
     ],
     "cnames": [
         {
             "original": "api.marksandspencer.com",
             "resolved": "mns-00.dn.apigee.net"
+        },
+        {
+            "original": "api.tesco.com",
+            "resolved": "tesco-production.apigee.net"
         }
     ],
     "fingerprinting": 0,
@@ -31,7 +36,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000201,
+            "prevalence": 0.000203,
             "cnames": [
                 {
                     "original": "api.marksandspencer.com",
@@ -49,14 +54,14 @@
         },
         {
             "rule": "apigee\\.net\\/phoenix-eventcollector\\/v1\\/event\\/mparticle",
-            "cookies": 0,
+            "cookies": 0.000102,
             "fingerprinting": 0,
             "subdomains": [
                 "mns-00.dn"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000201,
+            "prevalence": 0.000203,
             "cnames": [
                 {
                     "original": "api.marksandspencer.com",
@@ -73,31 +78,63 @@
                 "marksandspencer.com",
                 "www.marksandspencer.com"
             ]
+        },
+        {
+            "rule": "apigee\\.net\\/shoppingexperience",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tesco-production"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [
+                {
+                    "original": "api.tesco.com",
+                    "resolved": "tesco-production.apigee.net"
+                }
+            ],
+            "responseHashes": [
+                "82c98a2443e53097dfdd68584d986bb6ec344b6328b46f9459e121a3208301e6"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tesco.com",
+                "www.tesco.com"
+            ]
         }
     ],
     "categories": [
         "CDN"
     ],
     "performance": {},
-    "cookies": 0.0001,
+    "cookies": 0.000203,
     "topInitiators": [
         {
-            "domain": "static-p46175-e229011.adobeaemcloud.com",
-            "prevalence": 0.6
+            "domain": "signalfx.com",
+            "prevalence": 0.42857142857142855
         },
         {
             "domain": "mparticle.com",
-            "prevalence": 0.4
+            "prevalence": 0.42857142857142855
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.14285714285714285
         }
     ],
     "types": {
         "Preflight": 2,
-        "XHR": 2
+        "XHR": 2,
+        "Fetch": 2
     },
     "nameservers": [
-        "ns-116.awsdns-14.com",
         "ns-1441.awsdns-52.org",
-        "ns-1907.awsdns-46.co.uk",
-        "ns-670.awsdns-19.net"
+        "ns-116.awsdns-14.com",
+        "ns-670.awsdns-19.net",
+        "ns-1907.awsdns-46.co.uk"
     ]
 }

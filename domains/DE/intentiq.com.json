@@ -7,36 +7,44 @@
     "source": [
         "DuckDuckGo-DE"
     ],
-    "prevalence": 0.000402,
-    "sites": 4,
+    "prevalence": 0.000914,
+    "sites": 9,
     "subdomains": [
-        "api-gdpr",
+        "agent",
+        "sync",
         "api",
-        "sync-gdpr",
-        "sync"
+        "api-gdpr"
     ],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
         {
-            "rule": "intentiq\\.com\\/profiles_engine\\/ProfilesEngineServlet",
+            "rule": "intentiq\\.com\\/Agent\\/GA\\/UniversalID-Sync\\/IIQUniversalID-sync\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
-                "api-gdpr",
-                "api"
+                "agent"
             ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "apis": {
+                "window.localStorage": 6,
+                "Date.prototype.getTime": 6
+            },
+            "sites": 6,
+            "prevalence": 0.000609,
             "cnames": [],
-            "responseHashes": [],
-            "type": "XHR",
+            "responseHashes": [
+                "69b4b16446ebc83806cee98294e6eea1a70a2121fb2277023590502a33ef33e7"
+            ],
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "90min.de",
-                "www.allmusic.com"
+                "9gag.com",
+                "dotesports.com",
+                "time.com",
+                "www.macworld.com",
+                "www.pcworld.com",
+                "www.webtoons.com"
             ]
         },
         {
@@ -44,26 +52,49 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "sync-gdpr",
                 "sync",
                 "api"
             ],
             "apis": {},
-            "sites": 5,
-            "prevalence": 0.000503,
+            "sites": 9,
+            "prevalence": 0.000914,
             "cnames": [],
-            "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-            ],
+            "responseHashes": [],
             "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "90min.de",
+                "9gag.com",
+                "dotesports.com",
+                "time.com",
                 "www.90min.de",
                 "www.allmusic.com",
                 "www.jpost.com",
-                "www.wickedweasel.com"
+                "www.macworld.com",
+                "www.pcworld.com",
+                "www.webtoons.com"
+            ]
+        },
+        {
+            "rule": "intentiq\\.com\\/profiles_engine\\/ProfilesEngineServlet",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-gdpr"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "eupubconsent-v2": 0.0001015228426395939
+            },
+            "exampleSites": [
+                "90min.de",
+                "www.90min.de"
             ]
         }
     ],
@@ -78,33 +109,38 @@
     "cookies": 0,
     "topInitiators": [
         {
+            "domain": "ntv.io",
+            "prevalence": 0.5
+        },
+        {
             "domain": "first party",
-            "prevalence": 0.2857142857142857
+            "prevalence": 0.1111111111111111
         },
         {
             "domain": "mmctsvc.com",
-            "prevalence": 0.14285714285714285
+            "prevalence": 0.1111111111111111
+        },
+        {
+            "domain": "geoedge.be",
+            "prevalence": 0.1111111111111111
+        },
+        {
+            "domain": "ay.delivery",
+            "prevalence": 0.05555555555555555
         },
         {
             "domain": "userway.org",
-            "prevalence": 0.14285714285714285
-        },
-        {
-            "domain": "360playvid.info",
-            "prevalence": 0.14285714285714285
+            "prevalence": 0.05555555555555555
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.14285714285714285
-        },
-        {
-            "domain": "simpli.fi",
-            "prevalence": 0.14285714285714285
+            "prevalence": 0.05555555555555555
         }
     ],
     "types": {
-        "XHR": 2,
-        "Image": 5
+        "Script": 6,
+        "Image": 9,
+        "XHR": 2
     },
     "nameservers": [
         "ns-1009.awsdns-62.net",

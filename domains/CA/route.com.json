@@ -4,14 +4,114 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000503,
-    "sites": 5,
+    "prevalence": 0.000627,
+    "sites": 6,
     "subdomains": [
-        "shopify-widget"
+        "bigcommerce",
+        "protection-widget",
+        "shopify-widget",
+        "shopify"
     ],
     "cnames": [],
-    "fingerprinting": 2,
+    "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "route\\.com\\/checkout\\/routeimg\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "bigcommerce"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000418,
+            "cnames": [],
+            "responseHashes": [
+                "fce5270feb8bfbcde1fecd994d48a05d186efd33ba7565d5541fba1fd835154d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "alflahertys.com",
+                "houseofknives.ca",
+                "laurasecord.ca",
+                "www.herooutdoors.com"
+            ]
+        },
+        {
+            "rule": "route\\.com\\/checkout\\/listener\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "bigcommerce"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000314,
+            "cnames": [],
+            "responseHashes": [
+                "4d8b3f211f9ac5c3e3fd567a201a15f5a86808d199674fb7df8367c602478790",
+                "d40e20a244d08ccc03b360439e51e898be2f7948a8bbbde482cad5ca6f6a5f03"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "alflahertys.com",
+                "houseofknives.ca",
+                "laurasecord.ca"
+            ]
+        },
+        {
+            "rule": "route\\.com\\/css\\/custom\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "bigcommerce"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000314,
+            "cnames": [],
+            "responseHashes": [
+                "92cc6ca2c255085b726fbf567aeff34df5d21951aebaef0e269b0fbad22777c2"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "alflahertys.com",
+                "houseofknives.ca",
+                "laurasecord.ca"
+            ]
+        },
+        {
+            "rule": "route\\.com\\/route-protection-widget\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "protection-widget"
+            ],
+            "apis": {
+                "Navigator.prototype.product": 3,
+                "Navigator.prototype.userAgent": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000314,
+            "cnames": [],
+            "responseHashes": [
+                "e7c98ad70782258c5ee83f4b4d9adc624fb00d23de45e73ef2de7681e6fa4479"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "alflahertys.com",
+                "houseofknives.ca",
+                "laurasecord.ca"
+            ]
+        },
         {
             "rule": "route\\.com\\/shopify\\.widget\\.js",
             "cookies": 0,
@@ -20,29 +120,49 @@
                 "shopify-widget"
             ],
             "apis": {
-                "Date.prototype.getTime": 4,
-                "window.localStorage": 4
+                "Date.prototype.getTime": 2,
+                "window.localStorage": 2
             },
-            "sites": 4,
-            "prevalence": 0.000403,
+            "sites": 2,
+            "prevalence": 0.000209,
             "cnames": [],
             "responseHashes": [
-                "e6585144f0333c4570751d14b4fa5f59a3cb46d3327e72e86f1732e66c816c5a"
+                "539bd44f8f330c965ba39a39c7bc3f5a15d7e791dfa67170fc497243bd3f92ad"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "frankandoak.com",
-                "labyrinthos.co",
-                "opusartsupplies.com",
-                "tru.earth"
+                "labyrinthos.co"
+            ]
+        },
+        {
+            "rule": "route\\.com\\/v1\\/merchant-info\\/frank-and-oak-store\\.myshopify\\.com",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "shopify"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000209,
+            "cnames": [],
+            "responseHashes": [
+                "103243d8294aa2169eb0c2d367a78dbea96bc6d10e1aff5d8b48091af52ff35b"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "frankandoak.com",
+                "ca.frankandoak.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000101,
+    "cookies": 0,
     "topInitiators": [
         {
             "domain": "first party",
@@ -50,12 +170,14 @@
         }
     ],
     "types": {
-        "Script": 4
+        "Script": 12,
+        "Stylesheet": 3,
+        "Fetch": 2
     },
     "nameservers": [
         "ns-1175.awsdns-18.org",
-        "ns-1846.awsdns-38.co.uk",
         "ns-622.awsdns-13.net",
+        "ns-1846.awsdns-38.co.uk",
         "ns-94.awsdns-11.com"
     ]
 }

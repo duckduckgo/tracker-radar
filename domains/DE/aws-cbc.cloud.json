@@ -4,34 +4,55 @@
     "source": [
         "DuckDuckGo-DE"
     ],
-    "prevalence": 0.000101,
-    "sites": 1,
+    "prevalence": 0.000203,
+    "sites": 2,
     "subdomains": [
+        "ftpxy.prod.r5s",
         "cdn.gateway.now-plus-prod"
     ],
     "cnames": [],
     "fingerprinting": 0,
     "resources": [
         {
-            "rule": "aws-cbc\\.cloud\\/graphql",
+            "rule": "aws-cbc\\.cloud\\/proxy",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "cdn.gateway.now-plus-prod"
+                "ftpxy.prod.r5s"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000201,
+            "prevalence": 0.000203,
             "cnames": [],
-            "responseHashes": [
-                "f3a27f79832fafd32c6d5114a271d21c8a3ac592222e9dc49c86bf41185b0529"
-            ],
-            "type": "XHR",
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "rtl.de",
-                "plus.rtl.de"
+                "www.tvnow.de"
+            ]
+        },
+        {
+            "rule": "aws-cbc\\.cloud\\/proxy",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ftpxy.prod.r5s"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "ddf41dab61bbb17492147aed0cba57f1d011d75ae31afa53d0a7439cc9b2abc6"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rtl.de",
+                "www.tvnow.de"
             ]
         },
         {
@@ -42,8 +63,8 @@
                 "cdn.gateway.now-plus-prod"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000305,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
@@ -51,7 +72,74 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "rtl.de",
-                "plus.rtl.de"
+                "plus.rtl.de",
+                "www.tvnow.de"
+            ]
+        },
+        {
+            "rule": "aws-cbc\\.cloud\\/graphql",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn.gateway.now-plus-prod"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000305,
+            "cnames": [],
+            "responseHashes": [
+                "52cde351a8a6aea093c251164fb32bd94b09b00da9c9ea275b62a8c36ded2c4a",
+                "1f469a2c1011dc1e2a37c32a16f629c370f3cdd620a7424fcb6557d03d6b95e5"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rtl.de",
+                "plus.rtl.de",
+                "www.tvnow.de"
+            ]
+        },
+        {
+            "rule": "aws-cbc\\.cloud\\/proxy\\/client\\/metrics",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ftpxy.prod.r5s"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rtl.de",
+                "www.tvnow.de"
+            ]
+        },
+        {
+            "rule": "aws-cbc\\.cloud\\/proxy\\/client\\/metrics",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ftpxy.prod.r5s"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rtl.de",
+                "www.tvnow.de"
             ]
         }
     ],
@@ -61,17 +149,22 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.5
+        },
+        {
+            "domain": "rtl.de",
+            "prevalence": 0.5
         }
     ],
     "types": {
-        "XHR": 2,
-        "Preflight": 2
+        "Preflight": 7,
+        "Fetch": 4,
+        "XHR": 3
     },
     "nameservers": [
-        "ns-1891.awsdns-44.co.uk",
-        "ns-1520.awsdns-62.org",
         "ns-102.awsdns-12.com",
-        "ns-854.awsdns-42.net"
+        "ns-854.awsdns-42.net",
+        "ns-1520.awsdns-62.org",
+        "ns-1891.awsdns-44.co.uk"
     ]
 }

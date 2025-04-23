@@ -7,10 +7,12 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000615,
+    "prevalence": 0.0000631,
     "sites": 9,
     "subdomains": [
-        "sdkconfig.pulse"
+        "sdkconfig.pulse",
+        "cogwheel.inventory",
+        "dc"
     ],
     "cnames": [],
     "fingerprinting": 0,
@@ -23,8 +25,8 @@
                 "sdkconfig.pulse"
             ],
             "apis": {},
-            "sites": 9,
-            "prevalence": 0.0000615,
+            "sites": 7,
+            "prevalence": 0.0000491,
             "cnames": [],
             "responseHashes": [
                 "83cb5d20753048ddc679e625bfe75f45b17d373d50713a76b9a304f79823d377"
@@ -35,12 +37,98 @@
             "exampleSites": [
                 "e24.no",
                 "omni.se",
-                "www.adressa.no",
                 "www.aftenposten.no",
                 "www.aftenbladet.no",
                 "www.bt.no",
                 "www.godare.se",
-                "www.tek.no",
+                "www.tv.nu"
+            ]
+        },
+        {
+            "rule": "schibsted\\.io\\/prod\\/latest\\/gdpr-bundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cogwheel.inventory"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000028,
+            "cnames": [],
+            "responseHashes": [
+                "00215d0d6a08c7337322fa73d3836eb68f81abf8cd5b2d76a241955a1d0d3c66"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "e24.no",
+                "www.aftenposten.no",
+                "www.bt.no",
+                "www.finn.no"
+            ]
+        },
+        {
+            "rule": "schibsted\\.io\\/api\\/v1\\/track\\/sdrn:schibsted:client:aftenposten",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dc"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000014,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "aftenposten.no",
+                "www.aftenposten.no"
+            ]
+        },
+        {
+            "rule": "schibsted\\.io\\/api\\/v1\\/track\\/sdrn:schibsted:client:bt",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dc"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000014,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bt.no",
+                "www.bt.no"
+            ]
+        },
+        {
+            "rule": "schibsted\\.io\\/api\\/v1\\/track\\/sdrn:schibsted:client:tvnu",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dc"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000014,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tv.nu",
                 "www.tv.nu"
             ]
         }
@@ -51,19 +139,17 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.6923076923076923
+            "prevalence": 0.8620689655172413
         },
         {
             "domain": "schibsted.com",
-            "prevalence": 0.23076923076923078
-        },
-        {
-            "domain": "datadoghq-browser-agent.com",
-            "prevalence": 0.07692307692307693
+            "prevalence": 0.13793103448275862
         }
     ],
     "types": {
-        "Fetch": 9
+        "Fetch": 7,
+        "Script": 4,
+        "Ping": 6
     },
     "nameservers": [
         "ns-1082.awsdns-07.org",

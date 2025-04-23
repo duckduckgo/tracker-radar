@@ -9,10 +9,12 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.00312,
-    "sites": 31,
+    "prevalence": 0.00265,
+    "sites": 26,
     "subdomains": [
         "api",
+        "scripts",
+        "tag-logger",
         "tag"
     ],
     "cnames": [],
@@ -27,13 +29,14 @@
             ],
             "apis": {},
             "sites": 6,
-            "prevalence": 0.000603,
+            "prevalence": 0.000612,
             "cnames": [],
             "responseHashes": [
-                "c0623fd89e0d48d98c38bd41a2d1c1247b114fa3e0ddb76f2cdb0ee4bb380930",
-                "2eb1e76b278d806f11f00e713796e1a95772b742770f9a87b395bb13d495054f",
+                "1c8602d30b87be3b11cb5f8122ca79abb5eebb0ff5e49ffb5afe07f73abcfdec",
+                "1446574953543a870805efced757e244d6deee97c3b055b79757b7532c3396d8",
+                "af993668dc1effa9f8ceca2c09c352733bbaeee989c8bed8660f629ad66e2e75",
                 "55077ae947cc14e2bc96d299ac958026035905d569c78ed6bf3bb31409fbca81",
-                "8d13898efc641f83a7d8296bd0ee406c9f5ab447edcf7f82247d3ffbadb0d976"
+                "e3fb8d7493c8d5a5b34c5f18b1d2d60195d90ad2fe7acc1d95c029cb858e64e3"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -41,25 +44,89 @@
             "exampleSites": [
                 "adobe.com",
                 "fonts.adobe.com",
+                "get.adobe.com",
                 "helpx.adobe.com",
                 "slack.com",
-                "www.adobe.com",
-                "www.elastic.co"
+                "www.adobe.com"
+            ]
+        },
+        {
+            "rule": "demandbase\\.com\\/WuEFNglz\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "scripts"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000204,
+            "cnames": [],
+            "responseHashes": [
+                "454c377bd45c265a21b024578955167483ff714ae1405074dd391eeb999c3889"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sophos.com",
+                "www.sophos.com"
+            ]
+        },
+        {
+            "rule": "demandbase\\.com\\/bg9s",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tag-logger"
+            ],
+            "apis": {},
+            "sites": 18,
+            "prevalence": 0.00184,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sophos.com",
+                "community.splunk.com",
+                "creativecloud.adobe.com",
+                "docs.paloaltonetworks.com",
+                "docs.splunk.com",
+                "www.anaconda.com",
+                "www.citrix.com",
+                "www.cloudflare.com",
+                "www.docusign.com",
+                "www.enterprise.com",
+                "www.ibm.com",
+                "www.merckmillipore.com",
+                "www.msci.com",
+                "www.postman.com",
+                "www.sonicwall.com",
+                "www.sophos.com",
+                "www.st.com",
+                "www.ups.com"
             ]
         },
         {
             "rule": "demandbase\\.com\\/AV69mAwE\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "tag"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
             "sites": 2,
-            "prevalence": 0.000201,
+            "prevalence": 0.000204,
             "cnames": [],
             "responseHashes": [
-                "54d445f58a9d034d8dd7c043afa613f2355b4b5428c9cd20d6fd1dcd6a35c5e2"
+                "a48625b4c9e8b2409565edfa5caea5df3bcc37b3173a1ebecf4abd05f603ee5b"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -67,28 +134,6 @@
             "exampleSites": [
                 "splunk.com",
                 "docs.splunk.com"
-            ]
-        },
-        {
-            "rule": "demandbase\\.com\\/bccb5bc7\\.min\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "tag"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "54f6cbdb82414d4e79c84312d387fc1adab52c8a0d5f11fe376386db6f020f8e"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "merckmillipore.com",
-                "www.sigmaaldrich.com"
             ]
         }
     ],
@@ -100,39 +145,44 @@
         "Action Pixels"
     ],
     "performance": {},
-    "cookies": 0.000101,
+    "cookies": 0.000102,
     "topInitiators": [
         {
+            "domain": "first party",
+            "prevalence": 0.4166666666666667
+        },
+        {
             "domain": "adobedtm.com",
-            "prevalence": 0.34375
+            "prevalence": 0.2222222222222222
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.3125
+            "prevalence": 0.2222222222222222
         },
         {
-            "domain": "first party",
-            "prevalence": 0.25
+            "domain": "bizible.com",
+            "prevalence": 0.05555555555555555
         },
         {
             "domain": "d34u8crftukxnk.cloudfront.net",
-            "prevalence": 0.03125
+            "prevalence": 0.027777777777777776
         },
         {
-            "domain": "optimizely.com",
-            "prevalence": 0.03125
+            "domain": "go-mpulse.net",
+            "prevalence": 0.027777777777777776
         },
         {
             "domain": "tiqcdn.com",
-            "prevalence": 0.03125
+            "prevalence": 0.027777777777777776
         }
     ],
     "types": {
-        "Script": 10
+        "Script": 10,
+        "XHR": 18
     },
     "nameservers": [
-        "ns-1260.awsdns-29.org",
         "ns-1982.awsdns-55.co.uk",
+        "ns-1260.awsdns-29.org",
         "ns-320.awsdns-40.com",
         "ns-578.awsdns-08.net"
     ]

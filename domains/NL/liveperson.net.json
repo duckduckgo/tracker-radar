@@ -9,10 +9,11 @@
     "source": [
         "DuckDuckGo-NL"
     ],
-    "prevalence": 0.000401,
+    "prevalence": 0.000407,
     "sites": 4,
     "subdomains": [
-        "publisher"
+        "publisher",
+        "lptag"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -25,14 +26,13 @@
                 "publisher"
             ],
             "apis": {
-                "Date.prototype.getTime": 2,
-                "window.indexedDB": 1
+                "Date.prototype.getTime": 1
             },
             "sites": 2,
-            "prevalence": 0.000201,
+            "prevalence": 0.000203,
             "cnames": [],
             "responseHashes": [
-                "977046592b00d4b3569b963b568c06c557e58e9bd806d2d68a37e9561e2114c5"
+                "79bc9a08b77782163c9e5f5299e619ee2faf8a85494a62cf110182a9a1071c0e"
             ],
             "type": "Document",
             "firstPartyCookies": {},
@@ -40,6 +40,71 @@
             "exampleSites": [
                 "microsoft.com",
                 "onedrive.live.com"
+            ]
+        },
+        {
+            "rule": "liveperson\\.net\\/tag\\/tag\\.js",
+            "cookies": 0.000203,
+            "fingerprinting": 1,
+            "subdomains": [
+                "lptag"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "NavigatorUAData.prototype.brands": 2,
+                "window.sessionStorage": 2,
+                "window.localStorage": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2,
+                "Document.cookie getter": 2,
+                "NavigatorUAData.prototype.getHighEntropyValues": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "93daacf37dacdf214c0bddbdf08c42b835989cde862262c487ec4b4654b2bc21"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mouser.com",
+                "www.t-mobile.com"
+            ]
+        },
+        {
+            "rule": "liveperson\\.net\\/lptag\\/api\\/account\\/62258097\\/configuration\\/applications\\/taglets\\/\\.jsonp",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "lptag"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 1,
+                "Screen.prototype.width": 1,
+                "Screen.prototype.height": 1,
+                "Navigator.prototype.userAgent": 1,
+                "Document.cookie getter": 1,
+                "Navigator.prototype.appName": 1,
+                "Navigator.prototype.appVersion": 1,
+                "Navigator.prototype.onLine": 1,
+                "window.innerWidth": 1,
+                "Screen.prototype.availHeight": 1,
+                "Navigator.prototype.connection": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "42363f68fc430882a82a4baf278422648bc1aa6fa7d7b5382bfb403f35b7e0e1"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "t-mobile.com",
+                "www.t-mobile.com"
             ]
         }
     ],
@@ -50,19 +115,28 @@
         "Support Chat Widget"
     ],
     "performance": {},
-    "cookies": 0.0001,
+    "cookies": 0.000203,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.8
+            "prevalence": 0.5714285714285714
         },
         {
             "domain": "microsoft.com",
-            "prevalence": 0.2
+            "prevalence": 0.14285714285714285
+        },
+        {
+            "domain": "liveperson.com",
+            "prevalence": 0.14285714285714285
+        },
+        {
+            "domain": "quantummetric.com",
+            "prevalence": 0.14285714285714285
         }
     ],
     "types": {
-        "Document": 2
+        "Document": 2,
+        "Script": 4
     },
     "nameservers": [
         "a3-64.akam.net",

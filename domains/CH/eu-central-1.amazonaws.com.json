@@ -9,13 +9,20 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.000804,
-    "sites": 8,
+    "prevalence": 0.000918,
+    "sites": 9,
     "subdomains": [
         "p2iqhncxyh.execute-api",
-        "cognito-identity"
+        "cognito-identity",
+        "kinesis",
+        "cf-proxy-cf-eu10-004-ca8ff5b93d5f2e9b.elb"
     ],
-    "cnames": [],
+    "cnames": [
+        {
+            "original": "check.cfapps.eu10-004.hana.ondemand.com",
+            "resolved": "cf-proxy-cf-eu10-004-ca8ff5b93d5f2e9b.elb.eu-central-1.amazonaws.com"
+        }
+    ],
     "fingerprinting": 0,
     "resources": [
         {
@@ -27,15 +34,15 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000201,
+            "prevalence": 0.000204,
             "cnames": [],
             "responseHashes": [],
-            "type": "Fetch",
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "avery-zweckform.com",
-                "www.mysteelproducts.de"
+                "ipet.ch",
+                "www.avery-zweckform.com"
             ]
         },
         {
@@ -47,15 +54,15 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000201,
+            "prevalence": 0.000204,
             "cnames": [],
             "responseHashes": [],
-            "type": "Preflight",
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "avery-zweckform.com",
-                "www.mysteelproducts.de"
+                "ipet.ch",
+                "www.avery-zweckform.com"
             ]
         },
         {
@@ -63,18 +70,21 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "cognito-identity"
+                "cognito-identity",
+                "kinesis"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 4,
+            "prevalence": 0.000408,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "interrail.eu",
+                "festo.com",
+                "www.festo.com",
+                "www.interrail.eu",
                 "www.talktalk.ch"
             ]
         },
@@ -83,22 +93,32 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "cognito-identity"
+                "cognito-identity",
+                "cf-proxy-cf-eu10-004-ca8ff5b93d5f2e9b.elb"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000302,
-            "cnames": [],
+            "sites": 5,
+            "prevalence": 0.00051,
+            "cnames": [
+                {
+                    "original": "check.cfapps.eu10-004.hana.ondemand.com",
+                    "resolved": "cf-proxy-cf-eu10-004-ca8ff5b93d5f2e9b.elb.eu-central-1.amazonaws.com"
+                }
+            ],
             "responseHashes": [
-                "f25ea8bd1498d3d14225b748bdfa9aa4363285f2e4220f5b806fdb3182a8351f",
-                "c4779ed982686d881b82c0aec5037340c77735898e14f490e6905270fa40667f"
+                "7e8e1aa0135fc1456b8c4049209c9908578c38125c5e035ee6cc8d24b6ce7218",
+                "4c4715224611f498b92bdf1607ddceeef2abeeaf997cbbe9d287a015a74b37f5",
+                "f8b889540704191470b56d58f00d741b3d7eea10cbd4c404ea305f5d4060782d",
+                "13692877c7af61c312c7babbd07683ef611c64789855c3d733688de3e3be86b0"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "interrail.eu",
+                "festo.com",
+                "www.festo.com",
                 "www.interrail.eu",
+                "www.sap.com",
                 "www.talktalk.ch"
             ]
         }
@@ -107,37 +127,33 @@
         "CDN"
     ],
     "performance": {},
-    "cookies": 0.000101,
+    "cookies": 0,
     "topInitiators": [
         {
-            "domain": "rum.us-east-1.amazonaws.com",
-            "prevalence": 0.4
-        },
-        {
             "domain": "first party",
-            "prevalence": 0.3333333333333333
+            "prevalence": 0.5
         },
         {
             "domain": "d5yoctgpv4cpx.cloudfront.net",
-            "prevalence": 0.2
+            "prevalence": 0.2777777777777778
         },
         {
-            "domain": "steadycdn.com",
-            "prevalence": 0.06666666666666667
+            "domain": "rum.us-east-1.amazonaws.com",
+            "prevalence": 0.2222222222222222
         }
     ],
     "types": {
-        "Fetch": 5,
-        "Preflight": 4
+        "Preflight": 6,
+        "Fetch": 7
     },
     "nameservers": [
-        "ns1.amzndns.co.uk",
         "ns1.amzndns.com",
         "ns1.amzndns.net",
         "ns1.amzndns.org",
         "ns2.amzndns.co.uk",
         "ns2.amzndns.com",
         "ns2.amzndns.net",
-        "ns2.amzndns.org"
+        "ns2.amzndns.org",
+        "ns1.amzndns.co.uk"
     ]
 }

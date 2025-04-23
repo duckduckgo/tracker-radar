@@ -4,16 +4,17 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.000301,
-    "sites": 3,
+    "prevalence": 0.000522,
+    "sites": 5,
     "subdomains": [
-        "www"
+        "www",
+        "cdn"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
         {
-            "rule": "roomvo\\.com\\/services\\/visitor\\/visitors\\/",
+            "rule": "roomvo\\.com\\/api\\/visitors\\/",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -21,16 +22,99 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000201,
+            "prevalence": 0.000209,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "templeandwebster.com.au",
+                "www.templeandwebster.com.au"
+            ]
+        },
+        {
+            "rule": "roomvo\\.com\\/api\\/visitors\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000209,
             "cnames": [],
             "responseHashes": [
-                "4f3d904f8118b3292458bf13e8d2adb2c35a01660fc9fd8692ef304d0adb4b57"
+                "e359a640e3dc94bd629108e400710f9a3693122577209bad759a268a7e036b50"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "beaumont-tiles.com.au",
+                "templeandwebster.com.au",
+                "www.templeandwebster.com.au"
+            ]
+        },
+        {
+            "rule": "roomvo\\.com\\/static\\/scripts\\/b2b\\/templeandwebster\\.js",
+            "cookies": 0.000104,
+            "fingerprinting": 2,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 1,
+                "Document.cookie getter": 1,
+                "Document.cookie setter": 1,
+                "Navigator.prototype.platform": 1,
+                "Navigator.prototype.maxTouchPoints": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000209,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {
+                "ffvisitorids": {
+                    "ttl": 251656932662,
+                    "length": 55,
+                    "prevalence": 0.00010430791697089809,
+                    "uniqueness": 1
+                },
+                "ffvendorids": {
+                    "ttl": 251656932662,
+                    "length": 55,
+                    "prevalence": 0.00010430791697089809,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "templeandwebster.com.au",
+                "www.templeandwebster.com.au"
+            ]
+        },
+        {
+            "rule": "roomvo\\.com\\/services\\/event\\/events\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000313,
+            "cnames": [],
+            "responseHashes": [
+                "3f51e60e8589a363d9af001d32ffac150455001baac52244a01f3538d83d383e",
+                "7b78c1186e182c68ce9f743143035a93b1fd2b6d1f62d9d90176285956f89aaa"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "templeandwebster.com.au",
+                "www.beaumont-tiles.com.au",
                 "www.dulux.com.au"
             ]
         },
@@ -43,7 +127,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000201,
+            "prevalence": 0.000209,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
@@ -55,7 +139,7 @@
             ]
         },
         {
-            "rule": "roomvo\\.com\\/services\\/event\\/events\\/",
+            "rule": "roomvo\\.com\\/services\\/visitor\\/visitors\\/",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -63,10 +147,10 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000201,
+            "prevalence": 0.000209,
             "cnames": [],
             "responseHashes": [
-                "c0901d94de14aeec13b3c57fcb65a5a09bedc3b0c641f3ce67139d671d4ddc91"
+                "1f01ce0a28f789cda1ba4e84f8b1d66c0dab2cde2fe70a8505a11b2de2c41d60"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -79,21 +163,34 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000201,
+    "cookies": 0.000313,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.375
+        },
+        {
+            "domain": "zcdn.com.au",
+            "prevalence": 0.25
+        },
+        {
+            "domain": "tiqcdn.com",
+            "prevalence": 0.25
+        },
+        {
+            "domain": "datadoghq-browser-agent.com",
+            "prevalence": 0.125
         }
     ],
     "types": {
-        "XHR": 4,
-        "Preflight": 2
+        "Preflight": 4,
+        "XHR": 7,
+        "Script": 2
     },
     "nameservers": [
-        "ns-1878.awsdns-42.co.uk",
+        "ns-597.awsdns-10.net",
         "ns-317.awsdns-39.com",
-        "ns-1517.awsdns-61.org",
-        "ns-597.awsdns-10.net"
+        "ns-1878.awsdns-42.co.uk",
+        "ns-1517.awsdns-61.org"
     ]
 }

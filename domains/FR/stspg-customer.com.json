@@ -4,12 +4,32 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000404,
-    "sites": 4,
+    "prevalence": 0.00061,
+    "sites": 6,
     "subdomains": [
-        "3x6vjqhj2cpt"
+        "94s7z8vpy1n8",
+        "0tp9ssgtptvs",
+        "3x6vjqhj2cpt",
+        "1qzzx4z9jvmv",
+        "87zd6t8dwzd8"
     ],
     "cnames": [
+        {
+            "original": "bare-metal-servers.status-ovhcloud.com",
+            "resolved": "1qzzx4z9jvmv.stspg-customer.com"
+        },
+        {
+            "original": "hosted-private-cloud.status-ovhcloud.com",
+            "resolved": "87zd6t8dwzd8.stspg-customer.com"
+        },
+        {
+            "original": "status.cursor.com",
+            "resolved": "0tp9ssgtptvs.stspg-customer.com"
+        },
+        {
+            "original": "status.snowflake.com",
+            "resolved": "94s7z8vpy1n8.stspg-customer.com"
+        },
         {
             "original": "status.wix.com",
             "resolved": "3x6vjqhj2cpt.stspg-customer.com"
@@ -17,6 +37,38 @@
     ],
     "fingerprinting": 0,
     "resources": [
+        {
+            "rule": "stspg-customer\\.com\\/api\\/v2\\/status\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "94s7z8vpy1n8",
+                "0tp9ssgtptvs"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [
+                {
+                    "original": "status.snowflake.com",
+                    "resolved": "94s7z8vpy1n8.stspg-customer.com"
+                },
+                {
+                    "original": "status.cursor.com",
+                    "resolved": "0tp9ssgtptvs.stspg-customer.com"
+                }
+            ],
+            "responseHashes": [
+                "ea575474629b6f7caf401c379c8bcb986f2cb56bd00c841daf1f3bd5ea3b49f5"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "snowflake.com",
+                "forum.cursor.com"
+            ]
+        },
         {
             "rule": "stspg-customer\\.com\\/api\\/v2\\/incidents\\.json",
             "cookies": 0,
@@ -26,7 +78,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000202,
+            "prevalence": 0.000203,
             "cnames": [
                 {
                     "original": "status.wix.com",
@@ -34,7 +86,7 @@
                 }
             ],
             "responseHashes": [
-                "e2dd0a794ad9fd1285fc9fc43e982bc6e9e16ceb3f4166196bcb48e05e81e1ea"
+                "45f20cc9aa200af57e9f73056f67e5dd651226d707663c1d30ce7d93a82486d9"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -45,28 +97,35 @@
             ]
         },
         {
-            "rule": "stspg-customer\\.com\\/api\\/v2\\/incidents\\.json",
+            "rule": "stspg-customer\\.com\\/api\\/v2\\/summary\\.json",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "3x6vjqhj2cpt"
+                "1qzzx4z9jvmv",
+                "87zd6t8dwzd8"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000202,
+            "prevalence": 0.000203,
             "cnames": [
                 {
-                    "original": "status.wix.com",
-                    "resolved": "3x6vjqhj2cpt.stspg-customer.com"
+                    "original": "bare-metal-servers.status-ovhcloud.com",
+                    "resolved": "1qzzx4z9jvmv.stspg-customer.com"
+                },
+                {
+                    "original": "hosted-private-cloud.status-ovhcloud.com",
+                    "resolved": "87zd6t8dwzd8.stspg-customer.com"
                 }
             ],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "7d828af2343c79b6ec8da41a192fad5a5c74338632c7bf297cf2de03df266b4c"
+            ],
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "wix.com",
-                "support.wix.com"
+                "status-ovhcloud.com",
+                "www.status-ovhcloud.com"
             ]
         }
     ],
@@ -75,17 +134,21 @@
     "cookies": 0,
     "topInitiators": [
         {
+            "domain": "discourse-cdn.com",
+            "prevalence": 0.4
+        },
+        {
             "domain": "parastorage.com",
-            "prevalence": 0.6666666666666666
+            "prevalence": 0.4
         },
         {
             "domain": "redhatstatic.com",
-            "prevalence": 0.3333333333333333
+            "prevalence": 0.2
         }
     ],
     "types": {
-        "XHR": 2,
-        "Preflight": 2
+        "Fetch": 2,
+        "XHR": 4
     },
     "nameservers": [
         "ns-1098.awsdns-09.org",

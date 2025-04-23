@@ -4,8 +4,8 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.000041,
-    "sites": 6,
+    "prevalence": 0.0000701,
+    "sites": 10,
     "subdomains": [
         "sdk-api"
     ],
@@ -20,17 +20,19 @@
                 "sdk-api"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000205,
+            "sites": 5,
+            "prevalence": 0.0000351,
             "cnames": [],
             "responseHashes": [],
-            "type": "Ping",
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "vkvideo.ru",
+                "mail.ru",
                 "m.vkvideo.ru",
-                "vk.com"
+                "ok.ru",
+                "vkvideo.ru",
+                "www.ok.ru"
             ]
         },
         {
@@ -41,17 +43,42 @@
                 "sdk-api"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000205,
+            "sites": 5,
+            "prevalence": 0.0000351,
             "cnames": [],
             "responseHashes": [],
-            "type": "Preflight",
+            "type": "Ping",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "vkvideo.ru",
+                "mail.ru",
                 "m.vkvideo.ru",
-                "vk.com"
+                "ok.ru",
+                "vkvideo.ru",
+                "www.ok.ru"
+            ]
+        },
+        {
+            "rule": "apptracer\\.ru\\/api\\/perf\\/upload",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sdk-api"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000021,
+            "cnames": [],
+            "responseHashes": [
+                "c955e57777ec0d73639dca6748560d00aa5eb8e12f13ebb2ed9656add3908f97"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ok.ru",
+                "m.ok.ru",
+                "www.rustore.ru"
             ]
         },
         {
@@ -63,16 +90,14 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.000014,
             "cnames": [],
-            "responseHashes": [
-                "c955e57777ec0d73639dca6748560d00aa5eb8e12f13ebb2ed9656add3908f97"
-            ],
-            "type": "XHR",
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "rustore.ru",
+                "ok.ru",
                 "www.rustore.ru"
             ]
         }
@@ -83,17 +108,29 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.5
+        },
+        {
+            "domain": "cdn-vk.ru",
+            "prevalence": 0.25
+        },
+        {
+            "domain": "okcdn.ru",
+            "prevalence": 0.16666666666666666
+        },
+        {
+            "domain": "imgsmail.ru",
+            "prevalence": 0.08333333333333333
         }
     ],
     "types": {
-        "Ping": 3,
-        "Preflight": 3,
-        "XHR": 2
+        "Preflight": 7,
+        "Ping": 5,
+        "XHR": 3
     },
     "nameservers": [
-        "ns1.ok.ru",
         "ns3.ok.ru",
-        "ns2.ok.ru"
+        "ns2.ok.ru",
+        "ns1.ok.ru"
     ]
 }

@@ -7,43 +7,56 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.000143,
-    "sites": 21,
+    "prevalence": 0.000133,
+    "sites": 19,
     "subdomains": [
         "assets",
-        "bam"
+        "bam",
+        "context",
+        "bongeo"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
         {
             "rule": "bonad\\.io\\/bundles\\/bad\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
+            "cookies": 0.00000701,
+            "fingerprinting": 2,
             "subdomains": [
                 "assets"
             ],
             "apis": {
-                "Document.cookie getter": 10
+                "Document.cookie getter": 11,
+                "window.localStorage": 7,
+                "Navigator.prototype.permissions": 7,
+                "Document.cookie setter": 1
             },
-            "sites": 10,
-            "prevalence": 0.0000683,
+            "sites": 11,
+            "prevalence": 0.0000771,
             "cnames": [],
             "responseHashes": [
-                "3e3299316995d92472fcefe530c537657eb83630eb817dd8e6f3eb60a5b95ae2"
+                "458443107090a60a250c89f6f5f3a250e9c03094873f326ea9c81b4ca7eb7a70"
             ],
             "type": "Script",
-            "firstPartyCookies": {},
+            "firstPartyCookies": {
+                "bad-freq-rmp": {
+                    "ttl": 1800,
+                    "length": 1,
+                    "prevalence": 0.000007010951105626989,
+                    "uniqueness": 1
+                }
+            },
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "bilmagasinet.dk",
                 "idenyt.dk",
-                "komputer.dk",
-                "kotimikro.fi",
+                "illvet.se",
                 "pctidningen.se",
+                "tieku.fi",
+                "viivilla.no",
                 "viivilla.se",
+                "wibnet.nl",
                 "woman.dk",
-                "www.hbl.fi",
                 "www.netdoktor.se",
                 "www.sydsvenskan.se"
             ]
@@ -56,8 +69,8 @@
                 "assets"
             ],
             "apis": {},
-            "sites": 10,
-            "prevalence": 0.0000683,
+            "sites": 11,
+            "prevalence": 0.0000771,
             "cnames": [],
             "responseHashes": [
                 "78342a0905a72ce44da083dcb5d23b8ea0c16992ba2a82eece97e033d76ba3d3"
@@ -68,12 +81,13 @@
             "exampleSites": [
                 "bilmagasinet.dk",
                 "idenyt.dk",
-                "komputer.dk",
-                "kotimikro.fi",
+                "illvet.se",
                 "pctidningen.se",
+                "tieku.fi",
+                "viivilla.no",
                 "viivilla.se",
+                "wibnet.nl",
                 "woman.dk",
-                "www.hbl.fi",
                 "www.netdoktor.se",
                 "www.sydsvenskan.se"
             ]
@@ -86,15 +100,17 @@
                 "bam"
             ],
             "apis": {},
-            "sites": 8,
-            "prevalence": 0.0000547,
+            "sites": 14,
+            "prevalence": 0.0000982,
             "cnames": [],
             "responseHashes": [
                 "82379cb6bbf24d9e0427b79c4b87b57e8e4d0208e2d6b74ff2e30e4cb7c8436a",
-                "8ad9651993471ddcec8f2dc547fd6fcaedd3716aca12958d42d826e5e6725a01",
-                "35f980b8402786bf463d7d52f7181d9278d0850dcdf5e58e25c0252b50e302c7",
+                "85882f5221a1bdb3ecfa4f0fee6f8efa572027e21baa658451e819f0587bf2db",
                 "a99c56ace470a892ddfcbe0e2b3e37be614bc6cc2feae0af13aff42a3b6a149a",
+                "5daa145410c9bbd2b87de5515b615f385b2bfd335a9c90970a44bcbdb3a1fa04",
+                "d6a6675189b20eec3ac5f672526257e9a5382ca9387dd4b885e177b3d5db4eff",
                 "a1c97e42f09a4d7ee8ba06a2bb7bc38a8f8716f976ceefeb4d93587214cf9598",
+                "a7e3669f150da5fa771fb529bca77274fa9560713091b948f8ef2e9d10e956ea",
                 "6d08d7b118d3dbad31278cdd376c59a355c82bead497e3ab0b2e17804b2905d6",
                 "91f0e09cfbc2276556acacede8366c8c23dc8f180df1ce85ed63f34a0d84f682"
             ],
@@ -103,13 +119,44 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "bilmagasinet.dk",
+                "gds.se",
+                "goerdetselv.dk",
                 "idenyt.dk",
-                "komputer.dk",
-                "kotimikro.fi",
+                "iform.se",
+                "illvet.se",
                 "pctidningen.se",
+                "teeitse.com",
+                "tieku.fi",
+                "viivilla.no",
                 "viivilla.se",
+                "wibnet.nl",
                 "woman.dk",
                 "www.netdoktor.se"
+            ]
+        },
+        {
+            "rule": "bonad\\.io\\/v1\\/geo",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "context"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.0000491,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bilmagasinet.dk",
+                "idenyt.dk",
+                "illvet.se",
+                "tieku.fi",
+                "viivilla.no",
+                "wibnet.nl",
+                "woman.dk"
             ]
         },
         {
@@ -120,71 +167,89 @@
                 "assets"
             ],
             "apis": {},
-            "sites": 11,
-            "prevalence": 0.0000752,
+            "sites": 8,
+            "prevalence": 0.0000561,
             "cnames": [],
             "responseHashes": [
-                "e388a9db26b145b21e626650669ebcc08b5a08b063bf83d1eed7b61262277af1"
+                "45c91d9f9b9802b3c1d993bc94c77574a36db309d664f28b45f8f52b1326707e"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "gds.se",
+                "gjoerdetselv.com",
                 "goerdetselv.dk",
                 "historianet.nl",
                 "iform.dk",
                 "iform.se",
-                "illvet.se",
-                "illvid.dk",
                 "kuntoplus.fi",
-                "teeitse.com",
-                "tieku.fi",
-                "wibnet.nl"
+                "teeitse.com"
             ]
         },
         {
-            "rule": "bonad\\.io\\/bundles\\/bad\\.js",
+            "rule": "bonad\\.io\\/test-vpn",
             "cookies": 0,
-            "fingerprinting": 1,
+            "fingerprinting": 0,
             "subdomains": [
                 "assets"
             ],
-            "apis": {
-                "Document.cookie getter": 2
-            },
+            "apis": {},
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.000014,
             "cnames": [],
-            "responseHashes": [
-                "3e3299316995d92472fcefe530c537657eb83630eb817dd8e6f3eb60a5b95ae2"
-            ],
-            "type": "Fetch",
+            "responseHashes": [],
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "hbl.fi",
-                "www.sydsvenskan.se"
+                "goerdetselv.dk",
+                "teeitse.com"
+            ]
+        },
+        {
+            "rule": "bonad\\.io\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "bongeo"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000014,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "goerdetselv.dk",
+                "teeitse.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.00000701,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.9230769230769231
+        },
+        {
+            "domain": "privacy-center.org",
+            "prevalence": 0.07692307692307693
         }
     ],
     "types": {
-        "Script": 21,
-        "Fetch": 20
+        "Script": 19,
+        "Fetch": 32,
+        "XHR": 4
     },
     "nameservers": [
         "ns-cloud-d2.googledomains.com",
-        "ns-cloud-d4.googledomains.com",
+        "ns-cloud-d1.googledomains.com",
         "ns-cloud-d3.googledomains.com",
-        "ns-cloud-d1.googledomains.com"
+        "ns-cloud-d4.googledomains.com"
     ]
 }

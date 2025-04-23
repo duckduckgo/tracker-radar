@@ -4,13 +4,18 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.000201,
-    "sites": 2,
+    "prevalence": 0.000306,
+    "sites": 3,
     "subdomains": [
         "search",
-        "justice.sites.infr.search"
+        "justice.sites.infr.search",
+        "dos_stategov.sites.infr.search"
     ],
     "cnames": [
+        {
+            "original": "findit.state.gov",
+            "resolved": "dos_stategov.sites.infr.search.usa.gov"
+        },
         {
             "original": "search.justice.gov",
             "resolved": "justice.sites.infr.search.usa.gov"
@@ -24,41 +29,20 @@
             "fingerprinting": 0,
             "subdomains": [
                 "search",
-                "justice.sites.infr.search"
+                "justice.sites.infr.search",
+                "dos_stategov.sites.infr.search"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000306,
             "cnames": [
                 {
                     "original": "search.justice.gov",
                     "resolved": "justice.sites.infr.search.usa.gov"
-                }
-            ],
-            "responseHashes": [],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "usembassy.gov",
-                "www.justice.gov"
-            ]
-        },
-        {
-            "rule": "usa\\.gov\\/assets\\/sayt_loader\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "search",
-                "justice.sites.infr.search"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [
+                },
                 {
-                    "original": "search.justice.gov",
-                    "resolved": "justice.sites.infr.search.usa.gov"
+                    "original": "findit.state.gov",
+                    "resolved": "dos_stategov.sites.infr.search.usa.gov"
                 }
             ],
             "responseHashes": [
@@ -69,7 +53,89 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "usembassy.gov",
-                "www.justice.gov"
+                "www.justice.gov",
+                "www.state.gov"
+            ]
+        },
+        {
+            "rule": "usa\\.gov\\/assets\\/sayt_loader\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "search",
+                "justice.sites.infr.search",
+                "dos_stategov.sites.infr.search"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000306,
+            "cnames": [
+                {
+                    "original": "search.justice.gov",
+                    "resolved": "justice.sites.infr.search.usa.gov"
+                },
+                {
+                    "original": "findit.state.gov",
+                    "resolved": "dos_stategov.sites.infr.search.usa.gov"
+                }
+            ],
+            "responseHashes": [
+                "9a733e4a41c9c0664870ff63417a191c540d9aeee2cfe10cf7c725cd0bf1bcb1"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "usembassy.gov",
+                "www.justice.gov",
+                "www.state.gov"
+            ]
+        },
+        {
+            "rule": "usa\\.gov\\/assets\\/sayt\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "search"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000204,
+            "cnames": [],
+            "responseHashes": [
+                "ed37b2925561b6bec427a6cd48be1fef75528b36b35751ab9a4bc10b0bc52c73"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "usembassy.gov",
+                "www.state.gov"
+            ]
+        },
+        {
+            "rule": "usa\\.gov\\/assets\\/sayt_loader_libs\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "search"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Event.prototype.timeStamp": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000204,
+            "cnames": [],
+            "responseHashes": [
+                "41060f9c44b5d8ed88889b68346173e69075fe4c012a4038cd03a8298d604d9d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "usembassy.gov",
+                "www.state.gov"
             ]
         }
     ],
@@ -79,17 +145,22 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.6666666666666666
+        },
+        {
+            "domain": "jquery.com",
+            "prevalence": 0.3333333333333333
         }
     ],
     "types": {
-        "Script": 4
+        "Script": 8,
+        "Stylesheet": 2
     },
     "nameservers": [
-        "dns.gsa.gov",
         "dns2.gsa.gov",
-        "dns3.gsa.gov",
+        "dns5.gsa.gov",
         "dns4.gsa.gov",
-        "dns5.gsa.gov"
+        "dns.gsa.gov",
+        "dns3.gsa.gov"
     ]
 }

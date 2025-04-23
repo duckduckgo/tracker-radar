@@ -7,8 +7,8 @@
     "source": [
         "DuckDuckGo-NL"
     ],
-    "prevalence": 0.001,
-    "sites": 10,
+    "prevalence": 0.00112,
+    "sites": 11,
     "subdomains": [
         "assets",
         "webchannel-content.eservice"
@@ -17,25 +17,30 @@
     "fingerprinting": 1,
     "resources": [
         {
-            "rule": "emarsys\\.net\\/web-emarsys-sdk\\/4\\.5\\.0\\/web-emarsys-service-worker\\.js",
+            "rule": "emarsys\\.net\\/web-emarsys-sdk\\/4\\.5\\.0\\/web-emarsys-sdk\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 2,
             "subdomains": [
                 "assets"
             ],
-            "apis": {},
+            "apis": {
+                "window.indexedDB": 1,
+                "Navigator.prototype.userAgent": 1,
+                "Date.prototype.getTimezoneOffset": 1,
+                "Navigator.prototype.language": 1
+            },
             "sites": 2,
-            "prevalence": 0.000201,
+            "prevalence": 0.000203,
             "cnames": [],
             "responseHashes": [
-                "bb2c412603f31745f806024c38165687c436f35ad5cbcd147b2e8e720de93eb9"
+                "7c51118d1629537c207b252ff9fa4b2c902f846f268927d9232dd04b19c012ca"
             ],
-            "type": "Other",
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "action.com",
-                "shop.action.com"
+                "www.creality.com"
             ]
         },
         {
@@ -47,7 +52,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000201,
+            "prevalence": 0.000203,
             "cnames": [],
             "responseHashes": [
                 "f3c689523d23693d898b0fff66ef380027572e1896e28552f0e029a5626dd46b"
@@ -66,31 +71,23 @@
     "cookies": 0,
     "topInitiators": [
         {
-            "domain": "scarabresearch.com",
-            "prevalence": 0.4666666666666667
-        },
-        {
             "domain": "first party",
-            "prevalence": 0.4
+            "prevalence": 0.5714285714285714
         },
         {
-            "domain": "dditscdn.com",
-            "prevalence": 0.06666666666666667
-        },
-        {
-            "domain": "bigcommerce.com",
-            "prevalence": 0.06666666666666667
+            "domain": "scarabresearch.com",
+            "prevalence": 0.42857142857142855
         }
     ],
     "types": {
-        "Other": 2,
+        "Script": 2,
         "XHR": 2
     },
     "nameservers": [
-        "ns1.dnsmadeeasy.com",
         "ns4.dnsmadeeasy.com",
-        "ns3.dnsmadeeasy.com",
         "ns0.dnsmadeeasy.com",
+        "ns3.dnsmadeeasy.com",
+        "ns1.dnsmadeeasy.com",
         "ns2.dnsmadeeasy.com"
     ]
 }

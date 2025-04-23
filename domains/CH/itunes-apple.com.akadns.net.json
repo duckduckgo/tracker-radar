@@ -9,33 +9,65 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.000503,
-    "sites": 5,
+    "prevalence": 0.000612,
+    "sites": 6,
     "subdomains": [
-        "api-music-akam"
+        "xp",
+        "api.music-lb"
     ],
     "cnames": [
         {
             "original": "api.music.apple.com",
-            "resolved": "api-music-akam.itunes-apple.com.akadns.net"
+            "resolved": "api.music-lb.itunes-apple.com.akadns.net"
+        },
+        {
+            "original": "xp.apple.com",
+            "resolved": "xp.itunes-apple.com.akadns.net"
         }
     ],
     "fingerprinting": 2,
     "resources": [
         {
+            "rule": "itunes-apple\\.com\\.akadns\\.net\\/report\\/2\\/xp_amp_tv_perf",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "xp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000204,
+            "cnames": [
+                {
+                    "original": "xp.apple.com",
+                    "resolved": "xp.itunes-apple.com.akadns.net"
+                }
+            ],
+            "responseHashes": [
+                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "apple.com",
+                "tv.apple.com"
+            ]
+        },
+        {
             "rule": "itunes-apple\\.com\\.akadns\\.net\\/v1\\/catalog\\/ch\\/songs\\/1743250261",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "api-music-akam"
+                "api.music-lb"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000201,
+            "prevalence": 0.000204,
             "cnames": [
                 {
                     "original": "api.music.apple.com",
-                    "resolved": "api-music-akam.itunes-apple.com.akadns.net"
+                    "resolved": "api.music-lb.itunes-apple.com.akadns.net"
                 }
             ],
             "responseHashes": [],
@@ -52,19 +84,19 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "api-music-akam"
+                "api.music-lb"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000201,
+            "prevalence": 0.000204,
             "cnames": [
                 {
                     "original": "api.music.apple.com",
-                    "resolved": "api-music-akam.itunes-apple.com.akadns.net"
+                    "resolved": "api.music-lb.itunes-apple.com.akadns.net"
                 }
             ],
             "responseHashes": [
-                "3b2e7879c52e46fb82a97ba0fa02ff4f85493806e1b5a9fab0b9be7ca2e84761"
+                "1267739827f7dc8fb6bb93b17d070793a1e10e2315574f1871bb52d04aaf5e82"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -79,14 +111,19 @@
         "CDN"
     ],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.000102,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.9931506849315068
+        },
+        {
+            "domain": "cdn-apple.com",
+            "prevalence": 0.00684931506849315
         }
     ],
     "types": {
+        "XHR": 2,
         "Preflight": 2,
         "Fetch": 2
     },

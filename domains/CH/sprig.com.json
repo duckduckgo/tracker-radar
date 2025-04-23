@@ -4,96 +4,38 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.000302,
+    "prevalence": 0.000306,
     "sites": 3,
     "subdomains": [
-        "api"
+        "cdn"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
         {
-            "rule": "sprig\\.com\\/sdk\\/1\\/environments\\/-a7VjAgflTo-\\/visitors\\/de6b52d6-cc3d-4fb3-b208-6314e41d1945\\/attributes",
+            "rule": "sprig\\.com\\/shim\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
-                "api"
+                "cdn"
             ],
-            "apis": {},
+            "apis": {
+                "window.sessionStorage": 2,
+                "window.localStorage": 2,
+                "window.indexedDB": 2
+            },
             "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "masterclass.com",
-                "www.masterclass.com"
-            ]
-        },
-        {
-            "rule": "sprig\\.com\\/sdk\\/1\\/environments\\/-a7VjAgflTo-\\/visitors\\/de6b52d6-cc3d-4fb3-b208-6314e41d1945\\/attributes",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "api"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "prevalence": 0.000204,
             "cnames": [],
             "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                "4f1fb8e29ee34f829714900822e4b81c8874cfe7c5a69c765aff869f8ef5352c"
             ],
-            "type": "Fetch",
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "masterclass.com",
-                "www.masterclass.com"
-            ]
-        },
-        {
-            "rule": "sprig\\.com\\/sdk\\/1\\/visitors\\/de6b52d6-cc3d-4fb3-b208-6314e41d1945\\/events",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "api"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "masterclass.com",
-                "www.masterclass.com"
-            ]
-        },
-        {
-            "rule": "sprig\\.com\\/sdk\\/1\\/visitors\\/de6b52d6-cc3d-4fb3-b208-6314e41d1945\\/events",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "api"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "c775435ded38885b4f70401986771190e5afa8bcc5aa95073511893667597182"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "masterclass.com",
-                "www.masterclass.com"
+                "reverb.com",
+                "webflow.com"
             ]
         }
     ],
@@ -103,12 +45,15 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.8
+        },
+        {
+            "domain": "reverb-assets.com",
+            "prevalence": 0.2
         }
     ],
     "types": {
-        "Preflight": 4,
-        "Fetch": 4
+        "Script": 2
     },
     "nameservers": [
         "ns-1076.awsdns-06.org",

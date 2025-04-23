@@ -9,7 +9,7 @@
     "source": [
         "DuckDuckGo-DE"
     ],
-    "prevalence": 0.000302,
+    "prevalence": 0.000305,
     "sites": 3,
     "subdomains": [
         "accounts.sap.com.cloud"
@@ -23,15 +23,15 @@
     "fingerprinting": 1,
     "resources": [
         {
-            "rule": "sap\\.akadns\\.net\\/ui\\/resources\\/javascripts\\/SAP_IDS\\.js",
+            "rule": "sap\\.akadns\\.net\\/\\.well-known\\/openid-configuration",
             "cookies": 0,
-            "fingerprinting": 1,
+            "fingerprinting": 0,
             "subdomains": [
                 "accounts.sap.com.cloud"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000201,
+            "prevalence": 0.000203,
             "cnames": [
                 {
                     "original": "accounts.sap.com",
@@ -39,14 +39,39 @@
                 }
             ],
             "responseHashes": [
-                "6348173f2aec070a2f108946a052cba18c4cf9bbd7a5e1c6ba3d9d654f352cbb"
+                "59da4222ec143da635947fabf8590c2ea79e21e56ee0147bc715d5d6864100d0"
             ],
-            "type": "Script",
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "sap.com",
-                "userapps.support.sap.com"
+                "www.sap.com"
+            ]
+        },
+        {
+            "rule": "sap\\.akadns\\.net\\/oauth2\\/authorize",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "accounts.sap.com.cloud"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [
+                {
+                    "original": "accounts.sap.com",
+                    "resolved": "accounts.sap.com.cloud.sap.akadns.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sap.com",
+                "www.sap.com"
             ]
         }
     ],
@@ -56,7 +81,8 @@
     "performance": {},
     "cookies": 0,
     "types": {
-        "Script": 2
+        "Fetch": 2,
+        "Document": 2
     },
     "nameservers": []
 }

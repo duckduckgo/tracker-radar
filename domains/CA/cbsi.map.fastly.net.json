@@ -9,10 +9,13 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000805,
-    "sites": 8,
+    "prevalence": 0.000732,
+    "sites": 7,
     "subdomains": [
-        "isgprivacy"
+        "isgprivacy",
+        "sports-global",
+        "sports-global-ipv4",
+        "news-ipv4"
     ],
     "cnames": [
         {
@@ -20,8 +23,20 @@
             "resolved": "isgprivacy.cbsi.map.fastly.net"
         },
         {
+            "original": "feeds-cbsn.cbsnews.com",
+            "resolved": "news-ipv4.cbsi.map.fastly.net"
+        },
+        {
+            "original": "graphql-cdn-site.cbssports.com",
+            "resolved": "sports-global-ipv4.cbsi.map.fastly.net"
+        },
+        {
             "original": "production-cmp.isgprivacy.cbsi.com",
             "resolved": "isgprivacy.cbsi.map.fastly.net"
+        },
+        {
+            "original": "sports.cbsimg.net",
+            "resolved": "sports-global.cbsi.map.fastly.net"
         }
     ],
     "fingerprinting": 2,
@@ -34,8 +49,8 @@
                 "isgprivacy"
             ],
             "apis": {},
-            "sites": 7,
-            "prevalence": 0.000705,
+            "sites": 6,
+            "prevalence": 0.000627,
             "cnames": [
                 {
                     "original": "cdn.privacy.paramount.com",
@@ -49,10 +64,9 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "247sports.com",
-                "pluto.tv",
-                "www.cbsnews.com",
+                "cbs.com",
                 "www.cbssports.com",
+                "www.cbsnews.com",
                 "www.etonline.com",
                 "www.last.fm",
                 "www.paramountplus.com"
@@ -67,7 +81,7 @@
             ],
             "apis": {},
             "sites": 7,
-            "prevalence": 0.000705,
+            "prevalence": 0.000732,
             "cnames": [
                 {
                     "original": "production-cmp.isgprivacy.cbsi.com",
@@ -81,13 +95,113 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "247sports.com",
-                "pluto.tv",
-                "www.cbsnews.com",
+                "cbs.com",
                 "www.cbssports.com",
+                "www.cbsnews.com",
                 "www.etonline.com",
                 "www.last.fm",
-                "www.paramountplus.com"
+                "www.paramountplus.com",
+                "www.simonandschuster.com"
+            ]
+        },
+        {
+            "rule": "cbsi\\.map\\.fastly\\.net\\/fonts\\/fs-industrie\\/variable\\/standard\\/FSIndustrieVFStd\\.woff2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sports-global"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000209,
+            "cnames": [
+                {
+                    "original": "sports.cbsimg.net",
+                    "resolved": "sports-global.cbsi.map.fastly.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cbssports.com",
+                "www.cbssports.com"
+            ]
+        },
+        {
+            "rule": "cbsi\\.map\\.fastly\\.net\\/graphql",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sports-global-ipv4"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000209,
+            "cnames": [
+                {
+                    "original": "graphql-cdn-site.cbssports.com",
+                    "resolved": "sports-global-ipv4.cbsi.map.fastly.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cbssports.com",
+                "www.cbssports.com"
+            ]
+        },
+        {
+            "rule": "cbsi\\.map\\.fastly\\.net\\/graphql",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sports-global-ipv4"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000209,
+            "cnames": [
+                {
+                    "original": "graphql-cdn-site.cbssports.com",
+                    "resolved": "sports-global-ipv4.cbsi.map.fastly.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cbssports.com",
+                "www.cbssports.com"
+            ]
+        },
+        {
+            "rule": "cbsi\\.map\\.fastly\\.net\\/2\\.1\\/rundown\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "news-ipv4"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000209,
+            "cnames": [
+                {
+                    "original": "feeds-cbsn.cbsnews.com",
+                    "resolved": "news-ipv4.cbsi.map.fastly.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cbsnews.com",
+                "www.cbsnews.com"
             ]
         }
     ],
@@ -102,23 +216,30 @@
         "Session Replay"
     ],
     "performance": {},
-    "cookies": 0.000302,
+    "cookies": 0.000209,
     "topInitiators": [
         {
             "domain": "cbsistatic.com",
-            "prevalence": 0.5280898876404494
+            "prevalence": 0.4520547945205479
         },
         {
             "domain": "first party",
-            "prevalence": 0.39325842696629215
+            "prevalence": 0.4383561643835616
         },
         {
             "domain": "paramount.com",
-            "prevalence": 0.07865168539325842
+            "prevalence": 0.0958904109589041
+        },
+        {
+            "domain": "d28hgpri8am2if.cloudfront.net",
+            "prevalence": 0.0136986301369863
         }
     ],
     "types": {
-        "Script": 14
+        "Script": 13,
+        "Font": 2,
+        "Fetch": 4,
+        "Preflight": 2
     },
     "nameservers": []
 }

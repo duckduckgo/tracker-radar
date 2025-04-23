@@ -7,10 +7,11 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.00101,
+    "prevalence": 0.00105,
     "sites": 10,
     "subdomains": [
-        "cdn01"
+        "cdn01",
+        "pixel-a"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -23,11 +24,13 @@
                 "cdn01"
             ],
             "apis": {
-                "window.localStorage": 9,
-                "Date.prototype.getTime": 9
+                "window.localStorage": 7,
+                "Date.prototype.getTime": 7,
+                "Notification.permission": 5,
+                "Navigator.prototype.plugins": 5
             },
-            "sites": 9,
-            "prevalence": 0.000906,
+            "sites": 8,
+            "prevalence": 0.000836,
             "cnames": [],
             "responseHashes": [
                 "1225d0ab9896a0407548eb96d12406ec9392154b9dd616806d9fc29cef06f27c"
@@ -39,12 +42,51 @@
                 "herb.co",
                 "salvationarmy.ca",
                 "www.aafp.org",
-                "www.busybeetools.com",
                 "www.missouribotanicalgarden.org",
                 "www.motherearthnews.com",
                 "www.penguinrandomhouse.ca",
-                "www.redhat.com",
-                "www.tractorsupply.com"
+                "www.penguinrandomhouse.com",
+                "www.redhat.com"
+            ]
+        },
+        {
+            "rule": "basis\\.net\\/dmp\\/asyncPixelSync",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pixel-a"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000209,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "liberal.ca",
+                "markcarney.ca"
+            ]
+        },
+        {
+            "rule": "basis\\.net\\/up\\/f64bc266faf691b9",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pixel-a"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000209,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "liberal.ca",
+                "markcarney.ca"
             ]
         }
     ],
@@ -59,28 +101,30 @@
     "topInitiators": [
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.45454545454545453
+            "prevalence": 0.5
         },
         {
             "domain": "first party",
-            "prevalence": 0.36363636363636365
+            "prevalence": 0.25
         },
         {
             "domain": "tiqcdn.com",
-            "prevalence": 0.09090909090909091
+            "prevalence": 0.16666666666666666
         },
         {
-            "domain": "doubleclick.net",
-            "prevalence": 0.09090909090909091
+            "domain": "liberal.ca",
+            "prevalence": 0.08333333333333333
         }
     ],
     "types": {
-        "Script": 9
+        "Script": 8,
+        "Document": 2,
+        "Image": 2
     },
     "nameservers": [
-        "ns-1132.awsdns-13.org",
         "ns-1568.awsdns-04.co.uk",
         "ns-374.awsdns-46.com",
-        "ns-649.awsdns-17.net"
+        "ns-649.awsdns-17.net",
+        "ns-1132.awsdns-13.org"
     ]
 }

@@ -9,13 +9,19 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.000201,
-    "sites": 2,
+    "prevalence": 0.000417,
+    "sites": 4,
     "subdomains": [
         "p2iqhncxyh.execute-api",
-        "cognito-identity"
+        "cognito-identity",
+        "cf-proxy-cf-eu10-004-ca8ff5b93d5f2e9b.elb"
     ],
-    "cnames": [],
+    "cnames": [
+        {
+            "original": "check.cfapps.eu10-004.hana.ondemand.com",
+            "resolved": "cf-proxy-cf-eu10-004-ca8ff5b93d5f2e9b.elb.eu-central-1.amazonaws.com"
+        }
+    ],
     "fingerprinting": 0,
     "resources": [
         {
@@ -27,16 +33,14 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000201,
+            "prevalence": 0.000209,
             "cnames": [],
-            "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-            ],
-            "type": "Fetch",
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "abiinteriors.com.au",
+                "loopearplugs.com",
                 "www.abiinteriors.com.au"
             ]
         },
@@ -48,15 +52,18 @@
                 "p2iqhncxyh.execute-api"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000313,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "abiinteriors.com.au",
+                "loopearplugs.com",
+                "au.loopearplugs.com",
                 "www.abiinteriors.com.au"
             ]
         },
@@ -65,21 +72,29 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "cognito-identity"
+                "cognito-identity",
+                "cf-proxy-cf-eu10-004-ca8ff5b93d5f2e9b.elb"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
+            "sites": 3,
+            "prevalence": 0.000313,
+            "cnames": [
+                {
+                    "original": "check.cfapps.eu10-004.hana.ondemand.com",
+                    "resolved": "cf-proxy-cf-eu10-004-ca8ff5b93d5f2e9b.elb.eu-central-1.amazonaws.com"
+                }
+            ],
             "responseHashes": [
-                "3da9414ba0a3360a45158a674e179f0a21b5b3a30e71a5fae14a18b1fad39eff"
+                "cf233d97afa7b7c38ed758f3bf8dff6175205084b8787b1ec7b4ddf04d5dc78f",
+                "7ba3f81953f0237e31f1ded596d99e916d214ea53393613d4b3e06d30fc8b3eb"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "eurail.com",
-                "www.eurail.com"
+                "www.eurail.com",
+                "www.sap.com"
             ]
         }
     ],
@@ -91,25 +106,33 @@
     "topInitiators": [
         {
             "domain": "rum.us-east-1.amazonaws.com",
-            "prevalence": 0.75
+            "prevalence": 0.5
+        },
+        {
+            "domain": "intelligems.io",
+            "prevalence": 0.16666666666666666
         },
         {
             "domain": "lr-in-prod.com",
-            "prevalence": 0.25
+            "prevalence": 0.16666666666666666
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.16666666666666666
         }
     ],
     "types": {
-        "Fetch": 4,
-        "Preflight": 2
+        "Preflight": 2,
+        "Fetch": 6
     },
     "nameservers": [
+        "ns2.amzndns.org",
+        "ns2.amzndns.com",
+        "ns1.amzndns.org",
+        "ns1.amzndns.co.uk",
         "ns2.amzndns.co.uk",
         "ns2.amzndns.net",
         "ns1.amzndns.com",
-        "ns2.amzndns.com",
-        "ns1.amzndns.org",
-        "ns1.amzndns.net",
-        "ns1.amzndns.co.uk",
-        "ns2.amzndns.org"
+        "ns1.amzndns.net"
     ]
 }

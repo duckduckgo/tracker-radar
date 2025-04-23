@@ -7,34 +7,29 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000705,
-    "sites": 7,
+    "prevalence": 0.000627,
+    "sites": 6,
     "subdomains": [
         "login",
-        "benjaminmoore.customdomains",
-        "vl.customdomains",
         "churchofjesuschrist.customdomains",
-        "servicenowsignon.customdomains"
+        "servicenowsignon.customdomains",
+        "wm.customdomains"
     ],
     "cnames": [
-        {
-            "original": "auth.videotron.com",
-            "resolved": "vl.customdomains.okta.com"
-        },
         {
             "original": "id.churchofjesuschrist.org",
             "resolved": "churchofjesuschrist.customdomains.okta.com"
         },
         {
-            "original": "okta.benjaminmoore.com",
-            "resolved": "benjaminmoore.customdomains.okta.com"
+            "original": "ssologin.wm.com",
+            "resolved": "wm.customdomains.okta.com"
         },
         {
             "original": "ssosignon.servicenow.com",
             "resolved": "servicenowsignon.customdomains.okta.com"
         }
     ],
-    "fingerprinting": 1,
+    "fingerprinting": 0,
     "resources": [
         {
             "rule": "okta\\.com\\/discovery\\/iframe\\.html",
@@ -45,11 +40,9 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000201,
+            "prevalence": 0.000209,
             "cnames": [],
-            "responseHashes": [
-                "4d82cff4a71d08ea4a7f6e51c0812c0e6af604b48bff7470f82ea5fe08181217"
-            ],
+            "responseHashes": [],
             "type": "Document",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -59,72 +52,17 @@
             ]
         },
         {
-            "rule": "okta\\.com\\/lib\\/discoveryIframe-d1950dc7d0436ebba78f\\.min\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "login"
-            ],
-            "apis": {
-                "window.localStorage": 2
-            },
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "47bef4e62fa5659ca219f26e0a71273f26c46baa3623fe325c8849e12675b3c2"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "videotron.com",
-                "helix.videotron.com"
-            ]
-        },
-        {
             "rule": "okta\\.com\\/api\\/v1\\/sessions\\/me",
-            "cookies": 0.000201,
-            "fingerprinting": 0,
-            "subdomains": [
-                "benjaminmoore.customdomains",
-                "vl.customdomains"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [
-                {
-                    "original": "okta.benjaminmoore.com",
-                    "resolved": "benjaminmoore.customdomains.okta.com"
-                },
-                {
-                    "original": "auth.videotron.com",
-                    "resolved": "vl.customdomains.okta.com"
-                }
-            ],
-            "responseHashes": [
-                "76468ad29891a5b8207193b8a77c1e8b67868ba62d49d97e1f3020800d49413d"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "benjaminmoore.com",
-                "www.videotron.com"
-            ]
-        },
-        {
-            "rule": "okta\\.com\\/api\\/v1\\/sessions\\/me",
-            "cookies": 0.000302,
+            "cookies": 0.000418,
             "fingerprinting": 0,
             "subdomains": [
                 "churchofjesuschrist.customdomains",
-                "servicenowsignon.customdomains"
+                "servicenowsignon.customdomains",
+                "wm.customdomains"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000302,
+            "sites": 4,
+            "prevalence": 0.000418,
             "cnames": [
                 {
                     "original": "id.churchofjesuschrist.org",
@@ -133,22 +71,59 @@
                 {
                     "original": "ssosignon.servicenow.com",
                     "resolved": "servicenowsignon.customdomains.okta.com"
+                },
+                {
+                    "original": "ssologin.wm.com",
+                    "resolved": "wm.customdomains.okta.com"
                 }
             ],
-            "responseHashes": [],
+            "responseHashes": [
+                "b36fea2504431d2082e6b0c0161129e94e3ef39b661725f7318b030bd34bf57d"
+            ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "churchofjesuschrist.org",
                 "www.churchofjesuschrist.org",
-                "www.servicenow.com"
+                "www.servicenow.com",
+                "www.wm.com"
+            ]
+        },
+        {
+            "rule": "okta\\.com\\/api\\/v1\\/sessions\\/me",
+            "cookies": 0.000209,
+            "fingerprinting": 0,
+            "subdomains": [
+                "servicenowsignon.customdomains",
+                "wm.customdomains"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000209,
+            "cnames": [
+                {
+                    "original": "ssosignon.servicenow.com",
+                    "resolved": "servicenowsignon.customdomains.okta.com"
+                },
+                {
+                    "original": "ssologin.wm.com",
+                    "resolved": "wm.customdomains.okta.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "servicenow.com",
+                "www.wm.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000604,
+    "cookies": 0.000523,
     "topInitiators": [
         {
             "domain": "oktacdn.com",
@@ -161,18 +136,17 @@
     ],
     "types": {
         "Document": 2,
-        "Script": 2,
-        "XHR": 2,
-        "Fetch": 3
+        "Fetch": 4,
+        "Preflight": 2
     },
     "nameservers": [
-        "ns-1459.awsdns-54.org",
-        "ns-1563.awsdns-03.co.uk",
-        "ns-285.awsdns-35.com",
-        "ns-684.awsdns-21.net",
         "ns-cloud-a1.googledomains.com",
+        "ns-cloud-a4.googledomains.com",
+        "ns-1459.awsdns-54.org",
+        "ns-684.awsdns-21.net",
+        "ns-1563.awsdns-03.co.uk",
         "ns-cloud-a2.googledomains.com",
         "ns-cloud-a3.googledomains.com",
-        "ns-cloud-a4.googledomains.com"
+        "ns-285.awsdns-35.com"
     ]
 }

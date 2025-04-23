@@ -7,28 +7,23 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000615,
+    "prevalence": 0.0000631,
     "sites": 9,
     "subdomains": [
         "readerstore-recommend-api",
-        "toto-recommend",
         "narita-recommend",
-        "readerstore-recommend-beacon",
-        "toto-b",
-        "twrcd-beacon",
-        "lhe-beacon",
-        "narita-b",
         "booklista-inhale",
-        "eplus-inhale",
-        "toto-inhale",
         "dotst-inhale",
-        "livable-inhale"
+        "stg-enoteca-inhale",
+        "livable-inhale",
+        "readerstore-recommend-beacon",
+        "lhe-beacon",
+        "biccamera-b",
+        "enoteca-b",
+        "narita-b",
+        "lhe-webapi"
     ],
     "cnames": [
-        {
-            "original": "beacon-recommend.tower.jp",
-            "resolved": "twrcd-beacon.team-rec.jp"
-        },
         {
             "original": "recommend-api.ebookstore.sony.jp",
             "resolved": "readerstore-recommend-api.team-rec.jp"
@@ -38,7 +33,7 @@
             "resolved": "readerstore-recommend-beacon.team-rec.jp"
         }
     ],
-    "fingerprinting": 2,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "team-rec\\.jp\\/js\\.recommend\\/tlab_v4\\.js",
@@ -46,14 +41,14 @@
             "fingerprinting": 1,
             "subdomains": [
                 "readerstore-recommend-api",
-                "toto-recommend",
                 "narita-recommend"
             ],
             "apis": {
-                "window.localStorage": 2
+                "window.localStorage": 1,
+                "Document.cookie getter": 1
             },
-            "sites": 3,
-            "prevalence": 0.0000205,
+            "sites": 2,
+            "prevalence": 0.000014,
             "cnames": [
                 {
                     "original": "recommend-api.ebookstore.sony.jp",
@@ -68,8 +63,61 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "sony.jp",
-                "jp.toto.com",
                 "www.narita-airport.jp"
+            ]
+        },
+        {
+            "rule": "team-rec\\.jp\\/js\\/tlab-dmp\\.js",
+            "cookies": 0.000028,
+            "fingerprinting": 2,
+            "subdomains": [
+                "booklista-inhale",
+                "dotst-inhale",
+                "stg-enoteca-inhale",
+                "livable-inhale"
+            ],
+            "apis": {
+                "Navigator.prototype.doNotTrack": 4,
+                "Document.cookie getter": 4,
+                "Date.prototype.getTime": 4,
+                "Document.cookie setter": 4,
+                "Navigator.prototype.userAgent": 4,
+                "Navigator.prototype.appVersion": 4,
+                "window.localStorage": 3
+            },
+            "sites": 4,
+            "prevalence": 0.000028,
+            "cnames": [],
+            "responseHashes": [
+                "1bcef95ce488163c305cde9a625cbdc31d19f055a5d1282f09df704fedc3c959"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "tlb_sid": {
+                    "ttl": 1800,
+                    "length": 10,
+                    "prevalence": 0.000028043804422507957,
+                    "uniqueness": 1
+                },
+                "tlab.tracking_id": {
+                    "ttl": 31536020,
+                    "length": 24,
+                    "prevalence": 0.000014021902211253979,
+                    "uniqueness": 1
+                },
+                "usertid": {
+                    "ttl": 31536003,
+                    "length": 23,
+                    "prevalence": 0.000007010951105626989,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sony.jp",
+                "www.dot-st.com",
+                "www.enoteca.co.jp",
+                "www.livable.co.jp"
             ]
         },
         {
@@ -78,22 +126,18 @@
             "fingerprinting": 0,
             "subdomains": [
                 "readerstore-recommend-beacon",
-                "toto-b",
-                "twrcd-beacon",
                 "lhe-beacon",
+                "biccamera-b",
+                "enoteca-b",
                 "narita-b"
             ],
             "apis": {},
-            "sites": 5,
-            "prevalence": 0.0000342,
+            "sites": 6,
+            "prevalence": 0.0000421,
             "cnames": [
                 {
                     "original": "recommend-b.ebookstore.sony.jp",
                     "resolved": "readerstore-recommend-beacon.team-rec.jp"
-                },
-                {
-                    "original": "beacon-recommend.tower.jp",
-                    "resolved": "twrcd-beacon.team-rec.jp"
                 }
             ],
             "responseHashes": [
@@ -102,71 +146,17 @@
             "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "usertrack_tracking_lhe": 0.000006832841368754783
+                "tlab.tracking_id": 0.000007010951105626989,
+                "usertid": 0.000007010951105626989,
+                "tlb_sid": 0.000007010951105626989
             },
             "exampleSites": [
                 "sony.jp",
-                "jp.toto.com",
-                "tower.jp",
+                "l-tike.com",
+                "www.biccamera.com",
+                "www.enoteca.co.jp",
                 "www.hmv.co.jp",
                 "www.narita-airport.jp"
-            ]
-        },
-        {
-            "rule": "team-rec\\.jp\\/js\\/tlab-dmp\\.js",
-            "cookies": 0.0000205,
-            "fingerprinting": 1,
-            "subdomains": [
-                "booklista-inhale",
-                "eplus-inhale",
-                "toto-inhale",
-                "dotst-inhale",
-                "livable-inhale"
-            ],
-            "apis": {
-                "Navigator.prototype.doNotTrack": 5,
-                "Document.cookie getter": 4,
-                "Date.prototype.getTime": 5,
-                "Navigator.prototype.userAgent": 5,
-                "Navigator.prototype.appVersion": 5,
-                "window.localStorage": 3,
-                "Document.cookie setter": 3
-            },
-            "sites": 5,
-            "prevalence": 0.0000342,
-            "cnames": [],
-            "responseHashes": [
-                "cb04da2fdd1f90a825c3a2a8a8e993f426d49cef567a971d17ffb4d6e610b854",
-                "1bcef95ce488163c305cde9a625cbdc31d19f055a5d1282f09df704fedc3c959"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {
-                "usertrack_asp3": {
-                    "ttl": 31536004,
-                    "length": 24,
-                    "prevalence": 0.000006832841368754783,
-                    "uniqueness": 1
-                },
-                "tlb_sid": {
-                    "ttl": 1800,
-                    "length": 10,
-                    "prevalence": 0.000020498524106264348,
-                    "uniqueness": 1
-                },
-                "tlab.tracking_id": {
-                    "ttl": 31536007,
-                    "length": 24,
-                    "prevalence": 0.000013665682737509566,
-                    "uniqueness": 1
-                }
-            },
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "sony.jp",
-                "eplus.jp",
-                "jp.toto.com",
-                "www.dot-st.com",
-                "www.livable.co.jp"
             ]
         },
         {
@@ -175,13 +165,13 @@
             "fingerprinting": 0,
             "subdomains": [
                 "booklista-inhale",
-                "toto-inhale",
                 "dotst-inhale",
+                "stg-enoteca-inhale",
                 "livable-inhale"
             ],
             "apis": {},
             "sites": 4,
-            "prevalence": 0.0000273,
+            "prevalence": 0.000028,
             "cnames": [],
             "responseHashes": [
                 "d346801abbf9bb4e9e9a055239053d4ab5596514304f601a6c70604187acb744"
@@ -189,47 +179,68 @@
             "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "tlb_sid": 0.00002733136547501913,
-                "tlab.tracking_id": 0.000013665682737509566,
-                "__ph_opt_in_out_phc_tnQZyAK9BM0WkS5fdAZAxA1bNnyKUlWSACWzmxDfVrA": 0.000006832841368754783
+                "tlb_sid": 0.000028043804422507957,
+                "tlab.tracking_id": 0.000014021902211253979,
+                "usertid": 0.000007010951105626989,
+                "dii7kma7kh8": 0.000007010951105626989
             },
             "exampleSites": [
                 "sony.jp",
-                "jp.toto.com",
                 "www.dot-st.com",
+                "www.enoteca.co.jp",
                 "www.livable.co.jp"
+            ]
+        },
+        {
+            "rule": "team-rec\\.jp\\/recommend\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "lhe-webapi"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000014,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "l-tike.com",
+                "www.hmv.co.jp"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0000205,
+    "cookies": 0.0000351,
     "topInitiators": [
         {
+            "domain": "first party",
+            "prevalence": 0.42105263157894735
+        },
+        {
             "domain": "googletagmanager.com",
-            "prevalence": 0.5333333333333333
+            "prevalence": 0.3157894736842105
         },
         {
             "domain": "amazonaws.com",
-            "prevalence": 0.2
-        },
-        {
-            "domain": "first party",
-            "prevalence": 0.2
+            "prevalence": 0.21052631578947367
         },
         {
             "domain": "onetrust.com",
-            "prevalence": 0.06666666666666667
+            "prevalence": 0.05263157894736842
         }
     ],
     "types": {
         "Script": 8,
-        "Image": 9
+        "Image": 10
     },
     "nameservers": [
-        "ns-717.awsdns-25.net",
-        "ns-1076.awsdns-06.org",
+        "ns-345.awsdns-43.com",
         "ns-1923.awsdns-48.co.uk",
-        "ns-345.awsdns-43.com"
+        "ns-1076.awsdns-06.org",
+        "ns-717.awsdns-25.net"
     ]
 }
