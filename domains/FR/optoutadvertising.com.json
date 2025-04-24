@@ -4,14 +4,24 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000202,
-    "sites": 2,
+    "prevalence": 0.000303,
+    "sites": 3,
     "subdomains": [
         "cdn",
-        "adserving"
+        "adserving",
+        "nrc"
     ],
-    "cnames": [],
-    "fingerprinting": 3,
+    "cnames": [
+        {
+            "original": "content3.nrc.nl",
+            "resolved": "cdn.optoutadvertising.com"
+        },
+        {
+            "original": "content4.nrc.nl",
+            "resolved": "nrc.optoutadvertising.com"
+        }
+    ],
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "optoutadvertising\\.com\\/script\\/ootag\\.v2\\.min\\.js",
@@ -23,9 +33,14 @@
             "apis": {
                 "Document.cookie getter": 2
             },
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [],
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [
+                {
+                    "original": "content3.nrc.nl",
+                    "resolved": "cdn.optoutadvertising.com"
+                }
+            ],
             "responseHashes": [
                 "998ab1a6fa061cd631baeb89d9663f267607de2f83d202c1d195bfe81c93e799"
             ],
@@ -33,8 +48,9 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
+                "npo.nl",
                 "nos.nl",
-                "npo.nl"
+                "www.nrc.nl"
             ]
         },
         {
@@ -45,11 +61,11 @@
                 "cdn"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 2,
-                "Date.prototype.getTime": 2
+                "Navigator.prototype.userAgent": 3,
+                "Date.prototype.getTime": 3
             },
-            "sites": 2,
-            "prevalence": 0.000202,
+            "sites": 3,
+            "prevalence": 0.000303,
             "cnames": [],
             "responseHashes": [
                 "9ac782b8791b16b2b61bcce8cf1a4b3bf7e0b3a0c316281620711e2054e320b5"
@@ -58,8 +74,9 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
+                "npo.nl",
                 "nos.nl",
-                "npo.nl"
+                "www.nrc.nl"
             ]
         },
         {
@@ -70,37 +87,32 @@
                 "adserving"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
+            "sites": 3,
+            "prevalence": 0.000303,
             "cnames": [],
             "responseHashes": [
-                "2986de86bb2481268b33f3de4e49c8fda71efad531c4abe82bb5387b130943f9"
+                "e6970981df2b594f684ba219d186ccffce0acafca1298856266cdb611b55103a",
+                "ebe8b9b619e92b2ff7495dd33c1cc4967b45a04ec30f70ce8731946f82918137"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
+                "npo.nl",
                 "nos.nl",
-                "npo.nl"
+                "www.nrc.nl"
             ]
         },
         {
             "rule": "optoutadvertising\\.com\\/script\\/sf\\/hostOptOut\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 3,
+            "fingerprinting": 0,
             "subdomains": [
                 "cdn"
             ],
-            "apis": {
-                "window.innerHeight": 1,
-                "window.innerWidth": 1,
-                "window.screenY": 1,
-                "window.screenTop": 1,
-                "window.screenX": 1,
-                "window.screenLeft": 1
-            },
-            "sites": 2,
-            "prevalence": 0.000202,
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
             "cnames": [],
             "responseHashes": [
                 "ac50d8ca0218cf69b0bf661ffd708cc7ec53220540a14fe1f2b9a35e1b959ce8"
@@ -109,8 +121,36 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
+                "npo.nl",
                 "nos.nl",
-                "npo.nl"
+                "www.nrc.nl"
+            ]
+        },
+        {
+            "rule": "optoutadvertising\\.com\\/pixel",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "nrc"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "content4.nrc.nl",
+                    "resolved": "nrc.optoutadvertising.com"
+                }
+            ],
+            "responseHashes": [
+                "1ed70d02696722505ec82915a7dd9fbf2c512366d009b74bdbe37c9869c250a4"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nrc.nl",
+                "www.nrc.nl"
             ]
         }
     ],
@@ -119,17 +159,22 @@
     "cookies": 0,
     "topInitiators": [
         {
-            "domain": "ster.nl",
-            "prevalence": 0.6666666666666666
+            "domain": "first party",
+            "prevalence": 0.5
         },
         {
-            "domain": "first party",
-            "prevalence": 0.3333333333333333
+            "domain": "optoutadvertising.com",
+            "prevalence": 0.3
+        },
+        {
+            "domain": "ster.nl",
+            "prevalence": 0.2
         }
     ],
     "types": {
-        "Script": 6,
-        "XHR": 2
+        "Script": 9,
+        "XHR": 3,
+        "Image": 2
     },
     "nameservers": [
         "ns1-04.azure-dns.com",

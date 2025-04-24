@@ -9,51 +9,35 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000604,
+    "prevalence": 0.00062,
     "sites": 6,
     "subdomains": [
-        "client"
+        "client",
+        "dataplane"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
         {
             "rule": "rum\\.us-east-1\\.amazonaws\\.com\\/1\\.19\\.0\\/cwr\\.js",
-            "cookies": 0.000201,
+            "cookies": 0,
             "fingerprinting": 1,
             "subdomains": [
                 "client"
             ],
             "apis": {
-                "Navigator.prototype.cookieEnabled": 2,
-                "Document.cookie getter": 2,
-                "Document.cookie setter": 2,
-                "Navigator.prototype.userAgent": 2,
-                "Navigator.prototype.language": 2,
-                "Date.prototype.getTime": 2,
-                "window.localStorage": 1
+                "window.localStorage": 1,
+                "Navigator.prototype.cookieEnabled": 1,
+                "Date.prototype.getTime": 1
             },
             "sites": 2,
-            "prevalence": 0.000201,
+            "prevalence": 0.000207,
             "cnames": [],
             "responseHashes": [
                 "927208bf7f8618a1756fb20df1f5a6dc5c4387736cffc6dc5e7b44187315ba6e"
             ],
             "type": "Script",
-            "firstPartyCookies": {
-                "cwr_u": {
-                    "ttl": 2592006,
-                    "length": 36,
-                    "prevalence": 0.0002013895881582922,
-                    "uniqueness": 1
-                },
-                "cwr_s": {
-                    "ttl": 1807,
-                    "length": 236,
-                    "prevalence": 0.0002013895881582922,
-                    "uniqueness": 1
-                }
-            },
+            "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "theorg.com",
@@ -62,8 +46,8 @@
         },
         {
             "rule": "rum\\.us-east-1\\.amazonaws\\.com\\/1\\.0\\.2\\/cwr\\.js",
-            "cookies": 0.000302,
-            "fingerprinting": 1,
+            "cookies": 0.00031,
+            "fingerprinting": 2,
             "subdomains": [
                 "client"
             ],
@@ -77,7 +61,7 @@
                 "window.localStorage": 3
             },
             "sites": 3,
-            "prevalence": 0.000302,
+            "prevalence": 0.00031,
             "cnames": [],
             "responseHashes": [
                 "533327b7228e53831e6952767abb8e733f61bc89a1696a5245a3b35f6dc46a8b"
@@ -85,15 +69,15 @@
             "type": "Script",
             "firstPartyCookies": {
                 "cwr_u": {
-                    "ttl": 2592028,
+                    "ttl": 2592002,
                     "length": 36,
-                    "prevalence": 0.0003020843822374383,
+                    "prevalence": 0.0003101095720487906,
                     "uniqueness": 0.6666666666666666
                 },
                 "cwr_s": {
                     "ttl": 1828,
-                    "length": 223,
-                    "prevalence": 0.0003020843822374383,
+                    "length": 189,
+                    "prevalence": 0.0003101095720487906,
                     "uniqueness": 0.6666666666666666
                 }
             },
@@ -103,13 +87,35 @@
                 "www.cbssports.com",
                 "www.iseecars.com"
             ]
+        },
+        {
+            "rule": "rum\\.us-east-1\\.amazonaws\\.com\\/appmonitors\\/ae193c96-7b32-494b-9958-42f735b49e2b\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dataplane"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000207,
+            "cnames": [],
+            "responseHashes": [
+                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cbssports.com",
+                "www.cbssports.com"
+            ]
         }
     ],
     "categories": [
         "CDN"
     ],
     "performance": {},
-    "cookies": 0.000604,
+    "cookies": 0.000413,
     "topInitiators": [
         {
             "domain": "first party",
@@ -121,12 +127,13 @@
         }
     ],
     "types": {
-        "Script": 5
+        "Script": 5,
+        "Fetch": 2
     },
     "nameservers": [
         "ns-1058.awsdns-04.org",
-        "ns-245.awsdns-30.com",
         "ns-1805.awsdns-33.co.uk",
+        "ns-245.awsdns-30.com",
         "ns-547.awsdns-04.net"
     ]
 }

@@ -4,8 +4,8 @@
     "source": [
         "DuckDuckGo-GB"
     ],
-    "prevalence": 0.000101,
-    "sites": 1,
+    "prevalence": 0.000204,
+    "sites": 2,
     "subdomains": [
         "sr"
     ],
@@ -13,25 +13,29 @@
     "fingerprinting": 1,
     "resources": [
         {
-            "rule": "studiostack\\.com\\/track\\/attention-event",
+            "rule": "studiostack\\.com\\/v3\\/services",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "sr"
             ],
-            "apis": {},
+            "apis": {
+                "Date.prototype.getTime": 2,
+                "Document.cookie getter": 1,
+                "window.innerHeight": 2
+            },
             "sites": 2,
-            "prevalence": 0.000201,
+            "prevalence": 0.000204,
             "cnames": [],
             "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                "c56a7e55217cf621191916487462c5f208ac366449ddac38f3fcc2c4ffc22cea"
             ],
-            "type": "XHR",
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "artofmanliness.com",
-                "www.artofmanliness.com"
+                "www.sheknows.com"
             ]
         },
         {
@@ -43,7 +47,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000201,
+            "prevalence": 0.000204,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
@@ -51,7 +55,53 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "artofmanliness.com",
-                "www.artofmanliness.com"
+                "www.sheknows.com"
+            ]
+        },
+        {
+            "rule": "studiostack\\.com\\/track\\/attention-event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sr"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000204,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "artofmanliness.com",
+                "www.sheknows.com"
+            ]
+        },
+        {
+            "rule": "studiostack\\.com\\/track\\/attention-data",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sr"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000204,
+            "cnames": [],
+            "responseHashes": [
+                "18c3da9795b39f0c67ab84da9763562294d32dd52a8bae47c95b503f8cfb1a1e"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_li_dcdm_c": 0.00010178117048346055
+            },
+            "exampleSites": [
+                "artofmanliness.com",
+                "www.sheknows.com"
             ]
         }
     ],
@@ -61,12 +111,17 @@
     "topInitiators": [
         {
             "domain": "pressboard.ca",
-            "prevalence": 1
+            "prevalence": 0.5
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.5
         }
     ],
     "types": {
-        "XHR": 2,
-        "Preflight": 2
+        "Script": 2,
+        "Preflight": 2,
+        "XHR": 4
     },
     "nameservers": [
         "ns1-05.azure-dns.com",

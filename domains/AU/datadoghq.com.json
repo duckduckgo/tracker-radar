@@ -7,34 +7,58 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.000904,
-    "sites": 9,
+    "prevalence": 0.00114,
+    "sites": 11,
     "subdomains": [
-        "http-intake.logs",
+        "browser-http-intake.logs",
+        "sentry-intake",
         "http-intake.logs.us5",
+        "http-intake.logs",
         "rum-http-intake.logs"
     ],
     "cnames": [],
     "fingerprinting": 0,
     "resources": [
         {
-            "rule": "datadoghq\\.com\\/api\\/v2\\/logs",
+            "rule": "datadoghq\\.com\\/v1\\/input\\/pubfe23baedd2ea322bebb5ed2020fa2fa1",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "http-intake.logs"
+                "browser-http-intake.logs"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000201,
+            "prevalence": 0.000208,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Ping",
+            "responseHashes": [
+                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+            ],
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "sonichits.com",
-                "www.iplocation.net"
+                "whogivesacrap.org",
+                "printify.com"
+            ]
+        },
+        {
+            "rule": "datadoghq\\.com\\/api\\/1\\/envelope\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sentry-intake"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000208,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "getyourguide.com",
+                "www.getyourguide.com"
             ]
         },
         {
@@ -46,8 +70,8 @@
                 "http-intake.logs"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.000402,
+            "sites": 3,
+            "prevalence": 0.000312,
             "cnames": [],
             "responseHashes": [
                 "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
@@ -57,8 +81,7 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "theconstructor.org",
-                "www.hardreset.info",
-                "www.iplocation.net",
+                "www.carscoops.com",
                 "www.islamicfinder.org"
             ]
         },
@@ -71,7 +94,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000201,
+            "prevalence": 0.000208,
             "cnames": [],
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -85,7 +108,7 @@
             ]
         },
         {
-            "rule": "datadoghq\\.com\\/v1\\/input\\/pubdfe3d3f97883d30bebd7d86fb4401f1d",
+            "rule": "datadoghq\\.com\\/v1\\/input\\/pub689cfccaa190b67d3943b3ef653aa943",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -93,7 +116,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000201,
+            "prevalence": 0.000208,
             "cnames": [],
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -102,8 +125,30 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "linuxquestions.org",
-                "www.linuxquestions.org"
+                "twilio.com",
+                "www.twilio.com"
+            ]
+        },
+        {
+            "rule": "datadoghq\\.com\\/v1\\/input\\/pub689cfccaa190b67d3943b3ef653aa943",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rum-http-intake.logs"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000208,
+            "cnames": [],
+            "responseHashes": [
+                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "twilio.com",
+                "www.twilio.com"
             ]
         }
     ],
@@ -112,30 +157,31 @@
     "cookies": 0,
     "topInitiators": [
         {
-            "domain": "adpushup.com",
-            "prevalence": 0.3333333333333333
+            "domain": "datadoghq-browser-agent.com",
+            "prevalence": 0.45161290322580644
         },
         {
             "domain": "ensighten.com",
-            "prevalence": 0.3333333333333333
+            "prevalence": 0.22580645161290322
         },
         {
-            "domain": "datadoghq-browser-agent.com",
-            "prevalence": 0.2857142857142857
+            "domain": "adpushup.com",
+            "prevalence": 0.1935483870967742
         },
         {
             "domain": "first party",
-            "prevalence": 0.047619047619047616
+            "prevalence": 0.12903225806451613
         }
     ],
     "types": {
-        "Ping": 6,
-        "Fetch": 4
+        "XHR": 4,
+        "Fetch": 5,
+        "Ping": 4
     },
     "nameservers": [
+        "ns-1169.awsdns-18.org",
         "ns-1602.awsdns-08.co.uk",
         "ns-442.awsdns-55.com",
-        "ns-889.awsdns-47.net",
-        "ns-1169.awsdns-18.org"
+        "ns-889.awsdns-47.net"
     ]
 }

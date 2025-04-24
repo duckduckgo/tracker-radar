@@ -4,15 +4,59 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.000502,
-    "sites": 5,
+    "prevalence": 0.000915,
+    "sites": 9,
     "subdomains": [
-        "direct",
-        "direct-collect"
+        "direct-collect",
+        "direct"
     ],
     "cnames": [],
     "fingerprinting": 0,
     "resources": [
+        {
+            "rule": "dy-api\\.eu\\/v2\\/collect\\/user\\/event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "direct-collect"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000305,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "home24.ch",
+                "www.home24.ch",
+                "www.home24.de"
+            ]
+        },
+        {
+            "rule": "dy-api\\.eu\\/v2\\/collect\\/user\\/event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "direct-collect"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000305,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "home24.ch",
+                "www.home24.ch",
+                "www.home24.de"
+            ]
+        },
         {
             "rule": "dy-api\\.eu\\/v2\\/serve\\/user\\/choose",
             "cookies": 0,
@@ -21,8 +65,8 @@
                 "direct"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000301,
+            "sites": 6,
+            "prevalence": 0.00061,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
@@ -30,6 +74,9 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "jysk.ch",
+                "jysk.de",
+                "www.amorelie.ch",
+                "www.dm.at",
                 "www.dm.de",
                 "www.iba.ch"
             ]
@@ -43,61 +90,45 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000201,
+            "prevalence": 0.000203,
             "cnames": [],
             "responseHashes": [
-                "4e1a375c0a422055452536e4e197d08fca34b549ecb6c66beae4d0d163ccf970"
+                "38357cc9cb9013ac72b77ff1b2f4100c14a9c8720d98f5368602e93f6206c46f"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jysk.ch",
+                "jysk.de"
+            ]
+        },
+        {
+            "rule": "dy-api\\.eu\\/v2\\/serve\\/user\\/choose",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "direct"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000509,
+            "cnames": [],
+            "responseHashes": [
+                "6e8f366baab8d5e7b27d03ffd8d5baa4592d5809f409017ee23c99edde664147",
+                "3899fcfeefe8aefdb3a4ad6ae8150df73ea6d31dfd4806e691d231b1177aee1e",
+                "5cd0612f43be5982fd203558d7cad4d4a1f6d96297c0c20615fd1146f02c338f",
+                "5a995d8c58ba5eabca7c65c1520cb114ce3e986d8317382510e323263d615048"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "dm.de",
+                "amorelie.ch",
+                "www.amorelie.ch",
+                "www.dm.at",
+                "www.dm.de",
                 "www.iba.ch"
-            ]
-        },
-        {
-            "rule": "dy-api\\.eu\\/v2\\/collect\\/user\\/event",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "direct-collect"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.000301,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "home24.ch",
-                "www.home24.ch",
-                "www.home24.de"
-            ]
-        },
-        {
-            "rule": "dy-api\\.eu\\/v2\\/collect\\/user\\/event",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "direct-collect"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.000301,
-            "cnames": [],
-            "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "home24.ch",
-                "www.home24.ch",
-                "www.home24.de"
             ]
         }
     ],
@@ -107,17 +138,22 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.9655172413793104
+        },
+        {
+            "domain": "dm.de",
+            "prevalence": 0.034482758620689655
         }
     ],
     "types": {
-        "Preflight": 6,
-        "XHR": 5
+        "Preflight": 9,
+        "XHR": 8,
+        "Fetch": 2
     },
     "nameservers": [
-        "ns-926.awsdns-51.net",
-        "ns-1242.awsdns-27.org",
         "ns-1819.awsdns-35.co.uk",
-        "ns-204.awsdns-25.com"
+        "ns-1242.awsdns-27.org",
+        "ns-204.awsdns-25.com",
+        "ns-926.awsdns-51.net"
     ]
 }

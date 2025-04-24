@@ -4,24 +4,78 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000205,
-    "sites": 3,
+    "prevalence": 0.0000417,
+    "sites": 6,
     "subdomains": [
+        "widget",
+        "widget-api",
         "widget-api-ng"
     ],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "yeps\\.io\\/yeps\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "widget"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2,
+                "window.innerHeight": 1,
+                "Navigator.prototype.languages": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "fb8774d385d019a239a3fe9fb794e02e71e58fa2d67646e52e5feaa76054cc47"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jesseromero.com",
+                "www.machinelearningplus.com"
+            ]
+        },
+        {
+            "rule": "yeps\\.io\\/widget\\/pageView",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "widget-api",
+                "widget-api-ng"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000208,
+            "cnames": [],
+            "responseHashes": [
+                "a3129a3a4d6ecdc707a5b05d71e68654a7a1319580075d70dfe570ab2a060814"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jesseromero.com",
+                "www.machinelearningplus.com",
+                "www.nutritiongeeks.co"
+            ]
+        },
         {
             "rule": "yeps\\.io\\/widget\\/onShow",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
+                "widget-api",
                 "widget-api-ng"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "sites": 3,
+            "prevalence": 0.0000208,
             "cnames": [],
             "responseHashes": [
                 "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
@@ -30,7 +84,8 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "crunchlabs.com",
+                "jesseromero.com",
+                "www.blackbirdfabrics.com",
                 "www.crunchlabs.com"
             ]
         }
@@ -41,11 +96,16 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.8571428571428571
+        },
+        {
+            "domain": "minmaxify.com",
+            "prevalence": 0.14285714285714285
         }
     ],
     "types": {
-        "Fetch": 2
+        "Script": 2,
+        "Fetch": 6
     },
     "nameservers": [
         "karsyn.ns.cloudflare.com",

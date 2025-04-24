@@ -7,11 +7,12 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000137,
-    "sites": 2,
+    "prevalence": 0.0000208,
+    "sites": 3,
     "subdomains": [
         "script",
         "ip",
+        "kibana",
         "log"
     ],
     "cnames": [],
@@ -19,53 +20,83 @@
     "resources": [
         {
             "rule": "leadboxer\\.com\\/",
-            "cookies": 0.00000683,
+            "cookies": 0.0000139,
             "fingerprinting": 2,
             "subdomains": [
                 "script",
                 "ip"
             ],
             "apis": {
-                "Document.cookie getter": 1,
-                "Document.cookie setter": 1,
-                "window.localStorage": 1,
-                "Navigator.prototype.appVersion": 1,
-                "Date.prototype.getTime": 1,
-                "Screen.prototype.height": 1,
-                "Screen.prototype.width": 1,
-                "Screen.prototype.colorDepth": 1
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2,
+                "window.localStorage": 2,
+                "Navigator.prototype.appVersion": 2,
+                "Date.prototype.getTime": 2,
+                "Screen.prototype.height": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.colorDepth": 2
             },
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "sites": 3,
+            "prevalence": 0.0000208,
             "cnames": [],
             "responseHashes": [
-                "e085ae0af6c6bab7ef31f196629c39219a6f591b1b775fe7e011913a9bc3b360"
+                "e085ae0af6c6bab7ef31f196629c39219a6f591b1b775fe7e011913a9bc3b360",
+                "0ce2683b02927a9aa8536cfd2ab2ef951e8c94ae7607fdc5fac3645138566409"
             ],
             "type": "Script",
             "firstPartyCookies": {
+                "ip4": {
+                    "ttl": 1816,
+                    "length": 12,
+                    "prevalence": 0.000013893906132770167,
+                    "uniqueness": 0.5
+                },
                 "_ots": {
-                    "ttl": 1804,
+                    "ttl": 1816,
                     "length": 43,
-                    "prevalence": 0.000006832888056794965,
+                    "prevalence": 0.000013893906132770167,
                     "uniqueness": 1
                 },
                 "_otui": {
-                    "ttl": 63072004,
-                    "length": 58,
-                    "prevalence": 0.000006832888056794965,
+                    "ttl": 63072016,
+                    "length": 57,
+                    "prevalence": 0.000013893906132770167,
                     "uniqueness": 1
                 },
                 "_otpe": {
-                    "ttl": 1804,
-                    "length": 73,
-                    "prevalence": 0.000006832888056794965,
+                    "ttl": 1816,
+                    "length": 79,
+                    "prevalence": 0.000013893906132770167,
                     "uniqueness": 1
                 }
             },
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "ssrn.com",
-                "papers.ssrn.com"
+                "papers.ssrn.com",
+                "totalrenting.es"
+            ]
+        },
+        {
+            "rule": "leadboxer\\.com\\/api\\/datasets\\/formTracking",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "kibana"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "d10d9ac51a9b2251cbb97f0499230a58890cff2e3311f6b9aebc9d6ae265d482"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ssrn.com",
+                "totalrenting.es"
             ]
         },
         {
@@ -76,8 +107,8 @@
                 "log"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "sites": 3,
+            "prevalence": 0.0000208,
             "cnames": [],
             "responseHashes": [
                 "756b8e02f86bc8e739229a1dec26bb1260d104efc531ab55d96cfc75f8349e71"
@@ -85,32 +116,39 @@
             "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "_ots": 0.00001366577611358993,
-                "_otui": 0.00001366577611358993,
-                "_otpe": 0.00001366577611358993
+                "ip4": 0.000013893906132770167,
+                "_ots": 0.00002084085919915525,
+                "_otui": 0.00002084085919915525,
+                "_otpe": 0.00002084085919915525
             },
             "exampleSites": [
                 "ssrn.com",
+                "totalrenting.es",
                 "www.trendmicro.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.00000683,
+    "cookies": 0.0000139,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.6666666666666666
+            "prevalence": 0.5
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.25
         },
         {
             "domain": "opentracker.net",
-            "prevalence": 0.3333333333333333
+            "prevalence": 0.25
         }
     ],
     "types": {
-        "Script": 2,
-        "Image": 2
+        "Script": 3,
+        "XHR": 2,
+        "Image": 3
     },
     "nameservers": [
         "ns-706.awsdns-24.net",

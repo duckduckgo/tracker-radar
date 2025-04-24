@@ -9,12 +9,12 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.000603,
+    "prevalence": 0.000623,
     "sites": 6,
     "subdomains": [
         "isgprivacy",
-        "news-ipv4",
-        "sports-global"
+        "sports-global",
+        "sports-global-ipv4"
     ],
     "cnames": [
         {
@@ -22,8 +22,8 @@
             "resolved": "isgprivacy.cbsi.map.fastly.net"
         },
         {
-            "original": "feeds-cbsn.cbsnews.com",
-            "resolved": "news-ipv4.cbsi.map.fastly.net"
+            "original": "graphql-cdn-site.cbssports.com",
+            "resolved": "sports-global-ipv4.cbsi.map.fastly.net"
         },
         {
             "original": "production-cmp.isgprivacy.cbsi.com",
@@ -38,14 +38,14 @@
     "resources": [
         {
             "rule": "cbsi\\.map\\.fastly\\.net\\/dist\\/optanon-v1\\.1\\.0\\.js",
-            "cookies": 0,
+            "cookies": 0.000104,
             "fingerprinting": 1,
             "subdomains": [
                 "isgprivacy"
             ],
             "apis": {},
             "sites": 6,
-            "prevalence": 0.000603,
+            "prevalence": 0.000623,
             "cnames": [
                 {
                     "original": "cdn.privacy.paramount.com",
@@ -60,12 +60,19 @@
                 "6f7d2a9f91c3ab9a0bd728fce3985e6fa46d7e69cb14ce78e7b3c4dce4d56b3a"
             ],
             "type": "Script",
-            "firstPartyCookies": {},
+            "firstPartyCookies": {
+                "OptanonAlertBoxClosed": {
+                    "ttl": null,
+                    "length": 24,
+                    "prevalence": 0.00010385294423096895,
+                    "uniqueness": 1
+                }
+            },
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "paramountplus.com",
+                "help.paramountplus.com",
                 "pluto.tv",
-                "www.cbsnews.com",
                 "www.cbssports.com",
                 "www.last.fm",
                 "www.paramountplus.com"
@@ -80,7 +87,7 @@
             ],
             "apis": {},
             "sites": 6,
-            "prevalence": 0.000603,
+            "prevalence": 0.000623,
             "cnames": [
                 {
                     "original": "production-cmp.isgprivacy.cbsi.com",
@@ -95,36 +102,11 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "paramountplus.com",
+                "help.paramountplus.com",
                 "pluto.tv",
-                "www.cbsnews.com",
                 "www.cbssports.com",
                 "www.last.fm",
                 "www.paramountplus.com"
-            ]
-        },
-        {
-            "rule": "cbsi\\.map\\.fastly\\.net\\/2\\.1\\/rundown\\/",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "news-ipv4"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [
-                {
-                    "original": "feeds-cbsn.cbsnews.com",
-                    "resolved": "news-ipv4.cbsi.map.fastly.net"
-                }
-            ],
-            "responseHashes": [],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "cbsnews.com",
-                "www.cbsnews.com"
             ]
         },
         {
@@ -136,7 +118,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000201,
+            "prevalence": 0.000208,
             "cnames": [
                 {
                     "original": "sports.cbsimg.net",
@@ -145,6 +127,58 @@
             ],
             "responseHashes": [],
             "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cbssports.com",
+                "www.cbssports.com"
+            ]
+        },
+        {
+            "rule": "cbsi\\.map\\.fastly\\.net\\/graphql",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sports-global-ipv4"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000208,
+            "cnames": [
+                {
+                    "original": "graphql-cdn-site.cbssports.com",
+                    "resolved": "sports-global-ipv4.cbsi.map.fastly.net"
+                }
+            ],
+            "responseHashes": [
+                "b709e51132ef062fc834a893b9dffc1fa3587581d6284d3f38d1158f930abb3e"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cbssports.com",
+                "www.cbssports.com"
+            ]
+        },
+        {
+            "rule": "cbsi\\.map\\.fastly\\.net\\/graphql",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sports-global-ipv4"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000208,
+            "cnames": [
+                {
+                    "original": "graphql-cdn-site.cbssports.com",
+                    "resolved": "sports-global-ipv4.cbsi.map.fastly.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -164,25 +198,34 @@
         "Session Replay"
     ],
     "performance": {},
-    "cookies": 0.000201,
+    "cookies": 0.000104,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.5978260869565217
+            "prevalence": 0.6623376623376623
         },
         {
             "domain": "cbsistatic.com",
-            "prevalence": 0.358695652173913
+            "prevalence": 0.24675324675324675
         },
         {
             "domain": "paramount.com",
-            "prevalence": 0.043478260869565216
+            "prevalence": 0.05194805194805195
+        },
+        {
+            "domain": "aswpsdkus.com",
+            "prevalence": 0.025974025974025976
+        },
+        {
+            "domain": "rum.us-east-1.amazonaws.com",
+            "prevalence": 0.012987012987012988
         }
     ],
     "types": {
         "Script": 12,
+        "Font": 2,
         "Fetch": 2,
-        "Font": 2
+        "Preflight": 2
     },
     "nameservers": []
 }

@@ -7,10 +7,11 @@
     "source": [
         "DuckDuckGo-NL"
     ],
-    "prevalence": 0.001,
-    "sites": 10,
+    "prevalence": 0.000808,
+    "sites": 8,
     "subdomains": [
-        "clientcdn"
+        "clientcdn",
+        "web-sdk"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -23,13 +24,13 @@
                 "clientcdn"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 8,
-                "Navigator.prototype.vendor": 8,
-                "Navigator.prototype.webkitTemporaryStorage": 8,
-                "Performance.prototype.memory": 8
+                "Navigator.prototype.userAgent": 7,
+                "Navigator.prototype.vendor": 7,
+                "Navigator.prototype.webkitTemporaryStorage": 7,
+                "Performance.prototype.memory": 7
             },
-            "sites": 8,
-            "prevalence": 0.000803,
+            "sites": 7,
+            "prevalence": 0.000707,
             "cnames": [],
             "responseHashes": [
                 "e487bd98cf4149cd47664be4e3c74f067a6d056e6c34c5bba68318d5a2b4d049"
@@ -44,7 +45,6 @@
                 "www.dekbed-discounter.nl",
                 "www.independer.nl",
                 "www.ondernemenmetpersoneel.nl",
-                "www.studentenwegwijzer.nl",
                 "www.wickedweasel.com"
             ]
         },
@@ -56,8 +56,8 @@
                 "clientcdn"
             ],
             "apis": {},
-            "sites": 8,
-            "prevalence": 0.000803,
+            "sites": 7,
+            "prevalence": 0.000707,
             "cnames": [],
             "responseHashes": [
                 "4a89ddfd39a3ebf0c86e04c1e49a8462a242f428d7d6fa261a069bdd42805eb8"
@@ -72,7 +72,67 @@
                 "www.dekbed-discounter.nl",
                 "www.independer.nl",
                 "www.ondernemenmetpersoneel.nl",
-                "www.studentenwegwijzer.nl",
+                "www.wickedweasel.com"
+            ]
+        },
+        {
+            "rule": "pushengage\\.com\\/sdks\\/pushengage-subscription\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "clientcdn"
+            ],
+            "apis": {
+                "Document.cookie getter": 7,
+                "window.localStorage": 6,
+                "Navigator.prototype.userAgent": 6,
+                "window.indexedDB": 6,
+                "window.sessionStorage": 6,
+                "Notification.permission": 6,
+                "window.innerWidth": 3
+            },
+            "sites": 7,
+            "prevalence": 0.000707,
+            "cnames": [],
+            "responseHashes": [
+                "be975d4dd97bf0dd514a4802c89242c7893b3191b1801df4da7c1c6fa5f00759"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mtsprout.nl",
+                "thinkrich.nl",
+                "troypoint.com",
+                "www.dekbed-discounter.nl",
+                "www.independer.nl",
+                "www.ondernemenmetpersoneel.nl",
+                "www.wickedweasel.com"
+            ]
+        },
+        {
+            "rule": "pushengage\\.com\\/geo-details",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "web-sdk"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000606,
+            "cnames": [],
+            "responseHashes": [
+                "e37600ca77ec96367d23555af5c35d6b7efc7f7d8e25372ec2bc47850db6d8fa"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mtsprout.nl",
+                "troypoint.com",
+                "www.dekbed-discounter.nl",
+                "www.independer.nl",
+                "www.ondernemenmetpersoneel.nl",
                 "www.wickedweasel.com"
             ]
         },
@@ -85,12 +145,34 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000201,
+            "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
                 "8f063a4082525307e33ea637f09cd3aa1845aea2b463b5429106b00a7b951892"
             ],
             "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wickedweasel.com",
+                "www.wickedweasel.com"
+            ]
+        },
+        {
+            "rule": "pushengage\\.com\\/v1\\/sdk-app-data\\/c319c33fd51122ec0742cd6f11adae87",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "clientcdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "c611428e037644b6e8a99f2a88979281e95728f9e607eacb9aa9de7e85e44633"
+            ],
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -105,12 +187,17 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.8181818181818182
+        },
+        {
+            "domain": "datadoghq-browser-agent.com",
+            "prevalence": 0.18181818181818182
         }
     ],
     "types": {
-        "Script": 10,
-        "Stylesheet": 8
+        "Script": 16,
+        "Stylesheet": 7,
+        "Fetch": 8
     },
     "nameservers": [
         "chuck.ns.cloudflare.com",

@@ -9,12 +9,19 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000301,
-    "sites": 3,
+    "prevalence": 0.000507,
+    "sites": 5,
     "subdomains": [
-        "cognito-identity"
+        "cognito-identity",
+        "cf-proxy-cf-eu10-004-ca8ff5b93d5f2e9b.elb",
+        "qhqraq9hm7.execute-api"
     ],
-    "cnames": [],
+    "cnames": [
+        {
+            "original": "check.cfapps.eu10-004.hana.ondemand.com",
+            "resolved": "cf-proxy-cf-eu10-004-ca8ff5b93d5f2e9b.elb.eu-central-1.amazonaws.com"
+        }
+    ],
     "fingerprinting": 0,
     "resources": [
         {
@@ -26,17 +33,131 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000201,
+            "prevalence": 0.000203,
             "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "eurail.com",
+                "www.interrail.eu"
+            ]
+        },
+        {
+            "rule": "eu-central-1\\.amazonaws\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cognito-identity",
+                "cf-proxy-cf-eu10-004-ca8ff5b93d5f2e9b.elb"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000405,
+            "cnames": [
+                {
+                    "original": "check.cfapps.eu10-004.hana.ondemand.com",
+                    "resolved": "cf-proxy-cf-eu10-004-ca8ff5b93d5f2e9b.elb.eu-central-1.amazonaws.com"
+                }
+            ],
             "responseHashes": [
-                "c79e903c9d9818d6737bc20aa999da24962915124b05deff025c5bdb723261a6"
+                "23a7a3fc78e17e62683367eb21ccbac93815cd1a5fd65ebb518433f9bf9709a9",
+                "fc4a223478b0598b4eaba2a2aaebe42d57f6b79553e1998d2f2b6e1be736878c",
+                "67ce5f6d54f8ce3ca608e3b8581d8066c728a9e048b93d4c8d6b1a3d3416b29c"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "interrail.eu",
-                "www.interrail.eu"
+                "eurail.com",
+                "www.eurail.com",
+                "www.interrail.eu",
+                "www.sap.com"
+            ]
+        },
+        {
+            "rule": "eu-central-1\\.amazonaws\\.com\\/Banner\\/GetAdnuntiusBanners",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "qhqraq9hm7.execute-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mascus.no",
+                "www.mascus.no"
+            ]
+        },
+        {
+            "rule": "eu-central-1\\.amazonaws\\.com\\/Banner\\/GetAdnuntiusBanners",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "qhqraq9hm7.execute-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "20607dc99b1c21b1a16fa88b8e9d385bfcb8974f909f6d09c21ed0f5f3b4fe88"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mascus.no",
+                "www.mascus.no"
+            ]
+        },
+        {
+            "rule": "eu-central-1\\.amazonaws\\.com\\/Search\\/SearchAssets",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "qhqraq9hm7.execute-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mascus.no",
+                "www.mascus.no"
+            ]
+        },
+        {
+            "rule": "eu-central-1\\.amazonaws\\.com\\/Search\\/SearchAssets",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "qhqraq9hm7.execute-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "87e844687b91472c06a190651294fbf833264d67a169a4b414f01e81a32a5a2e"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mascus.no",
+                "www.mascus.no"
             ]
         }
     ],
@@ -48,15 +169,20 @@
     "topInitiators": [
         {
             "domain": "rum.us-east-1.amazonaws.com",
-            "prevalence": 0.8
+            "prevalence": 0.47058823529411764
         },
         {
             "domain": "first party",
-            "prevalence": 0.2
+            "prevalence": 0.47058823529411764
+        },
+        {
+            "domain": "trengo.eu",
+            "prevalence": 0.058823529411764705
         }
     ],
     "types": {
-        "Fetch": 2
+        "Preflight": 6,
+        "Fetch": 8
     },
     "nameservers": [
         "ns1.amzndns.co.uk",

@@ -13,6 +13,7 @@
     "sites": 10,
     "subdomains": [
         "accounts.bahn",
+        "img.ui-portal",
         "gtm.idealo",
         "gateway.kleinanzeigen",
         "ssl.zdf"
@@ -33,9 +34,13 @@
         {
             "original": "gtm.idealo.de",
             "resolved": "gtm.idealo.de.edgekey.net"
+        },
+        {
+            "original": "img.ui-portal.de",
+            "resolved": "img.ui-portal.de.edgekey.net"
         }
     ],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "de\\.edgekey\\.net\\/auth\\/realms\\/db\\/protocol\\/openid-connect\\/auth",
@@ -60,6 +65,33 @@
             "exampleSites": [
                 "bahn.de",
                 "www.bahn.de"
+            ]
+        },
+        {
+            "rule": "de\\.edgekey\\.net\\/pos-cdn\\/tracklib\\/4\\.3\\.0\\/tracklib\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "img.ui-portal"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "img.ui-portal.de",
+                    "resolved": "img.ui-portal.de.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "40a6f6526afea19db42dcf345249915ccacc710ee6c97091d5d6285b5f90ead3"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gmx.com",
+                "www.gmx.fr"
             ]
         },
         {
@@ -106,7 +138,7 @@
                 }
             ],
             "responseHashes": [
-                "70cecab9f20ff8027442533176b865284ae62ed6729b5ba3e850da6f833091b3"
+                "cd5f375c944b822b239aca881f64e5cbcc9b6a41216f48840df5c32b43522a71"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -114,6 +146,33 @@
             "exampleSites": [
                 "kleinanzeigen.de",
                 "www.kleinanzeigen.de"
+            ]
+        },
+        {
+            "rule": "de\\.edgekey\\.net\\/graphql",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ssl.zdf"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "api.zdf.de",
+                    "resolved": "ssl.zdf.de.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "f2fa83a99258f78424dfdf694bbe1695854a62bf0ef09fc73b0275c988c4e9ce"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "zdf.de",
+                "www.zdf.de"
             ]
         },
         {
@@ -140,50 +199,24 @@
                 "zdf.de",
                 "www.zdf.de"
             ]
-        },
-        {
-            "rule": "de\\.edgekey\\.net\\/graphql",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "ssl.zdf"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [
-                {
-                    "original": "api.zdf.de",
-                    "resolved": "ssl.zdf.de.edgekey.net"
-                }
-            ],
-            "responseHashes": [
-                "8007e841bb81aaac5d599bca2cd52178b92d2c0c2d73d3884c9d518839de679d"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "zdf.de",
-                "www.zdf.de"
-            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000403,
+    "cookies": 0.000405,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.7777777777777778
+            "prevalence": 0.8823529411764706
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.2222222222222222
+            "prevalence": 0.11764705882352941
         }
     ],
     "types": {
         "Document": 2,
+        "Script": 2,
         "Image": 2,
         "Fetch": 4,
         "Preflight": 2

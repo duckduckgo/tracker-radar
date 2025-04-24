@@ -4,16 +4,17 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.00000683,
-    "sites": 1,
+    "prevalence": 0.0000139,
+    "sites": 2,
     "subdomains": [
-        "prd1-prxy.kinesis-server"
+        "prd1-prxy.kinesis-server",
+        "redeem-static-prod"
     ],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
         {
-            "rule": "ea-mct-live\\.com\\/revsdk\\.kes\\.KinesisEvent\\/LogEvent",
+            "rule": "ea-mct-live\\.com\\/AuthService\\/getToken",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -21,10 +22,32 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000139,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ea.com",
+                "store.galaxy-of-heroes.starwars.ea.com"
+            ]
+        },
+        {
+            "rule": "ea-mct-live\\.com\\/AuthService\\/getToken",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prd1-prxy.kinesis-server"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "1f7cf82012c96578739ec662ea09efaed8d23339899f9172c31ea6eedbae6e07"
+            ],
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -40,8 +63,29 @@
                 "prd1-prxy.kinesis-server"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "sites": 3,
+            "prevalence": 0.0000208,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ea.com",
+                "redeem.fcm.ea.com",
+                "store.galaxy-of-heroes.starwars.ea.com"
+            ]
+        },
+        {
+            "rule": "ea-mct-live\\.com\\/revsdk\\.kes\\.KinesisEvent\\/LogEvent",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prd1-prxy.kinesis-server"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000208,
             "cnames": [],
             "responseHashes": [
                 "4251074501e19a9ae97968f35d154a4273a990e0647209772d4c575ee1ec01bd"
@@ -51,7 +95,30 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "ea.com",
+                "redeem.fcm.ea.com",
                 "store.galaxy-of-heroes.starwars.ea.com"
+            ]
+        },
+        {
+            "rule": "ea-mct-live\\.com\\/fcm\\/favicon\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "redeem-static-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000139,
+            "cnames": [],
+            "responseHashes": [
+                "5471db36e64328af64fe3142d63032841fd15dd6fc7b57d9d86e4ee92d42f3ab"
+            ],
+            "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ea.com",
+                "redeem.fcm.ea.com"
             ]
         }
     ],
@@ -65,8 +132,9 @@
         }
     ],
     "types": {
-        "Preflight": 2,
-        "XHR": 2
+        "Preflight": 5,
+        "XHR": 5,
+        "Other": 2
     },
     "nameservers": [
         "ns-548.awsdns-04.net",
