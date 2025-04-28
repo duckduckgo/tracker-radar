@@ -10,7 +10,9 @@
     "prevalence": 0.0000137,
     "sites": 2,
     "subdomains": [
-        "cbtb"
+        "cbtb",
+        "scripts",
+        "hop"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -38,6 +40,62 @@
                 "mediterraneanplan.com",
                 "ryanshedplan.com"
             ]
+        },
+        {
+            "rule": "clickbank\\.net\\/hop\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "scripts"
+            ],
+            "apis": {
+                "Document.cookie getter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "778942a191db80e9b4a77be0a981f69e95ad37cf78bc8f9b08b4a5cd45c07488"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mediterraneanplan.com",
+                "ryanshedplan.com"
+            ]
+        },
+        {
+            "rule": "clickbank\\.net\\/sellerhop",
+            "cookies": 0.00000683,
+            "fingerprinting": 1,
+            "subdomains": [
+                "hop"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "fa791ba762ab646dd36a65a59d16087bb95fc5dac513248a2b24545943246234"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "vq": {
+                    "ttl": 34560003,
+                    "length": 107,
+                    "prevalence": 0.000006825752197892208,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mediterraneanplan.com",
+                "ryanshedplan.com"
+            ]
         }
     ],
     "categories": [],
@@ -46,16 +104,20 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.75
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.25
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 6
     },
     "nameservers": [
-        "ns-1812.awsdns-34.co.uk",
         "ns-94.awsdns-11.com",
         "ns-913.awsdns-50.net",
-        "ns-1390.awsdns-45.org"
+        "ns-1390.awsdns-45.org",
+        "ns-1812.awsdns-34.co.uk"
     ]
 }

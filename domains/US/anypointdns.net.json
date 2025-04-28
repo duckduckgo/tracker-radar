@@ -4,16 +4,21 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000273,
-    "sites": 4,
+    "prevalence": 0.000041,
+    "sites": 6,
     "subdomains": [
         "arm-prod-public.lb",
-        "splunk-elb.lb"
+        "splunk-elb.lb",
+        "honda-production-b2c-lb.lb"
     ],
     "cnames": [
         {
             "original": "api.arm.com",
             "resolved": "arm-prod-public.lb.anypointdns.net"
+        },
+        {
+            "original": "apib2c.services.honda.ca",
+            "resolved": "honda-production-b2c-lb.lb.anypointdns.net"
         },
         {
             "original": "apps-api.splunk.com",
@@ -39,7 +44,7 @@
                 }
             ],
             "responseHashes": [
-                "be297ba4620e83febee0670d3f0e539a2de02e456a2aa5a9bb93ed188b9cce9c"
+                "57fd2bff4508f3fcfd6dc29807afb10c56e7d986898a91d9c9c35f68a88d4511"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -92,8 +97,8 @@
                 }
             ],
             "responseHashes": [
-                "38d26df76d2a08aef350893f7bf0a58145480c464b95aa55116cb191c4217d7b",
-                "31d1cf961d4bab517ac5cb49ea028510458864095a5fb20ff75236ca5f6793d1"
+                "38b92db44344c683d8dcec86c46b3ad5ba256c517d3e7cefd71af99fab3a4686",
+                "0e53ae6ff5daa7c76bb784a9b50fde262b8e548cbf66b3182ea46cf3be48be76"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -121,8 +126,8 @@
                 }
             ],
             "responseHashes": [
-                "98d3825aefd0ce2fa242a96f071ea45ece0a78f65aee7c62f0cf8efb53ddea9b",
-                "7c41573a8373ed70f45cb920362976637ce5a18f48d71ce0e19a01f632e87e63"
+                "89273d18592a903467ee770199389247fee6ad49576ab41f6575073c7c73c16c",
+                "8b9745d8881b642786de0319d58c351d89f17ae52e45b0c666ad5c93f31b95a8"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -132,6 +137,31 @@
                 "docs.splunk.com",
                 "www.splunk.com"
             ]
+        },
+        {
+            "rule": "anypointdns\\.net\\/api-honda-hondaweb-exp-api\\/hondaweb-exp-api\\/v1\\/credentials\\/google-maps-javascript-api",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "honda-production-b2c-lb.lb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "apib2c.services.honda.ca",
+                    "resolved": "honda-production-b2c-lb.lb.anypointdns.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "honda.ca",
+                "www.honda.ca"
+            ]
         }
     ],
     "categories": [],
@@ -139,21 +169,25 @@
     "cookies": 0.0000205,
     "topInitiators": [
         {
+            "domain": "go-mpulse.net",
+            "prevalence": 0.4
+        },
+        {
             "domain": "d7koym0rxduxm.cloudfront.net",
-            "prevalence": 0.5333333333333333
+            "prevalence": 0.32
         },
         {
             "domain": "d221cp5lqk6y64.cloudfront.net",
-            "prevalence": 0.26666666666666666
+            "prevalence": 0.16
         },
         {
             "domain": "signalfx.com",
-            "prevalence": 0.2
+            "prevalence": 0.12
         }
     ],
     "types": {
         "XHR": 5,
-        "Preflight": 3,
+        "Preflight": 5,
         "Fetch": 3
     },
     "nameservers": [
