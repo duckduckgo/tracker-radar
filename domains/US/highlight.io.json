@@ -4,15 +4,42 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000342,
-    "sites": 5,
+    "prevalence": 0.0000584,
+    "sites": 8,
     "subdomains": [
+        "static",
         "pub",
         "otel"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "highlight\\.io\\/v8\\.3\\.0\\/index\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 1,
+                "window.localStorage": 1,
+                "Navigator.prototype.webdriver": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000146,
+            "cnames": [],
+            "responseHashes": [
+                "17d7dc833d95f3f3c43276d642491f503fd3f8e17d39a9822b6fa697e4cc241e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mitsubishicomfort.com",
+                "www.mitsubishicomfort.com"
+            ]
+        },
         {
             "rule": "highlight\\.io\\/",
             "cookies": 0,
@@ -21,18 +48,17 @@
                 "pub"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000205,
+            "sites": 4,
+            "prevalence": 0.0000292,
             "cnames": [],
-            "responseHashes": [
-                "bdd8c36c0c0a48165d734732e0b62e36c24236d7d5ab599e76f1ec7beccd75f0"
-            ],
-            "type": "XHR",
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "upgradedpoints.com",
                 "www.caliber.com",
+                "www.gladstone.ai",
                 "www.rmpbs.org"
             ]
         },
@@ -44,17 +70,85 @@
                 "pub"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000205,
+            "sites": 4,
+            "prevalence": 0.0000292,
+            "cnames": [],
+            "responseHashes": [
+                "bdd8c36c0c0a48165d734732e0b62e36c24236d7d5ab599e76f1ec7beccd75f0",
+                "d28c9937db9ed6bf028eaad9a68adbf2fd9c9b9ce6ca14ff013ec6ec428df088"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "upgradedpoints.com",
+                "www.caliber.com",
+                "www.gladstone.ai",
+                "www.rmpbs.org"
+            ]
+        },
+        {
+            "rule": "highlight\\.io\\/v1\\/metrics",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "otel"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000146,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "upgradedpoints.com",
-                "www.caliber.com",
-                "www.rmpbs.org"
+                "gladstone.ai",
+                "www.gladstone.ai"
+            ]
+        },
+        {
+            "rule": "highlight\\.io\\/v1\\/metrics",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "otel"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000146,
+            "cnames": [],
+            "responseHashes": [
+                "f56b35823a693646bf987ca07c9cbc4ff72a83b79b34595b20546b539795fdf0"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gladstone.ai",
+                "www.gladstone.ai"
+            ]
+        },
+        {
+            "rule": "highlight\\.io\\/v1\\/metrics",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "otel"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000146,
+            "cnames": [],
+            "responseHashes": [
+                "f56b35823a693646bf987ca07c9cbc4ff72a83b79b34595b20546b539795fdf0"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gladstone.ai",
+                "www.gladstone.ai"
             ]
         },
         {
@@ -66,7 +160,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000146,
             "cnames": [],
             "responseHashes": [],
             "type": "Ping",
@@ -86,7 +180,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000146,
             "cnames": [],
             "responseHashes": [
                 "f56b35823a693646bf987ca07c9cbc4ff72a83b79b34595b20546b539795fdf0"
@@ -106,18 +200,23 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.7058823529411765
+        },
+        {
+            "domain": "jsdelivr.net",
+            "prevalence": 0.29411764705882354
         }
     ],
     "types": {
-        "XHR": 5,
-        "Preflight": 3,
-        "Ping": 2
+        "Script": 2,
+        "Preflight": 6,
+        "XHR": 8,
+        "Ping": 4
     },
     "nameservers": [
-        "ns-cloud-c4.googledomains.com",
-        "ns-cloud-c3.googledomains.com",
         "ns-cloud-c1.googledomains.com",
-        "ns-cloud-c2.googledomains.com"
+        "ns-cloud-c2.googledomains.com",
+        "ns-cloud-c4.googledomains.com",
+        "ns-cloud-c3.googledomains.com"
     ]
 }

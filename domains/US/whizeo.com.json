@@ -4,33 +4,48 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.00000683,
-    "sites": 1,
+    "prevalence": 0.0000146,
+    "sites": 2,
     "subdomains": [
-        "api"
+        "data",
+        "api",
+        "cdn",
+        "services"
     ],
     "cnames": [],
     "fingerprinting": 3,
     "resources": [
         {
-            "rule": "whizeo\\.com\\/tracking-event",
+            "rule": "whizeo\\.com\\/widgets\\/loader\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 2,
             "subdomains": [
-                "api"
+                "data"
             ],
-            "apis": {},
+            "apis": {
+                "window.innerWidth": 1,
+                "window.outerWidth": 1,
+                "window.outerHeight": 1,
+                "Date.prototype.getTime": 1,
+                "Screen.prototype.width": 1,
+                "Screen.prototype.height": 1,
+                "Navigator.prototype.appName": 1,
+                "Navigator.prototype.language": 1,
+                "Navigator.prototype.userAgent": 1,
+                "Screen.prototype.colorDepth": 1,
+                "window.localStorage": 1
+            },
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000146,
             "cnames": [],
             "responseHashes": [
-                "e347c30762241a48a93686c4b48dd8086a365136d62377012f4c165ab15d2808"
+                "f00341a9a118eec15d53ab03d0369caf29fbf88c7e9c4280949578cffce80b6e"
             ],
-            "type": "XHR",
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "cushionsource.com",
+                "landoll.com",
                 "www.cushionsource.com"
             ]
         },
@@ -43,14 +58,100 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000137,
+            "prevalence": 0.0000146,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "cushionsource.com",
+                "landoll.com",
+                "www.cushionsource.com"
+            ]
+        },
+        {
+            "rule": "whizeo\\.com\\/openfpcdn\\/botd\\/v1",
+            "cookies": 0,
+            "fingerprinting": 3,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.vendor": 1,
+                "Navigator.prototype.userAgent": 1,
+                "Navigator.prototype.appVersion": 1,
+                "Navigator.prototype.connection": 1,
+                "window.outerWidth": 1,
+                "window.outerHeight": 1,
+                "window.innerWidth": 1,
+                "window.innerHeight": 1,
+                "Navigator.prototype.plugins": 1,
+                "Navigator.prototype.productSub": 1,
+                "Navigator.prototype.mimeTypes": 1,
+                "WebGLRenderingContext.prototype.getParameter": 1,
+                "Navigator.prototype.webdriver": 1,
+                "Navigator.prototype.language": 1,
+                "Navigator.prototype.languages": 1,
+                "Navigator.prototype.permissions": 1,
+                "Notification.permission": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000146,
+            "cnames": [],
+            "responseHashes": [
+                "29cb26e06f2a4a877f1134a46480d9b78f8b6e0e6f9b0fe67e34307c312b5a89"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "landoll.com",
+                "www.cushionsource.com"
+            ]
+        },
+        {
+            "rule": "whizeo\\.com\\/tracking-event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000146,
+            "cnames": [],
+            "responseHashes": [
+                "6d4d1cd9354303918349bbd06cebac579d3459f9549577dec4e878510d282021"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "landoll.com",
+                "www.cushionsource.com"
+            ]
+        },
+        {
+            "rule": "whizeo\\.com\\/widgets\\/init\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "services"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000146,
+            "cnames": [],
+            "responseHashes": [
+                "c8e9e90ab24b1af49dd8b447b58dfecf2de5c3abb0a6ca0872aaedc0cc2500d1"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_li_dcdm_c": 0.000007305082145648728
+            },
+            "exampleSites": [
+                "landoll.com",
                 "www.cushionsource.com"
             ]
         }
@@ -60,16 +161,21 @@
     "cookies": 0,
     "topInitiators": [
         {
+            "domain": "nong3bram.com",
+            "prevalence": 0.5
+        },
+        {
             "domain": "365-syndicate.com",
-            "prevalence": 1
+            "prevalence": 0.5
         }
     ],
     "types": {
-        "XHR": 2,
-        "Preflight": 2
+        "Script": 6,
+        "Preflight": 2,
+        "XHR": 2
     },
     "nameservers": [
-        "major.ns.cloudflare.com",
-        "maeve.ns.cloudflare.com"
+        "maeve.ns.cloudflare.com",
+        "major.ns.cloudflare.com"
     ]
 }
