@@ -9,12 +9,17 @@
     "source": [
         "DuckDuckGo-DE"
     ],
-    "prevalence": 0.000204,
-    "sites": 2,
+    "prevalence": 0.000303,
+    "sites": 6,
     "subdomains": [
+        "apimgmt-global-external",
         "uiapim2b80e30deb7e"
     ],
     "cnames": [
+        {
+            "original": "api.www.post.at",
+            "resolved": "apimgmt-global-external.azure-api.net"
+        },
         {
             "original": "internal.api.union-investment.de",
             "resolved": "uiapim2b80e30deb7e.azure-api.net"
@@ -22,6 +27,58 @@
     ],
     "fingerprinting": 0,
     "resources": [
+        {
+            "rule": "azure-api\\.net\\/postat\\/xp-v10\\/sitecore\\/api\\/graphql\\/master",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "apimgmt-global-external"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000101,
+            "cnames": [
+                {
+                    "original": "api.www.post.at",
+                    "resolved": "apimgmt-global-external.azure-api.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "post.at",
+                "www.post.at"
+            ]
+        },
+        {
+            "rule": "azure-api\\.net\\/postat\\/xp-v10\\/sitecore\\/api\\/graphql\\/master",
+            "cookies": 0.000101,
+            "fingerprinting": 0,
+            "subdomains": [
+                "apimgmt-global-external"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000101,
+            "cnames": [
+                {
+                    "original": "api.www.post.at",
+                    "resolved": "apimgmt-global-external.azure-api.net"
+                }
+            ],
+            "responseHashes": [
+                "9a05f533e50478ed348271939a1cfd6031179cce3c85c80e90e65db4195d6dd4"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "post.at",
+                "www.post.at"
+            ]
+        },
         {
             "rule": "azure-api\\.net\\/beta\\/web\\/funddata\\/fundindex",
             "cookies": 0,
@@ -31,7 +88,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000204,
+            "prevalence": 0.000101,
             "cnames": [
                 {
                     "original": "internal.api.union-investment.de",
@@ -39,7 +96,7 @@
                 }
             ],
             "responseHashes": [
-                "c9c0fc49e83679832342d051c1f3177a7941bd7e3ae97dc534effe1a4456208e"
+                "aea77e9d3df6f87903cc29bb0d86c291dfaf74779a4b5d9e2c37cff43d46ebe6"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -58,7 +115,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000204,
+            "prevalence": 0.000101,
             "cnames": [
                 {
                     "original": "internal.api.union-investment.de",
@@ -77,15 +134,25 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.000101,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 0.96875
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.03125
+        }
+    ],
     "types": {
-        "Fetch": 2,
-        "Preflight": 2
+        "Preflight": 4,
+        "Fetch": 4
     },
     "nameservers": [
-        "ns1-05.azure-dns.com",
         "ns2-05.azure-dns.net",
-        "ns3-05.azure-dns.org",
-        "ns4-05.azure-dns.info"
+        "ns1-05.azure-dns.com",
+        "ns4-05.azure-dns.info",
+        "ns3-05.azure-dns.org"
     ]
 }

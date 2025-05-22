@@ -4,10 +4,14 @@
     "source": [
         "DuckDuckGo-DE"
     ],
-    "prevalence": 0.000612,
-    "sites": 6,
+    "prevalence": 0.000657,
+    "sites": 13,
     "subdomains": [
+        "ny-post-decider.cdn",
+        "ny-post-page-six.cdn",
         "assets",
+        "chmedia-aargauerzeitung.cdn",
+        "chmedia-tagblatt.cdn",
         "economist-production-economistcom.cdn",
         "newsuk-the-times.cdn"
     ],
@@ -15,10 +19,50 @@
         {
             "original": "p.zephr.economist.com",
             "resolved": "economist-production-economistcom.cdn.zephr.com"
+        },
+        {
+            "original": "zephr-v4.decider.com",
+            "resolved": "ny-post-decider.cdn.zephr.com"
+        },
+        {
+            "original": "zephr-v4.pagesix.com",
+            "resolved": "ny-post-page-six.cdn.zephr.com"
         }
     ],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "zephr\\.com\\/zephr\\/features",
+            "cookies": 0.000101,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ny-post-decider.cdn",
+                "ny-post-page-six.cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000101,
+            "cnames": [
+                {
+                    "original": "zephr-v4.decider.com",
+                    "resolved": "ny-post-decider.cdn.zephr.com"
+                },
+                {
+                    "original": "zephr-v4.pagesix.com",
+                    "resolved": "ny-post-page-six.cdn.zephr.com"
+                }
+            ],
+            "responseHashes": [
+                "883ec8610d29735642722a6c34433190f29c820f084821dc65aae92621008cd0"
+            ],
+            "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "decider.com",
+                "pagesix.com"
+            ]
+        },
         {
             "rule": "zephr\\.com\\/zephr-browser\\/1\\.9\\.1\\/zephr-browser\\.umd\\.js",
             "cookies": 0,
@@ -27,11 +71,11 @@
                 "assets"
             ],
             "apis": {
-                "window.localStorage": 2,
-                "Navigator.prototype.userAgent": 2
+                "Navigator.prototype.userAgent": 6,
+                "window.localStorage": 2
             },
-            "sites": 3,
-            "prevalence": 0.000306,
+            "sites": 6,
+            "prevalence": 0.000303,
             "cnames": [],
             "responseHashes": [
                 "45f491c7c6006913bb2156a02b3416c4661989b03209611e30b765dc841d78d1"
@@ -40,42 +84,86 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "bikeradar.com",
+                "nymag.com",
+                "www.bikeradar.com",
+                "www.thecut.com",
                 "www.theverge.com",
-                "www.thetimes.com"
+                "www.thetimes.com",
+                "www.vulture.com"
             ]
         },
         {
-            "rule": "zephr\\.com\\/zephr\\/features",
-            "cookies": 0.000204,
+            "rule": "zephr\\.com\\/zephr-browser\\/1\\.6\\.0\\/zephr-browser\\.umd\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000101,
+            "cnames": [],
+            "responseHashes": [
+                "39ce661869eba5404c9cca43c9e5400851b842bf107631a14610e2e7f609d041"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "aargauerzeitung.ch",
+                "www.tagblatt.ch"
+            ]
+        },
+        {
+            "rule": "zephr\\.com\\/zephr\\/decision-engine",
+            "cookies": 0.000101,
             "fingerprinting": 0,
             "subdomains": [
-                "economist-production-economistcom.cdn",
-                "newsuk-the-times.cdn"
+                "chmedia-aargauerzeitung.cdn",
+                "chmedia-tagblatt.cdn"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000204,
-            "cnames": [
-                {
-                    "original": "p.zephr.economist.com",
-                    "resolved": "economist-production-economistcom.cdn.zephr.com"
-                }
-            ],
+            "prevalence": 0.000101,
+            "cnames": [],
             "responseHashes": [
-                "6267fde4edd425f77508a5eea85e9c95235a4dfc0fe90a90b672c736e5356c19"
+                "be0bc76a8ead945a93203aad18223b7be4be903f9930529e7caad4ab75da6ce5"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "economist.com",
-                "www.thetimes.com"
+                "aargauerzeitung.ch",
+                "www.tagblatt.ch"
             ]
         },
         {
-            "rule": "zephr\\.com\\/zephr\\/feature-decisions",
-            "cookies": 0.000204,
+            "rule": "zephr\\.com\\/zephr\\/decision-engine",
+            "cookies": 0.000101,
+            "fingerprinting": 0,
+            "subdomains": [
+                "chmedia-aargauerzeitung.cdn",
+                "chmedia-tagblatt.cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000101,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "aargauerzeitung.ch",
+                "www.tagblatt.ch"
+            ]
+        },
+        {
+            "rule": "zephr\\.com\\/zephr\\/features",
+            "cookies": 0.000101,
             "fingerprinting": 0,
             "subdomains": [
                 "economist-production-economistcom.cdn",
@@ -83,7 +171,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000204,
+            "prevalence": 0.000101,
             "cnames": [
                 {
                     "original": "p.zephr.economist.com",
@@ -91,34 +179,6 @@
                 }
             ],
             "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "economist.com",
-                "www.thetimes.com"
-            ]
-        },
-        {
-            "rule": "zephr\\.com\\/zephr\\/feature-decisions",
-            "cookies": 0.000204,
-            "fingerprinting": 0,
-            "subdomains": [
-                "economist-production-economistcom.cdn",
-                "newsuk-the-times.cdn"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000204,
-            "cnames": [
-                {
-                    "original": "p.zephr.economist.com",
-                    "resolved": "economist-production-economistcom.cdn.zephr.com"
-                }
-            ],
-            "responseHashes": [
-                "4871cccdfcaf825c7a81428307edfca2bbd88d110bd1562b3593864577cdcbdf"
-            ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -130,26 +190,35 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000306,
+    "cookies": 0.000303,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.8333333333333334
+            "prevalence": 0.6923076923076923
+        },
+        {
+            "domain": "static-chmedia.ch",
+            "prevalence": 0.15384615384615385
         },
         {
             "domain": "adobedtm.com",
-            "prevalence": 0.16666666666666666
+            "prevalence": 0.07692307692307693
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.07692307692307693
         }
     ],
     "types": {
-        "Script": 3,
+        "Other": 2,
+        "Script": 8,
         "Fetch": 4,
         "Preflight": 2
     },
     "nameservers": [
-        "ns-1991.awsdns-56.co.uk",
-        "ns-1113.awsdns-11.org",
         "ns-46.awsdns-05.com",
-        "ns-877.awsdns-45.net"
+        "ns-877.awsdns-45.net",
+        "ns-1113.awsdns-11.org",
+        "ns-1991.awsdns-56.co.uk"
     ]
 }
