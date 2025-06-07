@@ -4,17 +4,28 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000314,
-    "sites": 3,
+    "prevalence": 0.00013,
+    "sites": 9,
     "subdomains": [
         "mass-tnew-prod",
         "tosy-tnew-prod",
+        "edso-tnew-prod",
+        "tafe-tnew-prod",
+        "natt-tnew-prod",
         "romc-tnew-prod"
     ],
     "cnames": [
         {
+            "original": "my.tafelmusik.org",
+            "resolved": "tafe-tnew-prod.tnhs.cloud"
+        },
+        {
             "original": "my.tso.ca",
             "resolved": "tosy-tnew-prod.tnhs.cloud"
+        },
+        {
+            "original": "my.winspearcentre.com",
+            "resolved": "edso-tnew-prod.tnhs.cloud"
         },
         {
             "original": "secure.rmts.bc.ca",
@@ -23,21 +34,26 @@
         {
             "original": "tickets.mhrth.com",
             "resolved": "mass-tnew-prod.tnhs.cloud"
+        },
+        {
+            "original": "tickets.nationaltheatre.org.uk",
+            "resolved": "natt-tnew-prod.tnhs.cloud"
         }
     ],
     "fingerprinting": 0,
     "resources": [
         {
             "rule": "tnhs\\.cloud\\/api\\/session\\/sessionkey\\/",
-            "cookies": 0.000209,
+            "cookies": 0.000072,
             "fingerprinting": 0,
             "subdomains": [
                 "mass-tnew-prod",
-                "tosy-tnew-prod"
+                "tosy-tnew-prod",
+                "edso-tnew-prod"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000209,
+            "sites": 5,
+            "prevalence": 0.000072,
             "cnames": [
                 {
                     "original": "tickets.mhrth.com",
@@ -46,36 +62,80 @@
                 {
                     "original": "my.tso.ca",
                     "resolved": "tosy-tnew-prod.tnhs.cloud"
+                },
+                {
+                    "original": "my.winspearcentre.com",
+                    "resolved": "edso-tnew-prod.tnhs.cloud"
                 }
             ],
             "responseHashes": [
-                "e1ce6e4503d4b45b8e5e7149ae1ccc5e2d2ebeb123d15b46753518adcf83eb10"
+                "b02e2a584122c7a2dddd7c239e520966f636cb1bed968e41f46d0beb3676672b",
+                "fd83d194c7da7d49082dcd3f66481f95c3bb8cec8407302b9150f252e88c0c7e",
+                "c78688ab1ecc3586e6b647de9e766d4846df2f07498d87904f552cfa0d19ad5a",
+                "59d22cfa0dbd57ab5837d21a24dc673a1f22b12ee395cbb99685d314a7bf4336"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "mhrth.com",
-                "www.tso.ca"
+                "roythomsonhall.mhrth.com",
+                "tdmusichall.mhrth.com",
+                "www.tso.ca",
+                "www.winspearcentre.com"
+            ]
+        },
+        {
+            "rule": "tnhs\\.cloud\\/api\\/session\\/sessionkey",
+            "cookies": 0.0000288,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tafe-tnew-prod",
+                "natt-tnew-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000288,
+            "cnames": [
+                {
+                    "original": "my.tafelmusik.org",
+                    "resolved": "tafe-tnew-prod.tnhs.cloud"
+                },
+                {
+                    "original": "tickets.nationaltheatre.org.uk",
+                    "resolved": "natt-tnew-prod.tnhs.cloud"
+                }
+            ],
+            "responseHashes": [
+                "4cbdf72eca4242b3fc1d52f4dd33ef7089caf7ec2cb2dcd55e00a487ab58abb5"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tafelmusik.org",
+                "www.nationaltheatre.org.uk"
             ]
         },
         {
             "rule": "tnhs\\.cloud\\/components\\/sharedsession",
-            "cookies": 0.000105,
+            "cookies": 0.0000144,
             "fingerprinting": 0,
             "subdomains": [
                 "romc-tnew-prod"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000209,
+            "prevalence": 0.0000288,
             "cnames": [
                 {
                     "original": "secure.rmts.bc.ca",
                     "resolved": "romc-tnew-prod.tnhs.cloud"
                 }
             ],
-            "responseHashes": [],
+            "responseHashes": [
+                "e98058517e3d0f5f3f273812edbb5d23b5b33f204345dd02bee70af9242724c5"
+            ],
             "type": "Document",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -87,25 +147,30 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000314,
+    "cookies": 0.00013,
     "topInitiators": [
         {
             "domain": "d3vc61m0ib870y.cloudfront.net",
-            "prevalence": 0.5
+            "prevalence": 0.6
         },
         {
             "domain": "d2brfggrg1ktvi.cloudfront.net",
-            "prevalence": 0.5
+            "prevalence": 0.2
+        },
+        {
+            "domain": "d2of1o776hs0ms.cloudfront.net",
+            "prevalence": 0.2
         }
     ],
     "types": {
-        "XHR": 2,
+        "XHR": 5,
+        "Fetch": 2,
         "Document": 2
     },
     "nameservers": [
-        "ns-1438.awsdns-51.org",
+        "ns-885.awsdns-46.net",
         "ns-1737.awsdns-25.co.uk",
         "ns-477.awsdns-59.com",
-        "ns-885.awsdns-46.net"
+        "ns-1438.awsdns-51.org"
     ]
 }

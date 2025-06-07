@@ -9,18 +9,23 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000102,
-    "sites": 1,
+    "prevalence": 0.000126,
+    "sites": 9,
     "subdomains": [
-        "l4-logs-http-rum-pub-s0-7d264be627ade923"
+        "l4-logs-http-rum-pub-s0-7d264be627ade923",
+        "k8s-opstest-apisixga-ffd5932408-71111629e4aa4dd8"
     ],
     "cnames": [
         {
             "original": "8b61d74c.datadoghq.com",
             "resolved": "l4-logs-http-rum-pub-s0-7d264be627ade923.elb.us-east-1.amazonaws.com"
+        },
+        {
+            "original": "tracking.shopcider.com",
+            "resolved": "k8s-opstest-apisixga-ffd5932408-71111629e4aa4dd8.elb.us-east-1.amazonaws.com"
         }
     ],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "elb\\.us-east-1\\.amazonaws\\.com\\/api\\/v2\\/rum",
@@ -30,8 +35,8 @@
                 "l4-logs-http-rum-pub-s0-7d264be627ade923"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000205,
+            "sites": 3,
+            "prevalence": 0.000042,
             "cnames": [
                 {
                     "original": "8b61d74c.datadoghq.com",
@@ -39,14 +44,68 @@
                 }
             ],
             "responseHashes": [
-                "d88ad9dc474ba9c97bc94f5dbfa5f8e3aae57e747e327c2fdc3cecd3752b7ede"
+                "ccbb9f4ba71f5bc7942b1d82d10fba02ca16c633ef46a6c880332c0e8b31057c",
+                "796125ac71bc845adcae817959926fb0276727d377bf4668c8fa990eef6044d7"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "datadoghq.com",
-                "docs.datadoghq.com"
+                "docs.datadoghq.com",
+                "www.datadoghq.com"
+            ]
+        },
+        {
+            "rule": "elb\\.us-east-1\\.amazonaws\\.com\\/ms\\/analysis\\/v1\\/reportPoint",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "k8s-opstest-apisixga-ffd5932408-71111629e4aa4dd8"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000028,
+            "cnames": [
+                {
+                    "original": "tracking.shopcider.com",
+                    "resolved": "k8s-opstest-apisixga-ffd5932408-71111629e4aa4dd8.elb.us-east-1.amazonaws.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "shopcider.com",
+                "www.shopcider.com"
+            ]
+        },
+        {
+            "rule": "elb\\.us-east-1\\.amazonaws\\.com\\/ms\\/analysis\\/v1\\/reportPoint",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "k8s-opstest-apisixga-ffd5932408-71111629e4aa4dd8"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000028,
+            "cnames": [
+                {
+                    "original": "tracking.shopcider.com",
+                    "resolved": "k8s-opstest-apisixga-ffd5932408-71111629e4aa4dd8.elb.us-east-1.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "7397e0987dc915f33e145a086726c9654845ee27a6dd9e053b25781d7b54fdde"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "shopcider.com",
+                "www.shopcider.com"
             ]
         }
     ],
@@ -54,9 +113,17 @@
         "CDN"
     ],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.000028,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
     "types": {
-        "Fetch": 2
+        "Fetch": 3,
+        "Preflight": 2,
+        "Ping": 2
     },
     "nameservers": [
         "ns-1286.awsdns-32.org",

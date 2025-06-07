@@ -4,32 +4,38 @@
     "source": [
         "DuckDuckGo-DE"
     ],
-    "prevalence": 0.000204,
-    "sites": 2,
+    "prevalence": 0.0000558,
+    "sites": 4,
     "subdomains": [
-        "login-eu"
+        "login-eu",
+        "serversidegtm.prod.platform.web",
+        "serversidegtm.prod.web"
     ],
     "cnames": [],
-    "fingerprinting": 2,
+    "fingerprinting": 1,
     "resources": [
         {
-            "rule": "geberit\\.com\\/gs\\/webSdk\\/Api\\.aspx",
+            "rule": "geberit\\.com\\/js\\/Api\\.htm",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
                 "login-eu"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000204,
+            "sites": 4,
+            "prevalence": 0.0000558,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "f65398832459a0512c28e2889d06a181b3035bf9a6c62f81fd3eb01ded8ec52a"
+            ],
             "type": "Document",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "geberit.de",
-                "www.geberit.de"
+                "www.geberit.de",
+                "www.geberit.at",
+                "www.geberit.ch"
             ]
         },
         {
@@ -40,8 +46,8 @@
                 "login-eu"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000204,
+            "sites": 4,
+            "prevalence": 0.0000558,
             "cnames": [],
             "responseHashes": [],
             "type": "Fetch",
@@ -49,19 +55,21 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "geberit.de",
-                "www.geberit.de"
+                "www.geberit.de",
+                "www.geberit.at",
+                "www.geberit.ch"
             ]
         },
         {
-            "rule": "geberit\\.com\\/gs\\/sso\\.htm",
+            "rule": "geberit\\.com\\/js\\/sso\\.htm",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
                 "login-eu"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000306,
+            "sites": 5,
+            "prevalence": 0.0000697,
             "cnames": [],
             "responseHashes": [],
             "type": "Document",
@@ -70,7 +78,93 @@
             "exampleSites": [
                 "geberit.de",
                 "catalog.geberit.de",
-                "www.geberit.de"
+                "www.geberit.de",
+                "www.geberit.at",
+                "www.geberit.ch"
+            ]
+        },
+        {
+            "rule": "geberit\\.com\\/gtm\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "serversidegtm.prod.platform.web"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Document.cookie getter": 3,
+                "Date.prototype.getTime": 3,
+                "window.name": 2
+            },
+            "sites": 3,
+            "prevalence": 0.0000418,
+            "cnames": [],
+            "responseHashes": [
+                "38e1693fe5fc1ca49b12c268424da96d78b9b08cbee2ea94e37ed43342a9fea9",
+                "2adda081901517d3635f6e8300b3e00f99d242673af4d13cd810ecf83afcfa2e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "geberit.de",
+                "www.geberit.at",
+                "www.geberit.ch"
+            ]
+        },
+        {
+            "rule": "geberit\\.com\\/gtag\\/js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "serversidegtm.prod.web"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Document.cookie getter": 3,
+                "Date.prototype.getTime": 2,
+                "window.name": 2,
+                "Navigator.prototype.language": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2
+            },
+            "sites": 3,
+            "prevalence": 0.0000418,
+            "cnames": [],
+            "responseHashes": [
+                "444d1b19e1e3dcabc033f3a62b249137fcdfe4baf54aa42aefa5639bc66b9191",
+                "c4756680faa444dc4e7880642ff058decb2c0e502c368e524fe8e9985165c886"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "geberit.de",
+                "www.geberit.at",
+                "www.geberit.ch"
+            ]
+        },
+        {
+            "rule": "geberit\\.com\\/g\\/collect",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "serversidegtm.prod.web"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000418,
+            "cnames": [],
+            "responseHashes": [
+                "e64954dc34e12c7190cc2338a54b07644ff0f102aa71cc7209bcbb49c3009f7c"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "geberit.de",
+                "www.geberit.at",
+                "www.geberit.ch"
             ]
         }
     ],
@@ -84,12 +178,13 @@
         }
     ],
     "types": {
-        "Document": 5,
-        "Fetch": 2
+        "Document": 9,
+        "Fetch": 7,
+        "Script": 6
     },
     "nameservers": [
-        "ns-geberit.is-fun.net",
         "ns.geberit.de",
-        "ns.geberit.ch"
+        "ns.geberit.ch",
+        "ns-geberit.is-fun.net"
     ]
 }

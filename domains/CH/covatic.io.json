@@ -4,15 +4,78 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.000205,
-    "sites": 2,
+    "prevalence": 0.00014,
+    "sites": 10,
     "subdomains": [
         "browser",
-        "sky-lon-cvc-prod"
+        "sky-lon-cvc-prod",
+        "mobile-cvc-ire-cvc-stg",
+        "mobile-lon-lambda"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "covatic\\.io\\/sdk\\/v1\\/bauer\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "browser"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 4,
+                "Date.prototype.getTime": 3,
+                "Navigator.prototype.product": 2
+            },
+            "sites": 7,
+            "prevalence": 0.000098,
+            "cnames": [],
+            "responseHashes": [
+                "1f2ac2f1c3394aef25979fe43b355ef7c1e680dc58ff3e18b7725e758bdb5583"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "graziadaily.co.uk",
+                "www.carmagazine.co.uk",
+                "www.empireonline.com",
+                "www.livefortheoutdoors.com",
+                "www.motorcyclenews.com",
+                "www.parkers.co.uk",
+                "www.todays-golfer.com"
+            ]
+        },
+        {
+            "rule": "covatic\\.io\\/profiles\\/default\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "browser"
+            ],
+            "apis": {},
+            "sites": 9,
+            "prevalence": 0.000126,
+            "cnames": [],
+            "responseHashes": [
+                "d9dc55d7f6126a80c50bb617970bfaf69ad1c3dd0c5c537bf4ecb515a8be508d"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "graziadaily.co.uk",
+                "news.sky.com",
+                "www.carmagazine.co.uk",
+                "www.empireonline.com",
+                "www.livefortheoutdoors.com",
+                "www.motorcyclenews.com",
+                "www.parkers.co.uk",
+                "www.todays-golfer.com",
+                "www.wheresthematch.com"
+            ]
+        },
         {
             "rule": "covatic\\.io\\/sdk\\/v1\\/sky\\.js",
             "cookies": 0,
@@ -21,12 +84,12 @@
                 "browser"
             ],
             "apis": {
-                "Navigator.prototype.product": 1,
+                "Navigator.prototype.product": 2,
                 "Navigator.prototype.userAgent": 2,
                 "window.localStorage": 2
             },
             "sites": 2,
-            "prevalence": 0.000205,
+            "prevalence": 0.000028,
             "cnames": [],
             "responseHashes": [
                 "1f2ac2f1c3394aef25979fe43b355ef7c1e680dc58ff3e18b7725e758bdb5583"
@@ -44,21 +107,67 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "sky-lon-cvc-prod"
+                "sky-lon-cvc-prod",
+                "mobile-cvc-ire-cvc-stg",
+                "mobile-lon-lambda"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000205,
+            "sites": 5,
+            "prevalence": 0.00007,
             "cnames": [],
             "responseHashes": [
-                "b47fb385be9e0d93d9770727502c4561d7bf2e81c645db51298d99a27e4e0cf5"
+                "b47fb385be9e0d93d9770727502c4561d7bf2e81c645db51298d99a27e4e0cf5",
+                "090ad6f3299b5853261219f4c3fe4cf1427c6e398b536f914c82eb99010b04db"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "sky.com",
-                "www.skysports.com"
+                "www.motorcyclenews.com",
+                "www.skysports.com",
+                "www.todays-golfer.com",
+                "www.wheresthematch.com"
+            ]
+        },
+        {
+            "rule": "covatic\\.io\\/mobile\\/api\\/v1\\.0\\/profile\\/user_profiles",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "mobile-cvc-ire-cvc-stg"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000028,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "motorcyclenews.com",
+                "www.todays-golfer.com"
+            ]
+        },
+        {
+            "rule": "covatic\\.io\\/mobile\\/api\\/v1\\.0\\/fwm\\/get_auth_token",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "mobile-cvc-ire-cvc-stg"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000028,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "motorcyclenews.com",
+                "www.motorcyclenews.com"
             ]
         }
     ],
@@ -68,17 +177,25 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.8571428571428571
+        },
+        {
+            "domain": "bauersecure.com",
+            "prevalence": 0.07142857142857142
+        },
+        {
+            "domain": "4strokemedia.com",
+            "prevalence": 0.07142857142857142
         }
     ],
     "types": {
-        "Script": 2,
-        "XHR": 2
+        "Script": 9,
+        "XHR": 18
     },
     "nameservers": [
-        "ns-494.awsdns-61.com",
-        "ns-1340.awsdns-39.org",
         "ns-530.awsdns-02.net",
-        "ns-1777.awsdns-30.co.uk"
+        "ns-1340.awsdns-39.org",
+        "ns-1777.awsdns-30.co.uk",
+        "ns-494.awsdns-61.com"
     ]
 }

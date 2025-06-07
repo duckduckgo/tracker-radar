@@ -4,13 +4,14 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000205,
-    "sites": 2,
+    "prevalence": 0.000056,
+    "sites": 4,
     "subdomains": [
-        "prod.pyxis"
+        "prod.pyxis",
+        "prod.fennec"
     ],
     "cnames": [],
-    "fingerprinting": 2,
+    "fingerprinting": 0,
     "resources": [
         {
             "rule": "atp\\.fox\\/pyxis\\/submit",
@@ -20,71 +21,152 @@
                 "prod.pyxis"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000205,
+            "sites": 4,
+            "prevalence": 0.000056,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "foxnews.com",
+                "toofab.com",
+                "www.foxnews.com",
+                "www.outkick.com",
                 "www.tmz.com"
             ]
         },
         {
             "rule": "atp\\.fox\\/pyxis\\/submit",
-            "cookies": 0.000307,
+            "cookies": 0.000056,
             "fingerprinting": 0,
             "subdomains": [
                 "prod.pyxis"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000307,
+            "sites": 4,
+            "prevalence": 0.000056,
             "cnames": [],
             "responseHashes": [
-                "48fc8cba9cbeb0c5557ddaf8d2fe535d5695186fd11da532c17193a8ed233920"
+                "bf7b3c94fd672200d7e660b92d335213b5e0b8c56b8eeadf869da48be1e11d95",
+                "22aa8e8d228925f1794f6b96fac9380c8057cd3ed6f7810e87993fc53b21efaf"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "foxnews.com",
+                "toofab.com",
                 "www.foxnews.com",
+                "www.outkick.com",
                 "www.tmz.com"
+            ]
+        },
+        {
+            "rule": "atp\\.fox\\/js\\/fennec\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prod.fennec"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000042,
+            "cnames": [],
+            "responseHashes": [
+                "3ff3c5a4680bea779a88a819574d6efd5320ae14f7e3c1ffa8368db4eaeedf62"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "toofab.com",
+                "www.foxnews.com",
+                "www.outkick.com"
+            ]
+        },
+        {
+            "rule": "atp\\.fox\\/config\\/v2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prod.fennec"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000028,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "toofab.com",
+                "www.outkick.com"
+            ]
+        },
+        {
+            "rule": "atp\\.fox\\/config\\/v2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prod.fennec"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000028,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "toofab.com",
+                "www.outkick.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000205,
+    "cookies": 0.000056,
     "topInitiators": [
         {
+            "domain": "foxnews.com",
+            "prevalence": 0.4166666666666667
+        },
+        {
+            "domain": "fox.com",
+            "prevalence": 0.25
+        },
+        {
             "domain": "first party",
-            "prevalence": 0.6
+            "prevalence": 0.08333333333333333
         },
         {
             "domain": "webcontentassessor.global.ssl.fastly.net",
-            "prevalence": 0.2
+            "prevalence": 0.08333333333333333
+        },
+        {
+            "domain": "webcontentassessor.com",
+            "prevalence": 0.08333333333333333
         },
         {
             "domain": "kts.fox",
-            "prevalence": 0.2
+            "prevalence": 0.08333333333333333
         }
     ],
     "types": {
-        "Preflight": 2,
-        "Fetch": 3
+        "Preflight": 6,
+        "Fetch": 4,
+        "Script": 3,
+        "XHR": 2
     },
     "nameservers": [
-        "ns01.dns.fox",
-        "ns01.foxdoua.com",
-        "ns02.dns.fox",
-        "ns02.foxdoua.com",
         "ns03.dns.fox",
+        "ns04.foxdoua.com",
+        "ns01.foxdoua.com",
+        "ns02.foxdoua.com",
         "ns03.foxdoua.com",
         "ns04.dns.fox",
-        "ns04.foxdoua.com"
+        "ns01.dns.fox",
+        "ns02.dns.fox"
     ]
 }

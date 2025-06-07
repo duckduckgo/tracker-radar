@@ -4,11 +4,12 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.000103,
-    "sites": 1,
+    "prevalence": 0.000042,
+    "sites": 3,
     "subdomains": [
         "publisher",
-        "ads"
+        "ads",
+        "api"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -16,27 +17,80 @@
         {
             "rule": "caroda\\.io\\/videoPlayer\\/caroda\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 1,
+            "fingerprinting": 0,
             "subdomains": [
                 "publisher",
                 "ads"
             ],
-            "apis": {
-                "Navigator.prototype.userAgent": 1,
-                "window.localStorage": 1
-            },
-            "sites": 2,
-            "prevalence": 0.000205,
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000056,
             "cnames": [],
             "responseHashes": [
-                "db61cdaeed5f8173ccce2fcc9b1d1f22a22c01a71ada454d4f443e5234c528f0"
+                "8ecf9feb279f84752fa38adf098bf7e1ff19dea14f8fb34e936a683e609659af",
+                "855f4aa34f67d0fb1e8e2e10d714d5da95e5efccbdc4867209bd917b50436e62",
+                "7faa9b593a3c70e6b364a98319a7247227a8abb8179e6f143404563260384b33"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "csfd.cz",
-                "www.csfd.cz"
+                "banky.cz",
+                "www.banky.cz",
+                "www.csfd.cz",
+                "www.realitatea.net"
+            ]
+        },
+        {
+            "rule": "caroda\\.io\\/targetingProfile\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000042,
+            "cnames": [],
+            "responseHashes": [
+                "a6448c8e34a0a7fe51124442291a150e9bd57bf5526668ffbb998a11330d66a0"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "banky.cz",
+                "www.csfd.cz",
+                "www.realitatea.net"
+            ]
+        },
+        {
+            "rule": "caroda\\.io\\/videoPlayer\\/v\\/0499cbacb0a7688f60101c1dda848ca16361726f64612d323032352d30362d30355430373a33383a31322e3933385a\\/s\\/2\\/static\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "ads"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.indexedDB": 2,
+                "window.localStorage": 2,
+                "Navigator.prototype.webdriver": 2,
+                "Navigator.prototype.languages": 2
+            },
+            "sites": 3,
+            "prevalence": 0.000042,
+            "cnames": [],
+            "responseHashes": [
+                "05f0b872e9141db446341ec904ec3e298bbb21babf274750cf9781baa58a663e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "banky.cz",
+                "www.csfd.cz",
+                "www.realitatea.net"
             ]
         }
     ],
@@ -46,16 +100,25 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.5
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.25
+        },
+        {
+            "domain": "datadoghq-browser-agent.com",
+            "prevalence": 0.25
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 7,
+        "Fetch": 3
     },
     "nameservers": [
         "ns-1130.awsdns-13.org",
+        "ns-433.awsdns-54.com",
         "ns-1542.awsdns-00.co.uk",
-        "ns-534.awsdns-02.net",
-        "ns-433.awsdns-54.com"
+        "ns-534.awsdns-02.net"
     ]
 }

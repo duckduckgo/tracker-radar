@@ -9,15 +9,20 @@
     "source": [
         "DuckDuckGo-GB"
     ],
-    "prevalence": 0.000206,
-    "sites": 2,
+    "prevalence": 0.0000997,
+    "sites": 7,
     "subdomains": [
-        "l4-logs-http-rum-pub-s1-6386d34262e59173"
+        "l4-logs-http-rum-pub-s0-7d264be627ade923",
+        "k8s-opstest-apisixga-ffd5932408-71111629e4aa4dd8"
     ],
     "cnames": [
         {
             "original": "8b61d74c.datadoghq.com",
-            "resolved": "l4-logs-http-rum-pub-s1-6386d34262e59173.elb.us-east-1.amazonaws.com"
+            "resolved": "l4-logs-http-rum-pub-s0-7d264be627ade923.elb.us-east-1.amazonaws.com"
+        },
+        {
+            "original": "tracking.shopcider.com",
+            "resolved": "k8s-opstest-apisixga-ffd5932408-71111629e4aa4dd8.elb.us-east-1.amazonaws.com"
         }
     ],
     "fingerprinting": 0,
@@ -27,26 +32,80 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "l4-logs-http-rum-pub-s1-6386d34262e59173"
+                "l4-logs-http-rum-pub-s0-7d264be627ade923"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000206,
+            "sites": 3,
+            "prevalence": 0.0000427,
             "cnames": [
                 {
                     "original": "8b61d74c.datadoghq.com",
-                    "resolved": "l4-logs-http-rum-pub-s1-6386d34262e59173.elb.us-east-1.amazonaws.com"
+                    "resolved": "l4-logs-http-rum-pub-s0-7d264be627ade923.elb.us-east-1.amazonaws.com"
                 }
             ],
             "responseHashes": [
-                "0dd4c3cc3280563d7294a88b7fd86d6da8dbb8ddf1486e620b34d476756d7d13"
+                "9d297f8cfbb444e820285f8ddeea082401dbcde5082e45573ac59d975931934a",
+                "117e669e5aa5b5fa9f18ba4a10e9cb2aad3f8a7868520e4e9d73679d5637a6c5"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "datadoghq.com",
-                "docs.datadoghq.com"
+                "docs.datadoghq.com",
+                "www.datadoghq.com"
+            ]
+        },
+        {
+            "rule": "elb\\.us-east-1\\.amazonaws\\.com\\/ms\\/analysis\\/v1\\/reportPoint",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "k8s-opstest-apisixga-ffd5932408-71111629e4aa4dd8"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000285,
+            "cnames": [
+                {
+                    "original": "tracking.shopcider.com",
+                    "resolved": "k8s-opstest-apisixga-ffd5932408-71111629e4aa4dd8.elb.us-east-1.amazonaws.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "shopcider.com",
+                "www.shopcider.com"
+            ]
+        },
+        {
+            "rule": "elb\\.us-east-1\\.amazonaws\\.com\\/ms\\/analysis\\/v1\\/reportPoint",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "k8s-opstest-apisixga-ffd5932408-71111629e4aa4dd8"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000285,
+            "cnames": [
+                {
+                    "original": "tracking.shopcider.com",
+                    "resolved": "k8s-opstest-apisixga-ffd5932408-71111629e4aa4dd8.elb.us-east-1.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "7397e0987dc915f33e145a086726c9654845ee27a6dd9e053b25781d7b54fdde"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "shopcider.com",
+                "www.shopcider.com"
             ]
         }
     ],
@@ -54,15 +113,17 @@
         "CDN"
     ],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.0000142,
     "topInitiators": [
         {
-            "domain": "reverb-assets.com",
+            "domain": "first party",
             "prevalence": 1
         }
     ],
     "types": {
-        "Fetch": 2
+        "Fetch": 3,
+        "Preflight": 2,
+        "Ping": 2
     },
     "nameservers": [
         "ns-1286.awsdns-32.org",

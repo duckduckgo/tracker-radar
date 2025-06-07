@@ -7,36 +7,15 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000102,
-    "sites": 1,
+    "prevalence": 0.000154,
+    "sites": 11,
     "subdomains": [
-        "clientcdn"
+        "clientcdn",
+        "web-sdk"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
-        {
-            "rule": "pushengage\\.com\\/core\\/c319c33fd51122ec0742cd6f11adae87\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "clientcdn"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000205,
-            "cnames": [],
-            "responseHashes": [
-                "8f063a4082525307e33ea637f09cd3aa1845aea2b463b5429106b00a7b951892"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "wickedweasel.com",
-                "www.wickedweasel.com"
-            ]
-        },
         {
             "rule": "pushengage\\.com\\/sdks\\/pushengage-web-sdk\\.js",
             "cookies": 0,
@@ -45,22 +24,30 @@
                 "clientcdn"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 2,
-                "Navigator.prototype.vendor": 2,
-                "Navigator.prototype.webkitTemporaryStorage": 2,
-                "Performance.prototype.memory": 2
+                "Navigator.prototype.userAgent": 8,
+                "Navigator.prototype.vendor": 8,
+                "Performance.prototype.memory": 10,
+                "Navigator.prototype.webkitTemporaryStorage": 7
             },
-            "sites": 2,
-            "prevalence": 0.000205,
+            "sites": 10,
+            "prevalence": 0.00014,
             "cnames": [],
             "responseHashes": [
-                "bf17d3523207f609237554ec99951ce93d37e14d20b58b426db2335a75c2d387"
+                "8a3fc6f678a666dbf722f5e5c9a0513d680d4fe1d8fe9bf32fb62ab11e608521"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "wickedweasel.com",
+                "europe-moto.com",
+                "circuitdigest.com",
+                "components101.com",
+                "drakorid.net",
+                "macave.carrefour.fr",
+                "troypoint.com",
+                "www.csestack.org",
+                "www.independer.nl",
+                "www.olivier-rocq.com",
                 "www.wickedweasel.com"
             ]
         },
@@ -72,8 +59,8 @@
                 "clientcdn"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000205,
+            "sites": 10,
+            "prevalence": 0.00014,
             "cnames": [],
             "responseHashes": [
                 "4a89ddfd39a3ebf0c86e04c1e49a8462a242f428d7d6fa261a069bdd42805eb8"
@@ -82,28 +69,82 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "wickedweasel.com",
+                "europe-moto.com",
+                "circuitdigest.com",
+                "components101.com",
+                "drakorid.net",
+                "macave.carrefour.fr",
+                "troypoint.com",
+                "www.csestack.org",
+                "www.independer.nl",
+                "www.olivier-rocq.com",
                 "www.wickedweasel.com"
             ]
         },
         {
             "rule": "pushengage\\.com\\/sdks\\/pushengage-subscription\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 2,
             "subdomains": [
                 "clientcdn"
             ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000205,
+            "apis": {
+                "Document.cookie getter": 8,
+                "window.localStorage": 7,
+                "Navigator.prototype.userAgent": 7,
+                "window.indexedDB": 7,
+                "Notification.permission": 7,
+                "window.sessionStorage": 7,
+                "window.innerWidth": 3,
+                "Date.prototype.getTime": 1
+            },
+            "sites": 10,
+            "prevalence": 0.00014,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "6fe106e33a3e0c7993771c9247142a9a46c307ccd47c61ea224e37f6ef75f301"
+            ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "wickedweasel.com",
+                "europe-moto.com",
+                "circuitdigest.com",
+                "components101.com",
+                "drakorid.net",
+                "macave.carrefour.fr",
+                "troypoint.com",
+                "www.csestack.org",
+                "www.independer.nl",
+                "www.olivier-rocq.com",
                 "www.wickedweasel.com"
+            ]
+        },
+        {
+            "rule": "pushengage\\.com\\/geo-details",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "web-sdk"
+            ],
+            "apis": {},
+            "sites": 7,
+            "prevalence": 0.0000977,
+            "cnames": [],
+            "responseHashes": [
+                "76c020fb7396c6dc645a6aa711d96228561ebb8a99c8dd4a289ae6208729aaf0"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "europe-moto.com",
+                "components101.com",
+                "drakorid.net",
+                "macave.carrefour.fr",
+                "troypoint.com",
+                "www.csestack.org",
+                "www.olivier-rocq.com"
             ]
         }
     ],
@@ -113,12 +154,17 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.9090909090909091
+        },
+        {
+            "domain": "drakorid.cc",
+            "prevalence": 0.09090909090909091
         }
     ],
     "types": {
-        "Script": 6,
-        "Stylesheet": 2
+        "Script": 20,
+        "Stylesheet": 10,
+        "Fetch": 7
     },
     "nameservers": [
         "chuck.ns.cloudflare.com",

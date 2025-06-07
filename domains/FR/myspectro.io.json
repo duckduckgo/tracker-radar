@@ -7,14 +7,114 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000102,
-    "sites": 1,
+    "prevalence": 0.0000279,
+    "sites": 2,
     "subdomains": [
-        "tracking"
+        "tracking",
+        "router",
+        "apigateway",
+        "listener"
     ],
     "cnames": [],
     "fingerprinting": 3,
     "resources": [
+        {
+            "rule": "myspectro\\.io\\/matomo\\.js",
+            "cookies": 0.0000279,
+            "fingerprinting": 2,
+            "subdomains": [
+                "tracking"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "window.name": 2,
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.cookieEnabled": 2,
+                "NavigatorUAData.prototype.brands": 2,
+                "NavigatorUAData.prototype.platform": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.mimeTypes": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "Navigator.prototype.platform": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000279,
+            "cnames": [],
+            "responseHashes": [
+                "d7fc375178c93a2fc15fd888e30170eedf4ef3d04497e7f951ab7bfe0c921693"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_pk_id.304.6927": {
+                    "ttl": 33955206,
+                    "length": 28,
+                    "prevalence": 0.000013962580284836637,
+                    "uniqueness": 1
+                },
+                "_pk_ses.304.6927": {
+                    "ttl": 1807,
+                    "length": 1,
+                    "prevalence": 0.000013962580284836637,
+                    "uniqueness": 1
+                },
+                "_pk_ses..6927": {
+                    "ttl": 1807,
+                    "length": 1,
+                    "prevalence": 0.000013962580284836637,
+                    "uniqueness": 1
+                },
+                "_pk_id.322.e65a": {
+                    "ttl": 33955206,
+                    "length": 28,
+                    "prevalence": 0.000013962580284836637,
+                    "uniqueness": 1
+                },
+                "_pk_ses.322.e65a": {
+                    "ttl": 1805,
+                    "length": 1,
+                    "prevalence": 0.000013962580284836637,
+                    "uniqueness": 1
+                },
+                "_pk_ses..e65a": {
+                    "ttl": 1805,
+                    "length": 1,
+                    "prevalence": 0.000013962580284836637,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "h2r-equipements.com",
+                "www.plantes-et-nature.fr"
+            ]
+        },
+        {
+            "rule": "myspectro\\.io\\/router\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "router"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Date.prototype.getTime": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000279,
+            "cnames": [],
+            "responseHashes": [
+                "2e24e34fd66378b907c56ece81bf1351b4fbb752df5bc492cddc25af0e0af836"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "h2r-equipements.com",
+                "www.plantes-et-nature.fr"
+            ]
+        },
         {
             "rule": "myspectro\\.io\\/matomo\\.php",
             "cookies": 0,
@@ -23,32 +123,123 @@
                 "tracking"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000205,
+            "sites": 3,
+            "prevalence": 0.0000419,
             "cnames": [],
             "responseHashes": [
-                "cc283801a7ccb1ab03daf7095d0c98b5fe7e186e29c7750d9de4c52e6cd84aa1"
+                "cc283801a7ccb1ab03daf7095d0c98b5fe7e186e29c7750d9de4c52e6cd84aa1",
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
             ],
             "type": "Ping",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "h2r-equipements.com",
-                "www.h2r-equipements.com"
+                "www.h2r-equipements.com",
+                "www.plantes-et-nature.fr"
+            ]
+        },
+        {
+            "rule": "myspectro\\.io\\/api\\/configurator\\/__test_conn",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "apigateway"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000279,
+            "cnames": [],
+            "responseHashes": [
+                "bb14e2f0d7d5be23c46574ca988736db77cb74ab2c9c5e867be7da26c3095374"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "h2r-equipements.com",
+                "www.plantes-et-nature.fr"
+            ]
+        },
+        {
+            "rule": "myspectro\\.io\\/listener\\.js",
+            "cookies": 0.000014,
+            "fingerprinting": 3,
+            "subdomains": [
+                "listener"
+            ],
+            "apis": {
+                "Navigator.prototype.product": 1,
+                "Navigator.prototype.userAgent": 1,
+                "window.localStorage": 1,
+                "Notification.permission": 1,
+                "Navigator.prototype.plugins": 1,
+                "Navigator.prototype.vendor": 1,
+                "window.devicePixelRatio": 1,
+                "OfflineAudioContext.prototype.constructor": 1,
+                "Screen.prototype.availTop": 1,
+                "Screen.prototype.width": 1,
+                "Screen.prototype.availWidth": 1,
+                "Screen.prototype.availLeft": 1,
+                "Screen.prototype.height": 1,
+                "Screen.prototype.availHeight": 1,
+                "Navigator.prototype.language": 1,
+                "Navigator.prototype.languages": 1,
+                "Screen.prototype.colorDepth": 1,
+                "Navigator.prototype.deviceMemory": 1,
+                "Navigator.prototype.hardwareConcurrency": 1,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 1,
+                "AudioBuffer.prototype.getChannelData": 1,
+                "window.sessionStorage": 1,
+                "window.indexedDB": 1,
+                "Navigator.prototype.platform": 1,
+                "CanvasRenderingContext2D.prototype.isPointInPath": 1,
+                "HTMLCanvasElement.prototype.toDataURL": 1,
+                "Navigator.prototype.maxTouchPoints": 1,
+                "Document.cookie setter": 1,
+                "Document.cookie getter": 1,
+                "WebGLRenderingContext.prototype.getExtension": 1,
+                "WebGLRenderingContext.prototype.getParameter": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000279,
+            "cnames": [],
+            "responseHashes": [
+                "cb881d4df8d387d838205bce6c4c659db8ad445d4affa4152294fbb883abd26e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "cookietest": {
+                    "ttl": -1749058524,
+                    "length": 1,
+                    "prevalence": 0.000013962580284836637,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "h2r-equipements.com",
+                "www.plantes-et-nature.fr"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000102,
+    "cookies": 0.0000279,
     "topInitiators": [
         {
             "domain": "googletagmanager.com",
-            "prevalence": 1
+            "prevalence": 0.5
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.5
         }
     ],
     "types": {
-        "Ping": 2
+        "Script": 6,
+        "Ping": 3,
+        "Fetch": 2
     },
     "nameservers": [
         "ns-20-a.gandi.net",

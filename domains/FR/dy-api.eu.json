@@ -4,10 +4,11 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000205,
-    "sites": 2,
+    "prevalence": 0.000112,
+    "sites": 8,
     "subdomains": [
-        "direct"
+        "direct",
+        "direct-collect"
     ],
     "cnames": [],
     "fingerprinting": 0,
@@ -20,16 +21,20 @@
                 "direct"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000205,
+            "sites": 6,
+            "prevalence": 0.0000838,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
+                "jysk.de",
                 "jysk.fr",
-                "www.adameteve.fr"
+                "www.adameteve.fr",
+                "www.dm.de",
+                "www.easytoys.nl",
+                "www.sklum.com"
             ]
         },
         {
@@ -40,18 +45,88 @@
                 "direct"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000205,
+            "sites": 3,
+            "prevalence": 0.0000419,
             "cnames": [],
             "responseHashes": [
-                "f26e941d45d39a5acde8d4fdb521128d47cdd1a1b786afb1553ba133f020abf4"
+                "b641824e5d73510701573e7dc7e95d4704dfa119bdeb0e1422bc80a72a7f92ba",
+                "68b2ac4ae6b417178305fa23db9c625891c9f5eac9fa3155f6ef8c668a3d8dce"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jysk.de",
+                "jysk.fr",
+                "www.sklum.com"
+            ]
+        },
+        {
+            "rule": "dy-api\\.eu\\/v2\\/serve\\/user\\/choose",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "direct"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000559,
+            "cnames": [],
+            "responseHashes": [
+                "b739f8a221ab781f48d1d1fd24d6f561b2248fa0455c5633a39bf3c645ad0eb9",
+                "37fbe6c13df6ff802d52ac0f3fa3d3bc920046cda75dc52e2752aa9845788696",
+                "dd8374e6575472d6f7885494094fbe918a42d698eaf840883fadfb00e70589bd"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "adameteve.fr",
-                "www.adameteve.fr"
+                "www.adameteve.fr",
+                "www.dm.de",
+                "www.easytoys.nl"
+            ]
+        },
+        {
+            "rule": "dy-api\\.eu\\/v2\\/collect\\/user\\/event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "direct-collect"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000279,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "eppendorf.com",
+                "www.home24.fr"
+            ]
+        },
+        {
+            "rule": "dy-api\\.eu\\/v2\\/collect\\/user\\/event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "direct-collect"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000279,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "home24.fr",
+                "www.home24.fr"
             ]
         }
     ],
@@ -61,17 +136,26 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.8125
+        },
+        {
+            "domain": "eqomcdn.com",
+            "prevalence": 0.125
+        },
+        {
+            "domain": "dynamicyield.com",
+            "prevalence": 0.0625
         }
     ],
     "types": {
-        "Preflight": 2,
-        "XHR": 2
+        "Preflight": 8,
+        "Fetch": 3,
+        "XHR": 6
     },
     "nameservers": [
         "ns-204.awsdns-25.com",
-        "ns-926.awsdns-51.net",
         "ns-1819.awsdns-35.co.uk",
-        "ns-1242.awsdns-27.org"
+        "ns-1242.awsdns-27.org",
+        "ns-926.awsdns-51.net"
     ]
 }

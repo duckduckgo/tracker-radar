@@ -7,32 +7,49 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000209,
-    "sites": 2,
+    "prevalence": 0.000072,
+    "sites": 5,
     "subdomains": [
-        "usaux11"
+        "uschat4",
+        "usaux11",
+        "usweb4",
+        "usapi1",
+        "uschat3"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
         {
             "rule": "contivio\\.com\\/Chat2\\/ContivioChatPlugin\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
+            "cookies": 0.0000144,
+            "fingerprinting": 1,
             "subdomains": [
+                "uschat4",
                 "usaux11"
             ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000209,
+            "apis": {
+                "Document.cookie getter": 1,
+                "Date.prototype.getTime": 1,
+                "Document.cookie setter": 1
+            },
+            "sites": 3,
+            "prevalence": 0.0000432,
             "cnames": [],
             "responseHashes": [
                 "75c6eaf35fb6c17c39fe9930f630ebcafe6598e210534ecb4bbdb8143d9e001e"
             ],
             "type": "Script",
-            "firstPartyCookies": {},
+            "firstPartyCookies": {
+                "S398": {
+                    "ttl": 17,
+                    "length": 15,
+                    "prevalence": 0.000014406108189872506,
+                    "uniqueness": 1
+                }
+            },
             "firstPartyCookiesSent": {},
             "exampleSites": [
+                "babco.ca",
                 "wearpact.com",
                 "www.tourismpei.com"
             ]
@@ -42,13 +59,19 @@
             "cookies": 0,
             "fingerprinting": 1,
             "subdomains": [
+                "uschat4",
                 "usaux11"
             ],
             "apis": {
+                "Navigator.prototype.userAgent": 1,
+                "Notification.permission": 1,
+                "Navigator.prototype.plugins": 1,
+                "window.localStorage": 1,
+                "window.sessionStorage": 1,
                 "Date.prototype.getTime": 1
             },
-            "sites": 2,
-            "prevalence": 0.000209,
+            "sites": 3,
+            "prevalence": 0.0000432,
             "cnames": [],
             "responseHashes": [
                 "875b8fde9645150e250141f343685e5dd23eb9043f52c2454eb99f7a18058616"
@@ -57,14 +80,83 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
+                "babco.ca",
                 "wearpact.com",
                 "www.tourismpei.com"
+            ]
+        },
+        {
+            "rule": "contivio\\.com\\/SMS2\\/Public\\/SLM\\/SLMWeb\\/AgentStats\\.asp",
+            "cookies": 0.0000432,
+            "fingerprinting": 0,
+            "subdomains": [
+                "usweb4",
+                "usapi1"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000432,
+            "cnames": [],
+            "responseHashes": [
+                "634f5062efd068780ad0ecd56baa3010b6759ecc395fa583be502f10dad95d1f"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "babco.ca",
+                "wearpact.com",
+                "www.tourismpei.com"
+            ]
+        },
+        {
+            "rule": "contivio\\.com\\/Chat2\\/audio\\/file-sounds-1150-pristine\\.mp3",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "uschat4",
+                "usaux11"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000288,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Media",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "babco.ca",
+                "wearpact.com"
+            ]
+        },
+        {
+            "rule": "contivio\\.com\\/chat2\\/ContivioChatPlugin\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "uschat3",
+                "uschat4"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000288,
+            "cnames": [],
+            "responseHashes": [
+                "eb3367add69b5df5aa5b8b5ddf4c8dd4bf7690bb806d21cc79dd1f4127122af7"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bbwheelsonline.com",
+                "www.springfreetrampoline.ca"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.0000432,
     "topInitiators": [
         {
             "domain": "first party",
@@ -72,7 +164,9 @@
         }
     ],
     "types": {
-        "Script": 4
+        "Script": 8,
+        "XHR": 3,
+        "Media": 2
     },
     "nameservers": [
         "ashley.ns.cloudflare.com",

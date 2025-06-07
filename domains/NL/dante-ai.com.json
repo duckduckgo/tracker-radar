@@ -4,24 +4,27 @@
     "source": [
         "DuckDuckGo-NL"
     ],
-    "prevalence": 0.000102,
-    "sites": 1,
+    "prevalence": 0.0000561,
+    "sites": 4,
     "subdomains": [
-        "chat"
+        "chat",
+        "api-v1"
     ],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "dante-ai\\.com\\/bubble-embed\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "chat"
             ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000204,
+            "apis": {
+                "window.innerWidth": 1
+            },
+            "sites": 4,
+            "prevalence": 0.0000561,
             "cnames": [],
             "responseHashes": [
                 "24d20316162115105f8900ac37175969ae1b59b7f0ec1d3709062fe26e4b3012"
@@ -30,27 +33,35 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "thesilvermountain.nl",
+                "fietsenoptexel.nl",
+                "nonons.nl",
+                "www.inkoopedelmetaal.nl",
                 "www.thesilvermountain.nl"
             ]
         },
         {
-            "rule": "dante-ai\\.com\\/embed\\/tooltips\\/",
+            "rule": "dante-ai\\.com\\/knowledge-bases\\/customization\\/shared",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "chat"
+                "api-v1"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000204,
+            "sites": 4,
+            "prevalence": 0.0000561,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Document",
+            "responseHashes": [
+                "ff19392b28f73c8198cd700e4e48084524128ac6680c092d4ca53912bb801352",
+                "60c94bf1ad570703ebc3106cc52cecabad2cedcfef03070de7f3114bfd569561",
+                "71b8b067b279efa01f6198e159987b12fd85d94027573dbc0f932b1dafb1082a"
+            ],
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "thesilvermountain.nl",
+                "fietsenoptexel.nl",
+                "nonons.nl",
+                "www.inkoopedelmetaal.nl",
                 "www.thesilvermountain.nl"
             ]
         },
@@ -58,19 +69,38 @@
             "rule": "dante-ai\\.com\\/thirdparty\\.html",
             "cookies": 0,
             "fingerprinting": 0,
-            "subdomains": [
-                "chat"
-            ],
+            "subdomains": [],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000204,
+            "sites": 4,
+            "prevalence": 0.0000561,
             "cnames": [],
             "responseHashes": [],
             "type": "Document",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "thesilvermountain.nl",
+                "fietsenoptexel.nl",
+                "nonons.nl",
+                "www.inkoopedelmetaal.nl",
+                "www.thesilvermountain.nl"
+            ]
+        },
+        {
+            "rule": "dante-ai\\.com\\/embed\\/tooltips\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000042,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nonons.nl",
+                "www.inkoopedelmetaal.nl",
                 "www.thesilvermountain.nl"
             ]
         }
@@ -81,12 +111,17 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.75
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.25
         }
     ],
     "types": {
-        "Script": 2,
-        "Document": 4
+        "Script": 4,
+        "Fetch": 4,
+        "Document": 7
     },
     "nameservers": [
         "grace.ns.cloudflare.com",

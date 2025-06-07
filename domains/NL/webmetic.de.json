@@ -4,8 +4,8 @@
     "source": [
         "DuckDuckGo-NL"
     ],
-    "prevalence": 0.000102,
-    "sites": 1,
+    "prevalence": 0.000028,
+    "sites": 2,
     "subdomains": [
         "t"
     ],
@@ -13,22 +13,37 @@
     "fingerprinting": 2,
     "resources": [
         {
-            "rule": "webmetic\\.de\\/tr",
+            "rule": "webmetic\\.de\\/iav\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 2,
             "subdomains": [
                 "t"
             ],
-            "apis": {},
+            "apis": {
+                "Document.cookie getter": 1,
+                "Navigator.prototype.language": 1,
+                "Screen.prototype.colorDepth": 1,
+                "Screen.prototype.width": 1,
+                "Screen.prototype.height": 1,
+                "Navigator.prototype.userAgent": 1,
+                "window.innerWidth": 1,
+                "window.innerHeight": 1,
+                "Navigator.prototype.cookieEnabled": 1,
+                "Navigator.prototype.connection": 1,
+                "Navigator.prototype.platform": 1,
+                "Navigator.prototype.plugins": 1
+            },
             "sites": 2,
-            "prevalence": 0.000204,
+            "prevalence": 0.000028,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "fa68bb0d1bbf3729e85e7ed758218e993d636679509e6b21fb695dbb775a54e2"
+            ],
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "condor.com",
+                "transportlogistic.de",
                 "www.condor.com"
             ]
         },
@@ -41,14 +56,36 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000204,
+            "prevalence": 0.000028,
             "cnames": [],
             "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "transportlogistic.de",
+                "www.condor.com"
+            ]
+        },
+        {
+            "rule": "webmetic\\.de\\/tr",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "t"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000028,
+            "cnames": [],
+            "responseHashes": [
+                "632824a5ffa7bc9e1d0786d676b4899ca7825910649719b9da039100552991f4"
+            ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "condor.com",
+                "transportlogistic.de",
                 "www.condor.com"
             ]
         }
@@ -59,16 +96,21 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.75
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.25
         }
     ],
     "types": {
+        "Script": 2,
         "Preflight": 2,
         "Fetch": 2
     },
     "nameservers": [
+        "hydrogen.ns.hetzner.com",
         "helium.ns.hetzner.de",
-        "oxygen.ns.hetzner.com",
-        "hydrogen.ns.hetzner.com"
+        "oxygen.ns.hetzner.com"
     ]
 }

@@ -4,11 +4,12 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000102,
-    "sites": 1,
+    "prevalence": 0.000056,
+    "sites": 4,
     "subdomains": [
         "publisher",
-        "ads"
+        "ads",
+        "api"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -23,20 +24,78 @@
             ],
             "apis": {
                 "Navigator.prototype.userAgent": 1,
-                "window.localStorage": 1
+                "window.localStorage": 1,
+                "Document.cookie getter": 1
             },
-            "sites": 2,
-            "prevalence": 0.000205,
+            "sites": 5,
+            "prevalence": 0.0000699,
             "cnames": [],
             "responseHashes": [
-                "db61cdaeed5f8173ccce2fcc9b1d1f22a22c01a71ada454d4f443e5234c528f0"
+                "313556a1f013473a34033887b21dd8f4bd3b46bb86d79b67a596f42224b02cb7",
+                "855f4aa34f67d0fb1e8e2e10d714d5da95e5efccbdc4867209bd917b50436e62",
+                "eda07968aa578e6c81ffbc7287f350f6895d9270feaa4b30f802142e9671d3ed",
+                "7faa9b593a3c70e6b364a98319a7247227a8abb8179e6f143404563260384b33"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "csfd.cz",
-                "www.csfd.cz"
+                "centrum.cz",
+                "svatky.centrum.cz",
+                "www.csfd.sk",
+                "www.modrykonik.sk",
+                "www.realitatea.net"
+            ]
+        },
+        {
+            "rule": "caroda\\.io\\/targetingProfile\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000042,
+            "cnames": [],
+            "responseHashes": [
+                "2e7d8498b1af275477d81bf039bd789fc207337127834fb9664fe6a212fce7ab"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "centrum.cz",
+                "www.csfd.sk",
+                "www.realitatea.net"
+            ]
+        },
+        {
+            "rule": "caroda\\.io\\/videoPlayer\\/v\\/0499cbacb0a7688f60101c1dda848ca16361726f64612d323032352d30362d30355430373a33383a31322e3933385a\\/s\\/2\\/static\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "ads"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.indexedDB": 2,
+                "window.localStorage": 2,
+                "Navigator.prototype.webdriver": 2,
+                "Navigator.prototype.languages": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000028,
+            "cnames": [],
+            "responseHashes": [
+                "05f0b872e9141db446341ec904ec3e298bbb21babf274750cf9781baa58a663e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "csfd.sk",
+                "www.realitatea.net"
             ]
         }
     ],
@@ -46,11 +105,16 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.75
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.25
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 7,
+        "Fetch": 3
     },
     "nameservers": [
         "ns-1542.awsdns-00.co.uk",

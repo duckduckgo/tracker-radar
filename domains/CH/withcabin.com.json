@@ -4,14 +4,46 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.000103,
-    "sites": 1,
+    "prevalence": 0.000084,
+    "sites": 6,
     "subdomains": [
+        "scripts",
         "ping"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "withcabin\\.com\\/hello\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "scripts"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 5,
+                "PerformanceTiming.prototype.navigationStart": 5,
+                "Screen.prototype.width": 4,
+                "window.localStorage": 6
+            },
+            "sites": 6,
+            "prevalence": 0.000084,
+            "cnames": [],
+            "responseHashes": [
+                "3b9bb676257abf4067bf2d91890ad81fa4cd7f8fc38e30f9f038bda290f374cf"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "drizzle.team",
+                "thelausanneguide.com",
+                "www.eurobus.ch",
+                "www.lrb.co.uk",
+                "www.oit.va.gov",
+                "www.vsao-zh.ch"
+            ]
+        },
         {
             "rule": "withcabin\\.com\\/cache",
             "cookies": 0,
@@ -20,8 +52,8 @@
                 "ping"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000205,
+            "sites": 7,
+            "prevalence": 0.000098,
             "cnames": [],
             "responseHashes": [
                 "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
@@ -30,8 +62,39 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "eurobus.ch",
-                "www.eurobus.ch"
+                "drizzle.team",
+                "orm.drizzle.team",
+                "thelausanneguide.com",
+                "www.eurobus.ch",
+                "www.lrb.co.uk",
+                "www.oit.va.gov",
+                "www.vsao-zh.ch"
+            ]
+        },
+        {
+            "rule": "withcabin\\.com\\/hello",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ping"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000084,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "drizzle.team",
+                "thelausanneguide.com",
+                "www.eurobus.ch",
+                "www.lrb.co.uk",
+                "www.oit.va.gov",
+                "www.vsao-zh.ch"
             ]
         }
     ],
@@ -41,16 +104,25 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.75
+        },
+        {
+            "domain": "unpkg.com",
+            "prevalence": 0.125
+        },
+        {
+            "domain": "sentry-cdn.com",
+            "prevalence": 0.125
         }
     ],
     "types": {
-        "XHR": 2
+        "Script": 6,
+        "XHR": 13
     },
     "nameservers": [
-        "ns-1170.awsdns-18.org",
         "ns-3.awsdns-00.com",
-        "ns-1809.awsdns-34.co.uk",
-        "ns-681.awsdns-21.net"
+        "ns-681.awsdns-21.net",
+        "ns-1170.awsdns-18.org",
+        "ns-1809.awsdns-34.co.uk"
     ]
 }

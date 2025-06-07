@@ -4,14 +4,37 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000205,
-    "sites": 2,
+    "prevalence": 0.0000698,
+    "sites": 5,
     "subdomains": [
+        "engine",
         "tag"
     ],
     "cnames": [],
-    "fingerprinting": 2,
+    "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "bliink\\.io\\/prebid",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "engine"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000279,
+            "cnames": [],
+            "responseHashes": [
+                "f919aadef784e8e6ffdc7e98be9252c3b80c89df9d167b66b6e3332eb7553f81"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bfmtv.com",
+                "www.onzemondial.com"
+            ]
+        },
         {
             "rule": "bliink\\.io\\/sdk\\.min\\.js",
             "cookies": 0,
@@ -23,18 +46,19 @@
                 "Navigator.prototype.connection": 1,
                 "Navigator.prototype.userAgent": 1
             },
-            "sites": 2,
-            "prevalence": 0.000205,
+            "sites": 3,
+            "prevalence": 0.0000419,
             "cnames": [],
             "responseHashes": [
-                "db16c4e056408b798e14454a2bec121297f77c8ab1104234a638aca09f92ed65"
+                "01f55bcfa8961129187aa5f2f16ef43388390de84b231f1c459ffde0e67bdd22"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "wamiz.com",
-                "www.driverscloud.com"
+                "www.driverscloud.com",
+                "www.score.fr"
             ]
         },
         {
@@ -52,8 +76,8 @@
                 "Notification.permission": 2,
                 "Navigator.prototype.plugins": 2
             },
-            "sites": 2,
-            "prevalence": 0.000205,
+            "sites": 3,
+            "prevalence": 0.0000419,
             "cnames": [],
             "responseHashes": [
                 "a5eb664638f2d0e6724c4057bb87cf80e5c7253c4e6570f130e07d29aae2a385"
@@ -63,7 +87,30 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "wamiz.com",
-                "www.driverscloud.com"
+                "www.driverscloud.com",
+                "www.score.fr"
+            ]
+        },
+        {
+            "rule": "bliink\\.io\\/library\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tag"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000279,
+            "cnames": [],
+            "responseHashes": [
+                "fa8f0e3ee93df770cb8d8617183d3ca111fd2e3d891f37d7432f20b6439d28b9"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "driverscloud.com",
+                "www.score.fr"
             ]
         }
     ],
@@ -73,11 +120,24 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.5
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.3
+        },
+        {
+            "domain": "datadoghq-browser-agent.com",
+            "prevalence": 0.1
+        },
+        {
+            "domain": "ay.delivery",
+            "prevalence": 0.1
         }
     ],
     "types": {
-        "Script": 4
+        "Fetch": 2,
+        "Script": 8
     },
     "nameservers": [
         "dns200.anycast.me",

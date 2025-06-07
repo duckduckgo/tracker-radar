@@ -9,8 +9,8 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.000103,
-    "sites": 1,
+    "prevalence": 0.000028,
+    "sites": 2,
     "subdomains": [
         "h2"
     ],
@@ -18,10 +18,39 @@
         {
             "original": "gql.twitch.tv",
             "resolved": "h2.twitch.map.fastly.net"
+        },
+        {
+            "original": "k.twitchcdn.net",
+            "resolved": "twitch.map.fastly.net"
         }
     ],
-    "fingerprinting": 3,
+    "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "twitch\\.map\\.fastly\\.net\\/149e9513-01fa-4fb0-aad4-566afd725d1b\\/2d206a39-8ed7-437e-a3be-862e0f06eea3\\/p\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000028,
+            "cnames": [
+                {
+                    "original": "k.twitchcdn.net",
+                    "resolved": "twitch.map.fastly.net"
+                }
+            ],
+            "responseHashes": [
+                "a6158a5acd81bc09abb649ff8aa4898edfbe5287329b2e22ef59b4a90021f59e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "twitch.tv",
+                "www.twitch.tv"
+            ]
+        },
         {
             "rule": "twitch\\.map\\.fastly\\.net\\/gql",
             "cookies": 0,
@@ -31,7 +60,32 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000205,
+            "prevalence": 0.000028,
+            "cnames": [
+                {
+                    "original": "gql.twitch.tv",
+                    "resolved": "h2.twitch.map.fastly.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "twitch.tv",
+                "www.twitch.tv"
+            ]
+        },
+        {
+            "rule": "twitch\\.map\\.fastly\\.net\\/gql",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "h2"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000042,
             "cnames": [
                 {
                     "original": "gql.twitch.tv",
@@ -39,9 +93,63 @@
                 }
             ],
             "responseHashes": [
-                "76cc6f517a2e5873e28e5ec9fe5e5a76cc958aa9e3ceff32871b3ae0a5ee2dcf"
+                "8624ffedcd64b5590064e60457185f4dc4a20b2ea17f76c96cd098ab16261c18",
+                "f7da3a59d699c30643bc33b3bc0be85695a0ed957e6e23b155eeb438bef9d098"
             ],
             "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "twitch.tv",
+                "de.twitch.tv",
+                "www.twitch.tv"
+            ]
+        },
+        {
+            "rule": "twitch\\.map\\.fastly\\.net\\/149e9513-01fa-4fb0-aad4-566afd725d1b\\/2d206a39-8ed7-437e-a3be-862e0f06eea3\\/fp",
+            "cookies": 0.000028,
+            "fingerprinting": 0,
+            "subdomains": [
+                "h2"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000028,
+            "cnames": [
+                {
+                    "original": "gql.twitch.tv",
+                    "resolved": "h2.twitch.map.fastly.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "twitch.tv",
+                "www.twitch.tv"
+            ]
+        },
+        {
+            "rule": "twitch\\.map\\.fastly\\.net\\/149e9513-01fa-4fb0-aad4-566afd725d1b\\/2d206a39-8ed7-437e-a3be-862e0f06eea3\\/ips\\.js",
+            "cookies": 0.000028,
+            "fingerprinting": 1,
+            "subdomains": [
+                "h2"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000028,
+            "cnames": [
+                {
+                    "original": "gql.twitch.tv",
+                    "resolved": "h2.twitch.map.fastly.net"
+                }
+            ],
+            "responseHashes": [
+                "03169cbf733bae237c8f29f5ac938e13b1860d94d3b2b06be6ba782468e42dde"
+            ],
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -61,19 +169,22 @@
         "Session Replay"
     ],
     "performance": {},
-    "cookies": 0.000103,
+    "cookies": 0.000028,
     "topInitiators": [
         {
             "domain": "twitchcdn.net",
-            "prevalence": 0.9
+            "prevalence": 0.75
         },
         {
             "domain": "first party",
-            "prevalence": 0.1
+            "prevalence": 0.25
         }
     ],
     "types": {
-        "Fetch": 2
+        "Script": 4,
+        "Preflight": 2,
+        "Fetch": 3,
+        "Document": 2
     },
     "nameservers": []
 }

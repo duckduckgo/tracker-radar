@@ -9,15 +9,43 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000209,
-    "sites": 2,
+    "prevalence": 0.000144,
+    "sites": 10,
     "subdomains": [
+        "loader.us-east-1.prod.mrc-sunrise.marketing",
         "prod.log.shortbread",
-        "infra-api.us-east-1.prod.mrc-sunrise.marketing"
+        "chatbot-api.us-east-1.prod.mrc-sunrise.marketing",
+        "chat.us-east-1.prod.mrc-sunrise.marketing",
+        "infra-api.us-east-1.prod.mrc-sunrise.marketing",
+        "cdn.us-east-1.prod.moon.dubai"
     ],
     "cnames": [],
-    "fingerprinting": 2,
+    "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "aws\\.dev\\/loader\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "loader.us-east-1.prod.mrc-sunrise.marketing"
+            ],
+            "apis": {
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000288,
+            "cnames": [],
+            "responseHashes": [
+                "25f32f2d4e5bb67ce61cc9a0a28ac5b93cf4f586683abb60aea94dc2f808dbf6"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "calculator.aws",
+                "s3.amazonaws.com"
+            ]
+        },
         {
             "rule": "aws\\.dev\\/1x1\\.png",
             "cookies": 0,
@@ -26,8 +54,8 @@
                 "prod.log.shortbread"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000209,
+            "sites": 6,
+            "prevalence": 0.0000864,
             "cnames": [],
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -36,7 +64,65 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
+                "calculator.aws",
+                "community.aws",
+                "docs.amplify.aws",
                 "repost.aws",
+                "s3.amazonaws.com",
+                "www.freertos.org"
+            ]
+        },
+        {
+            "rule": "aws\\.dev\\/health-check",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "chatbot-api.us-east-1.prod.mrc-sunrise.marketing"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000288,
+            "cnames": [],
+            "responseHashes": [
+                "19cb4b43b7793d2c720204f0ec85bdd55daf6afa382ccb368996194d004f263c"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "calculator.aws",
+                "s3.amazonaws.com"
+            ]
+        },
+        {
+            "rule": "aws\\.dev\\/1\\.0\\.4980\\.0\\/chatbot\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "chat.us-east-1.prod.mrc-sunrise.marketing"
+            ],
+            "apis": {
+                "BroadcastChannel.prototype.constructor": 2,
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2,
+                "Navigator.prototype.product": 2,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 2,
+                "Date.prototype.getTimezoneOffset": 2,
+                "window.innerHeight": 2,
+                "window.sessionStorage": 2,
+                "Screen.prototype.width": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000288,
+            "cnames": [],
+            "responseHashes": [
+                "1a6a2ff1afd8098dee888e8eff4046c66621cfa4d8ce448eb5f8deace5cf2e9d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "calculator.aws",
                 "s3.amazonaws.com"
             ]
         },
@@ -49,13 +135,58 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000209,
+            "prevalence": 0.0000288,
+            "cnames": [],
+            "responseHashes": [
+                "d698761c8f2e941c07e721dc4a455ca55a046576b2b63eea536a44f8e57e5921"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "calculator.aws",
+                "s3.amazonaws.com"
+            ]
+        },
+        {
+            "rule": "aws\\.dev\\/assets\\/locales\\/en\\/chatui\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "chat.us-east-1.prod.mrc-sunrise.marketing"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000288,
+            "cnames": [],
+            "responseHashes": [
+                "6a0c1c07315e7a6e9ba507b625b7d591068f520214890802dfe59d6b29d38d63"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "calculator.aws",
+                "s3.amazonaws.com"
+            ]
+        },
+        {
+            "rule": "aws\\.dev\\/custom-metric",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "infra-api.us-east-1.prod.mrc-sunrise.marketing"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000288,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
+                "calculator.aws",
                 "s3.amazonaws.com"
             ]
         },
@@ -68,14 +199,133 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000209,
+            "prevalence": 0.0000288,
             "cnames": [],
             "responseHashes": [],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
+                "calculator.aws",
                 "s3.amazonaws.com"
+            ]
+        },
+        {
+            "rule": "aws\\.dev\\/assets\\/sounds\\/notification-sound\\.mp3",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "chat.us-east-1.prod.mrc-sunrise.marketing"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000288,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Media",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "calculator.aws",
+                "s3.amazonaws.com"
+            ]
+        },
+        {
+            "rule": "aws\\.dev\\/5BxYQVlPVti7\\/B97IdePSMNDH\\/1\\/KkBSiNEYho\\/scripts\\/cart\\.bundle\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "cdn.us-east-1.prod.moon.dubai"
+            ],
+            "apis": {
+                "Document.cookie getter": 1,
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 2,
+                "window.innerWidth": 2
+            },
+            "sites": 3,
+            "prevalence": 0.0000432,
+            "cnames": [],
+            "responseHashes": [
+                "7f8f92af5839c7caf733eb03af41e125156cfa07c0e56b528b5640ad2be3f0e9"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "chipolo.net",
+                "satechi.net",
+                "www.biogaia.com"
+            ]
+        },
+        {
+            "rule": "aws\\.dev\\/AoQtxP83g5K6\\/jjT7qv4oGvoy\\/1\\/amazon-ember\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn.us-east-1.prod.moon.dubai"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000432,
+            "cnames": [],
+            "responseHashes": [
+                "42f3cd8391de2bb85d965aacd3d89b40baa028ab99c469ee2550a900c3af886e"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "chipolo.net",
+                "satechi.net",
+                "www.biogaia.com"
+            ]
+        },
+        {
+            "rule": "aws\\.dev\\/AoQtxP83g5K6\\/jjT7qv4oGvoy\\/1\\/amazon-ember\\/amazon-ember-bold\\.woff2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn.us-east-1.prod.moon.dubai"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000432,
+            "cnames": [],
+            "responseHashes": [
+                "57a02eab83fbd7eb3fbb964139a7fe4e1404ddaf99298066e04e61ed833de5a0"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "chipolo.net",
+                "satechi.net",
+                "www.biogaia.com"
+            ]
+        },
+        {
+            "rule": "aws\\.dev\\/AoQtxP83g5K6\\/jjT7qv4oGvoy\\/1\\/amazon-ember\\/amazon-ember-regular\\.woff2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn.us-east-1.prod.moon.dubai"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000432,
+            "cnames": [],
+            "responseHashes": [
+                "f3246884c4d5d2af3f0ac25e5fb31edef60d4ba58ce98cefbeb876a53f0e5adc"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "chipolo.net",
+                "satechi.net",
+                "www.biogaia.com"
             ]
         }
     ],
@@ -85,25 +335,34 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.5454545454545454
+            "prevalence": 0.8129032258064516
         },
         {
             "domain": "awsstatic.com",
-            "prevalence": 0.36363636363636365
+            "prevalence": 0.13548387096774195
         },
         {
             "domain": "amazon.com",
-            "prevalence": 0.09090909090909091
+            "prevalence": 0.03870967741935484
+        },
+        {
+            "domain": "osano.com",
+            "prevalence": 0.012903225806451613
         }
     ],
     "types": {
-        "XHR": 4,
-        "Preflight": 2
+        "Script": 7,
+        "XHR": 8,
+        "Fetch": 6,
+        "Preflight": 2,
+        "Media": 2,
+        "Stylesheet": 3,
+        "Font": 6
     },
     "nameservers": [
-        "ns-1918.awsdns-47.co.uk",
-        "ns-964.awsdns-56.net",
         "ns-1108.awsdns-10.org",
-        "ns-399.awsdns-49.com"
+        "ns-1918.awsdns-47.co.uk",
+        "ns-399.awsdns-49.com",
+        "ns-964.awsdns-56.net"
     ]
 }

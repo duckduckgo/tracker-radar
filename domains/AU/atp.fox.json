@@ -4,10 +4,11 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.000212,
-    "sites": 2,
+    "prevalence": 0.0000567,
+    "sites": 4,
     "subdomains": [
-        "prod.pyxis"
+        "prod.pyxis",
+        "prod.fennec"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -20,8 +21,8 @@
                 "prod.pyxis"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000212,
+            "sites": 4,
+            "prevalence": 0.0000567,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
@@ -29,60 +30,160 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "foxnews.com",
+                "www.foxweather.com",
+                "www.outkick.com",
                 "www.tmz.com"
             ]
         },
         {
             "rule": "atp\\.fox\\/pyxis\\/submit",
-            "cookies": 0.000318,
+            "cookies": 0.0000567,
             "fingerprinting": 0,
             "subdomains": [
                 "prod.pyxis"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000318,
+            "sites": 4,
+            "prevalence": 0.0000567,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "9b0c91e9e684369087b3504a38f70b61b97d60c9ba9cadf8b2e6546a66ae2fa6",
+                "1591b74fe6d130e57fe0bc371df128d885a30550c8a41085c8fde86d9981c2b2",
+                "1402dce4d724e6528e3fc2d132a2ea9a2e14f275ab59c62708f181110f84d440"
+            ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "foxnews.com",
-                "www.foxnews.com",
+                "www.foxweather.com",
+                "www.outkick.com",
                 "www.tmz.com"
+            ]
+        },
+        {
+            "rule": "atp\\.fox\\/js\\/fennec\\.js",
+            "cookies": 0.0000142,
+            "fingerprinting": 2,
+            "subdomains": [
+                "prod.fennec"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "window.localStorage": 1,
+                "Document.cookie setter": 1,
+                "Navigator.prototype.userAgent": 1,
+                "window.outerWidth": 1,
+                "window.outerHeight": 1,
+                "window.innerHeight": 1,
+                "window.innerWidth": 1
+            },
+            "sites": 3,
+            "prevalence": 0.0000425,
+            "cnames": [],
+            "responseHashes": [
+                "3ff3c5a4680bea779a88a819574d6efd5320ae14f7e3c1ffa8368db4eaeedf62"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "xid": {
+                    "ttl": null,
+                    "length": 36,
+                    "prevalence": 0.000014173741726078267,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "foxnews.com",
+                "www.foxweather.com",
+                "www.outkick.com"
+            ]
+        },
+        {
+            "rule": "atp\\.fox\\/config\\/v2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prod.fennec"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000283,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "foxweather.com",
+                "www.outkick.com"
+            ]
+        },
+        {
+            "rule": "atp\\.fox\\/config\\/v2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prod.fennec"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000283,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "foxweather.com",
+                "www.outkick.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000212,
+    "cookies": 0.0000567,
     "topInitiators": [
         {
+            "domain": "foxnews.com",
+            "prevalence": 0.3
+        },
+        {
             "domain": "first party",
-            "prevalence": 0.6
+            "prevalence": 0.2
+        },
+        {
+            "domain": "datadoghq-browser-agent.com",
+            "prevalence": 0.2
         },
         {
             "domain": "webcontentassessor.global.ssl.fastly.net",
-            "prevalence": 0.2
+            "prevalence": 0.1
+        },
+        {
+            "domain": "webcontentassessor.com",
+            "prevalence": 0.1
         },
         {
             "domain": "kts.fox",
-            "prevalence": 0.2
+            "prevalence": 0.1
         }
     ],
     "types": {
-        "Preflight": 2,
-        "Fetch": 3
+        "Preflight": 6,
+        "Fetch": 4,
+        "Script": 3,
+        "XHR": 2
     },
     "nameservers": [
+        "ns03.dns.fox",
+        "ns01.foxdoua.com",
+        "ns04.foxdoua.com",
+        "ns04.dns.fox",
         "ns01.dns.fox",
         "ns02.dns.fox",
-        "ns03.dns.fox",
-        "ns04.dns.fox",
-        "ns01.foxdoua.com",
-        "ns02.foxdoua.com",
         "ns03.foxdoua.com",
-        "ns04.foxdoua.com"
+        "ns02.foxdoua.com"
     ]
 }

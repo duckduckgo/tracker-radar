@@ -7,10 +7,12 @@
     "source": [
         "DuckDuckGo-DE"
     ],
-    "prevalence": 0.00173,
-    "sites": 17,
+    "prevalence": 0.000432,
+    "sites": 31,
     "subdomains": [
-        "a"
+        "a",
+        "rtt",
+        "mds"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -23,36 +25,124 @@
                 "a"
             ],
             "apis": {
-                "window.localStorage": 16,
-                "Document.cookie getter": 1
+                "window.localStorage": 17,
+                "window.sessionStorage": 3,
+                "Document.cookie getter": 4,
+                "Navigator.prototype.userAgent": 3,
+                "Navigator.prototype.language": 3
             },
-            "sites": 17,
-            "prevalence": 0.00173,
+            "sites": 27,
+            "prevalence": 0.000377,
             "cnames": [],
             "responseHashes": [
-                "21b7c1b80819038847d985df14d9fec7bc98ce47c4ef4bc577e33897e21e05d5"
+                "b43172e26f32a2c0ae9762b019a569e25f8e031c14e5011e30d6643071959e11"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "chip.de",
-                "gutscheine.chip.de",
-                "gutscheine.focus.de",
-                "praxistipps.focus.de",
                 "praxistipps.chip.de",
-                "ratgeber.bunte.de",
-                "www.bunte.de",
                 "www.chip.de",
-                "www.elle.de",
-                "www.esquire.de",
-                "www.finanzen100.de",
-                "www.freundin.de",
-                "www.harpersbazaar.de",
                 "www.instyle.de",
+                "www.bunte.de",
                 "www.netmoms.de",
+                "www.tour-magazin.de",
+                "www.bike-magazin.de",
+                "gutscheine.focus.de",
+                "www.surf-magazin.de",
+                "www.harpersbazaar.de",
+                "www.esquire.de",
+                "www.boote-magazin.de",
+                "praxistipps.focus.de",
+                "gutscheine.chip.de",
+                "my.onvista.de",
+                "krankenkassen.focus.de",
+                "www.einfachbacken.de",
+                "www.tvtoday.de",
+                "www.gute-fahrt.de"
+            ]
+        },
+        {
+            "rule": "bf-tools\\.net\\/ctx",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rtt"
+            ],
+            "apis": {},
+            "sites": 11,
+            "prevalence": 0.000153,
+            "cnames": [],
+            "responseHashes": [
+                "eeeda45ebc4e96381e11372ecfc963413b49cd7ad4fa7af4cce440d0cc4f998f",
+                "84a74d4e28fc1cf99056eff7ba4a3354c648ef2eebd50c82f6adfe4f31ba49eb",
+                "9a45370f9cf7dcced2e12e665bb513fe4cd90cf0749cedcb73b6b5b13ce4ad4e",
+                "4f5c1d94357b0571cc23393025290df80133fb597bff83b8536562185b6d5090"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "chip.de",
+                "praxistipps.focus.de",
+                "www.bike-magazin.de",
+                "www.boote-magazin.de",
+                "www.finanzen100.de",
+                "www.gute-fahrt.de",
+                "www.surf-magazin.de",
+                "www.tour-magazin.de",
                 "www.tvspielfilm.de",
-                "www.tvtoday.de"
+                "www.tvtoday.de",
+                "www.yacht.de"
+            ]
+        },
+        {
+            "rule": "bf-tools\\.net\\/api\\/v1\\/getMetadata",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "mds"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000558,
+            "cnames": [],
+            "responseHashes": [
+                "1e2daa01579d4bd1eb47d41b59c52fbffa5009ef947e86c6ed5532e3bc77f1a3",
+                "e80a623eb5dbe2d5d2ace1243736e39b9347bd0bffe18bc1eee4aed369ea6108",
+                "4e150e8d73759601f863b3e5f0ef166b766b3da1e7fccac25ab408952ff51ff3"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "focus-tierarzt.de",
+                "focus-mobility.de",
+                "www.guter-rat.de",
+                "www.superillu.de"
+            ]
+        },
+        {
+            "rule": "bf-tools\\.net\\/api\\/v1\\/getMetadata",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "mds"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000279,
+            "cnames": [],
+            "responseHashes": [
+                "ef7610c044bfd07cd2eeadc06a3a4b08d3d0b3666ce96958aa1836d2fc5442b1"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "einfachbacken.de",
+                "www.finanzen100.de"
             ]
         }
     ],
@@ -62,11 +152,17 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.875
+        },
+        {
+            "domain": "bfops.io",
+            "prevalence": 0.125
         }
     ],
     "types": {
-        "Script": 17
+        "Script": 27,
+        "Fetch": 13,
+        "XHR": 4
     },
     "nameservers": [
         "a7-64.akam.net",

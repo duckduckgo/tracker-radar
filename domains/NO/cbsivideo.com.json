@@ -4,13 +4,14 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000205,
-    "sites": 2,
+    "prevalence": 0.000042,
+    "sites": 3,
     "subdomains": [
         "doppler-config",
-        "poolcabe1d37.airspace-f",
+        "doppler-beacon",
         "poolcabe1d37.airspace-q",
-        "doppler-beacon"
+        "poolcabe1d37.airspace-g",
+        "poolcabe1d37.airspace-f"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -25,39 +26,89 @@
             "apis": {
                 "Navigator.prototype.userAgent": 1
             },
-            "sites": 2,
-            "prevalence": 0.000205,
+            "sites": 3,
+            "prevalence": 0.000042,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "84e879a720600ee162f064c9efab4b25a4734fdafe7a6dec54327145a9a5f559"
+            ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "cc.com",
-                "www.cbssports.com"
+                "cbs.com",
+                "www.paramountpluswithshowtime.com",
+                "www.southpark.de"
             ]
         },
         {
-            "rule": "cbsivideo\\.com\\/measurements\\/1536197413045-1555KB\\.ts",
+            "rule": "cbsivideo\\.com\\/doppler\\.30fa4c68\\.min\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "poolcabe1d37.airspace-f",
-                "poolcabe1d37.airspace-q"
+                "doppler-config"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000205,
+            "sites": 3,
+            "prevalence": 0.000042,
             "cnames": [],
             "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                "84e879a720600ee162f064c9efab4b25a4734fdafe7a6dec54327145a9a5f559"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cbs.com",
+                "www.paramountpluswithshowtime.com",
+                "www.southpark.de"
+            ]
+        },
+        {
+            "rule": "cbsivideo\\.com\\/v3\\/config",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "doppler-config"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000042,
+            "cnames": [],
+            "responseHashes": [
+                "5c65c5bd2e18c5e13a3115c7cbcef580c392e4c22a5bd0d4b0d709a6d1f42655",
+                "fe001811b55acb4982ad1a91a378c2e10e6471a17d306be55c6e545f6441ffbc"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "cc.com",
-                "southpark.cc.com"
+                "cbs.com",
+                "www.paramountpluswithshowtime.com",
+                "www.southpark.de"
+            ]
+        },
+        {
+            "rule": "cbsivideo\\.com\\/log",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "doppler-beacon"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000042,
+            "cnames": [],
+            "responseHashes": [
+                "28429de45a1f5f5ef30c6abe0afc3f120e885f0d1bb361466971c1833150cdb9"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "paramountpluswithshowtime.com",
+                "www.paramountpluswithshowtime.com",
+                "www.southpark.de"
             ]
         },
         {
@@ -69,17 +120,40 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000205,
+            "prevalence": 0.000028,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "paramountpluswithshowtime.com",
+                "www.southpark.de"
+            ]
+        },
+        {
+            "rule": "cbsivideo\\.com\\/measurements\\/1536197413045-1555KB\\.ts",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "poolcabe1d37.airspace-q",
+                "poolcabe1d37.airspace-g",
+                "poolcabe1d37.airspace-f"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000042,
             "cnames": [],
             "responseHashes": [
-                "28429de45a1f5f5ef30c6abe0afc3f120e885f0d1bb361466971c1833150cdb9"
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "cc.com",
-                "southpark.cc.com"
+                "paramountpluswithshowtime.com",
+                "www.paramountpluswithshowtime.com",
+                "www.southpark.de"
             ]
         }
     ],
@@ -89,21 +163,26 @@
     "topInitiators": [
         {
             "domain": "southparkstudios.nu",
-            "prevalence": 0.95
+            "prevalence": 0.5263157894736842
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.42105263157894735
         },
         {
             "domain": "tiqcdn.com",
-            "prevalence": 0.05
+            "prevalence": 0.05263157894736842
         }
     ],
     "types": {
-        "Script": 2,
-        "Fetch": 4
+        "Script": 6,
+        "Fetch": 9,
+        "Preflight": 2
     },
     "nameservers": [
-        "ns-1327.awsdns-37.org",
         "ns-1546.awsdns-01.co.uk",
-        "ns-399.awsdns-49.com",
-        "ns-883.awsdns-46.net"
+        "ns-883.awsdns-46.net",
+        "ns-1327.awsdns-37.org",
+        "ns-399.awsdns-49.com"
     ]
 }

@@ -4,14 +4,16 @@
     "source": [
         "DuckDuckGo-DE"
     ],
-    "prevalence": 0.000102,
-    "sites": 1,
+    "prevalence": 0.000265,
+    "sites": 19,
     "subdomains": [
         "app-worker",
-        "visits"
+        "visits",
+        "loadbalancer",
+        "lb-api"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 3,
     "resources": [
         {
             "rule": "visitor-analytics\\.io\\/main\\.js",
@@ -21,11 +23,14 @@
                 "app-worker"
             ],
             "apis": {
-                "window.localStorage": 2,
-                "Document.cookie getter": 2
+                "window.localStorage": 10,
+                "Document.cookie getter": 7,
+                "window.sessionStorage": 2,
+                "Screen.prototype.width": 1,
+                "Screen.prototype.height": 1
             },
-            "sites": 2,
-            "prevalence": 0.000204,
+            "sites": 12,
+            "prevalence": 0.000167,
             "cnames": [],
             "responseHashes": [
                 "065319b371109e366139f24dcd80637ecefd87b26ad11407243390ec9ce36cdd"
@@ -34,8 +39,246 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "tum.de",
+                "bible.org",
+                "innonature.eu",
+                "typo3.com",
+                "www.fischer-immobilien-muenchen-hausverkauf.de",
+                "www.goeuropean.org",
+                "www.grow-outdoor.de",
+                "www.hosting.de",
+                "www.hss.de",
+                "www.musik-heckmann.de",
+                "www.smart-cityguide.de",
+                "www.tum.de",
+                "www.verlassenes.de"
+            ]
+        },
+        {
+            "rule": "visitor-analytics\\.io\\/750\\.js",
+            "cookies": 0,
+            "fingerprinting": 3,
+            "subdomains": [
+                "app-worker"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 1,
+                "Navigator.prototype.webdriver": 1,
+                "Navigator.prototype.language": 1,
+                "Screen.prototype.colorDepth": 1,
+                "Navigator.prototype.deviceMemory": 1,
+                "Navigator.prototype.hardwareConcurrency": 1,
+                "Screen.prototype.width": 1,
+                "Screen.prototype.height": 1,
+                "Screen.prototype.availWidth": 1,
+                "Screen.prototype.availHeight": 1,
+                "Date.prototype.getTimezoneOffset": 1,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 1,
+                "window.sessionStorage": 1,
+                "window.localStorage": 1,
+                "window.indexedDB": 1,
+                "Navigator.prototype.platform": 1,
+                "Navigator.prototype.appName": 1,
+                "Navigator.prototype.plugins": 1,
+                "CanvasRenderingContext2D.prototype.isPointInPath": 1,
+                "HTMLCanvasElement.prototype.toDataURL": 1,
+                "WebGLRenderingContext.prototype.getExtension": 1,
+                "WebGLRenderingContext.prototype.getSupportedExtensions": 1,
+                "WebGLRenderingContext.prototype.getParameter": 1,
+                "WebGLRenderingContext.prototype.getContextAttributes": 1,
+                "WebGLRenderingContext.prototype.getShaderPrecisionFormat": 1,
+                "Navigator.prototype.languages": 1,
+                "Navigator.prototype.maxTouchPoints": 1,
+                "Navigator.prototype.productSub": 1,
+                "OfflineAudioContext.prototype.constructor": 1,
+                "AudioBuffer.prototype.getChannelData": 1
+            },
+            "sites": 3,
+            "prevalence": 0.0000418,
+            "cnames": [],
+            "responseHashes": [
+                "e891336123deb5ef97a3527d9976f98782882b2a10bab887c0d851511a7c6372"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bible.org",
+                "innonature.eu",
+                "www.fischer-immobilien-muenchen-hausverkauf.de"
+            ]
+        },
+        {
+            "rule": "visitor-analytics\\.io\\/fingerprint\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "app-worker"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000418,
+            "cnames": [],
+            "responseHashes": [
+                "9c9685ff12bfeeaad0151d85c5270fa49e524ed68569bfce124bad9d04953f38"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bible.org",
+                "innonature.eu",
+                "www.fischer-immobilien-muenchen-hausverkauf.de"
+            ]
+        },
+        {
+            "rule": "visitor-analytics\\.io\\/standalone\\/worker-log",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "visits"
+            ],
+            "apis": {},
+            "sites": 11,
+            "prevalence": 0.000153,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bible.org",
+                "innonature.eu",
+                "typo3.com",
+                "www.goeuropean.org",
+                "www.grow-outdoor.de",
+                "www.hosting.de",
+                "www.hss.de",
+                "www.musik-heckmann.de",
+                "www.smart-cityguide.de",
+                "www.tum.de",
+                "www.verlassenes.de"
+            ]
+        },
+        {
+            "rule": "visitor-analytics\\.io\\/standalone\\/worker-log",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "visits"
+            ],
+            "apis": {},
+            "sites": 11,
+            "prevalence": 0.000153,
+            "cnames": [],
+            "responseHashes": [
+                "ad799dae74094e23577840c2600c9f6b753f2c79beaccfc4a7a1731cc2945d9c",
+                "282c06169c4b1b20a07a05d2dba73b861bf543d61c0881857764b332347acb3e",
+                "53fbc853a8b1e75138cdd48f4101a21789b2d62ddfa58cccf50a823be59df828",
+                "4164211f1892df5d19323deaddabc0d730de23aef7c70f3a7641483a8d0591a1",
+                "501f60aef12e58373bdbbebb2183341b343736a3e72679c609d4aaa512249538",
+                "52543b36a7437fb24fd2715967bd904d050a132d2943f6452b79395742887d72",
+                "b7084d5555eaa6f5882990425eb48dae8e6406551201ecc38427a8610a048c1b",
+                "1e9c542f20407e562b29615f13da1c9e374feb252e9705f8e22f156c4728c0cb",
+                "54cc4f7f6982affd3e7f53cced73091e93d10f7864a856418c831f15c451d9e5"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bible.org",
+                "innonature.eu",
+                "typo3.com",
+                "www.goeuropean.org",
+                "www.grow-outdoor.de",
+                "www.hosting.de",
+                "www.hss.de",
+                "www.musik-heckmann.de",
+                "www.smart-cityguide.de",
+                "www.tum.de",
+                "www.verlassenes.de"
+            ]
+        },
+        {
+            "rule": "visitor-analytics\\.io\\/ssr-worker\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "app-worker"
+            ],
+            "apis": {
+                "window.localStorage": 4,
+                "Navigator.prototype.userAgent": 4,
+                "window.innerWidth": 4,
+                "window.innerHeight": 4,
+                "Notification.permission": 1,
+                "Navigator.prototype.plugins": 1
+            },
+            "sites": 4,
+            "prevalence": 0.0000558,
+            "cnames": [],
+            "responseHashes": [
+                "cd858dcbd537ba5c9fc2a7b0017ebabf10ec430a1b43dd174bc6ec2632457753"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "typo3.com",
+                "www.hosting.de",
+                "www.hss.de",
                 "www.tum.de"
+            ]
+        },
+        {
+            "rule": "visitor-analytics\\.io\\/worker",
+            "cookies": 0.0000139,
+            "fingerprinting": 1,
+            "subdomains": [
+                "loadbalancer"
+            ],
+            "apis": {
+                "Document.cookie getter": 1,
+                "Screen.prototype.width": 1,
+                "Screen.prototype.height": 1,
+                "Document.cookie setter": 1
+            },
+            "sites": 7,
+            "prevalence": 0.0000976,
+            "cnames": [],
+            "responseHashes": [
+                "fc78921639eb6c63c17a157f6b5cefc6af91cd0054bc9260ad78e8c3b47ec55d"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bash-rooms.de",
+                "www.ladybeeprivatecollection.com",
+                "www.ladylestrange.de",
+                "www.maenner-unter-sich.com",
+                "www.nakurapie.de",
+                "www.the-artinspector.de",
+                "www.yashica.com"
+            ]
+        },
+        {
+            "rule": "visitor-analytics\\.io\\/worker-log",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "visits"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000279,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bash-rooms.de",
+                "www.ladybeeprivatecollection.com"
             ]
         },
         {
@@ -47,10 +290,52 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000204,
+            "prevalence": 0.0000279,
             "cnames": [],
             "responseHashes": [
-                "2be542093f5ffa464a9247dde8ed72506962b9c16213446277296ad899bddad4"
+                "2c8fdfc180b3d426ffcd39db673a08e2f0a443605d04a6508f92cc2a7f691eb8"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tum.de",
+                "www.tum.de"
+            ]
+        },
+        {
+            "rule": "visitor-analytics\\.io\\/api\\/v2\\/websites\\/ab3cb5e1-cee8-11ed-b589-901b0edac50a\\/polls\\/targeting",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "lb-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000279,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tum.de",
+                "www.tum.de"
+            ]
+        },
+        {
+            "rule": "visitor-analytics\\.io\\/api\\/v2\\/websites\\/ab3cb5e1-cee8-11ed-b589-901b0edac50a\\/polls\\/targeting",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "lb-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000279,
+            "cnames": [],
+            "responseHashes": [
+                "bc44e054fc747370b390686d629bdc565592b2b309b999b15475229be74a248b"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -63,20 +348,35 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.0000139,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.43478260869565216
+        },
+        {
+            "domain": "parastorage.com",
+            "prevalence": 0.391304347826087
+        },
+        {
+            "domain": "cloudflare.com",
+            "prevalence": 0.08695652173913043
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.08695652173913043
         }
     ],
     "types": {
-        "Script": 2,
-        "Fetch": 2
+        "Script": 22,
+        "Preflight": 13,
+        "Fetch": 15,
+        "Document": 7,
+        "XHR": 2
     },
     "nameservers": [
+        "robotns2.second-ns.de",
         "robotns3.second-ns.com",
-        "ns1.first-ns.de",
-        "robotns2.second-ns.de"
+        "ns1.first-ns.de"
     ]
 }

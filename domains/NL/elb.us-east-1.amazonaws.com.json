@@ -9,15 +9,20 @@
     "source": [
         "DuckDuckGo-NL"
     ],
-    "prevalence": 0.000102,
-    "sites": 1,
+    "prevalence": 0.000112,
+    "sites": 8,
     "subdomains": [
-        "l4-logs-http-rum-pub-s1-6386d34262e59173"
+        "l4-logs-http-rum-pub-s0-7d264be627ade923",
+        "k8s-opstest-apisixga-ffd5932408-71111629e4aa4dd8"
     ],
     "cnames": [
         {
             "original": "8b61d74c.datadoghq.com",
-            "resolved": "l4-logs-http-rum-pub-s1-6386d34262e59173.elb.us-east-1.amazonaws.com"
+            "resolved": "l4-logs-http-rum-pub-s0-7d264be627ade923.elb.us-east-1.amazonaws.com"
+        },
+        {
+            "original": "tracking.shopcider.com",
+            "resolved": "k8s-opstest-apisixga-ffd5932408-71111629e4aa4dd8.elb.us-east-1.amazonaws.com"
         }
     ],
     "fingerprinting": 0,
@@ -27,26 +32,80 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "l4-logs-http-rum-pub-s1-6386d34262e59173"
+                "l4-logs-http-rum-pub-s0-7d264be627ade923"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000204,
+            "sites": 3,
+            "prevalence": 0.000042,
             "cnames": [
                 {
                     "original": "8b61d74c.datadoghq.com",
-                    "resolved": "l4-logs-http-rum-pub-s1-6386d34262e59173.elb.us-east-1.amazonaws.com"
+                    "resolved": "l4-logs-http-rum-pub-s0-7d264be627ade923.elb.us-east-1.amazonaws.com"
                 }
             ],
             "responseHashes": [
-                "d0d61a5efeb73395f317129a89ff55da6b90b43e74ca8f00302e82fe8e4951d1"
+                "9dd8732d013a95cecb295eff7d09d13b11f89a5e402e11b10bc106a2be8f3a22",
+                "50ffd4be32ad412fbd3978f881b4a23e3399e70d1003b2d1ad1271b158320cd0"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "datadoghq.com",
-                "docs.datadoghq.com"
+                "docs.datadoghq.com",
+                "www.datadoghq.com"
+            ]
+        },
+        {
+            "rule": "elb\\.us-east-1\\.amazonaws\\.com\\/ms\\/analysis\\/v1\\/reportPoint",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "k8s-opstest-apisixga-ffd5932408-71111629e4aa4dd8"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000028,
+            "cnames": [
+                {
+                    "original": "tracking.shopcider.com",
+                    "resolved": "k8s-opstest-apisixga-ffd5932408-71111629e4aa4dd8.elb.us-east-1.amazonaws.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "shopcider.com",
+                "www.shopcider.com"
+            ]
+        },
+        {
+            "rule": "elb\\.us-east-1\\.amazonaws\\.com\\/ms\\/analysis\\/v1\\/reportPoint",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "k8s-opstest-apisixga-ffd5932408-71111629e4aa4dd8"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000028,
+            "cnames": [
+                {
+                    "original": "tracking.shopcider.com",
+                    "resolved": "k8s-opstest-apisixga-ffd5932408-71111629e4aa4dd8.elb.us-east-1.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "7397e0987dc915f33e145a086726c9654845ee27a6dd9e053b25781d7b54fdde"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "shopcider.com",
+                "www.shopcider.com"
             ]
         }
     ],
@@ -54,14 +113,22 @@
         "CDN"
     ],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.000014,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
     "types": {
-        "Fetch": 2
+        "Fetch": 3,
+        "Preflight": 2,
+        "Ping": 2
     },
     "nameservers": [
-        "ns-281.awsdns-35.com",
-        "ns-1286.awsdns-32.org",
         "ns-1826.awsdns-36.co.uk",
+        "ns-1286.awsdns-32.org",
+        "ns-281.awsdns-35.com",
         "ns-844.awsdns-41.net"
     ]
 }

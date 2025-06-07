@@ -4,33 +4,39 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.000106,
-    "sites": 1,
+    "prevalence": 0.0000425,
+    "sites": 3,
     "subdomains": [
-        "highway.cablecar"
+        "cdp",
+        "highway.cablecar",
+        "cdp.activation"
     ],
     "cnames": [],
-    "fingerprinting": 2,
+    "fingerprinting": 1,
     "resources": [
         {
-            "rule": "sph\\.com\\.sg\\/",
+            "rule": "sph\\.com\\.sg\\/activation\\/activation\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
-                "highway.cablecar"
+                "cdp"
             ],
-            "apis": {},
+            "apis": {
+                "Date.prototype.getTime": 2,
+                "Document.cookie getter": 2,
+                "Navigator.prototype.userAgent": 2
+            },
             "sites": 2,
-            "prevalence": 0.000212,
+            "prevalence": 0.0000283,
             "cnames": [],
             "responseHashes": [
-                "e99a30011bf1c3977d7622167ca823ee07cc60e79c0ed25c6b5ec04e9368bf12"
+                "f1e2c2b1c650ae3db39810fe6e033367b58e264a94647147cad86412f9ff929e"
             ],
-            "type": "Fetch",
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "straitstimes.com",
+                "businesstimes.com.sg",
                 "www.straitstimes.com"
             ]
         },
@@ -42,22 +48,111 @@
                 "highway.cablecar"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000212,
+            "sites": 4,
+            "prevalence": 0.0000567,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "straitstimes.com",
+                "businesstimes.com.sg",
+                "www.businesstimes.com.sg",
+                "www.harpersbazaar.com.sg",
+                "www.straitstimes.com"
+            ]
+        },
+        {
+            "rule": "sph\\.com\\.sg\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "highway.cablecar"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000567,
+            "cnames": [],
+            "responseHashes": [
+                "813603e94f0c5e890446e83275c3adfe61b5d93ce4792c0b1578f014a58fbcac",
+                "95302987eb6abdf212661a3ba09dc7b1adbba33530622651de55ef72f857c04f"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "businesstimes.com.sg",
+                "www.businesstimes.com.sg",
+                "www.harpersbazaar.com.sg",
+                "www.straitstimes.com"
+            ]
+        },
+        {
+            "rule": "sph\\.com\\.sg\\/activation\\/jquery-3\\.7\\.1\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000283,
+            "cnames": [],
+            "responseHashes": [
+                "fc9a93dd241f6b045cbff0481cf4e1901becd0e12fb45166a8f17f95823f0b1a"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "businesstimes.com.sg",
+                "www.straitstimes.com"
+            ]
+        },
+        {
+            "rule": "sph\\.com\\.sg\\/api\\/activation",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdp.activation"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000283,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "businesstimes.com.sg",
+                "www.straitstimes.com"
+            ]
+        },
+        {
+            "rule": "sph\\.com\\.sg\\/api\\/activation",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdp.activation"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000283,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "businesstimes.com.sg",
                 "www.straitstimes.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000106,
+    "cookies": 0.0000142,
     "topInitiators": [
         {
             "domain": "first party",
@@ -65,13 +160,15 @@
         }
     ],
     "types": {
-        "Fetch": 2,
-        "Preflight": 2
+        "Script": 2,
+        "Preflight": 6,
+        "Fetch": 4,
+        "XHR": 4
     },
     "nameservers": [
-        "ns-133.awsdns-16.com",
         "ns-551.awsdns-04.net",
         "ns-1524.awsdns-62.org",
-        "ns-1819.awsdns-35.co.uk"
+        "ns-1819.awsdns-35.co.uk",
+        "ns-133.awsdns-16.com"
     ]
 }

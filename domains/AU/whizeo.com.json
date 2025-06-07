@@ -4,31 +4,88 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.000106,
-    "sites": 1,
+    "prevalence": 0.0000283,
+    "sites": 2,
     "subdomains": [
-        "api"
+        "data",
+        "cdn",
+        "api",
+        "services"
     ],
     "cnames": [],
     "fingerprinting": 3,
     "resources": [
         {
-            "rule": "whizeo\\.com\\/tracking-event",
+            "rule": "whizeo\\.com\\/widgets\\/loader\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 2,
             "subdomains": [
-                "api"
+                "data"
             ],
-            "apis": {},
+            "apis": {
+                "window.innerWidth": 2,
+                "window.outerWidth": 2,
+                "window.outerHeight": 2,
+                "Date.prototype.getTime": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "Navigator.prototype.appName": 2,
+                "Navigator.prototype.language": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Screen.prototype.colorDepth": 2,
+                "window.localStorage": 2
+            },
             "sites": 2,
-            "prevalence": 0.000212,
+            "prevalence": 0.0000283,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "173d7aafd679fcd8d121aa74db58b476335f81138db08f9d1c608cc7b87819ac"
+            ],
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "mrisoftware.com",
+                "driverhire.com.au",
+                "www.mrisoftware.com"
+            ]
+        },
+        {
+            "rule": "whizeo\\.com\\/openfpcdn\\/botd\\/v1",
+            "cookies": 0,
+            "fingerprinting": 3,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.vendor": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.appVersion": 2,
+                "Navigator.prototype.connection": 2,
+                "window.outerWidth": 2,
+                "window.outerHeight": 2,
+                "window.innerWidth": 2,
+                "window.innerHeight": 2,
+                "Navigator.prototype.plugins": 2,
+                "Navigator.prototype.productSub": 2,
+                "Navigator.prototype.mimeTypes": 2,
+                "WebGLRenderingContext.prototype.getParameter": 2,
+                "Navigator.prototype.webdriver": 2,
+                "Navigator.prototype.language": 2,
+                "Navigator.prototype.languages": 2,
+                "Navigator.prototype.permissions": 2,
+                "Notification.permission": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000283,
+            "cnames": [],
+            "responseHashes": [
+                "29cb26e06f2a4a877f1134a46480d9b78f8b6e0e6f9b0fe67e34307c312b5a89"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "driverhire.com.au",
                 "www.mrisoftware.com"
             ]
         },
@@ -40,17 +97,66 @@
                 "api"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000212,
+            "sites": 3,
+            "prevalence": 0.0000425,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "driverhire.com.au",
+                "www.driverhire.com.au",
+                "www.mrisoftware.com"
+            ]
+        },
+        {
+            "rule": "whizeo\\.com\\/tracking-event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000425,
             "cnames": [],
             "responseHashes": [
-                "91d54e5311030f08486926d3cdea28baad943698ca6a647372aaa78d145f1331"
+                "b95ddcf6b67dbb541ed32a3ab27ab9b2bb17d84479e25a3e3e782ba2855910a8",
+                "c534fad04220bf598b47dcb37fc26d1fffaa79ac3da043e8cfbea49cd6e4026a"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "mrisoftware.com",
+                "driverhire.com.au",
+                "www.driverhire.com.au",
+                "www.mrisoftware.com"
+            ]
+        },
+        {
+            "rule": "whizeo\\.com\\/widgets\\/init\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "services"
+            ],
+            "apis": {
+                "window.localStorage": 1,
+                "Notification.permission": 1,
+                "Navigator.prototype.plugins": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000283,
+            "cnames": [],
+            "responseHashes": [
+                "912c0b9f740b0ee52b243b8205fa5abe039857486f84ec59ff1a8290a9ad2b98"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "driverhire.com.au",
                 "www.mrisoftware.com"
             ]
         }
@@ -60,16 +166,21 @@
     "cookies": 0,
     "topInitiators": [
         {
+            "domain": "24-astute.com",
+            "prevalence": 0.5
+        },
+        {
             "domain": "plan2twin.com",
-            "prevalence": 1
+            "prevalence": 0.5
         }
     ],
     "types": {
-        "Preflight": 2,
-        "XHR": 2
+        "Script": 6,
+        "Preflight": 3,
+        "XHR": 3
     },
     "nameservers": [
-        "maeve.ns.cloudflare.com",
-        "major.ns.cloudflare.com"
+        "major.ns.cloudflare.com",
+        "maeve.ns.cloudflare.com"
     ]
 }

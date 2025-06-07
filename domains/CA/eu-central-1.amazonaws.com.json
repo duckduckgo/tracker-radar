@@ -9,11 +9,13 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000209,
-    "sites": 2,
+    "prevalence": 0.000187,
+    "sites": 13,
     "subdomains": [
+        "p2iqhncxyh.execute-api",
         "cognito-identity",
-        "cf-proxy-cf-eu10-004-ca8ff5b93d5f2e9b.elb"
+        "cf-proxy-cf-eu10-004-ca8ff5b93d5f2e9b.elb",
+        "dataplane.rum"
     ],
     "cnames": [
         {
@@ -24,6 +26,70 @@
     "fingerprinting": 0,
     "resources": [
         {
+            "rule": "eu-central-1\\.amazonaws\\.com\\/Production\\/v2\\/beacon",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "p2iqhncxyh.execute-api"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000432,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "demellierlondon.com",
+                "www.alpinestars.com",
+                "www.charlieintel.com"
+            ]
+        },
+        {
+            "rule": "eu-central-1\\.amazonaws\\.com\\/Production\\/v2\\/beacon",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "p2iqhncxyh.execute-api"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000432,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "demellierlondon.com",
+                "www.alpinestars.com",
+                "www.charlieintel.com"
+            ]
+        },
+        {
+            "rule": "eu-central-1\\.amazonaws\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cognito-identity"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000576,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "eurail.com",
+                "www.festo.com",
+                "www.interrail.eu",
+                "www.seton.ca"
+            ]
+        },
+        {
             "rule": "eu-central-1\\.amazonaws\\.com\\/",
             "cookies": 0,
             "fingerprinting": 0,
@@ -32,8 +98,8 @@
                 "cf-proxy-cf-eu10-004-ca8ff5b93d5f2e9b.elb"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000314,
+            "sites": 6,
+            "prevalence": 0.0000864,
             "cnames": [
                 {
                     "original": "check.cfapps.eu10-004.hana.ondemand.com",
@@ -41,8 +107,11 @@
                 }
             ],
             "responseHashes": [
-                "8f70042db3ab1cb36bb15b43682ed8e3476a9255acd0ba21dab26393ba08025c",
-                "fcffa959177e96aa958c903d0c6b7129f60d75cd7008440e47cf57aba05a0a44"
+                "9fbc5ab30d4c4ce6a37fb3fea30890d99d1a1490d9518e3e8bef3050b55a2606",
+                "f8f59d8680653500d47cd93e17f308d58f5d4adbaf4cffe8a3dba686265819e5",
+                "2f3c56ae5c59af2eb05973b7cb78691e4c92e3ba987fe4ac20a39a68398555f6",
+                "fcffa959177e96aa958c903d0c6b7129f60d75cd7008440e47cf57aba05a0a44",
+                "3f43621138dc0b5379201f8b16ceab48f5f31d04c897ee34868623e3cc77517d"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -50,7 +119,32 @@
             "exampleSites": [
                 "eurail.com",
                 "www.eurail.com",
-                "www.sap.com"
+                "www.festo.com",
+                "www.interrail.eu",
+                "www.sap.com",
+                "www.seton.ca"
+            ]
+        },
+        {
+            "rule": "eu-central-1\\.amazonaws\\.com\\/appmonitors\\/2361b0e5-f832-406a-8e57-1ae169d62e51",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dataplane.rum"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000288,
+            "cnames": [],
+            "responseHashes": [
+                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "seton.ca",
+                "www.seton.ca"
             ]
         }
     ],
@@ -58,19 +152,32 @@
         "CDN"
     ],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.0000144,
     "topInitiators": [
         {
             "domain": "rum.us-east-1.amazonaws.com",
-            "prevalence": 0.6666666666666666
+            "prevalence": 0.46153846153846156
         },
         {
             "domain": "first party",
-            "prevalence": 0.3333333333333333
+            "prevalence": 0.4230769230769231
+        },
+        {
+            "domain": "steinberg-snowplow-static-js.s3.amazonaws.com",
+            "prevalence": 0.038461538461538464
+        },
+        {
+            "domain": "d5yoctgpv4cpx.cloudfront.net",
+            "prevalence": 0.038461538461538464
+        },
+        {
+            "domain": "ferryhopper.com",
+            "prevalence": 0.038461538461538464
         }
     ],
     "types": {
-        "Fetch": 3
+        "Fetch": 11,
+        "Preflight": 7
     },
     "nameservers": [
         "ns1.amzndns.co.uk",

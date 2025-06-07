@@ -4,10 +4,11 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000307,
-    "sites": 3,
+    "prevalence": 0.00021,
+    "sites": 15,
     "subdomains": [
-        "direct"
+        "direct",
+        "direct-collect"
     ],
     "cnames": [],
     "fingerprinting": 0,
@@ -20,17 +21,28 @@
                 "direct"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000307,
+            "sites": 14,
+            "prevalence": 0.000196,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
+                "jysk.at",
+                "jysk.bg",
+                "jysk.de",
                 "jysk.dk",
+                "jysk.ie",
+                "jysk.nl",
                 "jysk.no",
-                "www.dm.de"
+                "jysk.pl",
+                "jysk.ro",
+                "jysk.se",
+                "www.dm-drogeriemarkt.bg",
+                "www.dm.hu",
+                "www.dm.de",
+                "www.primark.com"
             ]
         },
         {
@@ -41,18 +53,102 @@
                 "direct"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000205,
+            "sites": 11,
+            "prevalence": 0.000154,
             "cnames": [],
             "responseHashes": [
-                "d6a3817b1933d4d20bdfa4b2185e7eb63082886234c29cd575cda58eaf0e4d67"
+                "b2e2c7f0fdd627882e40c7a8155698bbd20ee8844a338348164ca869bd6406a1",
+                "99ff66041261803e28b98ed59e528185e35913c1d270a230b314e2dfe342493c",
+                "8d30672e4ecbc118d94f9d3f43c18aae53365e3d3a62ee54f2962750be751d97",
+                "0e161ff9a9bd4a2ed82f85d59c962bb9beee82b327b8ee66da202c08c43bec7d",
+                "0c609942b4420454cb3d9bdfaf868d133e282d51c97cde28c66aa12fa43f956d",
+                "3bcda85501d69eca23e973c7b45e44ae32977b9e63a1c566e589fee937c655ef",
+                "d73458e03bd7a25a2e67be37e52cb490248758420b7c96fc3054333cdab91936",
+                "5f78b07fefd1a2eb6e3a3723535108a08e6ced7d9e95d8348eb023b92eb275de",
+                "06c3d5721e735a52b26e1bbe97bb1fc006253a8fb56669122768635ea9714907",
+                "a8956dd3049a5acf7563d680d4bba92fa7ca595a1d46975ae502b29c776d6509"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
+                "jysk.at",
+                "jysk.bg",
+                "jysk.de",
                 "jysk.dk",
-                "jysk.no"
+                "jysk.ie",
+                "jysk.nl",
+                "jysk.no",
+                "jysk.pl",
+                "jysk.ro",
+                "jysk.se",
+                "www.primark.com"
+            ]
+        },
+        {
+            "rule": "dy-api\\.eu\\/v2\\/serve\\/user\\/choose",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "direct"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000042,
+            "cnames": [],
+            "responseHashes": [
+                "f494daab9423335e2917fe8576e6f8da87d55451367705f8de2841b2f94a4cbf",
+                "56a585d5a328be501dfc32fa6ed3f0508a9aa9424de1d5c9362d795911316896"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dm-drogeriemarkt.bg",
+                "www.dm.hu",
+                "www.dm.de"
+            ]
+        },
+        {
+            "rule": "dy-api\\.eu\\/v2\\/collect\\/user\\/event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "direct-collect"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000028,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "home24.de",
+                "www.home24.de"
+            ]
+        },
+        {
+            "rule": "dy-api\\.eu\\/v2\\/collect\\/user\\/event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "direct-collect"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000028,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "home24.de",
+                "www.home24.de"
             ]
         }
     ],
@@ -62,17 +158,22 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.9333333333333333
+        },
+        {
+            "domain": "dm.de",
+            "prevalence": 0.06666666666666667
         }
     ],
     "types": {
-        "Preflight": 3,
-        "Fetch": 2
+        "Preflight": 16,
+        "Fetch": 11,
+        "XHR": 5
     },
     "nameservers": [
         "ns-204.awsdns-25.com",
-        "ns-1242.awsdns-27.org",
         "ns-926.awsdns-51.net",
+        "ns-1242.awsdns-27.org",
         "ns-1819.awsdns-35.co.uk"
     ]
 }

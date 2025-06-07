@@ -4,10 +4,12 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000205,
-    "sites": 2,
+    "prevalence": 0.000657,
+    "sites": 47,
     "subdomains": [
-        "cdn"
+        "cdn",
+        "bot",
+        "analytics"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -20,12 +22,14 @@
                 "cdn"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 2,
-                "window.localStorage": 2,
-                "Notification.permission": 2
+                "Navigator.prototype.userAgent": 37,
+                "window.localStorage": 38,
+                "Notification.permission": 31,
+                "window.sessionStorage": 2,
+                "Document.cookie getter": 2
             },
-            "sites": 2,
-            "prevalence": 0.000205,
+            "sites": 47,
+            "prevalence": 0.000657,
             "cnames": [],
             "responseHashes": [
                 "9d7b97a214fab427f116a28f6a65c94478db654cf2fd65a026d027463bcb112d"
@@ -34,8 +38,115 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
+                "www.inputmag.dk",
                 "gamestouse.com",
-                "www.greenbot.com"
+                "schlagerprofis.de",
+                "barnfinds.com",
+                "pxlmag.com",
+                "www.trainerscity.com",
+                "scoring.dance",
+                "smartwatchinsight.com",
+                "learningbreeze.com",
+                "oslohistorie.no",
+                "www.rupes.com",
+                "www.ticonsiglio.com",
+                "www.earth.com",
+                "www.thesouthafrican.com",
+                "journalistenwatch.com",
+                "economiafinancas.com",
+                "hobbyking.com",
+                "financiarul.ro",
+                "www.sapeople.com",
+                "www.anonymoushackers.net"
+            ]
+        },
+        {
+            "rule": "webpushr\\.com\\/prompt\\/get_info",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "bot"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000028,
+            "cnames": [],
+            "responseHashes": [
+                "a735c6cfc20d6ecfa8d705e7c00436c6f9c02d4738de84b550b0e180b9960080"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sapeople.com",
+                "www.side-line.com"
+            ]
+        },
+        {
+            "rule": "webpushr\\.com\\/impression\\/session",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "analytics"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000028,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sapeople.com",
+                "www.side-line.com"
+            ]
+        },
+        {
+            "rule": "webpushr\\.com\\/impression\\/prompt",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "analytics"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000042,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sapeople.com",
+                "www.sapeople.com",
+                "www.side-line.com"
+            ]
+        },
+        {
+            "rule": "webpushr\\.com\\/notification_card\\/impression",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "analytics"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000028,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sapeople.com",
+                "www.side-line.com"
             ]
         }
     ],
@@ -45,11 +156,16 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.9795918367346939
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.02040816326530612
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 47,
+        "Fetch": 9
     },
     "nameservers": [
         "ns-514.awsdns-00.net",

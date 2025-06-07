@@ -7,12 +7,43 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000307,
-    "sites": 3,
+    "prevalence": 0.000252,
+    "sites": 18,
     "subdomains": [
-        "servicenowsignon.customdomains"
+        "login",
+        "sas.customdomains",
+        "servicenowsignon.customdomains",
+        "workdayciam.customdomains",
+        "spglobaliam.customdomains",
+        "astminternational.customdomains",
+        "churchofjesuschrist.customdomains",
+        "gale.customdomains"
     ],
     "cnames": [
+        {
+            "original": "auth.sas.com",
+            "resolved": "sas.customdomains.okta.com"
+        },
+        {
+            "original": "iam.astm.org",
+            "resolved": "astminternational.customdomains.okta.com"
+        },
+        {
+            "original": "id.churchofjesuschrist.org",
+            "resolved": "churchofjesuschrist.customdomains.okta.com"
+        },
+        {
+            "original": "login.infosecinstitute.com",
+            "resolved": "gale.customdomains.okta.com"
+        },
+        {
+            "original": "secure.signin.spglobal.com",
+            "resolved": "spglobaliam.customdomains.okta.com"
+        },
+        {
+            "original": "signin.resourcecenter.workday.com",
+            "resolved": "workdayciam.customdomains.okta.com"
+        },
         {
             "original": "ssosignon.servicenow.com",
             "resolved": "servicenowsignon.customdomains.okta.com"
@@ -21,19 +52,118 @@
     "fingerprinting": 1,
     "resources": [
         {
-            "rule": "okta\\.com\\/api\\/v1\\/sessions\\/me",
-            "cookies": 0.000205,
+            "rule": "okta\\.com\\/discovery\\/iframe\\.html",
+            "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "servicenowsignon.customdomains"
+                "login"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000205,
+            "sites": 6,
+            "prevalence": 0.0000839,
+            "cnames": [],
+            "responseHashes": [
+                "349d1426735d9203d547b601ee16fde8fce260fea4f096f5ccd44387c5fa3b45"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "paloaltonetworks.com",
+                "cdol.churchofjesuschrist.org",
+                "community4u.unit4.com",
+                "ms.duett.no",
+                "mysupport.bakerhughes.com",
+                "signon.service-now.com"
+            ]
+        },
+        {
+            "rule": "okta\\.com\\/lib\\/discoveryIframe-0722375bd7a46ac7cf9c\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "login"
+            ],
+            "apis": {
+                "window.localStorage": 2
+            },
+            "sites": 5,
+            "prevalence": 0.0000699,
+            "cnames": [],
+            "responseHashes": [
+                "85bb3fbb22f194ed380323307fdac4a74b4f41fe2fa8992765b40728ed75918b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "paloaltonetworks.com",
+                "cdol.churchofjesuschrist.org",
+                "community4u.unit4.com",
+                "ms.duett.no",
+                "mysupport.bakerhughes.com"
+            ]
+        },
+        {
+            "rule": "okta\\.com\\/api\\/v1\\/users\\/me",
+            "cookies": 0.000056,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sas.customdomains"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000056,
+            "cnames": [
+                {
+                    "original": "auth.sas.com",
+                    "resolved": "sas.customdomains.okta.com"
+                }
+            ],
+            "responseHashes": [
+                "e9d61e79077e9a4ae977f50d5c655b5136b2a50abaae76fc540ad53077770c3e",
+                "46a4ff999bdd0af67ecc7d7d78389e6e50915e6ec88674060e8739e3e817a150",
+                "af022753cdabe2fd17478dbc1fe2697302e7269564db6cc04f8e3cd05851c818"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sas.com",
+                "communities.sas.com",
+                "support.sas.com",
+                "www.sas.com"
+            ]
+        },
+        {
+            "rule": "okta\\.com\\/api\\/v1\\/sessions\\/me",
+            "cookies": 0.0000839,
+            "fingerprinting": 0,
+            "subdomains": [
+                "servicenowsignon.customdomains",
+                "workdayciam.customdomains",
+                "spglobaliam.customdomains",
+                "sas.customdomains"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.0000839,
             "cnames": [
                 {
                     "original": "ssosignon.servicenow.com",
                     "resolved": "servicenowsignon.customdomains.okta.com"
+                },
+                {
+                    "original": "signin.resourcecenter.workday.com",
+                    "resolved": "workdayciam.customdomains.okta.com"
+                },
+                {
+                    "original": "secure.signin.spglobal.com",
+                    "resolved": "spglobaliam.customdomains.okta.com"
+                },
+                {
+                    "original": "auth.sas.com",
+                    "resolved": "sas.customdomains.okta.com"
                 }
             ],
             "responseHashes": [],
@@ -42,25 +172,290 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "servicenow.com",
+                "resourcecenter.workday.com",
+                "support.servicenow.com",
+                "www.capitaliq.spglobal.com",
+                "www.sas.com",
                 "www.servicenow.com"
+            ]
+        },
+        {
+            "rule": "okta\\.com\\/api\\/v1\\/sessions\\/me",
+            "cookies": 0.000028,
+            "fingerprinting": 0,
+            "subdomains": [
+                "servicenowsignon.customdomains"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000028,
+            "cnames": [
+                {
+                    "original": "ssosignon.servicenow.com",
+                    "resolved": "servicenowsignon.customdomains.okta.com"
+                }
+            ],
+            "responseHashes": [
+                "149c00de79f432b5804a981851f5024c97d1751985e9ebd188463e1a4ae52426"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "servicenow.com",
+                "support.servicenow.com"
+            ]
+        },
+        {
+            "rule": "okta\\.com\\/api\\/v1\\/sessions\\/me",
+            "cookies": 0.0000839,
+            "fingerprinting": 0,
+            "subdomains": [
+                "workdayciam.customdomains",
+                "astminternational.customdomains",
+                "spglobaliam.customdomains",
+                "churchofjesuschrist.customdomains",
+                "sas.customdomains",
+                "servicenowsignon.customdomains"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.0000839,
+            "cnames": [
+                {
+                    "original": "signin.resourcecenter.workday.com",
+                    "resolved": "workdayciam.customdomains.okta.com"
+                },
+                {
+                    "original": "iam.astm.org",
+                    "resolved": "astminternational.customdomains.okta.com"
+                },
+                {
+                    "original": "secure.signin.spglobal.com",
+                    "resolved": "spglobaliam.customdomains.okta.com"
+                },
+                {
+                    "original": "id.churchofjesuschrist.org",
+                    "resolved": "churchofjesuschrist.customdomains.okta.com"
+                },
+                {
+                    "original": "auth.sas.com",
+                    "resolved": "sas.customdomains.okta.com"
+                },
+                {
+                    "original": "ssosignon.servicenow.com",
+                    "resolved": "servicenowsignon.customdomains.okta.com"
+                }
+            ],
+            "responseHashes": [
+                "7fe930cd25c74848f402bebc710bee79ca8086e114cecc8f4cd99b3e5b1dd928"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "workday.com",
+                "www.astm.org",
+                "www.capitaliq.spglobal.com",
+                "www.churchofjesuschrist.org",
+                "www.sas.com",
+                "www.servicenow.com"
+            ]
+        },
+        {
+            "rule": "okta\\.com\\/idp\\/idx\\/introspect",
+            "cookies": 0.000028,
+            "fingerprinting": 0,
+            "subdomains": [
+                "spglobaliam.customdomains",
+                "gale.customdomains"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000028,
+            "cnames": [
+                {
+                    "original": "secure.signin.spglobal.com",
+                    "resolved": "spglobaliam.customdomains.okta.com"
+                },
+                {
+                    "original": "login.infosecinstitute.com",
+                    "resolved": "gale.customdomains.okta.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "spglobal.com",
+                "www.infosecinstitute.com"
+            ]
+        },
+        {
+            "rule": "okta\\.com\\/idp\\/idx\\/introspect",
+            "cookies": 0.000028,
+            "fingerprinting": 0,
+            "subdomains": [
+                "spglobaliam.customdomains",
+                "gale.customdomains"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000028,
+            "cnames": [
+                {
+                    "original": "secure.signin.spglobal.com",
+                    "resolved": "spglobaliam.customdomains.okta.com"
+                },
+                {
+                    "original": "login.infosecinstitute.com",
+                    "resolved": "gale.customdomains.okta.com"
+                }
+            ],
+            "responseHashes": [
+                "ae948ef6b2ce7ec3cb0c6a715d2b242244bc03b3e839345bdbad7a2028842b4f"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "spglobal.com",
+                "www.infosecinstitute.com"
+            ]
+        },
+        {
+            "rule": "okta\\.com\\/oauth2\\/ausr9q90qjRyN0M7P697\\/\\.well-known\\/openid-configuration",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gale.customdomains"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000028,
+            "cnames": [
+                {
+                    "original": "login.infosecinstitute.com",
+                    "resolved": "gale.customdomains.okta.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "infosecinstitute.com",
+                "www.infosecinstitute.com"
+            ]
+        },
+        {
+            "rule": "okta\\.com\\/oauth2\\/ausr9q90qjRyN0M7P697\\/\\.well-known\\/openid-configuration",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gale.customdomains"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000028,
+            "cnames": [
+                {
+                    "original": "login.infosecinstitute.com",
+                    "resolved": "gale.customdomains.okta.com"
+                }
+            ],
+            "responseHashes": [
+                "b8f2e025262f2f5478fe9684596f010366a49027113b81060e1ef43c7e59c296"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "infosecinstitute.com",
+                "www.infosecinstitute.com"
+            ]
+        },
+        {
+            "rule": "okta\\.com\\/oauth2\\/ausr9q90qjRyN0M7P697\\/v1\\/interact",
+            "cookies": 0.000028,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gale.customdomains"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000028,
+            "cnames": [
+                {
+                    "original": "login.infosecinstitute.com",
+                    "resolved": "gale.customdomains.okta.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "infosecinstitute.com",
+                "www.infosecinstitute.com"
+            ]
+        },
+        {
+            "rule": "okta\\.com\\/oauth2\\/ausr9q90qjRyN0M7P697\\/v1\\/interact",
+            "cookies": 0.000028,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gale.customdomains"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000028,
+            "cnames": [
+                {
+                    "original": "login.infosecinstitute.com",
+                    "resolved": "gale.customdomains.okta.com"
+                }
+            ],
+            "responseHashes": [
+                "98c425e98c9d594b5f578ca9d54e73402ae0a46af9554d477a612ba24c875d2a"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "infosecinstitute.com",
+                "www.infosecinstitute.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000205,
+    "cookies": 0.000168,
     "topInitiators": [
         {
-            "domain": "first party",
-            "prevalence": 0.5
+            "domain": "oktacdn.com",
+            "prevalence": 0.5882352941176471
+        },
+        {
+            "domain": "azure.com",
+            "prevalence": 0.23529411764705882
         },
         {
             "domain": "service-now.com",
-            "prevalence": 0.5
+            "prevalence": 0.11764705882352941
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.058823529411764705
         }
     ],
     "types": {
-        "Preflight": 2
+        "Document": 6,
+        "Script": 5,
+        "XHR": 6,
+        "Preflight": 12,
+        "Fetch": 12
     },
     "nameservers": [
         "ns-1459.awsdns-54.org",

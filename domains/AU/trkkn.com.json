@@ -4,14 +4,63 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.000212,
-    "sites": 2,
+    "prevalence": 0.0000992,
+    "sites": 7,
     "subdomains": [
-        "cdn"
+        "cdn",
+        "tools"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "trkkn\\.com\\/geo-ip\\/2\\.0\\/geoip\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000567,
+            "cnames": [],
+            "responseHashes": [
+                "e54e3f254b15d4b2ebeab24843664a6ed2257bc570bfe12c324e97d78e787c83"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hansgrohe.com.au",
+                "www.stihl.co.uk",
+                "www.stihl.co.nz",
+                "www.stihl.com.au"
+            ]
+        },
+        {
+            "rule": "trkkn\\.com\\/v1\\/ipinfo",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tools"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000567,
+            "cnames": [],
+            "responseHashes": [
+                "32033c92a6dd841010d106da722b089e6f7807c4f8983582d394f4be365c30be"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hansgrohe.com.au",
+                "www.stihl.co.uk",
+                "www.stihl.co.nz",
+                "www.stihl.com.au"
+            ]
+        },
         {
             "rule": "trkkn\\.com\\/tracking-extension\\/4\\.0\\/gtmext\\.min\\.4\\.0\\.0\\.js",
             "cookies": 0,
@@ -20,11 +69,11 @@
                 "cdn"
             ],
             "apis": {
-                "Navigator.prototype.maxTouchPoints": 2,
-                "Document.cookie getter": 2
+                "Navigator.prototype.maxTouchPoints": 4,
+                "Document.cookie getter": 4
             },
-            "sites": 2,
-            "prevalence": 0.000212,
+            "sites": 4,
+            "prevalence": 0.0000567,
             "cnames": [],
             "responseHashes": [
                 "c45894dab2d2644aa8cc309d72592dc90696ed9db66d9dcefb615bbbdf091062"
@@ -33,7 +82,9 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "stihl.com.au",
+                "stihlusa.com",
+                "www.stihl.co.uk",
+                "www.stihl.co.nz",
                 "www.stihl.com.au"
             ]
         }
@@ -44,11 +95,20 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.6666666666666666
+        },
+        {
+            "domain": "stihl.com",
+            "prevalence": 0.2
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.13333333333333333
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 8,
+        "XHR": 4
     },
     "nameservers": [
         "pdns82.ultradns.net",

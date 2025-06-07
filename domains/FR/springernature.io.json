@@ -4,14 +4,21 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000205,
-    "sites": 2,
+    "prevalence": 0.0000698,
+    "sites": 5,
     "subdomains": [
         "geo-gcp.cdn",
+        "sgtm-biomedcentral.apps.public.k8s",
+        "sgtm-springernature.apps.public.k8s",
         "sgtm-springer.apps.public.k8s",
-        "sgtm-nature.apps.public.k8s"
+        "sgtm-nature.apps.public.k8s",
+        "push-content"
     ],
     "cnames": [
+        {
+            "original": "cmp.biomedcentral.com",
+            "resolved": "geo-gcp.cdn.springernature.io"
+        },
         {
             "original": "cmp.nature.com",
             "resolved": "geo-gcp.cdn.springernature.io"
@@ -29,26 +36,274 @@
             "resolved": "geo-gcp.cdn.springernature.io"
         },
         {
+            "original": "sgtm.biomedcentral.com",
+            "resolved": "sgtm-biomedcentral.apps.public.k8s.springernature.io"
+        },
+        {
             "original": "sgtm.nature.com",
             "resolved": "sgtm-nature.apps.public.k8s.springernature.io"
         },
         {
             "original": "sgtm.springer.com",
             "resolved": "sgtm-springer.apps.public.k8s.springernature.io"
+        },
+        {
+            "original": "sgtm.springernature.com",
+            "resolved": "sgtm-springernature.apps.public.k8s.springernature.io"
         }
     ],
     "fingerprinting": 1,
     "resources": [
         {
+            "rule": "springernature\\.io\\/vendor-list\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "geo-gcp.cdn"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000559,
+            "cnames": [
+                {
+                    "original": "cmp.biomedcentral.com",
+                    "resolved": "geo-gcp.cdn.springernature.io"
+                },
+                {
+                    "original": "cmp.springer.com",
+                    "resolved": "geo-gcp.cdn.springernature.io"
+                },
+                {
+                    "original": "cmp.nature.com",
+                    "resolved": "geo-gcp.cdn.springernature.io"
+                }
+            ],
+            "responseHashes": [
+                "f443e77c3317bd45d1faa5daf1e63f9f9160cd98a7c1c5f297c2decfb4c78f0c"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "biomedcentral.com",
+                "link.springer.com",
+                "www.nature.com",
+                "www.springer.com"
+            ]
+        },
+        {
+            "rule": "springernature\\.io\\/gtm\\.js",
+            "cookies": 0.000014,
+            "fingerprinting": 1,
+            "subdomains": [
+                "sgtm-biomedcentral.apps.public.k8s",
+                "sgtm-springernature.apps.public.k8s",
+                "sgtm-springer.apps.public.k8s"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000419,
+            "cnames": [
+                {
+                    "original": "sgtm.biomedcentral.com",
+                    "resolved": "sgtm-biomedcentral.apps.public.k8s.springernature.io"
+                },
+                {
+                    "original": "sgtm.springernature.com",
+                    "resolved": "sgtm-springernature.apps.public.k8s.springernature.io"
+                },
+                {
+                    "original": "sgtm.springer.com",
+                    "resolved": "sgtm-springer.apps.public.k8s.springernature.io"
+                }
+            ],
+            "responseHashes": [
+                "b58510f4c75c9808f1fb1f1c722ec58b7e6c40dbebac6b72a527727889e05227",
+                "af30fa4528c8a09d22b674ccbd520536d96dbfdfdc84e4e61f1892459ad65bae"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "biomedcentral.com",
+                "www.springernature.com",
+                "www.springer.com"
+            ]
+        },
+        {
+            "rule": "springernature\\.io\\/collect-cmp",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sgtm-biomedcentral.apps.public.k8s",
+                "sgtm-springer.apps.public.k8s",
+                "sgtm-nature.apps.public.k8s",
+                "sgtm-springernature.apps.public.k8s"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.0000698,
+            "cnames": [
+                {
+                    "original": "sgtm.biomedcentral.com",
+                    "resolved": "sgtm-biomedcentral.apps.public.k8s.springernature.io"
+                },
+                {
+                    "original": "sgtm.springer.com",
+                    "resolved": "sgtm-springer.apps.public.k8s.springernature.io"
+                },
+                {
+                    "original": "sgtm.nature.com",
+                    "resolved": "sgtm-nature.apps.public.k8s.springernature.io"
+                },
+                {
+                    "original": "sgtm.springernature.com",
+                    "resolved": "sgtm-springernature.apps.public.k8s.springernature.io"
+                }
+            ],
+            "responseHashes": [
+                "7fff1569ea68ef52782ba25b0cf3934627f7a4fc1e8e22f4652de959c5f97978"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "biomedcentral.com",
+                "bmcgenomics.biomedcentral.com",
+                "link.springer.com",
+                "www.nature.com",
+                "www.springernature.com"
+            ]
+        },
+        {
+            "rule": "springernature\\.io\\/frontend-utility-libraries\\/production\\/data-attribute-api-gtm\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "push-content"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000559,
+            "cnames": [],
+            "responseHashes": [
+                "ac37a81626d9ff2ff659ac5f14e88b50bb0bd590614b5a82e17d367170a43f89"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "biomedcentral.com",
+                "link.springer.com",
+                "www.springernature.com",
+                "www.springer.com"
+            ]
+        },
+        {
+            "rule": "springernature\\.io\\/gtag\\/js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "sgtm-biomedcentral.apps.public.k8s",
+                "sgtm-springernature.apps.public.k8s"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000419,
+            "cnames": [
+                {
+                    "original": "sgtm.biomedcentral.com",
+                    "resolved": "sgtm-biomedcentral.apps.public.k8s.springernature.io"
+                },
+                {
+                    "original": "sgtm.springernature.com",
+                    "resolved": "sgtm-springernature.apps.public.k8s.springernature.io"
+                }
+            ],
+            "responseHashes": [
+                "3261cdf1f826d2c7e3ee5c78934040edeeba43d850fab5e2f04c3df04c4b4179",
+                "2948d9709a8b48394f94839aa71d1849c5db4b1ea6e0d582ef8417a0d110e1f9"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "biomedcentral.com",
+                "bmcgenomics.biomedcentral.com",
+                "www.springernature.com"
+            ]
+        },
+        {
+            "rule": "springernature\\.io\\/g\\/collect",
+            "cookies": 0.0000419,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sgtm-biomedcentral.apps.public.k8s",
+                "sgtm-springernature.apps.public.k8s"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000419,
+            "cnames": [
+                {
+                    "original": "sgtm.biomedcentral.com",
+                    "resolved": "sgtm-biomedcentral.apps.public.k8s.springernature.io"
+                },
+                {
+                    "original": "sgtm.springernature.com",
+                    "resolved": "sgtm-springernature.apps.public.k8s.springernature.io"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "biomedcentral.com",
+                "bmcgenomics.biomedcentral.com",
+                "www.springernature.com"
+            ]
+        },
+        {
+            "rule": "springernature\\.io\\/_\\/service_worker\\/55j0\\/sw_iframe\\.html",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sgtm-biomedcentral.apps.public.k8s",
+                "sgtm-springernature.apps.public.k8s"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000279,
+            "cnames": [
+                {
+                    "original": "sgtm.biomedcentral.com",
+                    "resolved": "sgtm-biomedcentral.apps.public.k8s.springernature.io"
+                },
+                {
+                    "original": "sgtm.springernature.com",
+                    "resolved": "sgtm-springernature.apps.public.k8s.springernature.io"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "biomedcentral.com",
+                "www.springernature.com"
+            ]
+        },
+        {
             "rule": "springernature\\.io\\/authorize",
-            "cookies": 0.000205,
+            "cookies": 0.0000279,
             "fingerprinting": 0,
             "subdomains": [
                 "geo-gcp.cdn"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000205,
+            "prevalence": 0.0000279,
             "cnames": [
                 {
                     "original": "idp.springer.com",
@@ -69,69 +324,6 @@
             ]
         },
         {
-            "rule": "springernature\\.io\\/vendor-list\\.json",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "geo-gcp.cdn"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000205,
-            "cnames": [
-                {
-                    "original": "cmp.springer.com",
-                    "resolved": "geo-gcp.cdn.springernature.io"
-                },
-                {
-                    "original": "cmp.nature.com",
-                    "resolved": "geo-gcp.cdn.springernature.io"
-                }
-            ],
-            "responseHashes": [
-                "b5d51e0aeea9162bf1bb4d65c04c80f9a60152d09d0eafe271332189685d9c69"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "springer.com",
-                "www.nature.com"
-            ]
-        },
-        {
-            "rule": "springernature\\.io\\/collect-cmp",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "sgtm-springer.apps.public.k8s",
-                "sgtm-nature.apps.public.k8s"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000205,
-            "cnames": [
-                {
-                    "original": "sgtm.springer.com",
-                    "resolved": "sgtm-springer.apps.public.k8s.springernature.io"
-                },
-                {
-                    "original": "sgtm.nature.com",
-                    "resolved": "sgtm-nature.apps.public.k8s.springernature.io"
-                }
-            ],
-            "responseHashes": [
-                "7fff1569ea68ef52782ba25b0cf3934627f7a4fc1e8e22f4652de959c5f97978"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "springer.com",
-                "www.nature.com"
-            ]
-        },
-        {
             "rule": "springernature\\.io\\/exposed-details",
             "cookies": 0,
             "fingerprinting": 0,
@@ -140,7 +332,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000205,
+            "prevalence": 0.0000279,
             "cnames": [
                 {
                     "original": "idp.springer.com",
@@ -165,7 +357,7 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000205,
+    "cookies": 0.0000698,
     "topInitiators": [
         {
             "domain": "googletagmanager.com",
@@ -177,17 +369,18 @@
         }
     ],
     "types": {
-        "Document": 2,
-        "Fetch": 2,
-        "Image": 2,
+        "Fetch": 7,
+        "Script": 10,
+        "Image": 5,
+        "Document": 4,
         "XHR": 2
     },
     "nameservers": [
+        "pdns5.ultradns.info",
+        "pdns1.ultradns.net",
         "pdns6.ultradns.co.uk",
         "pdns4.ultradns.org",
         "pdns3.ultradns.org",
-        "pdns2.ultradns.net",
-        "pdns5.ultradns.info",
-        "pdns1.ultradns.net"
+        "pdns2.ultradns.net"
     ]
 }

@@ -7,11 +7,13 @@
     "source": [
         "DuckDuckGo-GB"
     ],
-    "prevalence": 0.000206,
-    "sites": 2,
+    "prevalence": 0.0000855,
+    "sites": 6,
     "subdomains": [
+        "vercel.fides-cdn",
+        "haven.fides-cdn",
         "axios.fides-cdn",
-        "haven.fides-cdn"
+        "privacy-vercel.us.fides"
     ],
     "cnames": [
         {
@@ -23,18 +25,20 @@
     "resources": [
         {
             "rule": "ethyca\\.com\\/fides\\.js",
-            "cookies": 0,
+            "cookies": 0.0000142,
             "fingerprinting": 1,
             "subdomains": [
-                "axios.fides-cdn",
-                "haven.fides-cdn"
+                "vercel.fides-cdn",
+                "haven.fides-cdn",
+                "axios.fides-cdn"
             ],
             "apis": {
-                "Document.cookie getter": 1,
-                "Navigator.prototype.language": 1
+                "Document.cookie getter": 3,
+                "Navigator.prototype.language": 2,
+                "Document.cookie setter": 1
             },
-            "sites": 2,
-            "prevalence": 0.000206,
+            "sites": 5,
+            "prevalence": 0.0000712,
             "cnames": [
                 {
                     "original": "privacy.axios.com",
@@ -42,28 +46,65 @@
                 }
             ],
             "responseHashes": [
-                "58755261472e123ca81f8de37184f1c2ad47ea5c82392a843c3885910585a7bf"
+                "1d1a28c7818acd5332d26ecacceb5dc13f8c6e72144248978c7477f16c7a6caf",
+                "cb9266115ca77d2c68adf872cd77ff00ac1c817c2d37154e76cc2e7d08c9aff3",
+                "f3f3e317475f21c2de35907fb74faab9287ee5ea3d446bde069f8e680c39a52d"
             ],
             "type": "Script",
+            "firstPartyCookies": {
+                "fides_consent": {
+                    "ttl": 31536013,
+                    "length": 454,
+                    "prevalence": 0.00001424197108879869,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ai-sdk.dev",
+                "haven.com",
+                "v0.dev",
+                "www.axios.com",
+                "www.haven.com"
+            ]
+        },
+        {
+            "rule": "ethyca\\.com\\/api\\/v1\\/privacy-preferences",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "privacy-vercel.us.fides"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000285,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "axios.com",
-                "www.haven.com"
+                "nextjs.org",
+                "v0.dev"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.0000142,
     "topInitiators": [
         {
+            "domain": "first party",
+            "prevalence": 0.6666666666666666
+        },
+        {
             "domain": "googletagmanager.com",
-            "prevalence": 1
+            "prevalence": 0.3333333333333333
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 5,
+        "Fetch": 2
     },
     "nameservers": [
         "ns-130.awsdns-16.com",

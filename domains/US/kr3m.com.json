@@ -4,11 +4,12 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.00000707,
-    "sites": 1,
+    "prevalence": 0.000015,
+    "sites": 2,
     "subdomains": [
         "cas2",
-        "borg-live"
+        "tracking-live",
+        "borg-auswertung"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -22,20 +23,106 @@
             ],
             "apis": {
                 "window.localStorage": 2,
-                "window.sessionStorage": 2
+                "window.sessionStorage": 2,
+                "Notification.permission": 2,
+                "Navigator.prototype.plugins": 2
             },
             "sites": 2,
-            "prevalence": 0.0000141,
+            "prevalence": 0.000015,
             "cnames": [],
             "responseHashes": [
-                "bd2ff4a0bd22a8f49c680c42ac9efc8ed62ca376d65df045a6428b163612f612"
+                "cc05278e92d300b1df6504c5f07f424feba1778cde9a77c1d36009faa3c6f251"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "spiegel.de",
-                "spiele.spiegel.de"
+                "express.co.uk",
+                "games.mirror.co.uk"
+            ]
+        },
+        {
+            "rule": "kr3m\\.com\\/js\\/client\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "tracking-live"
+            ],
+            "apis": {
+                "window.sessionStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000015,
+            "cnames": [],
+            "responseHashes": [
+                "d713607487f2091195ab8cee567ee1125996d4f566d468a5eb318380f48c07f1"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "express.co.uk",
+                "games.mirror.co.uk"
+            ]
+        },
+        {
+            "rule": "kr3m\\.com\\/matomo\\.js",
+            "cookies": 0.000015,
+            "fingerprinting": 2,
+            "subdomains": [
+                "borg-auswertung"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "NavigatorUAData.prototype.brands": 2,
+                "NavigatorUAData.prototype.platform": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.mimeTypes": 2,
+                "Navigator.prototype.cookieEnabled": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.platform": 2,
+                "Document.cookie setter": 2,
+                "window.name": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000015,
+            "cnames": [],
+            "responseHashes": [
+                "89e35b18e2ddd93f040839eb32f71a22a7781f27fca6e294f9405d5fb0ea2cc3"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_pk_id.39.a97a": {
+                    "ttl": 33955202,
+                    "length": 28,
+                    "prevalence": 0.0000074928817623257905,
+                    "uniqueness": 1
+                },
+                "_pk_ses.39.a97a": {
+                    "ttl": 1804,
+                    "length": 1,
+                    "prevalence": 0.0000074928817623257905,
+                    "uniqueness": 1
+                },
+                "_pk_id.36.348d": {
+                    "ttl": 33955203,
+                    "length": 28,
+                    "prevalence": 0.0000074928817623257905,
+                    "uniqueness": 1
+                },
+                "_pk_ses.36.348d": {
+                    "ttl": 1805,
+                    "length": 1,
+                    "prevalence": 0.0000074928817623257905,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "express.co.uk",
+                "games.mirror.co.uk"
             ]
         },
         {
@@ -46,18 +133,20 @@
                 "cas2"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000141,
+            "sites": 3,
+            "prevalence": 0.0000225,
             "cnames": [],
             "responseHashes": [
-                "718bf1aa55b13315471e60d362327b973a71b0de31922d9f0f1e9b54f422dfb7"
+                "718bf1aa55b13315471e60d362327b973a71b0de31922d9f0f1e9b54f422dfb7",
+                "d2f938b51f42b8414db9bddf0acdd70c7aa5e4dd0fe8d0c2b90ad715d864b03a"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "spiegel.de",
-                "spiele.spiegel.de"
+                "express.co.uk",
+                "games.express.co.uk",
+                "games.mirror.co.uk"
             ]
         },
         {
@@ -65,45 +154,71 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "borg-live"
+                "borg-auswertung"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000141,
+            "sites": 3,
+            "prevalence": 0.0000225,
             "cnames": [],
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
             ],
             "type": "Ping",
             "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "lotame_domain_check": 0.000022478645286977373
+            },
+            "exampleSites": [
+                "express.co.uk",
+                "games.express.co.uk",
+                "games.mirror.co.uk"
+            ]
+        },
+        {
+            "rule": "kr3m\\.com\\/gateway",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tracking-live"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000225,
+            "cnames": [],
+            "responseHashes": [
+                "eb045d78d273107348b0300c01d29b7552d622abbc6faf81b3ec55359aa9950c"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "spiegel.de",
-                "spiele.spiegel.de"
+                "express.co.uk",
+                "games.express.co.uk",
+                "games.mirror.co.uk"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.00000707,
+    "cookies": 0.000015,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.8095238095238095
+            "prevalence": 0.5
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.19047619047619047
+            "prevalence": 0.5
         }
     ],
     "types": {
-        "Script": 2,
-        "XHR": 2,
-        "Ping": 2
+        "Script": 6,
+        "XHR": 6,
+        "Ping": 3
     },
     "nameservers": [
+        "ns2.bw-networx.net",
         "ns3.bw-networx.net",
-        "ns1.bw-networx.net",
-        "ns2.bw-networx.net"
+        "ns1.bw-networx.net"
     ]
 }

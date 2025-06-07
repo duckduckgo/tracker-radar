@@ -9,7 +9,7 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000283,
+    "prevalence": 0.00003,
     "sites": 4,
     "subdomains": [
         "dualstack"
@@ -22,6 +22,10 @@
         {
             "original": "consent-notice.ft.com",
             "resolved": "dualstack.financial-times-tls13-0rtt.map.fastly.net"
+        },
+        {
+            "original": "consent.ft.com",
+            "resolved": "financial-times-tls13-0rtt.map.fastly.net"
         },
         {
             "original": "markets-data-api-proxy.ft.com",
@@ -47,7 +51,7 @@
             ],
             "apis": {},
             "sites": 3,
-            "prevalence": 0.0000212,
+            "prevalence": 0.0000225,
             "cnames": [
                 {
                     "original": "consent-notice.ft.com",
@@ -73,7 +77,7 @@
             "subdomains": [],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000141,
+            "prevalence": 0.000015,
             "cnames": [
                 {
                     "original": "spoor-api.ft.com",
@@ -91,12 +95,12 @@
         },
         {
             "rule": "financial-times-tls13-0rtt\\.map\\.fastly\\.net\\/ingest",
-            "cookies": 0.0000141,
+            "cookies": 0.000015,
             "fingerprinting": 0,
             "subdomains": [],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000141,
+            "prevalence": 0.000015,
             "cnames": [
                 {
                     "original": "spoor-api.ft.com",
@@ -115,13 +119,61 @@
             ]
         },
         {
+            "rule": "financial-times-tls13-0rtt\\.map\\.fastly\\.net\\/__consent\\/consent-record-cookie",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000225,
+            "cnames": [
+                {
+                    "original": "consent.ft.com",
+                    "resolved": "financial-times-tls13-0rtt.map.fastly.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ft.com",
+                "markets.ft.com",
+                "www.ft.com"
+            ]
+        },
+        {
+            "rule": "financial-times-tls13-0rtt\\.map\\.fastly\\.net\\/__consent\\/consent-record-cookie",
+            "cookies": 0.0000225,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000225,
+            "cnames": [
+                {
+                    "original": "consent.ft.com",
+                    "resolved": "financial-times-tls13-0rtt.map.fastly.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ft.com",
+                "markets.ft.com",
+                "www.ft.com"
+            ]
+        },
+        {
             "rule": "financial-times-tls13-0rtt\\.map\\.fastly\\.net\\/api\\/v1\\/compliance-region\\.json",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000141,
+            "prevalence": 0.000015,
             "cnames": [
                 {
                     "original": "privacy.ft.com",
@@ -146,7 +198,7 @@
             "subdomains": [],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000141,
+            "prevalence": 0.000015,
             "cnames": [
                 {
                     "original": "markets-data-api-proxy.ft.com",
@@ -154,7 +206,7 @@
                 }
             ],
             "responseHashes": [
-                "b070df7fd2f8211cec91e2d0b968117f2ac0e1a2ebc7275ee16d7679f9caeff7"
+                "423a80e938bb57bfb303c4de69c561bae209aeac49ca7d524afebe51330f0f94"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -171,7 +223,7 @@
             "subdomains": [],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000141,
+            "prevalence": 0.000015,
             "cnames": [
                 {
                     "original": "spoor-api.ft.com",
@@ -198,7 +250,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000141,
+            "prevalence": 0.000015,
             "cnames": [
                 {
                     "original": "ads-api.ft.com",
@@ -206,7 +258,7 @@
                 }
             ],
             "responseHashes": [
-                "79f0c38c8f0d892c2925e0d2562c3c487713c34080eafd2ffd27da854f0a67f3"
+                "0b575f584f3d25d477c82390eba620cfe7b52dbe88e104010125cb0dfb7512d6"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -228,12 +280,18 @@
         "Session Replay"
     ],
     "performance": {},
-    "cookies": 0.0000141,
+    "cookies": 0.00003,
+    "topInitiators": [
+        {
+            "domain": "doubleclick.net",
+            "prevalence": 1
+        }
+    ],
     "types": {
         "Script": 3,
-        "Preflight": 2,
+        "Preflight": 5,
         "XHR": 2,
-        "Fetch": 6,
+        "Fetch": 9,
         "Ping": 2
     },
     "nameservers": []

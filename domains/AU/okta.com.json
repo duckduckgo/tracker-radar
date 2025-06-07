@@ -7,17 +7,64 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.000424,
-    "sites": 4,
+    "prevalence": 0.000454,
+    "sites": 32,
     "subdomains": [
-        "login",
+        "uon",
+        "servicenowsignon.customdomains",
+        "prod-ctct.customdomains",
+        "logon.customdomains",
         "churchofjesuschrist.customdomains",
-        "servicenowsignon.customdomains"
+        "racq.customdomains",
+        "astminternational.customdomains",
+        "login",
+        "benjaminmoore.customdomains",
+        "monashuni",
+        "gale.customdomains",
+        "sas.customdomains",
+        "myalconid.customdomains",
+        "asco.customdomains"
     ],
     "cnames": [
         {
+            "original": "auth.sas.com",
+            "resolved": "sas.customdomains.okta.com"
+        },
+        {
+            "original": "iam.astm.org",
+            "resolved": "astminternational.customdomains.okta.com"
+        },
+        {
             "original": "id.churchofjesuschrist.org",
             "resolved": "churchofjesuschrist.customdomains.okta.com"
+        },
+        {
+            "original": "id.myalcon.com",
+            "resolved": "myalconid.customdomains.okta.com"
+        },
+        {
+            "original": "identity.constantcontact.com",
+            "resolved": "prod-ctct.customdomains.okta.com"
+        },
+        {
+            "original": "login.infosecinstitute.com",
+            "resolved": "gale.customdomains.okta.com"
+        },
+        {
+            "original": "logon.bcg.com",
+            "resolved": "logon.customdomains.okta.com"
+        },
+        {
+            "original": "my.racq.com.au",
+            "resolved": "racq.customdomains.okta.com"
+        },
+        {
+            "original": "okta.benjaminmoore.com",
+            "resolved": "benjaminmoore.customdomains.okta.com"
+        },
+        {
+            "original": "signin.asco.org",
+            "resolved": "asco.customdomains.okta.com"
         },
         {
             "original": "ssosignon.servicenow.com",
@@ -27,6 +74,93 @@
     "fingerprinting": 1,
     "resources": [
         {
+            "rule": "okta\\.com\\/api\\/v1\\/sessions\\/me",
+            "cookies": 0.0000709,
+            "fingerprinting": 0,
+            "subdomains": [
+                "uon",
+                "servicenowsignon.customdomains",
+                "prod-ctct.customdomains",
+                "logon.customdomains"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.0000709,
+            "cnames": [
+                {
+                    "original": "ssosignon.servicenow.com",
+                    "resolved": "servicenowsignon.customdomains.okta.com"
+                },
+                {
+                    "original": "identity.constantcontact.com",
+                    "resolved": "prod-ctct.customdomains.okta.com"
+                },
+                {
+                    "original": "logon.bcg.com",
+                    "resolved": "logon.customdomains.okta.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "newcastle.edu.au",
+                "developer.servicenow.com",
+                "login.constantcontact.com",
+                "support.servicenow.com",
+                "www.bcg.com"
+            ]
+        },
+        {
+            "rule": "okta\\.com\\/api\\/v1\\/sessions\\/me",
+            "cookies": 0.000085,
+            "fingerprinting": 0,
+            "subdomains": [
+                "uon",
+                "churchofjesuschrist.customdomains",
+                "racq.customdomains",
+                "astminternational.customdomains",
+                "logon.customdomains"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000085,
+            "cnames": [
+                {
+                    "original": "id.churchofjesuschrist.org",
+                    "resolved": "churchofjesuschrist.customdomains.okta.com"
+                },
+                {
+                    "original": "my.racq.com.au",
+                    "resolved": "racq.customdomains.okta.com"
+                },
+                {
+                    "original": "iam.astm.org",
+                    "resolved": "astminternational.customdomains.okta.com"
+                },
+                {
+                    "original": "logon.bcg.com",
+                    "resolved": "logon.customdomains.okta.com"
+                }
+            ],
+            "responseHashes": [
+                "50d5e83b83649ea1f430d5bf976b50068a63fcbb52ea29350c3b18130f4353b1",
+                "d8f18402bf9e218e6c976b48653988a7e9fb68434ee69a2c76f8f8f27d84be34"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "newcastle.edu.au",
+                "local.churchofjesuschrist.org",
+                "travel.racq.com.au",
+                "www.astm.org",
+                "www.bcg.com",
+                "www.churchofjesuschrist.org"
+            ]
+        },
+        {
             "rule": "okta\\.com\\/discovery\\/iframe\\.html",
             "cookies": 0,
             "fingerprinting": 0,
@@ -34,8 +168,8 @@
                 "login"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000212,
+            "sites": 16,
+            "prevalence": 0.000227,
             "cnames": [],
             "responseHashes": [
                 "349d1426735d9203d547b601ee16fde8fce260fea4f096f5ccd44387c5fa3b45"
@@ -44,8 +178,22 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "unisuper.com.au",
-                "my.unimelb.edu.au"
+                "unimelb.edu.au",
+                "form.racq.com.au",
+                "fuel.rfs.nsw.gov.au",
+                "home.student.monash",
+                "intranet.bunnings.com.au",
+                "manage.theguardian.com",
+                "my.hesta.com.au",
+                "my.monash.apps.monash.edu",
+                "my.monash.edu.au",
+                "my.monash.edu",
+                "my.sawater.com.au",
+                "my.unimelb.edu.au",
+                "myuni.adelaide.edu.au",
+                "portal.edpass.sa.edu.au",
+                "wise2.churchofjesuschrist.org",
+                "www.eduportal.sa.edu.au"
             ]
         },
         {
@@ -56,10 +204,10 @@
                 "login"
             ],
             "apis": {
-                "window.localStorage": 2
+                "window.localStorage": 11
             },
-            "sites": 2,
-            "prevalence": 0.000212,
+            "sites": 12,
+            "prevalence": 0.00017,
             "cnames": [],
             "responseHashes": [
                 "85bb3fbb22f194ed380323307fdac4a74b4f41fe2fa8992765b40728ed75918b"
@@ -68,64 +216,422 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "unisuper.com.au",
-                "my.unimelb.edu.au"
+                "unimelb.edu.au",
+                "fuel.rfs.nsw.gov.au",
+                "home.student.monash",
+                "intranet.bunnings.com.au",
+                "my.monash.apps.monash.edu",
+                "my.monash.edu.au",
+                "my.monash.edu",
+                "my.unimelb.edu.au",
+                "myuni.adelaide.edu.au",
+                "portal.edpass.sa.edu.au",
+                "wise2.churchofjesuschrist.org",
+                "www.eduportal.sa.edu.au"
             ]
         },
         {
             "rule": "okta\\.com\\/api\\/v1\\/sessions\\/me",
-            "cookies": 0.000318,
+            "cookies": 0.0000567,
             "fingerprinting": 0,
             "subdomains": [
-                "churchofjesuschrist.customdomains",
-                "servicenowsignon.customdomains"
+                "servicenowsignon.customdomains",
+                "prod-ctct.customdomains",
+                "benjaminmoore.customdomains"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000318,
+            "sites": 4,
+            "prevalence": 0.0000567,
             "cnames": [
-                {
-                    "original": "id.churchofjesuschrist.org",
-                    "resolved": "churchofjesuschrist.customdomains.okta.com"
-                },
                 {
                     "original": "ssosignon.servicenow.com",
                     "resolved": "servicenowsignon.customdomains.okta.com"
+                },
+                {
+                    "original": "identity.constantcontact.com",
+                    "resolved": "prod-ctct.customdomains.okta.com"
+                },
+                {
+                    "original": "okta.benjaminmoore.com",
+                    "resolved": "benjaminmoore.customdomains.okta.com"
                 }
             ],
+            "responseHashes": [
+                "d575ff47b73b2891c48bee8f17407607cb1047dba6929afd06c1ff92ad915281",
+                "eeb8f4d02d66adf308b61dcb20d1e6693194d975b4a97472dc76db6dddfbde4d"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "servicenow.com",
+                "login.constantcontact.com",
+                "support.servicenow.com",
+                "www.benjaminmoore.com"
+            ]
+        },
+        {
+            "rule": "okta\\.com\\/oauth2\\/v1\\/authorize",
+            "cookies": 0.0000142,
+            "fingerprinting": 0,
+            "subdomains": [
+                "monashuni"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000283,
+            "cnames": [],
             "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "student.monash",
+                "my.monash.apps.monash.edu"
+            ]
+        },
+        {
+            "rule": "okta\\.com\\/api\\/internal\\/brand\\/theme\\/style-sheet",
+            "cookies": 0.0000567,
+            "fingerprinting": 0,
+            "subdomains": [
+                "monashuni"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000567,
+            "cnames": [],
+            "responseHashes": [
+                "9af30b5e4695010f9be253f861784e638c81274ca0390214629886029ca9b509"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "student.monash",
+                "my.monash.apps.monash.edu",
+                "my.monash.edu.au",
+                "my.monash.edu"
+            ]
+        },
+        {
+            "rule": "okta\\.com\\/idp\\/idx\\/introspect",
+            "cookies": 0.0000709,
+            "fingerprinting": 0,
+            "subdomains": [
+                "monashuni",
+                "gale.customdomains"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.0000709,
+            "cnames": [
+                {
+                    "original": "login.infosecinstitute.com",
+                    "resolved": "gale.customdomains.okta.com"
+                }
+            ],
+            "responseHashes": [
+                "62cf3e6d1b048cfca80052bd9c85dc4954a77e799893a9deef1088ec9a3c8a18",
+                "ca12488ba8efc7a2adfec23b49083cbdc7ff62f0e1a303b6b78cd543207b4b03",
+                "34d5140c7ea3465c589c322638e3a435bf6250b39acb01c9877aba020c7082ab",
+                "ef20cd7c98ae3b98b98e3712216b1ef2f2b8b1b522b88fc5c28565caf6ffa2fe"
+            ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "churchofjesuschrist.org",
-                "www.churchofjesuschrist.org",
-                "www.servicenow.com"
+                "student.monash",
+                "my.monash.apps.monash.edu",
+                "my.monash.edu.au",
+                "my.monash.edu",
+                "www.infosecinstitute.com"
+            ]
+        },
+        {
+            "rule": "okta\\.com\\/favicon\\.ico",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "monashuni"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000567,
+            "cnames": [],
+            "responseHashes": [
+                "115786b0e33fe0c1c09820522046a6f08d04144426b260654e722cb51e0d9e25"
+            ],
+            "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "student.monash",
+                "my.monash.apps.monash.edu",
+                "my.monash.edu.au",
+                "my.monash.edu"
+            ]
+        },
+        {
+            "rule": "okta\\.com\\/app\\/monashuniversity_mymonashedu_1\\/exk4ro0kc1lX9rTgc2p7\\/sso\\/saml",
+            "cookies": 0.0000283,
+            "fingerprinting": 1,
+            "subdomains": [
+                "monashuni"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.cookieEnabled": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000283,
+            "cnames": [],
+            "responseHashes": [
+                "ee6802f2afb7333473019dd04c7f71f949ad366e7330665af0cfc15afb476f3e"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "monash.edu.au",
+                "my.monash.edu"
+            ]
+        },
+        {
+            "rule": "okta\\.com\\/api\\/v1\\/users\\/me",
+            "cookies": 0.0000283,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sas.customdomains",
+                "myalconid.customdomains"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000283,
+            "cnames": [
+                {
+                    "original": "auth.sas.com",
+                    "resolved": "sas.customdomains.okta.com"
+                },
+                {
+                    "original": "id.myalcon.com",
+                    "resolved": "myalconid.customdomains.okta.com"
+                }
+            ],
+            "responseHashes": [
+                "a2fa866e5aad8d91470b1b4183b09f2a7be4a7aa8d8d3e0d0bccac0fabe56915"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sas.com",
+                "www.myalcon.com"
+            ]
+        },
+        {
+            "rule": "okta\\.com\\/oauth2\\/aus1goap5nQ33vo7A297\\/v1\\/authorize",
+            "cookies": 0.0000283,
+            "fingerprinting": 0,
+            "subdomains": [
+                "asco.customdomains"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000283,
+            "cnames": [
+                {
+                    "original": "signin.asco.org",
+                    "resolved": "asco.customdomains.okta.com"
+                }
+            ],
+            "responseHashes": [
+                "213ca7623e914e7bbe90c4c02dcd17128358e2ce6f1e6a803e8dcad0e3ebe262"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "asco.org",
+                "www.asco.org"
+            ]
+        },
+        {
+            "rule": "okta\\.com\\/oauth2\\/ausr9q90qjRyN0M7P697\\/\\.well-known\\/openid-configuration",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gale.customdomains"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000283,
+            "cnames": [
+                {
+                    "original": "login.infosecinstitute.com",
+                    "resolved": "gale.customdomains.okta.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "infosecinstitute.com",
+                "www.infosecinstitute.com"
+            ]
+        },
+        {
+            "rule": "okta\\.com\\/oauth2\\/ausr9q90qjRyN0M7P697\\/\\.well-known\\/openid-configuration",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gale.customdomains"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000283,
+            "cnames": [
+                {
+                    "original": "login.infosecinstitute.com",
+                    "resolved": "gale.customdomains.okta.com"
+                }
+            ],
+            "responseHashes": [
+                "b8f2e025262f2f5478fe9684596f010366a49027113b81060e1ef43c7e59c296"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "infosecinstitute.com",
+                "www.infosecinstitute.com"
+            ]
+        },
+        {
+            "rule": "okta\\.com\\/oauth2\\/ausr9q90qjRyN0M7P697\\/v1\\/interact",
+            "cookies": 0.0000283,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gale.customdomains"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000283,
+            "cnames": [
+                {
+                    "original": "login.infosecinstitute.com",
+                    "resolved": "gale.customdomains.okta.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "infosecinstitute.com",
+                "www.infosecinstitute.com"
+            ]
+        },
+        {
+            "rule": "okta\\.com\\/oauth2\\/ausr9q90qjRyN0M7P697\\/v1\\/interact",
+            "cookies": 0.0000283,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gale.customdomains"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000283,
+            "cnames": [
+                {
+                    "original": "login.infosecinstitute.com",
+                    "resolved": "gale.customdomains.okta.com"
+                }
+            ],
+            "responseHashes": [
+                "d8cb1edbc51cb082f233f9e838f366f27ced97694d8a955d46260c4ea1b27de3"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "infosecinstitute.com",
+                "www.infosecinstitute.com"
+            ]
+        },
+        {
+            "rule": "okta\\.com\\/idp\\/idx\\/introspect",
+            "cookies": 0.0000283,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gale.customdomains"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000283,
+            "cnames": [
+                {
+                    "original": "login.infosecinstitute.com",
+                    "resolved": "gale.customdomains.okta.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "infosecinstitute.com",
+                "www.infosecinstitute.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000212,
+    "cookies": 0.000298,
     "topInitiators": [
         {
             "domain": "oktacdn.com",
-            "prevalence": 1
+            "prevalence": 0.6666666666666666
+        },
+        {
+            "domain": "azure.com",
+            "prevalence": 0.12121212121212122
+        },
+        {
+            "domain": "service-now.com",
+            "prevalence": 0.06060606060606061
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.06060606060606061
+        },
+        {
+            "domain": "cookiebot.com",
+            "prevalence": 0.06060606060606061
+        },
+        {
+            "domain": "du11hjcvx0uqb.cloudfront.net",
+            "prevalence": 0.030303030303030304
         }
     ],
     "types": {
-        "Document": 2,
-        "Script": 2,
-        "Fetch": 3
+        "Preflight": 11,
+        "Fetch": 15,
+        "Document": 22,
+        "Script": 12,
+        "XHR": 6,
+        "Stylesheet": 4,
+        "Other": 4
     },
     "nameservers": [
+        "ns-684.awsdns-21.net",
+        "ns-cloud-a3.googledomains.com",
+        "ns-cloud-a4.googledomains.com",
+        "ns-cloud-a2.googledomains.com",
         "ns-1459.awsdns-54.org",
         "ns-1563.awsdns-03.co.uk",
-        "ns-285.awsdns-35.com",
-        "ns-684.awsdns-21.net",
         "ns-cloud-a1.googledomains.com",
-        "ns-cloud-a2.googledomains.com",
-        "ns-cloud-a3.googledomains.com",
-        "ns-cloud-a4.googledomains.com"
+        "ns-285.awsdns-35.com"
     ]
 }
