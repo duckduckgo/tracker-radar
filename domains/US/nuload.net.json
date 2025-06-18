@@ -4,9 +4,12 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000354,
-    "sites": 5,
-    "subdomains": [],
+    "prevalence": 0.0000478,
+    "sites": 7,
+    "subdomains": [
+        "cdn",
+        "www"
+    ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
@@ -17,7 +20,7 @@
             "subdomains": [],
             "apis": {},
             "sites": 5,
-            "prevalence": 0.0000354,
+            "prevalence": 0.0000341,
             "cnames": [],
             "responseHashes": [
                 "55ccc06ff51a1aa5a0247a2a341b768fec8a6b952463d43f5b379a521c7a8a58"
@@ -27,10 +30,84 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "gebuehren-rechner.info",
-                "www.adc.sk",
+                "www.cuitonline.com",
                 "www.mehrwertsteuerrechner.de",
                 "www.otvaracie-hodiny.sk",
                 "zdravoteka.sk"
+            ]
+        },
+        {
+            "rule": "nuload\\.net\\/assets\\/images\\/logoNuwara\\/logoDark\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000273,
+            "cnames": [],
+            "responseHashes": [
+                "9af41cc4ef7a41e4099f5c6c2f0f762001655cb8bc7bf64b00125712ffc85737"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gebuehren-rechner.info",
+                "www.adc.sk",
+                "www.cuitonline.com",
+                "www.taxi-rechner.de"
+            ]
+        },
+        {
+            "rule": "nuload\\.net\\/adc_sk\\/ad\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "www",
+                "cdn"
+            ],
+            "apis": {
+                "window.sessionStorage": 1,
+                "window.localStorage": 1,
+                "Document.cookie getter": 1,
+                "Navigator.prototype.language": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "4fd37e82152a6312a134c2229796b97c89f471063eeefe4d4f5e8040a85c273e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "adc.sk",
+                "www.adc.sk"
+            ]
+        },
+        {
+            "rule": "nuload\\.net\\/assets\\/custom-style\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "2bb278797ce700fc2067eb9589fb3fc32a0ed4ac2742f8b6d2bd34919fcba935"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "adc.sk",
+                "www.taxi-rechner.de"
             ]
         }
     ],
@@ -40,11 +117,18 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.8333333333333334
+        },
+        {
+            "domain": "doubleclick.net",
+            "prevalence": 0.16666666666666666
         }
     ],
     "types": {
-        "Fetch": 5
+        "Fetch": 5,
+        "Image": 4,
+        "Script": 2,
+        "Stylesheet": 2
     },
     "nameservers": [
         "dns1.registrar-servers.com",

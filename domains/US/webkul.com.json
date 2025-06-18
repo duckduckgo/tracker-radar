@@ -4,53 +4,130 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000424,
-    "sites": 6,
+    "prevalence": 0.0000683,
+    "sites": 10,
     "subdomains": [
+        "sp-seller",
         "sp-auction",
+        "auction-bid-update",
         "bigcommerce"
     ],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
         {
-            "rule": "webkul\\.com\\/js\\/wk_shopify_auction\\.js",
+            "rule": "webkul\\.com\\/js\\/seller_profile_tag\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "sp-auction"
+                "sp-seller"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000141,
+            "prevalence": 0.0000137,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "09f222f1443740b2dfbc4f02794bf49b2f19659cc9b5fd0dac9ad5e1f9bc1fe1"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "buildasoil.com",
+                "www.lionbrand.com"
+            ]
+        },
+        {
+            "rule": "webkul\\.com\\/js\\/wk_shopify_auction\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "sp-auction"
+            ],
+            "apis": {
+                "Date.prototype.getTimezoneOffset": 3
+            },
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "2560800343ab1d7931e89432002b1a561d92642f15a6a48d4f91e848a68bd269"
+            ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "costafarms.com",
+                "smashitsports.com",
                 "www.deeringbanjos.com"
             ]
         },
         {
             "rule": "webkul\\.com\\/js\\/wk_auction_category\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "sp-auction"
             ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000141,
+            "apis": {
+                "Date.prototype.getTimezoneOffset": 3
+            },
+            "sites": 3,
+            "prevalence": 0.0000205,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "e9bfd71b3a590ae63eb57507e5f5b80c9109f897b14bddd4f6ee036ad5c4c200"
+            ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "costafarms.com",
+                "smashitsports.com",
                 "www.deeringbanjos.com"
+            ]
+        },
+        {
+            "rule": "webkul\\.com\\/socket\\.io\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "auction-bid-update"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "costafarms.com",
+                "smashitsports.com",
+                "www.deeringbanjos.com"
+            ]
+        },
+        {
+            "rule": "webkul\\.com\\/js\\/customer_script\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sp-seller"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e3c0d3789664195e287fcc86f8a7063f8084c3a8158221ccd5c9d3751f96b421"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lionbrand.com",
+                "www.lionbrand.com"
             ]
         },
         {
@@ -62,7 +139,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000141,
+            "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
                 "40c9336fd0282b776da1584656ceb00ae32fcc6c0b27786407d22317a50fde61"
@@ -84,7 +161,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000141,
+            "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
                 "d473216b182437445d4c19c258404ed1dc4b4aa34cfa88afcd4aadf2fb0fb825"
@@ -100,15 +177,20 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.00000683,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.6923076923076923
+        },
+        {
+            "domain": "cloudflare.com",
+            "prevalence": 0.3076923076923077
         }
     ],
     "types": {
-        "Script": 8
+        "Script": 14,
+        "WebSocket": 3
     },
     "nameservers": [
         "cody.ns.cloudflare.com",

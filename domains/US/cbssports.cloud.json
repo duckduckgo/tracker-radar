@@ -4,43 +4,98 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000141,
-    "sites": 2,
+    "prevalence": 0.0000205,
+    "sites": 3,
     "subdomains": [
-        "avia.prod.video"
+        "video-api.prod.video"
     ],
     "cnames": [
         {
-            "original": "avia.cbssports.com",
-            "resolved": "avia.prod.video.cbssports.cloud"
+            "original": "video-api.cbssports.com",
+            "resolved": "video-api.prod.video.cbssports.cloud"
         }
     ],
     "fingerprinting": 2,
     "resources": [
         {
-            "rule": "cbssports\\.cloud\\/latest\\/video-avia-wrapper\\.min\\.js",
+            "rule": "cbssports\\.cloud\\/vms\\/fms\\/proxy\\/v1\\/",
             "cookies": 0,
-            "fingerprinting": 2,
+            "fingerprinting": 0,
             "subdomains": [
-                "avia.prod.video"
+                "video-api.prod.video"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000141,
+            "prevalence": 0.0000137,
             "cnames": [
                 {
-                    "original": "avia.cbssports.com",
-                    "resolved": "avia.prod.video.cbssports.cloud"
+                    "original": "video-api.cbssports.com",
+                    "resolved": "video-api.prod.video.cbssports.cloud"
                 }
             ],
             "responseHashes": [
-                "2da1f3fd31202cdacded8f65985bbbce3fd7eddf7ede8af2cf6f2ae5e39384ec"
+                "dba0fb907b535948be7c5b7788909f67597722dc3e2ac60b509460f9c721ff8c"
             ],
-            "type": "Script",
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "sportsline.com",
+                "cbssports.com",
+                "www.cbssports.com"
+            ]
+        },
+        {
+            "rule": "cbssports\\.cloud\\/vms\\/fms\\/proxy\\/v1",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "video-api.prod.video"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [
+                {
+                    "original": "video-api.cbssports.com",
+                    "resolved": "video-api.prod.video.cbssports.cloud"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cbssports.com",
+                "www.cbssports.com",
+                "www.sportsline.com"
+            ]
+        },
+        {
+            "rule": "cbssports\\.cloud\\/vms\\/fms\\/proxy\\/v1",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "video-api.prod.video"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [
+                {
+                    "original": "video-api.cbssports.com",
+                    "resolved": "video-api.prod.video.cbssports.cloud"
+                }
+            ],
+            "responseHashes": [
+                "8eefcb67e117e2227e641abb40ce533786e617d79e75006886f5da1bd79de43b",
+                "bd7313c3e255ba12fdcc5ad27f59cc7c7007cae12d0ec1d30615a460be411acb"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cbssports.com",
+                "www.cbssports.com",
                 "www.sportsline.com"
             ]
         }
@@ -50,17 +105,27 @@
     "cookies": 0,
     "topInitiators": [
         {
+            "domain": "cbsistatic.com",
+            "prevalence": 0.5
+        },
+        {
+            "domain": "confiant-integrations.net",
+            "prevalence": 0.25
+        },
+        {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.25
         }
     ],
     "types": {
-        "Script": 2
+        "Fetch": 2,
+        "Preflight": 3,
+        "XHR": 3
     },
     "nameservers": [
-        "ns-1343.awsdns-39.org",
-        "ns-953.awsdns-55.net",
         "ns-113.awsdns-14.com",
+        "ns-953.awsdns-55.net",
+        "ns-1343.awsdns-39.org",
         "ns-1856.awsdns-40.co.uk"
     ]
 }

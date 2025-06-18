@@ -4,26 +4,32 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.00000707,
-    "sites": 1,
+    "prevalence": 0.0000137,
+    "sites": 2,
     "subdomains": [
-        "nr-agent"
+        "nr-agent",
+        "nr-beacon"
     ],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "movingimage\\.com\\/nr-loader-spa-current\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "nr-agent"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Event.prototype.timeStamp": 2
+            },
             "sites": 2,
-            "prevalence": 0.0000141,
+            "prevalence": 0.0000137,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "4b531838512c4344702d83a94db7e4cf0939827340d558159abc1208dae27601"
+            ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -33,18 +39,69 @@
             ]
         },
         {
-            "rule": "movingimage\\.com\\/nr-spa-1\\.290\\.0\\.min\\.js",
+            "rule": "movingimage\\.com\\/nr-spa-1\\.292\\.0\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 2,
             "subdomains": [
                 "nr-agent"
             ],
+            "apis": {
+                "PerformanceTiming.prototype.navigationStart": 2,
+                "Navigator.prototype.connection": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.webdriver": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "eafa29f462263130151c9e4351f6e7515e9ab891cf6fd8ac715121e14eab7274"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "belimo.com",
+                "www.belimo.com"
+            ]
+        },
+        {
+            "rule": "movingimage\\.com\\/1\\/NRJS-82cba0be311d80b7b8e",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "nr-beacon"
+            ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000141,
+            "prevalence": 0.0000137,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Script",
+            "responseHashes": [
+                "510f80e3ee10e32b375a212748e07682c19973b2351edb745720dba30e57ff3c"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "belimo.com",
+                "www.belimo.com"
+            ]
+        },
+        {
+            "rule": "movingimage\\.com\\/events\\/1\\/NRJS-82cba0be311d80b7b8e",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "nr-beacon"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "0c9cf152a0ad00d4f102c93c613c104914be5517ac8f8e0831727f8bfbe8b300"
+            ],
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -63,12 +120,13 @@
         }
     ],
     "types": {
-        "Script": 4
+        "Script": 4,
+        "XHR": 4
     },
     "nameservers": [
         "ns1-08.azure-dns.com",
         "ns2-08.azure-dns.net",
-        "ns3-08.azure-dns.org",
-        "ns4-08.azure-dns.info"
+        "ns4-08.azure-dns.info",
+        "ns3-08.azure-dns.org"
     ]
 }

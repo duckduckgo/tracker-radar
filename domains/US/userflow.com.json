@@ -4,10 +4,11 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000141,
-    "sites": 2,
+    "prevalence": 0.0000273,
+    "sites": 4,
     "subdomains": [
-        "js"
+        "js",
+        "e"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -20,23 +21,45 @@
                 "js"
             ],
             "apis": {
+                "window.sessionStorage": 3,
+                "window.localStorage": 3,
                 "Navigator.prototype.userAgent": 2,
-                "window.localStorage": 2,
-                "window.sessionStorage": 2,
                 "window.innerWidth": 2,
                 "window.innerHeight": 2
             },
-            "sites": 2,
-            "prevalence": 0.0000141,
+            "sites": 3,
+            "prevalence": 0.0000205,
             "cnames": [],
             "responseHashes": [
-                "1894fda74e266cb65ea9cc82d0eb212743060bec7332c0c2745ab2ae6da486e9"
+                "b4bebf36a2cb3024efc8e57495fceab85cbd9d6f964ecc316c5d74a6260bfcf0",
+                "121d580c9b7b786e57e8566df3eb39a44fd63f09fb484dc49fc2d3799bffe698"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "ammosquared.com",
+                "panzerarmsusa.com",
+                "www.southwire.com"
+            ]
+        },
+        {
+            "rule": "userflow\\.com\\/end-users\\/ct_ovm3ixdqd5exdcxxkbpnarflja\\/socket\\/websocket",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "e"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "southwire.com",
                 "www.southwire.com"
             ]
         }
@@ -47,11 +70,16 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.967741935483871
+        },
+        {
+            "domain": "getuserflow.com",
+            "prevalence": 0.03225806451612903
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 3,
+        "WebSocket": 2
     },
     "nameservers": [
         "clark.ns.cloudflare.com",

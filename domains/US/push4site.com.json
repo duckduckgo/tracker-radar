@@ -7,11 +7,11 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000354,
-    "sites": 5,
+    "prevalence": 0.0000205,
+    "sites": 3,
     "subdomains": [
         "iz",
-        "kasperskycomtr",
+        "cybersport",
         "kasperskycom"
     ],
     "cnames": [],
@@ -23,27 +23,74 @@
             "fingerprinting": 1,
             "subdomains": [
                 "iz",
-                "kasperskycomtr",
+                "cybersport",
                 "kasperskycom"
             ],
             "apis": {
-                "Navigator.prototype.language": 1,
-                "Navigator.prototype.userAgent": 1,
-                "window.localStorage": 1,
-                "Document.cookie getter": 1,
-                "Date.prototype.getTime": 1
+                "Navigator.prototype.language": 3,
+                "Navigator.prototype.userAgent": 3,
+                "window.localStorage": 3,
+                "Document.cookie getter": 3,
+                "Date.prototype.getTime": 3,
+                "Notification.permission": 1
             },
             "sites": 3,
-            "prevalence": 0.0000212,
+            "prevalence": 0.0000205,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "5a8185110d5ff1cb87d6c7c5527911d3f4a761f2c73ba031c76d8ed66aaaae12"
+            ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "iz.ru",
-                "www.kaspersky.com.tr",
+                "www.cybersport.ru",
                 "www.kaspersky.com"
+            ]
+        },
+        {
+            "rule": "push4site\\.com\\/Content\\/WidgetsStyles\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "iz"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "ae56f3c9be6e9f0d4304b24b9fa811c71c9f78ce8390903ddf2f38677cf16f50"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "iz.ru",
+                "www.kaspersky.com"
+            ]
+        },
+        {
+            "rule": "push4site\\.com\\/Sdk\\/WidgetDisplayed",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "iz"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "c955e57777ec0d73639dca6748560d00aa5eb8e12f13ebb2ed9656add3908f97"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "iz.ru",
+                "www.cybersport.ru"
             ]
         }
     ],
@@ -53,15 +100,17 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.5714285714285714
+            "prevalence": 0.75
         },
         {
             "domain": "kaspersky.de",
-            "prevalence": 0.42857142857142855
+            "prevalence": 0.25
         }
     ],
     "types": {
-        "Script": 3
+        "Script": 3,
+        "Stylesheet": 2,
+        "Fetch": 2
     },
     "nameservers": [
         "gene.ns.cloudflare.com",

@@ -4,14 +4,20 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000283,
-    "sites": 4,
+    "prevalence": 0.0000341,
+    "sites": 5,
     "subdomains": [
         "static",
-        "online"
+        "online",
+        "custom-domain"
     ],
-    "cnames": [],
-    "fingerprinting": 1,
+    "cnames": [
+        {
+            "original": "publications.guampdn.com",
+            "resolved": "custom-domain.fliphtml5.com"
+        }
+    ],
+    "fingerprinting": 3,
     "resources": [
         {
             "rule": "fliphtml5\\.com\\/resourceFiles\\/html5_templates\\/js\\/LoadingJS\\.js",
@@ -21,15 +27,15 @@
                 "static"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 1,
-                "window.innerHeight": 1,
-                "HTMLCanvasElement.prototype.toDataURL": 1
+                "Navigator.prototype.userAgent": 2,
+                "window.innerHeight": 2,
+                "HTMLCanvasElement.prototype.toDataURL": 2
             },
             "sites": 2,
-            "prevalence": 0.0000141,
+            "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "c48f4c2bd20b8172ca04f797d3862090d1d233d38d216991b81d1fbfe62346f8"
+                "cb23ef2d9c71e621e60e5113b799f593d0521faa230e5cb9d44acab11a2fa0b8"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -47,10 +53,10 @@
                 "static"
             ],
             "apis": {
-                "Date.prototype.getTime": 1
+                "Date.prototype.getTime": 2
             },
             "sites": 2,
-            "prevalence": 0.0000141,
+            "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
                 "9758fcc5b86b44fde2cf9c3b0a85d86422e78d020e3e399246f679de61e69037"
@@ -72,9 +78,11 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000141,
+            "prevalence": 0.0000137,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "96f261f208c97443b6c77a09346963ac094eba77007dae0622db230646212272"
+            ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -92,7 +100,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000141,
+            "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
                 "cc4476466825cd6b53b83e5f380d4a19aab5c1aaa5c02d59277302d33d11c326"
@@ -108,13 +116,16 @@
         {
             "rule": "fliphtml5\\.com\\/resourceFiles\\/html5_templates\\/js\\/jquery-3\\.5\\.1\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "static"
             ],
-            "apis": {},
+            "apis": {
+                "Element.prototype.getClientRects": 2,
+                "Event.prototype.timeStamp": 2
+            },
             "sites": 2,
-            "prevalence": 0.0000141,
+            "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
                 "f7f6a5894f1d19ddad6fa392b2ece2c5e578cbf7da4ea805b6885eb6985b6e3d"
@@ -136,10 +147,10 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000141,
+            "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "55408d14fb6218606acae8bb98113694a1249f804662e3c13e2baec536411466"
+                "6fd89c642e9e19551e42a258ad9227e5b0e9a6dc28d906e861cb030fe9c23eea"
             ],
             "type": "Stylesheet",
             "firstPartyCookies": {},
@@ -151,17 +162,35 @@
         },
         {
             "rule": "fliphtml5\\.com\\/resourceFiles\\/html5_templates\\/template\\/Popular\\/javascript\\/book\\.min\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
+            "cookies": 0.0000137,
+            "fingerprinting": 3,
             "subdomains": [
                 "static"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2,
+                "window.innerWidth": 2,
+                "window.innerHeight": 2,
+                "window.localStorage": 2,
+                "window.name": 2,
+                "window.screenX": 2,
+                "window.screenY": 2,
+                "window.outerWidth": 2,
+                "window.outerHeight": 2,
+                "window.devicePixelRatio": 2,
+                "window.screenLeft": 2,
+                "window.screenTop": 2,
+                "CanvasRenderingContext2D.prototype.getImageData": 2,
+                "HTMLCanvasElement.prototype.toDataURL": 2
+            },
             "sites": 2,
-            "prevalence": 0.0000141,
+            "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "3f7ec8836a160e399207ae1fac5f08b8fe0eddff923b984b9b1eab2958a137e4"
+                "34d913128101ebc7de8dc3384b9df19cd07e12271edc35d25ec263e2d566b95d"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -174,16 +203,21 @@
         {
             "rule": "fliphtml5\\.com\\/resourceFiles\\/html5_templates\\/template\\/Popular\\/javascript\\/main\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "static"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2
+            },
             "sites": 2,
-            "prevalence": 0.0000141,
+            "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "d6fac1a2138a84db4461a3adaeb4b89203234326df3a8c0c166dddb4ec497792"
+                "a76683b8fe21c05675e233ce7e488c091e6fe151aa15008ee34ce8e7409a7ac1"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -192,28 +226,557 @@
                 "dlevans.com",
                 "www.guampdn.com"
             ]
+        },
+        {
+            "rule": "fliphtml5\\.com\\/resourceFiles\\/html5_templates\\/template\\/Popular\\/style\\/flipbook\\.min\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "3064637a137e3c864fbd8b2b4f723ee999c1d3e6d7276ff80fcd250d9dc1ebe1"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dlevans.com",
+                "www.guampdn.com"
+            ]
+        },
+        {
+            "rule": "fliphtml5\\.com\\/resourceFiles\\/html5_templates\\/template\\/Popular\\/style\\/icon\\/loading\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "72d3710c972cc155eacfbd48fdf80b0d7c8dd68e8892df85ade9cf0cba031796"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dlevans.com",
+                "www.guampdn.com"
+            ]
+        },
+        {
+            "rule": "fliphtml5\\.com\\/resourceFiles\\/html5_templates\\/template\\/Popular\\/style\\/icon\\/First\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "db0c899b1d26811e4f932a5f162fa199b9ae8e3b0dc0132371f864fde348a8b8"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dlevans.com",
+                "www.guampdn.com"
+            ]
+        },
+        {
+            "rule": "fliphtml5\\.com\\/resourceFiles\\/html5_templates\\/template\\/Popular\\/style\\/icon\\/prev\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "8398a648a1df5ca7c0cb41b4fcc674724fa5baf0e949428c4535f17c7b1e4fad"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dlevans.com",
+                "www.guampdn.com"
+            ]
+        },
+        {
+            "rule": "fliphtml5\\.com\\/resourceFiles\\/html5_templates\\/template\\/Popular\\/style\\/icon\\/next\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "2659f4e27899fc1465968f7d30ada794d3b8877986efee0cab41d2fdd2e35dcf"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dlevans.com",
+                "www.guampdn.com"
+            ]
+        },
+        {
+            "rule": "fliphtml5\\.com\\/resourceFiles\\/html5_templates\\/template\\/Popular\\/style\\/icon\\/Last\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "78da21604a89b1417dca7a585c4adc28ffd23aa5fa2c0104396aecf0a7a61b71"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dlevans.com",
+                "www.guampdn.com"
+            ]
+        },
+        {
+            "rule": "fliphtml5\\.com\\/resourceFiles\\/html5_templates\\/template\\/Popular\\/style\\/icon\\/slide_firstButton\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "088c1511c4e807a48b0094c5885a07eeba9f5934ea03bcbcc75a05a649a53295"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dlevans.com",
+                "www.guampdn.com"
+            ]
+        },
+        {
+            "rule": "fliphtml5\\.com\\/resourceFiles\\/html5_templates\\/template\\/Popular\\/style\\/icon\\/slide_lastButton\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "ff0c81cfdcfc4773053fde6865d3dab6fc7be98ff30cb5b0ee45a6ebf8cf05d5"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dlevans.com",
+                "www.guampdn.com"
+            ]
+        },
+        {
+            "rule": "fliphtml5\\.com\\/resourceFiles\\/html5_templates\\/template\\/Popular\\/style\\/icon\\/prev_page\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "5a17466cce64357b4fcbe665e1a4e9ab8851af6b370c74105dd30095c8e54bdc"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dlevans.com",
+                "www.guampdn.com"
+            ]
+        },
+        {
+            "rule": "fliphtml5\\.com\\/resourceFiles\\/html5_templates\\/template\\/Popular\\/style\\/icon\\/next_page\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "61daf33ab4c2677c3c8f57cf4781fdaabdcabeeb115f5d63c5cc637428747756"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dlevans.com",
+                "www.guampdn.com"
+            ]
+        },
+        {
+            "rule": "fliphtml5\\.com\\/resourceFiles\\/js\\/encryption\\/encryption\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "bc6d4676cf4308d0b86b47e28f8da61c44c45a34bbbf68e9eed537d66e9f5a3f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dlevans.com",
+                "www.guampdn.com"
+            ]
+        },
+        {
+            "rule": "fliphtml5\\.com\\/resourceFiles\\/js\\/statistic\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 1,
+                "Navigator.prototype.language": 1,
+                "window.localStorage": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "8edc47ec875b919aeeebf7d24f55851fd009f7998b62a6a09e9f37311b4be2bf"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dlevans.com",
+                "www.guampdn.com"
+            ]
+        },
+        {
+            "rule": "fliphtml5\\.com\\/resourceFiles\\/js\\/writeLog\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {
+                "Screen.prototype.height": 1,
+                "Screen.prototype.width": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e96c01299d0cbca05912f43c5bb8b0c355cc7e736b87c2ace09ace7318e24cc8"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dlevans.com",
+                "www.guampdn.com"
+            ]
+        },
+        {
+            "rule": "fliphtml5\\.com\\/resourceFiles\\/js\\/visitinfo\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 1,
+                "Navigator.prototype.userAgent": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "f69843e62eebb7e021a7ddea61bfd436784240943a07c0ea7c0276840873d753"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dlevans.com",
+                "www.guampdn.com"
+            ]
+        },
+        {
+            "rule": "fliphtml5\\.com\\/resourceFiles\\/js\\/FlipBookPlugins\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "f54ae08604b52d1fd29126a3611c91826ce41f943187b97204c960c0b01149f8"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dlevans.com",
+                "www.guampdn.com"
+            ]
+        },
+        {
+            "rule": "fliphtml5\\.com\\/books\\/getui\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "custom-domain"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "publications.guampdn.com",
+                    "resolved": "custom-domain.fliphtml5.com"
+                }
+            ],
+            "responseHashes": [
+                "f70253c5aa6898fe099a05792fdcbc33db4e94183e199d00de22002e5aac2844"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "guampdn.com",
+                "www.guampdn.com"
+            ]
+        },
+        {
+            "rule": "fliphtml5\\.com\\/resourceFiles\\/yzReader\\/templates\\/Slide\\/css\\/app\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "72f82d09b336c849da18fc512ea8a520b82f0cd2a452100bceb86534cc187903"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "guampdn.com",
+                "www.guampdn.com"
+            ]
+        },
+        {
+            "rule": "fliphtml5\\.com\\/resourceFiles\\/yzReader\\/templates\\/Slide\\/css\\/chunk-vendors\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e13304adbcabe023b62a69bac6c7915b056eb517ea52ffc612cbac9744f0c1bd"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "guampdn.com",
+                "www.guampdn.com"
+            ]
+        },
+        {
+            "rule": "fliphtml5\\.com\\/resourceFiles\\/yzReader\\/templates\\/Slide\\/js\\/app\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "50de862fecb1dc43259d908c4eec93d253498f2092b39a6f381c7cc09c6f0d90"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "guampdn.com",
+                "www.guampdn.com"
+            ]
+        },
+        {
+            "rule": "fliphtml5\\.com\\/resourceFiles\\/yzReader\\/templates\\/Slide\\/js\\/chunk-vendors\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Event.prototype.timeStamp": 2,
+                "Navigator.prototype.product": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "2369a77208bc81079c9598c44d549d3f4beff3c26a4c58788023235f749cc6bd"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "guampdn.com",
+                "www.guampdn.com"
+            ]
+        },
+        {
+            "rule": "fliphtml5\\.com\\/resourceFiles\\/html5_templates\\/template\\/Popular\\/javascript\\/dynamicBackground\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "guampdn.com",
+                "www.guampdn.com"
+            ]
+        },
+        {
+            "rule": "fliphtml5\\.com\\/resourceFiles\\/html5_templates\\/template\\/Popular\\/style\\/icon\\/backSoundOff\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "b5c02b405bc528225986882de9c1bea132933a23cc9f6d4621a16596f4519734"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "guampdn.com",
+                "www.guampdn.com"
+            ]
+        },
+        {
+            "rule": "fliphtml5\\.com\\/resourceFiles\\/html5_templates\\/template\\/Popular\\/style\\/icon\\/flipSoundOff\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "62fda4b23dad3532319e74da515f4d1c95ed2fd8ff9b949b7d0af0df1b28486a"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "guampdn.com",
+                "www.guampdn.com"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.0000205,
     "topInitiators": [
         {
-            "domain": "first party",
-            "prevalence": 0.7777777777777778
+            "domain": "fliphtml5.com",
+            "prevalence": 0.5925925925925926
         },
         {
-            "domain": "fliphtml5.com",
-            "prevalence": 0.2222222222222222
+            "domain": "first party",
+            "prevalence": 0.4074074074074074
         }
     ],
     "types": {
-        "Script": 12,
-        "XHR": 2,
-        "Stylesheet": 2
+        "Script": 28,
+        "XHR": 4,
+        "Stylesheet": 8,
+        "Image": 22
     },
     "nameservers": [
-        "fatima.ns.cloudflare.com",
-        "armfazh.ns.cloudflare.com"
+        "armfazh.ns.cloudflare.com",
+        "fatima.ns.cloudflare.com"
     ]
 }

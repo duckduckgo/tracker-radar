@@ -9,29 +9,38 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000141,
-    "sites": 2,
+    "prevalence": 0.000041,
+    "sites": 6,
     "subdomains": [],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "sdtagging\\.azureedge\\.net\\/scripts\\/sdt1\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000141,
+            "apis": {
+                "window.sessionStorage": 4,
+                "window.localStorage": 4,
+                "Date.prototype.getTime": 4,
+                "Navigator.prototype.userAgent": 4,
+                "Document.cookie getter": 2
+            },
+            "sites": 4,
+            "prevalence": 0.0000273,
             "cnames": [],
             "responseHashes": [
-                "70d7dffcbf5ebdf11b309132fccfbb0ae7845815a0d313443cc20d2f231b2737"
+                "b076c2f054d110825db2b555aeb5afde6d14dcbc4d7ebb852879df0ef84166a4",
+                "a2829f2a7cbb8ea56697f65086eb9c84f8305dced6d7b98d302ddde9b5b32cc2"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "lexus.com",
+                "www.lexus.com",
+                "www.toyota.com",
                 "www.toyotacertified.com"
             ]
         }
@@ -44,11 +53,15 @@
     "topInitiators": [
         {
             "domain": "toyota.com",
-            "prevalence": 1
+            "prevalence": 0.6666666666666666
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.3333333333333333
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 4
     },
     "nameservers": []
 }

@@ -7,15 +7,42 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000283,
-    "sites": 4,
+    "prevalence": 0.0000478,
+    "sites": 7,
     "subdomains": [
-        "web.sdk",
-        "turing.captcha"
+        "ca.turing.captcha",
+        "sg.captcha",
+        "web.sdk"
     ],
     "cnames": [],
-    "fingerprinting": 2,
+    "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "qcloud\\.com\\/TCaptcha-global\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "ca.turing.captcha",
+                "sg.captcha"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Date.prototype.getTime": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "f6b3ff46b11d99c498bc6c006a4ff384b1510547bcc746e65539a5d67aa8527f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dna-panstudio.com",
+                "www.moomoo.com"
+            ]
+        },
         {
             "rule": "qcloud\\.com\\/player\\/tcplayer\\/release\\/v4\\.9\\.0\\/tcplayer\\.min\\.css",
             "cookies": 0,
@@ -25,7 +52,7 @@
             ],
             "apis": {},
             "sites": 3,
-            "prevalence": 0.0000212,
+            "prevalence": 0.0000205,
             "cnames": [],
             "responseHashes": [
                 "4aeee760d82ade24cd9c7497776d78ef82fc157bdcbf6506e256b6d4d652b8da"
@@ -38,50 +65,6 @@
                 "www.amd.com",
                 "www.xilinx.com"
             ]
-        },
-        {
-            "rule": "qcloud\\.com\\/cap_union_prehandle",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "turing.captcha"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000141,
-            "cnames": [],
-            "responseHashes": [
-                "15b0366060e7279d3527be8cbdb3080204678ebe6ac823597a5da23827177325"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "pgyer.com",
-                "www.pgyer.com"
-            ]
-        },
-        {
-            "rule": "qcloud\\.com\\/cap_union_new_getcapbysig",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "turing.captcha"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000141,
-            "cnames": [],
-            "responseHashes": [
-                "e88eebf2ce97a3704e66d63b819435cd0d1a4150f7b761153dacf4d0ace84ead"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "pgyer.com",
-                "www.pgyer.com"
-            ]
         }
     ],
     "categories": [],
@@ -89,12 +72,8 @@
     "cookies": 0,
     "topInitiators": [
         {
-            "domain": "gtimg.com",
-            "prevalence": 0.5
-        },
-        {
             "domain": "first party",
-            "prevalence": 0.4
+            "prevalence": 0.9
         },
         {
             "domain": "amd.com",
@@ -102,9 +81,8 @@
         }
     ],
     "types": {
-        "Stylesheet": 3,
         "Script": 2,
-        "Image": 2
+        "Stylesheet": 3
     },
     "nameservers": [
         "ns4.qq.com",

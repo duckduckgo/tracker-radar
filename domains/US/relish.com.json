@@ -7,7 +7,7 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000212,
+    "prevalence": 0.0000205,
     "sites": 3,
     "subdomains": [
         "www"
@@ -25,15 +25,16 @@
             "apis": {
                 "Navigator.prototype.userAgent": 2,
                 "Navigator.prototype.platform": 2,
-                "Screen.prototype.orientation": 1,
+                "Screen.prototype.orientation": 2,
                 "window.innerHeight": 2,
-                "window.innerWidth": 2
+                "window.innerWidth": 2,
+                "Date.prototype.getTime": 1
             },
             "sites": 2,
-            "prevalence": 0.0000141,
+            "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "c8b5f50815a21170eb44b45588ae6a6c0f1b07f879c0df67c7fac2701fccc414"
+                "89f2e3e2d57c6f8900045c20b6bf495064c9a078023a1a808e4351b9c9c8b057"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -46,16 +47,65 @@
         {
             "rule": "relish\\.com\\/scripts\\/storage",
             "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Date.prototype.getTime": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "1cd1aae284b0590d30a6675eb94075df485e06f11e4ce174114b85403241a2d0"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "amazingribs.com",
+                "iwashyoudry.com"
+            ]
+        },
+        {
+            "rule": "relish\\.com\\/cdn-cgi\\/rum",
+            "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
                 "www"
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000141,
+            "prevalence": 0.0000137,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Document",
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "amazingribs.com",
+                "iwashyoudry.com"
+            ]
+        },
+        {
+            "rule": "relish\\.com\\/api\\/v1\\/retailers\\/00000",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "8d02132090a30db62918de15c672e6f1d0068b1a9a9399949e2453f820f6e4b5"
+            ],
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -70,15 +120,25 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.6153846153846154
+        },
+        {
+            "domain": "cloudflareinsights.com",
+            "prevalence": 0.23076923076923078
+        },
+        {
+            "domain": "ajax.googleapis.com",
+            "prevalence": 0.15384615384615385
         }
     ],
     "types": {
         "Script": 2,
-        "Document": 2
+        "Document": 2,
+        "XHR": 2,
+        "Fetch": 2
     },
     "nameservers": [
-        "betty.ns.cloudflare.com",
-        "hans.ns.cloudflare.com"
+        "hans.ns.cloudflare.com",
+        "betty.ns.cloudflare.com"
     ]
 }

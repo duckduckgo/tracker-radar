@@ -4,24 +4,26 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000424,
+    "prevalence": 0.000041,
     "sites": 6,
     "subdomains": [
         "cdn"
     ],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "rocket-push\\.com\\/main\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "cdn"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 3
+            },
             "sites": 6,
-            "prevalence": 0.0000424,
+            "prevalence": 0.000041,
             "cnames": [],
             "responseHashes": [
                 "38393da01fe036d37fdc6fbf1c1e5748f6f4f8b073e9331c1c45e543b143471d"
@@ -31,9 +33,72 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "cartune.me",
-                "magazine.cartune.me",
                 "manetatsu.com",
                 "response.jp",
+                "spicomi.net",
+                "www.gamespark.jp",
+                "www.rbbtoday.com"
+            ]
+        },
+        {
+            "rule": "rocket-push\\.com\\/api\\/v1\\/fetch_fcm_info",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "49299acacc37ebf7cac32b23f72533bb9b9d264fbc4ccdbb76bdfd9b661e9441"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "manetatsu.com",
+                "spicomi.net",
+                "www.rbbtoday.com"
+            ]
+        },
+        {
+            "rule": "rocket-push\\.com\\/api\\/v1\\/fetch_fcm_info",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "manetatsu.com",
+                "spicomi.net",
+                "www.rbbtoday.com"
+            ]
+        },
+        {
+            "rule": "rocket-push\\.com\\/firebase-messaging-sw\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "488bf05181da7dc2ce20a44a88af93c597fe1b61d814e033958bd467686a37ce"
+            ],
+            "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "manetatsu.com",
                 "spicomi.net",
                 "www.rbbtoday.com"
             ]
@@ -41,13 +106,16 @@
         {
             "rule": "rocket-push\\.com\\/sitepush\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "cdn"
             ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000141,
+            "apis": {
+                "window.innerHeight": 1,
+                "window.indexedDB": 1
+            },
+            "sites": 3,
+            "prevalence": 0.0000205,
             "cnames": [],
             "responseHashes": [
                 "00c0a9891f3064d8cc32216e10163f7757f3057cbd5d99cb26dd69f1f63b61ca"
@@ -57,6 +125,7 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "response.jp",
+                "www.gamespark.jp",
                 "www.rbbtoday.com"
             ]
         }
@@ -71,7 +140,10 @@
         }
     ],
     "types": {
-        "Script": 8
+        "Script": 9,
+        "Fetch": 3,
+        "Preflight": 3,
+        "Other": 3
     },
     "nameservers": [
         "ns-230.awsdns-28.com",

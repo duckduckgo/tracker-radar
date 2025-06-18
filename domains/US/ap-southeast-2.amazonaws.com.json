@@ -9,21 +9,28 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.000233,
-    "sites": 33,
+    "prevalence": 0.000307,
+    "sites": 45,
     "subdomains": [
         "2izdf50zr2.execute-api",
+        "4nvkibm832.execute-api",
         "k8s-infrastr-nginxext-ff1d54d30d-dc8a55b2479619ce.elb",
         "domain-static.s3",
-        "zitcha-snowplow.s3"
+        "d-maiw32tky3.execute-api",
+        "zitcha-snowplow.s3",
+        "s3"
     ],
     "cnames": [
         {
             "original": "l.ffx.io",
             "resolved": "k8s-infrastr-nginxext-ff1d54d30d-dc8a55b2479619ce.elb.ap-southeast-2.amazonaws.com"
+        },
+        {
+            "original": "web-api.hungryjacks.com.au",
+            "resolved": "d-maiw32tky3.execute-api.ap-southeast-2.amazonaws.com"
         }
     ],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "ap-southeast-2\\.amazonaws\\.com\\/live\\/uuid",
@@ -34,10 +41,10 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000141,
+            "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "c32b86a856221e949486804d79eeba9b78593c4205268d79e808b6559574178f"
+                "7fea3f47218492f9e426c0d2abe1fbb120e55c5f267da229d7f885086cdfc8c7"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -56,7 +63,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000141,
+            "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
@@ -76,10 +83,10 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000141,
+            "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "1e0dcd79d4252f025d2b876920421f47bc20c705cd75c2350356ad5c8fa9fa70"
+                "61a208cc531eb56e54fcea0208b2600215bd92e2969f90ebe7e5c32d51596246"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -98,7 +105,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000141,
+            "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
@@ -110,28 +117,27 @@
             ]
         },
         {
-            "rule": "ap-southeast-2\\.amazonaws\\.com\\/",
+            "rule": "ap-southeast-2\\.amazonaws\\.com\\/prod",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "k8s-infrastr-nginxext-ff1d54d30d-dc8a55b2479619ce.elb"
+                "4nvkibm832.execute-api"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000141,
-            "cnames": [
-                {
-                    "original": "l.ffx.io",
-                    "resolved": "k8s-infrastr-nginxext-ff1d54d30d-dc8a55b2479619ce.elb.ap-southeast-2.amazonaws.com"
-                }
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "cc6dd50aa354ec4ad3a055a384952f782d164834d48cc0e58a9e9cb1ac5d9d70",
+                "f523bbc997aff57ad41012557a5fbee6b17674930459ff0af256718e23da0acb"
             ],
-            "responseHashes": [],
-            "type": "Preflight",
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "afr.com",
-                "www.afr.com"
+                "news.com.au",
+                "www.news.com.au",
+                "www.taste.com.au"
             ]
         },
         {
@@ -142,8 +148,8 @@
                 "k8s-infrastr-nginxext-ff1d54d30d-dc8a55b2479619ce.elb"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000141,
+            "sites": 6,
+            "prevalence": 0.000041,
             "cnames": [
                 {
                     "original": "l.ffx.io",
@@ -158,7 +164,40 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "afr.com",
-                "www.afr.com"
+                "www.afr.com",
+                "www.brisbanetimes.com.au",
+                "www.smh.com.au",
+                "www.theage.com.au",
+                "www.watoday.com.au"
+            ]
+        },
+        {
+            "rule": "ap-southeast-2\\.amazonaws\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "k8s-infrastr-nginxext-ff1d54d30d-dc8a55b2479619ce.elb"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000041,
+            "cnames": [
+                {
+                    "original": "l.ffx.io",
+                    "resolved": "k8s-infrastr-nginxext-ff1d54d30d-dc8a55b2479619ce.elb.ap-southeast-2.amazonaws.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "afr.com",
+                "www.afr.com",
+                "www.brisbanetimes.com.au",
+                "www.smh.com.au",
+                "www.theage.com.au",
+                "www.watoday.com.au"
             ]
         },
         {
@@ -170,7 +209,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.0000141,
+            "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
                 "1cb9b4068aeedf9002eb9eb6bfa2a68393819e38dba3c83a7f928b68ec330bb5"
@@ -184,52 +223,134 @@
             ]
         },
         {
+            "rule": "ap-southeast-2\\.amazonaws\\.com\\/api\\/v1\\/app",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "d-maiw32tky3.execute-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "web-api.hungryjacks.com.au",
+                    "resolved": "d-maiw32tky3.execute-api.ap-southeast-2.amazonaws.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hungryjacks.com.au",
+                "www.hungryjacks.com.au"
+            ]
+        },
+        {
+            "rule": "ap-southeast-2\\.amazonaws\\.com\\/api\\/v1\\/app",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "d-maiw32tky3.execute-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "web-api.hungryjacks.com.au",
+                    "resolved": "d-maiw32tky3.execute-api.ap-southeast-2.amazonaws.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hungryjacks.com.au",
+                "www.hungryjacks.com.au"
+            ]
+        },
+        {
             "rule": "ap-southeast-2\\.amazonaws\\.com\\/snowplow-zitcha\\.js",
-            "cookies": 0.00000707,
+            "cookies": 0,
             "fingerprinting": 2,
             "subdomains": [
                 "zitcha-snowplow.s3"
             ],
             "apis": {
-                "Navigator.prototype.language": 1,
-                "Navigator.prototype.doNotTrack": 1,
-                "Date.prototype.getTime": 1,
-                "window.localStorage": 1,
-                "Navigator.prototype.cookieEnabled": 1,
-                "Screen.prototype.width": 1,
-                "Screen.prototype.height": 1,
-                "Screen.prototype.colorDepth": 1,
-                "Document.cookie getter": 1,
-                "Document.cookie setter": 1,
-                "Date.prototype.getTimezoneOffset": 1,
-                "Intl.DateTimeFormat.prototype.resolvedOptions": 1
+                "Navigator.prototype.language": 3,
+                "Navigator.prototype.doNotTrack": 3,
+                "Date.prototype.getTime": 3,
+                "window.localStorage": 3,
+                "Navigator.prototype.cookieEnabled": 3,
+                "Screen.prototype.width": 3,
+                "Screen.prototype.height": 3,
+                "Screen.prototype.colorDepth": 3,
+                "Document.cookie getter": 3,
+                "Date.prototype.getTimezoneOffset": 3,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 3,
+                "window.innerWidth": 3,
+                "window.innerHeight": 3
             },
             "sites": 3,
-            "prevalence": 0.0000212,
+            "prevalence": 0.0000205,
             "cnames": [],
             "responseHashes": [
                 "e89e1861f1050742b223daeeed0b2503669695fa024e5eb9d46f72eaa0dded32"
             ],
             "type": "Script",
-            "firstPartyCookies": {
-                "_sp_ses.621b": {
-                    "ttl": 1828,
-                    "length": 1,
-                    "prevalence": 0.0000070733363512901765,
-                    "uniqueness": 1
-                },
-                "_sp_id.621b": {
-                    "ttl": 63072028,
-                    "length": 103,
-                    "prevalence": 0.0000070733363512901765,
-                    "uniqueness": 1
-                }
-            },
+            "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "noelleeming.co.nz",
                 "www.thewarehouse.co.nz",
                 "www.warehousestationery.co.nz"
+            ]
+        },
+        {
+            "rule": "ap-southeast-2\\.amazonaws\\.com\\/nzme-ads\\.co\\.nz\\/img\\/OneRoofLogoWhite\\.png",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "s3"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "69967327ce3734ad6db8400cecf7d93379ae6df207e86f47bed1a880cf7349d2"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nzherald.co.nz",
+                "www.nzherald.co.nz"
+            ]
+        },
+        {
+            "rule": "ap-southeast-2\\.amazonaws\\.com\\/nzme-ads\\.co\\.nz\\/img\\/arrow\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "s3"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "068d014d556741c03fbb773a7b37ddb5de9e0cb09c063abb94753210735c60a0"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nzherald.co.nz",
+                "www.nzherald.co.nz"
             ]
         }
     ],
@@ -237,48 +358,60 @@
         "CDN"
     ],
     "performance": {},
-    "cookies": 0.00000707,
+    "cookies": 0.00000683,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.917098445595855
+            "prevalence": 0.8834080717488789
         },
         {
             "domain": "freshchat.com",
-            "prevalence": 0.025906735751295335
+            "prevalence": 0.03139013452914798
         },
         {
             "domain": "d31nhj1t453igc.cloudfront.net",
-            "prevalence": 0.02072538860103627
-        },
-        {
-            "domain": "jsdelivr.net",
-            "prevalence": 0.015544041450777202
+            "prevalence": 0.017937219730941704
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.015544041450777202
+            "prevalence": 0.017937219730941704
         },
         {
-            "domain": "humm-au.com",
-            "prevalence": 0.0051813471502590676
+            "domain": "jsdelivr.net",
+            "prevalence": 0.013452914798206279
+        },
+        {
+            "domain": "sentry-cdn.com",
+            "prevalence": 0.013452914798206279
+        },
+        {
+            "domain": "shopify.com",
+            "prevalence": 0.008968609865470852
+        },
+        {
+            "domain": "doubleclick.net",
+            "prevalence": 0.008968609865470852
+        },
+        {
+            "domain": "wufoo.com",
+            "prevalence": 0.004484304932735426
         }
     ],
     "types": {
         "XHR": 4,
-        "Preflight": 6,
-        "Fetch": 2,
-        "Image": 2,
+        "Preflight": 12,
+        "Fetch": 11,
+        "Image": 6,
         "Script": 3
     },
     "nameservers": [
-        "ns1.amzndns.co.uk",
-        "ns1.amzndns.com",
         "ns1.amzndns.net",
-        "ns1.amzndns.org",
         "ns2.amzndns.co.uk",
-        "ns2.amzndns.com",
         "ns2.amzndns.net",
-        "ns2.amzndns.org"
+        "ns1.amzndns.co.uk",
+        "ns1.amzndns.org",
+        "ns1.amzndns.com",
+        "ns2.amzndns.org",
+        "ns2.amzndns.com"
     ]
 }
