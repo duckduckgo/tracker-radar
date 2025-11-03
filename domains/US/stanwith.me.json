@@ -4,14 +4,85 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.00000686,
-    "sites": 1,
+    "prevalence": 0.0000137,
+    "sites": 2,
     "subdomains": [
+        "assets",
+        "api",
+        "geo.assets",
         "api.analytics"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "stanwith\\.me\\/js\\/cookie-banner\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {
+                "Document.cookie getter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "97702f3af775d2bf2e9860afa58bad9e8cb1a261d556a46770652267752dfe27"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "stan.store",
+                "www.stan.store"
+            ]
+        },
+        {
+            "rule": "stanwith\\.me\\/api\\/v1\\/get-ip",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "455194d88967c4d0085357463d7e7277403d81f5be9bf17319073e8e6e2d9ecf"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "stan.store",
+                "www.stan.store"
+            ]
+        },
+        {
+            "rule": "stanwith\\.me\\/js\\/cookie-banner\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "geo.assets"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "97702f3af775d2bf2e9860afa58bad9e8cb1a261d556a46770652267752dfe27"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "stan.store",
+                "www.stan.store"
+            ]
+        },
         {
             "rule": "stanwith\\.me\\/events",
             "cookies": 0,
@@ -24,10 +95,76 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "26fe66145da083d075ad47fd719a54fed9f3ad02db7df754113b717caed941d8"
+                "54a2d213e49af7ad9212b639ca9c1d9203fe4ff47f0f8c6f39c994c37a653522"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "stan.store",
+                "www.stan.store"
+            ]
+        },
+        {
+            "rule": "stanwith\\.me\\/events",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api.analytics"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "stan.store",
+                "www.stan.store"
+            ]
+        },
+        {
+            "rule": "stanwith\\.me\\/js\\/stan-analytics\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 2,
+            "subdomains": [
+                "assets"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2,
+                "Date.prototype.getTime": 2,
+                "window.innerWidth": 2,
+                "Navigator.prototype.vendor": 2,
+                "Navigator.prototype.platform": 2,
+                "Navigator.prototype.appName": 2,
+                "Navigator.prototype.appVersion": 2,
+                "Navigator.prototype.appCodeName": 2,
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "a5caa6f36de7468d17bfdc879d8487af8380b9905a9d5e140a611ee0ad81beb1"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "session_uuid": {
+                    "ttl": 603,
+                    "length": 36,
+                    "prevalence": 0.000013707455485038312,
+                    "uniqueness": 1
+                },
+                "cookie_uuid": {
+                    "ttl": 31536003,
+                    "length": 36,
+                    "prevalence": 0.000013707455485038312,
+                    "uniqueness": 1
+                }
+            },
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "stan.store",
@@ -37,7 +174,7 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.00000686,
+    "cookies": 0.0000137,
     "topInitiators": [
         {
             "domain": "first party",
@@ -45,12 +182,15 @@
         }
     ],
     "types": {
-        "Fetch": 2
+        "Script": 4,
+        "XHR": 2,
+        "Fetch": 4,
+        "Preflight": 2
     },
     "nameservers": [
-        "ns-629.awsdns-14.net",
-        "ns-1657.awsdns-15.co.uk",
         "ns-1074.awsdns-06.org",
+        "ns-1657.awsdns-15.co.uk",
+        "ns-629.awsdns-14.net",
         "ns-1.awsdns-00.com"
     ]
 }

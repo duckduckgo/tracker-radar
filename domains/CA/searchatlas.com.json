@@ -4,10 +4,11 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000407,
-    "sites": 4,
+    "prevalence": 0.000509,
+    "sites": 5,
     "subdomains": [
-        "sa"
+        "sa",
+        "dashboard"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -20,22 +21,50 @@
                 "sa"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.000407,
+            "sites": 5,
+            "prevalence": 0.000509,
             "cnames": [],
             "responseHashes": [
                 "8f26596aae6fdfe41e941d7eaccb4bf3f4560bf471dac25193504464492dbef7",
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "b1f4ac69a99f2f63019952312cbf89ed1364299ad95779b64688d8d23946a55e",
                 "61c75304eb306b67f53eb316f402b23dcc475effc03ee30adf8a4f175dafdfd7"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
+            "firstPartyCookiesSent": {
+                "calltrk_landing": 0.00010178117048346055
+            },
             "exampleSites": [
                 "albertaprosperityproject.com",
                 "canadianpreparedness.com",
                 "cannacabana.com",
+                "chequesnow.ca",
                 "foodsguy.com"
+            ]
+        },
+        {
+            "rule": "searchatlas\\.com\\/scripts\\/dynamic_optimization\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "dashboard"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000204,
+            "cnames": [],
+            "responseHashes": [
+                "177f321853deb3006e9397c17fff2c61f6f786e488f139b892af1ec53492c29e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cannacabana.com",
+                "chequesnow.ca"
             ]
         }
     ],
@@ -45,19 +74,24 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.5
+            "prevalence": 0.4
         },
         {
             "domain": "bluecollarleads.com",
-            "prevalence": 0.25
+            "prevalence": 0.2
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.2
         },
         {
             "domain": "linkgraph.com",
-            "prevalence": 0.25
+            "prevalence": 0.2
         }
     ],
     "types": {
-        "Fetch": 4
+        "Fetch": 5,
+        "Script": 2
     },
     "nameservers": [
         "macy.ns.cloudflare.com",

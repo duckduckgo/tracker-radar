@@ -11,7 +11,6 @@
     "sites": 10,
     "subdomains": [
         "intratuinnl.api",
-        "chargemap.api",
         "dynamoretailnl.api",
         "euronewsfr.api",
         "hunkemollernl.api",
@@ -26,7 +25,10 @@
         "typhoon",
         "log.api",
         "hit.api",
-        "recommendationv2.api"
+        "recommendationv2.api",
+        "carrier",
+        "falcon",
+        "aryuder.api"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -37,7 +39,6 @@
             "fingerprinting": 2,
             "subdomains": [
                 "intratuinnl.api",
-                "chargemap.api",
                 "dynamoretailnl.api",
                 "euronewsfr.api",
                 "hunkemollernl.api",
@@ -47,33 +48,32 @@
                 "ottonl.api"
             ],
             "apis": {
-                "window.localStorage": 8,
-                "Navigator.prototype.userAgent": 8,
-                "Navigator.prototype.vendor": 8,
-                "Navigator.prototype.maxTouchPoints": 7,
-                "Date.prototype.getTime": 8,
-                "Navigator.prototype.permissions": 5,
+                "window.localStorage": 7,
+                "Navigator.prototype.userAgent": 7,
+                "Navigator.prototype.vendor": 7,
+                "Navigator.prototype.maxTouchPoints": 6,
+                "Date.prototype.getTime": 7,
+                "Navigator.prototype.permissions": 4,
                 "window.indexedDB": 4,
-                "Notification.permission": 5,
-                "window.sessionStorage": 7,
+                "Notification.permission": 4,
+                "window.sessionStorage": 5,
                 "Navigator.prototype.webkitTemporaryStorage": 3,
                 "Performance.prototype.memory": 3,
-                "Intl.DateTimeFormat.prototype.resolvedOptions": 7,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 5,
                 "Element.prototype.getClientRects": 3,
                 "window.outerHeight": 3,
-                "Document.cookie getter": 2
+                "Document.cookie getter": 1
             },
-            "sites": 10,
-            "prevalence": 0.00101,
+            "sites": 9,
+            "prevalence": 0.00091,
             "cnames": [],
             "responseHashes": [
-                "2d3daa820209816fb167f49fa6dbba28492702b25b4f0fb9bbd547ea1820a787",
-                "bce5e27f6703bab7808bca019b2272943b04ab03ca4d18f553521925a2efd5eb",
-                "60fc7641dd4e158c27917bf7ef5c7f07eb0ef19baed78d0ad2200288681f9277",
-                "ef9358396221f75c416552396d817fd97e09bb34294f3c3b99c136124b0ef14e",
-                "820bee76c553b3da4aa70ca18f04f8ccbc905b8599f26d2e33d501ef51c072be",
-                "916847d29b8ba92bff30eebb4e7e20eab2437c6152b6b44a64be7221772d6063",
-                "8f27c1500ce3b51bd7a0eb4a342ec872693e2bc78ca872caf8720f49031a00a6",
+                "e707ffcb73e06324ce0de36ad08e2a4f956d90dfc3ead5716848289efdd578cf",
+                "6d82703d03b916bfe585da937d2e18c55619bb79c2ccf2f24d3dc9aa95710246",
+                "90a6a9bb98a66b280ba6307ae0f6a2351a2fb163958cf09bd4b81bd676f7b63a",
+                "afb2a7838785116ec76c1614808a224044e54e31b23dd07d3e7c62a45b0b009d",
+                "6de91c58425c5d1a8e73d78c4eb6ee2b9e229030ad555253dcdb1fd8e2763aed",
+                "0f7a0a9071b51f5e94c41c63b4b19f651a7de7220c4b3f0143591388cf27123f",
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
             ],
             "type": "Script",
@@ -81,7 +81,6 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "intratuin.nl",
-                "nl.chargemap.com",
                 "www.biketotaal.nl",
                 "www.euronews.com",
                 "www.hunkemoller.nl",
@@ -93,27 +92,31 @@
             ]
         },
         {
-            "rule": "useinsider\\.com\\/v1\\/get",
+            "rule": "useinsider\\.com\\/worker-new\\.html",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
-                "ucd-web.api"
+                "intratuinnl.api",
+                "medpetsnl.api"
             ],
-            "apis": {},
-            "sites": 4,
-            "prevalence": 0.000404,
+            "apis": {
+                "window.name": 3,
+                "Navigator.prototype.userAgent": 3,
+                "Date.prototype.getTime": 3,
+                "window.localStorage": 3,
+                "Document.cookie getter": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000303,
             "cnames": [],
             "responseHashes": [
-                "4a856b1bdc4ad9600083bd3ad82fd2dbb0239b1f6f25fcf19dbd34eef82fca2b",
-                "fc41b22f938a4d3ba3a3803e1a58c07c5a23426d8217c061aa0fedd7b88f0625",
-                "c5661f4a42d83be98f46de97c5874e257159655b0cfbdfaba98aeecfd62b65eb"
+                "d84976707d45c775e06064fa2fc8af50bc7e95a925e9336130c304769788d0ba"
             ],
-            "type": "XHR",
+            "type": "Document",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "intratuin.nl",
-                "www.biketotaal.nl",
                 "www.intratuin.nl",
                 "www.medpets.nl"
             ]
@@ -126,8 +129,36 @@
                 "ucd-web.api"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.000404,
+            "sites": 5,
+            "prevalence": 0.000506,
+            "cnames": [],
+            "responseHashes": [
+                "4a856b1bdc4ad9600083bd3ad82fd2dbb0239b1f6f25fcf19dbd34eef82fca2b",
+                "fc41b22f938a4d3ba3a3803e1a58c07c5a23426d8217c061aa0fedd7b88f0625",
+                "7cea7bd776293f81c6494eb05c61902ca7182fc830b90b61eacdcefee24559d7",
+                "1edd1848b0d744cd51e0fff83256865fc81a0d48b4a00a261f9ff59195ffc974"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "intratuin.nl",
+                "www.biketotaal.nl",
+                "www.intratuin.nl",
+                "www.medpets.nl",
+                "www.singaporeair.com"
+            ]
+        },
+        {
+            "rule": "useinsider\\.com\\/v1\\/get",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ucd-web.api"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000506,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
@@ -136,6 +167,30 @@
             "exampleSites": [
                 "intratuin.nl",
                 "www.biketotaal.nl",
+                "www.intratuin.nl",
+                "www.medpets.nl",
+                "www.singaporeair.com"
+            ]
+        },
+        {
+            "rule": "useinsider\\.com\\/css\\/responsive-layout\\.min\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "assets.api"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "465e49ed19ef70431f7802d7aee6226cd2cf5775b3061c20917e3861d22ff22f"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "intratuin.nl",
                 "www.intratuin.nl",
                 "www.medpets.nl"
             ]
@@ -148,18 +203,17 @@
                 "assets.api"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.000404,
+            "sites": 3,
+            "prevalence": 0.000303,
             "cnames": [],
             "responseHashes": [
-                "f760a125d60ee6705adac7e757e8e122e04300ba3e6ddf4ed4e28b024da2870f"
+                "4f08022b86db8f55ab6d7f95e9a9382ff42580f07ac2bbe5dcc0d6217743dd1d"
             ],
             "type": "Stylesheet",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "intratuin.nl",
-                "www.biketotaal.nl",
                 "www.intratuin.nl",
                 "www.medpets.nl"
             ]
@@ -172,42 +226,19 @@
                 "eitri.api"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.000404,
+            "sites": 3,
+            "prevalence": 0.000303,
             "cnames": [],
             "responseHashes": [
-                "bb3ff41819979b3b8cebcb9951fe261bec2d117dd4e7baac20d628a980986634"
+                "1d7a8f388140fca7679d1969cdfef6dcc50ed98db563965b5795ad53e70c661b"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "intratuin.nl",
-                "www.biketotaal.nl",
                 "www.intratuin.nl",
                 "www.medpets.nl"
-            ]
-        },
-        {
-            "rule": "useinsider\\.com\\/css\\/responsive-layout\\.min\\.css",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "assets.api"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [],
-            "responseHashes": [
-                "465e49ed19ef70431f7802d7aee6226cd2cf5775b3061c20917e3861d22ff22f"
-            ],
-            "type": "Stylesheet",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "intratuin.nl",
-                "www.intratuin.nl"
             ]
         },
         {
@@ -219,28 +250,26 @@
                 "typhoon"
             ],
             "apis": {},
-            "sites": 7,
-            "prevalence": 0.000708,
+            "sites": 6,
+            "prevalence": 0.000607,
             "cnames": [],
             "responseHashes": [
-                "e1b8697ae4765a037effdb39211887c3dc14113b96ca649095a51813c529d1cf",
                 "758113fee72849a79f1771e9f8509d78ca3965854bf78dad08f65bd8dfea71de",
-                "fddd8f59cfa986209bdbf46f8a8a44f5d7d27e0c7518dbfe6d0ee092263f76d6",
                 "bfca185e4b8af52bce102702c813a0254c4829e93b1def97e1821b6cf4104a8d",
                 "330570d945c45892170d5069c805d01bc5f8856a5ef64ae3551d64ab29673244",
-                "489acd0e9b65c4234bc6dc4ffe1dab8ae72348239c253633a86f3aaae439ff8e"
+                "1d45e51d646118ba71f5038d1e2c5546e209a363362dd438aef36920466b22f1",
+                "df9a2849b404aed8b1c9b013b91bf818fa3d5f6cfa887b1c1d0c1530d9723553"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "intratuin.nl",
-                "nl.chargemap.com",
                 "www.biketotaal.nl",
-                "www.hunkemoller.nl",
                 "www.intratuin.nl",
                 "www.knm.nl",
-                "www.medpets.nl"
+                "www.medpets.nl",
+                "www.singaporeair.com"
             ]
         },
         {
@@ -262,9 +291,9 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "intratuin.nl",
-                "www.biketotaal.nl",
                 "www.intratuin.nl",
-                "www.medpets.nl"
+                "www.medpets.nl",
+                "www.singaporeair.com"
             ]
         },
         {
@@ -275,8 +304,8 @@
                 "hit.api"
             ],
             "apis": {},
-            "sites": 7,
-            "prevalence": 0.000708,
+            "sites": 6,
+            "prevalence": 0.000607,
             "cnames": [],
             "responseHashes": [
                 "c955e57777ec0d73639dca6748560d00aa5eb8e12f13ebb2ed9656add3908f97"
@@ -286,34 +315,11 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "intratuin.nl",
-                "nl.chargemap.com",
                 "www.biketotaal.nl",
-                "www.hunkemoller.nl",
                 "www.intratuin.nl",
                 "www.knm.nl",
-                "www.medpets.nl"
-            ]
-        },
-        {
-            "rule": "useinsider\\.com\\/api\\/info\\/4454\\.24",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "intratuinnl.api"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [],
-            "responseHashes": [
-                "46ffda60ff00a5fedf2be4a3a472ff25f9574af14cd3ccd28c794835d39e823a"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "intratuin.nl",
-                "www.intratuin.nl"
+                "www.medpets.nl",
+                "www.singaporeair.com"
             ]
         },
         {
@@ -573,7 +579,7 @@
             "prevalence": 0.000303,
             "cnames": [],
             "responseHashes": [
-                "748bf23fa3aed0d8b4ba806f62fb6cf2868883043c3c0b34d639f3cfa53598b8"
+                "9961dd1ec7ba63df23679f29716edc620dbcd5c83c76ddbc16b6ed0ddf210ef4"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -592,46 +598,83 @@
                 "recommendationv2.api"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
+            "sites": 3,
+            "prevalence": 0.000303,
             "cnames": [],
             "responseHashes": [
-                "a093157f5ce429afa94d7f751d02a34a130b1d40c202966f56f1163c70b26035"
+                "fa41969efa08b74ed10d669b2801194bdd7897865a2bac90d2bc461c626bfaed",
+                "fa796fb29203a73ee4629333b7569924280ddfa6278e9ab3452f4c3613ec2b1c"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "intratuin.nl",
-                "www.intratuin.nl"
+                "www.intratuin.nl",
+                "www.medpets.nl"
             ]
         },
         {
-            "rule": "useinsider\\.com\\/worker-new\\.html",
+            "rule": "useinsider\\.com\\/y\\/v2\\/z",
             "cookies": 0,
-            "fingerprinting": 1,
+            "fingerprinting": 0,
             "subdomains": [
-                "chargemap.api",
-                "medpetsnl.api"
+                "carrier"
             ],
-            "apis": {
-                "Date.prototype.getTime": 2,
-                "window.localStorage": 2,
-                "Navigator.prototype.userAgent": 2,
-                "window.name": 1,
-                "Document.cookie getter": 1
-            },
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "medpets.nl",
+                "www.singaporeair.com"
+            ]
+        },
+        {
+            "rule": "useinsider\\.com\\/y\\/v2\\/z",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "carrier"
+            ],
+            "apis": {},
             "sites": 2,
             "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "d84976707d45c775e06064fa2fc8af50bc7e95a925e9336130c304769788d0ba"
+                "94ae6312939ffd76819dae0faa227e7e6e5dd063eb455745457890798e34fc2e"
             ],
-            "type": "Document",
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "chargemap.com",
+                "medpets.nl",
+                "www.singaporeair.com"
+            ]
+        },
+        {
+            "rule": "useinsider\\.com\\/v2\\/top-sellers",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "recommendationv2.api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "18e2421bd0fc33b9dc4d18a3f7c4015416de46888f83619454cc7270a3f192b5"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "medpets.nl",
                 "www.medpets.nl"
             ]
         },
@@ -647,7 +690,7 @@
             "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "1c0d105e351a3cd5e721e9061610da8f43662857f1bdd1ca07456b96b53e2279"
+                "ea0cc96d2191b11c5de9d34f4e7a6209c00faddd85f9c62ab62065aeaa76d5a3"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -658,25 +701,67 @@
             ]
         },
         {
-            "rule": "useinsider\\.com\\/v2\\/top-sellers",
+            "rule": "useinsider\\.com\\/api\\/v1\\/contact-profile\\/get\\/singaporeairlines",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "recommendationv2.api"
+                "falcon"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "d1125ac6b6988ce858eb809c683a12577a6e1531b2dfbb18d689214c9d1c784c"
+                "7fb9d166d1a15bce0b9f085f3818946fd9297e4513a4a034a0ceb749292b4c0d"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "medpets.nl",
-                "www.medpets.nl"
+                "singaporeair.com",
+                "www.singaporeair.com"
+            ]
+        },
+        {
+            "rule": "useinsider\\.com\\/api\\/v1\\/contact-profile\\/get\\/singaporeairlines",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "falcon"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "singaporeair.com",
+                "www.singaporeair.com"
+            ]
+        },
+        {
+            "rule": "useinsider\\.com\\/v3\\/status",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "aryuder.api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "76e98401cbfa7881c3ae336e5366d6d5171f2a333f89bcfacf863fa0dba8a1c8"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "singaporeair.com",
+                "www.singaporeair.com"
             ]
         }
     ],
@@ -686,20 +771,24 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.9823008849557522
+            "prevalence": 0.963963963963964
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.017699115044247787
+            "prevalence": 0.02702702702702703
+        },
+        {
+            "domain": "mobify-storefront.com",
+            "prevalence": 0.009009009009009009
         }
     ],
     "types": {
-        "Script": 17,
-        "XHR": 48,
-        "Preflight": 4,
+        "Script": 15,
+        "Document": 3,
+        "XHR": 52,
+        "Preflight": 9,
         "Stylesheet": 6,
-        "Image": 4,
-        "Document": 2
+        "Image": 4
     },
     "nameservers": [
         "eric.ns.cloudflare.com",

@@ -7,13 +7,19 @@
     "source": [
         "DuckDuckGo-GB"
     ],
-    "prevalence": 0.000203,
-    "sites": 2,
+    "prevalence": 0.000304,
+    "sites": 3,
     "subdomains": [
         "wetransfer.fides-cdn",
-        "skillsoft-codecademy.fides-cdn"
+        "skillsoft-codecademy.fides-cdn",
+        "peloton.fides-cdn",
+        "cdn-api"
     ],
     "cnames": [
+        {
+            "original": "cmp.onepeloton.com",
+            "resolved": "peloton.fides-cdn.ethyca.com"
+        },
         {
             "original": "privacy.wetransfer.com",
             "resolved": "wetransfer.fides-cdn.ethyca.com"
@@ -27,29 +33,58 @@
             "fingerprinting": 1,
             "subdomains": [
                 "wetransfer.fides-cdn",
-                "skillsoft-codecademy.fides-cdn"
+                "skillsoft-codecademy.fides-cdn",
+                "peloton.fides-cdn"
             ],
             "apis": {
                 "Document.cookie getter": 1,
                 "Navigator.prototype.language": 1
             },
-            "sites": 2,
-            "prevalence": 0.000203,
+            "sites": 3,
+            "prevalence": 0.000304,
             "cnames": [
                 {
                     "original": "privacy.wetransfer.com",
                     "resolved": "wetransfer.fides-cdn.ethyca.com"
+                },
+                {
+                    "original": "cmp.onepeloton.com",
+                    "resolved": "peloton.fides-cdn.ethyca.com"
                 }
             ],
             "responseHashes": [
-                "3dcd0b5d0a5f87576f4f3b8bb9f51bbd45f2c00c47aa7b5a028c901b80516bbb"
+                "a2e05794920f6710543751de3d1f88c4dd64c47f93a681c6c11704d6bc280430",
+                "3909af06647cc6df6012486118316db3d1ec6543ab54eba1794094b4b2c85e4d"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "wetransfer.com",
-                "www.codecademy.com"
+                "www.codecademy.com",
+                "www.onepeloton.com"
+            ]
+        },
+        {
+            "rule": "ethyca\\.com\\/location",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "0ce486ad5d24580b76f97e99fa80f8d72648494dde014d57972f11d94dde63cd"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "onepeloton.com",
+                "www.onepeloton.com"
             ]
         }
     ],
@@ -63,7 +98,8 @@
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 3,
+        "Fetch": 2
     },
     "nameservers": [
         "ns-130.awsdns-16.com",

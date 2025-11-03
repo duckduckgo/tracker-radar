@@ -7,12 +7,12 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000708,
-    "sites": 7,
+    "prevalence": 0.00091,
+    "sites": 9,
     "subdomains": [
         "cdn",
         "ixfd2-api",
-        "marvel-processor"
+        "marvel-b2-cdn"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -56,7 +56,7 @@
             "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "e57e7d8d4431875d1db57fc553a69f2f4d9575af022c74936492a6b871e44888"
+                "0fce0a484f1085d1c38709eb348fadc109998d6e250779d7b4ad183941a56b9f"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -67,23 +67,28 @@
             ]
         },
         {
-            "rule": "bc0a\\.com\\/snowcloud\\/v1\\/api\\/loadUrl",
+            "rule": "bc0a\\.com\\/marvel\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
-                "marvel-processor"
+                "marvel-b2-cdn"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.appVersion": 2
+            },
             "sites": 2,
             "prevalence": 0.000202,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Image",
+            "responseHashes": [
+                "190db2ea37186511e3cdfaeb6e37e68830c90647a9c18840f33ce00c03a05bd0"
+            ],
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "hoopladigital.com",
-                "www.hoopladigital.com"
+                "fortinet.com",
+                "www.silabs.com"
             ]
         }
     ],
@@ -97,9 +102,8 @@
         }
     ],
     "types": {
-        "Script": 2,
-        "XHR": 2,
-        "Image": 2
+        "Script": 4,
+        "XHR": 2
     },
     "nameservers": [
         "pdns10.domaincontrol.com",

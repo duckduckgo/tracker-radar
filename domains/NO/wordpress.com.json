@@ -9,15 +9,61 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000708,
-    "sites": 7,
+    "prevalence": 0.00091,
+    "sites": 9,
     "subdomains": [
-        "r-login",
-        "stats"
+        "public-api",
+        "r-login"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "wordpress\\.com\\/wp-admin\\/rest-proxy\\/",
+            "cookies": 0.000202,
+            "fingerprinting": 1,
+            "subdomains": [
+                "public-api"
+            ],
+            "apis": {
+                "Document.cookie getter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "f82a177a46eaf88c9f01fd47943fd356bada9008c1de0f91989737b356ecb380"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dengodematreisen.no",
+                "thoralfsblogg.com"
+            ]
+        },
+        {
+            "rule": "wordpress\\.com\\/rest\\/v1\\/batch",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "public-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "d5577fe01bec24bb03b81aa7dc217de2108df35616abc544311c1663b9064eb1"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dengodematreisen.no",
+                "thoralfsblogg.com"
+            ]
+        },
         {
             "rule": "wordpress\\.com\\/remote-login\\.php",
             "cookies": 0,
@@ -26,12 +72,13 @@
                 "r-login"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000303,
+            "sites": 4,
+            "prevalence": 0.000404,
             "cnames": [],
             "responseHashes": [
-                "65efa68b1e79a432faee3104453ce35314a6ef45aa8cdb52fd2dcea52c5d18fd",
-                "448ef9c4c195ddd33d642f52c1e7acb7fabe5dfb537de209cf0ee5236f68850d"
+                "5e512f2a05010da9f88ae0d406a370792e7a02ca5a557311e025633c2c28b7a4",
+                "1f1af01e3ff565e8a24e5ceb2a9545b24f23955301246b6f6dcc462deecb2dbd",
+                "65efa68b1e79a432faee3104453ce35314a6ef45aa8cdb52fd2dcea52c5d18fd"
             ],
             "type": "Document",
             "firstPartyCookies": {},
@@ -39,31 +86,30 @@
             "exampleSites": [
                 "mygamingtutorials.com",
                 "saksyndig.com",
+                "thoralfsblogg.com",
                 "toppnorsk.com"
             ]
         },
         {
-            "rule": "wordpress\\.com\\/e-202542\\.js",
+            "rule": "wordpress\\.com\\/geo\\/",
             "cookies": 0,
-            "fingerprinting": 1,
+            "fingerprinting": 0,
             "subdomains": [
-                "stats"
+                "public-api"
             ],
-            "apis": {
-                "Navigator.prototype.appName": 1
-            },
+            "apis": {},
             "sites": 2,
             "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "2abd616c43c16e7a2d01f1f1c761d6c12acf4b2ed9a9a411289ee3bb5a681ffe"
+                "65bc435a0fb8b19fba3a882305f7e69959ae437d66586a46d5b90c3c56fe081a"
             ],
-            "type": "Script",
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "ojodepez-fanzine.net",
-                "www.ojodepez-fanzine.net"
+                "thoralfsblogg.com",
+                "toppnorsk.com"
             ]
         }
     ],
@@ -72,20 +118,20 @@
         "Embedded Content"
     ],
     "performance": {},
-    "cookies": 0.000101,
+    "cookies": 0.000202,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.9666666666666667
+            "prevalence": 0.7209302325581395
         },
         {
             "domain": "wp.com",
-            "prevalence": 0.03333333333333333
+            "prevalence": 0.27906976744186046
         }
     ],
     "types": {
-        "Document": 3,
-        "Script": 2
+        "Document": 6,
+        "XHR": 4
     },
     "nameservers": [
         "ns1.wordpress.com",

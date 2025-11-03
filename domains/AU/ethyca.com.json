@@ -12,9 +12,14 @@
     "subdomains": [
         "wetransfer.fides-cdn",
         "axios.fides-cdn",
-        "skillsoft-codecademy.fides-cdn"
+        "peloton.fides-cdn",
+        "cdn-api"
     ],
     "cnames": [
+        {
+            "original": "cmp.onepeloton.com",
+            "resolved": "peloton.fides-cdn.ethyca.com"
+        },
         {
             "original": "privacy.axios.com",
             "resolved": "axios.fides-cdn.ethyca.com"
@@ -33,11 +38,9 @@
             "subdomains": [
                 "wetransfer.fides-cdn",
                 "axios.fides-cdn",
-                "skillsoft-codecademy.fides-cdn"
+                "peloton.fides-cdn"
             ],
-            "apis": {
-                "Document.cookie getter": 1
-            },
+            "apis": {},
             "sites": 3,
             "prevalence": 0.000304,
             "cnames": [
@@ -48,11 +51,15 @@
                 {
                     "original": "privacy.axios.com",
                     "resolved": "axios.fides-cdn.ethyca.com"
+                },
+                {
+                    "original": "cmp.onepeloton.com",
+                    "resolved": "peloton.fides-cdn.ethyca.com"
                 }
             ],
             "responseHashes": [
-                "c25e7b50db06f15c8cbd0970172afbc6ee73ad08969f5159578c059d5ca0d7c8",
-                "091e44194d07de4e65a5e5914a496ca9f61c99ece878722478f813aa5c06e003"
+                "0cbffa341dddcec164287bbb5bd21d2186528b4c4eb2bad797af7b829021bdee",
+                "4303cbeab4268d50564d220d9f56e4b0d051fb65f706058d87dbb51515ec9afc"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -60,7 +67,29 @@
             "exampleSites": [
                 "wetransfer.com",
                 "www.axios.com",
-                "www.codecademy.com"
+                "www.onepeloton.com"
+            ]
+        },
+        {
+            "rule": "ethyca\\.com\\/location",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "5783b45d84c6db4bd9c82e76ade8acc91048150de9caaec63d36fe0aade6455d"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "onepeloton.com",
+                "www.onepeloton.com"
             ]
         }
     ],
@@ -74,12 +103,13 @@
         }
     ],
     "types": {
-        "Script": 3
+        "Script": 3,
+        "Fetch": 2
     },
     "nameservers": [
-        "ns-1866.awsdns-41.co.uk",
-        "ns-1045.awsdns-02.org",
         "ns-736.awsdns-28.net",
+        "ns-1045.awsdns-02.org",
+        "ns-1866.awsdns-41.co.uk",
         "ns-130.awsdns-16.com"
     ]
 }

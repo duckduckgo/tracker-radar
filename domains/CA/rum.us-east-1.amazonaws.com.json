@@ -9,14 +9,57 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000407,
-    "sites": 4,
+    "prevalence": 0.000509,
+    "sites": 5,
     "subdomains": [
+        "client",
         "dataplane"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "rum\\.us-east-1\\.amazonaws\\.com\\/1\\.19\\.0\\/cwr\\.js",
+            "cookies": 0.000204,
+            "fingerprinting": 1,
+            "subdomains": [
+                "client"
+            ],
+            "apis": {
+                "Navigator.prototype.cookieEnabled": 2,
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.language": 2,
+                "Date.prototype.getTime": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000204,
+            "cnames": [],
+            "responseHashes": [
+                "927208bf7f8618a1756fb20df1f5a6dc5c4387736cffc6dc5e7b44187315ba6e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "cwr_u": {
+                    "ttl": 2592015,
+                    "length": 36,
+                    "prevalence": 0.0002035623409669211,
+                    "uniqueness": 1
+                },
+                "cwr_s": {
+                    "ttl": 1821,
+                    "length": 236,
+                    "prevalence": 0.0002035623409669211,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "movember.com",
+                "theorg.com"
+            ]
+        },
         {
             "rule": "rum\\.us-east-1\\.amazonaws\\.com\\/appmonitors\\/7809eb56-23ee-47cf-a73e-7d3c3e15b474\\/",
             "cookies": 0,
@@ -28,9 +71,7 @@
             "sites": 2,
             "prevalence": 0.000204,
             "cnames": [],
-            "responseHashes": [
-                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
-            ],
+            "responseHashes": [],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -44,18 +85,19 @@
         "CDN"
     ],
     "performance": {},
-    "cookies": 0.000305,
+    "cookies": 0.000407,
     "topInitiators": [
         {
-            "domain": "first party",
-            "prevalence": 0.5
+            "domain": "googletagmanager.com",
+            "prevalence": 0.6
         },
         {
-            "domain": "googletagmanager.com",
-            "prevalence": 0.5
+            "domain": "first party",
+            "prevalence": 0.4
         }
     ],
     "types": {
+        "Script": 2,
         "Fetch": 2
     },
     "nameservers": [

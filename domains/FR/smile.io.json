@@ -7,14 +7,40 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000101,
-    "sites": 1,
+    "prevalence": 0.000203,
+    "sites": 2,
     "subdomains": [
+        "js",
         "platform"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "smile\\.io\\/v1\\/smile-shopify\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "js"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2,
+                "window.sessionStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "2ee473a6cd6afc11934bc54613ff9a38f5bf523b53473314742d4079b75c85ea"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dreametech.com",
+                "fr.ugreen.com"
+            ]
+        },
         {
             "rule": "smile\\.io\\/smile_ui\\/init",
             "cookies": 0,
@@ -31,7 +57,7 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "ugreen.com",
+                "dreametech.com",
                 "fr.ugreen.com"
             ]
         },
@@ -46,12 +72,126 @@
             "sites": 2,
             "prevalence": 0.000203,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "6908beedfe37aa9185ec17e36b8bdde3bfbf69e8c04e977aef3629fbc0fe55db"
+            ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "ugreen.com",
+                "dreametech.com",
+                "fr.ugreen.com"
+            ]
+        },
+        {
+            "rule": "smile\\.io\\/v1\\/smile-lite-694701bc32\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "js"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "6ee3178f8ac3ef2c2c9bd889db7f10c3c7cde33900d718bad2c7aa0db0da943d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dreametech.com",
+                "fr.ugreen.com"
+            ]
+        },
+        {
+            "rule": "smile\\.io\\/v1\\/smile-shopify-312dc60c4ab5860672a9\\.modern\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "js"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dreametech.com",
+                "fr.ugreen.com"
+            ]
+        },
+        {
+            "rule": "smile\\.io\\/v1\\/vendor-ac982c9fa2617cb4198f\\.modern\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "js"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dreametech.com",
+                "fr.ugreen.com"
+            ]
+        },
+        {
+            "rule": "smile\\.io\\/images\\/launcher_icons\\/bag\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "platform"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "f8e91a63e66a3b08c2f25829bb2ba7c35b8aea0b7542e73d7444f5c5779f5565"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dreametech.com",
+                "fr.ugreen.com"
+            ]
+        },
+        {
+            "rule": "smile\\.io\\/v1\\/assets\\/fonts\\/proximanova-regular\\.woff2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "js"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "8945962a6d29a664f1674d490accf2280e468f4b4d34ba81de7401ca3457cd7f"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dreametech.com",
                 "fr.ugreen.com"
             ]
         }
@@ -62,17 +202,25 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.8
+        },
+        {
+            "domain": "shopify.com",
+            "prevalence": 0.2
         }
     ],
     "types": {
+        "Script": 4,
         "Preflight": 2,
-        "Fetch": 2
+        "Fetch": 2,
+        "Other": 4,
+        "Image": 2,
+        "Font": 2
     },
     "nameservers": [
-        "ns-1105.awsdns-10.org",
         "ns-1997.awsdns-57.co.uk",
+        "ns-998.awsdns-60.net",
         "ns-447.awsdns-55.com",
-        "ns-998.awsdns-60.net"
+        "ns-1105.awsdns-10.org"
     ]
 }

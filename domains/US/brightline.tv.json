@@ -7,11 +7,12 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000206,
-    "sites": 3,
+    "prevalence": 0.0000274,
+    "sites": 4,
     "subdomains": [
         "services",
-        "events"
+        "events",
+        "cdn-media"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -48,34 +49,13 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "46c89744787c489b2a9ba0943118c308401398d35eb08bb59c7fec552dbde5dd"
+                "5ce608ed41fa9a8fcf2a89ef73f19e938032c50321b6aa7a382b48f40c098fc4"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "cnn.com",
-                "www.cnn.com"
-            ]
-        },
-        {
-            "rule": "brightline\\.tv\\/track",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "events"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000206,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "cnn.com",
-                "edition.cnn.com",
                 "www.cnn.com"
             ]
         },
@@ -101,6 +81,51 @@
                 "edition.cnn.com",
                 "www.cnn.com"
             ]
+        },
+        {
+            "rule": "brightline\\.tv\\/track",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "events"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000206,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cnn.com",
+                "edition.cnn.com",
+                "www.cnn.com"
+            ]
+        },
+        {
+            "rule": "brightline\\.tv\\/sdk\\/js\\/nbcu\\/brightline\\.webkit\\.sdk\\.2\\.2\\.3\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn-media"
+            ],
+            "apis": {
+                "Navigator.prototype.platform": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "cacc65465e5d12ef75664e00da4f1997e9bbb966d6d63bb30e2baa02da054520"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nbc.com",
+                "www.nbc.com"
+            ]
         }
     ],
     "categories": [],
@@ -109,23 +134,24 @@
     "topInitiators": [
         {
             "domain": "cnn.io",
-            "prevalence": 0.8571428571428571
+            "prevalence": 0.75
         },
         {
             "domain": "first party",
-            "prevalence": 0.14285714285714285
+            "prevalence": 0.25
         }
     ],
     "types": {
         "Preflight": 5,
-        "XHR": 5
+        "XHR": 5,
+        "Script": 2
     },
     "nameservers": [
         "ns13.digicertdns.net",
-        "ns12.digicertdns.com",
-        "ns10.digicertdns.com",
-        "ns11.digicertdns.com",
         "ns14.digicertdns.net",
-        "ns15.digicertdns.net"
+        "ns12.digicertdns.com",
+        "ns15.digicertdns.net",
+        "ns10.digicertdns.com",
+        "ns11.digicertdns.com"
     ]
 }

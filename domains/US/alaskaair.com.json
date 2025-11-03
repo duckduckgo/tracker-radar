@@ -11,7 +11,7 @@
     "sites": 3,
     "subdomains": [
         "www",
-        "somni"
+        "auth0"
     ],
     "cnames": [],
     "fingerprinting": 3,
@@ -30,7 +30,7 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "9672652f138a606134b32fb4ff0a1f72ac846d41b0e7f9372f99b963a5a3c789"
+                "639c29527be796e592fae8160d22e643450692bc0fc51d630fcfda46eedc4f79"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -52,7 +52,7 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "fd728ae97747d5286ce279561ee9c24d813914678313c8b898671b2d09091d4b"
+                "ccdf759e9542ca915000846be0d6415b8fd4733466fdbcaabd4e0713557a011b"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -63,20 +63,20 @@
             ]
         },
         {
-            "rule": "alaskaair\\.com\\/id",
+            "rule": "alaskaair\\.com\\/authorize",
             "cookies": 0.0000137,
             "fingerprinting": 0,
             "subdomains": [
-                "somni"
+                "auth0"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "5ba7c588e11138c06e63714929db97cddd27a5f3910e217e3d5b8b8f1122af84"
+                "960827fa3bb93d9370ddcd9b7ad1bca297af161cdcfee786bdd7c531968e75a9"
             ],
-            "type": "XHR",
+            "type": "Document",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -86,20 +86,26 @@
         },
         {
             "rule": "alaskaair\\.com\\/atmosrewards",
-            "cookies": 0,
+            "cookies": 0.0000137,
             "fingerprinting": 1,
             "subdomains": [
                 "www"
             ],
             "apis": {
-                "Date.prototype.getTime": 2,
+                "Document.cookie getter": 2,
+                "Navigator.prototype.userAgent": 2,
+                "window.innerWidth": 2,
                 "window.localStorage": 2,
-                "Document.cookie getter": 2
+                "Date.prototype.getTime": 2,
+                "CookieStore.prototype.get": 2,
+                "Document.cookie setter": 2
             },
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
             "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -115,23 +121,23 @@
     "topInitiators": [
         {
             "domain": "appdynamics.com",
-            "prevalence": 0.9130434782608695
+            "prevalence": 0.8958333333333334
         },
         {
             "domain": "first party",
-            "prevalence": 0.08695652173913043
+            "prevalence": 0.10416666666666667
         }
     ],
     "types": {
         "Script": 2,
         "Fetch": 2,
-        "XHR": 2,
+        "Document": 2,
         "Image": 2
     },
     "nameservers": [
         "edns94.ultradns.com",
         "edns94.ultradns.net",
-        "edns94.ultradns.org",
-        "edns94.ultradns.biz"
+        "edns94.ultradns.biz",
+        "edns94.ultradns.org"
     ]
 }

@@ -7,11 +7,12 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000303,
-    "sites": 3,
+    "prevalence": 0.000404,
+    "sites": 4,
     "subdomains": [
         "csd",
-        "static"
+        "static",
+        "csc-cdn01"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -24,18 +25,20 @@
                 "csd"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
+            "sites": 3,
+            "prevalence": 0.000303,
             "cnames": [],
             "responseHashes": [
-                "d97c234d9f33b587fd15837ffcc225abd48e77f79a18677f6357dea0d08818eb"
+                "36ba57b5e6c725a7dee85b687067e0ed77cfba94756a5bf8c8f8aacb56386968",
+                "a30c67cee54440254df178fa1a5e9b4c5b3524afa56672da79daaa92a991c298"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "itavisen.no",
-                "www.lydogbilde.no"
+                "www.batmagasinet.no",
+                "www.sportsidioten.no"
             ]
         },
         {
@@ -46,19 +49,91 @@
                 "static"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 1,
-                "Event.prototype.timeStamp": 1
+                "Navigator.prototype.userAgent": 3,
+                "Event.prototype.timeStamp": 3
             },
-            "sites": 2,
-            "prevalence": 0.000202,
+            "sites": 3,
+            "prevalence": 0.000303,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "39147fe6567cabd16c243d992f79e98fd094e1e9902489e5eea188d351118ce5"
+            ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "itavisen.no",
-                "www.lydogbilde.no"
+                "www.batmagasinet.no",
+                "www.sportsidioten.no"
+            ]
+        },
+        {
+            "rule": "showheroes\\.com\\/bridge\\.html",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {
+                "BroadcastChannel.prototype.constructor": 2
+            },
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "3ac4520de1562541bf1c45addb34b98d671db7bc1ef9ec81ea8fe80a79bd2683"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "itavisen.no",
+                "www.batmagasinet.no",
+                "www.sportsidioten.no"
+            ]
+        },
+        {
+            "rule": "showheroes\\.com\\/storage\\/app\\/public\\/box1\\/creatives\\/11\\/11235\\/690225b8115f6\\/index-690350e0e58fb\\.html",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "csc-cdn01"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "752702d5d434ec3653625c593c067750d095dfee9b1c1b1fd9db4f62687bb816"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "batmagasinet.no",
+                "www.sportsidioten.no"
+            ]
+        },
+        {
+            "rule": "showheroes\\.com\\/storage\\/app\\/public\\/box1\\/creatives\\/11\\/11235\\/690225b8115f6\\/E02xBYdYALLdKxMPaLwbfe9W1JtbHNG77aYgvhv1\\.mp4",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "csc-cdn01"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "9b387dc563addf7ea208c9e6d259baa4367af27bc8fe85924b3b8854e28d66e2"
+            ],
+            "type": "Media",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "batmagasinet.no",
+                "www.sportsidioten.no"
             ]
         }
     ],
@@ -68,24 +143,26 @@
     "topInitiators": [
         {
             "domain": "youplay.se",
-            "prevalence": 0.6153846153846154
+            "prevalence": 0.47058823529411764
         },
         {
             "domain": "viralize.tv",
-            "prevalence": 0.23076923076923078
-        },
-        {
-            "domain": "ravenjs.com",
-            "prevalence": 0.07692307692307693
+            "prevalence": 0.3235294117647059
         },
         {
             "domain": "first party",
-            "prevalence": 0.07692307692307693
+            "prevalence": 0.11764705882352941
+        },
+        {
+            "domain": "ravenjs.com",
+            "prevalence": 0.08823529411764706
         }
     ],
     "types": {
-        "XHR": 2,
-        "Script": 2
+        "XHR": 5,
+        "Script": 3,
+        "Document": 3,
+        "Media": 2
     },
     "nameservers": [
         "ns-78-a.gandi.net",

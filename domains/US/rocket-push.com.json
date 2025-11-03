@@ -10,16 +10,18 @@
         "cdn"
     ],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "rocket-push\\.com\\/main\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "cdn"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
             "sites": 3,
             "prevalence": 0.0000206,
             "cnames": [],
@@ -34,6 +36,66 @@
                 "spicomi.net",
                 "www.gamespark.jp"
             ]
+        },
+        {
+            "rule": "rocket-push\\.com\\/api\\/v1\\/fetch_fcm_info",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "49299acacc37ebf7cac32b23f72533bb9b9d264fbc4ccdbb76bdfd9b661e9441"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cartune.co.jp",
+                "spicomi.net"
+            ]
+        },
+        {
+            "rule": "rocket-push\\.com\\/api\\/v1\\/fetch_fcm_info",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cartune.co.jp",
+                "spicomi.net"
+            ]
+        },
+        {
+            "rule": "rocket-push\\.com\\/firebase-messaging-sw\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "488bf05181da7dc2ce20a44a88af93c597fe1b61d814e033958bd467686a37ce"
+            ],
+            "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cartune.co.jp",
+                "spicomi.net"
+            ]
         }
     ],
     "categories": [],
@@ -46,7 +108,10 @@
         }
     ],
     "types": {
-        "Script": 3
+        "Script": 3,
+        "Fetch": 2,
+        "Preflight": 2,
+        "Other": 2
     },
     "nameservers": [
         "ns-230.awsdns-28.com",

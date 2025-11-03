@@ -9,15 +9,20 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000305,
-    "sites": 3,
+    "prevalence": 0.000509,
+    "sites": 5,
     "subdomains": [
-        "cdn"
+        "cdn",
+        "site.api"
     ],
     "cnames": [
         {
             "original": "cdn.espn.com",
             "resolved": "cdn.espn.com.edgesuite.net"
+        },
+        {
+            "original": "site.api.espn.com",
+            "resolved": "site.api.espn.com.edgesuite.net"
         }
     ],
     "fingerprinting": 1,
@@ -44,9 +49,9 @@
             "type": "Script",
             "firstPartyCookies": {
                 "usprivacy": {
-                    "ttl": 31536009,
+                    "ttl": 31536010,
                     "length": 4,
-                    "prevalence": 0.0002035416242621616,
+                    "prevalence": 0.0002035623409669211,
                     "uniqueness": 0.5
                 }
             },
@@ -54,6 +59,66 @@
             "exampleSites": [
                 "abc.com",
                 "moviesanywhere.com"
+            ]
+        },
+        {
+            "rule": "espn\\.com\\.edgesuite\\.net\\/apis\\/site\\/v2\\/scoreboard\\/activeSports",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "site.api"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000305,
+            "cnames": [
+                {
+                    "original": "site.api.espn.com",
+                    "resolved": "site.api.espn.com.edgesuite.net"
+                }
+            ],
+            "responseHashes": [
+                "e4b171a4552f5497d4bc6046cc3b6a420a94479b9fb5ec4c5343a2c60f9edfd6",
+                "823bebf1e1bac0bf69d71a1936db7e39fb1dc1a59008ca91d057f28f8421c6fa"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "espn.in",
+                "www.espn.com",
+                "www.espn.co.uk"
+            ]
+        },
+        {
+            "rule": "espn\\.com\\.edgesuite\\.net\\/apis\\/personalized\\/v2\\/scoreboard\\/header",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "site.api"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000407,
+            "cnames": [
+                {
+                    "original": "site.api.espn.com",
+                    "resolved": "site.api.espn.com.edgesuite.net"
+                }
+            ],
+            "responseHashes": [
+                "7d482e3db37fdf6fb1ad0c57ecbe4fb71ed5368e910bfff308a735331f12534d",
+                "d891dffd143392b96df316f66e342c6368fc5c57087a87b4fe2dc3f6e7fee011",
+                "785915e421ffed9abc8c244c7b49d37dfbb43d4894d3cc589c3c18fd547d6f63"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "espn.in",
+                "www.espn.in",
+                "www.espn.com",
+                "www.espn.co.uk"
             ]
         }
     ],
@@ -65,15 +130,16 @@
     "topInitiators": [
         {
             "domain": "espncdn.com",
-            "prevalence": 0.6666666666666666
+            "prevalence": 0.9090909090909091
         },
         {
             "domain": "first party",
-            "prevalence": 0.3333333333333333
+            "prevalence": 0.09090909090909091
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 2,
+        "XHR": 7
     },
     "nameservers": []
 }

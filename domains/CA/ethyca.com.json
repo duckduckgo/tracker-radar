@@ -7,12 +7,14 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000305,
-    "sites": 3,
+    "prevalence": 0.000407,
+    "sites": 4,
     "subdomains": [
         "wetransfer.fides-cdn",
         "axios.fides-cdn",
-        "peloton.fides-cdn"
+        "skillsoft-codecademy.fides-cdn",
+        "peloton.fides-cdn",
+        "cdn-api"
     ],
     "cnames": [
         {
@@ -37,11 +39,15 @@
             "subdomains": [
                 "wetransfer.fides-cdn",
                 "axios.fides-cdn",
+                "skillsoft-codecademy.fides-cdn",
                 "peloton.fides-cdn"
             ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.000305,
+            "apis": {
+                "Document.cookie getter": 1,
+                "Navigator.prototype.language": 1
+            },
+            "sites": 4,
+            "prevalence": 0.000407,
             "cnames": [
                 {
                     "original": "privacy.wetransfer.com",
@@ -57,8 +63,9 @@
                 }
             ],
             "responseHashes": [
-                "3771d449d7c76812b359013cf474524d34fee3795ef91b905d8060f1769ed1ea",
-                "31925b60f811caa1d6126aa5602aa71611c814e2e32220dabf3878fb673861f0"
+                "c6d97b487664c92b3a13a7bc1f6801f25e05a9e92b328fdb77afda04867e95ff",
+                "7a7e7540967b0b6a3c2b52bb0532a2e255dcae5a835d62ca83a03724f7b1f8b9",
+                "b08734457fbcc83f9e0f18a243551b025881efe8c60f866c344394a41e88bd8b"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -66,6 +73,29 @@
             "exampleSites": [
                 "wetransfer.com",
                 "www.axios.com",
+                "www.codecademy.com",
+                "www.onepeloton.com"
+            ]
+        },
+        {
+            "rule": "ethyca\\.com\\/location",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000204,
+            "cnames": [],
+            "responseHashes": [
+                "7129f63ffb8964318b42262607800c93b273f10593d9669451fbd6a7b57527b4"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "onepeloton.com",
                 "www.onepeloton.com"
             ]
         }
@@ -73,8 +103,15 @@
     "categories": [],
     "performance": {},
     "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
     "types": {
-        "Script": 3
+        "Script": 4,
+        "Fetch": 2
     },
     "nameservers": [
         "ns-130.awsdns-16.com",

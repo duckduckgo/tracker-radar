@@ -7,10 +7,11 @@
     "prevalence": 0.000204,
     "sites": 2,
     "subdomains": [
-        "sdk"
+        "sdk",
+        "sdk-service"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 3,
     "resources": [
         {
             "rule": "nsureapi\\.com\\/sdk\\.js",
@@ -20,7 +21,8 @@
                 "sdk"
             ],
             "apis": {
-                "window.localStorage": 1
+                "window.localStorage": 1,
+                "window.sessionStorage": 1
             },
             "sites": 2,
             "prevalence": 0.000204,
@@ -35,29 +37,73 @@
                 "eldorado.gg",
                 "www.eneba.com"
             ]
+        },
+        {
+            "rule": "nsureapi\\.com\\/events",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sdk-service"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000204,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "eldorado.gg",
+                "www.eldorado.gg"
+            ]
+        },
+        {
+            "rule": "nsureapi\\.com\\/events",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sdk-service"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000204,
+            "cnames": [],
+            "responseHashes": [
+                "4062edaf750fb8074e7e83e0c9028c94e32468a8b6f1614774328ef045150f93"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "eldorado.gg",
+                "www.eldorado.gg"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.000102,
     "topInitiators": [
         {
-            "domain": "eneba.games",
-            "prevalence": 0.8888888888888888
+            "domain": "first party",
+            "prevalence": 0.9166666666666666
         },
         {
-            "domain": "first party",
-            "prevalence": 0.1111111111111111
+            "domain": "eneba.games",
+            "prevalence": 0.08333333333333333
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 2,
+        "Preflight": 2,
+        "Fetch": 2
     },
     "nameservers": [
-        "ns0.dnsmadeeasy.com",
-        "ns2.dnsmadeeasy.com",
-        "ns4.dnsmadeeasy.com",
         "ns1.dnsmadeeasy.com",
-        "ns3.dnsmadeeasy.com"
+        "ns4.dnsmadeeasy.com",
+        "ns3.dnsmadeeasy.com",
+        "ns0.dnsmadeeasy.com",
+        "ns2.dnsmadeeasy.com"
     ]
 }

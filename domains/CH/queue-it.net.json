@@ -7,46 +7,71 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.000405,
-    "sites": 4,
+    "prevalence": 0.000506,
+    "sites": 5,
     "subdomains": [
-        "static"
+        "static",
+        "nyrr",
+        "singaporeair"
     ],
-    "cnames": [],
-    "fingerprinting": 2,
+    "cnames": [
+        {
+            "original": "virtualcorral.nyrr.org",
+            "resolved": "nyrr.queue-it.net"
+        },
+        {
+            "original": "waitingroom.singaporeair.com",
+            "resolved": "singaporeair.queue-it.net"
+        }
+    ],
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "queue-it\\.net\\/script\\/queueclient\\.min\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
+            "cookies": 0.000101,
+            "fingerprinting": 1,
             "subdomains": [
                 "static"
             ],
-            "apis": {},
+            "apis": {
+                "Document.cookie getter": 1,
+                "Navigator.prototype.cookieEnabled": 1,
+                "Date.prototype.getTime": 1,
+                "Document.cookie setter": 1
+            },
             "sites": 2,
-            "prevalence": 0.000203,
+            "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
                 "a7d330bc5492ef8e4edd36d0b8ca526138d07cf99a84711f2053e449955ad053"
             ],
             "type": "Script",
-            "firstPartyCookies": {},
+            "firstPartyCookies": {
+                "QueueITAccepted-SDFrts345E-V3_highdemand": {
+                    "ttl": 606,
+                    "length": 145,
+                    "prevalence": 0.00010124531740407007,
+                    "uniqueness": 1
+                }
+            },
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "costco.com",
+                "currys.co.uk",
                 "www.tate.org.uk"
             ]
         },
         {
             "rule": "queue-it\\.net\\/script\\/queueconfigloader\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "static"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 1
+            },
             "sites": 2,
-            "prevalence": 0.000203,
+            "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
                 "8c4878025950f43aab7f443fe4eed5c0917218eb6857700a3aa04d44c80c83fe"
@@ -55,30 +80,57 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "costco.com",
+                "currys.co.uk",
                 "www.tate.org.uk"
+            ]
+        },
+        {
+            "rule": "queue-it\\.net\\/",
+            "cookies": 0.000101,
+            "fingerprinting": 0,
+            "subdomains": [
+                "nyrr",
+                "singaporeair"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "virtualcorral.nyrr.org",
+                    "resolved": "nyrr.queue-it.net"
+                },
+                {
+                    "original": "waitingroom.singaporeair.com",
+                    "resolved": "singaporeair.queue-it.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nyrr.org",
+                "www.singaporeair.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.000304,
     "topInitiators": [
         {
-            "domain": "transcend-cdn.com",
-            "prevalence": 0.5
+            "domain": "first party",
+            "prevalence": 0.6
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.3333333333333333
-        },
-        {
-            "domain": "first party",
-            "prevalence": 0.16666666666666666
+            "prevalence": 0.4
         }
     ],
     "types": {
-        "Script": 4
+        "Script": 4,
+        "Document": 2
     },
     "nameservers": [
         "ns-1175.awsdns-18.org",
