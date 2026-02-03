@@ -7,14 +7,21 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000912,
-    "sites": 9,
+    "prevalence": 0.00101,
+    "sites": 10,
     "subdomains": [
         "pango-virginia-prod-dji-official.us-east-1.log",
         "retcode-us-west-1.arms",
-        "arms-retcode"
+        "arms-retcode",
+        "alb-jgcpzp8kg3u74oxzma.ap-southeast-1.alb",
+        "k8s-log-custom-gcp-popmart-eu-prod.eu-central-1.log"
     ],
-    "cnames": [],
+    "cnames": [
+        {
+            "original": "sg-datahub.ldshop.gg",
+            "resolved": "alb-jgcpzp8kg3u74oxzma.ap-southeast-1.alb.aliyuncs.com"
+        }
+    ],
     "fingerprinting": 0,
     "resources": [
         {
@@ -26,7 +33,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000203,
+            "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [],
             "type": "Fetch",
@@ -47,18 +54,114 @@
             ],
             "apis": {},
             "sites": 3,
-            "prevalence": 0.000304,
+            "prevalence": 0.000303,
             "cnames": [],
             "responseHashes": [],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "_bl_uid": 0.00030388978930307944
+                "_bl_uid": 0.0003031834259727135
             },
             "exampleSites": [
                 "dji.com",
                 "www.dji.com",
                 "www.seeedstudio.com"
+            ]
+        },
+        {
+            "rule": "aliyuncs\\.com\\/collection\\/upload",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "alb-jgcpzp8kg3u74oxzma.ap-southeast-1.alb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "sg-datahub.ldshop.gg",
+                    "resolved": "alb-jgcpzp8kg3u74oxzma.ap-southeast-1.alb.aliyuncs.com"
+                }
+            ],
+            "responseHashes": [
+                "54af14ec8155eef57673af3104fcf33c6fd0518fc941a267bdab08c8e5de69c8"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ldshop.gg",
+                "www.ldshop.gg"
+            ]
+        },
+        {
+            "rule": "aliyuncs\\.com\\/collection\\/upload",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "alb-jgcpzp8kg3u74oxzma.ap-southeast-1.alb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "sg-datahub.ldshop.gg",
+                    "resolved": "alb-jgcpzp8kg3u74oxzma.ap-southeast-1.alb.aliyuncs.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ldshop.gg",
+                "www.ldshop.gg"
+            ]
+        },
+        {
+            "rule": "aliyuncs\\.com\\/logstores\\/prod-global-de-raw\\/track",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "k8s-log-custom-gcp-popmart-eu-prod.eu-central-1.log"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "popmart.com",
+                "www.popmart.com"
+            ]
+        },
+        {
+            "rule": "aliyuncs\\.com\\/logstores\\/prod-global-de-raw\\/track",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "k8s-log-custom-gcp-popmart-eu-prod.eu-central-1.log"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "popmart.com",
+                "www.popmart.com"
             ]
         },
         {
@@ -70,7 +173,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000203,
+            "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -78,7 +181,7 @@
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "_bl_uid": 0.0002025931928687196
+                "_bl_uid": 0.000202122283981809
             },
             "exampleSites": [
                 "seeedstudio.com",
@@ -88,40 +191,38 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.000101,
     "topInitiators": [
         {
+            "domain": "first party",
+            "prevalence": 0.6846153846153846
+        },
+        {
             "domain": "alicdn.com",
-            "prevalence": 0.6190476190476191
+            "prevalence": 0.2076923076923077
         },
         {
             "domain": "djicdn.com",
-            "prevalence": 0.16666666666666666
+            "prevalence": 0.05384615384615385
         },
         {
-            "domain": "first party",
-            "prevalence": 0.09523809523809523
-        },
-        {
-            "domain": "wondershare.cc",
-            "prevalence": 0.047619047619047616
+            "domain": "ldrescdn.com",
+            "prevalence": 0.038461538461538464
         },
         {
             "domain": "hg-cdn.com",
-            "prevalence": 0.047619047619047616
-        },
-        {
-            "domain": "egyball.com",
-            "prevalence": 0.023809523809523808
+            "prevalence": 0.015384615384615385
         }
     ],
     "types": {
-        "Fetch": 5,
-        "XHR": 2
+        "Fetch": 7,
+        "Preflight": 2,
+        "Ping": 2,
+        "XHR": 4
     },
     "nameservers": [
-        "ns3.aliyun.com",
+        "ns5.aliyun.com",
         "ns4.aliyun.com",
-        "ns5.aliyun.com"
+        "ns3.aliyun.com"
     ]
 }

@@ -9,13 +9,19 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.000507,
-    "sites": 5,
+    "prevalence": 0.000609,
+    "sites": 6,
     "subdomains": [
         "tyreme-apim",
-        "fortywinks-prod"
+        "fortywinks-prod",
+        "vtex-apim"
     ],
-    "cnames": [],
+    "cnames": [
+        {
+            "original": "ecomm-apim.jwpepper.com",
+            "resolved": "vtex-apim.azure-api.net"
+        }
+    ],
     "fingerprinting": 0,
     "resources": [
         {
@@ -29,8 +35,10 @@
             "sites": 2,
             "prevalence": 0.000203,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "3c7f5398579434974aafcda8bca544ef63ac3e259ee68311bd41f4bcc4956dcd"
+            ],
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -49,10 +57,8 @@
             "sites": 2,
             "prevalence": 0.000203,
             "cnames": [],
-            "responseHashes": [
-                "3c7f5398579434974aafcda8bca544ef63ac3e259ee68311bd41f4bcc4956dcd"
-            ],
-            "type": "Fetch",
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -92,7 +98,7 @@
             "prevalence": 0.000203,
             "cnames": [],
             "responseHashes": [
-                "5c59fa226454ae5fcd99851f5b91a52531057446f923e9d966969be720395ce7"
+                "0117729aa917e9e149cd248e7540d75fa27914f7997f934823acd604a60a59d6"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -123,28 +129,59 @@
                 "fortywinks.com.au",
                 "www.fortywinks.com.au"
             ]
+        },
+        {
+            "rule": "azure-api\\.net\\/customer-auth\\/org-info",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vtex-apim"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [
+                {
+                    "original": "ecomm-apim.jwpepper.com",
+                    "resolved": "vtex-apim.azure-api.net"
+                }
+            ],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jwpepper.com",
+                "www.jwpepper.com"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.000101,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.7777777777777778
+            "prevalence": 0.7058823529411765
         },
         {
             "domain": "azure.com",
-            "prevalence": 0.16666666666666666
+            "prevalence": 0.17647058823529413
+        },
+        {
+            "domain": "fullstory.com",
+            "prevalence": 0.058823529411764705
         },
         {
             "domain": "windows.net",
-            "prevalence": 0.05555555555555555
+            "prevalence": 0.058823529411764705
         }
     ],
     "types": {
+        "Fetch": 4,
         "Preflight": 4,
-        "Fetch": 2,
         "XHR": 4
     },
     "nameservers": [

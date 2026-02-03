@@ -4,14 +4,15 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000506,
-    "sites": 5,
+    "prevalence": 0.000707,
+    "sites": 7,
     "subdomains": [
         "uc",
-        "log"
+        "log",
+        "cdn"
     ],
     "cnames": [],
-    "fingerprinting": 3,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "tagdeliver\\.com\\/",
@@ -21,19 +22,21 @@
                 "uc"
             ],
             "apis": {},
-            "sites": 5,
-            "prevalence": 0.000506,
+            "sites": 7,
+            "prevalence": 0.000707,
             "cnames": [],
             "responseHashes": [
-                "51bbd9bd4c3f750ff2b48fc7cf6d7fd83963b782b40c1d96c7bf4fd1853a5f34",
-                "3cb889857fd305b4f24406383e65561a33e18227774a32cc9b5ce558f7b60155"
+                "3cb889857fd305b4f24406383e65561a33e18227774a32cc9b5ce558f7b60155",
+                "51bbd9bd4c3f750ff2b48fc7cf6d7fd83963b782b40c1d96c7bf4fd1853a5f34"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "amateurphotographer.com",
+                "www.honestjohn.co.uk",
                 "www.stuff.tv",
+                "www.the-race.com",
                 "www.thepinknews.com",
                 "www.timeshighereducation.com",
                 "www.trustedreviews.com"
@@ -47,8 +50,8 @@
                 "log"
             ],
             "apis": {},
-            "sites": 5,
-            "prevalence": 0.000506,
+            "sites": 7,
+            "prevalence": 0.000707,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
@@ -56,10 +59,62 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "amateurphotographer.com",
+                "www.honestjohn.co.uk",
                 "www.stuff.tv",
+                "www.the-race.com",
                 "www.thepinknews.com",
                 "www.timeshighereducation.com",
                 "www.trustedreviews.com"
+            ]
+        },
+        {
+            "rule": "tagdeliver\\.com\\/cihbm\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e622ec98b96d85cd06a58a64d80cbd69296801e4ed5f128680d85705c050f9c6"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "amateurphotographer.com",
+                "www.the-race.com"
+            ]
+        },
+        {
+            "rule": "tagdeliver\\.com\\/cipt\\/17016\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Date.prototype.getTimezoneOffset": 2,
+                "Date.prototype.getTime": 2,
+                "window.sessionStorage": 2,
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "b689f79af0874a4432aa01a4da7c4bd47080b64a94d435348761e9c0168af529"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "the-race.com",
+                "www.the-race.com"
             ]
         }
     ],
@@ -69,16 +124,21 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.8888888888888888
+            "prevalence": 0.8333333333333334
+        },
+        {
+            "domain": "cookiebot.com",
+            "prevalence": 0.08333333333333333
         },
         {
             "domain": "doubleclick.net",
-            "prevalence": 0.1111111111111111
+            "prevalence": 0.08333333333333333
         }
     ],
     "types": {
-        "Fetch": 5,
-        "Preflight": 5
+        "Fetch": 7,
+        "Preflight": 7,
+        "Script": 4
     },
     "nameservers": [
         "ns1.digitalocean.com",

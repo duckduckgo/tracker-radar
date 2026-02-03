@@ -4,8 +4,8 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000102,
-    "sites": 1,
+    "prevalence": 0.000203,
+    "sites": 2,
     "subdomains": [
         "consent"
     ],
@@ -13,7 +13,34 @@
     "fingerprinting": 1,
     "resources": [
         {
-            "rule": "preference-center\\.com\\/v2\\/edge",
+            "rule": "preference-center\\.com\\/v2\\/main-v5\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "consent"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie getter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "ba7bab981f47bc0b1613ecc1c3a3e6374bd97350edd6ed3c2ea19d117eb1cede"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "planetf1.com",
+                "www.tennis365.com"
+            ]
+        },
+        {
+            "rule": "preference-center\\.com\\/json\\/",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -24,6 +51,50 @@
             "prevalence": 0.000203,
             "cnames": [],
             "responseHashes": [
+                "4d8d2a29689956d1afba0dbc97731d2b04adde54f2602642208ee18d2bf974e6"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "planetf1.com",
+                "www.tennis365.com"
+            ]
+        },
+        {
+            "rule": "preference-center\\.com\\/v3\\/vendor-list\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "consent"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "92fc6c9b564fd4846e8d2c184c8ec1bdde08aaa5d719191164c188d06dc7d7ef"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "planetf1.com",
+                "www.tennis365.com"
+            ]
+        },
+        {
+            "rule": "preference-center\\.com\\/v2\\/edge",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "consent"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000305,
+            "cnames": [],
+            "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
             ],
             "type": "XHR",
@@ -31,7 +102,8 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "planetf1.com",
-                "www.planetf1.com"
+                "www.planetf1.com",
+                "www.tennis365.com"
             ]
         }
     ],
@@ -41,22 +113,24 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.3333333333333333
-        },
-        {
-            "domain": "d3b02estmut877.cloudfront.net",
-            "prevalence": 0.3333333333333333
+            "prevalence": 0.4
         },
         {
             "domain": "doubleclick.net",
-            "prevalence": 0.3333333333333333
+            "prevalence": 0.4
+        },
+        {
+            "domain": "d3b02estmut877.cloudfront.net",
+            "prevalence": 0.2
         }
     ],
     "types": {
-        "XHR": 2
+        "Script": 2,
+        "Fetch": 4,
+        "XHR": 3
     },
     "nameservers": [
-        "zoe.ns.cloudflare.com",
-        "phil.ns.cloudflare.com"
+        "phil.ns.cloudflare.com",
+        "zoe.ns.cloudflare.com"
     ]
 }

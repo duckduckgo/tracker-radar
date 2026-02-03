@@ -4,28 +4,30 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000203,
+    "prevalence": 0.000202,
     "sites": 2,
     "subdomains": [
         "cdn",
-        "settings"
+        "settings",
+        "events"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
         {
             "rule": "contkit\\.com\\/event\\.min\\.js",
-            "cookies": 0.000101,
+            "cookies": 0.000202,
             "fingerprinting": 1,
             "subdomains": [
                 "cdn"
             ],
             "apis": {
-                "Document.cookie getter": 1,
-                "Document.cookie setter": 1
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2,
+                "Date.prototype.getTime": 1
             },
             "sites": 2,
-            "prevalence": 0.000203,
+            "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
                 "95aec46264068d49618bc30f18a5d541bf01df7e3ce2db004639fc1d089bb956"
@@ -35,13 +37,19 @@
                 "_contkit": {
                     "ttl": 31536000,
                     "length": 73,
-                    "prevalence": 0.0001012965964343598,
+                    "prevalence": 0.000202122283981809,
+                    "uniqueness": 1
+                },
+                "pageViewCount": {
+                    "ttl": 1209604,
+                    "length": 1,
+                    "prevalence": 0.0001010611419909045,
                     "uniqueness": 1
                 }
             },
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "sykepleien.no",
+                "batmagasinet.no",
                 "www.watski.no"
             ]
         },
@@ -54,7 +62,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000203,
+            "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
                 "16b0641b6a6bdd945643e1f4e009d7b0de266448da860d29aebd90a19b5a0d09"
@@ -63,14 +71,36 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "sykepleien.no",
+                "batmagasinet.no",
+                "www.watski.no"
+            ]
+        },
+        {
+            "rule": "contkit\\.com\\/usage",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "events"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "batmagasinet.no",
                 "www.watski.no"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000101,
+    "cookies": 0.000202,
     "topInitiators": [
         {
             "domain": "atmng.io",
@@ -83,7 +113,7 @@
     ],
     "types": {
         "Script": 2,
-        "XHR": 2
+        "XHR": 4
     },
     "nameservers": [
         "dorthy.ns.cloudflare.com",

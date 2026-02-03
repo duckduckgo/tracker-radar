@@ -7,7 +7,9 @@
     "prevalence": 0.000203,
     "sites": 2,
     "subdomains": [
-        "cdn"
+        "cdn",
+        "bot",
+        "analytics"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -23,8 +25,8 @@
                 "Navigator.prototype.userAgent": 2,
                 "window.localStorage": 2,
                 "Notification.permission": 2,
-                "window.sessionStorage": 1,
-                "Document.cookie getter": 1,
+                "window.sessionStorage": 2,
+                "Document.cookie getter": 2,
                 "Date.prototype.getTime": 1,
                 "Document.cookie setter": 1
             },
@@ -37,16 +39,82 @@
             "type": "Script",
             "firstPartyCookies": {
                 "_webpushrPageViews": {
-                    "ttl": 7776007,
+                    "ttl": 7776008,
                     "length": 1,
-                    "prevalence": 0.0001013890297069857,
+                    "prevalence": 0.00010145074566298062,
                     "uniqueness": 1
                 }
             },
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "idownloadblog.com",
-                "www.whatismyip.com"
+                "epainassist.com",
+                "www.idownloadblog.com"
+            ]
+        },
+        {
+            "rule": "webpushr\\.com\\/sw-server\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "a33ea17c50b2a68ac05348d4909273f39c2a195151f0597614faeafc33866fe0"
+            ],
+            "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "epainassist.com",
+                "www.idownloadblog.com"
+            ]
+        },
+        {
+            "rule": "webpushr\\.com\\/prompt\\/get_info",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "bot"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "7ec7048f44d01a2e004d8b0f313877800fdc78dd45a0eded1482542e4925a34e"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "epainassist.com",
+                "www.idownloadblog.com"
+            ]
+        },
+        {
+            "rule": "webpushr\\.com\\/impression\\/session",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "analytics"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "epainassist.com",
+                "www.idownloadblog.com"
             ]
         }
     ],
@@ -56,20 +124,18 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.6666666666666666
-        },
-        {
-            "domain": "googletagmanager.com",
-            "prevalence": 0.3333333333333333
+            "prevalence": 1
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 2,
+        "Other": 2,
+        "Fetch": 4
     },
     "nameservers": [
-        "ns-1225.awsdns-25.org",
+        "ns-1581.awsdns-05.co.uk",
         "ns-397.awsdns-49.com",
         "ns-514.awsdns-00.net",
-        "ns-1581.awsdns-05.co.uk"
+        "ns-1225.awsdns-25.org"
     ]
 }

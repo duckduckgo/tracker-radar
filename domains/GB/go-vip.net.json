@@ -7,12 +7,17 @@
     "prevalence": 0.000913,
     "sites": 9,
     "subdomains": [
-        "nasa-tv"
+        "nasa-tv",
+        "malwarebytes-api"
     ],
     "cnames": [
         {
             "original": "plus.nasa.gov",
             "resolved": "nasa-tv.go-vip.net"
+        },
+        {
+            "original": "web-service.malwarebytes.com",
+            "resolved": "malwarebytes-api.go-vip.net"
         }
     ],
     "fingerprinting": 0,
@@ -43,6 +48,31 @@
                 "nasa.gov",
                 "www.nasa.gov"
             ]
+        },
+        {
+            "rule": "go-vip\\.net\\/api\\/v1\\/segments",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "malwarebytes-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [
+                {
+                    "original": "web-service.malwarebytes.com",
+                    "resolved": "malwarebytes-api.go-vip.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "malwarebytes.com",
+                "www.malwarebytes.com"
+            ]
         }
     ],
     "categories": [],
@@ -51,11 +81,16 @@
     "topInitiators": [
         {
             "domain": "ampproject.org",
-            "prevalence": 1
+            "prevalence": 0.6666666666666666
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.3333333333333333
         }
     ],
     "types": {
-        "XHR": 2
+        "XHR": 2,
+        "Preflight": 2
     },
     "nameservers": [
         "ns1.go-vip.net",

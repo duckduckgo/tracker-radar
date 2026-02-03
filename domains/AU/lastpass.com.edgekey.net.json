@@ -9,8 +9,8 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.000101,
-    "sites": 1,
+    "prevalence": 0.000203,
+    "sites": 2,
     "subdomains": [],
     "cnames": [
         {
@@ -21,7 +21,61 @@
     "fingerprinting": 1,
     "resources": [
         {
+            "rule": "lastpass\\.com\\.edgekey\\.net\\/gtag\\/js",
+            "cookies": 0.000203,
+            "fingerprinting": 1,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [
+                {
+                    "original": "web-analytics.lastpass.com",
+                    "resolved": "lastpass.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "9762bee7b82105175fb1cc456a42261609c584cc6637e1e579b88589bfaa2464"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lastpass.com",
+                "www.lastpass.com"
+            ]
+        },
+        {
             "rule": "lastpass\\.com\\.edgekey\\.net\\/g\\/collect",
+            "cookies": 0.000304,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000304,
+            "cnames": [
+                {
+                    "original": "web-analytics.lastpass.com",
+                    "resolved": "lastpass.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "e64954dc34e12c7190cc2338a54b07644ff0f102aa71cc7209bcbb49c3009f7c",
+                "570e8e54915a68fe4e5c98e6ac6b44c136debf053e37fa62d477f808efeb269a"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_ga": 0.00030435223698894185
+            },
+            "exampleSites": [
+                "lastpass.com",
+                "support.lastpass.com",
+                "www.lastpass.com"
+            ]
+        },
+        {
+            "rule": "lastpass\\.com\\.edgekey\\.net\\/_\\/service_worker\\/61k0\\/sw_iframe\\.html",
             "cookies": 0.000203,
             "fingerprinting": 0,
             "subdomains": [],
@@ -35,13 +89,36 @@
                 }
             ],
             "responseHashes": [
-                "e64954dc34e12c7190cc2338a54b07644ff0f102aa71cc7209bcbb49c3009f7c"
+                "51bdb0632b8a25a9f75b91ae374875b50831e57fefaed95d7c889b2715a6ae77"
             ],
-            "type": "Fetch",
+            "type": "Document",
             "firstPartyCookies": {},
-            "firstPartyCookiesSent": {
-                "_ga": 0.0002027780594139714
-            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lastpass.com",
+                "www.lastpass.com"
+            ]
+        },
+        {
+            "rule": "lastpass\\.com\\.edgekey\\.net\\/_\\/service_worker\\/61k0\\/sw\\.js",
+            "cookies": 0.000203,
+            "fingerprinting": 0,
+            "subdomains": [],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [
+                {
+                    "original": "web-analytics.lastpass.com",
+                    "resolved": "lastpass.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "061011f8100ed36aa891fd6761d328a0e2c1991a58557ad0c0534ecfdfdc8c71"
+            ],
+            "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
             "exampleSites": [
                 "lastpass.com",
                 "www.lastpass.com"
@@ -50,15 +127,22 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000101,
+    "cookies": 0.000203,
     "topInitiators": [
         {
             "domain": "datadoghq-browser-agent.com",
-            "prevalence": 1
+            "prevalence": 0.75
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.25
         }
     ],
     "types": {
-        "Fetch": 2
+        "Script": 2,
+        "Fetch": 3,
+        "Document": 2,
+        "Other": 2
     },
     "nameservers": []
 }

@@ -4,14 +4,85 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.00000687,
-    "sites": 1,
+    "prevalence": 0.0000137,
+    "sites": 2,
     "subdomains": [
+        "app",
+        "widget",
         "widget-api"
     ],
     "cnames": [],
-    "fingerprinting": 2,
+    "fingerprinting": 3,
     "resources": [
+        {
+            "rule": "lifeinside\\.io\\/widget\\.1\\.0\\.0\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "app"
+            ],
+            "apis": {
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "f19e41f62e649b9fa1bced45691c47dc5bb66315ca74cc9f9138fdcb77c66eb5"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lansfast.se",
+                "www.lansfast.se"
+            ]
+        },
+        {
+            "rule": "lifeinside\\.io\\/widget\\/loader\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "widget"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "f19e41f62e649b9fa1bced45691c47dc5bb66315ca74cc9f9138fdcb77c66eb5"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lansfast.se",
+                "www.lansfast.se"
+            ]
+        },
+        {
+            "rule": "lifeinside\\.io\\/query",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "widget-api"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000206,
+            "cnames": [],
+            "responseHashes": [
+                "c9741de12ce30ffd88607e12336c9929d47a7758ed4b377aeec9250930d50b8a"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lansfast.se",
+                "www.lansfast.se",
+                "www.shl.se"
+            ]
+        },
         {
             "rule": "lifeinside\\.io\\/query",
             "cookies": 0,
@@ -23,14 +94,71 @@
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
-            "responseHashes": [
-                "c1fab0cc8bc0b0bdc12bc1ec06896ec6d65212cc6693e66e8b26dbb751bd42dd"
-            ],
-            "type": "Fetch",
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "shl.se",
+                "lansfast.se",
+                "www.shl.se"
+            ]
+        },
+        {
+            "rule": "lifeinside\\.io\\/v4\\/latest\\/widget\\.umd\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "widget"
+            ],
+            "apis": {
+                "window.localStorage": 3,
+                "Navigator.prototype.maxTouchPoints": 3,
+                "NavigatorUAData.prototype.platform": 3,
+                "Navigator.prototype.userAgent": 3,
+                "Navigator.prototype.languages": 3,
+                "HTMLMediaElement.prototype.canPlayType": 3,
+                "MediaSource.isTypeSupported": 3,
+                "Document.cookie getter": 3,
+                "NavigatorUAData.prototype.brands": 3,
+                "Navigator.prototype.mediaDevices": 3,
+                "window.innerWidth": 3,
+                "window.innerHeight": 3
+            },
+            "sites": 3,
+            "prevalence": 0.0000206,
+            "cnames": [],
+            "responseHashes": [
+                "2fe0477662bd028185ad1fd9ac3888514af0381f43b538d6dda0adcb0b310945"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lansfast.se",
+                "www.lansfast.se",
+                "www.shl.se"
+            ]
+        },
+        {
+            "rule": "lifeinside\\.io\\/fonts\\/Inter\\/Inter-VariableFont_opsz%2Cwght\\.ttf",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "widget"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000206,
+            "cnames": [],
+            "responseHashes": [
+                "dee2409ba002b5a2f320debbdd5540b98b70f3697e5b1ee50185673ed466932e"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lansfast.se",
+                "www.lansfast.se",
                 "www.shl.se"
             ]
         }
@@ -40,21 +168,24 @@
     "cookies": 0,
     "topInitiators": [
         {
-            "domain": "googletagmanager.com",
-            "prevalence": 0.8333333333333334
+            "domain": "first party",
+            "prevalence": 0.75
         },
         {
-            "domain": "first party",
-            "prevalence": 0.16666666666666666
+            "domain": "googletagmanager.com",
+            "prevalence": 0.25
         }
     ],
     "types": {
-        "Fetch": 2
+        "Script": 7,
+        "Fetch": 3,
+        "Preflight": 2,
+        "Font": 3
     },
     "nameservers": [
-        "ns-438.awsdns-54.com",
         "ns-811.awsdns-37.net",
+        "ns-1930.awsdns-49.co.uk",
         "ns-1234.awsdns-26.org",
-        "ns-1930.awsdns-49.co.uk"
+        "ns-438.awsdns-54.com"
     ]
 }

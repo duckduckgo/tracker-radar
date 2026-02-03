@@ -4,39 +4,44 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000407,
-    "sites": 4,
+    "prevalence": 0.000204,
+    "sites": 2,
     "subdomains": [
         "api.breizhgov2",
-        "static.mobigo"
+        "api.rla2",
+        "analytics",
+        "matomo"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "cityway\\.fr\\/disrupt\\/api\\/v1\\/fr\\/disruptions",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "api.breizhgov2"
+                "api.breizhgov2",
+                "api.rla2"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000204,
+            "sites": 3,
+            "prevalence": 0.000305,
             "cnames": [],
             "responseHashes": [
-                "68c326070f9e53971f198397821ecd791b60493e486ee87be6125ce8c492fe32"
+                "ef1bfe49e38cfa0ac82cc5e6cc5bf3cd74245d00d914e9fc4836efcb5282a65d",
+                "27da7bbddf205a0a15164cd1ef6d607e6c3b6e57e460836933c75841ed13e490"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "breizhgo.bzh",
-                "www.breizhgo.bzh"
+                "www.breizhgo.bzh",
+                "www.lignesdazur.com"
             ]
         },
         {
-            "rule": "cityway\\.fr\\/api\\/transport\\/v3\\/line\\/GetLinesDetails",
+            "rule": "cityway\\.fr\\/disrupt\\/api\\/v1\\/fr\\/disruptions",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -67,7 +72,7 @@
             "prevalence": 0.000204,
             "cnames": [],
             "responseHashes": [
-                "7eb4343745ee155e23e75fe222e0e2890115fea6b685259fed84465717d17f20"
+                "3b294cf18eae8fb414e09b9f737b6261e3ef77a0f0de8bf5d507c22734c28f77"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -78,53 +83,68 @@
             ]
         },
         {
-            "rule": "cityway\\.fr\\/Content\\/font\\/transinfo\\/transinfo\\.woff2",
+            "rule": "cityway\\.fr\\/matomo\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 2,
             "subdomains": [
-                "static.mobigo"
+                "analytics",
+                "matomo"
             ],
-            "apis": {},
+            "apis": {
+                "Document.cookie getter": 1,
+                "window.name": 1,
+                "NavigatorUAData.prototype.brands": 1,
+                "NavigatorUAData.prototype.platform": 1,
+                "NavigatorUAData.prototype.getHighEntropyValues": 1,
+                "Navigator.prototype.userAgent": 1,
+                "Navigator.prototype.mimeTypes": 1,
+                "Navigator.prototype.javaEnabled": 1,
+                "Navigator.prototype.cookieEnabled": 1,
+                "Screen.prototype.width": 1,
+                "Screen.prototype.height": 1,
+                "Date.prototype.getTime": 1
+            },
             "sites": 2,
             "prevalence": 0.000204,
             "cnames": [],
             "responseHashes": [
-                "5c6551d8581dfa6611ef9af6090d30fe146f35f799dcf1a760f8fe8628af50df"
+                "f6f2cf1aa0f84a9858a1b8a90826f38147ce8f9eb63c63b8e51f64080de184b7"
             ],
-            "type": "Font",
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "viamobigo.fr",
-                "www.viamobigo.fr"
+                "lignesdazur.com",
+                "www.lignesdazur.com"
             ]
         },
         {
-            "rule": "cityway\\.fr\\/Content\\/font\\/adobeblank\\/adobeblank\\.woff2",
+            "rule": "cityway\\.fr\\/matomo\\.php",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "static.mobigo"
+                "analytics",
+                "matomo"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000204,
             "cnames": [],
             "responseHashes": [
-                "9f81c639394e3e93c134e79fd95b3a2879494d39de794c1d0e1a8a390f68e5e7"
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
             ],
-            "type": "Font",
+            "type": "Ping",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "viamobigo.fr",
-                "www.viamobigo.fr"
+                "lignesdazur.com",
+                "www.lignesdazur.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000102,
+    "cookies": 0,
     "topInitiators": [
         {
             "domain": "first party",
@@ -132,15 +152,16 @@
         }
     ],
     "types": {
-        "XHR": 4,
+        "XHR": 5,
         "Preflight": 2,
-        "Font": 4
+        "Script": 2,
+        "Ping": 2
     },
     "nameservers": [
         "ns5.safebrands.tech",
-        "ns2.safebrands.eu",
-        "ns3.safebrands.com",
         "ns4.safebrands.org",
-        "ns1.safebrands.fr"
+        "ns1.safebrands.fr",
+        "ns2.safebrands.eu",
+        "ns3.safebrands.com"
     ]
 }

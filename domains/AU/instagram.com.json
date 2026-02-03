@@ -13,7 +13,7 @@
     "sites": 41,
     "subdomains": [
         "www",
-        "platform"
+        "graph"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -28,66 +28,85 @@
             "apis": {
                 "window.devicePixelRatio": 5
             },
-            "sites": 28,
-            "prevalence": 0.00284,
+            "sites": 25,
+            "prevalence": 0.00254,
             "cnames": [],
             "responseHashes": [
-                "ab870b8f0e5600c461317b1718974308146a8e9d396522faa107bcce421edd9c",
-                "2736a716e58c19d1d99b926b2b0881d7743db63f721d309ac07c574adbd9594d",
-                "525666e3b407ed97dbc62c9bd41f957741f17c35b5e0f642afe26c9e08246247",
-                "990ba505fe77981eb5b709d1ef625a8f8fbf4321d5d7e84584d42dd68ebda026",
-                "93c7666bb4bd0da34fc954b8a20b17e6e318d93ac6e4b4066ef9f2eaacb3e0e2",
-                "c5e7f3ff0aa58c9024113a9f5c078f4c5a82083ecaed944fb4872a6d0a948915",
-                "fff551310d94651ef7d0a4372e0cb80954bb83a9bb6fa130dababe484c19f77b",
-                "070fccfed9f5c2965ee3ec6840b16e1a704ca17b10d3e929202febfe87795840",
-                "9a688bf30db68b95a7e28e6775174597a153f05f5bc7dfa071d84425bac965b0",
-                "06b65bd551315b6461cdd915e6e945bfb53a9b70a50455800c4aeab46af6a2f2",
-                "7e50cfa2233ad4c530d4aa57f841b038fe0dd9216ae520b9c85d3b72faa2562a",
-                "d4391c9bf30cac74f2eb4f8eac3e1e9ebe00f4119b3da22e48405864bc5982dd",
-                "0b4cf603f89dd222b64c7744bcf05fbe40d2adece5716016d41ab774cd4271a6",
-                "96f5b81d61cf7065ed7a71e0cc61944b23fc33f19ed3deeb00058d9d79ee4bd1",
-                "28d5e99d323ace3650da9837b194d66edeaf5557e60ad59a2255ef12dc3227eb",
-                "c825b805652d165d87d65a4a211046a2cad46ad0acb8ec3a539c8d6dda7a1e1d",
-                "9b117041f7851e0e885a100402a4372f4d8520ee3c88b757c0657ab956e792db",
-                "e9011b7e496cbafca1dcb95a37bd38405c6bb8b06257febf319a414c6986b4eb",
-                "16095cbb58109f1406c912d23f56cc901664c06331d67b23c425b17d630e760f",
-                "4078486e961d898197dbf153da343d708e3666a9e9bbcc3b2d47ab99fe476866",
-                "80fcbed1a65585c03574f67ea3b920ce7266df0936aaca4d2b282ec81947aeba",
-                "aefb2d65c1fb087690f4d2c35430d2139a8745b09ca37ed99755152fc347e08c",
-                "dac59526955c4974b36b74a4b395572d52d049cb34dc41bbfd7240827c3cbb0c",
-                "e34cb3d3797dd30fb96b94676aca10f628ae90f3ee7ab0e7e39c8dea9ff8e24e",
-                "caa11d54f43caf8f12f7256ba756065b5efa846e130c8a5a12716affb6d9d16a",
-                "b1d8a3e40e7d637c6732ff90bfd774cab3d679679c2060b277227e045070b35b"
+                "91b9d6c9f0f5a408a3f10db914104bf255cad6b512e03a56f43f1bba16fcf6d0",
+                "e62af959000e8687d112e8c51a1a836c39cb36f572c7946d0afff2fa615a0fa0",
+                "1efc2daf2abd767ac3e416707e531ef0c15c998e27761d3c84afde38407e2cac",
+                "d54641201f93787d778ecc4a51bfebc224c16f975b33702703eaa00cf9b57b2e",
+                "e658b8401643fa58c78c8c5d95b9464aae51fda497ce678ef70c33aaae6d9ab5",
+                "a97a4880eb01e39dfa88b4beb45fc73dce1a9f6667ca4c878b413aee7437ecc3",
+                "b4370b17cc2ae25442029d59981409c5b63546ad6f2cbde7d8a8fcab9d5988c6",
+                "29f99bef67ae31f3cbf5033dc5b3d63c19db75f74850a6b59c6281de641a291c",
+                "46b32c64f8c0edbea4135d7c457be46f888eb245c98f6b5cddda765e305ea59b",
+                "7a88dad25d6d688927ad7ee6b205c67b0f8fd00dedf5e8b60921a4ba73e2071c",
+                "3a518b8208d8105ce18207b7a827d1e10001982926e8c00e188cb5263bb1c2ac",
+                "7e3b6c3fa43d6413bb594475163b1dbaa139a4c63a6eb9b72cdf539d3aaefc1e",
+                "fcbc94bfccb6debd5d3e209c5ee9c144aaf39abbaf154df2c7969a2cd446ccb4",
+                "3512fe565391a9051f649077725e60197569197dbf6e44309d10a6b87b66ade8",
+                "2a37922aa428de04465cdeabc6cba8063707ee1f680a8c48f336975145a58469",
+                "14f0dd2f31b121a5e5e2eab27ae1d4f8bc12a73f43ca53a33a59217bfb790918",
+                "60daeb9c299d290db62b914b0a9fa2ec01ddfbd2ef4d29875eb8470e8edc80fd",
+                "5afaac673fee931c2594c429efb7052f43d82182772deafed39b7525fdc0f084",
+                "8cbcd1f389dde3f7a5e4103e415665cdebeb52dc1b6a7502ee270ea6aa09632a",
+                "7048ba6aed7b4b8cefc4208e7b0304e9c76cda3f004b5788b907fc5ff1a2b949",
+                "76e9e8fbdf9d3b1bf6c755ef28dd969362d738677b9eacf0d678bb8c6fe499db",
+                "f50f4f1224ae4825c0e84b43fb0c07e6aa7f5b7a1a3480d40752c236b305fa6b",
+                "d4e2faba82f7b7beeeb46cd1ab6d0b9e72e7b4450babbb52621ef2e0a7929417"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "www.breitbart.com",
-                "www.lifeblood.com.au",
-                "aus.sika.com",
-                "fleshbot.com",
-                "secretmelbourne.com",
-                "thejewishindependent.com.au",
-                "adelaideaz.com",
-                "www.cfa.vic.gov.au",
-                "www.stegbar.com.au",
-                "sailgp.com",
                 "restaurantguru.com",
-                "ultimateclassicrock.com",
-                "www.pedestrian.tv",
-                "menshealth.com.au",
-                "www.gadgetguy.com.au",
-                "www.purewow.com",
-                "www.premierleague.com",
-                "news.cfa.vic.gov.au",
+                "www.lifeblood.com.au",
+                "fantasy.premierleague.com",
                 "zecar.com",
-                "www.itftennis.com"
+                "sika.com",
+                "www.gadgetguy.com.au",
+                "www.cfa.vic.gov.au",
+                "www.homehardware.com.au",
+                "www.topgear.com",
+                "www.premierleague.com",
+                "equipboard.com",
+                "secretmelbourne.com",
+                "tennistonic.com",
+                "www.trainingpeaks.com",
+                "www.purewow.com",
+                "www.ms.now",
+                "www.mitre10.com.au",
+                "www.ausport.gov.au",
+                "www.axios.com"
             ]
         },
         {
-            "rule": "instagram\\.com\\/accounts\\/login\\/",
-            "cookies": 0.000203,
+            "rule": "instagram\\.com\\/me\\/media",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "graph"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "4c50cfec59cc95a30c4a6af85d87716a1437f03102e1d02888c16e92381593be"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "austboating.com.au",
+                "www.winchesteraustralia.com.au"
+            ]
+        },
+        {
+            "rule": "instagram\\.com\\/p\\/DUP0hSdjo3N\\/embed",
+            "cookies": 0.000101,
             "fingerprinting": 0,
             "subdomains": [
                 "www"
@@ -96,40 +115,58 @@
             "sites": 2,
             "prevalence": 0.000203,
             "cnames": [],
-            "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-            ],
-            "type": "Other",
+            "responseHashes": [],
+            "type": "Document",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "thestabledoor.com.au",
-                "www.australianlandscapesupplies.com.au"
+                "bedshed.com.au",
+                "www.bedshed.com.au"
             ]
         },
         {
-            "rule": "instagram\\.com\\/en_US\\/embeds\\.js",
-            "cookies": 0,
+            "rule": "instagram\\.com\\/reel\\/DUH8o9HieBg\\/embed",
+            "cookies": 0.000101,
             "fingerprinting": 0,
             "subdomains": [
-                "platform"
+                "www"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000203,
             "cnames": [],
             "responseHashes": [],
-            "type": "Script",
+            "type": "Document",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "ultimateclassicrock.com",
-                "www.stegbar.com.au"
+                "bedshed.com.au",
+                "www.bedshed.com.au"
+            ]
+        },
+        {
+            "rule": "instagram\\.com\\/reel\\/DTsFDRGldUg\\/embed",
+            "cookies": 0.000101,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bedshed.com.au",
+                "www.bedshed.com.au"
             ]
         },
         {
             "rule": "instagram\\.com\\/reel\\/DTkL-QUD4RV\\/embed",
-            "cookies": 0,
+            "cookies": 0.000101,
             "fingerprinting": 0,
             "subdomains": [
                 "www"
@@ -149,7 +186,7 @@
         },
         {
             "rule": "instagram\\.com\\/reel\\/DTaDPS_DveK\\/embed",
-            "cookies": 0,
+            "cookies": 0.000101,
             "fingerprinting": 0,
             "subdomains": [
                 "www"
@@ -169,7 +206,7 @@
         },
         {
             "rule": "instagram\\.com\\/p\\/DTIDib0j3QV\\/embed",
-            "cookies": 0,
+            "cookies": 0.000101,
             "fingerprinting": 0,
             "subdomains": [
                 "www"
@@ -189,7 +226,7 @@
         },
         {
             "rule": "instagram\\.com\\/reel\\/DS6QlaZlQ65\\/embed",
-            "cookies": 0,
+            "cookies": 0.000101,
             "fingerprinting": 0,
             "subdomains": [
                 "www"
@@ -209,106 +246,6 @@
         },
         {
             "rule": "instagram\\.com\\/reel\\/DS12bRKCpX4\\/embed",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "www"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000203,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Document",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "bedshed.com.au",
-                "www.bedshed.com.au"
-            ]
-        },
-        {
-            "rule": "instagram\\.com\\/p\\/DStK0SuDtuh\\/embed",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "www"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000203,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Document",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "bedshed.com.au",
-                "www.bedshed.com.au"
-            ]
-        },
-        {
-            "rule": "instagram\\.com\\/p\\/DSo7dxrDRCm\\/embed",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "www"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000203,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Document",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "bedshed.com.au",
-                "www.bedshed.com.au"
-            ]
-        },
-        {
-            "rule": "instagram\\.com\\/reel\\/DSkAw6AAuuv\\/embed",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "www"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000203,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Document",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "bedshed.com.au",
-                "www.bedshed.com.au"
-            ]
-        },
-        {
-            "rule": "instagram\\.com\\/reel\\/DTkL-QUD4RV\\/embed\\/",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "www"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000203,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Document",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "bedshed.com.au",
-                "www.bedshed.com.au"
-            ]
-        },
-        {
-            "rule": "instagram\\.com\\/reel\\/DSkAw6AAuuv\\/embed\\/",
             "cookies": 0.000101,
             "fingerprinting": 0,
             "subdomains": [
@@ -328,123 +265,45 @@
             ]
         },
         {
-            "rule": "instagram\\.com\\/reel\\/DS6QlaZlQ65\\/embed\\/",
+            "rule": "instagram\\.com\\/me\\/media",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "www"
+                "graph"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000203,
             "cnames": [],
             "responseHashes": [],
-            "type": "Document",
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "bedshed.com.au",
-                "www.bedshed.com.au"
+                "dinnerladies.com.au",
+                "www.dinnerladies.com.au"
             ]
         },
         {
-            "rule": "instagram\\.com\\/reel\\/DTaDPS_DveK\\/embed\\/",
+            "rule": "instagram\\.com\\/me\\/media",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "www"
+                "graph"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000203,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Document",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "bedshed.com.au",
-                "www.bedshed.com.au"
-            ]
-        },
-        {
-            "rule": "instagram\\.com\\/p\\/DTIDib0j3QV\\/embed\\/",
-            "cookies": 0.000101,
-            "fingerprinting": 0,
-            "subdomains": [
-                "www"
+            "responseHashes": [
+                "492f31a4512f025b0831d988a4f4cce99ba1798960cf52cb9bc8aa7c85ac27bf"
             ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000203,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Document",
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "bedshed.com.au",
-                "www.bedshed.com.au"
-            ]
-        },
-        {
-            "rule": "instagram\\.com\\/reel\\/DS12bRKCpX4\\/embed\\/",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "www"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000203,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Document",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "bedshed.com.au",
-                "www.bedshed.com.au"
-            ]
-        },
-        {
-            "rule": "instagram\\.com\\/p\\/DStK0SuDtuh\\/embed\\/",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "www"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000203,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Document",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "bedshed.com.au",
-                "www.bedshed.com.au"
-            ]
-        },
-        {
-            "rule": "instagram\\.com\\/p\\/DSo7dxrDRCm\\/embed\\/",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "www"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000203,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Document",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "bedshed.com.au",
-                "www.bedshed.com.au"
+                "dinnerladies.com.au",
+                "www.dinnerladies.com.au"
             ]
         },
         {
@@ -476,45 +335,55 @@
         "Social Network"
     ],
     "performance": {},
-    "cookies": 0.00112,
+    "cookies": 0.00122,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.8589743589743589
+            "prevalence": 0.8225806451612904
         },
         {
             "domain": "shopify.com",
-            "prevalence": 0.05128205128205128
+            "prevalence": 0.03225806451612903
         },
         {
-            "domain": "bigcommerce.com",
-            "prevalence": 0.02564102564102564
+            "domain": "ajax.googleapis.com",
+            "prevalence": 0.03225806451612903
         },
         {
             "domain": "curator.io",
-            "prevalence": 0.01282051282051282
+            "prevalence": 0.016129032258064516
+        },
+        {
+            "domain": "bigcommerce.com",
+            "prevalence": 0.016129032258064516
         },
         {
             "domain": "pcdn.co",
-            "prevalence": 0.01282051282051282
+            "prevalence": 0.016129032258064516
         },
         {
             "domain": "hubspotusercontent-ap1.net",
-            "prevalence": 0.01282051282051282
+            "prevalence": 0.016129032258064516
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.01282051282051282
+            "prevalence": 0.016129032258064516
         },
         {
             "domain": "cdninstagram.com",
-            "prevalence": 0.01282051282051282
+            "prevalence": 0.016129032258064516
+        },
+        {
+            "domain": "jsdelivr.net",
+            "prevalence": 0.016129032258064516
         }
     ],
     "types": {
-        "Script": 30,
-        "Other": 2,
-        "Document": 34
+        "Script": 25,
+        "XHR": 2,
+        "Document": 18,
+        "Preflight": 2,
+        "Fetch": 2
     },
     "nameservers": [
         "b.ns.instagram.com",

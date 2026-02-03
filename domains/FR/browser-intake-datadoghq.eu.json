@@ -10,7 +10,8 @@
     "prevalence": 0.00122,
     "sites": 12,
     "subdomains": [
-        "rum"
+        "rum",
+        "csp-report"
     ],
     "cnames": [],
     "fingerprinting": 0,
@@ -23,36 +24,55 @@
                 "rum"
             ],
             "apis": {},
-            "sites": 11,
-            "prevalence": 0.00112,
+            "sites": 9,
+            "prevalence": 0.000916,
             "cnames": [],
             "responseHashes": [
-                "dd70eb0ca51913206adb46b061144c98e790d40e5de0fa054fffd62d54f160c1",
-                "618076fe254ec17c8a9b277b80fa2c5a543696de748e5a24d290212357dc7cd3",
-                "e8b128293ef400df9fb2f10d076fc2534fd6208b112d6b52d0339ec4f37962fa",
-                "22f8ed866c65ad9548dfb0ff7af9501bd8377603ce8671c4b2b7d1d792d9e171",
-                "e57c4377616d23a49c81bff779cd57e2a18b9cc922dcb5a85e9b18d8b83cff12",
-                "b80282fc466546ac1ac8c2d7216aa1791653b17be7709c3439ef576017a179d3",
-                "06deeda45327fb3030867671b8f0fb5079ad9a27be440036f57a4a16b7cb8295",
-                "f70edd909d02bbadf6fbe9106b66c6e5ca0a03e4225f9cc0779ff34a94d6f302",
-                "6dbb0d0e5c5de0ddc55c94313ed3c0521b6779d5021cba0d3785903419882b63",
-                "e5871f753a77add7672cd3335d7e71a2a01f3dab7bf27be2fc227f3d7e9fd2ca"
+                "c196c0696b73c74de361787c3e3fa90d80de2ff1bfdb583dcb0ae6ab49bad9a8",
+                "f4691f2d93a62e522b438b443c32410e869fd33e6d80f842c1052d3cac3884b5",
+                "1f53bd130b2fee69831d73c22e5d0c595bb6663732e16778f84bba15856eab97",
+                "61fe8e7243622dca56d914efc0ec6397e8c649805e143014964c1e982f9fc75d",
+                "22600578251db14f8039b2f395ec563bd8bd0fc5dfddeee40af2b2957020b362",
+                "19466f60ab02f1118596eb0a5cc94e662168b289e89fb7f09e32f47a64f8b0c8",
+                "80a89558e0d2268356c4069ed822688d0c183a053b8d5b83208d0c08d848681e",
+                "e7f10fd540dc4ef7a655d33f7cbe468d884dc9636af3039590f3b690d4dad50f"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "octopusenergy.fr",
-                "payfit.com",
+                "openclassrooms.com",
+                "rmc.bfmtv.com",
                 "www.cobra.fr",
-                "www.directferries.fr",
-                "www.flixbus.fr",
-                "www.habitat.fr",
+                "www.corsematin.com",
                 "www.iadfrance.fr",
                 "www.laprovence.com",
                 "www.lexus.fr",
-                "www.rituals.com",
-                "www.toyota.fr"
+                "www.rituals.com"
+            ]
+        },
+        {
+            "rule": "browser-intake-datadoghq\\.eu\\/api\\/v2\\/logs",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "csp-report"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000305,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "betclic.fr",
+                "www.betclic.fr",
+                "www.britishairways.com"
             ]
         },
         {
@@ -63,17 +83,19 @@
                 "rum"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000204,
+            "sites": 3,
+            "prevalence": 0.000305,
             "cnames": [],
             "responseHashes": [
-                "496894325fc455db5fcbd63bc5c895c291261d601e9f34375b5c152f03ac5d86"
+                "9544c6df3fec5e62a26ec35898c66f1e9864efe49850d322b91eda4e34e41e64",
+                "0630b108f5815c29aa2a41c3678c215e4e853668678911b84709b0bc9b0c5e34"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "flixbus.fr",
+                "corsematin.com",
+                "www.corsematin.com",
                 "www.laprovence.com"
             ]
         }
@@ -84,25 +106,34 @@
     "topInitiators": [
         {
             "domain": "datadoghq-browser-agent.com",
-            "prevalence": 0.4318181818181818
-        },
-        {
-            "domain": "first party",
-            "prevalence": 0.2840909090909091
+            "prevalence": 0.5229357798165137
         },
         {
             "domain": "shopify.com",
-            "prevalence": 0.2840909090909091
+            "prevalence": 0.26605504587155965
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.1926605504587156
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.009174311926605505
+        },
+        {
+            "domain": "go-mpulse.net",
+            "prevalence": 0.009174311926605505
         }
     ],
     "types": {
-        "Fetch": 11,
-        "XHR": 2
+        "Fetch": 9,
+        "Other": 3,
+        "XHR": 3
     },
     "nameservers": [
         "ns-cloud-e1.googledomains.com",
-        "ns-cloud-e4.googledomains.com",
+        "ns-cloud-e2.googledomains.com",
         "ns-cloud-e3.googledomains.com",
-        "ns-cloud-e2.googledomains.com"
+        "ns-cloud-e4.googledomains.com"
     ]
 }

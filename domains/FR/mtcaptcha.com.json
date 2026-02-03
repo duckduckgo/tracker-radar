@@ -4,8 +4,8 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000204,
-    "sites": 2,
+    "prevalence": 0.000407,
+    "sites": 4,
     "subdomains": [
         "service",
         "service2"
@@ -21,10 +21,10 @@
                 "service"
             ],
             "apis": {
-                "Navigator.prototype.cookieEnabled": 1
+                "Navigator.prototype.cookieEnabled": 2
             },
-            "sites": 2,
-            "prevalence": 0.000204,
+            "sites": 4,
+            "prevalence": 0.000407,
             "cnames": [],
             "responseHashes": [
                 "b3b2b6da79e4fae89772c9561092faed98175430e518e8f10ed2942687833352"
@@ -34,7 +34,9 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "lehavre.fr",
-                "webmail.sfr.fr"
+                "webmail.sfr.fr",
+                "www.festival-cannes.com",
+                "www.tradingsat.com"
             ]
         },
         {
@@ -46,8 +48,8 @@
                 "service2"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000204,
+            "sites": 4,
+            "prevalence": 0.000407,
             "cnames": [],
             "responseHashes": [
                 "1aa6b1354bafc31dfbd7e980d71fb8f35b682004955ffd2d5ba0a3f60238e74d"
@@ -57,13 +59,133 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "lehavre.fr",
-                "webmail.sfr.fr"
+                "webmail.sfr.fr",
+                "www.festival-cannes.com",
+                "www.tradingsat.com"
+            ]
+        },
+        {
+            "rule": "mtcaptcha\\.com\\/mtcv1\\/client\\/iframe\\.html",
+            "cookies": 0.000204,
+            "fingerprinting": 2,
+            "subdomains": [
+                "service"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2,
+                "Date.prototype.getTimezoneOffset": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Document.cookie getter": 2,
+                "Navigator.prototype.language": 2,
+                "Navigator.prototype.hardwareConcurrency": 2,
+                "Document.cookie setter": 2,
+                "Navigator.prototype.maxTouchPoints": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000204,
+            "cnames": [],
+            "responseHashes": [
+                "712996788eeab125887f51da59b59fae79ee91c0b8bd34ee8966fdc099edd757"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {
+                "mtv1Pulse": {
+                    "ttl": null,
+                    "length": 26,
+                    "prevalence": 0.00020360378703043877,
+                    "uniqueness": 1
+                },
+                "mtv1ConfSum": {
+                    "ttl": null,
+                    "length": 62,
+                    "prevalence": 0.00010180189351521938,
+                    "uniqueness": 1
+                },
+                "jsV": {
+                    "ttl": null,
+                    "length": 19,
+                    "prevalence": 0.00010180189351521938,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {
+                "jsV": 0.00010180189351521938
+            },
+            "exampleSites": [
+                "sfr.fr",
+                "www.tradingsat.com"
+            ]
+        },
+        {
+            "rule": "mtcaptcha\\.com\\/mtcv1\\/api\\/getchallenge\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "service"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000204,
+            "cnames": [],
+            "responseHashes": [
+                "21be8360076ef769c5eb51ab71bc848bac947ea42cb24e1b26193eed73a2f508"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sfr.fr",
+                "www.tradingsat.com"
+            ]
+        },
+        {
+            "rule": "mtcaptcha\\.com\\/mtcv1\\/api\\/getimage\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "service"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000204,
+            "cnames": [],
+            "responseHashes": [
+                "330a596af685a154573d9f12c14eccabb57ad71bc13503724a01bb8881ad5f01"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sfr.fr",
+                "www.tradingsat.com"
+            ]
+        },
+        {
+            "rule": "mtcaptcha\\.com\\/mtcv1\\/api\\/getaudio\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "service"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000204,
+            "cnames": [],
+            "responseHashes": [
+                "e4871274849f2245cdeb962c3639bd82024ec4c68f351c52d24a778e70d4e5f8"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sfr.fr",
+                "www.tradingsat.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000102,
+    "cookies": 0.000204,
     "topInitiators": [
         {
             "domain": "first party",
@@ -71,12 +193,14 @@
         }
     ],
     "types": {
-        "Script": 4
+        "Script": 8,
+        "Document": 2,
+        "XHR": 6
     },
     "nameservers": [
-        "ns-248.awsdns-31.com",
-        "ns-952.awsdns-55.net",
+        "ns-1406.awsdns-47.org",
         "ns-1543.awsdns-00.co.uk",
-        "ns-1406.awsdns-47.org"
+        "ns-248.awsdns-31.com",
+        "ns-952.awsdns-55.net"
     ]
 }

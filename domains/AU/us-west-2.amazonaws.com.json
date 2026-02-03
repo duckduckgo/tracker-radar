@@ -9,12 +9,13 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.000608,
-    "sites": 6,
+    "prevalence": 0.00071,
+    "sites": 7,
     "subdomains": [
         "eq47czqy1l.execute-api",
         "crazygames-prod-nlb-analytics-9f975bbd428d2caa.elb",
-        "crazygames-prod-nlb-analytics-v2-e91f9fb565976fa3.elb"
+        "crazygames-prod-nlb-analytics-v2-e91f9fb565976fa3.elb",
+        "public-ingress-a84df8d06aede39e.elb"
     ],
     "cnames": [
         {
@@ -24,6 +25,10 @@
         {
             "original": "cza2.crazygames.com",
             "resolved": "crazygames-prod-nlb-analytics-v2-e91f9fb565976fa3.elb.us-west-2.amazonaws.com"
+        },
+        {
+            "original": "login.databricks.com",
+            "resolved": "public-ingress-a84df8d06aede39e.elb.us-west-2.amazonaws.com"
         }
     ],
     "fingerprinting": 0,
@@ -82,6 +87,56 @@
                 "crazygames.com",
                 "www.crazygames.com"
             ]
+        },
+        {
+            "rule": "us-west-2\\.amazonaws\\.com\\/telemetry-unauth",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "public-ingress-a84df8d06aede39e.elb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [
+                {
+                    "original": "login.databricks.com",
+                    "resolved": "public-ingress-a84df8d06aede39e.elb.us-west-2.amazonaws.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "databricks.com",
+                "www.databricks.com"
+            ]
+        },
+        {
+            "rule": "us-west-2\\.amazonaws\\.com\\/telemetry-unauth",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "public-ingress-a84df8d06aede39e.elb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [
+                {
+                    "original": "login.databricks.com",
+                    "resolved": "public-ingress-a84df8d06aede39e.elb.us-west-2.amazonaws.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "databricks.com",
+                "www.databricks.com"
+            ]
         }
     ],
     "categories": [
@@ -91,25 +146,23 @@
     "cookies": 0,
     "topInitiators": [
         {
-            "domain": "motortrend.com",
-            "prevalence": 0.4
-        },
-        {
-            "domain": "shopsense.ai",
-            "prevalence": 0.4
-        },
-        {
             "domain": "first party",
-            "prevalence": 0.2
+            "prevalence": 0.5
+        },
+        {
+            "domain": "motortrend.com",
+            "prevalence": 0.5
         }
     ],
     "types": {
-        "Ping": 5
+        "Ping": 5,
+        "Fetch": 2,
+        "Preflight": 2
     },
     "nameservers": [
-        "ns-821.awsdns-38.net",
         "ns-1556.awsdns-02.co.uk",
         "ns-156.awsdns-19.com",
+        "ns-821.awsdns-38.net",
         "ns-1522.awsdns-62.org"
     ]
 }

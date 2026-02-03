@@ -8,31 +8,12 @@
     "sites": 3,
     "subdomains": [
         "api.scw",
-        "apm.apps.scw"
+        "apm.apps.scw",
+        "freebox.cdn.scw"
     ],
     "cnames": [],
     "fingerprinting": 0,
     "resources": [
-        {
-            "rule": "iliad\\.fr\\/search\\/assistance-production-search\\/_search",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "api.scw"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "free.fr",
-                "assistance.free.fr"
-            ]
-        },
         {
             "rule": "iliad\\.fr\\/search\\/assistance-production-search\\/_search",
             "cookies": 0,
@@ -54,11 +35,11 @@
             ]
         },
         {
-            "rule": "iliad\\.fr\\/intake\\/v2\\/rum\\/events",
+            "rule": "iliad\\.fr\\/search\\/assistance-production-search\\/_search",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "apm.apps.scw"
+                "api.scw"
             ],
             "apis": {},
             "sites": 2,
@@ -70,7 +51,7 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "free.fr",
-                "portail.free.fr"
+                "assistance.free.fr"
             ]
         },
         {
@@ -95,6 +76,49 @@
                 "assistance.free.fr",
                 "portail.free.fr"
             ]
+        },
+        {
+            "rule": "iliad\\.fr\\/intake\\/v2\\/rum\\/events",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "apm.apps.scw"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000206,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "free.fr",
+                "assistance.free.fr",
+                "portail.free.fr"
+            ]
+        },
+        {
+            "rule": "iliad\\.fr\\/data-json\\/shops\\/shops\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "freebox.cdn.scw"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "626ee06f4f79006a51e3682e3770879c757358dea364ee8724265e5af6fbb49e"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "free.fr",
+                "www.free.fr"
+            ]
         }
     ],
     "categories": [],
@@ -107,15 +131,16 @@
         }
     ],
     "types": {
-        "Preflight": 4,
-        "Fetch": 5
+        "Fetch": 5,
+        "Preflight": 5,
+        "XHR": 2
     },
     "nameservers": [
         "ns2.iliad.fr",
-        "ns1.proxad.net",
-        "ns.iliad.fr",
         "ns0.proxad.net",
         "ns1.iliad.fr",
+        "ns.iliad.fr",
+        "ns1.proxad.net",
         "ns-scw.proxad.net"
     ]
 }

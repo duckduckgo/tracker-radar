@@ -4,16 +4,41 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.000507,
-    "sites": 5,
+    "prevalence": 0.000812,
+    "sites": 8,
     "subdomains": [
         "widgets",
-        "sdks",
-        "bff-api"
+        "bff-api",
+        "sdks"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "automizely\\.com\\/loyalty\\/v1\\/main\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "widgets"
+            ],
+            "apis": {
+                "window.localStorage": 1,
+                "Date.prototype.getTime": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "65e69987ce78672c913d09735d353aa725891ce034b6804c96be3a07182bfcc9"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fellahamilton.com.au",
+                "savagetech.com.au"
+            ]
+        },
         {
             "rule": "automizely\\.com\\/returns\\/main\\.js",
             "cookies": 0,
@@ -22,21 +47,65 @@
                 "widgets"
             ],
             "apis": {
-                "window.sessionStorage": 2
+                "window.sessionStorage": 3,
+                "Date.prototype.getTimezoneOffset": 1,
+                "Date.prototype.getTime": 1
             },
             "sites": 3,
             "prevalence": 0.000304,
             "cnames": [],
             "responseHashes": [
-                "53ca85f6ddbf6b54cadb9ced18688263c18baf0e077f18e83b71b7f36ba00745"
+                "0c35967e591a59a31ab1e7e91612c51d7839cc6ebcf774e6011e389d88dd70b7"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "missamara.com.au",
                 "thehatstore.com.au",
-                "www.easyr.com.au"
+                "www.easyr.com.au",
+                "www.hatsbythe100.com.au"
+            ]
+        },
+        {
+            "rule": "automizely\\.com\\/marketing\\/public\\/graphql",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "bff-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fatshackvintage.com.au",
+                "www.fatshackvintage.com.au"
+            ]
+        },
+        {
+            "rule": "automizely\\.com\\/marketing\\/public\\/graphql",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "bff-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "a659475742eac2a1b8ea34e929421808f2bfe78597a87a23ddc37d15e2cea164"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fatshackvintage.com.au",
+                "www.fatshackvintage.com.au"
             ]
         },
         {
@@ -100,7 +169,7 @@
             "prevalence": 0.000203,
             "cnames": [],
             "responseHashes": [
-                "e2fe75417308cea3b7460d08f42745495616516e34dc03d9527720f3e5f6380b"
+                "9dafd7445dfb7aca279d3aaaae88dccab9d9544b532f764238a1f8b5b74129d7"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -117,17 +186,13 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.9230769230769231
-        },
-        {
-            "domain": "d5zu2f4xvqanl.cloudfront.net",
-            "prevalence": 0.07692307692307693
+            "prevalence": 1
         }
     ],
     "types": {
-        "Script": 5,
-        "Preflight": 2,
-        "Fetch": 2
+        "Script": 7,
+        "Preflight": 4,
+        "Fetch": 4
     },
     "nameservers": [
         "april.ns.cloudflare.com",

@@ -7,15 +7,17 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.000103,
-    "sites": 15,
+    "prevalence": 0.00013,
+    "sites": 19,
     "subdomains": [
         "timkenco2020index-farm",
+        "sensata2017ir",
         "rockwell2023tf",
         "assurant2017rd",
-        "firstamerican2017ir",
+        "q4widgets",
         "boeing2015",
-        "csx2019ir"
+        "firstamerican2017ir",
+        "cloroxir2016"
     ],
     "cnames": [
         {
@@ -25,6 +27,32 @@
     ],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "q4web\\.com\\/feed\\/StockQuote\\.svc\\/GetFullStockQuoteList",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "timkenco2020index-farm",
+                "sensata2017ir"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "investors.timken.com",
+                    "resolved": "timkenco2020index-farm.q4web.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "timken.com",
+                "www.sensata.com"
+            ]
+        },
         {
             "rule": "q4web\\.com\\/Q4IdpLoginCallback\\.aspx",
             "cookies": 0,
@@ -62,13 +90,10 @@
             ],
             "apis": {},
             "sites": 5,
-            "prevalence": 0.0000344,
+            "prevalence": 0.0000343,
             "cnames": [],
             "responseHashes": [
-                "df78fead55d969be3383c68dca795aa7dcd9f9ebaeb306b74b467538d077d74c",
-                "8ad23a8c50a83e23284f17d4ff712ffd360b032feba808154b33f823995b9a3c",
-                "ef4ea8e421d425753923f0f982c2caa9f476b320df763da1519cb635745ebbe4",
-                "93e89e001d20441df56b57854f3ac463976690cb1c7b560490c2236fb0dd8e4e"
+                "0c584334e82bd0eef7bdd6fb5827372c9fc37bddb16b3321021abc11b4c712af"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -82,31 +107,54 @@
             ]
         },
         {
+            "rule": "q4web\\.com\\/preview\\/js\\/toolbar\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "q4widgets"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000206,
+            "cnames": [],
+            "responseHashes": [
+                "7d7e683222e09a7dc3d4215e22952037580fd6271c65e4b4d9ce82480a96764d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "atmeta.com",
+                "investor.atmeta.com",
+                "shopifyinvestors.com"
+            ]
+        },
+        {
             "rule": "q4web\\.com\\/feed\\/StockQuote\\.svc\\/GetStockQuoteList",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "firstamerican2017ir",
                 "boeing2015",
-                "csx2019ir"
+                "firstamerican2017ir",
+                "cloroxir2016"
             ],
             "apis": {},
             "sites": 4,
-            "prevalence": 0.0000275,
+            "prevalence": 0.0000274,
             "cnames": [],
             "responseHashes": [
-                "5d80557b67e33793d88f64ce42bbe463e4ff4dbd4a7fbfab8d7c379ff35c6442",
-                "06c173ce7367ce3b0d497386787401fe4c6d73bf54918d4bfa189528bbadb12a",
-                "c9557624a7f56fba65f09178432cbb37db60263bd4cfc2c36a13704b74718308"
+                "07edddde70ca6713b40d5ec78f468f65d9b6ffb181c9935a5b4792c4b97568b5",
+                "8406046903c2e87114bc3153315ae872c7c59dd197f80aabb3787be47093c7d6",
+                "744d3482b526df621aa7bed9f78035e6473a7f3235f810ce4fac81eb88dab2c6"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "firstam.com",
+                "boeing.com",
                 "www.boeing.com",
-                "www.csx.com",
-                "www.firstam.com"
+                "www.firstam.com",
+                "www.thecloroxcompany.com"
             ]
         }
     ],
@@ -116,21 +164,22 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.7333333333333333
+            "prevalence": 0.85
         },
         {
             "domain": "q4cdn.com",
-            "prevalence": 0.13333333333333333
+            "prevalence": 0.1
         },
         {
             "domain": "jquery.com",
-            "prevalence": 0.13333333333333333
+            "prevalence": 0.05
         }
     ],
     "types": {
+        "XHR": 6,
         "Document": 2,
         "Fetch": 5,
-        "XHR": 4
+        "Script": 3
     },
     "nameservers": [
         "ns-1098.awsdns-09.org",

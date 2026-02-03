@@ -4,13 +4,14 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000687,
-    "sites": 10,
+    "prevalence": 0.000096,
+    "sites": 14,
     "subdomains": [
         "de-fp",
         "us-fp",
         "us-ppfp",
-        "sg-fp"
+        "us-behavior",
+        "de-behavior"
     ],
     "cnames": [],
     "fingerprinting": 0,
@@ -22,34 +23,92 @@
             "subdomains": [
                 "de-fp",
                 "us-fp",
-                "us-ppfp",
-                "sg-fp"
+                "us-ppfp"
             ],
             "apis": {},
-            "sites": 8,
-            "prevalence": 0.000055,
+            "sites": 11,
+            "prevalence": 0.0000754,
             "cnames": [],
             "responseHashes": [
-                "c5939091f4eefd61d56d70bd66672b46338e1b2118835ddd4e129456b26e8e2e",
-                "cf099ba7e7969714f0a3e63821d77b153f160415472251fa84e2994c14de305e",
-                "55417a30159cca3bbcae483d0c1c9108a862979dd959b2c84dc2f071f58792a4",
-                "fef0c0dae49be26a92160c840c633d573157be73eb08e442c970de593c458087",
-                "144790676dfa11f36a02c2ebe8510e8f7ab268e1a79f402a6f89e4b9c8115457",
-                "12f7f3d830c431c3db1bdad7443d827080e8852e7f2f1f7b9225d6db6a027fdf",
-                "fe53f3ecd27e1668538ab2496c50f401fc631d418bb84cde00544c66e90eaef7"
+                "20360f8ea6a4e39f54a45ec0f3e12b767cbce796d3a8b41164f95d7b281c32a9",
+                "bf779d6ded89cc95d3d5752de71aaa5503d596e43c99cf419afcd92c9606469d",
+                "296c6a1962a6ad95426a194b9774ff9178c0229d65a4751be4984d222c19cea4",
+                "48a72fd7c2467df03521bb832a98bc55f41f6311da4c3eb9ddea20be7fdf702f",
+                "5795f9a665c29a9dfedbd1544cc4d1a4082bb5b52b9a36219d8ec8e07d687117",
+                "ea9269188ca3e14fd63e0be2a4f96afcee8e62f7b049b4028a5c948949ae7a11",
+                "49505a9f6424abd1cbb14f3a452da63ed10be9ccb138e90e5b2b803d0fed3af5",
+                "db8e764647082e16a5d4ce0b102faa80775bf717d2c9ac62b71e77df904a432d",
+                "a4a47bd85614b5c813d02ce2324503f2dd103927710c873e39e14cd5c62e6230",
+                "b9fa9daf9f1968ab7bafcc5e18dc51052f8ee220dfc094761aaee1b4d3d09ea3"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "1v1chat.me",
-                "livcam.me",
-                "www.highlives.net",
+                "au.shein.com",
+                "eur.shein.com",
+                "il.shein.com",
+                "nl.shein.com",
+                "us.shein.com",
                 "www.liveme.com",
                 "www.popmart.com",
-                "www.topuplive.com",
+                "www.shein.co.uk",
                 "www.zeelool.com",
                 "zeelool.com"
+            ]
+        },
+        {
+            "rule": "apitd\\.net\\/behavior\\/profile\\/config",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "us-behavior",
+                "de-behavior"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.0000412,
+            "cnames": [],
+            "responseHashes": [
+                "a77dfaa0adb5a2d70753124ff29bd08de1c23caf89c7ce978b9f44c8b03dba83",
+                "6020461bbf6a04f9b7120374c8e3f83bed60fd5177bb2d763f037b79f3936436"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "shein.com",
+                "eur.shein.com",
+                "il.shein.com",
+                "nl.shein.com",
+                "us.shein.com",
+                "www.shein.co.uk"
+            ]
+        },
+        {
+            "rule": "apitd\\.net\\/behavior\\/profile\\/config",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "us-behavior",
+                "de-behavior"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.0000412,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "shein.com",
+                "eur.shein.com",
+                "il.shein.com",
+                "nl.shein.com",
+                "us.shein.com",
+                "www.shein.co.uk"
             ]
         }
     ],
@@ -58,12 +117,16 @@
     "cookies": 0,
     "topInitiators": [
         {
-            "domain": "trustdecision.com",
+            "domain": "ltwebstatic.com",
             "prevalence": 0.6
         },
         {
+            "domain": "trustdecision.com",
+            "prevalence": 0.15
+        },
+        {
             "domain": "aliyuncs.com",
-            "prevalence": 0.3
+            "prevalence": 0.15
         },
         {
             "domain": "first party",
@@ -71,7 +134,8 @@
         }
     ],
     "types": {
-        "XHR": 8
+        "XHR": 17,
+        "Preflight": 6
     },
     "nameservers": [
         "ns3.dnsv4.com",

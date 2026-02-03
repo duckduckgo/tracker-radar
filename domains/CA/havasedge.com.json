@@ -4,9 +4,10 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000203,
-    "sites": 2,
+    "prevalence": 0.000305,
+    "sites": 3,
     "subdomains": [
+        "tag",
         "event",
         "cookie"
     ],
@@ -14,35 +15,79 @@
     "fingerprinting": 2,
     "resources": [
         {
+            "rule": "havasedge\\.com\\/js\\/evt\\.js",
+            "cookies": 0.000102,
+            "fingerprinting": 2,
+            "subdomains": [
+                "tag"
+            ],
+            "apis": {
+                "Document.cookie getter": 1,
+                "Document.cookie setter": 1,
+                "Date.prototype.getTime": 2,
+                "Date.prototype.getTimezoneOffset": 2,
+                "Navigator.prototype.plugins": 2,
+                "Navigator.prototype.platform": 2,
+                "Navigator.prototype.cookieEnabled": 2,
+                "Navigator.prototype.doNotTrack": 2,
+                "Screen.prototype.height": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.colorDepth": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "585a5ffa8c3c01d26bfa9e61e12aecfac2b9440051ce482de6919393f76dcdf3"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "__helocckid": {
+                    "ttl": 223948800004,
+                    "length": 47,
+                    "prevalence": 0.0001015950421619425,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "draxe.com",
+                "www.twc.health"
+            ]
+        },
+        {
             "rule": "havasedge\\.com\\/track-event",
-            "cookies": 0.000203,
+            "cookies": 0.000305,
             "fingerprinting": 0,
             "subdomains": [
                 "event"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000203,
+            "sites": 3,
+            "prevalence": 0.000305,
             "cnames": [],
             "responseHashes": [],
             "type": "Image",
             "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
+            "firstPartyCookiesSent": {
+                "axwrt": 0.0001015950421619425
+            },
             "exampleSites": [
-                "norton.com",
+                "draxe.com",
+                "us.norton.com",
                 "www.twc.health"
             ]
         },
         {
             "rule": "havasedge\\.com\\/sync",
-            "cookies": 0.000203,
+            "cookies": 0.000305,
             "fingerprinting": 0,
             "subdomains": [
                 "cookie"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000203,
+            "sites": 3,
+            "prevalence": 0.000305,
             "cnames": [],
             "responseHashes": [
                 "1ed70d02696722505ec82915a7dd9fbf2c512366d009b74bdbe37c9869c250a4"
@@ -51,7 +96,8 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "norton.com",
+                "draxe.com",
+                "us.norton.com",
                 "www.twc.health"
             ]
         },
@@ -71,32 +117,33 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "twc.health",
+                "draxe.com",
                 "www.twc.health"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000203,
+    "cookies": 0.000305,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.75
+            "prevalence": 0.6
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.25
+            "prevalence": 0.4
         }
     ],
     "types": {
-        "Image": 4,
+        "Script": 2,
+        "Image": 6,
         "Document": 2
     },
     "nameservers": [
-        "ns1-02.azure-dns.com",
+        "ns4-02.azure-dns.info",
         "ns2-02.azure-dns.net",
         "ns3-02.azure-dns.org",
-        "ns4-02.azure-dns.info"
+        "ns1-02.azure-dns.com"
     ]
 }

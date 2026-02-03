@@ -4,15 +4,21 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000275,
-    "sites": 4,
+    "prevalence": 0.0000343,
+    "sites": 5,
     "subdomains": [
-        "paycorprod-cd-rvfeoppoknpxwptr.edge.tenants.pycr-prod"
+        "paycorprod-cd-rvfeoppoknpxwptr.edge.tenants.pycr-prod",
+        "dev-wynnresorts-nonprod.wynnresorts-nonprod",
+        "prod-cd-er1q9vb5uyxeghbf.edge.tenants.lilly"
     ],
     "cnames": [
         {
             "original": "auth.paycor.com",
             "resolved": "paycorprod-cd-rvfeoppoknpxwptr.edge.tenants.pycr-prod.auth0app.com"
+        },
+        {
+            "original": "mylogin.lilly.com",
+            "resolved": "prod-cd-er1q9vb5uyxeghbf.edge.tenants.lilly.auth0app.com"
         }
     ],
     "fingerprinting": 0,
@@ -41,19 +47,51 @@
                 "paycor.com",
                 "secure.paycor.com"
             ]
+        },
+        {
+            "rule": "auth0app\\.com\\/authorize",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dev-wynnresorts-nonprod.wynnresorts-nonprod",
+                "prod-cd-er1q9vb5uyxeghbf.edge.tenants.lilly"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "mylogin.lilly.com",
+                    "resolved": "prod-cd-er1q9vb5uyxeghbf.edge.tenants.lilly.auth0app.com"
+                }
+            ],
+            "responseHashes": [
+                "a8034c1c4a718bda66e7a388e673b78ad318567598fac746f43b3384ef860ca6"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "wynnlasvegas.com",
+                "zepbound.lilly.com"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0000275,
+    "cookies": 0.0000343,
     "topInitiators": [
         {
             "domain": "feroot.com",
-            "prevalence": 1
+            "prevalence": 0.5
+        },
+        {
+            "domain": "auth0.com",
+            "prevalence": 0.5
         }
     ],
     "types": {
-        "Document": 2
+        "Document": 4
     },
     "nameservers": [
         "maya.ns.cloudflare.com",

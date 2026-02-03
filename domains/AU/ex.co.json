@@ -7,15 +7,17 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.000913,
-    "sites": 9,
+    "prevalence": 0.00122,
+    "sites": 12,
     "subdomains": [
         "player",
         "motorsport-player",
         "collector-1",
-        "cdn",
         "sync",
-        "rtb"
+        "cdn",
+        "rtb",
+        "motorsport-cdn",
+        "mcd-playlist"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -29,22 +31,25 @@
                 "motorsport-player"
             ],
             "apis": {},
-            "sites": 5,
-            "prevalence": 0.000507,
+            "sites": 7,
+            "prevalence": 0.00071,
             "cnames": [],
             "responseHashes": [
-                "2268e4421de226b63f047f3e2e861a20b86ce58cfebbda19cb1150b396b4f4c7",
-                "e2bb17d94db09af5efeabd2eba8d5537305f2aed82091d5ab0c5eae0bac3f603"
+                "b9d3f34402dc0c72ce36370839f5f8bfdbcf86d1a09c7a7d199fc148649d5500",
+                "9d530593fa8fb34284f3e5f4e2b5f6e2383127fcebf4dee80877e0d5078d59ca",
+                "84e3fa0abf4be058fc3a38637eec557c8739f154ce59f887cf5871bb5529fb07"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "rootsweb.com",
+                "insideevs.com",
                 "www.motorsport.com",
                 "www.scotsman.com",
                 "www.sporcle.com",
-                "www.typingtest.com"
+                "www.typingtest.com",
+                "www.wowhead.com"
             ]
         },
         {
@@ -55,8 +60,8 @@
                 "collector-1"
             ],
             "apis": {},
-            "sites": 6,
-            "prevalence": 0.000608,
+            "sites": 8,
+            "prevalence": 0.000812,
             "cnames": [],
             "responseHashes": [
                 "11a49f853eb8befe94fef278d487125cd20930b9e41c4c0934394443e7f00878"
@@ -67,10 +72,12 @@
             "exampleSites": [
                 "rootsweb.com",
                 "freepages.rootsweb.com",
+                "insideevs.com",
                 "www.motorsport.com",
                 "www.scotsman.com",
                 "www.sporcle.com",
-                "www.typingtest.com"
+                "www.typingtest.com",
+                "www.wowhead.com"
             ]
         },
         {
@@ -81,8 +88,8 @@
                 "player"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000304,
+            "sites": 5,
+            "prevalence": 0.000507,
             "cnames": [],
             "responseHashes": [
                 "aad5319fa68d4ffea7c51f2994cd36ba8a8fb9a460f3a9f54e49efa059e47d3b"
@@ -92,60 +99,22 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "rootsweb.com",
+                "insideevs.com",
                 "www.scotsman.com",
-                "www.typingtest.com"
-            ]
-        },
-        {
-            "rule": "ex\\.co\\/player\\/ap\\/4\\.198\\.1-3b609ed\\/player\\.js",
-            "cookies": 0.000101,
-            "fingerprinting": 2,
-            "subdomains": [
-                "cdn"
-            ],
-            "apis": {
-                "window.localStorage": 2,
-                "Document.cookie getter": 2,
-                "Date.prototype.getTime": 2,
-                "Navigator.prototype.userAgent": 2,
-                "Screen.prototype.width": 2,
-                "Screen.prototype.height": 2,
-                "Date.prototype.getTimezoneOffset": 2,
-                "window.innerWidth": 2,
-                "window.innerHeight": 2,
-                "Document.cookie setter": 1
-            },
-            "sites": 2,
-            "prevalence": 0.000203,
-            "cnames": [],
-            "responseHashes": [
-                "fe6271bbf0a1e5b0d84eebefcb7bd00153e8ca9494cb40e88fbedfa80ec46c41"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {
-                "exco-uid": {
-                    "ttl": 2592000,
-                    "length": 36,
-                    "prevalence": 0.0001013890297069857,
-                    "uniqueness": 1
-                }
-            },
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "rootsweb.com",
-                "www.typingtest.com"
+                "www.typingtest.com",
+                "www.wowhead.com"
             ]
         },
         {
             "rule": "ex\\.co\\/v1\\/cookie_sync\\.html",
-            "cookies": 0.000203,
+            "cookies": 0.000406,
             "fingerprinting": 0,
             "subdomains": [
                 "sync"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000203,
+            "sites": 5,
+            "prevalence": 0.000507,
             "cnames": [],
             "responseHashes": [
                 "9d6db5891f9cf18ebf35f5ddeb4d7fa2e129813a2b3a7d39d7da18936f6233bf"
@@ -153,8 +122,68 @@
             "type": "Document",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "lotame_domain_check": 0.0002027780594139714
+                "lotame_domain_check": 0.00020290149132596124
             },
+            "exampleSites": [
+                "rootsweb.com",
+                "insideevs.com",
+                "www.scotsman.com",
+                "www.typingtest.com",
+                "www.wowhead.com"
+            ]
+        },
+        {
+            "rule": "ex\\.co\\/prebid-bundle",
+            "cookies": 0.000101,
+            "fingerprinting": 3,
+            "subdomains": [
+                "player"
+            ],
+            "apis": {
+                "window.sessionStorage": 1,
+                "Date.prototype.getTime": 1,
+                "window.localStorage": 1,
+                "Navigator.prototype.cookieEnabled": 1,
+                "Document.cookie getter": 1,
+                "Document.cookie setter": 1,
+                "Screen.prototype.width": 1,
+                "Screen.prototype.height": 1,
+                "Screen.prototype.availWidth": 1,
+                "Screen.prototype.availHeight": 1,
+                "Screen.prototype.colorDepth": 1,
+                "window.innerHeight": 1,
+                "window.innerWidth": 1,
+                "window.outerWidth": 1,
+                "window.outerHeight": 1,
+                "Navigator.prototype.doNotTrack": 1,
+                "Navigator.prototype.userAgent": 1,
+                "Navigator.prototype.language": 1,
+                "Navigator.prototype.webdriver": 1,
+                "Navigator.prototype.hardwareConcurrency": 1,
+                "Navigator.prototype.connection": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "2bf839b0f2c9399051c8cdae1e89799909ec294478c3f95b68df8d85854aaf8f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "pbjs-unifiedid": {
+                    "ttl": 5184023,
+                    "length": 150,
+                    "prevalence": 0.00010145074566298062,
+                    "uniqueness": 1
+                },
+                "pbjs-unifiedid_cst": {
+                    "ttl": 5184023,
+                    "length": 16,
+                    "prevalence": 0.00010145074566298062,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
             "exampleSites": [
                 "rootsweb.com",
                 "www.typingtest.com"
@@ -187,127 +216,6 @@
             ]
         },
         {
-            "rule": "ex\\.co\\/player\\/prebid\\/9\\.53\\.1\\/expb\\.js",
-            "cookies": 0.000101,
-            "fingerprinting": 3,
-            "subdomains": [
-                "cdn"
-            ],
-            "apis": {
-                "window.sessionStorage": 1,
-                "Navigator.prototype.userAgent": 1,
-                "Date.prototype.getTime": 1,
-                "window.localStorage": 1,
-                "Navigator.prototype.cookieEnabled": 1,
-                "Document.cookie getter": 1,
-                "Document.cookie setter": 1,
-                "Screen.prototype.width": 1,
-                "Screen.prototype.height": 1,
-                "Screen.prototype.availWidth": 1,
-                "Screen.prototype.availHeight": 1,
-                "Screen.prototype.colorDepth": 1,
-                "window.innerHeight": 1,
-                "window.innerWidth": 1,
-                "window.outerWidth": 1,
-                "window.outerHeight": 1,
-                "Navigator.prototype.doNotTrack": 1,
-                "Navigator.prototype.language": 1,
-                "Navigator.prototype.webdriver": 1,
-                "Navigator.prototype.hardwareConcurrency": 1,
-                "Navigator.prototype.connection": 1
-            },
-            "sites": 2,
-            "prevalence": 0.000203,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Script",
-            "firstPartyCookies": {
-                "pbjs-unifiedid": {
-                    "ttl": 5184025,
-                    "length": 150,
-                    "prevalence": 0.0001013890297069857,
-                    "uniqueness": 1
-                },
-                "pbjs-unifiedid_cst": {
-                    "ttl": 5184025,
-                    "length": 16,
-                    "prevalence": 0.0001013890297069857,
-                    "uniqueness": 1
-                }
-            },
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "rootsweb.com",
-                "www.typingtest.com"
-            ]
-        },
-        {
-            "rule": "ex\\.co\\/v1\\/setuid\\/smartadserver\\/",
-            "cookies": 0.000203,
-            "fingerprinting": 0,
-            "subdomains": [
-                "sync"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000203,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Document",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {
-                "lotame_domain_check": 0.0002027780594139714
-            },
-            "exampleSites": [
-                "rootsweb.com",
-                "www.typingtest.com"
-            ]
-        },
-        {
-            "rule": "ex\\.co\\/v1\\/setuid\\/gumgum\\/",
-            "cookies": 0.000203,
-            "fingerprinting": 0,
-            "subdomains": [
-                "sync"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000203,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Document",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {
-                "lotame_domain_check": 0.0002027780594139714
-            },
-            "exampleSites": [
-                "rootsweb.com",
-                "www.typingtest.com"
-            ]
-        },
-        {
-            "rule": "ex\\.co\\/v1\\/setuid\\/illumin\\/",
-            "cookies": 0.000203,
-            "fingerprinting": 0,
-            "subdomains": [
-                "sync"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000203,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Document",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {
-                "lotame_domain_check": 0.0002027780594139714
-            },
-            "exampleSites": [
-                "rootsweb.com",
-                "www.typingtest.com"
-            ]
-        },
-        {
             "rule": "ex\\.co\\/openrtb2\\/auction",
             "cookies": 0.000101,
             "fingerprinting": 0,
@@ -319,7 +227,7 @@
             "prevalence": 0.000203,
             "cnames": [],
             "responseHashes": [
-                "bd5565219ae665b236cd5e771b3b9e0d8fd9f7ef0da7d63e4d5487517d4323c3"
+                "ecbad853f92d973cc34955d0301e254e52de3c9620ac94f9024e5d51cdc35659"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -330,37 +238,107 @@
             ]
         },
         {
-            "rule": "ex\\.co\\/v1\\/setuid\\/sonobi\\/",
-            "cookies": 0.000203,
+            "rule": "ex\\.co\\/v1\\/setuid\\/smartadserver\\/",
+            "cookies": 0.000304,
             "fingerprinting": 0,
             "subdomains": [
                 "sync"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000203,
+            "sites": 3,
+            "prevalence": 0.000304,
             "cnames": [],
             "responseHashes": [],
             "type": "Document",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "lotame_domain_check": 0.0002027780594139714
+                "lotame_domain_check": 0.00010145074566298062
             },
             "exampleSites": [
                 "rootsweb.com",
+                "thetvdb.com",
                 "www.typingtest.com"
             ]
         },
         {
-            "rule": "ex\\.co\\/v1\\/setuid\\/copper6\\/",
-            "cookies": 0.000203,
+            "rule": "ex\\.co\\/v1\\/setuid\\/illumin\\/",
+            "cookies": 0.000304,
             "fingerprinting": 0,
             "subdomains": [
                 "sync"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000203,
+            "sites": 3,
+            "prevalence": 0.000304,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "lotame_domain_check": 0.00010145074566298062
+            },
+            "exampleSites": [
+                "rootsweb.com",
+                "thetvdb.com",
+                "www.typingtest.com"
+            ]
+        },
+        {
+            "rule": "ex\\.co\\/v1\\/setuid\\/gumgum\\/",
+            "cookies": 0.000304,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sync"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000304,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "lotame_domain_check": 0.00010145074566298062
+            },
+            "exampleSites": [
+                "rootsweb.com",
+                "thetvdb.com",
+                "www.typingtest.com"
+            ]
+        },
+        {
+            "rule": "ex\\.co\\/v1\\/setuid\\/sonobi\\/",
+            "cookies": 0.000304,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sync"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000304,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "lotame_domain_check": 0.00010145074566298062
+            },
+            "exampleSites": [
+                "rootsweb.com",
+                "thetvdb.com",
+                "www.typingtest.com"
+            ]
+        },
+        {
+            "rule": "ex\\.co\\/v1\\/setuid\\/copper6\\/",
+            "cookies": 0.000304,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sync"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000304,
             "cnames": [],
             "responseHashes": [],
             "type": "Document",
@@ -368,78 +346,129 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "rootsweb.com",
+                "thetvdb.com",
                 "www.typingtest.com"
             ]
         },
         {
             "rule": "ex\\.co\\/v1\\/setuid\\/improvedigital\\/",
-            "cookies": 0.000203,
+            "cookies": 0.000304,
             "fingerprinting": 0,
             "subdomains": [
                 "sync"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000203,
+            "sites": 3,
+            "prevalence": 0.000304,
             "cnames": [],
             "responseHashes": [],
             "type": "Document",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "lotame_domain_check": 0.0002027780594139714
+                "lotame_domain_check": 0.00010145074566298062
             },
             "exampleSites": [
                 "rootsweb.com",
+                "thetvdb.com",
                 "www.typingtest.com"
             ]
         },
         {
             "rule": "ex\\.co\\/v1\\/setuid\\/sovrn\\/",
-            "cookies": 0.000203,
+            "cookies": 0.000304,
             "fingerprinting": 0,
             "subdomains": [
                 "sync"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000203,
+            "sites": 3,
+            "prevalence": 0.000304,
             "cnames": [],
             "responseHashes": [],
             "type": "Document",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "lotame_domain_check": 0.0002027780594139714
+                "lotame_domain_check": 0.00010145074566298062
             },
             "exampleSites": [
                 "rootsweb.com",
+                "thetvdb.com",
                 "www.typingtest.com"
             ]
         },
         {
             "rule": "ex\\.co\\/v1\\/setuid\\/unruly\\/",
-            "cookies": 0.000203,
+            "cookies": 0.000304,
             "fingerprinting": 0,
             "subdomains": [
                 "sync"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000203,
+            "sites": 3,
+            "prevalence": 0.000304,
             "cnames": [],
             "responseHashes": [],
             "type": "Document",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "lotame_domain_check": 0.0002027780594139714
+                "lotame_domain_check": 0.00010145074566298062
             },
             "exampleSites": [
                 "rootsweb.com",
+                "thetvdb.com",
+                "www.typingtest.com"
+            ]
+        },
+        {
+            "rule": "ex\\.co\\/v1\\/setuid\\/richaudience\\/",
+            "cookies": 0.000304,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sync"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000304,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "lotame_domain_check": 0.00010145074566298062
+            },
+            "exampleSites": [
+                "rootsweb.com",
+                "thetvdb.com",
                 "www.typingtest.com"
             ]
         },
         {
             "rule": "ex\\.co\\/v1\\/setuid",
             "cookies": 0.000304,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sync"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000406,
+            "cnames": [],
+            "responseHashes": [
+                "c956a8bbf43bb56f60d1beefcc5a70f2cb0725083a00e8a0daf423176509fd18"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rootsweb.com",
+                "freepages.rootsweb.com",
+                "thetvdb.com",
+                "www.typingtest.com"
+            ]
+        },
+        {
+            "rule": "ex\\.co\\/v1\\/setuid\\/appnexus\\/",
+            "cookies": 0.000203,
             "fingerprinting": 0,
             "subdomains": [
                 "sync"
@@ -453,77 +482,175 @@
             ],
             "type": "Image",
             "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "rootsweb.com",
-                "freepages.rootsweb.com",
-                "www.typingtest.com"
-            ]
-        },
-        {
-            "rule": "ex\\.co\\/v1\\/setuid\\/richaudience\\/",
-            "cookies": 0.000203,
-            "fingerprinting": 0,
-            "subdomains": [
-                "sync"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000203,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Image",
-            "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "lotame_domain_check": 0.0002027780594139714
+                "lotame_domain_check": 0.00010145074566298062
             },
             "exampleSites": [
                 "rootsweb.com",
+                "thetvdb.com",
                 "www.typingtest.com"
             ]
         },
         {
-            "rule": "ex\\.co\\/v1\\/setuid\\/appnexus\\/",
-            "cookies": 0.000203,
-            "fingerprinting": 0,
-            "subdomains": [
-                "sync"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000203,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {
-                "lotame_domain_check": 0.0002027780594139714
-            },
-            "exampleSites": [
-                "rootsweb.com",
-                "www.typingtest.com"
-            ]
-        },
-        {
-            "rule": "ex\\.co\\/player\\/4\\.426\\.2\\/ui-falcon-keep-watching-btn\\.js",
+            "rule": "ex\\.co\\/v1\\/setuid\\/rise\\/",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "cdn"
+                "sync"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rootsweb.com",
+                "thetvdb.com"
+            ]
+        },
+        {
+            "rule": "ex\\.co\\/v1\\/setuid\\/ix\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sync"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rootsweb.com",
+                "thetvdb.com"
+            ]
+        },
+        {
+            "rule": "ex\\.co\\/v1\\/setuid\\/tripleLift\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sync"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rootsweb.com",
+                "thetvdb.com"
+            ]
+        },
+        {
+            "rule": "ex\\.co\\/v1\\/setuid\\/openx\\/",
+            "cookies": 0.000101,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sync"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rootsweb.com",
+                "thetvdb.com"
+            ]
+        },
+        {
+            "rule": "ex\\.co\\/v1\\/setuid\\/kueez\\/",
+            "cookies": 0.000101,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sync"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000203,
             "cnames": [],
             "responseHashes": [
-                "eae2ee03d232f57bae8f947f23200d0fcab74eb20ad9b7cff1c54d0406ef5123"
+                "c956a8bbf43bb56f60d1beefcc5a70f2cb0725083a00e8a0daf423176509fd18"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rootsweb.com",
+                "thetvdb.com"
+            ]
+        },
+        {
+            "rule": "ex\\.co\\/player\\/4\\.430\\.0\\/ui-falcon-keep-watching-btn\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "motorsport-cdn",
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000406,
+            "cnames": [],
+            "responseHashes": [
+                "4d6bac263102329bfd905c762193705669e51ed42d0e04411169ab0f21dea57d"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "scotsman.com",
-                "www.typingtest.com"
+                "insideevs.com",
+                "www.scotsman.com",
+                "www.typingtest.com",
+                "www.wowhead.com"
+            ]
+        },
+        {
+            "rule": "ex\\.co\\/player\\/ap\\/p\\/4\\.204\\.0-7b9e7a4\\/player\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "motorsport-cdn",
+                "cdn"
+            ],
+            "apis": {
+                "window.localStorage": 4,
+                "Document.cookie getter": 4,
+                "Date.prototype.getTime": 1,
+                "Navigator.prototype.userAgent": 1,
+                "Screen.prototype.width": 1,
+                "Screen.prototype.height": 1,
+                "Date.prototype.getTimezoneOffset": 1,
+                "window.innerWidth": 1,
+                "window.innerHeight": 1
+            },
+            "sites": 4,
+            "prevalence": 0.000406,
+            "cnames": [],
+            "responseHashes": [
+                "20d1ffc718af8a0314d9b64fc8580d603ac4b971a370aabe8fb4279157854b42"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "insideevs.com",
+                "www.scotsman.com",
+                "www.typingtest.com",
+                "www.wowhead.com"
             ]
         },
         {
@@ -544,7 +671,7 @@
             "prevalence": 0.000203,
             "cnames": [],
             "responseHashes": [
-                "7426f65317ca6f2e1594a853178d052fc78d5a9ff664a03ec8d486a08d32f5a8"
+                "28525a2ebef8acea9694f908d8244bea858676ab59dcc9ca6a3c14294a120163"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -553,60 +680,86 @@
                 "sporcle.com",
                 "www.sporcle.com"
             ]
+        },
+        {
+            "rule": "ex\\.co\\/api\\/v2\\/playlist",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "mcd-playlist"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "43b07240541a56d5de111ac1e737ed93ad12b4d69ff927e22363ee54351d0ea6"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "typingtest.com",
+                "www.wowhead.com"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000406,
+    "cookies": 0.000507,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.3958333333333333
+            "prevalence": 0.35064935064935066
         },
         {
             "domain": "script.ac",
-            "prevalence": 0.3541666666666667
+            "prevalence": 0.24675324675324675
         },
         {
-            "domain": "adncdn.net",
-            "prevalence": 0.08333333333333333
+            "domain": "datadoghq-browser-agent.com",
+            "prevalence": 0.06493506493506493
         },
         {
             "domain": "mediatradecraft.com",
-            "prevalence": 0.0625
+            "prevalence": 0.05194805194805195
         },
         {
-            "domain": "casalemedia.com",
-            "prevalence": 0.020833333333333332
+            "domain": "adncdn.net",
+            "prevalence": 0.05194805194805195
+        },
+        {
+            "domain": "adlightning.com",
+            "prevalence": 0.05194805194805195
+        },
+        {
+            "domain": "geoedge.be",
+            "prevalence": 0.03896103896103896
         },
         {
             "domain": "yellowblue.io",
-            "prevalence": 0.020833333333333332
+            "prevalence": 0.025974025974025976
         },
         {
-            "domain": "openx.net",
-            "prevalence": 0.020833333333333332
+            "domain": "casalemedia.com",
+            "prevalence": 0.025974025974025976
         },
         {
             "domain": "3lift.com",
-            "prevalence": 0.020833333333333332
-        },
-        {
-            "domain": "kueezrtb.com",
-            "prevalence": 0.020833333333333332
+            "prevalence": 0.025974025974025976
         }
     ],
     "types": {
-        "Fetch": 10,
-        "XHR": 6,
-        "Script": 11,
-        "Document": 18,
-        "Image": 7
+        "Fetch": 16,
+        "XHR": 8,
+        "Document": 29,
+        "Script": 15,
+        "Image": 20
     },
     "nameservers": [
-        "ns-1048.awsdns-03.org",
+        "ns-141.awsdns-17.com",
         "ns-709.awsdns-24.net",
-        "ns-1853.awsdns-39.co.uk",
-        "ns-141.awsdns-17.com"
+        "ns-1048.awsdns-03.org",
+        "ns-1853.awsdns-39.co.uk"
     ]
 }

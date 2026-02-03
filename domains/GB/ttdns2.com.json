@@ -4,13 +4,19 @@
     "source": [
         "DuckDuckGo-GB"
     ],
-    "prevalence": 0.000101,
-    "sites": 1,
+    "prevalence": 0.000203,
+    "sites": 2,
     "subdomains": [
+        "wss-normal-i18n.dola.com",
+        "im-ws.tiktok.com",
         "mon-i18n.tiktokv.com",
         "mon.tiktokv.com"
     ],
     "cnames": [
+        {
+            "original": "im-ws.tiktok.com",
+            "resolved": "im-ws.tiktok.com.ttdns2.com"
+        },
         {
             "original": "mon-i18n.tiktokv.com",
             "resolved": "mon-i18n.tiktokv.com.ttdns2.com"
@@ -18,10 +24,44 @@
         {
             "original": "mon.tiktokv.com",
             "resolved": "mon.tiktokv.com.ttdns2.com"
+        },
+        {
+            "original": "wss-normal-i18n.dola.com",
+            "resolved": "wss-normal-i18n.dola.com.ttdns2.com"
         }
     ],
     "fingerprinting": 0,
     "resources": [
+        {
+            "rule": "ttdns2\\.com\\/ws\\/v2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "wss-normal-i18n.dola.com",
+                "im-ws.tiktok.com"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [
+                {
+                    "original": "wss-normal-i18n.dola.com",
+                    "resolved": "wss-normal-i18n.dola.com.ttdns2.com"
+                },
+                {
+                    "original": "im-ws.tiktok.com",
+                    "resolved": "im-ws.tiktok.com.ttdns2.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dola.com",
+                "www.tiktok.com"
+            ]
+        },
         {
             "rule": "ttdns2\\.com\\/monitor_web\\/settings\\/browser-settings",
             "cookies": 0,
@@ -74,7 +114,34 @@
                 }
             ],
             "responseHashes": [
-                "f71f3dba4b28338461adefa41638f5b1753c3c5cd36eea694001d75130c2c01a"
+                "1d6461a42f5f45f5162b4085e422a562fc430bebe042fb5280b7fe091e638b12"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tiktok.com",
+                "www.tiktok.com"
+            ]
+        },
+        {
+            "rule": "ttdns2\\.com\\/monitor_browser\\/collect\\/batch\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "mon.tiktokv.com"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [
+                {
+                    "original": "mon.tiktokv.com",
+                    "resolved": "mon.tiktokv.com.ttdns2.com"
+                }
+            ],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -91,15 +158,20 @@
     "topInitiators": [
         {
             "domain": "tiktokcdn-eu.com",
-            "prevalence": 1
+            "prevalence": 0.9
+        },
+        {
+            "domain": "ttwstatic.com",
+            "prevalence": 0.1
         }
     ],
     "types": {
+        "WebSocket": 2,
         "Preflight": 2,
-        "XHR": 2
+        "XHR": 4
     },
     "nameservers": [
-        "ns2.bpldns.net",
-        "ns1.bpldns.com"
+        "ns1.bpldns.com",
+        "ns2.bpldns.net"
     ]
 }

@@ -9,19 +9,76 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000407,
+    "prevalence": 0.000406,
     "sites": 4,
     "subdomains": [
+        "cisco-dsc-prod",
         "mns-00.dn"
     ],
     "cnames": [
         {
             "original": "api.marksandspencer.com",
             "resolved": "mns-00.dn.apigee.net"
+        },
+        {
+            "original": "dsc.cisco.com",
+            "resolved": "cisco-dsc-prod.apigee.net"
         }
     ],
     "fingerprinting": 0,
     "resources": [
+        {
+            "rule": "apigee\\.net\\/v1\\/netid",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cisco-dsc-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [
+                {
+                    "original": "dsc.cisco.com",
+                    "resolved": "cisco-dsc-prod.apigee.net"
+                }
+            ],
+            "responseHashes": [
+                "fde7743588fa2c4be1ab3d9b5894356f0b4b74bba04f56a16dc9f4f58ae70e2d"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cisco.com",
+                "www.cisco.com"
+            ]
+        },
+        {
+            "rule": "apigee\\.net\\/v1\\/netid",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cisco-dsc-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [
+                {
+                    "original": "dsc.cisco.com",
+                    "resolved": "cisco-dsc-prod.apigee.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cisco.com",
+                "www.cisco.com"
+            ]
+        },
         {
             "rule": "apigee\\.net\\/phoenix-eventcollector\\/v1\\/event\\/mparticle",
             "cookies": 0,
@@ -83,23 +140,32 @@
     "topInitiators": [
         {
             "domain": "signalfx.com",
-            "prevalence": 0.375
+            "prevalence": 0.3
         },
         {
             "domain": "cookielaw.org",
-            "prevalence": 0.25
+            "prevalence": 0.2
         },
         {
             "domain": "dynatrace.com",
-            "prevalence": 0.25
+            "prevalence": 0.2
         },
         {
             "domain": "static-p46175-e229011.adobeaemcloud.com",
-            "prevalence": 0.125
+            "prevalence": 0.1
+        },
+        {
+            "domain": "tiqcdn.com",
+            "prevalence": 0.1
+        },
+        {
+            "domain": "appdynamics.com",
+            "prevalence": 0.1
         }
     ],
     "types": {
-        "Preflight": 2,
+        "Fetch": 2,
+        "Preflight": 4,
         "XHR": 2
     },
     "nameservers": [

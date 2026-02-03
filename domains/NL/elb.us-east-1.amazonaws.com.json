@@ -12,12 +12,17 @@
     "prevalence": 0.000202,
     "sites": 2,
     "subdomains": [
-        "l4-logs-http-rum-pub-s0-7d264be627ade923"
+        "l4-logs-http-rum-pub-s0-7d264be627ade923",
+        "k8s-opstest-apisixga-ffd5932408-71111629e4aa4dd8"
     ],
     "cnames": [
         {
             "original": "8b61d74c.datadoghq.com",
             "resolved": "l4-logs-http-rum-pub-s0-7d264be627ade923.elb.us-east-1.amazonaws.com"
+        },
+        {
+            "original": "tracking.shopcider.com",
+            "resolved": "k8s-opstest-apisixga-ffd5932408-71111629e4aa4dd8.elb.us-east-1.amazonaws.com"
         }
     ],
     "fingerprinting": 0,
@@ -39,7 +44,7 @@
                 }
             ],
             "responseHashes": [
-                "6b1b3c76bd46c3922178753b724752fea85f80ac0a753501717ca237dc5a58b4"
+                "a2e9ecbcc1fca0dc396f0239c5762f8c38179e0f88729f19c4593f16b3e0785a"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -48,6 +53,58 @@
                 "datadoghq.com",
                 "docs.datadoghq.com"
             ]
+        },
+        {
+            "rule": "elb\\.us-east-1\\.amazonaws\\.com\\/ms\\/analysis\\/v1\\/reportPoint",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "k8s-opstest-apisixga-ffd5932408-71111629e4aa4dd8"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "tracking.shopcider.com",
+                    "resolved": "k8s-opstest-apisixga-ffd5932408-71111629e4aa4dd8.elb.us-east-1.amazonaws.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "shopcider.com",
+                "www.shopcider.com"
+            ]
+        },
+        {
+            "rule": "elb\\.us-east-1\\.amazonaws\\.com\\/ms\\/analysis\\/v1\\/reportPoint",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "k8s-opstest-apisixga-ffd5932408-71111629e4aa4dd8"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "tracking.shopcider.com",
+                    "resolved": "k8s-opstest-apisixga-ffd5932408-71111629e4aa4dd8.elb.us-east-1.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "7397e0987dc915f33e145a086726c9654845ee27a6dd9e053b25781d7b54fdde"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "shopcider.com",
+                "www.shopcider.com"
+            ]
         }
     ],
     "categories": [
@@ -55,13 +112,21 @@
     ],
     "performance": {},
     "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "hotjar.com",
+            "prevalence": 1
+        }
+    ],
     "types": {
-        "Fetch": 2
+        "Fetch": 2,
+        "Preflight": 2,
+        "Ping": 2
     },
     "nameservers": [
-        "ns-1286.awsdns-32.org",
-        "ns-1826.awsdns-36.co.uk",
+        "ns-844.awsdns-41.net",
         "ns-281.awsdns-35.com",
-        "ns-844.awsdns-41.net"
+        "ns-1286.awsdns-32.org",
+        "ns-1826.awsdns-36.co.uk"
     ]
 }

@@ -4,10 +4,11 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000203,
+    "prevalence": 0.000202,
     "sites": 2,
     "subdomains": [
-        "pushserver.prod.markets.public"
+        "pushserver.prod.markets.public",
+        "geoip.user.public"
     ],
     "cnames": [],
     "fingerprinting": 0,
@@ -21,7 +22,7 @@
             ],
             "apis": {},
             "sites": 2,
-            "prevalence": 0.000203,
+            "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [],
             "type": "WebSocket",
@@ -29,6 +30,28 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "businessinsider.com",
+                "www.finanzen.net"
+            ]
+        },
+        {
+            "rule": "finanzen2\\.net\\/json\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "geoip.user.public"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "291ea52f0c80d0f173f1bd4367c6664565aabd17d9becf06b8699e8ec4768081"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "finanzen.net",
                 "www.finanzen.net"
             ]
         }
@@ -43,12 +66,13 @@
         }
     ],
     "types": {
-        "WebSocket": 2
+        "WebSocket": 2,
+        "Fetch": 2
     },
     "nameservers": [
-        "ns1-05.azure-dns.com",
         "ns2-05.azure-dns.net",
         "ns3-05.azure-dns.org",
-        "ns4-05.azure-dns.info"
+        "ns4-05.azure-dns.info",
+        "ns1-05.azure-dns.com"
     ]
 }

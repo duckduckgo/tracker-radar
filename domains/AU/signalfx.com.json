@@ -4,12 +4,13 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.00071,
-    "sites": 7,
+    "prevalence": 0.000812,
+    "sites": 8,
     "subdomains": [
         "rum-ingest.au0",
         "rum-ingest.eu0",
         "rum-ingest.us1",
+        "rum-ingest.us0",
         "cdn"
     ],
     "cnames": [],
@@ -44,11 +45,12 @@
             "subdomains": [
                 "rum-ingest.eu0",
                 "rum-ingest.us1",
+                "rum-ingest.us0",
                 "rum-ingest.au0"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.000406,
+            "sites": 6,
+            "prevalence": 0.000609,
             "cnames": [],
             "responseHashes": [
                 "98c4922bb641c65c7a30b7bcafdf230b9b00b6693631c56146ab25b2786ee4a3"
@@ -60,40 +62,45 @@
                 "accor.com",
                 "all.accor.com",
                 "doc.qt.io",
-                "transportnsw.info"
+                "hbr.org",
+                "transportnsw.info",
+                "www.nswtrainlink.info"
             ]
         },
         {
             "rule": "signalfx\\.com\\/o11y-gdi-rum\\/v0\\.22\\.0\\/splunk-otel-web\\.js",
-            "cookies": 0.000101,
+            "cookies": 0.000203,
             "fingerprinting": 1,
             "subdomains": [
                 "cdn"
             ],
             "apis": {
-                "window.sessionStorage": 1,
-                "Document.cookie getter": 1,
-                "Document.cookie setter": 1,
-                "Navigator.prototype.userAgent": 1,
-                "Screen.prototype.width": 1,
-                "Screen.prototype.height": 1
+                "window.sessionStorage": 2,
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2
             },
-            "sites": 2,
-            "prevalence": 0.000203,
+            "sites": 3,
+            "prevalence": 0.000304,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "aa70ee9e195ce4f23e6a66a070cfa5dbdf26c1f31e27484344aa337ecabb8c8f"
+            ],
             "type": "Script",
             "firstPartyCookies": {
                 "_splunk_rum_sid": {
                     "ttl": 900,
                     "length": 123,
-                    "prevalence": 0.0001013890297069857,
+                    "prevalence": 0.00020290149132596124,
                     "uniqueness": 1
                 }
             },
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "transportnsw.info",
+                "www.nswtrainlink.info",
                 "www.opal.com.au"
             ]
         },
@@ -105,46 +112,97 @@
                 "cdn"
             ],
             "apis": {
-                "window.innerWidth": 1,
-                "window.innerHeight": 1
+                "window.innerWidth": 2,
+                "window.innerHeight": 2
             },
-            "sites": 2,
-            "prevalence": 0.000203,
+            "sites": 3,
+            "prevalence": 0.000304,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "706405216f4a3af24c8c1cf855b4c2341c9c8bb4435691f0e84f3f1376a4d846"
+            ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "transportnsw.info",
+                "www.nswtrainlink.info",
                 "www.opal.com.au"
+            ]
+        },
+        {
+            "rule": "signalfx\\.com\\/v1\\/rumreplay",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rum-ingest.au0"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "transportnsw.info",
+                "www.nswtrainlink.info"
+            ]
+        },
+        {
+            "rule": "signalfx\\.com\\/v1\\/rumreplay",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rum-ingest.au0"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000203,
+            "cnames": [],
+            "responseHashes": [
+                "98c4922bb641c65c7a30b7bcafdf230b9b00b6693631c56146ab25b2786ee4a3"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "transportnsw.info",
+                "www.nswtrainlink.info"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000304,
+    "cookies": 0.000507,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.7058823529411765
-        },
-        {
-            "domain": "googletagmanager.com",
-            "prevalence": 0.11764705882352941
+            "prevalence": 0.5384615384615384
         },
         {
             "domain": "transportnsw.info",
-            "prevalence": 0.11764705882352941
+            "prevalence": 0.3076923076923077
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.07692307692307693
         },
         {
             "domain": "smassets.net",
-            "prevalence": 0.058823529411764705
+            "prevalence": 0.038461538461538464
+        },
+        {
+            "domain": "hotjar.com",
+            "prevalence": 0.038461538461538464
         }
     ],
     "types": {
-        "XHR": 6,
-        "Script": 4
+        "XHR": 8,
+        "Script": 6,
+        "Preflight": 2,
+        "Fetch": 2
     },
     "nameservers": [
         "ns-5.awsdns-00.com",

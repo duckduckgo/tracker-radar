@@ -4,14 +4,57 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000137,
-    "sites": 2,
+    "prevalence": 0.0000206,
+    "sites": 3,
     "subdomains": [
+        "search.ext",
         "businessevents-proxy.ext"
     ],
     "cnames": [],
     "fingerprinting": 0,
     "resources": [
+        {
+            "rule": "drivetime\\.cloud\\/api\\/zipcode\\/search",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "search.ext"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "drivetime.com",
+                "www.drivetime.com"
+            ]
+        },
+        {
+            "rule": "drivetime\\.cloud\\/api\\/zipcode\\/search",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "search.ext"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "d9292fee42717d195eaa5da3671eb7bbe3381a164e9aaf99c716bcb6a6ffaa69"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "drivetime.com",
+                "www.drivetime.com"
+            ]
+        },
         {
             "rule": "drivetime\\.cloud\\/api\\/BusinessEventService\\/BulkBeacon",
             "cookies": 0,
@@ -20,8 +63,8 @@
                 "businessevents-proxy.ext"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000206,
+            "sites": 2,
+            "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
@@ -29,7 +72,6 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "bridgecrest.com",
-                "myaccount.bridgecrest.com",
                 "www.bridgecrest.com"
             ]
         },
@@ -41,8 +83,8 @@
                 "businessevents-proxy.ext"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000206,
+            "sites": 2,
+            "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -52,7 +94,6 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "bridgecrest.com",
-                "myaccount.bridgecrest.com",
                 "www.bridgecrest.com"
             ]
         }
@@ -63,12 +104,17 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.6666666666666666
+        },
+        {
+            "domain": "datadoghq-browser-agent.com",
+            "prevalence": 0.3333333333333333
         }
     ],
     "types": {
-        "Preflight": 3,
-        "Fetch": 3
+        "Preflight": 4,
+        "XHR": 2,
+        "Fetch": 2
     },
     "nameservers": [
         "pdns09.domaincontrol.com",
