@@ -9,20 +9,20 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000201,
-    "sites": 2,
+    "prevalence": 0.000101,
+    "sites": 1,
     "subdomains": [
-        "apay-us"
+        "d2c.aws"
     ],
     "cnames": [],
     "fingerprinting": 0,
     "resources": [
         {
-            "rule": "amazon\\.com\\/cs\\/uedata",
-            "cookies": 0.000101,
+            "rule": "amazon\\.com\\/csds\\/collector\\/v1\\/events\\/batch",
+            "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "apay-us"
+                "d2c.aws"
             ],
             "apis": {},
             "sites": 2,
@@ -31,12 +31,30 @@
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
             ],
-            "type": "XHR",
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "mathway.com",
-                "www.mathway.com"
+                "s3.amazonaws.com"
+            ]
+        },
+        {
+            "rule": "amazon\\.com\\/csds\\/collector\\/v1\\/events\\/batch",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "d2c.aws"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "s3.amazonaws.com"
             ]
         }
     ],
@@ -52,16 +70,17 @@
     "cookies": 0.000101,
     "topInitiators": [
         {
-            "domain": "first party",
-            "prevalence": 0.8
+            "domain": "awsstatic.com",
+            "prevalence": 0.6666666666666666
         },
         {
-            "domain": "abebookscdn.com",
-            "prevalence": 0.2
+            "domain": "first party",
+            "prevalence": 0.3333333333333333
         }
     ],
     "types": {
-        "XHR": 2
+        "Fetch": 2,
+        "Preflight": 2
     },
     "nameservers": [
         "ns-1447.awsdns-52.org",

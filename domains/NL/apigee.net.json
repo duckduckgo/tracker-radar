@@ -9,12 +9,17 @@
     "source": [
         "DuckDuckGo-NL"
     ],
-    "prevalence": 0.000302,
-    "sites": 3,
+    "prevalence": 0.000402,
+    "sites": 4,
     "subdomains": [
+        "accor-group-prod-prod",
         "toolstation-eu-eu-prod"
     ],
     "cnames": [
+        {
+            "original": "api.accor.com",
+            "resolved": "accor-group-prod-prod.apigee.net"
+        },
         {
             "original": "ecom-api.toolstation.nl",
             "resolved": "toolstation-eu-eu-prod.apigee.net"
@@ -22,6 +27,83 @@
     ],
     "fingerprinting": 0,
     "resources": [
+        {
+            "rule": "apigee\\.net\\/authentication\\/v2\\.0\\/authorization",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "accor-group-prod-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "api.accor.com",
+                    "resolved": "accor-group-prod-prod.apigee.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "accor.com",
+                "ibis.accor.com"
+            ]
+        },
+        {
+            "rule": "apigee\\.net\\/referential\\/v1\\/best-visit\\/cookie-attribution",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "accor-group-prod-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "api.accor.com",
+                    "resolved": "accor-group-prod-prod.apigee.net"
+                }
+            ],
+            "responseHashes": [
+                "6bf693d31bd253bada62b2ce6a4926bdfdf6b18e2cfbb68cd74ee50c5561022e"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "accor.com",
+                "ibis.accor.com"
+            ]
+        },
+        {
+            "rule": "apigee\\.net\\/referential\\/v1\\/best-visit\\/cookie-attribution",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "accor-group-prod-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "api.accor.com",
+                    "resolved": "accor-group-prod-prod.apigee.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "accor.com",
+                "ibis.accor.com"
+            ]
+        },
         {
             "rule": "apigee\\.net\\/ecom\\/v1\\/taxonomies",
             "cookies": 0,
@@ -64,9 +146,61 @@
                 }
             ],
             "responseHashes": [
-                "285fa009d2e3021d5736a38cb5dfe83c925b22c7fcd061067e859a34975f9116"
+                "5c60e5d311c1866eed5da34d6dc8cb1d829ba2338e8f0429179f8df05a1068a2"
             ],
             "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "toolstation.nl",
+                "www.toolstation.nl"
+            ]
+        },
+        {
+            "rule": "apigee\\.net\\/ecom\\/v1\\/products\\/71987",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "toolstation-eu-eu-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "ecom-api.toolstation.nl",
+                    "resolved": "toolstation-eu-eu-prod.apigee.net"
+                }
+            ],
+            "responseHashes": [
+                "9d532b0cf31e0829416a427ac5f5bb06dd79d889171243e1e24ff7a192c82256"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "toolstation.nl",
+                "www.toolstation.nl"
+            ]
+        },
+        {
+            "rule": "apigee\\.net\\/ecom\\/v1\\/products\\/71987",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "toolstation-eu-eu-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "ecom-api.toolstation.nl",
+                    "resolved": "toolstation-eu-eu-prod.apigee.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -79,7 +213,7 @@
         "CDN"
     ],
     "performance": {},
-    "cookies": 0.000101,
+    "cookies": 0.000201,
     "topInitiators": [
         {
             "domain": "static-p46175-e229011.adobeaemcloud.com",
@@ -91,13 +225,15 @@
         }
     ],
     "types": {
-        "Preflight": 2,
-        "Fetch": 2
+        "Document": 2,
+        "XHR": 2,
+        "Preflight": 6,
+        "Fetch": 4
     },
     "nameservers": [
-        "ns-116.awsdns-14.com",
-        "ns-1441.awsdns-52.org",
         "ns-1907.awsdns-46.co.uk",
-        "ns-670.awsdns-19.net"
+        "ns-670.awsdns-19.net",
+        "ns-1441.awsdns-52.org",
+        "ns-116.awsdns-14.com"
     ]
 }

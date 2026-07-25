@@ -12,8 +12,8 @@
     "prevalence": 0.000201,
     "sites": 2,
     "subdomains": [
-        "ssl01.microsites",
-        "akamai-integration"
+        "akamai-integration",
+        "ssl01.microsites"
     ],
     "cnames": [
         {
@@ -27,6 +27,31 @@
     ],
     "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "redbull\\.edgesuite\\.net\\/v1\\/graphql\\/rrn:gql-queries:126f4531-a501-537c-861b-25099b3804cb",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "akamai-integration"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "api.redbull.com",
+                    "resolved": "akamai-integration.redbull.edgesuite.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "redbull.com",
+                "www.redbull.com"
+            ]
+        },
         {
             "rule": "redbull\\.edgesuite\\.net\\/report-usage",
             "cookies": 0,
@@ -80,31 +105,6 @@
                 "redbull.com",
                 "www.redbull.com"
             ]
-        },
-        {
-            "rule": "redbull\\.edgesuite\\.net\\/v1\\/graphql\\/rrn:gql-queries:126f4531-a501-537c-861b-25099b3804cb",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "akamai-integration"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [
-                {
-                    "original": "api.redbull.com",
-                    "resolved": "akamai-integration.redbull.edgesuite.net"
-                }
-            ],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "redbull.com",
-                "www.redbull.com"
-            ]
         }
     ],
     "categories": [
@@ -119,9 +119,9 @@
         }
     ],
     "types": {
+        "Preflight": 2,
         "Ping": 2,
-        "Fetch": 2,
-        "Preflight": 2
+        "Fetch": 2
     },
     "nameservers": []
 }

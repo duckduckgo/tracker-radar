@@ -9,7 +9,8 @@
     "subdomains": [
         "cdn",
         "adserving",
-        "nrc"
+        "nrc",
+        "proxy"
     ],
     "cnames": [
         {
@@ -89,7 +90,7 @@
             "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "7ba03d808489336bb1b905f07129b833aa1aa4c6231771b445066d55373d659a"
+                "10a07fe3c1ade1b0a41530247c21d8553594662e0ffa8e97f13cac052c8952ae"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -102,18 +103,11 @@
         {
             "rule": "optoutadvertising\\.com\\/script\\/sf\\/hostOptOut\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 3,
+            "fingerprinting": 0,
             "subdomains": [
                 "cdn"
             ],
-            "apis": {
-                "window.innerHeight": 1,
-                "window.innerWidth": 1,
-                "window.screenY": 1,
-                "window.screenTop": 1,
-                "window.screenX": 1,
-                "window.screenLeft": 1
-            },
+            "apis": {},
             "sites": 2,
             "prevalence": 0.000202,
             "cnames": [],
@@ -129,20 +123,25 @@
             ]
         },
         {
-            "rule": "optoutadvertising\\.com\\/script\\/sf\\/r\\.html",
+            "rule": "optoutadvertising\\.com\\/pixel",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "cdn"
+                "nrc"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000202,
-            "cnames": [],
-            "responseHashes": [
-                "3ff0010843d9f29a8b72889796973641a0d655fe8eeb8b8ada73a5ae7b1ecb2b"
+            "cnames": [
+                {
+                    "original": "content4.nrc.nl",
+                    "resolved": "nrc.optoutadvertising.com"
+                }
             ],
-            "type": "Document",
+            "responseHashes": [
+                "1ed70d02696722505ec82915a7dd9fbf2c512366d009b74bdbe37c9869c250a4"
+            ],
+            "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -151,21 +150,21 @@
             ]
         },
         {
-            "rule": "optoutadvertising\\.com\\/script\\/sf\\/base\\.js",
+            "rule": "optoutadvertising\\.com\\/redirect\\/prod\\/display\\/513396\\/rehosted_oo\\/scripts\\/15\\/screenad_interface_scrambled\\.js",
             "cookies": 0,
             "fingerprinting": 1,
             "subdomains": [
-                "cdn"
+                "proxy"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 2,
+                "window.indexedDB": 2,
                 "Date.prototype.getTime": 2
             },
             "sites": 2,
             "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "c447af28d195dd3892a6a61c6b04910d89ac7c3d6dfeccc148acd6fcf28682f3"
+                "8e1217d169fedaff35925fa126f41da3f7cf42a07c5136b51c15d0a52be964d2"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -176,47 +175,40 @@
             ]
         },
         {
-            "rule": "optoutadvertising\\.com\\/script\\/sf\\/ext\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "cdn"
-            ],
-            "apis": {
-                "window.name": 2
-            },
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [],
-            "responseHashes": [
-                "db5dfd0d5427627065f81a17ac1d80b77b6278dc21ed27631d11a4ca8317b7ee"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "nrc.nl",
-                "www.nrc.nl"
-            ]
-        },
-        {
-            "rule": "optoutadvertising\\.com\\/pixel",
+            "rule": "optoutadvertising\\.com\\/prod\\/display\\/513396\\/rehosted_oo\\/scripts\\/15\\/screenad_interface_scrambled\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "nrc"
+                "cdn"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000202,
-            "cnames": [
-                {
-                    "original": "content4.nrc.nl",
-                    "resolved": "nrc.optoutadvertising.com"
-                }
-            ],
+            "cnames": [],
             "responseHashes": [
-                "1ed70d02696722505ec82915a7dd9fbf2c512366d009b74bdbe37c9869c250a4"
+                "8e1217d169fedaff35925fa126f41da3f7cf42a07c5136b51c15d0a52be964d2"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nrc.nl",
+                "www.nrc.nl"
+            ]
+        },
+        {
+            "rule": "optoutadvertising\\.com\\/prod\\/display\\/513396\\/rehosted_oo\\/creatives\\/4673375039676055552\\/5004\\/4758176388937351168\\/headline\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "a26ea049a670289da467db18f9c04fa33d01b36e8e7742608132da645970502b"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -227,61 +219,7 @@
             ]
         },
         {
-            "rule": "optoutadvertising\\.com\\/script\\/viewability\\.js",
-            "cookies": 0,
-            "fingerprinting": 2,
-            "subdomains": [
-                "cdn"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [
-                {
-                    "original": "content3.nrc.nl",
-                    "resolved": "cdn.optoutadvertising.com"
-                }
-            ],
-            "responseHashes": [
-                "b52eb6a9d6110725d32b4a4d236a5a83f53659409237d44f5782aef66e6141a5"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "nrc.nl",
-                "www.nrc.nl"
-            ]
-        },
-        {
-            "rule": "optoutadvertising\\.com\\/prod\\/display\\/498307\\/\\/index\\.html",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "cdn"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [
-                {
-                    "original": "content3.nrc.nl",
-                    "resolved": "cdn.optoutadvertising.com"
-                }
-            ],
-            "responseHashes": [
-                "5106317edbbf559ce6732615a6f709da7f577f890e6030d6ec7b0b65e5bd712e"
-            ],
-            "type": "Document",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "nrc.nl",
-                "www.nrc.nl"
-            ]
-        },
-        {
-            "rule": "optoutadvertising\\.com\\/script\\/mraid2\\.js",
+            "rule": "optoutadvertising\\.com\\/prod\\/display\\/513396\\/rehosted_oo\\/creatives\\/4673375039676055552\\/5004\\/4758176388937351168\\/cta\\.svg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -292,59 +230,7 @@
             "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "6616d632a3d9b62f406ba6813d83a6680741e25b798666e371181b27bf6838f9"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "nrc.nl",
-                "www.nrc.nl"
-            ]
-        },
-        {
-            "rule": "optoutadvertising\\.com\\/script\\/adscience_dynamic_banner\\.js",
-            "cookies": 0.000202,
-            "fingerprinting": 1,
-            "subdomains": [
-                "cdn"
-            ],
-            "apis": {
-                "Document.cookie getter": 2,
-                "Document.cookie setter": 2
-            },
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [],
-            "responseHashes": [
-                "16a87507cdab8270178c44b95b27c8dbe01c56d3f5537553d65ebcadce615879"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "nrc.nl",
-                "www.nrc.nl"
-            ]
-        },
-        {
-            "rule": "optoutadvertising\\.com\\/prod\\/display\\/498307\\/\\/image\\.jpg",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "cdn"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [
-                {
-                    "original": "content3.nrc.nl",
-                    "resolved": "cdn.optoutadvertising.com"
-                }
-            ],
-            "responseHashes": [
-                "3705b846e0863e3500f891795ae21fb6e33ecca2e726e5d9df97d7d59662f759"
+                "a322a639bb65c5e82dac10b469b7c00d9c35b29e8385611358cea1699ae5cef0"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -355,25 +241,20 @@
             ]
         },
         {
-            "rule": "optoutadvertising\\.com\\/pixel",
+            "rule": "optoutadvertising\\.com\\/prod\\/display\\/513396\\/rehosted_oo\\/creatives\\/4673375039676055552\\/5004\\/4758176388937351168\\/logo-one\\.svg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "nrc"
+                "cdn"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000202,
-            "cnames": [
-                {
-                    "original": "content4.nrc.nl",
-                    "resolved": "nrc.optoutadvertising.com"
-                }
-            ],
+            "cnames": [],
             "responseHashes": [
-                "1ed70d02696722505ec82915a7dd9fbf2c512366d009b74bdbe37c9869c250a4"
+                "083292970b4961c7e6e1b83bc00500b368e6eb1dd63fa5017ed30653ffbfe64b"
             ],
-            "type": "Fetch",
+            "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -382,25 +263,20 @@
             ]
         },
         {
-            "rule": "optoutadvertising\\.com\\/redirect\\/pub\\/163\\/prod\\/display\\/495769\\/rehosted_oo\\/css2",
+            "rule": "optoutadvertising\\.com\\/prod\\/display\\/513396\\/rehosted_oo\\/creatives\\/4673375039676055552\\/5004\\/4758176388937351168\\/logo-vodafone\\.svg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "nrc"
+                "cdn"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000202,
-            "cnames": [
-                {
-                    "original": "content4.nrc.nl",
-                    "resolved": "nrc.optoutadvertising.com"
-                }
-            ],
+            "cnames": [],
             "responseHashes": [
-                "28faa74f452dd561622d2a2997bd8ebadad7c27daca3036674f38511c2d520c8"
+                "3c2c9d0e1874055f78239cdf112f4014c73a0da7577ebbe39039e7887b87275a"
             ],
-            "type": "Stylesheet",
+            "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -409,23 +285,106 @@
             ]
         },
         {
-            "rule": "optoutadvertising\\.com\\/redirect\\/pub\\/163\\/prod\\/display\\/495769\\/rehosted_oo\\/assets\\/creatives\\/general\\/cmp2vfnha1qam0vj4eseb53ca\\.jpg",
+            "rule": "optoutadvertising\\.com\\/prod\\/display\\/513396\\/rehosted_oo\\/creatives\\/4673375039676055552\\/5004\\/4758176388937351168\\/logo-x\\.svg",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "nrc"
+                "cdn"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000202,
-            "cnames": [
-                {
-                    "original": "content4.nrc.nl",
-                    "resolved": "nrc.optoutadvertising.com"
-                }
+            "cnames": [],
+            "responseHashes": [
+                "65a26ee9467d7906691a71068040fbec4b97609441a049cd10fe7d8375abb1a1"
             ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nrc.nl",
+                "www.nrc.nl"
+            ]
+        },
+        {
+            "rule": "optoutadvertising\\.com\\/prod\\/display\\/513396\\/rehosted_oo\\/creatives\\/4673375039676055552\\/5004\\/4758176388937351168\\/logo-ziggo\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "c630a169abb969cd7815f321cb97d914eee13e7c52a6e3c11cd8514d8c38e1e9"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nrc.nl",
+                "www.nrc.nl"
+            ]
+        },
+        {
+            "rule": "optoutadvertising\\.com\\/prod\\/display\\/513396\\/rehosted_oo\\/creatives\\/4673375039676055552\\/5004\\/4758176388937351168\\/disclaimer\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "35db9dcd7d0305df407381a4242a9580459eb5c161d705265155b582463113da"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nrc.nl",
+                "www.nrc.nl"
+            ]
+        },
+        {
+            "rule": "optoutadvertising\\.com\\/prod\\/display\\/513396\\/rehosted_oo\\/creatives\\/4673375039676055552\\/5004\\/4758176388937351168\\/wallpaper\\.jpg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "c026e59be7ad915095f2f73bf101474e600fea4a02f094958e67fb2122cc8568"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nrc.nl",
+                "www.nrc.nl"
+            ]
+        },
+        {
+            "rule": "optoutadvertising\\.com\\/webo\\/mrq\\/prod\\/display\\/513396\\/rehosted_oo\\/q",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "proxy"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
             "responseHashes": [],
-            "type": "Fetch",
+            "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -434,52 +393,42 @@
             ]
         },
         {
-            "rule": "optoutadvertising\\.com\\/pub\\/163\\/prod\\/display\\/495769\\/rehosted_oo\\/css2\\.nothing",
+            "rule": "optoutadvertising\\.com\\/redirect\\/prod\\/display\\/513396\\/rehosted_oo\\/q",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "cdn"
+                "proxy"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000202,
-            "cnames": [
-                {
-                    "original": "content3.nrc.nl",
-                    "resolved": "cdn.optoutadvertising.com"
-                }
-            ],
-            "responseHashes": [
-                "28faa74f452dd561622d2a2997bd8ebadad7c27daca3036674f38511c2d520c8"
-            ],
-            "type": "Stylesheet",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "nrc.nl",
-                "www.nrc.nl"
-            ]
-        },
-        {
-            "rule": "optoutadvertising\\.com\\/pub\\/163\\/prod\\/display\\/495769\\/rehosted_oo\\/assets\\/creatives\\/general\\/cmp2vfnha1qam0vj4eseb53ca\\.jpg",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "cdn"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [
-                {
-                    "original": "content3.nrc.nl",
-                    "resolved": "cdn.optoutadvertising.com"
-                }
-            ],
+            "cnames": [],
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
             ],
-            "type": "Fetch",
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nrc.nl",
+                "www.nrc.nl"
+            ]
+        },
+        {
+            "rule": "optoutadvertising\\.com\\/prod\\/display\\/513396\\/rehosted_oo\\/q\\.nothing",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -490,33 +439,30 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000101,
+    "cookies": 0,
     "topInitiators": [
         {
-            "domain": "optoutadvertising.com",
-            "prevalence": 0.5294117647058824
+            "domain": "first party",
+            "prevalence": 0.896551724137931
         },
         {
-            "domain": "first party",
-            "prevalence": 0.4117647058823529
+            "domain": "optoutadvertising.com",
+            "prevalence": 0.06896551724137931
         },
         {
             "domain": "ster.nl",
-            "prevalence": 0.058823529411764705
+            "prevalence": 0.034482758620689655
         }
     ],
     "types": {
-        "Script": 16,
+        "Script": 10,
         "XHR": 2,
-        "Document": 4,
-        "Image": 4,
-        "Fetch": 6,
-        "Stylesheet": 4
+        "Image": 24
     },
     "nameservers": [
-        "ns1-04.azure-dns.com",
-        "ns2-04.azure-dns.net",
         "ns3-04.azure-dns.org",
-        "ns4-04.azure-dns.info"
+        "ns4-04.azure-dns.info",
+        "ns2-04.azure-dns.net",
+        "ns1-04.azure-dns.com"
     ]
 }

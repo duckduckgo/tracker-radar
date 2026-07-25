@@ -4,13 +4,12 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.000144,
-    "sites": 21,
+    "prevalence": 0.000151,
+    "sites": 22,
     "subdomains": [
         "analytics",
         "radar",
-        "cloud1-service",
-        "cloud2-service"
+        "radar-eu1-realtime"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -24,8 +23,8 @@
                 "radar"
             ],
             "apis": {},
-            "sites": 17,
-            "prevalence": 0.000117,
+            "sites": 19,
+            "prevalence": 0.00013,
             "cnames": [],
             "responseHashes": [
                 "2689367b205c16ce32ed4200942b8b8b1e262dfc70d9bc9fbc77c49699a4f1df"
@@ -35,86 +34,53 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "cyclinguptodate.com",
+                "dartsnews.com",
+                "m.laroma24.it",
+                "manly.nl",
                 "mannenzaken.nl",
                 "radsportaktuell.de",
                 "showblad.nl",
                 "tennisuptodate.com",
                 "www.ajaxshowtime.com",
+                "www.balls.ie",
                 "www.clint.be",
                 "www.dagelijksestandaard.nl",
                 "www.f1maximaal.nl",
                 "www.foot01.com",
                 "www.fr12.nl",
-                "www.gizchina.com",
                 "www.homeandsmart.de",
                 "www.idlprocycling.com",
-                "www.nieuws365.be",
                 "www.vkmag.com",
                 "www.welingelichtekringen.nl"
             ]
         },
         {
-            "rule": "newsifier\\.nl\\/api\\/v2\\/gallery",
+            "rule": "newsifier\\.nl\\/js\\/script\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
-                "cloud1-service"
+                "radar-eu1-realtime",
+                "analytics"
             ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "cyclinguptodate.com",
-                "tennisuptodate.com"
-            ]
-        },
-        {
-            "rule": "newsifier\\.nl\\/api\\/v2\\/gallery",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "cloud1-service"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.webdriver": 3,
+                "window.localStorage": 3
+            },
+            "sites": 3,
+            "prevalence": 0.0000205,
             "cnames": [],
             "responseHashes": [
-                "84e959ec2221da8d7a57a5f373f135f44a89e7f694cefa18f7066453069c1807"
+                "08bc9966b219bd3458e7d4874c7c8ac356de36d95420618827ada256a8c2ac89",
+                "021f0fd27042b279a49e982215c6dc3c3ab84e95b35553a119dfdbd50af6be94"
             ],
-            "type": "Fetch",
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "cyclinguptodate.com",
-                "tennisuptodate.com"
-            ]
-        },
-        {
-            "rule": "newsifier\\.nl\\/api\\/v2\\/embed\\/twitter",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "cloud2-service"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "10c4a908c4cb91f2a62d76320ae1414cf3a2216b10f65cb5fc0ca71572be3acc"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "ajaxshowtime.com",
-                "www.ajaxshowtime.com"
+                "manly.nl",
+                "www.balls.ie",
+                "www.dagelijksestandaard.nl"
             ]
         }
     ],
@@ -124,13 +90,16 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.9811320754716981
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.018867924528301886
         }
     ],
     "types": {
         "XHR": 19,
-        "Preflight": 2,
-        "Fetch": 2
+        "Script": 3
     },
     "nameservers": [
         "elijah.ns.cloudflare.com",

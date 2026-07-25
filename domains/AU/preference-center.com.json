@@ -4,16 +4,45 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.000101,
-    "sites": 1,
+    "prevalence": 0.000201,
+    "sites": 2,
     "subdomains": [
         "consent"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
-            "rule": "preference-center\\.com\\/v2\\/edge",
+            "rule": "preference-center\\.com\\/v2\\/main-v6\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "consent"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.platform": 2,
+                "Navigator.prototype.webdriver": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie getter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "592a7a477d7fd96e3bc0b4f87847e557e157562f5cd7dd1514158e07633b3680"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "planetrugby.com",
+                "www.planetf1.com"
+            ]
+        },
+        {
+            "rule": "preference-center\\.com\\/json\\/",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -24,14 +53,59 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
+                "623290cbd9c2847ad78a6af8fefb222c1acf6897496edfcf6063d2f88a1f28cd"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "planetrugby.com",
+                "www.planetf1.com"
+            ]
+        },
+        {
+            "rule": "preference-center\\.com\\/v3\\/vendor-list\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "consent"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "994ec0845e5a93fc10a227010aead8c4215851c7ab2bd0adbcb311b6e2a78c6b"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "planetrugby.com",
+                "www.planetf1.com"
+            ]
+        },
+        {
+            "rule": "preference-center\\.com\\/v2\\/edge",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "consent"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "loverugbyleague.com",
-                "www.loverugbyleague.com"
+                "planetrugby.com",
+                "www.planetf1.com",
+                "www.planetrugby.com"
             ]
         }
     ],
@@ -41,15 +115,21 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.5
+            "prevalence": 0.4
         },
         {
             "domain": "doubleclick.net",
-            "prevalence": 0.5
+            "prevalence": 0.4
+        },
+        {
+            "domain": "d3b02estmut877.cloudfront.net",
+            "prevalence": 0.2
         }
     ],
     "types": {
-        "XHR": 2
+        "Script": 2,
+        "Fetch": 4,
+        "XHR": 3
     },
     "nameservers": [
         "phil.ns.cloudflare.com",

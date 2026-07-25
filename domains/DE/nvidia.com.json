@@ -11,10 +11,10 @@
     "sites": 1,
     "subdomains": [
         "www",
-        "gx-target-experiments-frontend-api.gx"
+        "apps.gxn"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 3,
     "resources": [
         {
             "rule": "nvidia\\.com\\/auth\\/hints\\/",
@@ -28,9 +28,109 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "68e9624f783ef228dd50d59452418006a5ea40364d947aba4f3d077664e9ed06"
+                "487bf9fdc39a9819bc6ecd088a51561e06031d2634c2fa3b9a5947f3d8309dec"
             ],
             "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "geforcenow.com",
+                "play.geforcenow.com"
+            ]
+        },
+        {
+            "rule": "nvidia\\.com\\/graphql",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "apps.gxn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "geforcenow.com",
+                "play.geforcenow.com"
+            ]
+        },
+        {
+            "rule": "nvidia\\.com\\/graphql",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "apps.gxn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "geforcenow.com",
+                "play.geforcenow.com"
+            ]
+        },
+        {
+            "rule": "nvidia\\.com\\/akam\\/13\\/ff03d2f",
+            "cookies": 0.000101,
+            "fingerprinting": 3,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {
+                "Navigator.prototype.plugins": 2,
+                "window.innerWidth": 2,
+                "window.outerWidth": 2,
+                "window.screenX": 2,
+                "Screen.prototype.availWidth": 2,
+                "Screen.prototype.width": 2,
+                "window.innerHeight": 2,
+                "window.outerHeight": 2,
+                "window.screenY": 2,
+                "Screen.prototype.availHeight": 2,
+                "Screen.prototype.height": 2,
+                "Screen.prototype.colorDepth": 2,
+                "Screen.prototype.pixelDepth": 2,
+                "window.indexedDB": 2,
+                "Date.prototype.getTimezoneOffset": 2,
+                "window.localStorage": 2,
+                "window.sessionStorage": 2,
+                "HTMLCanvasElement.prototype.toDataURL": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.appName": 2,
+                "Navigator.prototype.appCodeName": 2,
+                "Navigator.prototype.appVersion": 2,
+                "Navigator.prototype.product": 2,
+                "Navigator.prototype.productSub": 2,
+                "Navigator.prototype.vendor": 2,
+                "Navigator.prototype.vendorSub": 2,
+                "Navigator.prototype.platform": 2,
+                "Navigator.prototype.hardwareConcurrency": 2,
+                "Navigator.prototype.language": 2,
+                "Navigator.prototype.languages": 2,
+                "Navigator.prototype.doNotTrack": 2,
+                "Navigator.prototype.cookieEnabled": 2,
+                "Navigator.prototype.maxTouchPoints": 2,
+                "Navigator.prototype.webdriver": 2,
+                "Navigator.prototype.permissions": 2,
+                "Navigator.prototype.getBattery": 2,
+                "CanvasRenderingContext2D.prototype.getImageData": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "6e5ec20e315972f8c2291fa1d7675eea77cc91aa7cebdafab9d21d43c310fffe"
+            ],
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -87,48 +187,6 @@
                 "geforcenow.com",
                 "play.geforcenow.com"
             ]
-        },
-        {
-            "rule": "nvidia\\.com\\/cloudvariables\\/v3",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "gx-target-experiments-frontend-api.gx"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "geforcenow.com",
-                "play.geforcenow.com"
-            ]
-        },
-        {
-            "rule": "nvidia\\.com\\/cloudvariables\\/v3",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "gx-target-experiments-frontend-api.gx"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "127571c73f03378f43cef32a2b5d95db9b9e0012bac26a20800d0b299adb99d5"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "geforcenow.com",
-                "play.geforcenow.com"
-            ]
         }
     ],
     "categories": [],
@@ -142,15 +200,15 @@
     ],
     "types": {
         "Document": 2,
-        "Script": 4,
         "Preflight": 2,
-        "Fetch": 2
+        "XHR": 2,
+        "Script": 6
     },
     "nameservers": [
         "dns2.p09.nsone.net",
         "dns1.p09.nsone.net",
-        "ns7.dnsmadeeasy.com",
         "ns6.dnsmadeeasy.com",
-        "ns5.dnsmadeeasy.com"
+        "ns5.dnsmadeeasy.com",
+        "ns7.dnsmadeeasy.com"
     ]
 }

@@ -12,6 +12,7 @@
     "prevalence": 0.0000137,
     "sites": 2,
     "subdomains": [
+        "wildcard",
         "dsa.wildcard",
         "ksd.wildcard"
     ],
@@ -23,10 +24,45 @@
         {
             "original": "media.r7.com",
             "resolved": "ksd.wildcard.r7.com.edgekey.net"
+        },
+        {
+            "original": "player.r7.com",
+            "resolved": "wildcard.r7.com.edgekey.net"
+        },
+        {
+            "original": "sc.r7.com",
+            "resolved": "dsa.wildcard.r7.com.edgekey.net"
         }
     ],
     "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "r7\\.com\\.edgekey\\.net\\/index\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "wildcard"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "player.r7.com",
+                    "resolved": "wildcard.r7.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "990c7fb35277db8cbde0c41b76c70a1fbe18c86cb4ae83bb68650f521d1cb26d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "r7.com",
+                "record.r7.com"
+            ]
+        },
         {
             "rule": "r7\\.com\\.edgekey\\.net\\/cda-ad-player\\/cda-ad-player\\/cda-ad-player\\.esm\\.js",
             "cookies": 0,
@@ -36,7 +72,7 @@
             ],
             "apis": {},
             "sites": 3,
-            "prevalence": 0.0000206,
+            "prevalence": 0.0000205,
             "cnames": [
                 {
                     "original": "assets.r7.com",
@@ -145,7 +181,7 @@
             ],
             "apis": {},
             "sites": 3,
-            "prevalence": 0.0000206,
+            "prevalence": 0.0000205,
             "cnames": [
                 {
                     "original": "media.r7.com",
@@ -163,6 +199,33 @@
                 "noticias.r7.com",
                 "record.r7.com"
             ]
+        },
+        {
+            "rule": "r7\\.com\\.edgekey\\.net\\/videojs\\/logo-r7\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dsa.wildcard"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "sc.r7.com",
+                    "resolved": "dsa.wildcard.r7.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "0b1d68ef98d63c50867381090c00f740612f42bd827066b9fa14ae93b3bb4930"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "r7.com",
+                "record.r7.com"
+            ]
         }
     ],
     "categories": [],
@@ -175,8 +238,9 @@
         }
     ],
     "types": {
-        "Script": 9,
-        "Media": 3
+        "Script": 11,
+        "Media": 3,
+        "Image": 2
     },
     "nameservers": []
 }

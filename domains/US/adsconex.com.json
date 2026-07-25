@@ -7,24 +7,31 @@
     "prevalence": 0.00000685,
     "sites": 1,
     "subdomains": [
-        "analytics"
+        "cdn"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
         {
-            "rule": "adsconex\\.com\\/api\\/collect",
+            "rule": "adsconex\\.com\\/js\\/config\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
-                "analytics"
+                "cdn"
             ],
-            "apis": {},
+            "apis": {
+                "Screen.prototype.width": 1,
+                "Screen.prototype.height": 1,
+                "Navigator.prototype.language": 1,
+                "window.localStorage": 1
+            },
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Ping",
+            "responseHashes": [
+                "12baf3df6c9a2a8e48508be5145525cad6e9671ef313deb70ff6ae9a059e47dd"
+            ],
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -43,7 +50,7 @@
         }
     ],
     "types": {
-        "Ping": 2
+        "Script": 2
     },
     "nameservers": [
         "tegan.ns.cloudflare.com",

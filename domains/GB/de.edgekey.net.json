@@ -9,10 +9,11 @@
     "source": [
         "DuckDuckGo-GB"
     ],
-    "prevalence": 0.000403,
-    "sites": 4,
+    "prevalence": 0.000502,
+    "sites": 5,
     "subdomains": [
         "accounts.bahn",
+        "server.sgtm-legacy.kleinanzeigen",
         "ssl.zdf"
     ],
     "cnames": [
@@ -23,9 +24,13 @@
         {
             "original": "api.zdf.de",
             "resolved": "ssl.zdf.de.edgekey.net"
+        },
+        {
+            "original": "server.sgtm-legacy.kleinanzeigen.de",
+            "resolved": "server.sgtm-legacy.kleinanzeigen.de.edgekey.net"
         }
     ],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "de\\.edgekey\\.net\\/auth\\/realms\\/db\\/protocol\\/openid-connect\\/auth",
@@ -50,6 +55,33 @@
             "exampleSites": [
                 "bahn.de",
                 "www.bahn.de"
+            ]
+        },
+        {
+            "rule": "de\\.edgekey\\.net\\/g\\/collect",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "server.sgtm-legacy.kleinanzeigen"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "server.sgtm-legacy.kleinanzeigen.de",
+                    "resolved": "server.sgtm-legacy.kleinanzeigen.de.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "e64954dc34e12c7190cc2338a54b07644ff0f102aa71cc7209bcbb49c3009f7c"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kleinanzeigen.de",
+                "www.kleinanzeigen.de"
             ]
         },
         {
@@ -94,7 +126,7 @@
                 }
             ],
             "responseHashes": [
-                "7e7509487092f434feaaedf9ebe3b5211618dd561e5c025ad3f778ae6abb7658"
+                "01a7a838cb8d6ceba4784c0d9cc049158bfe95c61c280edb8fc9805d0ffc514b"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -107,17 +139,21 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000201,
+    "cookies": 0.000301,
     "topInitiators": [
         {
+            "domain": "uicdn.com",
+            "prevalence": 0.625
+        },
+        {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.375
         }
     ],
     "types": {
         "Document": 2,
-        "Preflight": 2,
-        "Fetch": 2
+        "Fetch": 4,
+        "Preflight": 2
     },
     "nameservers": []
 }

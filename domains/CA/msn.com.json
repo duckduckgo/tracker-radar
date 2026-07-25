@@ -9,52 +9,17 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000303,
-    "sites": 3,
+    "prevalence": 0.000101,
+    "sites": 1,
     "subdomains": [
-        "c",
         "www",
         "assets",
+        "c",
         "browser.events.data"
     ],
-    "cnames": [
-        {
-            "original": "c.nine.com.au",
-            "resolved": "c.msn.com"
-        }
-    ],
+    "cnames": [],
     "fingerprinting": 3,
     "resources": [
-        {
-            "rule": "msn\\.com\\/c\\.gif",
-            "cookies": 0.000303,
-            "fingerprinting": 0,
-            "subdomains": [
-                "c"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.000303,
-            "cnames": [
-                {
-                    "original": "c.nine.com.au",
-                    "resolved": "c.msn.com"
-                }
-            ],
-            "responseHashes": [
-                "8f84c4ced509262009163e45994b45ed7ee9d4dbac88674be5f2db5c9e5be38e"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {
-                "__pid": 0.00010103051121438674
-            },
-            "exampleSites": [
-                "9news.com.au",
-                "www.9news.com.au",
-                "www.deseret.com"
-            ]
-        },
         {
             "rule": "msn\\.com\\/widgets\\/fullpage\\/weatherWidgets\\/transparentwidget",
             "cookies": 0.000202,
@@ -69,7 +34,7 @@
             "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "4e4944873e91f1db7e2bcceeaa701de25f20f232eb8530cc0cd4f36b433cffc9"
+                "7d6df93a919f347e5a161ce244eb6d8ea95fae91d2cceacfe67e8b6536192273"
             ],
             "type": "Document",
             "firstPartyCookies": {},
@@ -82,11 +47,13 @@
         {
             "rule": "msn\\.com\\/bundles\\/v1\\/weatherWidgets\\/latest\\/vendors\\.77088291da451b37deb3\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "assets"
             ],
-            "apis": {},
+            "apis": {
+                "Document.cookie getter": 2
+            },
             "sites": 2,
             "prevalence": 0.000202,
             "cnames": [],
@@ -103,20 +70,22 @@
         },
         {
             "rule": "msn\\.com\\/bundles\\/v1\\/weatherWidgets\\/latest\\/microsoft\\.5cd0a856dd10521df025\\.js",
-            "cookies": 0,
+            "cookies": 0.000202,
             "fingerprinting": 2,
             "subdomains": [
                 "assets"
             ],
             "apis": {
+                "window.innerWidth": 2,
                 "window.matchMedia(\"prefers-color-scheme\")": 2,
                 "Navigator.prototype.userAgent": 2,
                 "Navigator.prototype.product": 2,
+                "Document.cookie getter": 2,
                 "Navigator.prototype.language": 2,
+                "Document.cookie setter": 2,
                 "Date.prototype.getTimezoneOffset": 2,
-                "Date.prototype.getTime": 2,
-                "window.innerWidth": 2,
-                "Document.cookie getter": 2
+                "window.localStorage": 2,
+                "Date.prototype.getTime": 2
             },
             "sites": 2,
             "prevalence": 0.000202,
@@ -125,7 +94,20 @@
                 "3d0bf9d1062d49503077bf5208aebb9834f57256c3b82812488c610c8b716ce6"
             ],
             "type": "Script",
-            "firstPartyCookies": {},
+            "firstPartyCookies": {
+                "MicrosoftApplicationsTelemetryDeviceId": {
+                    "ttl": 31536000,
+                    "length": 36,
+                    "prevalence": 0.00020163322915616494,
+                    "uniqueness": 0.5
+                },
+                "ai_session": {
+                    "ttl": 1804,
+                    "length": 50,
+                    "prevalence": 0.00020163322915616494,
+                    "uniqueness": 0.5
+                }
+            },
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "deseret.com",
@@ -141,16 +123,21 @@
             ],
             "apis": {
                 "Date.prototype.getTime": 2,
-                "Navigator.prototype.cookieEnabled": 2,
+                "window.sessionStorage": 2,
+                "NavigatorUAData.prototype.platform": 2,
+                "window.localStorage": 2,
                 "Document.cookie getter": 2,
-                "Navigator.prototype.connection": 2,
-                "Navigator.prototype.hardwareConcurrency": 2,
+                "window.innerWidth": 2,
+                "window.innerHeight": 2,
                 "window.outerWidth": 2,
                 "window.outerHeight": 2,
                 "Screen.prototype.width": 2,
                 "Screen.prototype.height": 2,
-                "window.localStorage": 2,
-                "window.sessionStorage": 2
+                "Navigator.prototype.cookieEnabled": 2,
+                "Navigator.prototype.connection": 2,
+                "Navigator.prototype.hardwareConcurrency": 2,
+                "window.indexedDB": 2,
+                "Navigator.prototype.deviceMemory": 2
             },
             "sites": 2,
             "prevalence": 0.000202,
@@ -189,6 +176,30 @@
             ]
         },
         {
+            "rule": "msn\\.com\\/c\\.gif",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "c"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "8f84c4ced509262009163e45994b45ed7ee9d4dbac88674be5f2db5c9e5be38e"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "lotame_domain_check": 0.00020163322915616494
+            },
+            "exampleSites": [
+                "deseret.com",
+                "www.deseret.com"
+            ]
+        },
+        {
             "rule": "msn\\.com\\/OneCollector\\/1\\.0",
             "cookies": 0.000202,
             "fingerprinting": 0,
@@ -213,25 +224,21 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000202,
+    "cookies": 0.000101,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.4
-        },
-        {
-            "domain": "9cdn.net",
-            "prevalence": 0.4
+            "prevalence": 0.5
         },
         {
             "domain": "adlightning.com",
-            "prevalence": 0.2
+            "prevalence": 0.5
         }
     ],
     "types": {
-        "Image": 3,
         "Document": 2,
         "Script": 8,
+        "Image": 2,
         "Ping": 2
     },
     "nameservers": [

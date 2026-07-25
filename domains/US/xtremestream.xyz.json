@@ -4,11 +4,13 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000137,
-    "sites": 2,
+    "prevalence": 0.0000342,
+    "sites": 5,
     "subdomains": [
         "george",
-        "xvideosonly"
+        "gargar",
+        "xvideosonly",
+        "stats"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -16,30 +18,63 @@
         {
             "rule": "xtremestream\\.xyz\\/player\\/index\\.php",
             "cookies": 0,
-            "fingerprinting": 1,
+            "fingerprinting": 0,
             "subdomains": [
                 "george",
+                "gargar",
                 "xvideosonly"
             ],
-            "apis": {
-                "Navigator.prototype.userAgent": 1
-            },
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
             "cnames": [],
             "responseHashes": [
-                "3ff86b960fced7e9aee13a15b416f511bdc79c5c66475ec6ac419d7b582d77e1"
+                "944a4e6f362238d6274342487f4a0646d44847946372e45426b8c35ec3881ba0"
             ],
             "type": "Document",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "asianpinay.asia",
+                "hunkypinoytv.com",
                 "xvideosonly.com"
             ]
         },
         {
-            "rule": "xtremestream\\.xyz\\/player\\/assets\\/s\\.js",
+            "rule": "xtremestream\\.xyz\\/matomo\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "stats"
+            ],
+            "apis": {
+                "Document.cookie getter": 1,
+                "window.name": 1,
+                "NavigatorUAData.prototype.brands": 1,
+                "NavigatorUAData.prototype.platform": 1,
+                "NavigatorUAData.prototype.getHighEntropyValues": 1,
+                "Navigator.prototype.userAgent": 1,
+                "Navigator.prototype.mimeTypes": 1,
+                "Navigator.prototype.javaEnabled": 1,
+                "Navigator.prototype.cookieEnabled": 1,
+                "Screen.prototype.width": 1,
+                "Screen.prototype.height": 1,
+                "Date.prototype.getTime": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "asianpinay.asia",
+                "xporn.to"
+            ]
+        },
+        {
+            "rule": "xtremestream\\.xyz\\/cdn-cgi\\/rum",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -51,82 +86,9 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "7745fa0fdded3dc86677ff06717a0bdb9618c59ef497e34e1c72340cf32fc3fa"
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
             ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "asianpinay.asia",
-                "xvideosonly.com"
-            ]
-        },
-        {
-            "rule": "xtremestream\\.xyz\\/player\\/devtools-detector\\/lib\\/devtools-detector\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "george",
-                "xvideosonly"
-            ],
-            "apis": {
-                "Navigator.prototype.userAgent": 1
-            },
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "7bc694fb22415a97fcd78268880d73854a8d0b4f4d5080236d92f0a3d870ea68"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "asianpinay.asia",
-                "xvideosonly.com"
-            ]
-        },
-        {
-            "rule": "xtremestream\\.xyz\\/player\\/promise-polyfill\\/dist\\/polyfill\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "george",
-                "xvideosonly"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "a0703a79875a2bbfadbdf5c197e5eeb823ab393748d4abace103d53ec2db1f50"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "asianpinay.asia",
-                "xvideosonly.com"
-            ]
-        },
-        {
-            "rule": "xtremestream\\.xyz\\/player\\/assets\\/ccu\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "george",
-                "xvideosonly"
-            ],
-            "apis": {
-                "window.localStorage": 2
-            },
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "237ec347cf38c935f0b893f347a0d08ce504dee0981001f88c9cb2b8700e1878"
-            ],
-            "type": "Script",
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -141,19 +103,20 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.5
+            "prevalence": 0.75
         },
         {
             "domain": "cloudflareinsights.com",
-            "prevalence": 0.5
+            "prevalence": 0.25
         }
     ],
     "types": {
-        "Document": 2,
-        "Script": 8
+        "Document": 3,
+        "Script": 2,
+        "XHR": 2
     },
     "nameservers": [
-        "vasilii.ns.cloudflare.com",
-        "alina.ns.cloudflare.com"
+        "alina.ns.cloudflare.com",
+        "vasilii.ns.cloudflare.com"
     ]
 }

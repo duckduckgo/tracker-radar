@@ -7,9 +7,11 @@
     "source": [
         "DuckDuckGo-GB"
     ],
-    "prevalence": 0.000604,
+    "prevalence": 0.000603,
     "sites": 6,
     "subdomains": [
+        "vinatis",
+        "fenix",
         "site-see",
         "futureplc"
     ],
@@ -17,44 +19,86 @@
     "fingerprinting": 1,
     "resources": [
         {
-            "rule": "slgnt\\.eu\\/frontend\\/api\\/track",
+            "rule": "slgnt\\.eu\\/optiext\\/webtracker\\.dll",
             "cookies": 0.000201,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
-                "site-see"
+                "vinatis",
+                "fenix"
             ],
-            "apis": {},
+            "apis": {
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2
+            },
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "cbb39236d8932bed6aa5fcf7477a299d26eb9e1d00dddd3fb151a2d497240247"
+                "b5f698262d8d676b6bdc8c0be42849740af839799ab679e6cbc6cc4a448c5d9d"
             ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
+            "type": "Script",
+            "firstPartyCookies": {
+                "m_ses": {
+                    "ttl": null,
+                    "length": 14,
+                    "prevalence": 0.0002009444388626545,
+                    "uniqueness": 1
+                },
+                "m_cnt": {
+                    "ttl": null,
+                    "length": 1,
+                    "prevalence": 0.0002009444388626545,
+                    "uniqueness": 0.5
+                }
+            },
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "eurocamp.co.uk",
-                "www.pharmacy2u.co.uk"
+                "vinatis.co.uk",
+                "www.fjallraven.com"
             ]
         },
         {
             "rule": "slgnt\\.eu\\/frontend\\/api\\/track",
-            "cookies": 0.000201,
+            "cookies": 0.000301,
             "fingerprinting": 0,
             "subdomains": [
                 "site-see"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "eurocamp.co.uk",
+                "vinatis.co.uk",
+                "www.eurocamp.co.uk",
+                "www.pharmacy2u.co.uk"
+            ]
+        },
+        {
+            "rule": "slgnt\\.eu\\/frontend\\/api\\/track",
+            "cookies": 0.000301,
+            "fingerprinting": 0,
+            "subdomains": [
+                "site-see"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [
+                "5663629fe9697b07960b40feafc5a0b7baed865415e684a98595da63a11c6d0b",
+                "5e7a6e757a1c297d011778595df8e0844377c261a33559c0bd424b35e3388d81"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vinatis.co.uk",
+                "www.eurocamp.co.uk",
                 "www.pharmacy2u.co.uk"
             ]
         },
@@ -70,24 +114,28 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "61861f5cad85591a2d98d22ba46c10147cbac02b1591f6887b956c7e8bfabbae"
+                "6fb6aa4338935f3a28e2fb1e9ff385c0d8c32ac871b191c0d833534a11dd2baf"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "horseandhound.co.uk",
-                "www.mbr.co.uk"
+                "mbr.co.uk",
+                "www.rugbyworld.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000604,
+    "cookies": 0.000603,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.75
+            "prevalence": 0.625
+        },
+        {
+            "domain": "datadoghq-browser-agent.com",
+            "prevalence": 0.125
         },
         {
             "domain": "windows.net",
@@ -99,15 +147,16 @@
         }
     ],
     "types": {
-        "Fetch": 4,
-        "Preflight": 2
+        "Script": 2,
+        "Preflight": 3,
+        "Fetch": 5
     },
     "nameservers": [
-        "ns10.dnsmadeeasy.com",
-        "ns11.dnsmadeeasy.com",
-        "ns12.dnsmadeeasy.com",
-        "ns13.dnsmadeeasy.com",
         "ns14.dnsmadeeasy.com",
+        "ns13.dnsmadeeasy.com",
+        "ns10.dnsmadeeasy.com",
+        "ns12.dnsmadeeasy.com",
+        "ns11.dnsmadeeasy.com",
         "ns15.dnsmadeeasy.com"
     ]
 }

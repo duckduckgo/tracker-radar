@@ -8,6 +8,9 @@
     "sites": 17,
     "subdomains": [
         "analytics",
+        "radar",
+        "radar-eu1-realtime",
+        "cloud3-service",
         "karma-stats-service"
     ],
     "cnames": [],
@@ -18,7 +21,8 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "analytics"
+                "analytics",
+                "radar"
             ],
             "apis": {},
             "sites": 16,
@@ -31,11 +35,10 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "aiwereld.nl",
                 "fhm.nl",
                 "gp33.nl",
+                "manly.nl",
                 "mannenzaken.nl",
-                "nieuws.nl",
                 "showblad.nl",
                 "wielrennenuptodate.nl",
                 "www.ajaxshowtime.com",
@@ -45,8 +48,80 @@
                 "www.f1maximaal.nl",
                 "www.fr12.nl",
                 "www.indeleiderstrui.nl",
+                "www.twenteinsite.nl",
                 "www.vkmag.com",
                 "www.welingelichtekringen.nl"
+            ]
+        },
+        {
+            "rule": "newsifier\\.nl\\/js\\/script\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "radar-eu1-realtime",
+                "analytics"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 1,
+                "Navigator.prototype.webdriver": 2,
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "021f0fd27042b279a49e982215c6dc3c3ab84e95b35553a119dfdbd50af6be94"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "manly.nl",
+                "www.dagelijksestandaard.nl"
+            ]
+        },
+        {
+            "rule": "newsifier\\.nl\\/api\\/v2\\/quiz",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cloud3-service"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "3d61ded484d448cbab2a8db70a647aac7914adbd37314d85b66d3a6ccdd1e75b"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fr12.nl",
+                "www.twenteinsite.nl"
+            ]
+        },
+        {
+            "rule": "newsifier\\.nl\\/api\\/v1\\/user\\/karma-stats-in-a-week",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "karma-stats-service"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "7e47b0423933abaf7e057fefe242291e3bb82cea549ae54aafb7d052deec5d54"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fr12.nl",
+                "www.fr12.nl"
             ]
         },
         {
@@ -68,28 +143,6 @@
                 "fr12.nl",
                 "www.fr12.nl"
             ]
-        },
-        {
-            "rule": "newsifier\\.nl\\/api\\/v1\\/user\\/karma-stats-in-a-week",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "karma-stats-service"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "147b95c9af9fc76ffa755af5fc5ecb87c9d30631094319ea0a4abf0c418200bb"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "fr12.nl",
-                "www.fr12.nl"
-            ]
         }
     ],
     "categories": [],
@@ -103,10 +156,12 @@
     ],
     "types": {
         "XHR": 18,
+        "Script": 2,
+        "Fetch": 2,
         "Preflight": 2
     },
     "nameservers": [
-        "elijah.ns.cloudflare.com",
-        "paloma.ns.cloudflare.com"
+        "paloma.ns.cloudflare.com",
+        "elijah.ns.cloudflare.com"
     ]
 }

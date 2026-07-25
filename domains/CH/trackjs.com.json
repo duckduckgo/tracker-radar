@@ -11,24 +11,38 @@
     "sites": 12,
     "subdomains": [
         "cdn",
-        "usage"
+        "usage",
+        "capture"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 3,
     "resources": [
         {
             "rule": "trackjs\\.com\\/agent\\/v3\\/latest\\/t\\.js",
             "cookies": 0,
-            "fingerprinting": 1,
+            "fingerprinting": 3,
             "subdomains": [
                 "cdn"
             ],
             "apis": {
-                "Date.prototype.getTime": 5,
-                "Navigator.prototype.userAgent": 5
+                "Date.prototype.getTime": 4,
+                "Navigator.prototype.userAgent": 4,
+                "window.name": 1,
+                "window.innerWidth": 1,
+                "window.innerHeight": 1,
+                "window.screenX": 1,
+                "window.screenY": 1,
+                "window.outerWidth": 1,
+                "window.outerHeight": 1,
+                "window.devicePixelRatio": 1,
+                "window.screenLeft": 1,
+                "window.screenTop": 1,
+                "window.indexedDB": 1,
+                "window.sessionStorage": 1,
+                "window.localStorage": 1
             },
-            "sites": 5,
-            "prevalence": 0.000504,
+            "sites": 4,
+            "prevalence": 0.000402,
             "cnames": [],
             "responseHashes": [
                 "3169a71c8da47b07411a0edd846dde35975f54102b8b75c3b4563194e84ff506"
@@ -40,7 +54,6 @@
                 "betzold.ch",
                 "lehner-versand.ch",
                 "www.betzold.ch",
-                "www.betzold.de",
                 "www.lehner-versand.ch"
             ]
         },
@@ -67,12 +80,36 @@
                 "smallpdf.com",
                 "spicychat.ai",
                 "www.adulttime.com",
-                "www.artbasel.com",
                 "www.betzold.ch",
-                "www.betzold.de",
+                "www.eroticax.com",
                 "www.evilangel.com",
                 "www.fotmob.com",
                 "www.lehner-versand.ch",
+                "www.puregym.swiss",
+                "www.roccosiffredi.com"
+            ]
+        },
+        {
+            "rule": "trackjs\\.com\\/capture",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "capture"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000402,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lehner-versand.ch",
+                "spicychat.ai",
+                "www.adulttime.com",
                 "www.puregym.swiss"
             ]
         }
@@ -83,24 +120,21 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.5625
-        },
-        {
-            "domain": "usercentrics.eu",
-            "prevalence": 0.1875
+            "prevalence": 0.7407407407407407
         },
         {
             "domain": "gammacdn.com",
-            "prevalence": 0.1875
+            "prevalence": 0.18518518518518517
         },
         {
-            "domain": "cookielaw.org",
-            "prevalence": 0.0625
+            "domain": "usercentrics.eu",
+            "prevalence": 0.07407407407407407
         }
     ],
     "types": {
-        "Script": 5,
-        "Image": 12
+        "Script": 4,
+        "Image": 12,
+        "XHR": 4
     },
     "nameservers": [
         "dns1.registrar-servers.com",
