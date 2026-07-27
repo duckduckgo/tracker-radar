@@ -7,65 +7,18 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000685,
-    "sites": 10,
+    "prevalence": 0.0000548,
+    "sites": 8,
     "subdomains": [
-        "cdn.observability",
         "http-inputs-itv",
-        "http-inputs-notion"
+        "rum-ingest.eu0.observability",
+        "rum-ingest.au0.observability",
+        "http-inputs-myer"
     ],
     "cnames": [],
-    "fingerprinting": 2,
+    "fingerprinting": 1,
     "resources": [
         {
-            "rule": "splunkcloud\\.com\\/o11y-gdi-rum\\/v2\\.1\\.0\\/splunk-otel-web\\.js",
-            "cookies": 0.0000137,
-            "fingerprinting": 2,
-            "subdomains": [
-                "cdn.observability"
-            ],
-            "apis": {
-                "Navigator.prototype.userAgent": 2,
-                "Navigator.prototype.webdriver": 2,
-                "window.name": 2,
-                "window.sessionStorage": 2,
-                "Document.cookie getter": 2,
-                "Document.cookie setter": 2,
-                "Navigator.prototype.language": 2,
-                "NavigatorUAData.prototype.platform": 2,
-                "Navigator.prototype.platform": 2,
-                "NavigatorUAData.prototype.getHighEntropyValues": 2,
-                "Screen.prototype.width": 2,
-                "Screen.prototype.height": 2
-            },
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "24a49a87a009025fcd4b02dddb8f5f4c5755f4770d8340e6eb090b1d5e5a2bbc"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {
-                "_splunk_rum_sid": {
-                    "ttl": 900,
-                    "length": 123,
-                    "prevalence": 0.000013706985765295283,
-                    "uniqueness": 1
-                },
-                "_splunk_rum_user_anonymousId": {
-                    "ttl": 34560000,
-                    "length": 32,
-                    "prevalence": 0.000013706985765295283,
-                    "uniqueness": 1
-                }
-            },
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "t-mobile.com",
-                "www.t-mobile.com"
-            ]
-        },
-        {
             "rule": "splunkcloud\\.com\\/services\\/collector",
             "cookies": 0,
             "fingerprinting": 0,
@@ -108,15 +61,60 @@
             ]
         },
         {
-            "rule": "splunkcloud\\.com\\/services\\/collector\\/raw",
+            "rule": "splunkcloud\\.com\\/v1\\/rumotlp",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "http-inputs-notion"
+                "rum-ingest.eu0.observability",
+                "rum-ingest.au0.observability"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "icabanken.se",
+                "www.tafensw.edu.au"
+            ]
+        },
+        {
+            "rule": "splunkcloud\\.com\\/v1\\/rumotlp",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rum-ingest.eu0.observability",
+                "rum-ingest.au0.observability"
             ],
             "apis": {},
             "sites": 3,
-            "prevalence": 0.0000206,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "icabanken.se",
+                "www.icabanken.se",
+                "www.tafensw.edu.au"
+            ]
+        },
+        {
+            "rule": "splunkcloud\\.com\\/services\\/collector\\/event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "http-inputs-myer"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
                 "3c88e3c57f69e3a02a1c89ddad501cd370fae7012bf522ee4632d4852e7f5c4b"
@@ -125,50 +123,44 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "notion.com",
-                "www.notion.com",
-                "www.notion.so"
+                "myer.com.au",
+                "www.myer.com.au"
             ]
         },
         {
-            "rule": "splunkcloud\\.com\\/services\\/collector\\/raw",
+            "rule": "splunkcloud\\.com\\/services\\/collector\\/event",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "http-inputs-notion"
+                "http-inputs-myer"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000206,
+            "sites": 2,
+            "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "notion.com",
-                "www.notion.com",
-                "www.notion.so"
+                "myer.com.au",
+                "www.myer.com.au"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0000206,
+    "cookies": 0.0000137,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.7894736842105263
-        },
-        {
-            "domain": "notion.com",
-            "prevalence": 0.21052631578947367
+            "prevalence": 1
         }
     ],
     "types": {
-        "Script": 2,
-        "Preflight": 5,
-        "Fetch": 5
+        "Preflight": 6,
+        "Fetch": 4,
+        "XHR": 3
     },
     "nameservers": [
         "ns-4-2-1.splunkdns.net",

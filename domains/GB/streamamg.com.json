@@ -7,61 +7,65 @@
     "source": [
         "DuckDuckGo-GB"
     ],
-    "prevalence": 0.000503,
-    "sites": 5,
+    "prevalence": 0.000301,
+    "sites": 3,
     "subdomains": [
-        "open.http.mp"
+        "sdk.playback",
+        "api.playback"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
         {
-            "rule": "streamamg\\.com\\/p\\/3001048\\/sp\\/300104800\\/embedIframeJs\\/uiconf_id\\/30022495\\/partner_id\\/3001048",
+            "rule": "streamamg\\.com\\/v1\\/playback\\.js",
             "cookies": 0,
-            "fingerprinting": 1,
+            "fingerprinting": 2,
             "subdomains": [
-                "open.http.mp"
+                "sdk.playback"
             ],
             "apis": {
+                "Navigator.prototype.product": 2,
                 "Navigator.prototype.userAgent": 2,
-                "window.localStorage": 2,
-                "Navigator.prototype.platform": 2,
-                "Date.prototype.getTime": 2
+                "Date.prototype.getTime": 2,
+                "PerformanceTiming.prototype.navigationStart": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "window.devicePixelRatio": 2
             },
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "0456b5def07a44b5d1ee1b407c372292ca7220835633c93704d6f90171c8168b"
+                "1060695da84485923e10f303e235d0b90d3a03d3e635c3404b83d4d043dd115d"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "rugby-league.com",
-                "www.rugby-league.com"
+                "lcfc.com",
+                "www.southamptonfc.com"
             ]
         },
         {
-            "rule": "streamamg\\.com\\/html5\\/html5lib\\/v2\\.55\\/mwEmbedLoader\\.php\\/p\\/3001048\\/uiconf_id\\/30022495",
+            "rule": "streamamg\\.com\\/v1\\/player",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "open.http.mp"
+                "api.playback"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "0456b5def07a44b5d1ee1b407c372292ca7220835633c93704d6f90171c8168b"
+                "bb74fe73036c0a184dbb1a217e501c0acfc4eb1be97dc0c0740421064fc4c9a4"
             ],
-            "type": "Script",
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "rugby-league.com",
-                "www.rugby-league.com"
+                "lcfc.com",
+                "www.lcfc.com"
             ]
         }
     ],
@@ -71,15 +75,12 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.875
-        },
-        {
-            "domain": "cookiebot.com",
-            "prevalence": 0.125
+            "prevalence": 1
         }
     ],
     "types": {
-        "Script": 4
+        "Script": 2,
+        "XHR": 2
     },
     "nameservers": [
         "ns-213.awsdns-26.com",

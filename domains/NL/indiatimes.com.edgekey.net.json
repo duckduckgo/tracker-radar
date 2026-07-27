@@ -13,19 +13,29 @@
     "sites": 2,
     "subdomains": [
         "etmarketsapis",
+        "etusapi",
+        "agi-static",
         "geoapi"
     ],
     "cnames": [
         {
+            "original": "agi-static.indiatimes.com",
+            "resolved": "agi-static.indiatimes.com.edgekey.net"
+        },
+        {
             "original": "etmarketsapis.indiatimes.com",
             "resolved": "etmarketsapis.indiatimes.com.edgekey.net"
+        },
+        {
+            "original": "etusapi.indiatimes.com",
+            "resolved": "etusapi.indiatimes.com.edgekey.net"
         },
         {
             "original": "geoapi.indiatimes.com",
             "resolved": "geoapi.indiatimes.com.edgekey.net"
         }
     ],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "indiatimes\\.com\\.edgekey\\.net\\/ET_Stats\\/getMarketBand",
@@ -44,7 +54,7 @@
                 }
             ],
             "responseHashes": [
-                "c6a3ba175f22e6f9b96009d21ff25ca290b72d3e9e6321efe915b0b36fb7cbbe"
+                "0db9de93c97fc8e09baef29ffee2cf45a323375bbc9df285a6fa505e46ce1eab"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -52,6 +62,85 @@
             "exampleSites": [
                 "indiatimes.com",
                 "economictimes.indiatimes.com"
+            ]
+        },
+        {
+            "rule": "indiatimes\\.com\\.edgekey\\.net\\/us-stocks\\/us-intraday-stats",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "etusapi"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "etusapi.indiatimes.com",
+                    "resolved": "etusapi.indiatimes.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "indiatimes.com",
+                "economictimes.indiatimes.com"
+            ]
+        },
+        {
+            "rule": "indiatimes\\.com\\.edgekey\\.net\\/us-stocks\\/us-intraday-stats",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "etusapi"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "etusapi.indiatimes.com",
+                    "resolved": "etusapi.indiatimes.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "0c3c10cb2b9a4858a9638e938429fbbc6101c1cfbc20799d441f7618fc9d9f2b"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "indiatimes.com",
+                "economictimes.indiatimes.com"
+            ]
+        },
+        {
+            "rule": "indiatimes\\.com\\.edgekey\\.net\\/cms-common\\/ibeat\\.min\\.js",
+            "cookies": 0.000101,
+            "fingerprinting": 1,
+            "subdomains": [
+                "agi-static"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "agi-static.indiatimes.com",
+                    "resolved": "agi-static.indiatimes.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "3fb212185b46ba70b9b44a6e1181de0c3b325f407ec5505596d72bd611d74531"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "indiatimes.com",
+                "timesofindia.indiatimes.com"
             ]
         },
         {
@@ -88,16 +177,21 @@
     "topInitiators": [
         {
             "domain": "etimg.com",
-            "prevalence": 0.75
+            "prevalence": 0.7894736842105263
         },
         {
             "domain": "toiimg.com",
-            "prevalence": 0.25
+            "prevalence": 0.15789473684210525
+        },
+        {
+            "domain": "doubleclick.net",
+            "prevalence": 0.05263157894736842
         }
     ],
     "types": {
-        "Fetch": 2,
-        "Script": 2
+        "Fetch": 4,
+        "Preflight": 2,
+        "Script": 4
     },
     "nameservers": []
 }

@@ -1,8 +1,8 @@
 {
     "domain": "booking.com",
     "owner": {
-        "name": "Booking.com B.V.",
-        "displayName": "Booking.com"
+        "name": "Booking Holdings Inc.",
+        "displayName": "Booking Holdings"
     },
     "source": [
         "DuckDuckGo-DE"
@@ -10,11 +10,57 @@
     "prevalence": 0.000201,
     "sites": 2,
     "subdomains": [
+        "www",
         "sink.gw"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "booking\\.com\\/affiliate\\/prelanding_sdk",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {
+                "window.innerHeight": 2,
+                "window.innerWidth": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "aegeanair.com",
+                "www.fremdenverkehrsamt.com"
+            ]
+        },
+        {
+            "rule": "booking\\.com\\/prelanding_product\\.html",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "82ef444d95b4a15074ae13c42a9463d9b109bdd78d300b53a0e53c0283563001"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "aegeanair.com",
+                "www.fremdenverkehrsamt.com"
+            ]
+        },
         {
             "rule": "booking\\.com\\/v1\\/sink",
             "cookies": 0,
@@ -33,7 +79,27 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "fremdenverkehrsamt.com",
+                "aegeanair.com",
+                "www.fremdenverkehrsamt.com"
+            ]
+        },
+        {
+            "rule": "booking\\.com\\/v1\\/sink",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sink.gw"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "aegeanair.com",
                 "www.fremdenverkehrsamt.com"
             ]
         }
@@ -43,21 +109,24 @@
     "cookies": 0.000201,
     "topInitiators": [
         {
-            "domain": "bstatic.com",
-            "prevalence": 0.7142857142857143
+            "domain": "first party",
+            "prevalence": 0.5
         },
         {
-            "domain": "first party",
-            "prevalence": 0.2857142857142857
+            "domain": "bstatic.com",
+            "prevalence": 0.5
         }
     ],
     "types": {
-        "XHR": 2
+        "Script": 2,
+        "Document": 2,
+        "XHR": 2,
+        "Preflight": 2
     },
     "nameservers": [
-        "ns-1288.awsdns-33.org",
-        "ns-1959.awsdns-52.co.uk",
         "ns-508.awsdns-63.com",
-        "ns-716.awsdns-25.net"
+        "ns-1959.awsdns-52.co.uk",
+        "ns-716.awsdns-25.net",
+        "ns-1288.awsdns-33.org"
     ]
 }

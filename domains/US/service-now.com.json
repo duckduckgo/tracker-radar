@@ -4,13 +4,24 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.000048,
-    "sites": 7,
+    "prevalence": 0.0000685,
+    "sites": 10,
     "subdomains": [
+        "signon",
+        "sas",
         "pbcsd",
-        "racetrac"
+        "racetrac",
+        "inspirecustomerdev"
     ],
     "cnames": [
+        {
+            "original": "chatdev.dunkindonuts.com",
+            "resolved": "inspirecustomerdev.service-now.com"
+        },
+        {
+            "original": "service.sas.com",
+            "resolved": "sas.service-now.com"
+        },
         {
             "original": "servicenow.palmbeachschools.org",
             "resolved": "pbcsd.service-now.com"
@@ -19,10 +30,53 @@
     "fingerprinting": 2,
     "resources": [
         {
-            "rule": "service-now\\.com\\/scripts\\/sn_csm_ec\\.js",
+            "rule": "service-now\\.com\\/api\\/x_snc_sso\\/seamless\\/introspect",
             "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "signon"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "servicenow.com",
+                "support.servicenow.com"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/api\\/x_snc_sso\\/seamless\\/introspect",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "signon"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "23c88396a34e3d5b7b717b2b145a0217bb2ed0746a06cba5cd8deddc84fded87"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "servicenow.com",
+                "support.servicenow.com"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/scripts\\/sn_csm_ec\\.js",
+            "cookies": 0.0000274,
             "fingerprinting": 1,
             "subdomains": [
+                "sas",
                 "pbcsd",
                 "racetrac"
             ],
@@ -31,8 +85,70 @@
                 "window.sessionStorage": 1,
                 "Navigator.prototype.userAgent": 1
             },
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [
+                {
+                    "original": "service.sas.com",
+                    "resolved": "sas.service-now.com"
+                },
+                {
+                    "original": "servicenow.palmbeachschools.org",
+                    "resolved": "pbcsd.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "187517cfb76a442780680452dd6834205bbd190484994b8dc9505f39e2b141aa",
+                "66131f9cc48f8b6182fe2788054eebeecf0dba00f94a2069ccdca25c44565cb1"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sas.com",
+                "www.palmbeachschools.org",
+                "www.racetrac.com",
+                "www.sas.com"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/api\\/sn_csm_ec\\/engagement_center_api\\/modules\\/a87b21e99707e9508b3c11900153af19",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sas"
+            ],
+            "apis": {},
             "sites": 2,
             "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "service.sas.com",
+                    "resolved": "sas.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "8e314c87cf67694501889cc465e58ba388a142713d0538baeed574e3d6070cbb"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sas.com",
+                "www.sas.com"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/launcher-icon\\.png",
+            "cookies": 0.0000205,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sas",
+                "pbcsd"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
             "cnames": [
                 {
                     "original": "servicenow.palmbeachschools.org",
@@ -40,27 +156,56 @@
                 }
             ],
             "responseHashes": [
-                "66131f9cc48f8b6182fe2788054eebeecf0dba00f94a2069ccdca25c44565cb1"
+                "5d6066f84924d58f2e7cfb76a6fe43790027920ecc8e03851c6a56c9eb929927"
             ],
-            "type": "Script",
+            "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "palmbeachschools.org",
-                "www.racetrac.com"
+                "sas.com",
+                "www.palmbeachschools.org",
+                "www.sas.com"
             ]
         },
         {
-            "rule": "service-now\\.com\\/messnger-close-icon\\.png",
+            "rule": "service-now\\.com\\/a87b21e99707e9508b3c11900153af19",
             "cookies": 0.0000137,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
-                "pbcsd",
-                "racetrac"
+                "sas"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "service.sas.com",
+                    "resolved": "sas.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "507c438260138543169eb4d6c9a647eba83f8aa2b5e25eb02c010eff7fa5ec53"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sas.com",
+                "www.sas.com"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/messnger-close-icon\\.png",
+            "cookies": 0.0000274,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sas",
+                "pbcsd",
+                "racetrac"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
             "cnames": [
                 {
                     "original": "servicenow.palmbeachschools.org",
@@ -74,50 +219,65 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "palmbeachschools.org",
-                "www.racetrac.com"
+                "sas.com",
+                "www.palmbeachschools.org",
+                "www.racetrac.com",
+                "www.sas.com"
             ]
         },
         {
             "rule": "service-now\\.com\\/sn_va_web_client_alert\\.mp3",
-            "cookies": 0.0000137,
+            "cookies": 0.0000274,
             "fingerprinting": 0,
             "subdomains": [
+                "sas",
                 "pbcsd",
                 "racetrac"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "sites": 4,
+            "prevalence": 0.0000274,
             "cnames": [
+                {
+                    "original": "service.sas.com",
+                    "resolved": "sas.service-now.com"
+                },
                 {
                     "original": "servicenow.palmbeachschools.org",
                     "resolved": "pbcsd.service-now.com"
                 }
             ],
             "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
                 "258d9dded6649d5cbabcd561114f00991cacfadce47bd5b5308fa6349c8a16e9"
             ],
             "type": "Media",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "palmbeachschools.org",
-                "www.racetrac.com"
+                "sas.com",
+                "www.palmbeachschools.org",
+                "www.racetrac.com",
+                "www.sas.com"
             ]
         },
         {
             "rule": "service-now\\.com\\/styles\\/fonts\\/glyphicons-halflings-regular\\.woff2",
-            "cookies": 0.0000137,
+            "cookies": 0.0000274,
             "fingerprinting": 0,
             "subdomains": [
+                "sas",
                 "pbcsd",
                 "racetrac"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "sites": 4,
+            "prevalence": 0.0000274,
             "cnames": [
+                {
+                    "original": "service.sas.com",
+                    "resolved": "sas.service-now.com"
+                },
                 {
                     "original": "servicenow.palmbeachschools.org",
                     "resolved": "pbcsd.service-now.com"
@@ -130,22 +290,29 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "palmbeachschools.org",
-                "www.racetrac.com"
+                "sas.com",
+                "www.palmbeachschools.org",
+                "www.racetrac.com",
+                "www.sas.com"
             ]
         },
         {
             "rule": "service-now\\.com\\/scripts\\/icon-fonts\\/font-awesome\\/fonts\\/fontawesome-webfont\\.woff2",
-            "cookies": 0.0000137,
+            "cookies": 0.0000274,
             "fingerprinting": 0,
             "subdomains": [
+                "sas",
                 "pbcsd",
                 "racetrac"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "sites": 4,
+            "prevalence": 0.0000274,
             "cnames": [
+                {
+                    "original": "service.sas.com",
+                    "resolved": "sas.service-now.com"
+                },
                 {
                     "original": "servicenow.palmbeachschools.org",
                     "resolved": "pbcsd.service-now.com"
@@ -158,43 +325,115 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "palmbeachschools.org",
-                "www.racetrac.com"
+                "sas.com",
+                "www.palmbeachschools.org",
+                "www.racetrac.com",
+                "www.sas.com"
             ]
         },
         {
-            "rule": "service-now\\.com\\/scripts\\/thirdparty\\/dompurify\\/purify\\.min\\.js",
-            "cookies": 0.0000137,
+            "rule": "service-now\\.com\\/styles\\/scss\\/sp-bootstrap-rem\\.scss",
+            "cookies": 0.0000205,
             "fingerprinting": 0,
             "subdomains": [
-                "pbcsd",
-                "racetrac"
+                "sas",
+                "pbcsd"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "sites": 3,
+            "prevalence": 0.0000205,
             "cnames": [
+                {
+                    "original": "service.sas.com",
+                    "resolved": "sas.service-now.com"
+                },
                 {
                     "original": "servicenow.palmbeachschools.org",
                     "resolved": "pbcsd.service-now.com"
                 }
             ],
             "responseHashes": [
+                "4a486381371ff29c4acc9592222a5e5cd840ce1f4010350e7f5bf416f67be496",
+                "0c1e665aaea87f887927796a29bd2e731b422ff4bc60c5610824e0fa502925d4"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sas.com",
+                "www.palmbeachschools.org",
+                "www.sas.com"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/styles\\/sn_banner\\.cssx",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sas"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "service.sas.com",
+                    "resolved": "sas.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "231d316502501e92693ae722d05780907209831881cc95a3bd3d0d5840553888"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sas.com",
+                "www.sas.com"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/scripts\\/thirdparty\\/dompurify\\/purify\\.min\\.js",
+            "cookies": 0.0000274,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sas",
+                "pbcsd",
+                "racetrac"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [
+                {
+                    "original": "service.sas.com",
+                    "resolved": "sas.service-now.com"
+                },
+                {
+                    "original": "servicenow.palmbeachschools.org",
+                    "resolved": "pbcsd.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "407928dd9a9bf9aa9d82c6f1cf9fd058272cd60c51c38fc9210bc5b2ca2b98fc",
                 "97d4b7f2c14103cedcee22955f06204ac99f48e7a0bbd60314d3802db4096822"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "palmbeachschools.org",
-                "www.racetrac.com"
+                "sas.com",
+                "www.palmbeachschools.org",
+                "www.racetrac.com",
+                "www.sas.com"
             ]
         },
         {
             "rule": "service-now\\.com\\/scripts\\/js_includes_sp_libs_min\\.jsx",
-            "cookies": 0.0000137,
+            "cookies": 0.0000274,
             "fingerprinting": 1,
             "subdomains": [
+                "sas",
                 "pbcsd",
                 "racetrac"
             ],
@@ -203,33 +442,41 @@
                 "Date.prototype.getTime": 1,
                 "window.name": 1,
                 "Document.cookie getter": 1,
-                "window.localStorage": 1,
-                "Event.prototype.timeStamp": 1
+                "Event.prototype.timeStamp": 1,
+                "window.localStorage": 1
             },
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "sites": 4,
+            "prevalence": 0.0000274,
             "cnames": [
+                {
+                    "original": "service.sas.com",
+                    "resolved": "sas.service-now.com"
+                },
                 {
                     "original": "servicenow.palmbeachschools.org",
                     "resolved": "pbcsd.service-now.com"
                 }
             ],
             "responseHashes": [
-                "ccecb64af0a46644d7e68cee35d315eccfede18c46345379d9a31ea3ce79d392"
+                "ccecb64af0a46644d7e68cee35d315eccfede18c46345379d9a31ea3ce79d392",
+                "e558fdc7015765012118cab54fd6cb9b53201d934d4c6ece14a881cf0b54e8ff"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "palmbeachschools.org",
-                "www.racetrac.com"
+                "sas.com",
+                "www.palmbeachschools.org",
+                "www.racetrac.com",
+                "www.sas.com"
             ]
         },
         {
             "rule": "service-now\\.com\\/scripts\\/dist\\/sp_min\\.jsx",
-            "cookies": 0.0000137,
+            "cookies": 0.0000274,
             "fingerprinting": 1,
             "subdomains": [
+                "sas",
                 "pbcsd",
                 "racetrac"
             ],
@@ -237,40 +484,80 @@
                 "Navigator.prototype.userAgent": 1,
                 "Date.prototype.getTime": 1,
                 "window.localStorage": 1,
-                "window.sessionStorage": 1,
-                "URL.createObjectURL": 1
+                "URL.createObjectURL": 1,
+                "window.sessionStorage": 1
             },
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "sites": 4,
+            "prevalence": 0.0000274,
             "cnames": [
+                {
+                    "original": "service.sas.com",
+                    "resolved": "sas.service-now.com"
+                },
                 {
                     "original": "servicenow.palmbeachschools.org",
                     "resolved": "pbcsd.service-now.com"
                 }
             ],
             "responseHashes": [
-                "7569e2167c6043215583fa9fbcc2138ea3d06c1c21bbd1668326f4cc60163b88"
+                "a922fe40a09852884e75f9e92978f928b076360ebfb3f581bbdbcf3a16a1086b",
+                "288de0d35fba5a29d3c5799286d4efad4f0ea360b1a95b7aee8249e5a9b5ca1c",
+                "cf64a430fc89b623e9d2f91dbf0c03723cd8e1a4456847b9a5ca227e0f2631b0"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "palmbeachschools.org",
-                "www.racetrac.com"
+                "sas.com",
+                "www.palmbeachschools.org",
+                "www.racetrac.com",
+                "www.sas.com"
             ]
         },
         {
-            "rule": "service-now\\.com\\/app_com\\.jsdbx",
+            "rule": "service-now\\.com\\/scripts\\/bootstrap-datetimepicker\\.js",
             "cookies": 0.0000137,
             "fingerprinting": 0,
             "subdomains": [
-                "pbcsd",
-                "racetrac"
+                "sas"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [
+                {
+                    "original": "service.sas.com",
+                    "resolved": "sas.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "6cefedbabe6b7de8b5d67f07e447f597c52b717c25dd07bfc92ee6343c397178"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sas.com",
+                "www.sas.com"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/app_com\\.jsdbx",
+            "cookies": 0.0000274,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sas",
+                "pbcsd",
+                "racetrac"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [
+                {
+                    "original": "service.sas.com",
+                    "resolved": "sas.service-now.com"
+                },
                 {
                     "original": "servicenow.palmbeachschools.org",
                     "resolved": "pbcsd.service-now.com"
@@ -283,22 +570,29 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "palmbeachschools.org",
-                "www.racetrac.com"
+                "sas.com",
+                "www.palmbeachschools.org",
+                "www.racetrac.com",
+                "www.sas.com"
             ]
         },
         {
             "rule": "service-now\\.com\\/app_com\\.modelUtil\\.jsdbx",
-            "cookies": 0.0000137,
+            "cookies": 0.0000274,
             "fingerprinting": 0,
             "subdomains": [
+                "sas",
                 "pbcsd",
                 "racetrac"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "sites": 4,
+            "prevalence": 0.0000274,
             "cnames": [
+                {
+                    "original": "service.sas.com",
+                    "resolved": "sas.service-now.com"
+                },
                 {
                     "original": "servicenow.palmbeachschools.org",
                     "resolved": "pbcsd.service-now.com"
@@ -311,22 +605,29 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "palmbeachschools.org",
-                "www.racetrac.com"
+                "sas.com",
+                "www.palmbeachschools.org",
+                "www.racetrac.com",
+                "www.sas.com"
             ]
         },
         {
             "rule": "service-now\\.com\\/app_com\\.cxs\\.contextual_search\\.jsdbx",
-            "cookies": 0.0000137,
+            "cookies": 0.0000274,
             "fingerprinting": 0,
             "subdomains": [
+                "sas",
                 "pbcsd",
                 "racetrac"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "sites": 4,
+            "prevalence": 0.0000274,
             "cnames": [
+                {
+                    "original": "service.sas.com",
+                    "resolved": "sas.service-now.com"
+                },
                 {
                     "original": "servicenow.palmbeachschools.org",
                     "resolved": "pbcsd.service-now.com"
@@ -339,22 +640,29 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "palmbeachschools.org",
-                "www.racetrac.com"
+                "sas.com",
+                "www.palmbeachschools.org",
+                "www.racetrac.com",
+                "www.sas.com"
             ]
         },
         {
             "rule": "service-now\\.com\\/styles\\/retina_icons\\/retina_icons\\.css",
-            "cookies": 0.0000137,
+            "cookies": 0.0000274,
             "fingerprinting": 0,
             "subdomains": [
+                "sas",
                 "pbcsd",
                 "racetrac"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "sites": 4,
+            "prevalence": 0.0000274,
             "cnames": [
+                {
+                    "original": "service.sas.com",
+                    "resolved": "sas.service-now.com"
+                },
                 {
                     "original": "servicenow.palmbeachschools.org",
                     "resolved": "pbcsd.service-now.com"
@@ -367,22 +675,29 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "palmbeachschools.org",
-                "www.racetrac.com"
+                "sas.com",
+                "www.palmbeachschools.org",
+                "www.racetrac.com",
+                "www.sas.com"
             ]
         },
         {
             "rule": "service-now\\.com\\/styles\\/fonts\\/source-sans-pro\\/source-sans-pro-latin\\.css",
-            "cookies": 0.0000137,
+            "cookies": 0.0000274,
             "fingerprinting": 0,
             "subdomains": [
+                "sas",
                 "pbcsd",
                 "racetrac"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "sites": 4,
+            "prevalence": 0.0000274,
             "cnames": [
+                {
+                    "original": "service.sas.com",
+                    "resolved": "sas.service-now.com"
+                },
                 {
                     "original": "servicenow.palmbeachschools.org",
                     "resolved": "pbcsd.service-now.com"
@@ -395,50 +710,65 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "palmbeachschools.org",
-                "www.racetrac.com"
+                "sas.com",
+                "www.palmbeachschools.org",
+                "www.racetrac.com",
+                "www.sas.com"
             ]
         },
         {
             "rule": "service-now\\.com\\/styles\\/css_includes_$sp\\.css",
-            "cookies": 0.0000137,
+            "cookies": 0.0000274,
             "fingerprinting": 0,
             "subdomains": [
+                "sas",
                 "pbcsd",
                 "racetrac"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "sites": 4,
+            "prevalence": 0.0000274,
             "cnames": [
+                {
+                    "original": "service.sas.com",
+                    "resolved": "sas.service-now.com"
+                },
                 {
                     "original": "servicenow.palmbeachschools.org",
                     "resolved": "pbcsd.service-now.com"
                 }
             ],
             "responseHashes": [
+                "d1b650423c73a42022dfd24890d31a6fac52b99f6791d94b729ddc8674b746d3",
                 "527aa3f5ef3fc728549620e15f4d3ce82383b480b276125d1f70dfe6aa3e81fc"
             ],
             "type": "Stylesheet",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "palmbeachschools.org",
-                "www.racetrac.com"
+                "sas.com",
+                "www.palmbeachschools.org",
+                "www.racetrac.com",
+                "www.sas.com"
             ]
         },
         {
             "rule": "service-now\\.com\\/styles\\/css_includes_$sp_later\\.css",
-            "cookies": 0.0000137,
+            "cookies": 0.0000274,
             "fingerprinting": 0,
             "subdomains": [
+                "sas",
                 "pbcsd",
                 "racetrac"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "sites": 4,
+            "prevalence": 0.0000274,
             "cnames": [
+                {
+                    "original": "service.sas.com",
+                    "resolved": "sas.service-now.com"
+                },
                 {
                     "original": "servicenow.palmbeachschools.org",
                     "resolved": "pbcsd.service-now.com"
@@ -451,15 +781,52 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "palmbeachschools.org",
-                "www.racetrac.com"
+                "sas.com",
+                "www.palmbeachschools.org",
+                "www.racetrac.com",
+                "www.sas.com"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/scripts\\/js_includes_now_canvas\\.jsx",
+            "cookies": 0.0000205,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sas",
+                "pbcsd"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [
+                {
+                    "original": "service.sas.com",
+                    "resolved": "sas.service-now.com"
+                },
+                {
+                    "original": "servicenow.palmbeachschools.org",
+                    "resolved": "pbcsd.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "a09f7c8e910f3e03701d43449776a545813eda3a0d9dab346e1a6b9c5dea9835",
+                "17f2d28bc5de50e91389218d3626379f0bfa12f58032238f1421bddf4f721efd"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sas.com",
+                "www.palmbeachschools.org",
+                "www.sas.com"
             ]
         },
         {
             "rule": "service-now\\.com\\/uxasset\\/externals\\/@servicenow\\/ui-mega\\/index\\.jsdbx",
-            "cookies": 0.0000137,
+            "cookies": 0.0000274,
             "fingerprinting": 1,
             "subdomains": [
+                "sas",
                 "pbcsd",
                 "racetrac"
             ],
@@ -467,86 +834,112 @@
                 "NavigatorUAData.prototype.brands": 1,
                 "Navigator.prototype.userAgent": 1
             },
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "sites": 4,
+            "prevalence": 0.0000274,
             "cnames": [
+                {
+                    "original": "service.sas.com",
+                    "resolved": "sas.service-now.com"
+                },
                 {
                     "original": "servicenow.palmbeachschools.org",
                     "resolved": "pbcsd.service-now.com"
                 }
             ],
             "responseHashes": [
-                "6f527bfe4778f45ee5ebc077f933e979190611a221943661b9a66d77d07578d4"
+                "341d3d558b750cff1e4d2118b54a8eba97ecf71c643bbdb7ded3cfe817b296c8",
+                "55eab0ff2d2eb32b9d5c718536910353c668e97d154db166a5a99d466911ad16",
+                "e4a8339a11ae0aca5deba027c9c33ee8b0f2daa7b8cf4fdb4b85f20b4d2e00ee"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "palmbeachschools.org",
-                "www.racetrac.com"
+                "sas.com",
+                "www.palmbeachschools.org",
+                "www.racetrac.com",
+                "www.sas.com"
             ]
         },
         {
             "rule": "service-now\\.com\\/uxasset\\/externals\\/amb-client-js\\/index\\.jsdbx",
-            "cookies": 0.0000137,
+            "cookies": 0.0000274,
             "fingerprinting": 0,
             "subdomains": [
+                "sas",
                 "pbcsd",
                 "racetrac"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "sites": 4,
+            "prevalence": 0.0000274,
             "cnames": [
+                {
+                    "original": "service.sas.com",
+                    "resolved": "sas.service-now.com"
+                },
                 {
                     "original": "servicenow.palmbeachschools.org",
                     "resolved": "pbcsd.service-now.com"
                 }
             ],
             "responseHashes": [
-                "878ef64acebc0823da12152fd5c4514c290473d33451d379d354bc49c6866f08"
+                "bf6ee601e2b2809b30107ea9616b9629170727b043b85c3390d3ece3f9bd0979",
+                "86a223479bc446192050e494042d9e4fa92e34fbf5824c1d3314768202fe8904"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "palmbeachschools.org",
-                "www.racetrac.com"
+                "sas.com",
+                "www.palmbeachschools.org",
+                "www.racetrac.com",
+                "www.sas.com"
             ]
         },
         {
             "rule": "service-now\\.com\\/uxasset\\/externals\\/@servicenow\\/now-icon\\/icons\\/magnifyingGlass\\.jsdbx",
-            "cookies": 0.0000137,
+            "cookies": 0.0000274,
             "fingerprinting": 0,
             "subdomains": [
+                "sas",
                 "pbcsd",
                 "racetrac"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "sites": 4,
+            "prevalence": 0.0000274,
             "cnames": [
+                {
+                    "original": "service.sas.com",
+                    "resolved": "sas.service-now.com"
+                },
                 {
                     "original": "servicenow.palmbeachschools.org",
                     "resolved": "pbcsd.service-now.com"
                 }
             ],
             "responseHashes": [
-                "53dd5328d9b0e6462761ce0a8e3c654c1360c12e11295a6ccd0abc89b7a18cff"
+                "09af0af72a7ec87a988ea79730b209e6fc5d2cfdc7353a0fa55424bd31c7f13c",
+                "6515f52a322b031896c95c806577bff495415d7507cc3f5aeb053319f2a42c41",
+                "fc38544699355a57aa87d43fe263e12271b1f48c296f2484fbfaf07082dd185e"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "palmbeachschools.org",
-                "www.racetrac.com"
+                "sas.com",
+                "www.palmbeachschools.org",
+                "www.racetrac.com",
+                "www.sas.com"
             ]
         },
         {
             "rule": "service-now\\.com\\/uxasset\\/externals\\/ais-ux-bundle\\/index\\.jsdbx",
-            "cookies": 0.0000137,
+            "cookies": 0.0000274,
             "fingerprinting": 2,
             "subdomains": [
+                "sas",
                 "pbcsd",
                 "racetrac"
             ],
@@ -560,58 +953,76 @@
                 "window.sessionStorage": 1,
                 "window.indexedDB": 1
             },
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "sites": 4,
+            "prevalence": 0.0000274,
             "cnames": [
+                {
+                    "original": "service.sas.com",
+                    "resolved": "sas.service-now.com"
+                },
                 {
                     "original": "servicenow.palmbeachschools.org",
                     "resolved": "pbcsd.service-now.com"
                 }
             ],
             "responseHashes": [
-                "50430e3fbf07040ea8bf679d6924595cc2a90a7ba642f8c4003504c6b9bcb143"
+                "ddf2d1eb0023fb5ac8feaaa981519e8b81e7f598690ee6746890e121c5203d7f",
+                "1afaf523a67696536f7b1818e5739c8997ff5f048c7e7db17c26384e2385dd12",
+                "7564574187c0059437a1ae8e4a87e3b118d77b3bf7109808d0e33eb1ef5e55d6"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "palmbeachschools.org",
-                "www.racetrac.com"
+                "sas.com",
+                "www.palmbeachschools.org",
+                "www.racetrac.com",
+                "www.sas.com"
             ]
         },
         {
             "rule": "service-now\\.com\\/api\\/now\\/sp\\/page",
-            "cookies": 0.0000137,
+            "cookies": 0.0000274,
             "fingerprinting": 0,
             "subdomains": [
+                "sas",
                 "pbcsd",
                 "racetrac"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "sites": 4,
+            "prevalence": 0.0000274,
             "cnames": [
+                {
+                    "original": "service.sas.com",
+                    "resolved": "sas.service-now.com"
+                },
                 {
                     "original": "servicenow.palmbeachschools.org",
                     "resolved": "pbcsd.service-now.com"
                 }
             ],
             "responseHashes": [
-                "60b7a29d3435ff4dbe9b193ccacf66eec18635e97576199806d073767100e674"
+                "66317ed63c2c23eb409fd411f9f24694cfd609d2f650ed3144710520a5cd9917",
+                "aaaccb7ab5062bf5a3319073daf007be9ed8f1c190a74abfb6d036c3473d254c",
+                "42d0ac412b38de979868571dd8f5814d06f3fbf3c8016b0d14df1fe1f6fda7b2"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "palmbeachschools.org",
-                "www.racetrac.com"
+                "sas.com",
+                "www.palmbeachschools.org",
+                "www.racetrac.com",
+                "www.sas.com"
             ]
         },
         {
             "rule": "service-now\\.com\\/uxasset\\/externals\\/@servicenow\\/ui-analytics-bundle\\/bundled-assets\\.jsdbx",
-            "cookies": 0.0000137,
+            "cookies": 0.0000274,
             "fingerprinting": 1,
             "subdomains": [
+                "sas",
                 "pbcsd",
                 "racetrac"
             ],
@@ -621,86 +1032,76 @@
                 "window.localStorage": 1,
                 "window.sessionStorage": 1
             },
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "sites": 4,
+            "prevalence": 0.0000274,
             "cnames": [
+                {
+                    "original": "service.sas.com",
+                    "resolved": "sas.service-now.com"
+                },
                 {
                     "original": "servicenow.palmbeachschools.org",
                     "resolved": "pbcsd.service-now.com"
                 }
             ],
             "responseHashes": [
-                "42ad7a7df171d4254631c847b1e4688e3d21ec64e9478093080223f49915eec6"
+                "89e5197c79668995bcd3175b1ebe67fd753f646dabb1105a88255417a512305e",
+                "9a413896ab0c30fa840cb5d00e03d95e6d6d5d70a80775e88d969fb25896c4d2",
+                "18f8c3e72b5ed6eaae641a8a53daa79a697a1cf0a041663e1566f02d3959d770"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "palmbeachschools.org",
-                "www.racetrac.com"
+                "sas.com",
+                "www.palmbeachschools.org",
+                "www.racetrac.com",
+                "www.sas.com"
             ]
         },
         {
             "rule": "service-now\\.com\\/uxasset\\/externals\\/@devsnc\\/sn-ui-logger\\/index\\.jsdbx",
-            "cookies": 0.0000137,
+            "cookies": 0.0000274,
             "fingerprinting": 0,
             "subdomains": [
+                "sas",
                 "pbcsd",
                 "racetrac"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "sites": 4,
+            "prevalence": 0.0000274,
             "cnames": [
+                {
+                    "original": "service.sas.com",
+                    "resolved": "sas.service-now.com"
+                },
                 {
                     "original": "servicenow.palmbeachschools.org",
                     "resolved": "pbcsd.service-now.com"
                 }
             ],
             "responseHashes": [
-                "fdf60da3edc6ea3d1b2639da07843bab147f5d4a9c4a8d4208848b4ddad0ac40"
+                "1db5c954a2820a70a54421e13493b4b7afeb1d2f229522d793add3004767c361",
+                "663071462b099ad6ea623925d474a5a2336b12536d08ccc51a3ea77b05c73681",
+                "b0557477ea595dd7c651a20e5fd4843377a6377b5619a813412835ac368fc1de"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "palmbeachschools.org",
-                "www.racetrac.com"
-            ]
-        },
-        {
-            "rule": "service-now\\.com\\/uxasset\\/externals\\/@devsnc\\/library-intent-channel\\/index\\.jsdbx",
-            "cookies": 0.0000137,
-            "fingerprinting": 0,
-            "subdomains": [
-                "pbcsd",
-                "racetrac"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [
-                {
-                    "original": "servicenow.palmbeachschools.org",
-                    "resolved": "pbcsd.service-now.com"
-                }
-            ],
-            "responseHashes": [
-                "a097e1311dd215ed2cdc46204ae7a7609d3650b01c0906282a5cf465eb14fe3d"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "palmbeachschools.org",
-                "www.racetrac.com"
+                "sas.com",
+                "www.palmbeachschools.org",
+                "www.racetrac.com",
+                "www.sas.com"
             ]
         },
         {
             "rule": "service-now\\.com\\/uxasset\\/externals\\/@devsnc\\/library-uxf\\/index\\.jsdbx",
-            "cookies": 0.0000137,
+            "cookies": 0.0000274,
             "fingerprinting": 1,
             "subdomains": [
+                "sas",
                 "pbcsd",
                 "racetrac"
             ],
@@ -709,116 +1110,189 @@
                 "window.sessionStorage": 1,
                 "window.indexedDB": 1
             },
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "sites": 4,
+            "prevalence": 0.0000274,
             "cnames": [
+                {
+                    "original": "service.sas.com",
+                    "resolved": "sas.service-now.com"
+                },
                 {
                     "original": "servicenow.palmbeachschools.org",
                     "resolved": "pbcsd.service-now.com"
                 }
             ],
             "responseHashes": [
-                "c3e38df7066e19501247e0acbf8ad01ff04928900a801fa9782c3a900d94dbfa"
+                "177638214db4e517e4d85047de1c737abf480d0e8079e52e045bebc0f3463ebf",
+                "25cc9d08d619e740d36c9fe911af4bfb96ba94cc56d53b04d19c9e089200213e",
+                "ca411a44ca70cd325b26086849d7951ae6c34214b15354216e8379ddbd7925e2"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "palmbeachschools.org",
-                "www.racetrac.com"
+                "sas.com",
+                "www.palmbeachschools.org",
+                "www.racetrac.com",
+                "www.sas.com"
             ]
         },
         {
             "rule": "service-now\\.com\\/uxasset\\/externals\\/@servicenow\\/ui-renderer-react\\/index\\.jsdbx",
-            "cookies": 0.0000137,
+            "cookies": 0.0000274,
             "fingerprinting": 0,
             "subdomains": [
+                "sas",
                 "pbcsd",
                 "racetrac"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "sites": 4,
+            "prevalence": 0.0000274,
             "cnames": [
+                {
+                    "original": "service.sas.com",
+                    "resolved": "sas.service-now.com"
+                },
                 {
                     "original": "servicenow.palmbeachschools.org",
                     "resolved": "pbcsd.service-now.com"
                 }
             ],
             "responseHashes": [
-                "5ccf943a8550e906c66f7ff2a399ea6f8e03134f435728e0cf3bd1d71377d2a3"
+                "6373f7fc94e5051937ea9cc52b445c0806bdb580693c7dcf8dd7c88384122c80",
+                "f71c5ff3cc2e2ba52ed22cbc1376e599c73a284771de8e31426551f6f2e443c2",
+                "990b9276d8ba06d9e82769eab85e863754771f0bf4298133878e71034c92fdb2"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "palmbeachschools.org",
-                "www.racetrac.com"
+                "sas.com",
+                "www.palmbeachschools.org",
+                "www.racetrac.com",
+                "www.sas.com"
             ]
         },
         {
             "rule": "service-now\\.com\\/uxasset\\/externals\\/@servicenow\\/now-trigger-library\\/index\\.jsdbx",
-            "cookies": 0.0000137,
+            "cookies": 0.0000274,
             "fingerprinting": 1,
             "subdomains": [
+                "sas",
                 "pbcsd",
                 "racetrac"
             ],
             "apis": {
                 "Navigator.prototype.userAgent": 1
             },
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "sites": 4,
+            "prevalence": 0.0000274,
             "cnames": [
+                {
+                    "original": "service.sas.com",
+                    "resolved": "sas.service-now.com"
+                },
                 {
                     "original": "servicenow.palmbeachschools.org",
                     "resolved": "pbcsd.service-now.com"
                 }
             ],
             "responseHashes": [
-                "599bbb20c327ba6505f7c5f14bab6bd886bfc0d127eb409c72f2961422d609fa"
+                "4cb0e048fd6b1a9180200d92039f217ca7b6a1f2c217d4a500549e578f39500a",
+                "58b31a23925dd0bb8f101408b74836d9905fe768a3960c02561417eb4715851f",
+                "8b41b0d73035abe8997e53af14ee4eb9140e7e36803042ef2ec9cffe7241e7b5"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "palmbeachschools.org",
-                "www.racetrac.com"
+                "sas.com",
+                "www.palmbeachschools.org",
+                "www.racetrac.com",
+                "www.sas.com"
             ]
         },
         {
-            "rule": "service-now\\.com\\/uxasset\\/externals\\/@devsnc\\/snowdash\\/latest\\/index\\.jsdbx",
-            "cookies": 0.0000137,
-            "fingerprinting": 0,
+            "rule": "service-now\\.com\\/uxasset\\/externals\\/@devsnc\\/library-intent-channel\\/index\\.jsdbx",
+            "cookies": 0.0000274,
+            "fingerprinting": 1,
             "subdomains": [
+                "sas",
                 "pbcsd",
                 "racetrac"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "sites": 4,
+            "prevalence": 0.0000274,
             "cnames": [
+                {
+                    "original": "service.sas.com",
+                    "resolved": "sas.service-now.com"
+                },
                 {
                     "original": "servicenow.palmbeachschools.org",
                     "resolved": "pbcsd.service-now.com"
                 }
             ],
             "responseHashes": [
-                "2c1d1688290c3ad7b76f287c704e40a540fa60b34a6dcf5637c22e4de9c80fba"
+                "54fff68e527dc56c0edd3bc0186d52d995b07cd69935ac5182d7a1f337637a79",
+                "2d824b9cc752f91756bef0c9d28b5040343f5497b9dd6d093b458d19e822ff5e",
+                "f7bab4f9eef5c88dfc7544b230e287f8e4318ca784c87a312f7c228b7bb3923b"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "palmbeachschools.org",
-                "www.racetrac.com"
+                "sas.com",
+                "www.palmbeachschools.org",
+                "www.racetrac.com",
+                "www.sas.com"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/uxasset\\/externals\\/@devsnc\\/snowdash\\/latest\\/index\\.jsdbx",
+            "cookies": 0.0000274,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sas",
+                "pbcsd",
+                "racetrac"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [
+                {
+                    "original": "service.sas.com",
+                    "resolved": "sas.service-now.com"
+                },
+                {
+                    "original": "servicenow.palmbeachschools.org",
+                    "resolved": "pbcsd.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "ae74592b45e42e77702639bb0c67939b2b18ee946dcbf0e50d0d5ed958b4463e",
+                "77de8d7f36b175f302aa334b5b59ca45c6bbe5ff52f11e1aca68e2e3c7ca81e6",
+                "d8f5c53ac82afd5057384f592ca39f6f88b60927c35a7aae3a22c3189118cdd3"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sas.com",
+                "www.palmbeachschools.org",
+                "www.racetrac.com",
+                "www.sas.com"
             ]
         },
         {
             "rule": "service-now\\.com\\/uxasset\\/externals\\/@devsnc\\/library-unified-cache\\/latest\\/index\\.jsdbx",
-            "cookies": 0.0000137,
+            "cookies": 0.0000274,
             "fingerprinting": 1,
             "subdomains": [
+                "sas",
                 "pbcsd",
                 "racetrac"
             ],
@@ -827,37 +1301,50 @@
                 "window.sessionStorage": 1,
                 "window.indexedDB": 1
             },
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "sites": 4,
+            "prevalence": 0.0000274,
             "cnames": [
+                {
+                    "original": "service.sas.com",
+                    "resolved": "sas.service-now.com"
+                },
                 {
                     "original": "servicenow.palmbeachschools.org",
                     "resolved": "pbcsd.service-now.com"
                 }
             ],
             "responseHashes": [
-                "eb0e58273bb7eafec8648f02360aeaece91ba216eb8543488c027c5258d9e9f2"
+                "6c329334c8f387af641d94d4ae2d5041cfdc32c24df1ae9a6a4cc881a60c5916",
+                "54943aa3c36d63abb053a927f2a89e367ac448ef43659147b7a644c04fc7422f",
+                "226e060c9308a9450a0c678eea739cddadb98cbdb577383df0a66a5fa0e947e4"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "palmbeachschools.org",
-                "www.racetrac.com"
+                "sas.com",
+                "www.palmbeachschools.org",
+                "www.racetrac.com",
+                "www.sas.com"
             ]
         },
         {
             "rule": "service-now\\.com\\/angular\\.do",
-            "cookies": 0.0000206,
+            "cookies": 0.0000274,
             "fingerprinting": 0,
             "subdomains": [
+                "sas",
                 "pbcsd",
                 "racetrac"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000206,
+            "sites": 4,
+            "prevalence": 0.0000274,
             "cnames": [
+                {
+                    "original": "service.sas.com",
+                    "resolved": "sas.service-now.com"
+                },
                 {
                     "original": "servicenow.palmbeachschools.org",
                     "resolved": "pbcsd.service-now.com"
@@ -870,23 +1357,56 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "palmbeachschools.org",
+                "sas.com",
                 "www.palmbeachschools.org",
-                "www.racetrac.com"
+                "www.racetrac.com",
+                "www.sas.com"
             ]
         },
         {
-            "rule": "service-now\\.com\\/em-expand-icon\\.svg",
+            "rule": "service-now\\.com\\/sas-logo-white-chat\\.png",
             "cookies": 0.0000137,
             "fingerprinting": 0,
             "subdomains": [
-                "pbcsd",
-                "racetrac"
+                "sas"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [
+                {
+                    "original": "service.sas.com",
+                    "resolved": "sas.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "04f6104117d3aaf6676986eb7c217126155578412e6c4bb47d3b302348d3c0ed"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sas.com",
+                "www.sas.com"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/em-expand-icon\\.svg",
+            "cookies": 0.0000274,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sas",
+                "pbcsd",
+                "racetrac"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [
+                {
+                    "original": "service.sas.com",
+                    "resolved": "sas.service-now.com"
+                },
                 {
                     "original": "servicenow.palmbeachschools.org",
                     "resolved": "pbcsd.service-now.com"
@@ -899,8 +1419,10 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "palmbeachschools.org",
-                "www.racetrac.com"
+                "sas.com",
+                "www.palmbeachschools.org",
+                "www.racetrac.com",
+                "www.sas.com"
             ]
         },
         {
@@ -908,13 +1430,18 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
+                "sas",
                 "pbcsd",
                 "racetrac"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "sites": 4,
+            "prevalence": 0.0000274,
             "cnames": [
+                {
+                    "original": "service.sas.com",
+                    "resolved": "sas.service-now.com"
+                },
                 {
                     "original": "servicenow.palmbeachschools.org",
                     "resolved": "pbcsd.service-now.com"
@@ -925,22 +1452,29 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "palmbeachschools.org",
-                "www.racetrac.com"
+                "sas.com",
+                "www.palmbeachschools.org",
+                "www.racetrac.com",
+                "www.sas.com"
             ]
         },
         {
             "rule": "service-now\\.com\\/api\\/sn_csm_ec\\/conversation_active_user_em",
-            "cookies": 0.0000137,
+            "cookies": 0.0000274,
             "fingerprinting": 0,
             "subdomains": [
+                "sas",
                 "pbcsd",
                 "racetrac"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "sites": 4,
+            "prevalence": 0.0000274,
             "cnames": [
+                {
+                    "original": "service.sas.com",
+                    "resolved": "sas.service-now.com"
+                },
                 {
                     "original": "servicenow.palmbeachschools.org",
                     "resolved": "pbcsd.service-now.com"
@@ -953,8 +1487,1792 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
+                "sas.com",
+                "www.palmbeachschools.org",
+                "www.racetrac.com",
+                "www.sas.com"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/uxasset\\/externals\\/now-requestor-chat-popover-app\\/index\\.jsdbx",
+            "cookies": 0.0000137,
+            "fingerprinting": 1,
+            "subdomains": [
+                "inspirecustomerdev"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "chatdev.dunkindonuts.com",
+                    "resolved": "inspirecustomerdev.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "bdfa303c76a01724e8030d0c0b950b90562c01d2be7326318a068c091e2484e1"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dunkindonuts.com",
+                "www.dunkindonuts.com"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/api\\/sn_csm_ec\\/engagement_center_api\\/modules\\/8435b6a62f60761099cb004fafa4e3c1",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pbcsd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "servicenow.palmbeachschools.org",
+                    "resolved": "pbcsd.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "4f6b82e3f34bae6a9693a7a0d4a1e6050ed6c2b55b1a3e27830996ab32379d98"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
                 "palmbeachschools.org",
-                "www.racetrac.com"
+                "www.palmbeachschools.org"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/8435b6a62f60761099cb004fafa4e3c1",
+            "cookies": 0.0000137,
+            "fingerprinting": 1,
+            "subdomains": [
+                "pbcsd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "servicenow.palmbeachschools.org",
+                    "resolved": "pbcsd.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "cd6696998d2cfe676ad267f8dc9cd1d34f8ad267ae6889aae4cfbe1669337519"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "palmbeachschools.org",
+                "www.palmbeachschools.org"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/scripts\\/GlideFlow\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 1,
+            "subdomains": [
+                "pbcsd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "servicenow.palmbeachschools.org",
+                    "resolved": "pbcsd.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "7b78b7bd58f83012400360e4364987046fb498ee7cd171e278f0f3ca38c6d8db"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "palmbeachschools.org",
+                "www.palmbeachschools.org"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/aae4f7dc23330300c6bf121727bf6584\\.spcssdbx",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pbcsd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "servicenow.palmbeachschools.org",
+                    "resolved": "pbcsd.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "0f532ff78c454e1ce1550f7046c181c67f693e58a3b9fdbe06e8165dee39f9df"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "palmbeachschools.org",
+                "www.palmbeachschools.org"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/uxasset\\/externals\\/now-assist-full-page-wrapper-app\\/index\\.jsdbx",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pbcsd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "servicenow.palmbeachschools.org",
+                    "resolved": "pbcsd.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "c0ccba2bf69288441f8f080791614a8aefc336d354d738a5d6afe2b092a01d53"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "palmbeachschools.org",
+                "www.palmbeachschools.org"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/uxasset\\/externals\\/@servicenow\\/ai-engagement-library\\/latest\\/index\\.jsdbx",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pbcsd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "servicenow.palmbeachschools.org",
+                    "resolved": "pbcsd.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "b7eaa9fcea1ef0b23fa75929de01a88c0724b008bb5343fd68a0203436e0f20e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "palmbeachschools.org",
+                "www.palmbeachschools.org"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/uxasset\\/externals\\/@servicenow\\/sn-ai-engagement-experience\\/index\\.jsdbx",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pbcsd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "servicenow.palmbeachschools.org",
+                    "resolved": "pbcsd.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "115835c7a19721f7b94991b8ec22992c3dc2be87c24098ae3b3d672818cf7e69"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "palmbeachschools.org",
+                "www.palmbeachschools.org"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/uxasset\\/externals\\/@servicenow\\/sn-window-manager\\/index\\.jsdbx",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pbcsd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "servicenow.palmbeachschools.org",
+                    "resolved": "pbcsd.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "2859840c3b8e5d9898a1ad2660ec67bad853d1211cfd17052ae6c359eb7f5840"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "palmbeachschools.org",
+                "www.palmbeachschools.org"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/uxasset\\/externals\\/sn-http-request\\/latest\\/index\\.jsdbx",
+            "cookies": 0.0000137,
+            "fingerprinting": 1,
+            "subdomains": [
+                "pbcsd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "servicenow.palmbeachschools.org",
+                    "resolved": "pbcsd.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "9cecb954cf46eba201d22fb0e5faf6e87eedff9e68e18b3ed75bcdac288c960e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "palmbeachschools.org",
+                "www.palmbeachschools.org"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/uxasset\\/externals\\/js-common-mega\\/bundled-assets\\.jsdbx",
+            "cookies": 0.0000137,
+            "fingerprinting": 1,
+            "subdomains": [
+                "pbcsd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "servicenow.palmbeachschools.org",
+                    "resolved": "pbcsd.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "b4b5cbc70504d58c09f7cd9b2f4b490fca081bddab8e071b0f41a4327eeb9571"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "palmbeachschools.org",
+                "www.palmbeachschools.org"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/uxasset\\/externals\\/@devsnc\\/uxf-effect-component-loader\\/latest\\/index\\.jsdbx",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pbcsd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "servicenow.palmbeachschools.org",
+                    "resolved": "pbcsd.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "a29dcc85848cd263442388d04e9306cb2d59fcc6cf123656da65b236a0bb018c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "palmbeachschools.org",
+                "www.palmbeachschools.org"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/uxasset\\/externals\\/@devsnc\\/uxf-effect-macroponent-loader\\/latest\\/index\\.jsdbx",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pbcsd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "servicenow.palmbeachschools.org",
+                    "resolved": "pbcsd.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "8eb80e5772c1bb6cdf7baa19ad79daab3e7c13803d4abdf6c63a8680a14e1109"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "palmbeachschools.org",
+                "www.palmbeachschools.org"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/uxasset\\/externals\\/nds-megabundle\\/bundled-assets\\.jsdbx",
+            "cookies": 0.0000137,
+            "fingerprinting": 1,
+            "subdomains": [
+                "pbcsd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "servicenow.palmbeachschools.org",
+                    "resolved": "pbcsd.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "8a8a8b7913c230bd83a5a7925e9b69b200dff42b4cca56e5ac79d4b7f062043b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "palmbeachschools.org",
+                "www.palmbeachschools.org"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/uxasset\\/externals\\/dompurify\\/latest\\/index\\.jsdbx",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pbcsd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "servicenow.palmbeachschools.org",
+                    "resolved": "pbcsd.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "9fe265525219a7da7d0eae7970fb9f54919192afa11052434dd4a60c90f8d6f1"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "palmbeachschools.org",
+                "www.palmbeachschools.org"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/uxasset\\/externals\\/marked\\/latest\\/index\\.jsdbx",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pbcsd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "servicenow.palmbeachschools.org",
+                    "resolved": "pbcsd.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "f9b1552aa67f3b747832247f36c801b7840cc5a9901885aa499e9e1a0fe34b89"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "palmbeachschools.org",
+                "www.palmbeachschools.org"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/uxasset\\/externals\\/@devsnc\\/sn-feedback\\/index\\.jsdbx",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pbcsd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "servicenow.palmbeachschools.org",
+                    "resolved": "pbcsd.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "5420d3d4c157fda92462dd158621dbb7adae5cb636bd1fb430f057725b7a5946"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "palmbeachschools.org",
+                "www.palmbeachschools.org"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/uxasset\\/externals\\/lodash\\/latest\\/index\\.jsdbx",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pbcsd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "servicenow.palmbeachschools.org",
+                    "resolved": "pbcsd.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "50012dd18ec87ead5a9a49429a4f871b5c9586cec01deffd934bbd96c538b3d3"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "palmbeachschools.org",
+                "www.palmbeachschools.org"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/uxasset\\/externals\\/sn-ux-core\\/latest\\/index\\.jsdbx",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pbcsd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "servicenow.palmbeachschools.org",
+                    "resolved": "pbcsd.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "1965a51f2594813b415467666730ea68ba017074e2e987fe38d7797f78f2e88a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "palmbeachschools.org",
+                "www.palmbeachschools.org"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/uxasset\\/externals\\/@devsnc\\/ux-metrics\\/index\\.jsdbx",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pbcsd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "servicenow.palmbeachschools.org",
+                    "resolved": "pbcsd.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "0353f8935f1b6ae8a72bc9483daebabb0e064666a136968069ca44b507fc4467"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "palmbeachschools.org",
+                "www.palmbeachschools.org"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/uxasset\\/externals\\/@devsnc\\/unav-utils\\/latest\\/index\\.jsdbx",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pbcsd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "servicenow.palmbeachschools.org",
+                    "resolved": "pbcsd.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "c68d20b54d6d73d20cde4bd8269f427fc938bfe6a819963ddd67be2059d88d76"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "palmbeachschools.org",
+                "www.palmbeachschools.org"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/uxasset\\/externals\\/@devsnc\\/behavior-ui-interaction\\/index\\.jsdbx",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pbcsd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "servicenow.palmbeachschools.org",
+                    "resolved": "pbcsd.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "7f4b216a589c7dccb90f509f14a7b9d93a62fbf350789f89d1b051cd76df1183"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "palmbeachschools.org",
+                "www.palmbeachschools.org"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/uxasset\\/externals\\/@devsnc\\/behavior-form-intent-translator\\/index\\.jsdbx",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pbcsd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "servicenow.palmbeachschools.org",
+                    "resolved": "pbcsd.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "c23414809b2461e94700b8496f1dffe06d7e44e56703b406066a57648b6f859b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "palmbeachschools.org",
+                "www.palmbeachschools.org"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/uxasset\\/externals\\/@devsnc\\/behavior-list-intent-translator\\/index\\.jsdbx",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pbcsd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "servicenow.palmbeachschools.org",
+                    "resolved": "pbcsd.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "f67023c2fb18ba27ff233c047b1ec5db7c09bc8f2d75f76588cf241c62d79865"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "palmbeachschools.org",
+                "www.palmbeachschools.org"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/uxasset\\/externals\\/side-channel\\/latest\\/index\\.jsdbx",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pbcsd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "servicenow.palmbeachschools.org",
+                    "resolved": "pbcsd.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "dcc51a71d574b052b6fd4b5f155ac2b7855ec81520e09c6d8930cd4fc66312a3"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "palmbeachschools.org",
+                "www.palmbeachschools.org"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/uxasset\\/externals\\/@servicenow\\/now-checklist\\/index\\.jsdbx",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pbcsd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "servicenow.palmbeachschools.org",
+                    "resolved": "pbcsd.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "4cc728f9ef8b21267fe25becc6b9cde8db50936924a072c87c661df337ed480d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "palmbeachschools.org",
+                "www.palmbeachschools.org"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/uxasset\\/externals\\/@servicenow\\/now-uxf-page\\/index\\.jsdbx",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pbcsd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "servicenow.palmbeachschools.org",
+                    "resolved": "pbcsd.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "a1dd5d2f7e0bf7a284ffc8cdabc86ed17f9ab73a91d662caa36a907247430611"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "palmbeachschools.org",
+                "www.palmbeachschools.org"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/uxasset\\/externals\\/sn-canvas-common\\/latest\\/index\\.jsdbx",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pbcsd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "servicenow.palmbeachschools.org",
+                    "resolved": "pbcsd.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "7d0eef286f282362c16b82c2da2c24acd694dfba163776e417cfd047ac74397d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "palmbeachschools.org",
+                "www.palmbeachschools.org"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/uxasset\\/externals\\/@devsnc\\/fuzzy-search\\/latest\\/index\\.jsdbx",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pbcsd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "servicenow.palmbeachschools.org",
+                    "resolved": "pbcsd.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "77ca3f0463c21e293a724430e705d40a28fe181f6975544d5d6e6dbf34bd60b3"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "palmbeachschools.org",
+                "www.palmbeachschools.org"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/uxasset\\/externals\\/@devsnc\\/uxf-runtime-utils\\/latest\\/index\\.jsdbx",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pbcsd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "servicenow.palmbeachschools.org",
+                    "resolved": "pbcsd.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "4f2fde8778c4b4a6556c15846fd0d7ee11bc4eaf8d49da4ec3d00cba29daa0d0"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "palmbeachschools.org",
+                "www.palmbeachschools.org"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/uxasset\\/externals\\/klona\\/latest\\/index\\.jsdbx",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pbcsd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "servicenow.palmbeachschools.org",
+                    "resolved": "pbcsd.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "1efa143abeb9324d9f19a160389b37891fcc617c7746e5af3a3c35ddf62d8f8c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "palmbeachschools.org",
+                "www.palmbeachschools.org"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/uxasset\\/externals\\/es-errors\\/latest\\/type\\.jsdbx",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pbcsd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "servicenow.palmbeachschools.org",
+                    "resolved": "pbcsd.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "eec4d4221152a3094f3ffb61354b058c9e0709a3d30de660557c9aa673bf9464"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "palmbeachschools.org",
+                "www.palmbeachschools.org"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/uxasset\\/externals\\/side-channel-list\\/latest\\/index\\.jsdbx",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pbcsd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "servicenow.palmbeachschools.org",
+                    "resolved": "pbcsd.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "97620ba2ffa7e9081509080bb515075ca00688aee3881840fb5b55a00e22b9d1"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "palmbeachschools.org",
+                "www.palmbeachschools.org"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/uxasset\\/externals\\/side-channel-map\\/latest\\/index\\.jsdbx",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pbcsd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "servicenow.palmbeachschools.org",
+                    "resolved": "pbcsd.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "5f2f0b8e04962ebe3bf06874aa327e651668fcafbc59d4b3aecb91acce8ea3c9"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "palmbeachschools.org",
+                "www.palmbeachschools.org"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/uxasset\\/externals\\/side-channel-weakmap\\/latest\\/index\\.jsdbx",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pbcsd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "servicenow.palmbeachschools.org",
+                    "resolved": "pbcsd.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "5b3da37c7b62b1844f6318e91d9e879af27fb465617fa5a2934a49b2fd30ed4e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "palmbeachschools.org",
+                "www.palmbeachschools.org"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/uxasset\\/externals\\/uuid\\/latest\\/index\\.jsdbx",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pbcsd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "servicenow.palmbeachschools.org",
+                    "resolved": "pbcsd.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "237fbd580cb66bef12fa7ac03001dd4310322afc1e25bbf00eeb287d1e911c55"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "palmbeachschools.org",
+                "www.palmbeachschools.org"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/uxasset\\/externals\\/path-to-regexp\\/latest\\/index\\.jsdbx",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pbcsd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "servicenow.palmbeachschools.org",
+                    "resolved": "pbcsd.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "10dbc17e53cc5f614bf86764e6bb758ffa3b28c468d16e59fac4060bf07da74e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "palmbeachschools.org",
+                "www.palmbeachschools.org"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/uxasset\\/externals\\/lottie-web\\/latest\\/index\\.jsdbx",
+            "cookies": 0.0000137,
+            "fingerprinting": 1,
+            "subdomains": [
+                "pbcsd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "servicenow.palmbeachschools.org",
+                    "resolved": "pbcsd.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "96d53c5569fb117007a565dc1fda2a54ad75b17bfbf616adec3de01d881bb596"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "palmbeachschools.org",
+                "www.palmbeachschools.org"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/uxasset\\/externals\\/date-fns-tz\\/latest\\/index\\.jsdbx",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pbcsd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "servicenow.palmbeachschools.org",
+                    "resolved": "pbcsd.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "a47185426effa1d3c57133d4f4e21920ae1262a078b3b7b3e971b65a557b2aea"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "palmbeachschools.org",
+                "www.palmbeachschools.org"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/uxasset\\/externals\\/call-bind-apply-helpers\\/latest\\/functionApply\\.jsdbx",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pbcsd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "servicenow.palmbeachschools.org",
+                    "resolved": "pbcsd.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "8dbf166eec6ad7bb27e920bd948ef1ee4dba61ab3dac7b996e4c51086e297250"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "palmbeachschools.org",
+                "www.palmbeachschools.org"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/uxasset\\/externals\\/call-bind-apply-helpers\\/latest\\/functionCall\\.jsdbx",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pbcsd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "servicenow.palmbeachschools.org",
+                    "resolved": "pbcsd.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "b762cc766e511a71232fbd92a1f9a861d48711c71be800885f8ea9c351ce0171"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "palmbeachschools.org",
+                "www.palmbeachschools.org"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/uxasset\\/externals\\/call-bound\\/latest\\/index\\.jsdbx",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pbcsd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "servicenow.palmbeachschools.org",
+                    "resolved": "pbcsd.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "bcb4548297d8b2455363a7504017e36d5819c0abd5b5264b3ef91b7b2ef0e199"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "palmbeachschools.org",
+                "www.palmbeachschools.org"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/uxasset\\/externals\\/es-define-property\\/latest\\/index\\.jsdbx",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pbcsd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "servicenow.palmbeachschools.org",
+                    "resolved": "pbcsd.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "efd991a5855c40b422bdb47e2b2a46e0f7ca50547ac37592386aae8615e077b0"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "palmbeachschools.org",
+                "www.palmbeachschools.org"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/uxasset\\/externals\\/es-errors\\/latest\\/eval\\.jsdbx",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pbcsd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "servicenow.palmbeachschools.org",
+                    "resolved": "pbcsd.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "2a77435b9beb6468b6d1a60780b880cb602ed9b74a181689519c80e6768507b3"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "palmbeachschools.org",
+                "www.palmbeachschools.org"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/uxasset\\/externals\\/es-errors\\/latest\\/index\\.jsdbx",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pbcsd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "servicenow.palmbeachschools.org",
+                    "resolved": "pbcsd.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "c337b2aacd3d8399f19ff65a86a27a2f6415c523b74893aa32c3dd22d74ff860"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "palmbeachschools.org",
+                "www.palmbeachschools.org"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/uxasset\\/externals\\/es-errors\\/latest\\/range\\.jsdbx",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pbcsd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "servicenow.palmbeachschools.org",
+                    "resolved": "pbcsd.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "83c4cacea34d651ae9260cfa930ab01d5bf9a4f332703a3ee5153c88eeac0380"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "palmbeachschools.org",
+                "www.palmbeachschools.org"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/uxasset\\/externals\\/es-errors\\/latest\\/ref\\.jsdbx",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pbcsd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "servicenow.palmbeachschools.org",
+                    "resolved": "pbcsd.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "652a5debcee8a5f8ba0cc225047250ec9a3f37d3e9175b54c487e4471e8a9ee2"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "palmbeachschools.org",
+                "www.palmbeachschools.org"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/uxasset\\/externals\\/es-errors\\/latest\\/syntax\\.jsdbx",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pbcsd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "servicenow.palmbeachschools.org",
+                    "resolved": "pbcsd.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "41dd0e5b7cc26d8ff1676b52a694c14d46b75a810471fd283b1ce8173ea22ba5"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "palmbeachschools.org",
+                "www.palmbeachschools.org"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/uxasset\\/externals\\/es-errors\\/latest\\/uri\\.jsdbx",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pbcsd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "servicenow.palmbeachschools.org",
+                    "resolved": "pbcsd.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "83b9bacde6177c2a2e88986440c37474dbdca76596f2becc51e72b8e20049ff6"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "palmbeachschools.org",
+                "www.palmbeachschools.org"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/uxasset\\/externals\\/es-object-atoms\\/latest\\/index\\.jsdbx",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pbcsd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "servicenow.palmbeachschools.org",
+                    "resolved": "pbcsd.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "81cb12242b3c1857940307916b6cb581f67e557a19d8783f5730effab4a68311"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "palmbeachschools.org",
+                "www.palmbeachschools.org"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/uxasset\\/externals\\/get-proto\\/latest\\/Object\\.jsdbx",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pbcsd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "servicenow.palmbeachschools.org",
+                    "resolved": "pbcsd.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "fde297bd81c09751b651e3761aa7c203f437ff9531031ce8de046305c6db326f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "palmbeachschools.org",
+                "www.palmbeachschools.org"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/uxasset\\/externals\\/get-proto\\/latest\\/Reflect\\.jsdbx",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pbcsd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "servicenow.palmbeachschools.org",
+                    "resolved": "pbcsd.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "31cc8689e29442f89ffdf3bc672101e96b8c6b92f457ced4d2cb0ed21bac627e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "palmbeachschools.org",
+                "www.palmbeachschools.org"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/uxasset\\/externals\\/get-proto\\/latest\\/index\\.jsdbx",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pbcsd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "servicenow.palmbeachschools.org",
+                    "resolved": "pbcsd.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "f75b3cedaf368ba8d11690f0299bea3eccb4dd45870c05057dfbb4563059d6c4"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "palmbeachschools.org",
+                "www.palmbeachschools.org"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/uxasset\\/externals\\/gopd\\/latest\\/index\\.jsdbx",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pbcsd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "servicenow.palmbeachschools.org",
+                    "resolved": "pbcsd.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "5f44c675c7e88f4ce1fdefed111a6e30c75dd367ae397b84931e315e5d4dfa04"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "palmbeachschools.org",
+                "www.palmbeachschools.org"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/uxasset\\/externals\\/hasown\\/latest\\/index\\.jsdbx",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pbcsd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "servicenow.palmbeachschools.org",
+                    "resolved": "pbcsd.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "21f8f0de572b746b3db71665c8b6c3be615b8db47cbaa79aed235a5c39604bbb"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "palmbeachschools.org",
+                "www.palmbeachschools.org"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/uxasset\\/externals\\/math-intrinsics\\/latest\\/abs\\.jsdbx",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pbcsd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "servicenow.palmbeachschools.org",
+                    "resolved": "pbcsd.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "88a222dcd54aea3cd4661cb8ab848d7b971c9c60219780ff032041028dbd5592"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "palmbeachschools.org",
+                "www.palmbeachschools.org"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/uxasset\\/externals\\/math-intrinsics\\/latest\\/floor\\.jsdbx",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pbcsd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "servicenow.palmbeachschools.org",
+                    "resolved": "pbcsd.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "2b7d1fc5611e758b7c29adaaff8b6751f679056f345ffdf57cb7fd4077af7820"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "palmbeachschools.org",
+                "www.palmbeachschools.org"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/uxasset\\/externals\\/math-intrinsics\\/latest\\/max\\.jsdbx",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pbcsd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "servicenow.palmbeachschools.org",
+                    "resolved": "pbcsd.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "036047c9984f408740c33f0e6631a56a5bc8fa0d0ea1bc5f4948b95ab2525652"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "palmbeachschools.org",
+                "www.palmbeachschools.org"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/uxasset\\/externals\\/math-intrinsics\\/latest\\/min\\.jsdbx",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pbcsd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "servicenow.palmbeachschools.org",
+                    "resolved": "pbcsd.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "5042968fd245c4b811233d55eabc3c83d4fdd215b86a218b7053b63c4e76a1e1"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "palmbeachschools.org",
+                "www.palmbeachschools.org"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/uxasset\\/externals\\/math-intrinsics\\/latest\\/pow\\.jsdbx",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pbcsd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "servicenow.palmbeachschools.org",
+                    "resolved": "pbcsd.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "af2ed596194d76c4f16a1ccb39cbe1629b718be0903a867132d5bd2f94b38cae"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "palmbeachschools.org",
+                "www.palmbeachschools.org"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/uxasset\\/externals\\/math-intrinsics\\/latest\\/round\\.jsdbx",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pbcsd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "servicenow.palmbeachschools.org",
+                    "resolved": "pbcsd.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "3251f61d15ab40dcc74ccca7251ae82d2851d984ffc717f5cccbd78ff4a9e97c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "palmbeachschools.org",
+                "www.palmbeachschools.org"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/uxasset\\/externals\\/math-intrinsics\\/latest\\/sign\\.jsdbx",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pbcsd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "servicenow.palmbeachschools.org",
+                    "resolved": "pbcsd.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "2d45a9de8d7d7bcd00596be5f907be629a1ef5b3daa1c6ae61bf46070ec6ca14"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "palmbeachschools.org",
+                "www.palmbeachschools.org"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/uxasset\\/externals\\/call-bind-apply-helpers\\/latest\\/index\\.jsdbx",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pbcsd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "servicenow.palmbeachschools.org",
+                    "resolved": "pbcsd.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "b88e1fca2fae7a9289b2926a186ddecf65be6e1f8134bf00919668dfe9488343"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "palmbeachschools.org",
+                "www.palmbeachschools.org"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/uxasset\\/externals\\/dunder-proto\\/latest\\/get\\.jsdbx",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pbcsd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "servicenow.palmbeachschools.org",
+                    "resolved": "pbcsd.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "4bd56826120a99cd68e6fe55ae303178f96cddff0afd05d1485d803fe3757641"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "palmbeachschools.org",
+                "www.palmbeachschools.org"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/districtlogohires%20-%20no%20border\\.png",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pbcsd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "servicenow.palmbeachschools.org",
+                    "resolved": "pbcsd.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "9540dbe49486328feca2b9babf0735544badf1038bf9417c467ccff326014fc6"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "palmbeachschools.org",
+                "www.palmbeachschools.org"
+            ]
+        },
+        {
+            "rule": "service-now\\.com\\/api\\/now\\/uxframework\\/component_drivers",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pbcsd"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "servicenow.palmbeachschools.org",
+                    "resolved": "pbcsd.service-now.com"
+                }
+            ],
+            "responseHashes": [
+                "d43658c898d5de6559c38bcd427ba57b320f947d04d6bbb8e78e3bf6c087794e"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "palmbeachschools.org",
+                "www.palmbeachschools.org"
             ]
         },
         {
@@ -962,8 +3280,8 @@
             "cookies": 0.0000137,
             "fingerprinting": 1,
             "subdomains": [
-                "pbcsd",
-                "racetrac"
+                "racetrac",
+                "sas"
             ],
             "apis": {
                 "BroadcastChannel.prototype.constructor": 1,
@@ -976,8 +3294,8 @@
             "prevalence": 0.0000137,
             "cnames": [
                 {
-                    "original": "servicenow.palmbeachschools.org",
-                    "resolved": "pbcsd.service-now.com"
+                    "original": "service.sas.com",
+                    "resolved": "sas.service-now.com"
                 }
             ],
             "responseHashes": [
@@ -987,36 +3305,43 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "palmbeachschools.org",
-                "www.racetrac.com"
+                "racetrac.com",
+                "www.sas.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000048,
+    "cookies": 0.0000685,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.8
+            "prevalence": 0.4838709677419355
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.2903225806451613
         },
         {
             "domain": "cwf_em_header.js",
-            "prevalence": 0.13333333333333333
+            "prevalence": 0.1935483870967742
         },
         {
-            "domain": "dynatrace.com",
-            "prevalence": 0.06666666666666667
+            "domain": "azure.com",
+            "prevalence": 0.03225806451612903
         }
     ],
     "types": {
-        "Script": 40,
-        "Image": 4,
-        "Media": 2,
-        "Font": 4,
-        "Stylesheet": 8,
-        "XHR": 7,
-        "WebSocket": 2
+        "Preflight": 2,
+        "XHR": 18,
+        "Script": 205,
+        "Image": 15,
+        "Document": 4,
+        "Media": 4,
+        "Font": 8,
+        "Stylesheet": 23,
+        "WebSocket": 4,
+        "Fetch": 2
     },
     "nameservers": [
         "usw1.akam.net",

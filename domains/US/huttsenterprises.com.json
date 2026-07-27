@@ -4,11 +4,12 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000548,
-    "sites": 8,
+    "prevalence": 0.0000411,
+    "sites": 6,
     "subdomains": [
         "newsletters",
-        "matomo"
+        "mcp",
+        "ads"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -16,16 +17,18 @@
         {
             "rule": "huttsenterprises\\.com\\/public\\/static\\/hutts-listmonk-subscribe\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "newsletters"
             ],
-            "apis": {},
-            "sites": 4,
-            "prevalence": 0.0000274,
+            "apis": {
+                "Date.prototype.getTime": 3
+            },
+            "sites": 3,
+            "prevalence": 0.0000205,
             "cnames": [],
             "responseHashes": [
-                "7f48cf4673515da63e5536fe12d896466fcb5b80698d8f73856350f3636858c1"
+                "d3efaf25beec867f6839d6096e0e629a6980bad82d95b0b25fcf1917c0341183"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -33,33 +36,71 @@
             "exampleSites": [
                 "animalstart.com",
                 "bytebuys.com",
-                "historyrise.com",
                 "hvaclaboratory.com"
             ]
         },
         {
-            "rule": "huttsenterprises\\.com\\/matomo\\.js",
+            "rule": "huttsenterprises\\.com\\/listmonk\\/domain-analytics\\.json",
             "cookies": 0,
-            "fingerprinting": 1,
+            "fingerprinting": 0,
             "subdomains": [
-                "matomo"
+                "mcp"
             ],
-            "apis": {
-                "Document.cookie getter": 4
-            },
-            "sites": 4,
-            "prevalence": 0.0000274,
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
             "cnames": [],
             "responseHashes": [
-                "643dc9512a4efa9959a6475a7e7fcdf906b492aedd5c423e83867f8f153dd13e"
+                "0dfcf4ef37e2b4e27ec54c8f9b5aada2b8dd1625ad5d65ebfc8aa88de9411345"
             ],
-            "type": "Script",
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "animalstart.com",
                 "bytebuys.com",
-                "historyrise.com",
+                "hvaclaboratory.com"
+            ]
+        },
+        {
+            "rule": "huttsenterprises\\.com\\/collect",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ads"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "animalstart.com",
+                "bytebuys.com",
+                "hvaclaboratory.com"
+            ]
+        },
+        {
+            "rule": "huttsenterprises\\.com\\/collect",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ads"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000205,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "animalstart.com",
+                "bytebuys.com",
                 "hvaclaboratory.com"
             ]
         }
@@ -74,10 +115,13 @@
         }
     ],
     "types": {
-        "Script": 8
+        "Script": 3,
+        "Fetch": 3,
+        "Preflight": 3,
+        "Ping": 3
     },
     "nameservers": [
-        "keanu.ns.cloudflare.com",
-        "joselyn.ns.cloudflare.com"
+        "joselyn.ns.cloudflare.com",
+        "keanu.ns.cloudflare.com"
     ]
 }

@@ -4,13 +4,14 @@
     "source": [
         "DuckDuckGo-DE"
     ],
-    "prevalence": 0.000101,
-    "sites": 1,
+    "prevalence": 0.000201,
+    "sites": 2,
     "subdomains": [
-        "rtb"
+        "rtb",
+        "cdn1"
     ],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 3,
     "resources": [
         {
             "rule": "moe\\.video\\/cs",
@@ -28,10 +29,59 @@
             ],
             "type": "Image",
             "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "adrcid": 0.00010061374383740819
+            },
+            "exampleSites": [
+                "rambler.ru",
+                "www.playground.ru"
+            ]
+        },
+        {
+            "rule": "moe\\.video\\/integration\\/mail\\.adman\\.vpaid\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn1"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "2a4a3e0dc384d6935914c37eded9c9283dbd41ad308a6cdf513b00c00b75f084"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "avito.ru",
-                "www.avito.ru"
+                "playground.ru",
+                "www.playground.ru"
+            ]
+        },
+        {
+            "rule": "moe\\.video\\/integration\\/yandex\\.rtb\\.vpaid\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn1"
+            ],
+            "apis": {
+                "Screen.prototype.height": 2,
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "c3fd6241ed5ff4afff66e71abede0adfc1588e7bbdfc8dad6aa6e4a3f67dd83f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "playground.ru",
+                "www.playground.ru"
             ]
         }
     ],
@@ -40,15 +90,20 @@
     "cookies": 0.000101,
     "topInitiators": [
         {
-            "domain": "buzzoola.com",
-            "prevalence": 1
+            "domain": "first party",
+            "prevalence": 0.9666666666666667
+        },
+        {
+            "domain": "yastatic.net",
+            "prevalence": 0.03333333333333333
         }
     ],
     "types": {
-        "Image": 2
+        "Image": 2,
+        "Script": 4
     },
     "nameservers": [
-        "ns4.moe.video",
-        "ns5.moe.video"
+        "ns5.moe.video",
+        "ns4.moe.video"
     ]
 }

@@ -7,9 +7,10 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000274,
-    "sites": 4,
+    "prevalence": 0.0000479,
+    "sites": 7,
     "subdomains": [
+        "api-waterdata-usgs-gov.domains.api",
         "api-open-fec-gov.domains.api",
         "api-foia-gov.domains.api",
         "api-regulations-gov.domains.api"
@@ -26,10 +27,41 @@
         {
             "original": "api.regulations.gov",
             "resolved": "api-regulations-gov.domains.api.data.gov"
+        },
+        {
+            "original": "api.waterdata.usgs.gov",
+            "resolved": "api-waterdata-usgs-gov.domains.api.data.gov"
         }
     ],
     "fingerprinting": 0,
     "resources": [
+        {
+            "rule": "data\\.gov\\/nims\\/v0\\/cameras",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-waterdata-usgs-gov.domains.api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "api.waterdata.usgs.gov",
+                    "resolved": "api-waterdata-usgs-gov.domains.api.data.gov"
+                }
+            ],
+            "responseHashes": [
+                "0ec85ccffb8da852b8a0639f9933979e86df1b9686d01fc4a2ed14c8c5a085aa"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "usgs.gov",
+                "dashboard.waterdata.usgs.gov"
+            ]
+        },
         {
             "rule": "data\\.gov\\/v1\\/calendar-dates\\/",
             "cookies": 0,
@@ -47,7 +79,7 @@
                 }
             ],
             "responseHashes": [
-                "f8e13f83ff12a0058a0a8e5cb0548ec720f588f5ca5985f7428c2f6bacec6be0"
+                "8d6055cd59a3e4181b1e4882fcf9d7f8427026da49cc45a423088264cc0dc42e"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -55,6 +87,33 @@
             "exampleSites": [
                 "fec.gov",
                 "www.fec.gov"
+            ]
+        },
+        {
+            "rule": "data\\.gov\\/api\\/agency_components",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-foia-gov.domains.api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "api.foia.gov",
+                    "resolved": "api-foia-gov.domains.api.data.gov"
+                }
+            ],
+            "responseHashes": [
+                "184fd64d2c79441d35b2eed667c66fec06349a9b507bf843ab7953a2b2ab05c8"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "foia.gov",
+                "www.foia.gov"
             ]
         },
         {
@@ -83,33 +142,6 @@
             ]
         },
         {
-            "rule": "data\\.gov\\/api\\/agency_components",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "api-foia-gov.domains.api"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [
-                {
-                    "original": "api.foia.gov",
-                    "resolved": "api-foia-gov.domains.api.data.gov"
-                }
-            ],
-            "responseHashes": [
-                "aa6cef86e0cd7697352f3c0c5ceac39de7dd3e7aa757bebff8194835d63a2724"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "foia.gov",
-                "www.foia.gov"
-            ]
-        },
-        {
             "rule": "data\\.gov\\/v4\\/agencies",
             "cookies": 0,
             "fingerprinting": 0,
@@ -126,7 +158,7 @@
                 }
             ],
             "responseHashes": [
-                "8164d89e8993550d7febdf5e16117b8fde4bfca49a37d91f9c195f451353274c"
+                "28ab9f5422dd27fc7906ddc696e8e7811b11056822f370bcee7ea18a28418fa2"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -147,13 +179,14 @@
         }
     ],
     "types": {
+        "Fetch": 2,
         "XHR": 6,
         "Preflight": 2
     },
     "nameservers": [
+        "ns-1354.awsdns-41.org",
         "ns-1826.awsdns-36.co.uk",
         "ns-60.awsdns-07.com",
-        "ns-965.awsdns-56.net",
-        "ns-1354.awsdns-41.org"
+        "ns-965.awsdns-56.net"
     ]
 }

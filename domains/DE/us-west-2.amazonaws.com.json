@@ -9,10 +9,11 @@
     "source": [
         "DuckDuckGo-DE"
     ],
-    "prevalence": 0.000302,
-    "sites": 3,
+    "prevalence": 0.000503,
+    "sites": 5,
     "subdomains": [
-        "crazygames-prod-nlb-analytics-9f975bbd428d2caa.elb"
+        "crazygames-prod-nlb-analytics-9f975bbd428d2caa.elb",
+        "cognito-identity"
     ],
     "cnames": [
         {
@@ -48,6 +49,28 @@
                 "crazygames.com",
                 "www.crazygames.com"
             ]
+        },
+        {
+            "rule": "us-west-2\\.amazonaws\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cognito-identity"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "95b9abf428b622bce264136e7ec75d8c556f35041116b0769af862f1f9c68806"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "japan.travel",
+                "www.japan.travel"
+            ]
         }
     ],
     "categories": [
@@ -58,15 +81,20 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.7142857142857143
+        },
+        {
+            "domain": "d1wwtn5gq9xmny.cloudfront.net",
+            "prevalence": 0.2857142857142857
         }
     ],
     "types": {
-        "Ping": 2
+        "Ping": 2,
+        "Fetch": 2
     },
     "nameservers": [
-        "ns-1522.awsdns-62.org",
         "ns-1556.awsdns-02.co.uk",
+        "ns-1522.awsdns-62.org",
         "ns-156.awsdns-19.com",
         "ns-821.awsdns-38.net"
     ]

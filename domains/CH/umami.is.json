@@ -4,13 +4,14 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.000605,
-    "sites": 6,
+    "prevalence": 0.000503,
+    "sites": 5,
     "subdomains": [
-        "cloud"
+        "cloud",
+        "gateway"
     ],
     "cnames": [],
-    "fingerprinting": 2,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "umami\\.is\\/script\\.js",
@@ -20,27 +21,71 @@
                 "cloud"
             ],
             "apis": {
-                "Screen.prototype.width": 6,
-                "Screen.prototype.height": 6,
-                "Navigator.prototype.language": 6,
-                "Navigator.prototype.doNotTrack": 6,
-                "window.localStorage": 6
+                "Screen.prototype.width": 5,
+                "Screen.prototype.height": 5,
+                "Navigator.prototype.language": 5,
+                "Navigator.prototype.doNotTrack": 5,
+                "window.localStorage": 5
             },
-            "sites": 6,
-            "prevalence": 0.000605,
+            "sites": 5,
+            "prevalence": 0.000503,
             "cnames": [],
             "responseHashes": [
-                "85a0b01cf732ee2318d25aafc4247d2b99e28a694d4f93f54266f3c4d9c19a32"
+                "c281a3c25a185225e7b9b563d5c00fb772f49e9cd89e87ef4180ceccfcb022f1"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "gemeinde-schweiz.ch",
-                "geopolitique-profonde.com",
+                "marathonhandbook.com",
                 "www.die-beste-reisezeit.de",
                 "www.go-vf.com",
-                "www.omnicalculator.com",
+                "www.reise-klima.de"
+            ]
+        },
+        {
+            "rule": "umami\\.is\\/api\\/send",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gateway"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "6b27993675a7f2e02647d29602bda865448c30e77924bb47729c69e3b74d1b43",
+                "c2a15a0963e0debe3c2a661f0491c090008aeee38bb9798ac550301205d0e115"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gemeinde-schweiz.ch",
+                "marathonhandbook.com",
+                "www.reise-klima.de"
+            ]
+        },
+        {
+            "rule": "umami\\.is\\/api\\/send",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gateway"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gemeinde-schweiz.ch",
+                "marathonhandbook.com",
                 "www.reise-klima.de"
             ]
         }
@@ -51,11 +96,17 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.8333333333333334
+        },
+        {
+            "domain": "cookiebot.com",
+            "prevalence": 0.16666666666666666
         }
     ],
     "types": {
-        "Script": 6
+        "Script": 5,
+        "Fetch": 3,
+        "Preflight": 3
     },
     "nameservers": [
         "gina.ns.cloudflare.com",

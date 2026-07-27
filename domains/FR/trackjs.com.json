@@ -7,11 +7,13 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000706,
-    "sites": 7,
+    "prevalence": 0.00101,
+    "sites": 10,
     "subdomains": [
         "usage",
-        "forwarder"
+        "forwarder",
+        "capture",
+        "cdn"
     ],
     "cnames": [
         {
@@ -30,8 +32,8 @@
                 "forwarder"
             ],
             "apis": {},
-            "sites": 7,
-            "prevalence": 0.000706,
+            "sites": 10,
+            "prevalence": 0.00101,
             "cnames": [
                 {
                     "original": "trck.coomeet.com",
@@ -45,12 +47,64 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "spicychat.ai",
                 "smallpdf.com",
+                "spicychat.ai",
+                "www.adulttime.com",
+                "www.bigship.com",
                 "www.coomeet.com",
                 "www.filae.com",
                 "www.fotmob.com",
                 "www.privatesportshop.fr",
+                "www.sport-decouverte.com",
+                "www.tradeinn.com"
+            ]
+        },
+        {
+            "rule": "trackjs\\.com\\/capture",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "capture"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000403,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "spicychat.ai",
+                "www.adulttime.com",
+                "www.filae.com",
+                "www.privatesportshop.fr"
+            ]
+        },
+        {
+            "rule": "trackjs\\.com\\/agent\\/v3\\/latest\\/t\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "3169a71c8da47b07411a0edd846dde35975f54102b8b75c3b4563194e84ff506"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bigship.com",
                 "www.tradeinn.com"
             ]
         }
@@ -61,11 +115,17 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.9459459459459459
+        },
+        {
+            "domain": "gammacdn.com",
+            "prevalence": 0.05405405405405406
         }
     ],
     "types": {
-        "Image": 7
+        "Image": 10,
+        "XHR": 4,
+        "Script": 2
     },
     "nameservers": [
         "dns1.registrar-servers.com",

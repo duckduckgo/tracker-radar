@@ -7,14 +7,90 @@
     "source": [
         "DuckDuckGo-DE"
     ],
-    "prevalence": 0.000403,
-    "sites": 4,
+    "prevalence": 0.000604,
+    "sites": 6,
     "subdomains": [
-        "uk1-api.eng"
+        "eu3-api.eng",
+        "uk1-api.eng",
+        "eu2-api.eng"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "bloomreach\\.com\\/js\\/exponea\\.min\\.js",
+            "cookies": 0.000101,
+            "fingerprinting": 2,
+            "subdomains": [
+                "eu3-api.eng",
+                "uk1-api.eng"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.vendor": 2,
+                "window.localStorage": 2,
+                "window.sessionStorage": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie getter": 1,
+                "Document.cookie setter": 1,
+                "Navigator.prototype.maxTouchPoints": 1,
+                "window.innerWidth": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "2d956e0456dd3134c2fa0a725e45d222298ed26d92ff40bd8ab26215c6a5c23d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "__exponea_etc__": {
+                    "ttl": 94608003,
+                    "length": 36,
+                    "prevalence": 0.00010061374383740819,
+                    "uniqueness": 1
+                },
+                "__exponea_time2__": {
+                    "ttl": 3603,
+                    "length": 21,
+                    "prevalence": 0.00010061374383740819,
+                    "uniqueness": 1
+                },
+                "ct_email_popup_views": {
+                    "ttl": 5184010,
+                    "length": 1,
+                    "prevalence": 0.00010061374383740819,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "blackroll.com",
+                "www.charlestyrwhitt.com"
+            ]
+        },
+        {
+            "rule": "bloomreach\\.com\\/js\\/service-worker\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "eu2-api.eng"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "fdc878a0b11808f317f33193ef8c2c3dbab2f95874a83ba0de728712d384ce11"
+            ],
+            "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hunkemoller.de",
+                "www.hunkemoller.de"
+            ]
+        },
         {
             "rule": "bloomreach\\.com\\/webxp\\/projects\\/d868c674-e566-11ef-bb40-924d6b029175\\/bundle",
             "cookies": 0,
@@ -27,7 +103,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "f115b0fde4168b2947c876df4dade667dc078625c5ff76ad4cc65aab528f0218"
+                "01ce1c699d82a1fcccadf9873200226cd85f2bd22f819b2e652bb68bcf92fe2a"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -49,7 +125,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "118b5b69b367d8b1963f06655de82c5c1bfd48a8b3d0afa11d2f1297223f9963"
+                "cfd198c066f183c957006719feda3d6cfce3833a794f8e4042eba30263919d91"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -57,6 +133,50 @@
             "exampleSites": [
                 "charlestyrwhitt.com",
                 "www.charlestyrwhitt.com"
+            ]
+        },
+        {
+            "rule": "bloomreach\\.com\\/webxp\\/s\\/3a6384fe-2c25-11f0-a955-3e8627c2f750\\/managed-endpoints\\/685095ed9a1e88f82c05a3d8",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "eu2-api.eng"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "536ef73411b851fa64bb86bf20804dd888dbacc771265289c4acb87899659a1e"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thenorthface.com",
+                "www.thenorthface.com"
+            ]
+        },
+        {
+            "rule": "bloomreach\\.com\\/webxp\\/s\\/3a6384fe-2c25-11f0-a955-3e8627c2f750\\/managed-endpoints\\/685095ed9a1e88f82c05a3ec",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "eu2-api.eng"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "d03e124975f1d308c4c41ca8f84190be2426d918baa3922493d76b7ba66b43be"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thenorthface.com",
+                "www.thenorthface.com"
             ]
         }
     ],
@@ -69,18 +189,24 @@
             "prevalence": 0.8333333333333334
         },
         {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.08333333333333333
+        },
+        {
             "domain": "mobify-storefront.com",
-            "prevalence": 0.16666666666666666
+            "prevalence": 0.08333333333333333
         }
     ],
     "types": {
-        "Fetch": 4
+        "Script": 2,
+        "Other": 2,
+        "Fetch": 8
     },
     "nameservers": [
-        "a12-66.akam.net",
-        "a18-64.akam.net",
-        "a1-233.akam.net",
         "a26-65.akam.net",
+        "a12-66.akam.net",
+        "a1-233.akam.net",
+        "a18-64.akam.net",
         "a13-67.akam.net",
         "a9-66.akam.net"
     ]

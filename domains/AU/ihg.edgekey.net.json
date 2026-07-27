@@ -9,18 +9,23 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.000101,
+    "prevalence": 0.0001,
     "sites": 1,
     "subdomains": [
-        "prod-external"
+        "prod-external",
+        "gigya"
     ],
     "cnames": [
         {
             "original": "apis.ihg.com",
             "resolved": "prod-external.ihg.edgekey.net"
+        },
+        {
+            "original": "identity.ihg.com",
+            "resolved": "gigya.ihg.edgekey.net"
         }
     ],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "ihg\\.edgekey\\.net\\/members\\/v2\\/status",
@@ -75,6 +80,33 @@
             ]
         },
         {
+            "rule": "ihg\\.edgekey\\.net\\/sdk\\.config\\.get",
+            "cookies": 0.0001,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gigya"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "identity.ihg.com",
+                    "resolved": "gigya.ihg.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "4d331d9ea47fcb799b6e9640a35f796847e7ae921b72afc168acaf6a3c77f19e"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ihg.com",
+                "www.ihg.com"
+            ]
+        },
+        {
             "rule": "ihg\\.edgekey\\.net\\/rates\\/v2\\/categories",
             "cookies": 0.000201,
             "fingerprinting": 0,
@@ -90,7 +122,9 @@
                     "resolved": "prod-external.ihg.edgekey.net"
                 }
             ],
-            "responseHashes": [],
+            "responseHashes": [
+                "d1a4e2c6929f1ce90b92e56869f2f6f47751f35fa959ff3c13622fc12b28d018"
+            ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -115,7 +149,9 @@
                     "resolved": "prod-external.ihg.edgekey.net"
                 }
             ],
-            "responseHashes": [],
+            "responseHashes": [
+                "04e699c7345fdc7a9085f08c457d0325067dab57a6611659ebfad61f8bf4779f"
+            ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -127,10 +163,11 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000101,
+    "cookies": 0.0001,
     "types": {
         "XHR": 6,
-        "Preflight": 2
+        "Preflight": 2,
+        "Fetch": 2
     },
     "nameservers": []
 }

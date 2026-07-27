@@ -7,19 +7,19 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.00101,
-    "sites": 10,
+    "prevalence": 0.00111,
+    "sites": 11,
     "subdomains": [
         "cdn",
         "api"
     ],
     "cnames": [],
-    "fingerprinting": 2,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "rollbar\\.com\\/rollbarjs\\/refs\\/tags\\/v3\\.1\\.0\\/rollbar\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 1,
+            "fingerprinting": 2,
             "subdomains": [
                 "cdn"
             ],
@@ -29,7 +29,10 @@
                 "NavigatorUAData.prototype.brands": 2,
                 "Navigator.prototype.language": 2,
                 "NavigatorUAData.prototype.platform": 2,
-                "Navigator.prototype.userAgent": 2
+                "Navigator.prototype.userAgent": 2,
+                "Screen.prototype.width": 1,
+                "window.innerWidth": 1,
+                "window.innerHeight": 1
             },
             "sites": 2,
             "prevalence": 0.000202,
@@ -42,7 +45,33 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "everloved.com",
-                "www.airdrie.ca"
+                "www.warframe.com"
+            ]
+        },
+        {
+            "rule": "rollbar\\.com\\/rollbarjs\\/refs\\/tags\\/v2\\.26\\.1\\/rollbar\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "console.memory": 3,
+                "Date.prototype.getTime": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "41764f6cf1cfa99fad12f1ee265ea0bb292761f6b15d1f5432756524854cd77f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gamefound.com",
+                "www.litcharts.com",
+                "www.ynab.com"
             ]
         },
         {
@@ -85,10 +114,13 @@
             ],
             "apis": {},
             "sites": 3,
-            "prevalence": 0.000303,
+            "prevalence": 0.000302,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "06f76d85bdd9437c833da3a11545b967ef77a13b32bd3c22f83f8166c6844faf",
+                "6a0e4521257e974c151bf0fcbf0ee7e2a6ae95bacae6364eca3255514ae41aac"
+            ],
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -106,13 +138,10 @@
             ],
             "apis": {},
             "sites": 3,
-            "prevalence": 0.000303,
+            "prevalence": 0.000302,
             "cnames": [],
-            "responseHashes": [
-                "8dd402dc3c13c47fc05df64f4e34bbf4aaf5cc29034ac0f06429476c197d31f8",
-                "df510b79c14a408817bab32958eef1f25ca7cae026624fdf5a8c95234e099a0e"
-            ],
-            "type": "XHR",
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -129,8 +158,8 @@
                 "cdn"
             ],
             "apis": {
-                "console.memory": 1,
-                "Date.prototype.getTime": 2,
+                "console.memory": 3,
+                "Date.prototype.getTime": 3,
                 "Navigator.prototype.userAgent": 1,
                 "Navigator.prototype.language": 1,
                 "Navigator.prototype.cookieEnabled": 1,
@@ -138,8 +167,8 @@
                 "Screen.prototype.height": 1,
                 "Navigator.prototype.plugins": 1
             },
-            "sites": 2,
-            "prevalence": 0.000202,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
                 "229a28cc86ef31dd3ce33153dc2782b219d0a5556f76bf971d9f08d964fb8d7a"
@@ -149,7 +178,8 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "dxengineering.com",
-                "www.spglobal.com"
+                "www.spglobal.com",
+                "www.summitracing.com"
             ]
         }
     ],
@@ -159,21 +189,25 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.8333333333333334
+            "prevalence": 0.85
         },
         {
             "domain": "osano.com",
-            "prevalence": 0.08333333333333333
+            "prevalence": 0.05
         },
         {
             "domain": "gog-statics.com",
-            "prevalence": 0.08333333333333333
+            "prevalence": 0.05
+        },
+        {
+            "domain": "ynabassets.com",
+            "prevalence": 0.05
         }
     ],
     "types": {
-        "Script": 6,
-        "Preflight": 3,
-        "XHR": 3
+        "Script": 10,
+        "XHR": 3,
+        "Preflight": 3
     },
     "nameservers": [
         "tori.ns.cloudflare.com",

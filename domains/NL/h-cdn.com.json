@@ -7,10 +7,12 @@
     "source": [
         "DuckDuckGo-NL"
     ],
-    "prevalence": 0.000101,
-    "sites": 1,
+    "prevalence": 0.000201,
+    "sites": 2,
     "subdomains": [
-        "player"
+        "player",
+        "zagent7",
+        "perr"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -23,26 +25,99 @@
                 "player"
             ],
             "apis": {
-                "window.localStorage": 2,
-                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 3,
+                "Navigator.prototype.userAgent": 3,
                 "Navigator.prototype.product": 1,
                 "Navigator.prototype.platform": 1,
                 "Navigator.prototype.maxTouchPoints": 1,
                 "window.sessionStorage": 1,
                 "window.devicePixelRatio": 1,
+                "Element.prototype.getClientRects": 1,
                 "Navigator.prototype.connection": 1
             },
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
-                "e99774e6a6dcfda4434f2d49a9be35addda6c60b3cbd14c147d1d45075331529"
+                "e99774e6a6dcfda4434f2d49a9be35addda6c60b3cbd14c147d1d45075331529",
+                "7543d4d771186c77d98d6b2637e5ea5a0c677404b78dcd07894594e31e4229ab"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "tagesschau.de",
+                "sportschau.de",
+                "www.sportschau.de",
+                "www.tagesschau.de"
+            ]
+        },
+        {
+            "rule": "h-cdn\\.com\\/config\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "player"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "2203cfb262020267a77324147453c38ac128fd32a66e5fd3fbfee056fd4385ff"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sportschau.de",
+                "www.tagesschau.de"
+            ]
+        },
+        {
+            "rule": "h-cdn\\.com\\/cmd\\/get_links_info",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "zagent7"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "2ae5eaddcbaac9c6f696423dcbcebd8cdf863b642b9213a22d34856942ecbd8e",
+                "9d8b3a6155a0dea64f250be70c40b9579361de714102f39417aefa3f7d9db3be"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sportschau.de",
+                "www.sportschau.de",
+                "www.tagesschau.de"
+            ]
+        },
+        {
+            "rule": "h-cdn\\.com\\/be_client_cgi\\/perr",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "perr"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "sportschau.de",
                 "www.tagesschau.de"
             ]
         }
@@ -57,7 +132,9 @@
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 5,
+        "XHR": 3,
+        "Ping": 2
     },
     "nameservers": [
         "ns-43.awsdns-05.com",

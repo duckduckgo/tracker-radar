@@ -9,14 +9,19 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000101,
-    "sites": 1,
+    "prevalence": 0.000202,
+    "sites": 2,
     "subdomains": [
         "etmarketsapis",
         "etusapi",
-        "offers"
+        "agi-static",
+        "geoapi"
     ],
     "cnames": [
+        {
+            "original": "agi-static.indiatimes.com",
+            "resolved": "agi-static.indiatimes.com.edgekey.net"
+        },
         {
             "original": "etmarketsapis.indiatimes.com",
             "resolved": "etmarketsapis.indiatimes.com.edgekey.net"
@@ -26,11 +31,11 @@
             "resolved": "etusapi.indiatimes.com.edgekey.net"
         },
         {
-            "original": "offers.indiatimes.com",
-            "resolved": "offers.indiatimes.com.edgekey.net"
+            "original": "geoapi.indiatimes.com",
+            "resolved": "geoapi.indiatimes.com.edgekey.net"
         }
     ],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "indiatimes\\.com\\.edgekey\\.net\\/ET_Stats\\/getMarketBand",
@@ -49,7 +54,7 @@
                 }
             ],
             "responseHashes": [
-                "561f17d63b409b01f82c7616172f62bd4fe892343d4444eb47072b45a3441632"
+                "cf26d78930775999e3a04ee0a0a4bff6f4ff29b2f827e98c073111f6e878d6c3"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -101,7 +106,7 @@
                 }
             ],
             "responseHashes": [
-                "758218361e524f3edb7ab5d8fb3ac9d7be5824fbd7cbf3d0f2197503b8b2b24f"
+                "51c0e187b9b6e313d330e3d1e15234c59e11ba398c1a54ee57f44f78b1078196"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -112,45 +117,77 @@
             ]
         },
         {
-            "rule": "indiatimes\\.com\\.edgekey\\.net\\/offer-engine\\/api\\/v1\\/fetch-master-messages\\/et\\/web\\/get",
-            "cookies": 0,
-            "fingerprinting": 0,
+            "rule": "indiatimes\\.com\\.edgekey\\.net\\/cms-common\\/ibeat\\.min\\.js",
+            "cookies": 0.000202,
+            "fingerprinting": 1,
             "subdomains": [
-                "offers"
+                "agi-static"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000202,
             "cnames": [
                 {
-                    "original": "offers.indiatimes.com",
-                    "resolved": "offers.indiatimes.com.edgekey.net"
+                    "original": "agi-static.indiatimes.com",
+                    "resolved": "agi-static.indiatimes.com.edgekey.net"
                 }
             ],
             "responseHashes": [
-                "7d044204e971d89cc18994017e5c5bd502e613d745d9a1447fd54e0f4e0e4e1f"
+                "3fb212185b46ba70b9b44a6e1181de0c3b325f407ec5505596d72bd611d74531"
             ],
-            "type": "Fetch",
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "indiatimes.com",
-                "economictimes.indiatimes.com"
+                "timesofindia.indiatimes.com"
+            ]
+        },
+        {
+            "rule": "indiatimes\\.com\\.edgekey\\.net\\/",
+            "cookies": 0.000101,
+            "fingerprinting": 0,
+            "subdomains": [
+                "geoapi"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "geoapi.indiatimes.com",
+                    "resolved": "geoapi.indiatimes.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "c2c7e59a4dc99df7e8e3ff6fc4b79db2e4b049c0a5f131f86f556a7f3ff0b277"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "indiatimes.com",
+                "timesofindia.indiatimes.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000101,
+    "cookies": 0.000202,
     "topInitiators": [
         {
             "domain": "etimg.com",
-            "prevalence": 1
+            "prevalence": 0.7894736842105263
+        },
+        {
+            "domain": "toiimg.com",
+            "prevalence": 0.21052631578947367
         }
     ],
     "types": {
-        "Fetch": 6,
-        "Preflight": 2
+        "Fetch": 4,
+        "Preflight": 2,
+        "Script": 4
     },
     "nameservers": []
 }

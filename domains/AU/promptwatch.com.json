@@ -13,23 +13,28 @@
     "fingerprinting": 2,
     "resources": [
         {
-            "rule": "promptwatch\\.com\\/event",
+            "rule": "promptwatch\\.com\\/js\\/client\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 2,
             "subdomains": [
                 "ingest"
             ],
-            "apis": {},
+            "apis": {
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 2,
+                "Navigator.prototype.languages": 2
+            },
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "3f24fb0cd063664e555f19b8f6291422fd9e21110021139a2be0f42eb8704ee4"
+            ],
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "endclothing.com",
-                "www.unihosted.com"
+                "mariadb.com",
+                "www.endclothing.com"
             ]
         },
         {
@@ -50,8 +55,28 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "endclothing.com",
-                "www.unihosted.com"
+                "mariadb.com",
+                "www.endclothing.com"
+            ]
+        },
+        {
+            "rule": "promptwatch\\.com\\/event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ingest"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mariadb.com",
+                "www.endclothing.com"
             ]
         }
     ],
@@ -61,12 +86,17 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.6666666666666666
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.3333333333333333
         }
     ],
     "types": {
-        "Preflight": 2,
-        "Fetch": 2
+        "Script": 2,
+        "Fetch": 2,
+        "Preflight": 2
     },
     "nameservers": [
         "nola.ns.cloudflare.com",

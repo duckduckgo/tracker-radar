@@ -11,10 +11,11 @@
     "sites": 2,
     "subdomains": [
         "ecdn",
-        "cdn"
+        "cdn",
+        "outbid"
     ],
     "cnames": [],
-    "fingerprinting": 2,
+    "fingerprinting": 3,
     "resources": [
         {
             "rule": "firstimpression\\.io\\/fi_client\\.js",
@@ -30,13 +31,20 @@
                 "window.innerHeight": 1,
                 "window.innerWidth": 1,
                 "Element.prototype.getClientRects": 1,
-                "Event.prototype.timeStamp": 1
+                "Event.prototype.timeStamp": 1,
+                "Navigator.prototype.userAgent": 1,
+                "Navigator.prototype.mimeTypes": 1,
+                "Navigator.prototype.javaEnabled": 1,
+                "Navigator.prototype.cookieEnabled": 1,
+                "Screen.prototype.width": 1,
+                "Screen.prototype.height": 1,
+                "Navigator.prototype.platform": 1
             },
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "489ef0b02c0aee8e6979358914fa95e0d308f33ea47b40833a1bba6b7a1e23f4"
+                "f39c6dc71e4b58a7169122a4df68ea6afee71ea1723a6ba50e93862a8b2e2afd"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -48,17 +56,59 @@
         },
         {
             "rule": "firstimpression\\.io\\/static\\/js\\/prebidamp\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
+            "cookies": 0.000201,
+            "fingerprinting": 2,
             "subdomains": [
                 "ecdn"
             ],
-            "apis": {},
+            "apis": {
+                "Date.prototype.getTime": 2,
+                "NavigatorUAData.prototype.brands": 2,
+                "NavigatorUAData.prototype.platform": 2,
+                "window.sessionStorage": 2,
+                "window.localStorage": 2,
+                "Document.cookie getter": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "window.innerHeight": 2,
+                "window.innerWidth": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.language": 2,
+                "Navigator.prototype.cookieEnabled": 2,
+                "Document.cookie setter": 2
+            },
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "9d6d823809277313caf84db17e88c0df86e67df1a6ffbbe81ba73ff20427a641"
+                "3b58aa1d75542c396b9b5c0415f66c48e75647f9dfd046b63e7c201e84495ae1"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "haaretz.com",
+                "www.haaretz.com"
+            ]
+        },
+        {
+            "rule": "firstimpression\\.io\\/static\\/js\\/fiamp\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "ecdn"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "d1c35c215a3b1f4b841987f2f960b213a0974d764ba0a6b37048af30c40b91b7"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -79,8 +129,32 @@
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "cdb4ee2aea69cc6a83331bbe96dc2caa9a299d21329efb0336fc02a82e1839a8"
+            ],
             "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "haaretz.com",
+                "www.haaretz.com"
+            ]
+        },
+        {
+            "rule": "firstimpression\\.io\\/v1\\/outbid",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "outbid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "0c4a523647aefde1bcead0f16b3c1905dc1bb8c4e285cdd7a504ae4c89e73bb7"
+            ],
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -91,21 +165,26 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000101,
+    "cookies": 0.0001,
     "topInitiators": [
         {
+            "domain": "doubleclick.net",
+            "prevalence": 0.6
+        },
+        {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.4
         }
     ],
     "types": {
-        "Script": 4,
-        "Ping": 2
+        "Script": 6,
+        "Ping": 2,
+        "Fetch": 2
     },
     "nameservers": [
-        "ns-711.awsdns-24.net",
         "ns-303.awsdns-37.com",
-        "ns-1564.awsdns-03.co.uk",
-        "ns-1137.awsdns-14.org"
+        "ns-711.awsdns-24.net",
+        "ns-1137.awsdns-14.org",
+        "ns-1564.awsdns-03.co.uk"
     ]
 }

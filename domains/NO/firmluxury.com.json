@@ -4,14 +4,42 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000101,
-    "sites": 1,
+    "prevalence": 0.000201,
+    "sites": 2,
     "subdomains": [
         "web"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "firmluxury\\.com\\/script\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "web"
+            ],
+            "apis": {
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "Navigator.prototype.language": 2,
+                "Navigator.prototype.doNotTrack": 2,
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "a1471487eb3e8eb93b1a9e056386019ff5eedadea29bbb725b5494fb2e9ad90a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "technobezz.com",
+                "www.technobezz.com"
+            ]
+        },
         {
             "rule": "firmluxury\\.com\\/api\\/send",
             "cookies": 0,
@@ -44,7 +72,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "ae28fea09809b64e884075b915bb5bc3d6166f495fe055e3bc3491f549c24c52"
+                "620cc03641b1c6e83be9224f8769e8de64f486feeee677113a04a3381a669423"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -61,10 +89,15 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.8
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.2
         }
     ],
     "types": {
+        "Script": 2,
         "Preflight": 2,
         "Fetch": 2
     },

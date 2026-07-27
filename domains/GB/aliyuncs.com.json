@@ -11,7 +11,10 @@
     "sites": 15,
     "subdomains": [
         "pango-virginia-prod-dji-official.us-east-1.log",
-        "huga88mbbq-default-sea.rum"
+        "huga88mbbq-sdk.rum",
+        "sdk.rum",
+        "huga88mbbq-default-sea.rum",
+        "j2c03hoppk-default-cn.rum"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -37,15 +40,45 @@
             ]
         },
         {
+            "rule": "aliyuncs\\.com\\/v2\\/browser-sdk\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 1,
+            "subdomains": [
+                "huga88mbbq-sdk.rum",
+                "sdk.rum"
+            ],
+            "apis": {
+                "PerformanceTiming.prototype.navigationStart": 2,
+                "window.localStorage": 2,
+                "Document.cookie setter": 2,
+                "Document.cookie getter": 2,
+                "Navigator.prototype.connection": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "9e476d3525cc6a648e88d5e50d35a1c6516e99d37c94ea62b2f74d698c40ba56"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "xmodhub.com",
+                "z.ai"
+            ]
+        },
+        {
             "rule": "aliyuncs\\.com\\/",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "huga88mbbq-default-sea.rum"
+                "huga88mbbq-default-sea.rum",
+                "j2c03hoppk-default-cn.rum"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [],
             "type": "Fetch",
@@ -53,37 +86,43 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "xmodhub.com",
-                "www.xmodhub.com"
+                "www.xmodhub.com",
+                "z.ai"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000101,
+    "cookies": 0.000201,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.7096774193548387
+            "prevalence": 0.6
         },
         {
             "domain": "djiits.com",
-            "prevalence": 0.16129032258064516
+            "prevalence": 0.16666666666666666
         },
         {
             "domain": "wondershare.cc",
-            "prevalence": 0.06451612903225806
+            "prevalence": 0.13333333333333333
         },
         {
             "domain": "udeskglobal.com",
-            "prevalence": 0.03225806451612903
+            "prevalence": 0.03333333333333333
         },
         {
-            "domain": "googletagmanager.com",
-            "prevalence": 0.03225806451612903
+            "domain": "static-boost.com",
+            "prevalence": 0.03333333333333333
+        },
+        {
+            "domain": "alicdn.com",
+            "prevalence": 0.03333333333333333
         }
     ],
     "types": {
-        "Fetch": 4
+        "Fetch": 5,
+        "Script": 2
     },
     "nameservers": [
         "ns3.aliyun.com",

@@ -7,17 +7,123 @@
     "prevalence": 0.00000685,
     "sites": 1,
     "subdomains": [
-        "sentry-web"
+        "unleash-edge-prod",
+        "faro-platform",
+        "analytics-api"
     ],
     "cnames": [],
     "fingerprinting": 0,
     "resources": [
         {
-            "rule": "penpencil\\.co\\/api\\/89\\/envelope\\/",
+            "rule": "penpencil\\.co\\/api\\/frontend",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "sentry-web"
+                "unleash-edge-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "pw.live",
+                "www.pw.live"
+            ]
+        },
+        {
+            "rule": "penpencil\\.co\\/api\\/frontend",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "unleash-edge-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "a3e0ff1810bfe40f8e5db22490767280ce84cc3f3af192ed244a5391176e12f0"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "pw.live",
+                "www.pw.live"
+            ]
+        },
+        {
+            "rule": "penpencil\\.co\\/collect",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "faro-platform"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "2689367b205c16ce32ed4200942b8b8b1e262dfc70d9bc9fbc77c49699a4f1df"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "pw.live",
+                "www.pw.live"
+            ]
+        },
+        {
+            "rule": "penpencil\\.co\\/collect",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "faro-platform"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "pw.live",
+                "www.pw.live"
+            ]
+        },
+        {
+            "rule": "penpencil\\.co\\/core-analytics\\/universal\\/experiments\\/record",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "analytics-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "pw.live",
+                "www.pw.live"
+            ]
+        },
+        {
+            "rule": "penpencil\\.co\\/core-analytics\\/universal\\/experiments\\/record",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "analytics-api"
             ],
             "apis": {},
             "sites": 2,
@@ -43,7 +149,8 @@
         }
     ],
     "types": {
-        "Fetch": 2
+        "Preflight": 6,
+        "Fetch": 6
     },
     "nameservers": [
         "hugh.ns.cloudflare.com",

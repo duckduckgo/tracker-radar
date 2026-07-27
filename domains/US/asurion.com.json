@@ -7,28 +7,63 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000206,
+    "prevalence": 0.0000205,
     "sites": 3,
     "subdomains": [
+        "asurion-widget.prd.aws.service-initiation",
         "ingestion.events"
     ],
     "cnames": [],
-    "fingerprinting": 2,
+    "fingerprinting": 3,
     "resources": [
         {
-            "rule": "asurion\\.com\\/stream",
-            "cookies": 0,
-            "fingerprinting": 0,
+            "rule": "asurion\\.com\\/widget-loader\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 2,
             "subdomains": [
-                "ingestion.events"
+                "asurion-widget.prd.aws.service-initiation"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.mimeTypes": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.language": 2,
+                "Screen.prototype.orientation": 2,
+                "window.localStorage": 2,
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.platform": 2,
+                "window.name": 2,
+                "Navigator.prototype.appVersion": 2,
+                "Navigator.prototype.languages": 2,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 2,
+                "Navigator.prototype.onLine": 2,
+                "Document.cookie setter": 2,
+                "Document.cookie getter": 2,
+                "window.sessionStorage": 2,
+                "window.innerWidth": 2,
+                "window.innerHeight": 2,
+                "window.devicePixelRatio": 2
+            },
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
+            "responseHashes": [
+                "c46a080d5f33f5a3af99816f4107d38126e1745b3cd5b211a7ff879c44d89cd2"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_widget_id": {
+                    "ttl": 31536007,
+                    "length": 36,
+                    "prevalence": 0.000006848376934666484,
+                    "uniqueness": 1
+                },
+                "_widget_sid": {
+                    "ttl": null,
+                    "length": 36,
+                    "prevalence": 0.000006848376934666484,
+                    "uniqueness": 1
+                }
+            },
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "humnutrition.com",
@@ -56,19 +91,35 @@
                 "humnutrition.com",
                 "www.ubreakifix.com"
             ]
+        },
+        {
+            "rule": "asurion\\.com\\/stream",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ingestion.events"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "humnutrition.com",
+                "www.ubreakifix.com"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.00000685,
+    "cookies": 0.0000137,
     "topInitiators": [
         {
-            "domain": "googletagmanager.com",
-            "prevalence": 0.25
-        },
-        {
-            "domain": "rollbar.com",
-            "prevalence": 0.25
+            "domain": "first party",
+            "prevalence": 0.375
         },
         {
             "domain": "dynatrace.com",
@@ -77,16 +128,21 @@
         {
             "domain": "fullstory.com",
             "prevalence": 0.25
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.125
         }
     ],
     "types": {
-        "Preflight": 2,
-        "Fetch": 2
+        "Script": 2,
+        "Fetch": 2,
+        "Preflight": 2
     },
     "nameservers": [
-        "ns-892.awsdns-47.net",
-        "ns-1848.awsdns-39.co.uk",
+        "ns-1340.awsdns-39.org",
         "ns-169.awsdns-21.com",
-        "ns-1340.awsdns-39.org"
+        "ns-1848.awsdns-39.co.uk",
+        "ns-892.awsdns-47.net"
     ]
 }

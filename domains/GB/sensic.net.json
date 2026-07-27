@@ -4,23 +4,26 @@
     "source": [
         "DuckDuckGo-GB"
     ],
-    "prevalence": 0.000302,
-    "sites": 3,
+    "prevalence": 0.000201,
+    "sites": 2,
     "subdomains": [
         "es-config",
-        "17804197646525de5ecdf2f895e7b28546f6336aa38fd419b52dec5a.trk",
-        "17804225988197670a29043a35417d137b4fd6c2ad70682935dfe512.trk",
-        "es1-s2s"
+        "sg-config",
+        "178493219037984872cfd836d8643ceb8bc4ad0edc41e368e45e5fee.trk",
+        "17849340028408f7ce4f178ebf770ace9a1e1a7f21d32d5db6a9ef82.trk",
+        "es1-s2s",
+        "sg2-s2s"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
         {
             "rule": "sensic\\.net\\/s2s-web\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
+            "cookies": 0.0001,
+            "fingerprinting": 2,
             "subdomains": [
-                "es-config"
+                "es-config",
+                "sg-config"
             ],
             "apis": {
                 "window.localStorage": 2,
@@ -28,32 +31,44 @@
                 "Navigator.prototype.maxTouchPoints": 2,
                 "Navigator.prototype.userAgent": 2,
                 "Navigator.prototype.platform": 2,
-                "Navigator.prototype.language": 2
+                "Navigator.prototype.language": 2,
+                "Document.cookie getter": 1,
+                "Document.cookie setter": 1
             },
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "04924828b4f99e8371fd4f35b1ebb394b7f600c917156e7a2666e400dcb00e1a"
+                "d0f36fcce8d05e0d7bf292c404588b81eb3a688c5eba26441819ff5aaa48a253"
             ],
             "type": "Script",
-            "firstPartyCookies": {},
+            "firstPartyCookies": {
+                "sui_1pc": {
+                    "ttl": 63072024,
+                    "length": 56,
+                    "prevalence": 0.00010047221943132724,
+                    "uniqueness": 1
+                }
+            },
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "elpais.com",
-                "www.hola.com"
+                "as.com",
+                "www.straitstimes.com"
             ]
         },
         {
             "rule": "sensic\\.net\\/3pc\\.html",
-            "cookies": 0,
+            "cookies": 0.0001,
             "fingerprinting": 1,
             "subdomains": [
-                "es-config"
+                "es-config",
+                "sg-config"
             ],
             "apis": {
+                "window.localStorage": 2,
                 "Document.cookie getter": 2,
-                "window.localStorage": 1
+                "Date.prototype.getTime": 1,
+                "Document.cookie setter": 1
             },
             "sites": 2,
             "prevalence": 0.000201,
@@ -65,8 +80,8 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "elpais.com",
-                "www.hola.com"
+                "as.com",
+                "www.straitstimes.com"
             ]
         },
         {
@@ -74,8 +89,8 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "17804197646525de5ecdf2f895e7b28546f6336aa38fd419b52dec5a.trk",
-                "17804225988197670a29043a35417d137b4fd6c2ad70682935dfe512.trk"
+                "178493219037984872cfd836d8643ceb8bc4ad0edc41e368e45e5fee.trk",
+                "17849340028408f7ce4f178ebf770ace9a1e1a7f21d32d5db6a9ef82.trk"
             ],
             "apis": {},
             "sites": 2,
@@ -88,8 +103,8 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "elpais.com",
-                "www.hola.com"
+                "as.com",
+                "www.straitstimes.com"
             ]
         },
         {
@@ -97,7 +112,8 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "es1-s2s"
+                "es1-s2s",
+                "sg2-s2s"
             ],
             "apis": {},
             "sites": 2,
@@ -108,26 +124,30 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "elpais.com",
-                "www.hola.com"
+                "as.com",
+                "www.straitstimes.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.0001,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.5
+            "prevalence": 0.625
         },
         {
             "domain": "adobedtm.com",
-            "prevalence": 0.25
+            "prevalence": 0.125
         },
         {
-            "domain": "tiqcdn.com",
-            "prevalence": 0.25
+            "domain": "prisamedia.com",
+            "prevalence": 0.125
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.125
         }
     ],
     "types": {
@@ -137,9 +157,9 @@
         "Fetch": 2
     },
     "nameservers": [
-        "ns-1850.awsdns-39.co.uk",
         "ns-192.awsdns-24.com",
+        "ns-1003.awsdns-61.net",
         "ns-1081.awsdns-07.org",
-        "ns-1003.awsdns-61.net"
+        "ns-1850.awsdns-39.co.uk"
     ]
 }

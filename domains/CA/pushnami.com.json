@@ -7,12 +7,13 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000505,
+    "prevalence": 0.000504,
     "sites": 5,
     "subdomains": [
         "trc",
+        "cdn",
         "api",
-        "cdn"
+        "psp"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -26,7 +27,7 @@
             ],
             "apis": {},
             "sites": 5,
-            "prevalence": 0.000505,
+            "prevalence": 0.000504,
             "cnames": [],
             "responseHashes": [
                 "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3"
@@ -51,7 +52,7 @@
             ],
             "apis": {},
             "sites": 5,
-            "prevalence": 0.000505,
+            "prevalence": 0.000504,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
@@ -66,13 +67,40 @@
             ]
         },
         {
-            "rule": "pushnami\\.com\\/scripts\\/v1\\/hub",
+            "rule": "pushnami\\.com\\/js\\/workers\\/sw\\.355e010fef1d4bf4045b\\.bundle\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "api"
+                "cdn"
             ],
             "apis": {},
+            "sites": 5,
+            "prevalence": 0.000504,
+            "cnames": [],
+            "responseHashes": [
+                "51c4937685da9878b413e809018cbb94a489dbd50a143fb365baac1de5fa88a2"
+            ],
+            "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "money.ca",
+                "www.biblestudytools.com",
+                "www.christianity.com",
+                "www.crosswalk.com",
+                "www.premierguitar.com"
+            ]
+        },
+        {
+            "rule": "pushnami\\.com\\/scripts\\/v1\\/hub",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {
+                "window.localStorage": 2
+            },
             "sites": 2,
             "prevalence": 0.000202,
             "cnames": [],
@@ -88,27 +116,44 @@
             ]
         },
         {
-            "rule": "pushnami\\.com\\/js\\/workers\\/sw\\.355e010fef1d4bf4045b\\.bundle\\.js",
+            "rule": "pushnami\\.com\\/api\\/psp",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "cdn"
+                "psp"
             ],
             "apis": {},
-            "sites": 5,
-            "prevalence": 0.000505,
+            "sites": 2,
+            "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "51c4937685da9878b413e809018cbb94a489dbd50a143fb365baac1de5fa88a2"
+                "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3"
             ],
-            "type": "Other",
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "money.ca",
-                "www.biblestudytools.com",
-                "www.christianity.com",
-                "www.crosswalk.com",
+                "www.premierguitar.com"
+            ]
+        },
+        {
+            "rule": "pushnami\\.com\\/api\\/psp",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "psp"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "money.ca",
                 "www.premierguitar.com"
             ]
         },
@@ -173,10 +218,10 @@
         }
     ],
     "types": {
-        "Fetch": 5,
-        "Preflight": 5,
-        "Document": 2,
+        "Fetch": 7,
+        "Preflight": 7,
         "Other": 5,
+        "Document": 2,
         "Script": 4
     },
     "nameservers": [
