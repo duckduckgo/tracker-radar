@@ -7,8 +7,8 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000479,
-    "sites": 7,
+    "prevalence": 0.0000685,
+    "sites": 10,
     "subdomains": [
         "www",
         "feedback",
@@ -18,21 +18,22 @@
     "fingerprinting": 1,
     "resources": [
         {
-            "rule": "lowes\\.com\\/",
-            "cookies": 0.00000685,
+            "rule": "lowes\\.com\\/login\\/",
+            "cookies": 0.0000205,
             "fingerprinting": 0,
             "subdomains": [],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "sites": 3,
+            "prevalence": 0.0000205,
             "cnames": [],
             "responseHashes": [],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "allofadult.com",
-                "hadesex.com"
+                "hadesex.com",
+                "spicy-fuck.com",
+                "www.planetsuzy.org"
             ]
         },
         {
@@ -47,7 +48,7 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "7edd5a7d7935289195c7fa5383f87624d210d914647165489cc77ba22450c723"
+                "534d5708854700ce0da5c113ae8e97064bbaf034c4bd18d17b4913e3c12f7faf"
             ],
             "type": "Document",
             "firstPartyCookies": {},
@@ -96,7 +97,9 @@
             "responseHashes": [],
             "type": "Preflight",
             "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
+            "firstPartyCookiesSent": {
+                "https://feedback.lowes.com/feedbackconfigservice/amc/feedbackconfig/live?config_id": 0.000006849643476057072
+            },
             "exampleSites": [
                 "lowesprosupply.com",
                 "www.lowesprosupply.com"
@@ -104,7 +107,7 @@
         },
         {
             "rule": "lowes\\.com\\/feedbackconfigservice\\/amc\\/feedbackconfig\\/live",
-            "cookies": 0.0000137,
+            "cookies": 0.00000685,
             "fingerprinting": 0,
             "subdomains": [
                 "feedback"
@@ -118,7 +121,9 @@
             ],
             "type": "XHR",
             "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
+            "firstPartyCookiesSent": {
+                "https://feedback.lowes.com/feedbackconfigservice/amc/feedbackconfig/live?config_id": 0.000006849643476057072
+            },
             "exampleSites": [
                 "lowesprosupply.com",
                 "www.lowesprosupply.com"
@@ -141,8 +146,30 @@
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "https://www.lowes.com/trackify/api/v1/config?sourceId": 0.000006848376934666484
+                "https://www.lowes.com/trackify/api/v1/config?sourceId": 0.000006849643476057072
             },
+            "exampleSites": [
+                "lowesprosupply.com",
+                "www.lowesprosupply.com"
+            ]
+        },
+        {
+            "rule": "lowes\\.com\\/ingest\\/v1\\/web\\/start",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "replayhub"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "de311891db1f92dc6024fa0403b337ceb03ce79ef27728f5620571e19ca7d459"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
             "exampleSites": [
                 "lowesprosupply.com",
                 "www.lowesprosupply.com"
@@ -161,28 +188,6 @@
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "lowesprosupply.com",
-                "www.lowesprosupply.com"
-            ]
-        },
-        {
-            "rule": "lowes\\.com\\/ingest\\/v1\\/web\\/start",
-            "cookies": 0.0000137,
-            "fingerprinting": 0,
-            "subdomains": [
-                "replayhub"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "8fb608d328207d611783a75cbcd18bbe7163d89301d32bd4384f2404a501a0dc"
-            ],
-            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -233,6 +238,28 @@
             ]
         },
         {
+            "rule": "lowes\\.com\\/trackify\\/api\\/v1\\/ingest\\/events",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lowesprosupply.com",
+                "www.lowesprosupply.com"
+            ]
+        },
+        {
             "rule": "lowes\\.com\\/ingest\\/v1\\/web\\/i",
             "cookies": 0,
             "fingerprinting": 0,
@@ -271,49 +298,27 @@
                 "lowesprosupply.com",
                 "www.lowesprosupply.com"
             ]
-        },
-        {
-            "rule": "lowes\\.com\\/trackify\\/api\\/v1\\/ingest\\/events",
-            "cookies": 0.0000137,
-            "fingerprinting": 0,
-            "subdomains": [
-                "www"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-            ],
-            "type": "Ping",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "lowesprosupply.com",
-                "www.lowesprosupply.com"
-            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0000342,
+    "cookies": 0.0000479,
     "topInitiators": [
         {
+            "domain": "first party",
+            "prevalence": 0.5
+        },
+        {
             "domain": "techlab-cdn.com",
-            "prevalence": 0.7894736842105263
+            "prevalence": 0.35
         },
         {
             "domain": "korfo.org",
-            "prevalence": 0.15789473684210525
-        },
-        {
-            "domain": "first party",
-            "prevalence": 0.05263157894736842
+            "prevalence": 0.15
         }
     ],
     "types": {
-        "Script": 4,
+        "Script": 5,
         "Document": 2,
         "Preflight": 8,
         "XHR": 2,
@@ -321,13 +326,13 @@
         "Ping": 2
     },
     "nameservers": [
+        "use1.akam.net",
+        "asia1.akam.net",
+        "ns1-42.akam.net",
         "eur2.akam.net",
         "use2.akam.net",
-        "asia1.akam.net",
-        "usc5.akam.net",
+        "ns1-216.akam.net",
         "use4.akam.net",
-        "ns1-42.akam.net",
-        "use1.akam.net",
-        "ns1-216.akam.net"
+        "usc5.akam.net"
     ]
 }

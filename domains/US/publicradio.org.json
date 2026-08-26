@@ -7,14 +7,36 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.00000685,
-    "sites": 1,
+    "prevalence": 0.0000137,
+    "sites": 2,
     "subdomains": [
-        "nowplayingv2"
+        "cmsapi",
+        "nowplayingv2",
+        "hls.stream"
     ],
     "cnames": [],
     "fingerprinting": 0,
     "resources": [
+        {
+            "rule": "publicradio\\.org\\/graphql",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cmsapi"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "yourclassical.org",
+                "www.yourclassical.org"
+            ]
+        },
         {
             "rule": "publicradio\\.org\\/schedule\\/classical-24\\/v1",
             "cookies": 0,
@@ -34,6 +56,50 @@
                 "yourclassical.org",
                 "www.yourclassical.org"
             ]
+        },
+        {
+            "rule": "publicradio\\.org\\/graphql",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cmsapi"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "cb80c42d4733325facc11b4d1b613111326fca3ce67a97ec21d1e6987c726628"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "yourclassical.org",
+                "www.yourclassical.org"
+            ]
+        },
+        {
+            "rule": "publicradio\\.org\\/ycradio-hls\\/playlist\\.m3u8",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "hls.stream"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "56a0260c74c4c7b48c60699a8dd6c1d4ebc2d50d5e54be7662199e8553db0ae9"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "yourclassical.org",
+                "www.yourclassical.org"
+            ]
         }
     ],
     "categories": [],
@@ -46,10 +112,13 @@
         }
     ],
     "types": {
-        "WebSocket": 2
+        "Preflight": 2,
+        "WebSocket": 2,
+        "Fetch": 2,
+        "XHR": 2
     },
     "nameservers": [
-        "ns2.mpr.org",
-        "ns1.mpr.org"
+        "ns1.mpr.org",
+        "ns2.mpr.org"
     ]
 }

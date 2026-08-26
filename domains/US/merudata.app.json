@@ -11,6 +11,7 @@
         "tirerack-gpc",
         "ccm",
         "lesschwab-gpc",
+        "cc-signal",
         "ccm-logos"
     ],
     "cnames": [],
@@ -76,7 +77,7 @@
                 "ccm"
             ],
             "apis": {
-                "Document.cookie getter": 1
+                "Document.cookie getter": 2
             },
             "sites": 2,
             "prevalence": 0.0000137,
@@ -100,11 +101,11 @@
                 "ccm"
             ],
             "apis": {
+                "Document.cookie getter": 2,
+                "Navigator.prototype.language": 2,
+                "Navigator.prototype.doNotTrack": 2,
                 "Document.cookie setter": 2,
                 "Date.prototype.getTime": 2,
-                "Navigator.prototype.doNotTrack": 2,
-                "Navigator.prototype.language": 2,
-                "Document.cookie getter": 2,
                 "Navigator.prototype.userAgent": 2,
                 "Navigator.prototype.webdriver": 2
             },
@@ -119,13 +120,13 @@
                 "mppCookie": {
                     "ttl": 31536001,
                     "length": 886,
-                    "prevalence": 0.000013696753869332969,
+                    "prevalence": 0.000013699286952114143,
                     "uniqueness": 1
                 },
                 "us_privacy": {
                     "ttl": 31536001,
                     "length": 4,
-                    "prevalence": 0.000013696753869332969,
+                    "prevalence": 0.000013699286952114143,
                     "uniqueness": 0.5
                 }
             },
@@ -143,8 +144,8 @@
                 "lesschwab-gpc"
             ],
             "apis": {
-                "Date.prototype.getTime": 2,
                 "Document.cookie getter": 2,
+                "Date.prototype.getTime": 2,
                 "Document.cookie setter": 2
             },
             "sites": 2,
@@ -189,16 +190,18 @@
         {
             "rule": "merudata\\.app\\/assets\\/ca4ad456-5de5-4b34-8b2f-66bbbf9c510a\\/ccmconfig\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "ccm"
             ],
-            "apis": {},
+            "apis": {
+                "Document.cookie getter": 2
+            },
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                "1248b6dd4bba264d6106cb7197264209f0f9cdad3629114b0cf6b6dd084b3337"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -210,20 +213,47 @@
         },
         {
             "rule": "merudata\\.app\\/assets\\/ca4ad456-5de5-4b34-8b2f-66bbbf9c510a\\/ccm\\.min\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
+            "cookies": 0.0000137,
+            "fingerprinting": 2,
             "subdomains": [
                 "ccm"
             ],
-            "apis": {},
+            "apis": {
+                "Document.cookie getter": 2,
+                "Navigator.prototype.language": 2,
+                "Navigator.prototype.doNotTrack": 2,
+                "Document.cookie setter": 2,
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.webdriver": 2
+            },
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                "887651aed456b5ae5b44243ec17c5a50ee1500c0e8d8aad26307b54d92d6f2a5"
             ],
             "type": "Script",
-            "firstPartyCookies": {},
+            "firstPartyCookies": {
+                "mppCookie": {
+                    "ttl": 31536000,
+                    "length": 471,
+                    "prevalence": 0.000013699286952114143,
+                    "uniqueness": 1
+                },
+                "us_privacy": {
+                    "ttl": 31536000,
+                    "length": 4,
+                    "prevalence": 0.000013699286952114143,
+                    "uniqueness": 0.5
+                },
+                "mppCookie_Consent": {
+                    "ttl": 31536021,
+                    "length": 1326,
+                    "prevalence": 0.000013699286952114143,
+                    "uniqueness": 1
+                }
+            },
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "tirerack.com",
@@ -242,9 +272,51 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                "140f837f19f6ef69f069ee8ac56c3e68c3ce3740abd8e710bff96d6f9670ae6a"
             ],
             "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tirerack.com",
+                "www.tirerack.com"
+            ]
+        },
+        {
+            "rule": "merudata\\.app\\/api\\/consent",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cc-signal"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "tirerack.com",
+                "www.tirerack.com"
+            ]
+        },
+        {
+            "rule": "merudata\\.app\\/api\\/consent",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cc-signal"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "c88a0b907419a70c27ab7c1f8e5fb54441a4d9c3567e4c928fa7b2091194aecf"
+            ],
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -266,7 +338,7 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "03638e827a734c6a263cc21c3a64e3e08824f27c50b1a8d346802073a98f92f7"
+                "76684c7448dd3dd987e6c54c3012fec09eedc27b03fdb9dc6b96a419b4b62b2a"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -290,26 +362,28 @@
                 "Date.prototype.getTime": 2,
                 "Navigator.prototype.doNotTrack": 2,
                 "Navigator.prototype.userAgent": 2,
-                "Navigator.prototype.webdriver": 2
+                "Navigator.prototype.webdriver": 2,
+                "window.innerHeight": 1,
+                "window.innerWidth": 1
             },
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "d129393dd66132aaff0222709bcbe0121cfbad59951821ef2282917733700eea"
+                "4eb650bc236c555bb7924cfdd75798841521e97d2aa64bc673efd615a2ec902e"
             ],
             "type": "Script",
             "firstPartyCookies": {
                 "mppCookie": {
                     "ttl": 31536001,
                     "length": 471,
-                    "prevalence": 0.000013696753869332969,
+                    "prevalence": 0.000013699286952114143,
                     "uniqueness": 1
                 },
                 "us_privacy": {
                     "ttl": 31536001,
                     "length": 4,
-                    "prevalence": 0.000013696753869332969,
+                    "prevalence": 0.000013699286952114143,
                     "uniqueness": 0.5
                 }
             },
@@ -331,7 +405,7 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "c58cc41c02e25e33a0308b992bf1ea6d70cfad75b31474892670841de055b5ee"
+                "d04378ab8caf127e753172cdc2615fa4b43c641b962841c795a5c249b83bdbd2"
             ],
             "type": "Stylesheet",
             "firstPartyCookies": {},
@@ -399,7 +473,7 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "68b078173a22681487465abd5c4f9883dacc8f99b25b89999178919ee6f5bc1a"
+                "093bd76b33e5389046c56bd2141603463852f321823de53273b4ef5c4717f4a2"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -421,7 +495,7 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "6dd67bf702df24932508ca15a8c41cc84b4649fdbf2f080805bca8d20d7b66e6"
+                "05424bce22b7cfeef8408a19ba4c2a9b2cb366974fff181ab1fe69d598371afb"
             ],
             "type": "Stylesheet",
             "firstPartyCookies": {},
@@ -451,20 +525,20 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "c56606649dfc338021970f316216c5f0e4e26f03e53c77f1a141ce5939a0fbb2"
+                "b346b735410f6f22de6699165f2e26aab0618797348af46251a2409efd9de976"
             ],
             "type": "Script",
             "firstPartyCookies": {
                 "mppCookie": {
-                    "ttl": 31536004,
+                    "ttl": 31536003,
                     "length": 471,
-                    "prevalence": 0.000013696753869332969,
+                    "prevalence": 0.000013699286952114143,
                     "uniqueness": 1
                 },
                 "us_privacy": {
-                    "ttl": 31536004,
+                    "ttl": 31536003,
                     "length": 4,
-                    "prevalence": 0.000013696753869332969,
+                    "prevalence": 0.000013699286952114143,
                     "uniqueness": 0.5
                 }
             },
@@ -510,7 +584,7 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "37a5fe0c6ac402957f8bda9e046ea882c916c10725a387ce5988ae6eb12b3222"
+                "e73a72d460d6c64233580aaf024108e9372c47959258cc96012079e13522985e"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -532,7 +606,7 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "38eb294c3f7873281a172e1f50258012fa3735b7c9db828dad329fc245be1a5d"
+                "71aacf33338f6dd1f631fe0ce537e100450e063576217c8e55c5d521c77e5ef1"
             ],
             "type": "Stylesheet",
             "firstPartyCookies": {},
@@ -562,20 +636,20 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "973aa4aef47acf46e363b5de63c2f2981e4f632e632b1e1f42cd54adb643688f"
+                "0c1ebda54d6d94a76fd40bebce74c8dbc45a2db96dfca5d8227e79c221cbee14"
             ],
             "type": "Script",
             "firstPartyCookies": {
                 "mppCookie": {
                     "ttl": 31536003,
                     "length": 471,
-                    "prevalence": 0.000013696753869332969,
+                    "prevalence": 0.000013699286952114143,
                     "uniqueness": 1
                 },
                 "us_privacy": {
                     "ttl": 31536003,
                     "length": 4,
-                    "prevalence": 0.000013696753869332969,
+                    "prevalence": 0.000013699286952114143,
                     "uniqueness": 0.5
                 }
             },
@@ -588,30 +662,32 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0000685,
+    "cookies": 0.000089,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.74
+            "prevalence": 0.7678571428571429
         },
         {
             "domain": "sdiapi.com",
-            "prevalence": 0.18
+            "prevalence": 0.16071428571428573
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.08
+            "prevalence": 0.07142857142857142
         }
     ],
     "types": {
         "Script": 31,
         "Stylesheet": 14,
+        "Preflight": 2,
+        "XHR": 2,
         "Image": 2
     },
     "nameservers": [
-        "ns-cloud-e2.googledomains.com",
         "ns-cloud-e3.googledomains.com",
+        "ns-cloud-e4.googledomains.com",
         "ns-cloud-e1.googledomains.com",
-        "ns-cloud-e4.googledomains.com"
+        "ns-cloud-e2.googledomains.com"
     ]
 }

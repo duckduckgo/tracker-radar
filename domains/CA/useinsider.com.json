@@ -10,11 +10,145 @@
     "prevalence": 0.000202,
     "sites": 2,
     "subdomains": [
+        "koreanairkr.api",
+        "samsungca.api",
+        "ucd-web.api",
+        "locationv2.api",
         "hit.api"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "useinsider\\.com\\/ins\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "koreanairkr.api",
+                "samsungca.api"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.vendor": 2,
+                "Navigator.prototype.maxTouchPoints": 2,
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.permissions": 2,
+                "Document.cookie getter": 1,
+                "window.sessionStorage": 2,
+                "window.indexedDB": 2,
+                "Notification.permission": 2,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 2,
+                "Navigator.prototype.webkitTemporaryStorage": 1,
+                "Performance.prototype.memory": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "322b7f48d928eae4b12b65d5a5bae5d5c0414de07da088a6790ef2d5129bb138"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "koreanair.com",
+                "www.samsung.com"
+            ]
+        },
+        {
+            "rule": "useinsider\\.com\\/worker-new\\.html",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "koreanairkr.api",
+                "samsungca.api"
+            ],
+            "apis": {
+                "window.name": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Date.prototype.getTime": 2,
+                "window.localStorage": 2,
+                "Document.cookie getter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "d84976707d45c775e06064fa2fc8af50bc7e95a925e9336130c304769788d0ba"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "koreanair.com",
+                "www.samsung.com"
+            ]
+        },
+        {
+            "rule": "useinsider\\.com\\/v1\\/get",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ucd-web.api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "koreanair.com",
+                "www.samsung.com"
+            ]
+        },
+        {
+            "rule": "useinsider\\.com\\/v1\\/get",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ucd-web.api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "f09eb8d61b05add11c77a5406be4ad9835b6edad2ad824c59c0718103f55c4a6"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "koreanair.com",
+                "www.samsung.com"
+            ]
+        },
+        {
+            "rule": "useinsider\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "locationv2.api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "84590b9c941121876d15a45f0ce7891782e5251a7c76b3b2d98a34d235f7c6c8"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "koreanair.com",
+                "www.samsung.com"
+            ]
+        },
         {
             "rule": "useinsider\\.com\\/hit",
             "cookies": 0,
@@ -33,7 +167,7 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "samsung.com",
+                "koreanair.com",
                 "www.samsung.com"
             ]
         }
@@ -44,19 +178,26 @@
     "topInitiators": [
         {
             "domain": "go-mpulse.net",
-            "prevalence": 0.8
+            "prevalence": 0.5
         },
         {
-            "domain": "first party",
-            "prevalence": 0.1
+            "domain": "dynatrace.com",
+            "prevalence": 0.35714285714285715
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.07142857142857142
         },
         {
             "domain": "adobedtm.com",
-            "prevalence": 0.1
+            "prevalence": 0.07142857142857142
         }
     ],
     "types": {
-        "XHR": 2
+        "Script": 2,
+        "Document": 2,
+        "Preflight": 2,
+        "XHR": 6
     },
     "nameservers": [
         "eric.ns.cloudflare.com",

@@ -9,7 +9,9 @@
     "subdomains": [
         "dist",
         "hem",
-        "pipeline"
+        "pipeline",
+        "cdn",
+        "events"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -32,7 +34,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "1a8085436aa283ecd0f2490fd3dc75861d7c7d97f261f7df89019fec0e8c8a4c"
+                "7a91cd78ba459766124d55fc75271ef17952b9e1d865bec904619f232f9aa864"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -64,14 +66,14 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "756e3f65c4d9b29852a63cacb1e5d3fb29c0cedce5af4cd779a246cf3d0f8206"
+                "8ed729f2c060c3ef6839547b02b9e9f7f4cb47ffd3f3e2ff5d279cd8329a1dca"
             ],
             "type": "Script",
             "firstPartyCookies": {
                 "bc.lh.session_id": {
                     "ttl": 1800,
                     "length": 36,
-                    "prevalence": 0.00020118700331958554,
+                    "prevalence": 0.00020130850528434828,
                     "uniqueness": 1
                 }
             },
@@ -166,6 +168,51 @@
                 "tvtropes.org",
                 "www.snopes.com"
             ]
+        },
+        {
+            "rule": "bigcrunch\\.com\\/config\\/7baaa297-8659-496c-ab3a-63eff8584214\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "snopes.com",
+                "www.snopes.com"
+            ]
+        },
+        {
+            "rule": "bigcrunch\\.com\\/viewability",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pipeline",
+                "events"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "30fbaafab5a90e6212b8eca35137502c5badf3b9d1f75821111b80677f26778d"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "snopes.com",
+                "www.snopes.com"
+            ]
         }
     ],
     "categories": [],
@@ -174,17 +221,18 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.6
+            "prevalence": 0.7
         },
         {
             "domain": "doubleclick.net",
-            "prevalence": 0.4
+            "prevalence": 0.3
         }
     ],
     "types": {
         "Script": 4,
-        "Fetch": 6,
-        "Preflight": 2
+        "Fetch": 8,
+        "Preflight": 2,
+        "Other": 2
     },
     "nameservers": [
         "sid.ns.cloudflare.com",

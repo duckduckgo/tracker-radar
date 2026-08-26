@@ -12,15 +12,20 @@
     "prevalence": 0.0000411,
     "sites": 6,
     "subdomains": [
-        "idp"
+        "idp",
+        "cdn"
     ],
     "cnames": [
+        {
+            "original": "cdn.aa.com",
+            "resolved": "cdn.aa.com.edgekey.net"
+        },
         {
             "original": "idp.aa.com",
             "resolved": "idp.aa.com.edgekey.net"
         }
     ],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "aa\\.com\\.edgekey\\.net\\/as\\/authorization\\.oauth2",
@@ -47,6 +52,33 @@
                 "retirees.aa.com",
                 "travelplanner.etp.aa.com"
             ]
+        },
+        {
+            "rule": "aa\\.com\\.edgekey\\.net\\/dcfsmartweb\\/dist\\/dcf-smartwebservice-prod\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "cdn.aa.com",
+                    "resolved": "cdn.aa.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "f1feb39eb6606bd453a7bd181a3ccc700207c2517e7d92c5948c060d49d84ff4"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "aa.com",
+                "login.aa.com"
+            ]
         }
     ],
     "categories": [],
@@ -55,15 +87,12 @@
     "topInitiators": [
         {
             "domain": "tiqcdn.com",
-            "prevalence": 0.6
-        },
-        {
-            "domain": "quantummetric.com",
-            "prevalence": 0.4
+            "prevalence": 1
         }
     ],
     "types": {
-        "Document": 3
+        "Document": 3,
+        "Script": 2
     },
     "nameservers": []
 }

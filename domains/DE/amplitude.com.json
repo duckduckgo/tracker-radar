@@ -9,21 +9,23 @@
     "source": [
         "DuckDuckGo-DE"
     ],
-    "prevalence": 0.00413,
-    "sites": 41,
+    "prevalence": 0.00423,
+    "sites": 42,
     "subdomains": [
         "cdn",
         "sr-client-cfg",
         "sr-client-cfg.eu",
         "api-sr",
+        "flag.lab",
+        "flag.lab.eu",
         "api2",
         "api.eu",
         "api",
-        "api.lab.eu",
-        "api.lab",
         "cdn.eu",
+        "gs",
         "gs.eu",
-        "gs"
+        "api.lab.eu",
+        "api.lab"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -61,14 +63,13 @@
                 "sr-client-cfg.eu"
             ],
             "apis": {},
-            "sites": 6,
-            "prevalence": 0.000604,
+            "sites": 5,
+            "prevalence": 0.000503,
             "cnames": [],
             "responseHashes": [
                 "5e82265d046058ee7b5a936a202ead0cbf99b0c9aa96dd93c262f8434f2850ef",
-                "9470ead04ca00d5798f879f42a8d93848ac0f62829a1b9eb78dfef1d9153cdcd",
-                "878fec5ea73ecc0ef7e9e71f568dd2d528806f2ca6ed1bcfd893bdf83805ec6a",
-                "6c7e8417e1046a27c9b21b5c4b7a3fe57a585d2fb291b476424e5f1d661dbb75"
+                "22361a5d55b9e930570d1b39767558e131beabfb13407ff29130102343f0084f",
+                "878fec5ea73ecc0ef7e9e71f568dd2d528806f2ca6ed1bcfd893bdf83805ec6a"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -76,7 +77,6 @@
             "exampleSites": [
                 "clickup.com",
                 "meet.jit.si",
-                "www.express.co.uk",
                 "www.fetisch.de",
                 "www.gay.de",
                 "www.poppen.de"
@@ -90,8 +90,8 @@
                 "api-sr"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 5,
+            "prevalence": 0.000503,
             "cnames": [],
             "responseHashes": [
                 "aee408847d35e44e99430f0979c3357b85fe8dbb4535a494301198adbee85f27"
@@ -101,6 +101,9 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "clickup.com",
+                "de.norton.com",
+                "docs.getdbt.com",
+                "www.ms.now",
                 "www.youngliving.com"
             ]
         },
@@ -112,6 +115,53 @@
                 "api-sr"
             ],
             "apis": {},
+            "sites": 5,
+            "prevalence": 0.000503,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "clickup.com",
+                "de.norton.com",
+                "docs.getdbt.com",
+                "www.ms.now",
+                "www.youngliving.com"
+            ]
+        },
+        {
+            "rule": "amplitude\\.com\\/sdk\\/v2\\/flags",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "flag.lab",
+                "flag.lab.eu"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "d7eb7d4b12e021d169dcc56c2e2b01af8770e5e08dd7cb6de2ee7bafd09619a3"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "norton.com",
+                "www.dominos.de"
+            ]
+        },
+        {
+            "rule": "amplitude\\.com\\/sdk\\/v2\\/flags",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "flag.lab",
+                "flag.lab.eu"
+            ],
+            "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
@@ -120,8 +170,30 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "clickup.com",
-                "www.youngliving.com"
+                "norton.com",
+                "www.dominos.de"
+            ]
+        },
+        {
+            "rule": "amplitude\\.com\\/config\\/9e18681a6fb5657a505091047aab39d1",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sr-client-cfg"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "be34b023fc962d37b49270fa8cb4df24625b1845236312f9ba13779e061d1563"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "norton.com",
+                "de.norton.com"
             ]
         },
         {
@@ -147,11 +219,131 @@
             ]
         },
         {
-            "rule": "amplitude\\.com\\/2\\/httpapi",
+            "rule": "amplitude\\.com\\/libs\\/plugin-session-replay-browser-1\\.32\\.1-min\\.js\\.gz",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "URL.createObjectURL": 2,
+                "window.innerWidth": 2,
+                "window.innerHeight": 2,
+                "Navigator.prototype.storage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "36c0113d0a5b6ee4ff64fb952c1063463c9665aafa14e1459d11ec1044248860"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "getdbt.com",
+                "www.ms.now"
+            ]
+        },
+        {
+            "rule": "amplitude\\.com\\/libs\\/analytics-browser-2\\.42\\.4-min\\.js\\.gz",
+            "cookies": 0.000201,
+            "fingerprinting": 2,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "window.indexedDB": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Document.cookie setter": 2,
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 2,
+                "CookieStore.prototype.getAll": 2,
+                "Navigator.prototype.onLine": 2,
+                "window.sessionStorage": 1,
+                "Navigator.prototype.languages": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "a69870023259379991d0bb70de9d735c68dfe64fa3c51f0e78ffff9966e166f9"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "AMP_TEST": {
+                    "ttl": -86394,
+                    "length": 6,
+                    "prevalence": 0.00020126798832645668,
+                    "uniqueness": 0.5
+                },
+                "AMP_TLDTEST": {
+                    "ttl": -86394,
+                    "length": 6,
+                    "prevalence": 0.00020126798832645668,
+                    "uniqueness": 0.5
+                },
+                "AMP_edc81d3811": {
+                    "ttl": 31536006,
+                    "length": 332,
+                    "prevalence": 0.00010063399416322834,
+                    "uniqueness": 1
+                },
+                "AMP_MKTG_edc81d3811": {
+                    "ttl": 31536006,
+                    "length": 8,
+                    "prevalence": 0.00010063399416322834,
+                    "uniqueness": 1
+                },
+                "AMP_14af08698e": {
+                    "ttl": 31536008,
+                    "length": 327,
+                    "prevalence": 0.00010063399416322834,
+                    "uniqueness": 1
+                },
+                "AMP_MKTG_14af08698e": {
+                    "ttl": 31536008,
+                    "length": 8,
+                    "prevalence": 0.00010063399416322834,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "getdbt.com",
+                "www.ms.now"
+            ]
+        },
+        {
+            "rule": "amplitude\\.com\\/config\\/edc81d381112fad397c2c5ca6063e963",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "api2"
+                "sr-client-cfg"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "97062fa51b41981ae22899001851c8114c5d536aa8f39e4092c6897273ecbf72"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "getdbt.com",
+                "docs.getdbt.com"
+            ]
+        },
+        {
+            "rule": "amplitude\\.com\\/config\\/edc81d381112fad397c2c5ca6063e963",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sr-client-cfg"
             ],
             "apis": {},
             "sites": 2,
@@ -160,12 +352,12 @@
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
             ],
-            "type": "Ping",
+            "type": "Other",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "qt.io",
-                "openart.ai"
+                "getdbt.com",
+                "docs.getdbt.com"
             ]
         },
         {
@@ -177,49 +369,53 @@
                 "api.eu"
             ],
             "apis": {},
-            "sites": 18,
-            "prevalence": 0.00181,
+            "sites": 21,
+            "prevalence": 0.00211,
             "cnames": [],
             "responseHashes": [
-                "0832c0a077472c5ce19b0b71e6c7edd0f899f66f628e12ae797f2b21a98b0630",
-                "408645ab98c02d26731fad739df9e9965fb70ec7621f767b00854cabc104b784",
-                "05ebc12e9273d721bebbc570412b052d6d33f905181eb7ddd68120587af67fd8",
-                "ba174677dcaae27f5ef6de09c33ce325e871eb8310045e9230f7e68337cd75ed",
-                "1ab0e9677ee2205d3e8f3e3058ee994caecb552c8a940d35be261fe907a8f5eb",
-                "680b1e58aea322410f3dff45d11ee7b207ee8e0b4571693da3fc74cd6442cc4f",
-                "6685dfe209bf691046b6f11289d904d7e316454be14d0227ff0fbf5c20863a95",
-                "eed74b03e6c35e0afef6e6c1b195061ea2679b31cf70be5247a78e35ed0e4159",
-                "584a8c1bac3c2bf929989a76528db2738ae8b52d768e8bae6d36568bf17b0a8f",
-                "68ece1f9de8abbf48d6a2d36d051b5bd6abc2fefa819ad9f5568d671e0af7883",
-                "ebdacf941b4a0c5739202566c6cabbcb236ec0898f406cd4a6760e52cb4c9287",
-                "f024fccb696dbd24178ec6100f454f3fa7e8b56d79b2a7c62eedaa1cb6943726",
-                "a94ce3cea4619a70a9d8939c1da628fa77548d8a754587cf131e530fffebf354",
-                "dc903e98889529474a8068a7abee9e422855723c9e3beed4ebd3a4314b143dc2",
-                "9c20c2a4bb0867eade5ddf475ac12b4530f0a05560eb0ff9e2c8c9b93e08c891",
-                "07c5f92900597132dd028a6ca5ecda246727e5d8834e3be0aaf3b9683f96ba3a"
+                "ba1ff1278c42b2a508bed530df7ba3f6143f3cc18737a1710b305606979fa167",
+                "97a8b42080e485f560788cb544164c569a0be2b37a3383ad7913a2c41c336482",
+                "410a7beced8d86467bbc02397facfabc7e89d121ca3b6c8f16bc98ee9a801789",
+                "e0479b1b99cb045b9817872e37b7e5c14352bbe7eb60d55ba1fb4cdbc4c458df",
+                "b42e4a609f8fd88391690c95338619547aa2d6da6d899aa29cd5a615cd67ed61",
+                "2e99d2bcdb38a4be5c759f78f131c4b81ea003bf3ceb1c365b885d9dc0e72d02",
+                "bcfd4bf0972956a2796e87ccb7f8c66f40992498ec1ab284e2bd70987c8a8a4f",
+                "2407be7b1089d85ca1e019ec285993507bf9c0610b0e2923fd1681b2ed46ccf6",
+                "9328e2ac2e32b71d6a8ae43443f635f42fcc6174b738f00b72676f5a9cda2d21",
+                "a3fddfbbdf1794dc0ff1629787d94a1726200f61371237e7376eb91440dbd045",
+                "47ed885a5cdc4cad7be5477ebfab4bfeffbc6807b8790707302d33d22aa5fbd0",
+                "ee511289d056c7ef32eb12b81460144abef4ecce8431ed90784cee288b39c090",
+                "fd738a8a644cddd523fdc6a7f7e084274072b5be308bf2746c33052a1ae66c4a",
+                "b18e719c4ac4ec099198b928f96baf61eb414ad869128513230a7a6cb7bad6c0",
+                "fbe8ec2761569357cba6d7ae02aafcce9aa1c753cf692e90b078605947dd20f4",
+                "4ee0f5745fd0b6aa2f60ba54f6082a914097b0c941ce98f326065abed9f402ce",
+                "d4195cbfedca6e237fefd51e47ee0152a7bfe7e651b8b48031a2591845bbc54e",
+                "cbabb06d75f208c434f375998285bc360cdcc41616b7d74ba13da29138aa4673"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "ersties.com",
-                "kahoot.com",
-                "liquipedia.net",
-                "meet.jit.si",
-                "talents.studysmarter.de",
-                "www.aljazeera.com",
-                "www.carwow.de",
                 "www.express.co.uk",
-                "www.fetisch.de",
-                "www.gay.de",
-                "www.image-line.com",
-                "www.kaufmich.com",
-                "www.kapwing.com",
                 "www.ns.nl",
-                "www.poppen.de",
+                "www.image-line.com",
+                "gameboost.com",
+                "kahoot.com",
                 "www.sofatutor.com",
+                "tamaris.com",
+                "www.fetisch.de",
+                "ersties.com",
+                "www.poppen.de",
                 "www.studysmarter.de",
-                "www.youngliving.com"
+                "getdbt.com",
+                "www.carwow.de",
+                "meet.jit.si",
+                "www.kapwing.com",
+                "www.aljazeera.com",
+                "www.ms.now",
+                "www.youngliving.com",
+                "www.gay.de",
+                "talents.studysmarter.de"
             ]
         },
         {
@@ -231,17 +427,18 @@
                 "api.eu"
             ],
             "apis": {},
-            "sites": 18,
-            "prevalence": 0.00181,
+            "sites": 20,
+            "prevalence": 0.00201,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
+                "getdbt.com",
                 "ersties.com",
+                "gameboost.com",
                 "kahoot.com",
-                "liquipedia.net",
                 "meet.jit.si",
                 "talents.studysmarter.de",
                 "www.aljazeera.com",
@@ -252,6 +449,7 @@
                 "www.image-line.com",
                 "www.kaufmich.com",
                 "www.kapwing.com",
+                "www.ms.now",
                 "www.ns.nl",
                 "www.poppen.de",
                 "www.sofatutor.com",
@@ -282,90 +480,40 @@
             ]
         },
         {
-            "rule": "amplitude\\.com\\/sdk\\/v2\\/vardata",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "api.lab.eu",
-                "api.lab"
-            ],
-            "apis": {},
-            "sites": 4,
-            "prevalence": 0.000402,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "lustery.com",
-                "talents.studysmarter.de",
-                "www.cnbc.com",
-                "www.studysmarter.de"
-            ]
-        },
-        {
-            "rule": "amplitude\\.com\\/sdk\\/v2\\/vardata",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "api.lab.eu",
-                "api.lab"
-            ],
-            "apis": {},
-            "sites": 4,
-            "prevalence": 0.000402,
-            "cnames": [],
-            "responseHashes": [
-                "f678b31b56b873964c166447dadd88f94e1ad41d2a719933380afa812cf81631",
-                "325ce4580c58e5303fbdfb05401d602d31e4203eddba70d7feba79b89acd658e",
-                "17e049e3c7961269eda43e1b9e9f2935ba67c57165e94ca721289e393173168d"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "lustery.com",
-                "talents.studysmarter.de",
-                "www.cnbc.com",
-                "www.studysmarter.de"
-            ]
-        },
-        {
             "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/index\\.js",
             "cookies": 0,
             "fingerprinting": 1,
             "subdomains": [
-                "cdn.eu",
-                "cdn"
+                "cdn",
+                "cdn.eu"
             ],
             "apis": {
                 "window.localStorage": 3,
-                "Navigator.prototype.userAgent": 3,
-                "Navigator.prototype.languages": 3
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.languages": 2
             },
             "sites": 3,
             "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
-                "3d93f67c9defcdf5e12ade613705f15d0f4ae7ceeaaf39a015737fa06b286673"
+                "f22ea54861aea7eab3e366f15f1251b8b90ba996d4d65285a3b531b49513ee13"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
+                "gameboost.com",
                 "remarkable.com",
-                "www.change.org",
-                "www.hostinger.com"
+                "www.ms.now"
             ]
         },
         {
-            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/9e9b18be93c7348eb43e92d4cc972e7255783448-chunk-VYLYIB5E\\.js",
+            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/726f0c7c97c133242e8d14a8744b5f71f08ae05e-chunk-I6AOLA5B\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "cdn.eu",
-                "cdn"
+                "cdn",
+                "cdn.eu"
             ],
             "apis": {},
             "sites": 3,
@@ -378,234 +526,234 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
+                "gameboost.com",
                 "remarkable.com",
-                "www.change.org",
-                "www.hostinger.com"
+                "www.ms.now"
             ]
         },
         {
-            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/9e9b18be93c7348eb43e92d4cc972e7255783448-chunk-4EUDGPFH\\.js",
+            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/726f0c7c97c133242e8d14a8744b5f71f08ae05e-chunk-TBWZWXTF\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "cdn.eu",
-                "cdn"
+                "cdn",
+                "cdn.eu"
             ],
             "apis": {},
             "sites": 3,
             "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
-                "7a948a1da36f95e1860fe9eea21b49e5e8ec7a5a59701969fc63d6cabb7238bb"
+                "990dbdeb5d77d4fa86c44adac8641923b27f3d405055dbbe4e0f152501e6869d"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
+                "gameboost.com",
                 "remarkable.com",
-                "www.change.org",
-                "www.hostinger.com"
+                "www.ms.now"
             ]
         },
         {
-            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/9e9b18be93c7348eb43e92d4cc972e7255783448-chunk-DK2XUHBQ\\.js",
+            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/726f0c7c97c133242e8d14a8744b5f71f08ae05e-chunk-7C7BRWGO\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "cdn.eu",
-                "cdn"
+                "cdn",
+                "cdn.eu"
             ],
             "apis": {},
             "sites": 3,
             "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
-                "473aa0eff186296d5e5f37f970511107e211d52f85a40ef34a1334dd925a67bd"
+                "30d183b258c7f0ee4e8e80659b122d07e0f395ab4e8838a01f2b833abf9e6b07"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
+                "gameboost.com",
                 "remarkable.com",
-                "www.change.org",
-                "www.hostinger.com"
+                "www.ms.now"
             ]
         },
         {
-            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/9e9b18be93c7348eb43e92d4cc972e7255783448-chunk-YF72ZVDV\\.js",
+            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/726f0c7c97c133242e8d14a8744b5f71f08ae05e-chunk-MSXZ6IF6\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "cdn.eu",
-                "cdn"
+                "cdn",
+                "cdn.eu"
             ],
             "apis": {},
             "sites": 3,
             "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
-                "e544112c8d21b3ef840a8ec5c1823eb4c791a6ec155391f5654047a3cc5a75d4"
+                "2072e824c0839f474e47af50a843ff3900385d02070732c68a86ead0ba2d22c7"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
+                "gameboost.com",
                 "remarkable.com",
-                "www.change.org",
-                "www.hostinger.com"
+                "www.ms.now"
             ]
         },
         {
-            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/9e9b18be93c7348eb43e92d4cc972e7255783448-chunk-A2EKQAMG\\.js",
+            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/726f0c7c97c133242e8d14a8744b5f71f08ae05e-chunk-V6N47F2T\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "cdn.eu",
-                "cdn"
+                "cdn",
+                "cdn.eu"
             ],
             "apis": {},
             "sites": 3,
             "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
-                "b22938283684dbb2c5e1e8d14af7bf5c5380e072f671ece8d28e22505064e2c0"
+                "7b4013136b8f73e1d59234c562f7234d63504875ab03b007fec5d906829a7a50"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
+                "gameboost.com",
                 "remarkable.com",
-                "www.change.org",
-                "www.hostinger.com"
+                "www.ms.now"
             ]
         },
         {
-            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/9e9b18be93c7348eb43e92d4cc972e7255783448-chunk-IZZ3KZMZ\\.js",
+            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/726f0c7c97c133242e8d14a8744b5f71f08ae05e-chunk-T3MM2VNY\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "cdn.eu",
-                "cdn"
+                "cdn",
+                "cdn.eu"
             ],
             "apis": {},
             "sites": 3,
             "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
-                "346bee6a9edacf8e348bcd53bf6094322f3a5568aa26b6bf98d3f70f14c5a8ee"
+                "d63f002d2d859ecb630fc1155cb1827f23afde11949724dadb0719a421c601cf"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
+                "gameboost.com",
                 "remarkable.com",
-                "www.change.org",
-                "www.hostinger.com"
+                "www.ms.now"
             ]
         },
         {
-            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/9e9b18be93c7348eb43e92d4cc972e7255783448-chunk-TU6EI3EF\\.js",
+            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/726f0c7c97c133242e8d14a8744b5f71f08ae05e-chunk-JEK6I6LC\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "cdn.eu",
-                "cdn"
+                "cdn",
+                "cdn.eu"
             ],
             "apis": {},
             "sites": 3,
             "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
-                "10d41e16ae80b7328f57426813edec1df9f0e8675f8c1707794a2ae451f2448e"
+                "3139134807bed4a965aa4eff21aa582aa961be023486934baf95c20ff690ca2c"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
+                "gameboost.com",
                 "remarkable.com",
-                "www.change.org",
-                "www.hostinger.com"
+                "www.ms.now"
             ]
         },
         {
-            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/9e9b18be93c7348eb43e92d4cc972e7255783448-chunk-RCCNY3NU\\.js",
+            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/726f0c7c97c133242e8d14a8744b5f71f08ae05e-chunk-CM7LBH3D\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "cdn.eu",
-                "cdn"
+                "cdn",
+                "cdn.eu"
             ],
             "apis": {},
             "sites": 3,
             "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
-                "94471c6a0cf54e33da44525165e6886e3993c1bb8f643d73284a32b9d3c91132"
+                "694d5777c0d4302deb4ce21a41d9259c26d8ab83dbc0295abb1217d4dd170cc2"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
+                "gameboost.com",
                 "remarkable.com",
-                "www.change.org",
-                "www.hostinger.com"
+                "www.ms.now"
             ]
         },
         {
-            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/9e9b18be93c7348eb43e92d4cc972e7255783448-chunk-KNFG3DDR\\.js",
+            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/726f0c7c97c133242e8d14a8744b5f71f08ae05e-chunk-BCNRJRT7\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "cdn.eu",
-                "cdn"
+                "cdn",
+                "cdn.eu"
             ],
             "apis": {},
             "sites": 3,
             "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
-                "ef43238b904af02abc9ad9c33769089d137732c47e0d06ec95665e9b614138ca"
+                "1c6fd31ae3c2f115f89be1fcf50086878ab07090f5940b7024c3582bc5a64aca"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
+                "gameboost.com",
                 "remarkable.com",
-                "www.change.org",
-                "www.hostinger.com"
+                "www.ms.now"
             ]
         },
         {
-            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/9e9b18be93c7348eb43e92d4cc972e7255783448-chunk-NNBZEYZ3\\.js",
+            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/726f0c7c97c133242e8d14a8744b5f71f08ae05e-chunk-Y6BVAYQP\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "cdn.eu",
-                "cdn"
+                "cdn",
+                "cdn.eu"
             ],
             "apis": {},
             "sites": 3,
             "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
-                "4e4c08461e2962c347c4484cc228aa7aa3d685b9e57d98ba15cdfe02a8c43e05"
+                "99fb10655dc86cd5bfd9905ae9327c7eda26b54087e54a66843b227523e6dc2b"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
+                "gameboost.com",
                 "remarkable.com",
-                "www.change.org",
-                "www.hostinger.com"
+                "www.ms.now"
             ]
         },
         {
-            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/9e9b18be93c7348eb43e92d4cc972e7255783448-chunk-7QCWDCJ6\\.js",
+            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/726f0c7c97c133242e8d14a8744b5f71f08ae05e-chunk-RXJSJVEG\\.js",
             "cookies": 0,
             "fingerprinting": 1,
             "subdomains": [
-                "cdn.eu",
-                "cdn"
+                "cdn",
+                "cdn.eu"
             ],
             "apis": {
                 "Navigator.prototype.userAgent": 3,
@@ -615,24 +763,24 @@
             "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
-                "87fb4af58f80a07d18a1bea2257893355ff7324e13ed65f3da9f1cb747cf093f"
+                "46009bd0842688bf3f16778248660587b7ae76b92e0734b961bdecfefb72ec24"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
+                "gameboost.com",
                 "remarkable.com",
-                "www.change.org",
-                "www.hostinger.com"
+                "www.ms.now"
             ]
         },
         {
-            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/9e9b18be93c7348eb43e92d4cc972e7255783448-chunk-D3G47SNY\\.js",
+            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/726f0c7c97c133242e8d14a8744b5f71f08ae05e-chunk-TSEV2YF3\\.js",
             "cookies": 0,
             "fingerprinting": 1,
             "subdomains": [
-                "cdn.eu",
-                "cdn"
+                "cdn",
+                "cdn.eu"
             ],
             "apis": {
                 "window.localStorage": 3,
@@ -642,15 +790,15 @@
             "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
-                "92fb91dc8323095e4d2b8efc3ad1bf418a61cec9fd91c83bd054edf10eff2c93"
+                "6824f971f8aebdd7408ca17cb7e555004547d9d5e70f4055e7069a507d2fe613"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
+                "gameboost.com",
                 "remarkable.com",
-                "www.change.org",
-                "www.hostinger.com"
+                "www.ms.now"
             ]
         },
         {
@@ -658,8 +806,8 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "gs.eu",
-                "gs"
+                "gs",
+                "gs.eu"
             ],
             "apis": {},
             "sites": 3,
@@ -670,9 +818,31 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
+                "gameboost.com",
                 "remarkable.com",
-                "www.change.org",
-                "www.hostinger.com"
+                "www.ms.now"
+            ]
+        },
+        {
+            "rule": "amplitude\\.com\\/sdk\\/v1\\/resource_center",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gs",
+                "gs.eu"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gameboost.com",
+                "remarkable.com",
+                "www.ms.now"
             ]
         },
         {
@@ -680,24 +850,24 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "gs.eu",
-                "gs"
+                "gs",
+                "gs.eu"
             ],
             "apis": {},
             "sites": 3,
             "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
-                "76ad47401c930200475a1beb62c8734e5d927361523842e2448a587c9b7707df",
-                "5df0ca7cbdf830ea007d579c7deeea9b551cbc15628d8ad27a69f3e519ecf26a"
+                "0670657df0451a3d65923fdf011b60a5cd036980c3df87435808fe99fc5a66a5",
+                "558ab01927ee7d7347ffd820af15ef2bb6534af07152c2104f6ff104c6354911"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
+                "gameboost.com",
                 "remarkable.com",
-                "www.change.org",
-                "www.hostinger.com"
+                "www.ms.now"
             ]
         },
         {
@@ -705,45 +875,24 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "gs.eu",
-                "gs"
+                "gs",
+                "gs.eu"
             ],
             "apis": {},
             "sites": 3,
             "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
-                "d67bbd55535a2dab2fc376ee09a765092154ef053d9815746689c00da0bf7cbd"
+                "d67bbd55535a2dab2fc376ee09a765092154ef053d9815746689c00da0bf7cbd",
+                "9ab6af483aba67328f668234150c6e91103f26fc923782cc4218b2fbae5eee62"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
+                "gameboost.com",
                 "remarkable.com",
-                "www.change.org",
-                "www.hostinger.com"
-            ]
-        },
-        {
-            "rule": "amplitude\\.com\\/sdk\\/v1\\/resource_center",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "gs.eu",
-                "gs"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.000302,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "remarkable.com",
-                "www.change.org",
-                "www.hostinger.com"
+                "www.ms.now"
             ]
         },
         {
@@ -751,21 +900,20 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "gs.eu",
-                "gs"
+                "gs",
+                "gs.eu"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000302,
+            "sites": 2,
+            "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "remarkable.com",
-                "www.change.org",
-                "www.hostinger.com"
+                "gameboost.com",
+                "remarkable.com"
             ]
         },
         {
@@ -773,48 +921,114 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "gs.eu",
-                "gs"
+                "gs",
+                "gs.eu"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000302,
+            "sites": 2,
+            "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "0aa469b66d523dbbe57e5a82ed7e16d9c2dbfd46d92596cb670167c474ff2a4c",
-                "28ae4432f5e18c02d9a6868bb7fd4c5231457c949bc299181951abed71b1be03"
+                "6914dbb4b710bd2e010c1bd2305f7111fcc7440ac848f3ac1da82b0e4b8d83ad"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "remarkable.com",
-                "www.change.org",
-                "www.hostinger.com"
+                "gameboost.com",
+                "remarkable.com"
             ]
         },
         {
-            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/9e9b18be93c7348eb43e92d4cc972e7255783448-ResourceCenterRoot-5AOISHIV\\.js",
+            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/726f0c7c97c133242e8d14a8744b5f71f08ae05e-ResourceCenterRoot-LCTHG43V\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "cdn.eu",
-                "cdn"
+                "cdn",
+                "cdn.eu"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000302,
+            "sites": 2,
+            "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "fb73a8523a670e7faadc18016899a33b1b14d4621d7d8dab73b9f8ab8aa44410"
+                "091fca6e48f7b8da4041b8e4bd5b9759abc06e1ab8b16137ff65d92ed5d860c1"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "remarkable.com",
-                "www.change.org",
-                "www.hostinger.com"
+                "gameboost.com",
+                "remarkable.com"
+            ]
+        },
+        {
+            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/726f0c7c97c133242e8d14a8744b5f71f08ae05e-chunk-3UXP3G2A\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn",
+                "cdn.eu"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "b8166cf51095411c581d9c37b29d9d41880c616a9690aeffa1bd23675d0a5f38"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gameboost.com",
+                "remarkable.com"
+            ]
+        },
+        {
+            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/726f0c7c97c133242e8d14a8744b5f71f08ae05e-chunk-2YODIBJF\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn",
+                "cdn.eu"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "026f190977113b696bbbd0b514e5f47151c96420953b806714771f45f0c3478b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gameboost.com",
+                "remarkable.com"
+            ]
+        },
+        {
+            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/726f0c7c97c133242e8d14a8744b5f71f08ae05e-chunk-4FTOQLUX\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn",
+                "cdn.eu"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "81678c14aebd5f4fb6662299112025c206508864a2477afcdfe08cc8c2ce1a98"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gameboost.com",
+                "remarkable.com"
             ]
         },
         {
@@ -822,24 +1036,22 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "gs.eu",
-                "gs"
+                "gs",
+                "gs.eu"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000302,
+            "sites": 2,
+            "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "19d4565df3702fa1ab9359df87d1fb94a7dc33a1da0f844422b265257a1bfcce",
-                "71703200a8c9d080fe543a050b900d6a83cd19eee7dee25270605071243e486f"
+                "8985c5ed6b0be63d64dd0ea0fd0cd5175548aaca39eb0ffe396cdde269b5efd2"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "remarkable.com",
-                "www.change.org",
-                "www.hostinger.com"
+                "gameboost.com",
+                "remarkable.com"
             ]
         },
         {
@@ -847,93 +1059,73 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "gs.eu",
-                "gs"
+                "gs",
+                "gs.eu"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000302,
+            "sites": 2,
+            "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "remarkable.com",
-                "www.change.org",
-                "www.hostinger.com"
+                "gameboost.com",
+                "remarkable.com"
             ]
         },
         {
-            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/9e9b18be93c7348eb43e92d4cc972e7255783448-chunk-EZYSJN63\\.js",
+            "rule": "amplitude\\.com\\/sdk\\/v2\\/vardata",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "cdn.eu",
-                "cdn"
+                "api.lab.eu",
+                "api.lab"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000302,
+            "sites": 5,
+            "prevalence": 0.000503,
             "cnames": [],
-            "responseHashes": [
-                "d9bc2f8df515b1c72f2b300e80261ace7e50f3e084533b2f003355d7482df5b2"
-            ],
-            "type": "Script",
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "remarkable.com",
-                "www.change.org",
-                "www.hostinger.com"
+                "lustery.com",
+                "www.cnbc.com",
+                "www.kaufmich.com",
+                "www.ms.now",
+                "www.studysmarter.de"
             ]
         },
         {
-            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/9e9b18be93c7348eb43e92d4cc972e7255783448-chunk-LDZ3MUJ3\\.js",
+            "rule": "amplitude\\.com\\/sdk\\/v2\\/vardata",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "cdn.eu",
-                "cdn"
+                "api.lab.eu",
+                "api.lab"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000302,
+            "sites": 5,
+            "prevalence": 0.000503,
             "cnames": [],
             "responseHashes": [
-                "246d50d3786b5e15f487043edc166bd902c0dd3553f2ad3d43e3ccc8ddbf115a"
+                "023cb6cb77a05d2253f70a5fc034587f1903a771b68c3e9cfe4e4444c6e337de",
+                "3650d9178181d4816445c2624471e48f8759bdd6d81a67d5fe424053621fdaf9",
+                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+                "cec7b4f55b51ff02ddb5f2cc1f685768f0c24d3a2209c29fc8432e1f5ddbe4d7"
             ],
-            "type": "Script",
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "remarkable.com",
-                "www.change.org",
-                "www.hostinger.com"
-            ]
-        },
-        {
-            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/9e9b18be93c7348eb43e92d4cc972e7255783448-chunk-RHCTE4F2\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "cdn.eu",
-                "cdn"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.000302,
-            "cnames": [],
-            "responseHashes": [
-                "cd0ed302d42f0f8ba0a9b3bf457d2806e2a004878a4ed42376abe22d918cd175"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "remarkable.com",
-                "www.change.org",
-                "www.hostinger.com"
+                "lustery.com",
+                "www.cnbc.com",
+                "www.kaufmich.com",
+                "www.ms.now",
+                "www.studysmarter.de"
             ]
         },
         {
@@ -948,7 +1140,8 @@
             "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
-                "759a9e947f8339727605cfb69d375e1886c400fbfb9853373cdc2d7e4948edd2"
+                "d9ee6fe6dc04e76f2de944892445c20006bed384a55cc5eb48797759aeb63098",
+                "5cc06fb335f0b6fae8e7b8a007728ce59a5360e194ba96a4de80b073ce6515ce"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -993,7 +1186,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "deec37ba02bcb7842a3aeb65a43d367bdc3c5693b087e2904b667288ed85c9c8"
+                "8742e717513cebfc436fb948cda95f411218b2b1566e2c8ec10ae790e76aa8ee"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -1037,7 +1230,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "cea03be4eecf2847421a8c8bade5fc7b1c3783a06665ad1d2a4ec505a9c4d31e"
+                "1b33ab5a99628c4e97e2de8088bb4ead6bfb9f85ae45d1be9b368105f4640fbf"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -1056,48 +1249,48 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.8482142857142857
+            "prevalence": 0.8275862068965517
         },
         {
             "domain": "queue-it.net",
-            "prevalence": 0.0625
-        },
-        {
-            "domain": "smassets.net",
-            "prevalence": 0.026785714285714284
-        },
-        {
-            "domain": "googletagmanager.com",
-            "prevalence": 0.017857142857142856
-        },
-        {
-            "domain": "sofatutor.net",
-            "prevalence": 0.017857142857142856
-        },
-        {
-            "domain": "jsdelivr.net",
-            "prevalence": 0.008928571428571428
-        },
-        {
-            "domain": "cnbcfm.com",
-            "prevalence": 0.008928571428571428
+            "prevalence": 0.0603448275862069
         },
         {
             "domain": "adobedtm.com",
-            "prevalence": 0.008928571428571428
+            "prevalence": 0.04310344827586207
+        },
+        {
+            "domain": "smassets.net",
+            "prevalence": 0.02586206896551724
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.017241379310344827
+        },
+        {
+            "domain": "jsdelivr.net",
+            "prevalence": 0.008620689655172414
+        },
+        {
+            "domain": "cnbcfm.com",
+            "prevalence": 0.008620689655172414
+        },
+        {
+            "domain": "sofatutor.net",
+            "prevalence": 0.008620689655172414
         }
     ],
     "types": {
         "Script": 53,
-        "Fetch": 55,
-        "Preflight": 36,
-        "Ping": 2,
+        "Fetch": 65,
+        "Preflight": 42,
+        "Other": 2,
         "XHR": 2
     },
     "nameservers": [
-        "ns-1942.awsdns-50.co.uk",
+        "ns-579.awsdns-08.net",
         "ns-1262.awsdns-29.org",
         "ns-260.awsdns-32.com",
-        "ns-579.awsdns-08.net"
+        "ns-1942.awsdns-50.co.uk"
     ]
 }

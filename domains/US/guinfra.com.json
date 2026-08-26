@@ -7,12 +7,77 @@
     "prevalence": 0.0000137,
     "sites": 2,
     "subdomains": [
-        "fcount-proxima",
-        "sentry"
+        "sentry",
+        "fcount-api.app",
+        "fcount-proxima"
     ],
     "cnames": [],
     "fingerprinting": 0,
     "resources": [
+        {
+            "rule": "guinfra\\.com\\/api\\/41\\/envelope\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sentry"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lootbar.com",
+                "www.lootbar.com"
+            ]
+        },
+        {
+            "rule": "guinfra\\.com\\/sdk\\/project_config",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "fcount-api.app"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lootbar.com",
+                "www.lootbar.com"
+            ]
+        },
+        {
+            "rule": "guinfra\\.com\\/sdk\\/project_config",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "fcount-api.app"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "b1478d252077631d1e11733125a91cfdaab13ba16d20191cfbb189e297c5409a"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lootbar.com",
+                "www.lootbar.com"
+            ]
+        },
         {
             "rule": "guinfra\\.com\\/",
             "cookies": 0,
@@ -54,28 +119,6 @@
                 "lootbar.com",
                 "www.lootbar.com"
             ]
-        },
-        {
-            "rule": "guinfra\\.com\\/api\\/41\\/envelope\\/",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "sentry"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "lootbar.com",
-                "www.lootbar.com"
-            ]
         }
     ],
     "categories": [],
@@ -88,9 +131,9 @@
         }
     ],
     "types": {
-        "XHR": 2,
-        "Preflight": 2,
-        "Fetch": 2
+        "Fetch": 2,
+        "Preflight": 4,
+        "XHR": 4
     },
     "nameservers": [
         "ns3.saser.tw",

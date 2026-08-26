@@ -4,10 +4,11 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000205,
-    "sites": 3,
+    "prevalence": 0.0000342,
+    "sites": 5,
     "subdomains": [
         "cnous-matomo",
+        "stats.normandie",
         "stats.lyon",
         "sentry.etalab"
     ],
@@ -21,15 +22,16 @@
     "resources": [
         {
             "rule": "cloud-ed\\.fr\\/matomo\\.php",
-            "cookies": 0.00000685,
+            "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
                 "cnous-matomo",
+                "stats.normandie",
                 "stats.lyon"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "sites": 4,
+            "prevalence": 0.0000274,
             "cnames": [],
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -39,6 +41,71 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "etudiant.gouv.fr",
+                "nomad.normandie.fr",
+                "www.bm-lyon.fr",
+                "www.lyon.fr"
+            ]
+        },
+        {
+            "rule": "cloud-ed\\.fr\\/matomo\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 2,
+            "subdomains": [
+                "stats.lyon"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "window.name": 2,
+                "NavigatorUAData.prototype.brands": 2,
+                "NavigatorUAData.prototype.platform": 2,
+                "NavigatorUAData.prototype.getHighEntropyValues": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.mimeTypes": 2,
+                "Navigator.prototype.javaEnabled": 2,
+                "Navigator.prototype.cookieEnabled": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.platform": 2,
+                "Document.cookie setter": 2,
+                "Navigator.prototype.doNotTrack": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "643dc9512a4efa9959a6475a7e7fcdf906b492aedd5c423e83867f8f153dd13e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_pk_id.27.6b80": {
+                    "ttl": 33955204,
+                    "length": 28,
+                    "prevalence": 0.000006849643476057072,
+                    "uniqueness": 1
+                },
+                "_pk_ses.27.6b80": {
+                    "ttl": 1804,
+                    "length": 1,
+                    "prevalence": 0.000006849643476057072,
+                    "uniqueness": 1
+                },
+                "_pk_id.44.8d8d": {
+                    "ttl": 33955201,
+                    "length": 28,
+                    "prevalence": 0.000006849643476057072,
+                    "uniqueness": 1
+                },
+                "_pk_ses.44.8d8d": {
+                    "ttl": 1801,
+                    "length": 1,
+                    "prevalence": 0.000006849643476057072,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bm-lyon.fr",
                 "www.lyon.fr"
             ]
         },
@@ -72,7 +139,7 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0000137,
+    "cookies": 0.0000274,
     "topInitiators": [
         {
             "domain": "first party",
@@ -80,11 +147,12 @@
         }
     ],
     "types": {
-        "Ping": 2,
+        "Ping": 4,
+        "Script": 2,
         "Fetch": 2
     },
     "nameservers": [
-        "dns3.vtech.fr",
-        "dns0.vtech.fr"
+        "dns0.vtech.fr",
+        "dns3.vtech.fr"
     ]
 }
