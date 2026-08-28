@@ -7,12 +7,12 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.00101,
-    "sites": 10,
+    "prevalence": 0.00252,
+    "sites": 25,
     "subdomains": [
+        "cdn",
         "finder-us-prod-cd-ewaqufuvygc5rgwq.edge.tenants",
-        "flightcentre-prod-ca-cd-1d7yc368y79cvp0h.edge.tenants.ca",
-        "sopfeu.ca"
+        "flightcentre-prod-ca-cd-1d7yc368y79cvp0h.edge.tenants.ca"
     ],
     "cnames": [
         {
@@ -27,17 +27,55 @@
     "fingerprinting": 1,
     "resources": [
         {
+            "rule": "auth0\\.com\\/js\\/auth0-spa-js\\/2\\.21\\/auth0-spa-js\\.production\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 15,
+                "Document.cookie getter": 15,
+                "window.localStorage": 15
+            },
+            "sites": 15,
+            "prevalence": 0.00151,
+            "cnames": [],
+            "responseHashes": [
+                "32ab0c1ff4f47a2706f7684e2a9698021d2265243472513d4bb5f26b98a19079"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "calgaryherald.com",
+                "calgarysun.com",
+                "edmontonjournal.com",
+                "edmontonsun.com",
+                "financialpost.com",
+                "lfpress.com",
+                "nationalpost.com",
+                "ottawacitizen.com",
+                "ottawasun.com",
+                "theprovince.com",
+                "torontosun.com",
+                "vancouversun.com",
+                "windsorstar.com",
+                "www.saltwire.com",
+                "www.thewhig.com"
+            ]
+        },
+        {
             "rule": "auth0\\.com\\/authorize",
-            "cookies": 0.000302,
+            "cookies": 0.000202,
             "fingerprinting": 0,
             "subdomains": [
                 "finder-us-prod-cd-ewaqufuvygc5rgwq.edge.tenants",
-                "flightcentre-prod-ca-cd-1d7yc368y79cvp0h.edge.tenants.ca",
-                "sopfeu.ca"
+                "flightcentre-prod-ca-cd-1d7yc368y79cvp0h.edge.tenants.ca"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000302,
+            "sites": 2,
+            "prevalence": 0.000202,
             "cnames": [
                 {
                     "original": "login.finder.com",
@@ -49,38 +87,37 @@
                 }
             ],
             "responseHashes": [
-                "3295f5346faf03f19089d678c7661fa4937ea32c940c8d4987d934efd68bd274",
-                "619df01bf79214254b52af765431c92cf768e8d5e34aa18eab8d55b1e838cbaf"
+                "e902feb5c06eda1014346df19e6d66c708d0cbc9b9ee83fde2ace931be87157b"
             ],
             "type": "Document",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "finder.com",
-                "www.flightcentre.ca",
-                "www.sopfeu.qc.ca"
+                "www.flightcentre.ca"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000504,
+    "cookies": 0.000403,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.8181818181818182
+            "prevalence": 0.9259259259259259
         },
         {
-            "domain": "realtor.ca",
-            "prevalence": 0.09090909090909091
+            "domain": "dynatrace.com",
+            "prevalence": 0.037037037037037035
         },
         {
             "domain": "flightcentre.com",
-            "prevalence": 0.09090909090909091
+            "prevalence": 0.037037037037037035
         }
     ],
     "types": {
-        "Document": 3
+        "Script": 15,
+        "Document": 2
     },
     "nameservers": [
         "monroe.ns.cloudflare.com",

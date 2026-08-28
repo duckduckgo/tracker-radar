@@ -4,14 +4,72 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000101,
-    "sites": 1,
+    "prevalence": 0.000202,
+    "sites": 2,
     "subdomains": [
+        "video-api.prod.video",
         "sonic-prod"
     ],
-    "cnames": [],
+    "cnames": [
+        {
+            "original": "video-api.cbssports.com",
+            "resolved": "video-api.prod.video.cbssports.cloud"
+        }
+    ],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "cbssports\\.cloud\\/vms\\/diff\\/v5",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "video-api.prod.video"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "video-api.cbssports.com",
+                    "resolved": "video-api.prod.video.cbssports.cloud"
+                }
+            ],
+            "responseHashes": [
+                "0015b48788cb5f4000d9f9df9a3175f7de4655a63366f91cda2a87bdd6d86ecd"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cbs.com",
+                "www.cbs.com"
+            ]
+        },
+        {
+            "rule": "cbssports\\.cloud\\/vms\\/diff\\/v5",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "video-api.prod.video"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "video-api.cbssports.com",
+                    "resolved": "video-api.prod.video.cbssports.cloud"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cbs.com",
+                "www.cbs.com"
+            ]
+        },
         {
             "rule": "cbssports\\.cloud\\/analytics\\/betting-engagement",
             "cookies": 0,
@@ -41,15 +99,16 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.6666666666666666
+            "prevalence": 0.8
         },
         {
             "domain": "cbsistatic.com",
-            "prevalence": 0.3333333333333333
+            "prevalence": 0.2
         }
     ],
     "types": {
-        "Fetch": 2
+        "Fetch": 4,
+        "Preflight": 2
     },
     "nameservers": [
         "ns-113.awsdns-14.com",

@@ -7,15 +7,41 @@
     "source": [
         "DuckDuckGo-FR"
     ],
-    "prevalence": 0.000202,
-    "sites": 2,
+    "prevalence": 0.000706,
+    "sites": 7,
     "subdomains": [
+        "tracking.aws",
         "cdn",
-        "cdnwidget"
+        "cdnwidget",
+        "cdn1",
+        "api",
+        "public-images"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "judge\\.me\\/widgets\\/track_bulk_events",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tracking.aws"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "anbernic.com",
+                "www.duralex.com"
+            ]
+        },
         {
             "rule": "judge\\.me\\/widget_preloader\\.js",
             "cookies": 0,
@@ -25,20 +51,134 @@
                 "cdnwidget"
             ],
             "apis": {
-                "window.sessionStorage": 1
+                "window.sessionStorage": 2
             },
-            "sites": 2,
-            "prevalence": 0.000202,
+            "sites": 3,
+            "prevalence": 0.000303,
             "cnames": [],
             "responseHashes": [
-                "e1abd3dc21f95572e4f5479ce5de9d4e6d0ec47f38042eb7a2fc292c074bfd8f"
+                "621f49fd51522cc49812c976e3004beabf3d3361d6741cf1f4b7594433a41a57"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "anker.com",
-                "www.anker.com"
+                "www.anker.com",
+                "www.eufy.com"
+            ]
+        },
+        {
+            "rule": "judge\\.me\\/assets\\/installed\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn1",
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "1825c22a4788253b33e9a6c0ff6f3b4b26c02a32e08e57e04d7063343013c64b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "anker.com",
+                "www.eufy.com"
+            ]
+        },
+        {
+            "rule": "judge\\.me\\/api\\/widget\\/requests",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "anker.com",
+                "www.eufy.com"
+            ]
+        },
+        {
+            "rule": "judge\\.me\\/widget_v3\\/base\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdnwidget"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "0ce259f6cb3f479b0bf427269413bcf124f222a35d3ceda57ab7457b295cb569"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "anker.com",
+                "www.eufy.com"
+            ]
+        },
+        {
+            "rule": "judge\\.me\\/loader\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdnwidget"
+            ],
+            "apis": {
+                "window.sessionStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "edb66c10416870d6b6552064f893b025ee13a27b53819c7a1f356ca613e850b9"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "anker.com",
+                "www.eufy.com"
+            ]
+        },
+        {
+            "rule": "judge\\.me\\/judgeme\\/logos\\/verified-checkmark\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "public-images"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "9df0b7853849ffa75e524a8cfb580bc0312ce9a501a7eb3ee51266371e9f2f76"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "naturellement-bio.com",
+                "www.naturellement-bio.com"
             ]
         }
     ],
@@ -48,15 +188,13 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.875
-        },
-        {
-            "domain": "shopify.com",
-            "prevalence": 0.125
+            "prevalence": 1
         }
     ],
     "types": {
-        "Script": 2
+        "XHR": 6,
+        "Script": 7,
+        "Stylesheet": 2
     },
     "nameservers": [
         "ns1.dnsimple.com",

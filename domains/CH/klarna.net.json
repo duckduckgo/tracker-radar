@@ -7,15 +7,20 @@
     "prevalence": 0.000101,
     "sites": 1,
     "subdomains": [
-        "cf.production.us1.assets-proxy"
+        "cf.production.us1.assets-proxy",
+        "cdn.production.us1.one-web-platform"
     ],
     "cnames": [
         {
             "original": "assets.klarnacdn.net",
             "resolved": "cf.production.us1.assets-proxy.klarna.net"
+        },
+        {
+            "original": "owp.klarna.com",
+            "resolved": "cdn.production.us1.one-web-platform.klarna.net"
         }
     ],
-    "fingerprinting": 3,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "klarna\\.net\\/video\\/902c5db8-df09-4bc0-95d6-6941d83e5a96\\/Web_HeroAnimation_ScreenSimplified_Payments_Overview_Herring_16x9_de-CH_cropped_compressed\\.mp4",
@@ -141,11 +146,38 @@
                 "klarna.com",
                 "www.klarna.com"
             ]
+        },
+        {
+            "rule": "klarna\\.net\\/38b12937d261\\/1be2c35156de\\/telemetry",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn.production.us1.one-web-platform"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "owp.klarna.com",
+                    "resolved": "cdn.production.us1.one-web-platform.klarna.net"
+                }
+            ],
+            "responseHashes": [
+                "16f2b12b716d12ec3910b7ef66a7021e4abdb76eba8de95ac202396fd0d2b597"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "klarna.com",
+                "www.klarna.com"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.000101,
     "topInitiators": [
         {
             "domain": "first party",
@@ -153,14 +185,15 @@
         }
     ],
     "types": {
-        "Media": 10
+        "Media": 10,
+        "Fetch": 2
     },
     "nameservers": [
-        "a12-65.akam.net",
-        "a5-64.akam.net",
-        "a20-66.akam.net",
-        "a1-74.akam.net",
         "edns7.ultradns.org",
-        "edns7.ultradns.com"
+        "a12-65.akam.net",
+        "a1-74.akam.net",
+        "a5-64.akam.net",
+        "edns7.ultradns.com",
+        "a20-66.akam.net"
     ]
 }

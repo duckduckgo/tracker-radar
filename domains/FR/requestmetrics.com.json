@@ -10,24 +10,43 @@
     "prevalence": 0.000403,
     "sites": 4,
     "subdomains": [
-        "cdn"
+        "cdn",
+        "forwarder"
     ],
-    "cnames": [],
-    "fingerprinting": 1,
+    "cnames": [
+        {
+            "original": "metrics.jeux-gratuits.com",
+            "resolved": "forwarder.requestmetrics.com"
+        }
+    ],
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "requestmetrics\\.com\\/agent\\/current\\/rm\\.js",
             "cookies": 0,
-            "fingerprinting": 1,
+            "fingerprinting": 2,
             "subdomains": [
-                "cdn"
+                "cdn",
+                "forwarder"
             ],
             "apis": {
-                "window.localStorage": 4
+                "window.localStorage": 3,
+                "Navigator.prototype.userAgent": 1,
+                "Navigator.prototype.connection": 1,
+                "Navigator.prototype.language": 1,
+                "Screen.prototype.width": 1,
+                "Screen.prototype.height": 1,
+                "window.devicePixelRatio": 1,
+                "Navigator.prototype.deviceMemory": 1
             },
             "sites": 4,
             "prevalence": 0.000403,
-            "cnames": [],
+            "cnames": [
+                {
+                    "original": "metrics.jeux-gratuits.com",
+                    "resolved": "forwarder.requestmetrics.com"
+                }
+            ],
             "responseHashes": [
                 "9898cc923a79b191286afb3562d20d5ec3201492a5432e0625a8d4f4795281c0"
             ],
@@ -35,10 +54,10 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "balancetanude.fr",
-                "www.datacamp.com",
+                "datacamp.com",
                 "www.fotmob.com",
-                "www.jeux-gratuits.com"
+                "www.jeux-gratuits.com",
+                "www.todoist.com"
             ]
         }
     ],

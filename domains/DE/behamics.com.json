@@ -7,11 +7,63 @@
     "prevalence": 0.000201,
     "sites": 2,
     "subdomains": [
-        "engine5"
+        "cdn",
+        "engine5",
+        "recorder"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "behamics\\.com\\/giesswein\\/behamics\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.sessionStorage": 2,
+                "window.localStorage": 2,
+                "window.innerWidth": 2,
+                "Navigator.prototype.connection": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "f7a31a01690d4c0207ceae0fd8b0b075a9646fc6d3032372556994485ddf7220"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "giesswein.com",
+                "www.giesswein.com"
+            ]
+        },
+        {
+            "rule": "behamics\\.com\\/giesswein\\/behamics\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e5eaeb793ff83b39bd578cfdab04716aefe9e3e3a2b38ba16e38f01445b53de4"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "giesswein.com",
+                "www.giesswein.com"
+            ]
+        },
         {
             "rule": "behamics\\.com\\/api\\/getmessage",
             "cookies": 0.000201,
@@ -24,9 +76,82 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "020e9160503985ab3863e9634a5bd84bbf5488681fc36e2211911be65b36cfdc"
+                "15dc16ea52e94fc3a9b40bf5379826d460a1fb33b10a2dabe3d10c8d41d86937"
             ],
             "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "giesswein.com",
+                "www.giesswein.com"
+            ]
+        },
+        {
+            "rule": "behamics\\.com\\/screenrecording\\/eye\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "window.innerHeight": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.appVersion": 2,
+                "window.innerWidth": 2,
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "7fd74c2bfc3263da9fce4ebf014858eb872ce795b9793814e19adfe71c4e7b5a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "giesswein.com",
+                "www.giesswein.com"
+            ]
+        },
+        {
+            "rule": "behamics\\.com\\/screenrecording\\/rrw\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "window.innerWidth": 2,
+                "window.innerHeight": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "d03cd3526c49590bcd59f2285c08ab1b679afb4ef5836cdd512c699ea9365d6c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "giesswein.com",
+                "www.giesswein.com"
+            ]
+        },
+        {
+            "rule": "behamics\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "recorder"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -37,7 +162,7 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000101,
+    "cookies": 0.000201,
     "topInitiators": [
         {
             "domain": "first party",
@@ -45,7 +170,10 @@
         }
     ],
     "types": {
-        "XHR": 2
+        "Script": 6,
+        "Stylesheet": 2,
+        "XHR": 2,
+        "WebSocket": 2
     },
     "nameservers": [
         "ns.udag.de",

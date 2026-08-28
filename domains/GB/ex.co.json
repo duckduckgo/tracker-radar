@@ -7,14 +7,15 @@
     "source": [
         "DuckDuckGo-GB"
     ],
-    "prevalence": 0.00211,
-    "sites": 21,
+    "prevalence": 0.00231,
+    "sites": 23,
     "subdomains": [
         "exbd",
-        "player"
+        "player",
+        "collector-1"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "ex\\.co\\/sdk\\.js",
@@ -44,10 +45,10 @@
                 "www.newsletter.co.uk",
                 "www.northamptonchron.co.uk",
                 "www.northantstelegraph.co.uk",
+                "www.northumberlandgazette.co.uk",
                 "www.peterboroughtoday.co.uk",
                 "www.portsmouth.co.uk",
                 "www.scotsman.com",
-                "www.shieldsgazette.com",
                 "www.shropshirestar.com",
                 "www.sunderlandecho.com",
                 "www.sussexexpress.co.uk",
@@ -72,9 +73,8 @@
             "prevalence": 0.00191,
             "cnames": [],
             "responseHashes": [
-                "1cda3a4a0a555be2f4d4fcc56dd5707e1e40d92d87883ac0ce9304e2873aac5a",
-                "7f56954e3d56c3c351c48569267ed45a1f73ad3d80712aaf4b66c9f425915ae3",
-                "0b6b540789739f8b751ad28d87de276ff902924aa634907b285f92d694e670b2"
+                "e2ab80d49756d735f46cbc2303f68979e78a499e02b3190fe0e331c0aac7bd08",
+                "64a976a91f88cea8203e40443e72085d061b5c84de105eb11e73ff580bb5fc7e"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -90,15 +90,59 @@
                 "www.newsletter.co.uk",
                 "www.northamptonchron.co.uk",
                 "www.northantstelegraph.co.uk",
+                "www.northumberlandgazette.co.uk",
                 "www.peterboroughtoday.co.uk",
                 "www.portsmouth.co.uk",
                 "www.scotsman.com",
-                "www.shieldsgazette.com",
                 "www.shropshirestar.com",
                 "www.sunderlandecho.com",
                 "www.sussexexpress.co.uk",
                 "www.thestar.co.uk",
                 "www.yorkshireeveningpost.co.uk"
+            ]
+        },
+        {
+            "rule": "ex\\.co\\/main\\/events",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "collector-1"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "11a49f853eb8befe94fef278d487125cd20930b9e41c4c0934394443e7f00878"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "electrifying.com",
+                "www.wowhead.com"
+            ]
+        },
+        {
+            "rule": "ex\\.co\\/config",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "player"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "69ced3e6b19c6ba6af28cf9dcf2059b2883cf9a4524c5151d8740eb12543b7f4"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "electrifying.com",
+                "www.wowhead.com"
             ]
         }
     ],
@@ -108,11 +152,21 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.84
+        },
+        {
+            "domain": "datadoghq-browser-agent.com",
+            "prevalence": 0.1
+        },
+        {
+            "domain": "adlightning.com",
+            "prevalence": 0.06
         }
     ],
     "types": {
-        "Script": 38
+        "Script": 38,
+        "XHR": 2,
+        "Fetch": 2
     },
     "nameservers": [
         "ns-1048.awsdns-03.org",

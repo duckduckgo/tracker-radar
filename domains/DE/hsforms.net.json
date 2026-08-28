@@ -13,14 +13,15 @@
     "sites": 20,
     "subdomains": [
         "js-eu1",
-        "js"
+        "js",
+        "js-na2"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
         {
             "rule": "hsforms\\.net\\/forms\\/embed\\/v2\\.js",
-            "cookies": 0.00131,
+            "cookies": 0.00141,
             "fingerprinting": 2,
             "subdomains": [
                 "js-eu1",
@@ -35,22 +36,24 @@
                 "Date.prototype.getTime": 9,
                 "Navigator.prototype.webdriver": 2
             },
-            "sites": 13,
-            "prevalence": 0.00131,
+            "sites": 14,
+            "prevalence": 0.00141,
             "cnames": [],
             "responseHashes": [
-                "e98579a149df8d81bb131f2193b73f28f813079b5fb63aef0218f986ecf008e4"
+                "4ecdec4f666b2faab33c6b6fa6b6a4d0411361a862462e6a5520a639f0cfad83",
+                "65da41ca8a90101a7f0818d707767bb66985c5e1f89607f1cb3a05cfdfa7544f"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "deutsches-ehrenamt.de",
+                "docs.pytorch.org",
                 "hansefit.de",
                 "journals.plos.org",
                 "kalkhoff-bikes.com",
-                "pytorch.org",
                 "solarhandel24.de",
+                "www.dkv-mobility.com",
                 "www.dtv.de",
                 "www.gazelle.de",
                 "www.kalkhoff-bikes.com",
@@ -61,35 +64,83 @@
             ]
         },
         {
-            "rule": "hsforms\\.net\\/forms\\/v2\\.js",
-            "cookies": 0.000503,
-            "fingerprinting": 2,
+            "rule": "hsforms\\.net\\/ui-forms-embed-components-app\\/frame\\.html",
+            "cookies": 0,
+            "fingerprinting": 0,
             "subdomains": [
-                "js"
+                "js-na2",
+                "js-eu1"
             ],
-            "apis": {
-                "Navigator.prototype.product": 5,
-                "Navigator.prototype.userAgent": 5,
-                "Navigator.prototype.connection": 5,
-                "console.memory": 5,
-                "Document.cookie getter": 3,
-                "Date.prototype.getTime": 3,
-                "Navigator.prototype.webdriver": 2
-            },
-            "sites": 5,
-            "prevalence": 0.000503,
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "02994f310f032db3cbaffecab32d872a60c1ddf4ec3f0d9e4079be4ed0c64c24"
+                "3e23ca3ba8fe5cbfac7bb0b8c4c91b0f8da8b8ae8165f2b794367911178264ae"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "system76.com",
+                "www.travelite.com"
+            ]
+        },
+        {
+            "rule": "hsforms\\.net\\/forms\\/embed\\/frame-container\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "js-na2",
+                "js-eu1"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 1,
+                "Document.cookie getter": 1,
+                "Navigator.prototype.language": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "68bc97b0e37eaed62b337e34ec662226759872f8718179df6dc46a6805f80acc"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "netboxlabs.com",
-                "www.flightaware.com",
+                "system76.com",
+                "www.travelite.com"
+            ]
+        },
+        {
+            "rule": "hsforms\\.net\\/forms\\/v2\\.js",
+            "cookies": 0.000302,
+            "fingerprinting": 2,
+            "subdomains": [
+                "js"
+            ],
+            "apis": {
+                "Navigator.prototype.product": 3,
+                "Navigator.prototype.userAgent": 3,
+                "Navigator.prototype.connection": 3,
+                "console.memory": 3,
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.webdriver": 1
+            },
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "65da41ca8a90101a7f0818d707767bb66985c5e1f89607f1cb3a05cfdfa7544f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "flightaware.com",
                 "www.ironman.com",
-                "www.netlify.com",
                 "www.truenas.com"
             ]
         }
@@ -100,7 +151,11 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.9696969696969697
+            "prevalence": 0.9393939393939394
+        },
+        {
+            "domain": "epassi.de",
+            "prevalence": 0.030303030303030304
         },
         {
             "domain": "bigcommerce.com",
@@ -108,7 +163,8 @@
         }
     ],
     "types": {
-        "Script": 18
+        "Script": 19,
+        "Document": 2
     },
     "nameservers": [
         "jerry.ns.cloudflare.com",

@@ -7,9 +7,10 @@
     "source": [
         "DuckDuckGo-GB"
     ],
-    "prevalence": 0.000904,
-    "sites": 9,
+    "prevalence": 0.00141,
+    "sites": 14,
     "subdomains": [
+        "cdn",
         "instafeed",
         "api"
     ],
@@ -17,26 +18,100 @@
     "fingerprinting": 1,
     "resources": [
         {
-            "rule": "nfcube\\.com\\/feed\\/v6",
+            "rule": "nfcube\\.com\\/instafeed-9f3861cb62301ff34e6bc8ac62197903\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "window.sessionStorage": 2,
+                "window.innerWidth": 2,
+                "Navigator.prototype.language": 2,
+                "HTMLMediaElement.prototype.canPlayType": 2,
+                "Navigator.prototype.connection": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "1c08a8fa9194cc1589245f9facfcb7e4a544abe3467151b2bb3084e1ac317ed8"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ashridgetrees.co.uk",
+                "www.ashridgetrees.co.uk"
+            ]
+        },
+        {
+            "rule": "nfcube\\.com\\/cdn\\/instafeed-18\\.2\\.0\\.css",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "instafeed",
-                "api"
+                "instafeed"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "eb0aa1c52ef22321bb5ccfae898c1ea919751fbdaa1271931df59b259ac91e7d"
+                "a84f3c5d3957b923115a978f343d8cd07e7a723636c245aee05748646d9ffed9"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ashridgetrees.co.uk",
+                "www.ashridgetrees.co.uk"
+            ]
+        },
+        {
+            "rule": "nfcube\\.com\\/i18n\\/storefront\\/instafeed-en\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "instafeed"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "4dfc08a2ac150c576e8d09727619128d8f1a4dcdad3104bdeb3b7ce4f52a861f"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "easypanels.co.uk",
-                "www.baldwins.co.uk"
+                "ashridgetrees.co.uk",
+                "www.ashridgetrees.co.uk"
+            ]
+        },
+        {
+            "rule": "nfcube\\.com\\/feed\\/v6",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api",
+                "instafeed"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "eb6c3daaffbfc0763309a376c8d8648957bb939b708d164782c19c0012727743",
+                "eda6b56484a299de9af358e2deec3cce4095e5582f40ef88d128b55c8d73b294"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ashridgetrees.co.uk",
+                "www.ashridgetrees.co.uk",
+                "www.spicekitchenuk.com"
             ]
         },
         {
@@ -48,7 +123,7 @@
             ],
             "apis": {},
             "sites": 3,
-            "prevalence": 0.000301,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
                 "968b17baf99ffc8097fdbe0d8552113c2f6e7da2a63e3967f24811e2e2e0a312"
@@ -57,9 +132,33 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "easypanels.co.uk",
-                "www.baldwins.co.uk",
+                "ashridgetrees.co.uk",
+                "www.ashridgetrees.co.uk",
                 "www.thesoapery.co.uk"
+            ]
+        },
+        {
+            "rule": "nfcube\\.com\\/instafeed-905a65700a4e619b7ffe5dd018f87b6d\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "window.innerWidth": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "085c61ba2ed56c064bc4670bd9013468b472e708d3d5949aa5c3af0e7b2d66da"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "spicekitchenuk.com",
+                "www.spicekitchenuk.com"
             ]
         }
     ],
@@ -69,15 +168,25 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.8
+        },
+        {
+            "domain": "shopify.com",
+            "prevalence": 0.16
+        },
+        {
+            "domain": "d5zu2f4xvqanl.cloudfront.net",
+            "prevalence": 0.04
         }
     ],
     "types": {
-        "Fetch": 2,
+        "Script": 4,
+        "Stylesheet": 2,
+        "Fetch": 5,
         "Image": 3
     },
     "nameservers": [
-        "ivan.ns.cloudflare.com",
-        "pat.ns.cloudflare.com"
+        "pat.ns.cloudflare.com",
+        "ivan.ns.cloudflare.com"
     ]
 }

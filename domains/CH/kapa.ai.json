@@ -4,13 +4,14 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.000503,
-    "sites": 5,
+    "prevalence": 0.000604,
+    "sites": 6,
     "subdomains": [
-        "widget"
+        "widget",
+        "proxy"
     ],
     "cnames": [],
-    "fingerprinting": 2,
+    "fingerprinting": 3,
     "resources": [
         {
             "rule": "kapa\\.ai\\/kapa-widget\\.bundle\\.js",
@@ -20,46 +21,78 @@
                 "widget"
             ],
             "apis": {
-                "window.localStorage": 5,
+                "window.localStorage": 6,
+                "window.matchMedia(\"prefers-color-scheme\")": 6,
+                "window.sessionStorage": 5,
                 "Document.cookie getter": 1,
-                "window.matchMedia(\"prefers-color-scheme\")": 5,
-                "Navigator.prototype.userAgent": 3,
-                "Screen.prototype.width": 3,
-                "Screen.prototype.height": 3,
-                "Navigator.prototype.language": 3,
-                "Screen.prototype.orientation": 3,
-                "Navigator.prototype.hardwareConcurrency": 3,
-                "Navigator.prototype.platform": 3
+                "Navigator.prototype.userAgent": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "Navigator.prototype.language": 2,
+                "Screen.prototype.orientation": 2,
+                "Navigator.prototype.hardwareConcurrency": 2,
+                "Navigator.prototype.platform": 2
             },
-            "sites": 5,
-            "prevalence": 0.000503,
+            "sites": 6,
+            "prevalence": 0.000604,
             "cnames": [],
             "responseHashes": [
-                "f4418cbb1984676df1afa7a64d9f556fe3cce076a8db00a92a3e2d6690fa66c2"
+                "5e6fdaf0a93df38e151c095053884799177435d9cbab5627a36d1d3850a9e021"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "zephyrproject.org",
-                "dplyr.tidyverse.org",
+                "n8n.io",
+                "docs.posit.co",
+                "docs.zephyrproject.org",
                 "fastapi.tiangolo.com",
                 "ggplot2.tidyverse.org",
-                "prometheus.io"
+                "opentelemetry.io"
+            ]
+        },
+        {
+            "rule": "kapa\\.ai\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "proxy"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000503,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "n8n.io",
+                "docs.posit.co",
+                "fastapi.tiangolo.com",
+                "ggplot2.tidyverse.org",
+                "opentelemetry.io"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.000101,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.875
+        },
+        {
+            "domain": "gitbook.com",
+            "prevalence": 0.125
         }
     ],
     "types": {
-        "Script": 5
+        "Script": 6,
+        "Fetch": 5
     },
     "nameservers": [
         "pdns1.registrar-servers.com",

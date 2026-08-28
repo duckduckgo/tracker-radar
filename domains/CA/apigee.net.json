@@ -9,15 +9,20 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000202,
-    "sites": 2,
+    "prevalence": 0.000303,
+    "sites": 3,
     "subdomains": [
-        "accor-group-prod-prod"
+        "accor-group-prod-prod",
+        "mns-00.dn"
     ],
     "cnames": [
         {
             "original": "api.accor.com",
             "resolved": "accor-group-prod-prod.apigee.net"
+        },
+        {
+            "original": "api.marksandspencer.com",
+            "resolved": "mns-00.dn.apigee.net"
         }
     ],
     "fingerprinting": 0,
@@ -46,6 +51,58 @@
                 "accor.com",
                 "all.accor.com"
             ]
+        },
+        {
+            "rule": "apigee\\.net\\/phoenix-eventcollector\\/v1\\/event\\/mparticle",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "mns-00.dn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "api.marksandspencer.com",
+                    "resolved": "mns-00.dn.apigee.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "marksandspencer.com",
+                "www.marksandspencer.com"
+            ]
+        },
+        {
+            "rule": "apigee\\.net\\/phoenix-eventcollector\\/v1\\/event\\/mparticle",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "mns-00.dn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "api.marksandspencer.com",
+                    "resolved": "mns-00.dn.apigee.net"
+                }
+            ],
+            "responseHashes": [
+                "71b0dd3971fb186dcd10419e5eefdb8e68b6eca399cca46bbcbcbf6fbb3e7b10"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "marksandspencer.com",
+                "www.marksandspencer.com"
+            ]
         }
     ],
     "categories": [
@@ -56,27 +113,29 @@
     "topInitiators": [
         {
             "domain": "signalfx.com",
-            "prevalence": 0.4444444444444444
+            "prevalence": 0.4
         },
         {
             "domain": "static-p46175-e229011.adobeaemcloud.com",
-            "prevalence": 0.2222222222222222
+            "prevalence": 0.2
+        },
+        {
+            "domain": "dynatrace.com",
+            "prevalence": 0.2
         },
         {
             "domain": "cookielaw.org",
-            "prevalence": 0.1111111111111111
+            "prevalence": 0.1
         },
         {
             "domain": "tiqcdn.com",
-            "prevalence": 0.1111111111111111
-        },
-        {
-            "domain": "appdynamics.com",
-            "prevalence": 0.1111111111111111
+            "prevalence": 0.1
         }
     ],
     "types": {
-        "Document": 2
+        "Document": 2,
+        "Preflight": 2,
+        "XHR": 2
     },
     "nameservers": [
         "ns-116.awsdns-14.com",

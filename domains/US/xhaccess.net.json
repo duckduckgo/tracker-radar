@@ -104,26 +104,6 @@
             ]
         },
         {
-            "rule": "xhaccess\\.net\\/health-files\\/assets\\/fonts\\/iconfont\\.ttf",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "cdn"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Font",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "m-xnxx.com",
-                "xnxx.co.im"
-            ]
-        },
-        {
             "rule": "xhaccess\\.net\\/health-files\\/assets\\/css\\/front\\.css",
             "cookies": 0,
             "fingerprinting": 0,
@@ -238,7 +218,9 @@
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "f7dcaeb02098697fb23f62c0e59ba97966cff624e038b1d56b02710ac140e441"
+            ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -272,15 +254,20 @@
         {
             "rule": "xhaccess\\.net\\/health-files\\/assets\\/js\\/require\\.static\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "cdn"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.platform": 2,
+                "Date.prototype.getTime": 2
+            },
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "4948c3fe4b57cd92118ec7b89deb99ff0eb2586a02c5f454df21c1ecfc144c81"
+            ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -310,6 +297,26 @@
                 "xnxx.co.im",
                 "xnxx.health"
             ]
+        },
+        {
+            "rule": "xhaccess\\.net\\/health-files\\/assets\\/js\\/xnxx\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "xnxx.co.im",
+                "xnxx.health"
+            ]
         }
     ],
     "categories": [],
@@ -323,9 +330,9 @@
     ],
     "types": {
         "Image": 10,
-        "Font": 5,
+        "Font": 3,
         "Stylesheet": 4,
-        "Script": 10
+        "Script": 12
     },
     "nameservers": [
         "sneh.ns.cloudflare.com",

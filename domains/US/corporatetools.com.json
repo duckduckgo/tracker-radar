@@ -8,7 +8,8 @@
     "sites": 2,
     "subdomains": [
         "workflows-frontend-livechat",
-        "matomo"
+        "matomo",
+        "v2-chat"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -25,6 +26,7 @@
                 "Navigator.prototype.userAgent": 2,
                 "window.localStorage": 2,
                 "window.openDatabase": 2,
+                "Navigator.prototype.mediaDevices": 2,
                 "window.sessionStorage": 2,
                 "Date.prototype.getTime": 2
             },
@@ -32,7 +34,7 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "307e8557146ff3917be26e1e86eb167a6cb770007a88884acb9592eda267f487"
+                "4610ff704bce305ea3c43ec503163e385c5b1b64a2fc8a91328500c6162e88ca"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -44,7 +46,7 @@
         },
         {
             "rule": "corporatetools\\.com\\/js\\/container_7fhruotK\\.js",
-            "cookies": 0.0000137,
+            "cookies": 0.00000685,
             "fingerprinting": 2,
             "subdomains": [
                 "matomo"
@@ -52,41 +54,41 @@
             "apis": {
                 "Document.cookie getter": 2,
                 "Date.prototype.getTime": 2,
-                "Navigator.prototype.userAgent": 2,
-                "window.innerHeight": 2,
-                "window.innerWidth": 2,
-                "Navigator.prototype.vendor": 2,
-                "Document.cookie setter": 2,
-                "window.name": 2,
-                "NavigatorUAData.prototype.brands": 2,
-                "NavigatorUAData.prototype.platform": 2,
-                "NavigatorUAData.prototype.getHighEntropyValues": 2,
-                "Navigator.prototype.mimeTypes": 2,
-                "Navigator.prototype.javaEnabled": 2,
-                "Navigator.prototype.cookieEnabled": 2,
-                "Screen.prototype.width": 2,
-                "Screen.prototype.height": 2,
-                "Navigator.prototype.platform": 2
+                "Navigator.prototype.userAgent": 1,
+                "window.innerHeight": 1,
+                "window.innerWidth": 1,
+                "Navigator.prototype.vendor": 1,
+                "Document.cookie setter": 1,
+                "window.name": 1,
+                "NavigatorUAData.prototype.brands": 1,
+                "NavigatorUAData.prototype.platform": 1,
+                "NavigatorUAData.prototype.getHighEntropyValues": 1,
+                "Navigator.prototype.mimeTypes": 1,
+                "Navigator.prototype.javaEnabled": 1,
+                "Navigator.prototype.cookieEnabled": 1,
+                "Screen.prototype.width": 1,
+                "Screen.prototype.height": 1,
+                "Navigator.prototype.platform": 1
             },
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "51521fb90eb707ae61535f921bc4f81520aafcc24e0758af860fea59238136e8"
+                "1069e445be74be0b116d87506ddf5615f1e6ff8c25f39f9fbf53e9f76dd860c2"
             ],
             "type": "Script",
             "firstPartyCookies": {
                 "_pk_id.7.c529": {
                     "ttl": 33955202,
                     "length": 28,
-                    "prevalence": 0.000013696753869332969,
+                    "prevalence": 0.000006849643476057072,
                     "uniqueness": 1
                 },
                 "_pk_ses.7.c529": {
-                    "ttl": 1802,
+                    "ttl": 1801,
                     "length": 1,
-                    "prevalence": 0.000013696753869332969,
-                    "uniqueness": 0.5
+                    "prevalence": 0.000006849643476057072,
+                    "uniqueness": 1
                 }
             },
             "firstPartyCookiesSent": {},
@@ -96,20 +98,18 @@
             ]
         },
         {
-            "rule": "corporatetools\\.com\\/matomo\\.php",
-            "cookies": 0,
+            "rule": "corporatetools\\.com\\/api\\/v1\\/public\\/widget_config",
+            "cookies": 0.0000137,
             "fingerprinting": 0,
             "subdomains": [
-                "matomo"
+                "v2-chat"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
-            "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-            ],
-            "type": "Ping",
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -118,20 +118,20 @@
             ]
         },
         {
-            "rule": "corporatetools\\.com\\/plugins\\/HeatmapSessionRecording\\/configs\\.php",
-            "cookies": 0,
+            "rule": "corporatetools\\.com\\/api\\/v1\\/public\\/widget_config",
+            "cookies": 0.0000137,
             "fingerprinting": 0,
             "subdomains": [
-                "matomo"
+                "v2-chat"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "f6c117675317931a0bd9d5ac0395a638a815d2f315ad2fe63f787573cf0bbcaa"
+                "bd22d0cbceb27cd9d814c532efbcbf680559bae60e4a5a315bf046d4b504e148"
             ],
-            "type": "Script",
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -146,12 +146,17 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.6666666666666666
+        },
+        {
+            "domain": "inspectlet.com",
+            "prevalence": 0.3333333333333333
         }
     ],
     "types": {
-        "Script": 6,
-        "Ping": 2
+        "Script": 4,
+        "Preflight": 2,
+        "XHR": 2
     },
     "nameservers": [
         "margaret.ns.cloudflare.com",

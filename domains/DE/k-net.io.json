@@ -4,8 +4,8 @@
     "source": [
         "DuckDuckGo-DE"
     ],
-    "prevalence": 0.000101,
-    "sites": 1,
+    "prevalence": 0.000201,
+    "sites": 2,
     "subdomains": [
         "cdn.prod.kca.shield",
         "keycloak.prod.kca.shield"
@@ -40,7 +40,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "d72c3652633584fc11b2e1dd4b8873f506fede890397d6b9b46e40f99e762dcd"
+                "b3dbef29b0c27f6893124d54cbda46c36bf8ec9b270d0c1660b9add968e480e1"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -86,15 +86,15 @@
             ],
             "apis": {
                 "Date.prototype.getTime": 2,
-                "Document.cookie getter": 2,
+                "window.sessionStorage": 1,
                 "window.localStorage": 1,
-                "window.sessionStorage": 1
+                "Document.cookie getter": 2
             },
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "ed838d23a9f51ed6e157092fe764cd59d87053403223500bdf1ea889b7559d95"
+                "ae752d7fba112a8d13cb062dab441181ad30722279021d9a60c2c21bda1cbe6c"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -106,8 +106,8 @@
         },
         {
             "rule": "k-net\\.io\\/auth\\/realms\\/ekv\\/protocol\\/openid-connect\\/3p-cookies\\/step2\\.html",
-            "cookies": 0,
-            "fingerprinting": 0,
+            "cookies": 0.000201,
+            "fingerprinting": 1,
             "subdomains": [
                 "keycloak.prod.kca.shield"
             ],
@@ -182,11 +182,53 @@
                 "klett.de",
                 "www.klett.de"
             ]
+        },
+        {
+            "rule": "k-net\\.io\\/cdn-cgi\\/zaraz\\/t",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn.prod.kca.shield"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "1c44082739fab730d0a25a2c8a4715ed4fad32fb452830016c78138c7d1cfe75"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "klett.de",
+                "www.klett.de"
+            ]
+        },
+        {
+            "rule": "k-net\\.io\\/cdn-cgi\\/zaraz\\/t",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn.prod.kca.shield"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "klett.de",
+                "www.klett.de"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.000201,
     "topInitiators": [
         {
             "domain": "first party",
@@ -196,12 +238,13 @@
     "types": {
         "Script": 4,
         "Document": 6,
-        "Fetch": 2
+        "Fetch": 4,
+        "Preflight": 2
     },
     "nameservers": [
-        "n02.public.auth.dns.services.k-net.io",
         "n04.public.auth.dns.services.k-net.io",
-        "n03.public.auth.dns.services.k-net.io",
-        "n01.public.auth.dns.services.k-net.io"
+        "n02.public.auth.dns.services.k-net.io",
+        "n01.public.auth.dns.services.k-net.io",
+        "n03.public.auth.dns.services.k-net.io"
     ]
 }
