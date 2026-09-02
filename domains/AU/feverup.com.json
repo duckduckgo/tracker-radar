@@ -7,10 +7,11 @@
     "prevalence": 0.000201,
     "sites": 2,
     "subdomains": [
-        "data-logging.apigw"
+        "data-logging.apigw",
+        "gcptm"
     ],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "feverup\\.com\\/event",
@@ -24,7 +25,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [],
-            "type": "Other",
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -43,7 +44,76 @@
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
+            "responseHashes": [
+                "f1ea07a1e51a389c8de07120ae5c2e432e9dd8f4fbd6f92489f185b0523a3fd4"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "secretmelbourne.com",
+                "secretsydney.com"
+            ]
+        },
+        {
+            "rule": "feverup\\.com\\/analytics-monitor\\/client-hints\\.html",
+            "cookies": 0.000101,
+            "fingerprinting": 1,
+            "subdomains": [
+                "gcptm"
+            ],
+            "apis": {
+                "Document.cookie setter": 1,
+                "Document.cookie getter": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "c223c7cbcb982e8dc4c821b45a9a1dba0c69e409d28f806c412117efde3b2b03"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "secretmelbourne.com",
+                "secretsydney.com"
+            ]
+        },
+        {
+            "rule": "feverup\\.com\\/ss",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gcptm"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
             "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "secretmelbourne.com",
+                "secretsydney.com"
+            ]
+        },
+        {
+            "rule": "feverup\\.com\\/ss",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gcptm"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "f894988d382660c0cba924f375e57bf7b5c73a3ebe11c78a7592306d1c22b1bd"
+            ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -55,21 +125,30 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.000201,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.8333333333333334
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.1
+        },
+        {
+            "domain": "inmobi.com",
+            "prevalence": 0.06666666666666667
         }
     ],
     "types": {
-        "Other": 2,
-        "Fetch": 2
+        "Preflight": 4,
+        "Fetch": 4,
+        "Document": 2
     },
     "nameservers": [
-        "ns-122.awsdns-15.com",
         "ns-685.awsdns-21.net",
         "ns-1537.awsdns-00.co.uk",
+        "ns-122.awsdns-15.com",
         "ns-1317.awsdns-36.org"
     ]
 }

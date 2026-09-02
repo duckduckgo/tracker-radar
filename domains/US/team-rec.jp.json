@@ -7,31 +7,42 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000205,
-    "sites": 3,
+    "prevalence": 0.0000343,
+    "sites": 5,
     "subdomains": [
-        "mybaito-inhale",
-        "livable-inhale"
+        "toto-inhale",
+        "livable-inhale",
+        "toto-recommend",
+        "narita-recommend",
+        "toto-b",
+        "twrcd-beacon",
+        "lhe-beacon",
+        "narita-b"
     ],
-    "cnames": [],
-    "fingerprinting": 2,
+    "cnames": [
+        {
+            "original": "beacon-recommend.tower.jp",
+            "resolved": "twrcd-beacon.team-rec.jp"
+        }
+    ],
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "team-rec\\.jp\\/js\\/tlab-dmp\\.js",
-            "cookies": 0.0000137,
+            "cookies": 0.00000686,
             "fingerprinting": 1,
             "subdomains": [
-                "mybaito-inhale",
+                "toto-inhale",
                 "livable-inhale"
             ],
             "apis": {
                 "Navigator.prototype.doNotTrack": 2,
-                "Document.cookie getter": 2,
-                "window.localStorage": 2,
                 "Date.prototype.getTime": 2,
-                "Document.cookie setter": 2,
                 "Navigator.prototype.userAgent": 2,
-                "Navigator.prototype.appVersion": 2
+                "Navigator.prototype.appVersion": 2,
+                "Document.cookie getter": 1,
+                "window.localStorage": 1,
+                "Document.cookie setter": 1
             },
             "sites": 2,
             "prevalence": 0.0000137,
@@ -41,29 +52,81 @@
             ],
             "type": "Script",
             "firstPartyCookies": {
-                "usertrack_asp3": {
+                "tlab.tracking_id": {
                     "ttl": 31536005,
-                    "length": 23,
-                    "prevalence": 0.000006849643476057072,
+                    "length": 24,
+                    "prevalence": 0.0000068576757965190435,
                     "uniqueness": 1
                 },
                 "tlb_sid": {
                     "ttl": 1800,
                     "length": 10,
-                    "prevalence": 0.000013699286952114143,
-                    "uniqueness": 1
-                },
-                "tlab.tracking_id": {
-                    "ttl": 31536004,
-                    "length": 24,
-                    "prevalence": 0.000006849643476057072,
+                    "prevalence": 0.0000068576757965190435,
                     "uniqueness": 1
                 }
             },
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "mynavi.jp",
+                "toto.com",
                 "www.livable.co.jp"
+            ]
+        },
+        {
+            "rule": "team-rec\\.jp\\/js\\.recommend\\/tlab_v4\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "toto-recommend",
+                "narita-recommend"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Document.cookie getter": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "cf8399b646e8dcfe95120286de877c90fba9a7c06000099417abf0ca60ea3ca4"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "toto.com",
+                "www.narita-airport.jp"
+            ]
+        },
+        {
+            "rule": "team-rec\\.jp\\/beacon\\.gif",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "toto-b",
+                "twrcd-beacon",
+                "lhe-beacon",
+                "narita-b"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [
+                {
+                    "original": "beacon-recommend.tower.jp",
+                    "resolved": "twrcd-beacon.team-rec.jp"
+                }
+            ],
+            "responseHashes": [
+                "d346801abbf9bb4e9e9a055239053d4ab5596514304f601a6c70604187acb744"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "toto.com",
+                "tower.jp",
+                "www.hmv.co.jp",
+                "www.narita-airport.jp"
             ]
         },
         {
@@ -71,7 +134,7 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "mybaito-inhale",
+                "toto-inhale",
                 "livable-inhale"
             ],
             "apis": {},
@@ -84,37 +147,40 @@
             "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "usertrack_asp3": 0.000006849643476057072,
-                "tlb_sid": 0.000013699286952114143,
-                "tlab.tracking_id": 0.000006849643476057072
+                "tlb_sid": 0.000013715351593038087,
+                "tlab.tracking_id": 0.0000068576757965190435
             },
             "exampleSites": [
-                "mynavi.jp",
+                "toto.com",
                 "www.livable.co.jp"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0000137,
+    "cookies": 0.00000686,
     "topInitiators": [
         {
+            "domain": "first party",
+            "prevalence": 0.4
+        },
+        {
             "domain": "googletagmanager.com",
-            "prevalence": 0.6
+            "prevalence": 0.4
         },
         {
             "domain": "amazonaws.com",
-            "prevalence": 0.4
+            "prevalence": 0.2
         }
     ],
     "types": {
-        "Script": 2,
-        "Image": 2
+        "Script": 4,
+        "Image": 6
     },
     "nameservers": [
-        "ns-1076.awsdns-06.org",
         "ns-1923.awsdns-48.co.uk",
-        "ns-345.awsdns-43.com",
-        "ns-717.awsdns-25.net"
+        "ns-1076.awsdns-06.org",
+        "ns-717.awsdns-25.net",
+        "ns-345.awsdns-43.com"
     ]
 }

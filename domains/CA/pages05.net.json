@@ -12,19 +12,26 @@
     "prevalence": 0.000202,
     "sites": 2,
     "subdomains": [
-        "www.sc"
+        "www.sc",
+        "www"
     ],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "pages05\\.net\\/lp\\/static\\/js\\/iMAWebCookie\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
+            "cookies": 0.000202,
+            "fingerprinting": 1,
             "subdomains": [
                 "www.sc"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.cookieEnabled": 2,
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2,
+                "Navigator.prototype.userAgent": 2
+            },
             "sites": 2,
             "prevalence": 0.000202,
             "cnames": [],
@@ -32,8 +39,52 @@
                 "e0447961a33816f0c4e3857863982dbc864a67748c596b78678a7622a8f69282"
             ],
             "type": "Script",
-            "firstPartyCookies": {},
+            "firstPartyCookies": {
+                "com.silverpop.iMAWebCookie": {
+                    "ttl": 86400005,
+                    "length": 36,
+                    "prevalence": 0.00020185708518368994,
+                    "uniqueness": 1
+                },
+                "com.silverpop.iMA.page_visit": {
+                    "ttl": 1205,
+                    "length": 3,
+                    "prevalence": 0.00020185708518368994,
+                    "uniqueness": 0.5
+                },
+                "com.silverpop.iMA.session": {
+                    "ttl": 1205,
+                    "length": 36,
+                    "prevalence": 0.00020185708518368994,
+                    "uniqueness": 1
+                }
+            },
             "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "uline.ca",
+                "www.uline.ca"
+            ]
+        },
+        {
+            "rule": "pages05\\.net\\/WTS\\/event\\.jpeg",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "com.silverpop.iMAWebCookie": 0.00020185708518368994,
+                "com.silverpop.iMA.session": 0.00020185708518368994
+            },
             "exampleSites": [
                 "uline.ca",
                 "www.uline.ca"
@@ -42,20 +93,25 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.000202,
     "topInitiators": [
         {
             "domain": "googletagmanager.com",
-            "prevalence": 1
+            "prevalence": 0.6666666666666666
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.3333333333333333
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 2,
+        "Image": 2
     },
     "nameservers": [
-        "ns1.acoustic-adm.com",
-        "ns2.acoustic-adm.com",
         "ns3.acoustic-adm.com",
-        "ns4.acoustic-adm.com"
+        "ns1.acoustic-adm.com",
+        "ns4.acoustic-adm.com",
+        "ns2.acoustic-adm.com"
     ]
 }

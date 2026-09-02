@@ -17,30 +17,6 @@
     "fingerprinting": 1,
     "resources": [
         {
-            "rule": "honeybadger\\.io\\/v6\\.14\\/honeybadger\\.min\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "js"
-            ],
-            "apis": {
-                "Navigator.prototype.userAgent": 2
-            },
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "82dffa8a482d5f4f32814149195b59f688bceadb72ad57c6045fd652606a27fa"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "classicalacademicpress.com",
-                "exhibits.stanford.edu"
-            ]
-        },
-        {
             "rule": "honeybadger\\.io\\/v4\\.3\\/honeybadger\\.min\\.js",
             "cookies": 0,
             "fingerprinting": 0,
@@ -48,8 +24,8 @@
                 "js"
             ],
             "apis": {},
-            "sites": 14,
-            "prevalence": 0.0000959,
+            "sites": 13,
+            "prevalence": 0.0000891,
             "cnames": [],
             "responseHashes": [
                 "61e2a0c86ad89ec81d6fc2045f1208803d173313885c54d5bd55f37b45edf096"
@@ -62,16 +38,35 @@
                 "obits.al.com",
                 "obits.cleveland.com",
                 "obits.gazette.com",
-                "obits.dallasnews.com",
                 "obits.lehighvalleylive.com",
-                "obits.masslive.com",
                 "obits.mlive.com",
                 "obits.nj.com",
                 "obits.oregonlive.com",
+                "obits.masslive.com",
+                "obits.dallasnews.com",
                 "obits.pennlive.com",
                 "obits.syracuse.com",
-                "obituaries.the-journal.com",
-                "www.legacy.com"
+                "obituaries.the-journal.com"
+            ]
+        },
+        {
+            "rule": "honeybadger\\.io\\/v1\\/notices\\/js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "theknot.com",
+                "www.avail.com"
             ]
         },
         {
@@ -86,13 +81,11 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "599b341c28662538d16ef1714a9c50a2a5d6a9f7798536bd9ca37dafe6ed1661"
+                "62796788a72f827adb183aaf559aa2cec90e066fed23740d0d42ebe1727839df"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
-            "firstPartyCookiesSent": {
-                "IR_gbd": 0.000006849643476057072
-            },
+            "firstPartyCookiesSent": {},
             "exampleSites": [
                 "simplisafe.com",
                 "www.machinerypete.com"
@@ -101,13 +94,16 @@
         {
             "rule": "honeybadger\\.io\\/v3\\.0\\/honeybadger\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "js"
             ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "apis": {
+                "Navigator.prototype.userAgent": 1,
+                "Date.prototype.getTime": 1
+            },
+            "sites": 3,
+            "prevalence": 0.0000206,
             "cnames": [],
             "responseHashes": [
                 "18a0c72749f7fc62974ac442882fbf68d83172352b791d3d7a5cebb03a506d3d"
@@ -116,8 +112,31 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "haymarketbooks.org",
+                "avail.com",
+                "www.haymarketbooks.org",
                 "www.morgan-properties.com"
+            ]
+        },
+        {
+            "rule": "honeybadger\\.io\\/v1\\/notices\\/js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "599b341c28662538d16ef1714a9c50a2a5d6a9f7798536bd9ca37dafe6ed1661"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "avail.com",
+                "www.avail.com"
             ]
         }
     ],
@@ -127,20 +146,25 @@
     "topInitiators": [
         {
             "domain": "pledge.to",
-            "prevalence": 0.5384615384615384
+            "prevalence": 0.48148148148148145
         },
         {
             "domain": "first party",
-            "prevalence": 0.4230769230769231
+            "prevalence": 0.4444444444444444
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.037037037037037035
         },
         {
             "domain": "cookielaw.org",
-            "prevalence": 0.038461538461538464
+            "prevalence": 0.037037037037037035
         }
     ],
     "types": {
-        "Script": 18,
-        "XHR": 2
+        "Script": 16,
+        "Preflight": 2,
+        "XHR": 4
     },
     "nameservers": [
         "ns-1478.awsdns-56.org",

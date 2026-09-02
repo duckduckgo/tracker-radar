@@ -4,11 +4,13 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000402,
-    "sites": 4,
+    "prevalence": 0.000604,
+    "sites": 6,
     "subdomains": [
         "0tp9ssgtptvs",
-        "cm5sx5y252x4"
+        "cm5sx5y252x4",
+        "1v5nt68l4ppj",
+        "phttj8y9mw9t"
     ],
     "cnames": [
         {
@@ -16,11 +18,19 @@
             "resolved": "0tp9ssgtptvs.stspg-customer.com"
         },
         {
+            "original": "status.gbif.org",
+            "resolved": "phttj8y9mw9t.stspg-customer.com"
+        },
+        {
+            "original": "status.kattis.com",
+            "resolved": "1v5nt68l4ppj.stspg-customer.com"
+        },
+        {
             "original": "status.one.com",
             "resolved": "cm5sx5y252x4.stspg-customer.com"
         }
     ],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "stspg-customer\\.com\\/api\\/v2\\/status\\.json",
@@ -44,7 +54,7 @@
                 }
             ],
             "responseHashes": [
-                "845fc3dabf62c38d079e4c062fc45b86c02aee727e2807c032940cf19c8014da"
+                "6edc67fa047d0059754b18735db4a22463a8cd2a5e73657544233f6f884ac132"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -52,6 +62,38 @@
             "exampleSites": [
                 "cursor.com",
                 "help.one.com"
+            ]
+        },
+        {
+            "rule": "stspg-customer\\.com\\/embed\\/script\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "1v5nt68l4ppj",
+                "phttj8y9mw9t"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "status.kattis.com",
+                    "resolved": "1v5nt68l4ppj.stspg-customer.com"
+                },
+                {
+                    "original": "status.gbif.org",
+                    "resolved": "phttj8y9mw9t.stspg-customer.com"
+                }
+            ],
+            "responseHashes": [
+                "a9ce18cffd7678f5d3e79d93284031763c88ca741cfa6e90ea54ac308492d840"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kattis.com",
+                "www.gbif.org"
             ]
         }
     ],
@@ -61,20 +103,25 @@
     "topInitiators": [
         {
             "domain": "discourse-cdn.com",
-            "prevalence": 0.6666666666666666
+            "prevalence": 0.5
         },
         {
             "domain": "redhatstatic.com",
-            "prevalence": 0.3333333333333333
+            "prevalence": 0.25
+        },
+        {
+            "domain": "d36jn9qou1tztq.cloudfront.net",
+            "prevalence": 0.25
         }
     ],
     "types": {
-        "Fetch": 2
+        "Fetch": 2,
+        "Script": 2
     },
     "nameservers": [
+        "ns-817.awsdns-38.net",
         "ns-1098.awsdns-09.org",
-        "ns-1711.awsdns-21.co.uk",
         "ns-441.awsdns-55.com",
-        "ns-817.awsdns-38.net"
+        "ns-1711.awsdns-21.co.uk"
     ]
 }

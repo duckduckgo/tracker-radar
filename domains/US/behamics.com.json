@@ -4,11 +4,12 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000274,
-    "sites": 4,
+    "prevalence": 0.0000206,
+    "sites": 3,
     "subdomains": [
         "cdn",
-        "engine5"
+        "engine5",
+        "recorder"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -31,7 +32,7 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "02ebe7f119973568d71fabe37970924d89732368506ec0f85c580e86ec4c1e07"
+                "f7a31a01690d4c0207ceae0fd8b0b075a9646fc6d3032372556994485ddf7220"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -65,32 +66,103 @@
         },
         {
             "rule": "behamics\\.com\\/api\\/getmessage",
-            "cookies": 0.0000205,
+            "cookies": 0.0000137,
             "fingerprinting": 0,
             "subdomains": [
                 "engine5"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000205,
+            "sites": 2,
+            "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "d54b97bf9dc712b7e2a071128b29a8b876221dc2016af9ce0a8d86e0a43f0218",
-                "a2472ed0446d4040f8aa9044fbf28bc7cf7cfe75c7491a1859438c969b717849"
+                "7c4a1a5408530e68bac2605b7be86ba95de884c4126d3e227b98160bae36e214"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "giesswein.com",
-                "gonser.ch",
+                "www.giesswein.com"
+            ]
+        },
+        {
+            "rule": "behamics\\.com\\/screenrecording\\/eye\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "window.innerHeight": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.appVersion": 2,
+                "window.innerWidth": 2,
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "7fd74c2bfc3263da9fce4ebf014858eb872ce795b9793814e19adfe71c4e7b5a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "giesswein.com",
+                "www.giesswein.com"
+            ]
+        },
+        {
+            "rule": "behamics\\.com\\/screenrecording\\/rrw\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "window.innerWidth": 2,
+                "window.innerHeight": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "d03cd3526c49590bcd59f2285c08ab1b679afb4ef5836cdd512c699ea9365d6c"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "giesswein.com",
+                "www.giesswein.com"
+            ]
+        },
+        {
+            "rule": "behamics\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "recorder"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "giesswein.com",
                 "www.giesswein.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0000205,
+    "cookies": 0.0000137,
     "topInitiators": [
         {
             "domain": "first party",
@@ -98,13 +170,14 @@
         }
     ],
     "types": {
-        "Script": 2,
+        "Script": 6,
         "Stylesheet": 2,
-        "XHR": 3
+        "XHR": 2,
+        "WebSocket": 2
     },
     "nameservers": [
-        "ns.udag.de",
+        "ns.udag.org",
         "ns.udag.net",
-        "ns.udag.org"
+        "ns.udag.de"
     ]
 }

@@ -10,21 +10,24 @@
         "aisearch"
     ],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "iobonzai\\.com\\/js\\/conversational-search-widget\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "aisearch"
             ],
-            "apis": {},
+            "apis": {
+                "window.sessionStorage": 1
+            },
             "sites": 4,
             "prevalence": 0.000402,
             "cnames": [],
             "responseHashes": [
-                "755ed6428a4143b3de5e3183f19a23ab757e4dd782078eabe897ecc04011b6ed"
+                "755ed6428a4143b3de5e3183f19a23ab757e4dd782078eabe897ecc04011b6ed",
+                "8ce15ae98c86083c26d82216e88a3f37f3500fc968693c06c528759fc185b26f"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -34,6 +37,28 @@
                 "www.knhb.nl",
                 "www.knltb.nl",
                 "www.tennis.nl"
+            ]
+        },
+        {
+            "rule": "iobonzai\\.com\\/api\\/v2\\/agents\\/60171b80-9e3e-42a5-be5c-4491c3ee13fc\\/widget-configuration",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "aisearch"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "94027d9c17882369093e91281c6fbacb3ee5016388dd944683805379d9c3c337"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "knltb.nl",
+                "www.knltb.nl"
             ]
         },
         {
@@ -87,21 +112,17 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.75
-        },
-        {
-            "domain": "cookiebot.com",
-            "prevalence": 0.25
+            "prevalence": 1
         }
     ],
     "types": {
         "Script": 4,
-        "Fetch": 3,
+        "Fetch": 5,
         "Preflight": 2
     },
     "nameservers": [
-        "ns3.european-server.com",
         "ns1.european-server.eu",
-        "ns4.european-server.com"
+        "ns4.european-server.com",
+        "ns3.european-server.com"
     ]
 }

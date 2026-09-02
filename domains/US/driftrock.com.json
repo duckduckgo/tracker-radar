@@ -4,36 +4,39 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000479,
+    "prevalence": 0.000048,
     "sites": 7,
     "subdomains": [
-        "external-apis",
-        "inbound-leads"
+        "inbound-leads",
+        "external-apis"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
         {
-            "rule": "driftrock\\.com\\/v2\\/website_config",
+            "rule": "driftrock\\.com\\/driftrock\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
-                "external-apis"
+                "inbound-leads"
             ],
-            "apis": {},
-            "sites": 6,
-            "prevalence": 0.0000411,
+            "apis": {
+                "Navigator.prototype.userAgent": 4,
+                "Date.prototype.getTime": 2
+            },
+            "sites": 4,
+            "prevalence": 0.0000274,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "51b1e6dbfedcc144fb09ac5401b21dfe5d856f9a6e1e04484ef4fdfd06d57145"
+            ],
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "jaecoo.co.uk",
                 "omodaauto.co.uk",
-                "www.electrifying.com",
                 "www.honestjohn.co.uk",
-                "www.thecarexpert.co.uk",
                 "www.topgear.com"
             ]
         },
@@ -68,6 +71,30 @@
             ]
         },
         {
+            "rule": "driftrock\\.com\\/v2\\/website_config",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "external-apis"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.0000411,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jaecoo.co.uk",
+                "omodaauto.co.uk",
+                "www.electrifying.com",
+                "www.honestjohn.co.uk",
+                "www.thecarexpert.co.uk",
+                "www.topgear.com"
+            ]
+        },
+        {
             "rule": "driftrock\\.com\\/v2\\/widget_config",
             "cookies": 0,
             "fingerprinting": 0,
@@ -80,7 +107,7 @@
             "cnames": [],
             "responseHashes": [
                 "cc0a4c163b83b9ca5e6666ba7746f1ed6a1146ec7fa3cb9a2a0c948e1e1754cd",
-                "342726745db3477d84be7620ae3f421ece39a394d1e6f6c762cbbf61dd93d3a4"
+                "c9fcdd3947c7ca1fa8215614c13e5baeaf976235e1aef047b27c4be25fdb9343"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -112,32 +139,6 @@
                 "omodaauto.co.uk",
                 "www.electrifying.com",
                 "www.thecarexpert.co.uk"
-            ]
-        },
-        {
-            "rule": "driftrock\\.com\\/driftrock\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "inbound-leads"
-            ],
-            "apis": {
-                "Navigator.prototype.userAgent": 3,
-                "Date.prototype.getTime": 1
-            },
-            "sites": 3,
-            "prevalence": 0.0000205,
-            "cnames": [],
-            "responseHashes": [
-                "51b1e6dbfedcc144fb09ac5401b21dfe5d856f9a6e1e04484ef4fdfd06d57145"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "omodaauto.co.uk",
-                "www.honestjohn.co.uk",
-                "www.topgear.com"
             ]
         },
         {
@@ -173,17 +174,17 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.8888888888888888
+            "prevalence": 0.8947368421052632
         },
         {
             "domain": "drive.co.uk",
-            "prevalence": 0.1111111111111111
+            "prevalence": 0.10526315789473684
         }
     ],
     "types": {
-        "Preflight": 10,
+        "Script": 6,
         "Fetch": 10,
-        "Script": 5
+        "Preflight": 10
     },
     "nameservers": [
         "ns4.dnsimple-edge.org",

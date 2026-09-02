@@ -9,10 +9,10 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.000212,
-    "sites": 31,
+    "prevalence": 0.000254,
+    "sites": 37,
     "subdomains": [
-        "k8s-envoygat-envoyenv-0e1ad1a3b3-e5ee1e027b12c43a",
+        "k8s-system-traefik-29398cec54-dd7bba9c63258599",
         "webmgmtwebhosting-std-pub-nlb-1f2d41369f5ca1c8",
         "gwse-aim-dms-prod-fd558f4675bb6d06",
         "ue1-caext-nlb-c40e66312c75c330",
@@ -22,6 +22,10 @@
         "k8s-opstest-apisixga-ffd5932408-71111629e4aa4dd8"
     ],
     "cnames": [
+        {
+            "original": "analytics.freemake.com",
+            "resolved": "a0e17d02ba6eb4de999b2df9f1aaf939-db79925a68357571.elb.us-east-1.amazonaws.com"
+        },
         {
             "original": "api.labfinder.com",
             "resolved": "aa7924a957fd341f1b9ae6457a0a4c29-6d4bb1511e25c340.elb.us-east-1.amazonaws.com"
@@ -39,12 +43,20 @@
             "resolved": "ue1-caext-nlb-c40e66312c75c330.elb.us-east-1.amazonaws.com"
         },
         {
-            "original": "template.aws.emory.edu",
-            "resolved": "webmgmtwebhosting-std-pub-nlb-1f2d41369f5ca1c8.elb.us-east-1.amazonaws.com"
+            "original": "secure.badoinkvr.com",
+            "resolved": "k8s-system-traefik-29398cec54-dd7bba9c63258599.elb.us-east-1.amazonaws.com"
         },
         {
-            "original": "together.plex.tv",
-            "resolved": "k8s-envoygat-envoyenv-0e1ad1a3b3-e5ee1e027b12c43a.elb.us-east-1.amazonaws.com"
+            "original": "secure.realvr.com",
+            "resolved": "k8s-system-traefik-29398cec54-dd7bba9c63258599.elb.us-east-1.amazonaws.com"
+        },
+        {
+            "original": "secure.vrcosplayx.com",
+            "resolved": "k8s-system-traefik-29398cec54-dd7bba9c63258599.elb.us-east-1.amazonaws.com"
+        },
+        {
+            "original": "template.aws.emory.edu",
+            "resolved": "webmgmtwebhosting-std-pub-nlb-1f2d41369f5ca1c8.elb.us-east-1.amazonaws.com"
         },
         {
             "original": "tracking.shopcider.com",
@@ -62,67 +74,51 @@
     "fingerprinting": 1,
     "resources": [
         {
-            "rule": "elb\\.us-east-1\\.amazonaws\\.com\\/rooms",
-            "cookies": 0,
+            "rule": "elb\\.us-east-1\\.amazonaws\\.com\\/track\\/track_pixel\\.php",
+            "cookies": 0.0000206,
             "fingerprinting": 0,
             "subdomains": [
-                "k8s-envoygat-envoyenv-0e1ad1a3b3-e5ee1e027b12c43a"
+                "k8s-system-traefik-29398cec54-dd7bba9c63258599"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "sites": 3,
+            "prevalence": 0.0000206,
             "cnames": [
                 {
-                    "original": "together.plex.tv",
-                    "resolved": "k8s-envoygat-envoyenv-0e1ad1a3b3-e5ee1e027b12c43a.elb.us-east-1.amazonaws.com"
+                    "original": "secure.badoinkvr.com",
+                    "resolved": "k8s-system-traefik-29398cec54-dd7bba9c63258599.elb.us-east-1.amazonaws.com"
+                },
+                {
+                    "original": "secure.realvr.com",
+                    "resolved": "k8s-system-traefik-29398cec54-dd7bba9c63258599.elb.us-east-1.amazonaws.com"
+                },
+                {
+                    "original": "secure.vrcosplayx.com",
+                    "resolved": "k8s-system-traefik-29398cec54-dd7bba9c63258599.elb.us-east-1.amazonaws.com"
                 }
             ],
             "responseHashes": [
-                "a248b629f2d9508e8ac49b43f61e90e3046f8c124f28adc2b2e938fb20d00b3f"
+                "6376eec964cef23c83432e97d16783ef2897dd324aae537b91f060056916d679"
             ],
-            "type": "XHR",
+            "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "plex.tv",
-                "app.plex.tv"
-            ]
-        },
-        {
-            "rule": "elb\\.us-east-1\\.amazonaws\\.com\\/rooms",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "k8s-envoygat-envoyenv-0e1ad1a3b3-e5ee1e027b12c43a"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [
-                {
-                    "original": "together.plex.tv",
-                    "resolved": "k8s-envoygat-envoyenv-0e1ad1a3b3-e5ee1e027b12c43a.elb.us-east-1.amazonaws.com"
-                }
-            ],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "plex.tv",
-                "app.plex.tv"
+                "badoinkvr.com",
+                "realvr.com",
+                "vrcosplayx.com"
             ]
         },
         {
             "rule": "elb\\.us-east-1\\.amazonaws\\.com\\/shared-assets\\/emergency\\/alert-feed\\.php",
-            "cookies": 0.0000342,
+            "cookies": 0.0000343,
             "fingerprinting": 0,
             "subdomains": [
                 "webmgmtwebhosting-std-pub-nlb-1f2d41369f5ca1c8"
             ],
             "apis": {},
             "sites": 5,
-            "prevalence": 0.0000342,
+            "prevalence": 0.0000343,
             "cnames": [
                 {
                     "original": "template.aws.emory.edu",
@@ -178,8 +174,8 @@
                 "gwse-aim-dms-prod-fd558f4675bb6d06"
             ],
             "apis": {},
-            "sites": 5,
-            "prevalence": 0.0000342,
+            "sites": 4,
+            "prevalence": 0.0000274,
             "cnames": [
                 {
                     "original": "dyn-msg-service.prod.adp.com",
@@ -192,10 +188,9 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "adp.com",
-                "my.adp.com",
+                "mykplan.adp.com",
                 "runpayroll.adp.com",
-                "workforcenow.adp.com",
-                "www.mykplan.adp.com"
+                "workforcenow.adp.com"
             ]
         },
         {
@@ -206,8 +201,8 @@
                 "gwse-aim-dms-prod-fd558f4675bb6d06"
             ],
             "apis": {},
-            "sites": 5,
-            "prevalence": 0.0000342,
+            "sites": 4,
+            "prevalence": 0.0000274,
             "cnames": [
                 {
                     "original": "dyn-msg-service.prod.adp.com",
@@ -215,18 +210,16 @@
                 }
             ],
             "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-                "ef6ca472f9e1341e35f2bc83915bc493bbb44aca3a1cfbd25e2704133a9f424c"
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "adp.com",
-                "my.adp.com",
+                "mykplan.adp.com",
                 "runpayroll.adp.com",
-                "workforcenow.adp.com",
-                "www.mykplan.adp.com"
+                "workforcenow.adp.com"
             ]
         },
         {
@@ -271,7 +264,7 @@
                 }
             ],
             "responseHashes": [
-                "6ab87fb7fa914790cb92342470164b31df153bbd1dd4b227ff8ea15717fbbe6e"
+                "86aea907ae28328ce8d486042b0eb5fd60b076d53b80f4d834f704f7c0222659"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -279,6 +272,60 @@
             "exampleSites": [
                 "broadviewfcu.com",
                 "www.broadviewfcu.com"
+            ]
+        },
+        {
+            "rule": "elb\\.us-east-1\\.amazonaws\\.com\\/api\\/v1\\.0\\/EnvironmentEvents\\/config",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "a0e17d02ba6eb4de999b2df9f1aaf939-db79925a68357571"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "analytics.freemake.com",
+                    "resolved": "a0e17d02ba6eb4de999b2df9f1aaf939-db79925a68357571.elb.us-east-1.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "a6135a97f35d5dae51afdb46d1d0904d7fccbe0e6cc4565d15ead7ef34ee9506"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "freemake.com",
+                "www.freemake.com"
+            ]
+        },
+        {
+            "rule": "elb\\.us-east-1\\.amazonaws\\.com\\/api\\/v1\\/Metrics\\/SiteDimensions",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "a0e17d02ba6eb4de999b2df9f1aaf939-db79925a68357571"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "metrics.freemake.com",
+                    "resolved": "a0e17d02ba6eb4de999b2df9f1aaf939-db79925a68357571.elb.us-east-1.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "freemake.com",
+                "www.freemake.com"
             ]
         },
         {
@@ -309,56 +356,6 @@
             ]
         },
         {
-            "rule": "elb\\.us-east-1\\.amazonaws\\.com\\/api\\/analytics-events",
-            "cookies": 0.0000137,
-            "fingerprinting": 0,
-            "subdomains": [
-                "aa7924a957fd341f1b9ae6457a0a4c29-6d4bb1511e25c340"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [
-                {
-                    "original": "api.labfinder.com",
-                    "resolved": "aa7924a957fd341f1b9ae6457a0a4c29-6d4bb1511e25c340.elb.us-east-1.amazonaws.com"
-                }
-            ],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "labfinder.com",
-                "www.labfinder.com"
-            ]
-        },
-        {
-            "rule": "elb\\.us-east-1\\.amazonaws\\.com\\/api\\/analytics-events",
-            "cookies": 0.0000137,
-            "fingerprinting": 0,
-            "subdomains": [
-                "aa7924a957fd341f1b9ae6457a0a4c29-6d4bb1511e25c340"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [
-                {
-                    "original": "api.labfinder.com",
-                    "resolved": "aa7924a957fd341f1b9ae6457a0a4c29-6d4bb1511e25c340.elb.us-east-1.amazonaws.com"
-                }
-            ],
-            "responseHashes": [],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "labfinder.com",
-                "www.labfinder.com"
-            ]
-        },
-        {
             "rule": "elb\\.us-east-1\\.amazonaws\\.com\\/api\\/autocomplete\\/getPopularExamData",
             "cookies": 0.0000137,
             "fingerprinting": 0,
@@ -386,7 +383,7 @@
             ]
         },
         {
-            "rule": "elb\\.us-east-1\\.amazonaws\\.com\\/api\\/autocomplete\\/getSearchInsuranceData",
+            "rule": "elb\\.us-east-1\\.amazonaws\\.com\\/api\\/autocomplete\\/v2\\/getPopularInsuranceData",
             "cookies": 0.0000137,
             "fingerprinting": 0,
             "subdomains": [
@@ -402,7 +399,34 @@
                 }
             ],
             "responseHashes": [
-                "15db02f3a9a0e7a968c2239814d30f6e418360dfd523e8ee4f5d01c0a5d71d78"
+                "2b918744f9fda5aff87e22dd3d10fad8eb9d1583ee03c57d8ed6ad792d1994ae"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "labfinder.com",
+                "www.labfinder.com"
+            ]
+        },
+        {
+            "rule": "elb\\.us-east-1\\.amazonaws\\.com\\/api\\/autocomplete\\/v2\\/getSearchInsuranceData",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "aa7924a957fd341f1b9ae6457a0a4c29-6d4bb1511e25c340"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "api.labfinder.com",
+                    "resolved": "aa7924a957fd341f1b9ae6457a0a4c29-6d4bb1511e25c340.elb.us-east-1.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "8fe54566cd9226ff7b0690829e0f0413e2d5be93abb7b241a4d3ee4c525ebaae"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -441,14 +465,14 @@
         },
         {
             "rule": "elb\\.us-east-1\\.amazonaws\\.com\\/api\\/page-view",
-            "cookies": 0.0000205,
+            "cookies": 0.0000206,
             "fingerprinting": 0,
             "subdomains": [
                 "k8s-traefik-traefiki-a71b03da24-50b85e7e0d922d30"
             ],
             "apis": {},
             "sites": 3,
-            "prevalence": 0.0000205,
+            "prevalence": 0.0000206,
             "cnames": [
                 {
                     "original": "usermetrics.oyster.com",
@@ -580,7 +604,7 @@
         "CDN"
     ],
     "performance": {},
-    "cookies": 0.0000959,
+    "cookies": 0.00013,
     "topInitiators": [
         {
             "domain": "jquery.com",
@@ -596,16 +620,17 @@
         }
     ],
     "types": {
-        "XHR": 14,
-        "Preflight": 15,
+        "Image": 3,
+        "XHR": 13,
         "Script": 2,
+        "Preflight": 10,
         "Fetch": 8,
-        "Ping": 9
+        "Ping": 11
     },
     "nameservers": [
-        "ns-1826.awsdns-36.co.uk",
         "ns-844.awsdns-41.net",
         "ns-1286.awsdns-32.org",
+        "ns-1826.awsdns-36.co.uk",
         "ns-281.awsdns-35.com"
     ]
 }

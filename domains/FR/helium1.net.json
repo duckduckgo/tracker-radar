@@ -7,12 +7,37 @@
     "prevalence": 0.000403,
     "sites": 4,
     "subdomains": [
-        "api",
-        "cdn"
+        "cdn",
+        "api"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "helium1\\.net\\/js\\/helium-core\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "window.innerWidth": 2,
+                "window.innerHeight": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "2679297abe4ae2f4ddbd39d728b29e5857ed1e2e56e8a7797496a2e2307463cf"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lesalonbeige.fr",
+                "resistancerepublicaine.com"
+            ]
+        },
         {
             "rule": "helium1\\.net\\/api\\/fetch",
             "cookies": 0,
@@ -25,16 +50,16 @@
             "prevalence": 0.000303,
             "cnames": [],
             "responseHashes": [
-                "d051aa1626e0793b80ccb88e78170cc67f17a320c8caebbbcffdc8b993b8ecbf",
-                "e5d0195b27a913fc0f6c338e4d22d13f874abb3146d205ee942840b28891fe82"
+                "48e71d316fca010bcefceab0f4d31331dc874f68eadb99e5753de33fcfcacf80",
+                "fd88461b3e4582bd9bbdb80080f665be5c6e69a14a825d5d7368f5e433b6df54"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
+                "lesalonbeige.fr",
                 "reseauinternational.net",
-                "resistancerepublicaine.com",
-                "www.medias-presse.info"
+                "resistancerepublicaine.com"
             ]
         },
         {
@@ -53,9 +78,9 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
+                "lesalonbeige.fr",
                 "reseauinternational.net",
-                "resistancerepublicaine.com",
-                "www.medias-presse.info"
+                "resistancerepublicaine.com"
             ]
         },
         {
@@ -81,20 +106,20 @@
             ]
         },
         {
-            "rule": "helium1\\.net\\/media\\/cp80babkn4x3hoa00max4ocaeiyx0miy\\.jpg",
+            "rule": "helium1\\.net\\/api\\/validate",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "cdn"
+                "api"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "e1210ca1f390e3ee0793b157b73a4d2591d97a2118ee2b9af068103eebc762fa"
+                "8a90ce48b8520ac2ebc8af52946aecc41343b841bd07d2422d1007c3ea6087fc"
             ],
-            "type": "Image",
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -103,28 +128,23 @@
             ]
         },
         {
-            "rule": "helium1\\.net\\/js\\/helium-core\\.js",
+            "rule": "helium1\\.net\\/api\\/validate",
             "cookies": 0,
-            "fingerprinting": 1,
+            "fingerprinting": 0,
             "subdomains": [
-                "cdn"
+                "api"
             ],
-            "apis": {
-                "window.innerWidth": 2,
-                "window.innerHeight": 2
-            },
+            "apis": {},
             "sites": 2,
             "prevalence": 0.000202,
             "cnames": [],
-            "responseHashes": [
-                "2679297abe4ae2f4ddbd39d728b29e5857ed1e2e56e8a7797496a2e2307463cf"
-            ],
-            "type": "Script",
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "resistancerepublicaine.com",
-                "www.medias-presse.info"
+                "reseauinternational.net",
+                "resistancerepublicaine.com"
             ]
         }
     ],
@@ -134,27 +154,27 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.5
-        },
-        {
-            "domain": "heliumads.com",
-            "prevalence": 0.3333333333333333
+            "prevalence": 0.5714285714285714
         },
         {
             "domain": "viahelium.com",
-            "prevalence": 0.16666666666666666
+            "prevalence": 0.2857142857142857
+        },
+        {
+            "domain": "heliumads.com",
+            "prevalence": 0.14285714285714285
         }
     ],
     "types": {
-        "Fetch": 3,
-        "Preflight": 3,
-        "Image": 4,
-        "Script": 2
+        "Script": 2,
+        "Fetch": 5,
+        "Preflight": 5,
+        "Image": 2
     },
     "nameservers": [
-        "ns1.dnsimple-edge.com",
-        "ns3.dnsimple-edge.io",
         "ns4.dnsimple-edge.org",
-        "ns2.dnsimple-edge.net"
+        "ns2.dnsimple-edge.net",
+        "ns1.dnsimple-edge.com",
+        "ns3.dnsimple-edge.io"
     ]
 }
