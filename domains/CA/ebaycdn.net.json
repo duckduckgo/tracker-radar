@@ -8,7 +8,8 @@
     "sites": 1,
     "subdomains": [
         "ir",
-        "devicebind.ebay.com"
+        "devicebind.ebay.com",
+        "svcs"
     ],
     "cnames": [
         {
@@ -18,6 +19,10 @@
         {
             "original": "ir.ebaystatic.com",
             "resolved": "ir.ebaycdn.net"
+        },
+        {
+            "original": "svcs.ebay.com",
+            "resolved": "svcs.ebaycdn.net"
         }
     ],
     "fingerprinting": 3,
@@ -66,9 +71,61 @@
                 }
             ],
             "responseHashes": [
-                "0484b4d57d61fd9805cbff1c120ad0b34de748f96f2df46ac67f0684f7af8746"
+                "50f194a99146b452c13e7589f768d77f7e84cf83395365370476bb80afbbe073"
             ],
             "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ebay.com",
+                "signin.ebay.com"
+            ]
+        },
+        {
+            "rule": "ebaycdn\\.net\\/ufeservice\\/v1\\/metrics",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "svcs"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "svcs.ebay.com",
+                    "resolved": "svcs.ebaycdn.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ebay.com",
+                "signin.ebay.com"
+            ]
+        },
+        {
+            "rule": "ebaycdn\\.net\\/ufeservice\\/v1\\/metrics",
+            "cookies": 0.000202,
+            "fingerprinting": 0,
+            "subdomains": [
+                "svcs"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "svcs.ebay.com",
+                    "resolved": "svcs.ebaycdn.net"
+                }
+            ],
+            "responseHashes": [
+                "e080030eefb474b96739fb438309c195c9695f78f630b9ce2a3e625b06e2a099"
+            ],
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -83,25 +140,27 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.7307692307692307
+            "prevalence": 0.7037037037037037
         },
         {
             "domain": "ebaystatic.com",
-            "prevalence": 0.2692307692307692
+            "prevalence": 0.2962962962962963
         }
     ],
     "types": {
         "Script": 2,
-        "Document": 2
+        "Document": 2,
+        "Preflight": 2,
+        "XHR": 2
     },
     "nameservers": [
-        "dns1.p06.nsone.net",
-        "dns2.p06.nsone.net",
-        "dns3.p06.nsone.net",
         "dns4.p06.nsone.net",
-        "ns01.ebaydns.com",
         "ns02.ebaydns.com",
+        "dns3.p06.nsone.net",
         "ns03.ebaydns.com",
-        "ns04.ebaydns.com"
+        "dns1.p06.nsone.net",
+        "ns04.ebaydns.com",
+        "dns2.p06.nsone.net",
+        "ns01.ebaydns.com"
     ]
 }

@@ -7,27 +7,33 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000706,
-    "sites": 7,
+    "prevalence": 0.00101,
+    "sites": 10,
     "subdomains": [
         "cdn"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "rollbar\\.com\\/rollbarjs\\/refs\\/tags\\/v2\\.26\\.4\\/rollbar\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 1,
+            "fingerprinting": 2,
             "subdomains": [
                 "cdn"
             ],
             "apis": {
-                "console.memory": 2,
-                "Date.prototype.getTime": 2
+                "console.memory": 3,
+                "Date.prototype.getTime": 3,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.language": 2,
+                "Navigator.prototype.cookieEnabled": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "Navigator.prototype.plugins": 2
             },
-            "sites": 2,
-            "prevalence": 0.000202,
+            "sites": 3,
+            "prevalence": 0.000303,
             "cnames": [],
             "responseHashes": [
                 "229a28cc86ef31dd3ce33153dc2782b219d0a5556f76bf971d9f08d964fb8d7a"
@@ -37,7 +43,8 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "raider.io",
-                "www.dxengineering.com"
+                "www.dxengineering.com",
+                "www.summitracing.com"
             ]
         },
         {
@@ -50,12 +57,12 @@
             "apis": {
                 "console.memory": 2,
                 "Date.prototype.getTime": 2,
-                "Navigator.prototype.userAgent": 1,
-                "Navigator.prototype.language": 1,
-                "Navigator.prototype.cookieEnabled": 1,
-                "Screen.prototype.width": 1,
-                "Screen.prototype.height": 1,
-                "Navigator.prototype.plugins": 1
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.language": 2,
+                "Navigator.prototype.cookieEnabled": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "Navigator.prototype.plugins": 2
             },
             "sites": 2,
             "prevalence": 0.000202,
@@ -70,6 +77,31 @@
                 "corsair.com",
                 "www.elgato.com"
             ]
+        },
+        {
+            "rule": "rollbar\\.com\\/rollbarjs\\/refs\\/tags\\/v2\\.26\\.1\\/rollbar\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "console.memory": 2,
+                "Date.prototype.getTime": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "41764f6cf1cfa99fad12f1ee265ea0bb292761f6b15d1f5432756524854cd77f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "litcharts.com",
+                "www.ynab.com"
+            ]
         }
     ],
     "categories": [],
@@ -78,11 +110,15 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.9
+        },
+        {
+            "domain": "ynabassets.com",
+            "prevalence": 0.1
         }
     ],
     "types": {
-        "Script": 4
+        "Script": 7
     },
     "nameservers": [
         "tori.ns.cloudflare.com",

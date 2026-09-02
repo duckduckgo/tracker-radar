@@ -11,7 +11,8 @@
     "sites": 4,
     "subdomains": [
         "privacy",
-        "fides"
+        "fides",
+        "rum"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -31,9 +32,9 @@
             "prevalence": 0.000402,
             "cnames": [],
             "responseHashes": [
-                "c4707ccb978acbae370f3ca39631947f2d59ca9385f979512fcc6a80116892ed",
-                "b0b12659cb4d41b1b5bbf064287be5a13ace385f365018fe6bb0492980146634",
-                "67e22a467688a63ec8a0d8aa37817c8992a77379d3a4c406402382852e285d0b"
+                "70ba46c87f776c96f44f3ebaa5d89897c1e38c16ab4140abeb7dfe14f77c442f",
+                "080b95e89638117f21f78c618907b38e4a0876e98efaccedf5a9e94afe3ce478",
+                "f75451739dd8dbe96e5e4f3666e996f7652efbc81c2b5ec2d858775d056051aa"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -79,9 +80,9 @@
             "prevalence": 0.000402,
             "cnames": [],
             "responseHashes": [
-                "8355615707364a0c240db8220c77fdd09d72c1b72adf8db61145ff543564346a",
-                "69ea6bef350c5ea9aef52c7744b288cf16adcfc5addd5d7350eccc52499cce3f",
-                "3ed4308a86741f3e1bb1ec784421358975f82ccaade4752d0d1c9405ad36d0ac"
+                "3aec472c7b7b516a191835ac06311acf3d2d413112dfce08440a4dad01939290",
+                "b6be28c58641632152ad39f83c86a325a256c8da854aa04c382af704047aedb0",
+                "98c32f592cbacf28c896ea97bc6d5439507373e401d2b5d3299777764cc381c5"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -127,9 +128,9 @@
             "prevalence": 0.000402,
             "cnames": [],
             "responseHashes": [
-                "6396bc35893347414d2f7aa2cf1fb417e497223e0b0eb6a8909e548d004c1cc8",
-                "037b83416c9ada6be28965c141de3fd9bbdd61d4790ef92e8f253ca5f0b7394d",
-                "71554e99da37089d96e847729c6929b9cec3af5e44e837f20c064b6fea9fbb53"
+                "e2fb5143416683ae7e89124a4b9fd08b88c4235a84fbfc3ff916b87efff761bd",
+                "41570e61e64c7daad6fab0c95466006118e7b7d263057c2f95c1d712f869d618",
+                "90c4db3818a039966a42d32038431a79cb5bf64acf818db5efd407141d5c6801"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -139,6 +140,71 @@
                 "www.gq-magazine.co.uk",
                 "www.houseandgarden.co.uk",
                 "www.vogue.co.uk"
+            ]
+        },
+        {
+            "rule": "condenastdigital\\.com\\/client\\/boomerang-1\\.0\\.c0cbec6da22c38733fef2a494104b4816b956fea\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "rum"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2,
+                "PerformanceTiming.prototype.navigationStart": 2,
+                "window.localStorage": 2,
+                "Navigator.prototype.connection": 2,
+                "Navigator.prototype.vendor": 2,
+                "Document.cookie getter": 2,
+                "window.sessionStorage": 2,
+                "Performance.prototype.memory": 2,
+                "window.innerHeight": 2,
+                "window.innerWidth": 2,
+                "NavigatorUAData.prototype.platform": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "Screen.prototype.colorDepth": 2,
+                "Screen.prototype.pixelDepth": 2,
+                "Screen.prototype.orientation": 2,
+                "window.devicePixelRatio": 2,
+                "Navigator.prototype.hardwareConcurrency": 2,
+                "Navigator.prototype.maxTouchPoints": 2,
+                "Navigator.prototype.deviceMemory": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "ddf76bbfa72e75aa6589e40a74157a9910fdc534e96200648831fdf118a405c4"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "glamourmagazine.co.uk",
+                "www.houseandgarden.co.uk"
+            ]
+        },
+        {
+            "rule": "condenastdigital\\.com\\/beacon",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rum"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "glamourmagazine.co.uk",
+                "www.houseandgarden.co.uk"
             ]
         }
     ],
@@ -152,14 +218,15 @@
         }
     ],
     "types": {
-        "Script": 4,
+        "Script": 6,
         "Preflight": 8,
-        "Fetch": 8
+        "Fetch": 8,
+        "Ping": 2
     },
     "nameservers": [
-        "ns-1116.awsdns-11.org",
         "ns-1935.awsdns-49.co.uk",
         "ns-28.awsdns-03.com",
-        "ns-836.awsdns-40.net"
+        "ns-836.awsdns-40.net",
+        "ns-1116.awsdns-11.org"
     ]
 }

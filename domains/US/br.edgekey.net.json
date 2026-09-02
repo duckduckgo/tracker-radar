@@ -9,13 +9,18 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000479,
+    "prevalence": 0.000048,
     "sites": 7,
     "subdomains": [
+        "wildcard.estadao.com",
         "ion6.www.voegol.com",
         "ion6.www2.voegol.com"
     ],
     "cnames": [
+        {
+            "original": "assets.estadao.com.br",
+            "resolved": "wildcard.estadao.com.br.edgekey.net"
+        },
         {
             "original": "channelcfg-api.voegol.com.br",
             "resolved": "ion6.www2.voegol.com.br.edgekey.net"
@@ -27,6 +32,33 @@
     ],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "br\\.edgekey\\.net\\/pw\\/estadao-2026-eleicoes-botao-home-mobile\\.gif",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "wildcard.estadao.com"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "assets.estadao.com.br",
+                    "resolved": "wildcard.estadao.com.br.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "f47d305587dc1404ef5d01edc8aae17fe58827b4e0be7115febcaa88ec450366"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "estadao.com.br",
+                "www.estadao.com.br"
+            ]
+        },
         {
             "rule": "br\\.edgekey\\.net\\/chat\\/gal\\/dist\\/inbenta-conf\\.min\\.js",
             "cookies": 0.0000137,
@@ -140,18 +172,23 @@
     "topInitiators": [
         {
             "domain": "datadoghq-browser-agent.com",
-            "prevalence": 0.5555555555555556
+            "prevalence": 0.5
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.3333333333333333
+            "prevalence": 0.3
+        },
+        {
+            "domain": "datadome.co",
+            "prevalence": 0.1
         },
         {
             "domain": "first party",
-            "prevalence": 0.1111111111111111
+            "prevalence": 0.1
         }
     ],
     "types": {
+        "Image": 2,
         "Script": 2,
         "Preflight": 2,
         "XHR": 4

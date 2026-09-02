@@ -4,8 +4,8 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000274,
-    "sites": 4,
+    "prevalence": 0.0000343,
+    "sites": 5,
     "subdomains": [
         "knowledge",
         "sfbok.kb",
@@ -17,7 +17,7 @@
             "resolved": "knowledge.kundo.se"
         }
     ],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "kundo\\.se\\/js\\/kundo-knowledge-widget\\.js",
@@ -50,6 +50,30 @@
         {
             "rule": "kundo\\.se\\/widget\\/kundo-widget-v1\\.js",
             "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "static"
+            ],
+            "apis": {
+                "window.localStorage": 1,
+                "Navigator.prototype.userAgent": 1,
+                "Date.prototype.getTime": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "morakniv.com",
+                "www.morakniv.com"
+            ]
+        },
+        {
+            "rule": "kundo\\.se\\/widget\\/locales\\/sv\\/translation\\.json",
+            "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
                 "static"
@@ -59,7 +83,7 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [],
-            "type": "Script",
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -78,12 +102,13 @@
         }
     ],
     "types": {
-        "Script": 4
+        "Script": 4,
+        "Fetch": 2
     },
     "nameservers": [
-        "ns-822.awsdns-38.net",
-        "ns-1621.awsdns-10.co.uk",
         "ns-265.awsdns-33.com",
-        "ns-1121.awsdns-12.org"
+        "ns-822.awsdns-38.net",
+        "ns-1121.awsdns-12.org",
+        "ns-1621.awsdns-10.co.uk"
     ]
 }

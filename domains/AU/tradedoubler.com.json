@@ -7,14 +7,60 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.000201,
-    "sites": 2,
+    "prevalence": 0.000302,
+    "sites": 3,
     "subdomains": [
+        "sdk",
         "svht"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "tradedoubler\\.com\\/trsdk",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "sdk"
+            ],
+            "apis": {
+                "Document.cookie getter": 1,
+                "window.localStorage": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "classpass.com",
+                "www.gl-inet.com"
+            ]
+        },
+        {
+            "rule": "tradedoubler\\.com\\/sdk\\/tr-sdk\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sdk"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "c118df88bb7cee571067c5efc72b8422506ca6aa0034eafc5591bd4e51581bb3"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "classpass.com",
+                "www.gl-inet.com"
+            ]
+        },
         {
             "rule": "tradedoubler\\.com\\/tr_sdk\\.js",
             "cookies": 0,
@@ -46,11 +92,15 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.6666666666666666
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.3333333333333333
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 6
     },
     "nameservers": [
         "ns-1359.awsdns-41.org",

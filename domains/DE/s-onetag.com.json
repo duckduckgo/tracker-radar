@@ -9,10 +9,13 @@
     "source": [
         "DuckDuckGo-DE"
     ],
-    "prevalence": 0.000101,
-    "sites": 1,
+    "prevalence": 0.000201,
+    "sites": 2,
     "subdomains": [
-        "onetag-geo"
+        "onetag-geo",
+        "signal-beacon",
+        "connect-metrics-collector",
+        "signal-metrics-collector-beta"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -25,13 +28,61 @@
                 "onetag-geo"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
                 "f51938710e179807bbf1be9a1e9d7e3441fa74e7dfe9f46841914fb12ca7de3c"
             ],
             "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fantasypros.com",
+                "www.fantasypros.com",
+                "www.thesaurus.com"
+            ]
+        },
+        {
+            "rule": "s-onetag\\.com\\/beacon\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "signal-beacon"
+            ],
+            "apis": {
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "dba1f7d9d7a7c7dcba990de04a67e19cfa099370082493975513c09ed058b807"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fantasypros.com",
+                "www.thesaurus.com"
+            ]
+        },
+        {
+            "rule": "s-onetag\\.com\\/metrics",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "connect-metrics-collector",
+                "signal-metrics-collector-beta"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -49,11 +100,17 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.8333333333333334
+        },
+        {
+            "domain": "doubleclick.net",
+            "prevalence": 0.16666666666666666
         }
     ],
     "types": {
-        "Fetch": 2
+        "Fetch": 3,
+        "Script": 2,
+        "Ping": 2
     },
     "nameservers": [
         "ns-13.awsdns-01.com",

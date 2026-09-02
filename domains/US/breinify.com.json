@@ -7,12 +7,13 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000616,
-    "sites": 9,
+    "prevalence": 0.0000686,
+    "sites": 10,
     "subdomains": [
         "cdns-script",
         "api",
-        "api-dc-sanjose-03"
+        "api-dc-sanjose-03",
+        "cdns"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -54,8 +55,8 @@
                 "api"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.0000274,
+            "sites": 6,
+            "prevalence": 0.0000411,
             "cnames": [],
             "responseHashes": [
                 "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
@@ -67,7 +68,9 @@
                 "davidsbridal.com",
                 "www.big5sportinggoods.com",
                 "www.bradfordexchange.com",
-                "www.davidsbridal.com"
+                "www.bradfordexchangechecks.com",
+                "www.davidsbridal.com",
+                "www.torani.com"
             ]
         },
         {
@@ -78,8 +81,8 @@
                 "api"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.0000274,
+            "sites": 6,
+            "prevalence": 0.0000411,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
@@ -89,7 +92,9 @@
                 "davidsbridal.com",
                 "www.big5sportinggoods.com",
                 "www.bradfordexchange.com",
-                "www.davidsbridal.com"
+                "www.bradfordexchangechecks.com",
+                "www.davidsbridal.com",
+                "www.torani.com"
             ]
         },
         {
@@ -109,7 +114,7 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "69194ad145c0513a7d5022739609551fcb2f32f940464695c4c28cb4d0724328"
+                "4e4ab741fea58ba24fcbdfec178e075b8775eab93394eb72a22db47ef45cccb1"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -127,11 +132,12 @@
                 "api"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000205,
+            "sites": 4,
+            "prevalence": 0.0000274,
             "cnames": [],
             "responseHashes": [
-                "cfba0ef95402f4e3f9d6e010222df98390bf663eddb440f51bde81b67db8a314"
+                "16444d65e4a1188efe9ed2df4b956abaeca6542eeffca87dccc605d687c19fa0",
+                "b801d6a7bef116a7625445aac07c350127c30df5942db66334f12b8b8ae84ad7"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -139,7 +145,8 @@
             "exampleSites": [
                 "big5sportinggoods.com",
                 "www.big5sportinggoods.com",
-                "www.bradfordexchange.com"
+                "www.bradfordexchange.com",
+                "www.torani.com"
             ]
         },
         {
@@ -150,8 +157,8 @@
                 "api"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000205,
+            "sites": 4,
+            "prevalence": 0.0000274,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
@@ -160,7 +167,8 @@
             "exampleSites": [
                 "big5sportinggoods.com",
                 "www.big5sportinggoods.com",
-                "www.bradfordexchange.com"
+                "www.bradfordexchange.com",
+                "www.torani.com"
             ]
         },
         {
@@ -182,7 +190,7 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "7f31166dc885553796b0c506f5f6c6b01355d4bf3f2c5d21b968b8086793285e"
+                "28528624409768ec4626ab4d4c3806e25b728f860031e7da0daeec329d187f59"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -214,13 +222,42 @@
             ]
         },
         {
-            "rule": "breinify\\.com\\/torani\\/api\\/activity_configured\\.min\\.js",
+            "rule": "breinify\\.com\\/images\\/op\\/resource-loader",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "cdns-script"
+                "cdns"
             ],
             "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "21808e6078eebebac4a422a892a0cbfd435fdf4595b73344ad065fbd39a76589"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "bradfordexchange.com",
+                "www.bradfordexchange.com"
+            ]
+        },
+        {
+            "rule": "breinify\\.com\\/torani\\/api\\/activity_configured\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "cdns-script"
+            ],
+            "apis": {
+                "window.sessionStorage": 2,
+                "window.localStorage": 2,
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 2,
+                "Navigator.prototype.permissions": 2
+            },
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
@@ -242,25 +279,26 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.5576923076923077
+            "prevalence": 0.676923076923077
         },
         {
             "domain": "sdiapi.com",
-            "prevalence": 0.2692307692307692
+            "prevalence": 0.18461538461538463
         },
         {
             "domain": "noibu.com",
-            "prevalence": 0.11538461538461539
+            "prevalence": 0.09230769230769231
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.057692307692307696
+            "prevalence": 0.046153846153846156
         }
     ],
     "types": {
         "Script": 8,
-        "XHR": 9,
-        "Preflight": 7
+        "XHR": 12,
+        "Preflight": 10,
+        "Image": 2
     },
     "nameservers": [
         "ns-496.awsdns-62.com",

@@ -4,13 +4,13 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000616,
-    "sites": 9,
+    "prevalence": 0.0000686,
+    "sites": 10,
     "subdomains": [
         "web-components",
         "web-components.production",
-        "externals",
-        "shop-server"
+        "shop-server",
+        "externals"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -18,16 +18,18 @@
         {
             "rule": "splitit\\.com\\/upstream\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "web-components"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 1
+            },
             "sites": 3,
-            "prevalence": 0.0000205,
+            "prevalence": 0.0000206,
             "cnames": [],
             "responseHashes": [
-                "c8761e07568fc58175e0e30582059f53183c36f7491d76de7be03a0765cc4921"
+                "ed8e081cba1787ae5e11f657dc2bda11b018701f81412a5eb4775e65106d54db"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -46,8 +48,8 @@
                 "web-components.production"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000205,
+            "sites": 5,
+            "prevalence": 0.0000343,
             "cnames": [],
             "responseHashes": [
                 "a28bb0c6757b222cf3ecb9ab8624f2b8915b2140de35a0feeb7562628e173282"
@@ -57,6 +59,8 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "4patriots.com",
+                "cambriabike.com",
+                "thediamondstore.co.uk",
                 "www.ima-usa.com",
                 "www.mypatriotsupply.com"
             ]
@@ -69,11 +73,13 @@
                 "web-components.production"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.0000274,
+            "sites": 6,
+            "prevalence": 0.0000411,
             "cnames": [],
             "responseHashes": [
+                "a014d873327f37a32e2c36a5e3f0e1e2dcf86502802f76a3cd666d7cb19bb754",
                 "c67adf33f47bd8da53b6936baeb1ba726b782500ef9e8b7b990c456db3d40dec",
+                "115b39eb5cd3256c196e08ae6503b3f1fe1d3503796474ddda0d1f05717beb8a",
                 "ac54c936c041afac5736ebf5ea1a8a8c3a010d9aa0a899335ab028b4b455375f",
                 "96bd43d6c1612342f656fa6d84477ee45b31b72dc1facb32c41bf906addc79d0"
             ],
@@ -82,7 +88,35 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "4patriots.com",
+                "cambriabike.com",
                 "nextbase.co.uk",
+                "thediamondstore.co.uk",
+                "www.ima-usa.com",
+                "www.mypatriotsupply.com"
+            ]
+        },
+        {
+            "rule": "splitit\\.com\\/get-on-site-messaging-script",
+            "cookies": 0.0000274,
+            "fingerprinting": 0,
+            "subdomains": [
+                "shop-server"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "c6c8cb3b840e30f3a1d61da1670ce64746ab5d95c58e1944b7459634d165fda0",
+                "81b18ddd0b95bd70b7f524b7050863a4327e924bbceea2eb1b319d81610074ba",
+                "d2ccf1489fdc041265f5e9d6686cf1ff57af5027906da78c5196fe3ec9452718"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cambriabike.com",
+                "thediamondstore.co.uk",
                 "www.ima-usa.com",
                 "www.mypatriotsupply.com"
             ]
@@ -106,53 +140,33 @@
                 "ima-usa.com",
                 "www.ima-usa.com"
             ]
-        },
-        {
-            "rule": "splitit\\.com\\/get-on-site-messaging-script",
-            "cookies": 0.0000205,
-            "fingerprinting": 0,
-            "subdomains": [
-                "shop-server"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000205,
-            "cnames": [],
-            "responseHashes": [
-                "81b18ddd0b95bd70b7f524b7050863a4327e924bbceea2eb1b319d81610074ba",
-                "d2ccf1489fdc041265f5e9d6686cf1ff57af5027906da78c5196fe3ec9452718"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "ima-usa.com",
-                "www.ima-usa.com",
-                "www.mypatriotsupply.com"
-            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0000274,
+    "cookies": 0.0000343,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.8461538461538461
+            "prevalence": 0.7931034482758621
         },
         {
             "domain": "noibu.com",
-            "prevalence": 0.15384615384615385
+            "prevalence": 0.13793103448275862
+        },
+        {
+            "domain": "shopify.com",
+            "prevalence": 0.06896551724137931
         }
     ],
     "types": {
-        "Script": 8,
-        "Fetch": 7
+        "Script": 9,
+        "Fetch": 11
     },
     "nameservers": [
-        "ns-1179.awsdns-19.org",
-        "ns-1563.awsdns-03.co.uk",
         "ns-762.awsdns-31.net",
-        "ns-177.awsdns-22.com"
+        "ns-177.awsdns-22.com",
+        "ns-1563.awsdns-03.co.uk",
+        "ns-1179.awsdns-19.org"
     ]
 }
