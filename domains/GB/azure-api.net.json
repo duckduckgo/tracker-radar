@@ -9,13 +9,19 @@
     "source": [
         "DuckDuckGo-GB"
     ],
-    "prevalence": 0.000604,
-    "sites": 6,
+    "prevalence": 0.000704,
+    "sites": 7,
     "subdomains": [
         "pidataplatformcrew",
-        "em-mm-uks-stg-dna-eas-apim"
+        "em-mm-uks-stg-dna-eas-apim",
+        "fiba-apim-service-prod"
     ],
-    "cnames": [],
+    "cnames": [
+        {
+            "original": "digital-api.fiba.basketball",
+            "resolved": "fiba-apim-service-prod.azure-api.net"
+        }
+    ],
     "fingerprinting": 0,
     "resources": [
         {
@@ -29,8 +35,10 @@
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -49,10 +57,8 @@
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-            ],
-            "type": "XHR",
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -100,6 +106,58 @@
             "exampleSites": [
                 "musicmagpie.co.uk",
                 "www.musicmagpie.co.uk"
+            ]
+        },
+        {
+            "rule": "azure-api\\.net\\/hapi\\/getgdapgamebyid",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "fiba-apim-service-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "digital-api.fiba.basketball",
+                    "resolved": "fiba-apim-service-prod.azure-api.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fiba.basketball",
+                "www.fiba.basketball"
+            ]
+        },
+        {
+            "rule": "azure-api\\.net\\/hapi\\/getgdapgamebyid",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "fiba-apim-service-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "digital-api.fiba.basketball",
+                    "resolved": "fiba-apim-service-prod.azure-api.net"
+                }
+            ],
+            "responseHashes": [
+                "695c12e2609f78b73bf61c0affc941676b30e24f44fe2bdef52b2e6d3cdd7b6a"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "fiba.basketball",
+                "www.fiba.basketball"
             ]
         }
     ],
@@ -117,13 +175,14 @@
         }
     ],
     "types": {
-        "Preflight": 4,
-        "XHR": 4
+        "XHR": 4,
+        "Preflight": 6,
+        "Fetch": 2
     },
     "nameservers": [
-        "ns1-05.azure-dns.com",
-        "ns2-05.azure-dns.net",
         "ns3-05.azure-dns.org",
-        "ns4-05.azure-dns.info"
+        "ns4-05.azure-dns.info",
+        "ns1-05.azure-dns.com",
+        "ns2-05.azure-dns.net"
     ]
 }

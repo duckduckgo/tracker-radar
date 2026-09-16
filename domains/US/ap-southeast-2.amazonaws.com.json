@@ -9,14 +9,21 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.00013,
-    "sites": 19,
+    "prevalence": 0.000185,
+    "sites": 27,
     "subdomains": [
         "vouch-clients.s3",
         "media-player-fonts.s3",
-        "d-maiw32tky3.execute-api"
+        "vfcjuim1l3.execute-api",
+        "k8s-infrastr-nginxext-f5bd7dbb5b-5828a29982264941.elb",
+        "d-maiw32tky3.execute-api",
+        "s3"
     ],
     "cnames": [
+        {
+            "original": "l.ffx.io",
+            "resolved": "k8s-infrastr-nginxext-f5bd7dbb5b-5828a29982264941.elb.ap-southeast-2.amazonaws.com"
+        },
         {
             "original": "web-api.hungryjacks.com.au",
             "resolved": "d-maiw32tky3.execute-api.ap-southeast-2.amazonaws.com"
@@ -91,6 +98,82 @@
             ]
         },
         {
+            "rule": "ap-southeast-2\\.amazonaws\\.com\\/prod\\/api\\/e771fae6-b903-4e54-866f-38b6c49ca0db\\/webvtt",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "vfcjuim1l3.execute-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "ecbcb03c68df5ac059f9bde9df1bd14a24e786ea8a3253bc47330d8bccea2930"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "aldi.us",
+                "careers.aldi.us"
+            ]
+        },
+        {
+            "rule": "ap-southeast-2\\.amazonaws\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "k8s-infrastr-nginxext-f5bd7dbb5b-5828a29982264941.elb"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [
+                {
+                    "original": "l.ffx.io",
+                    "resolved": "k8s-infrastr-nginxext-f5bd7dbb5b-5828a29982264941.elb.ap-southeast-2.amazonaws.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "afr.com",
+                "www.afr.com",
+                "www.smh.com.au",
+                "www.theage.com.au"
+            ]
+        },
+        {
+            "rule": "ap-southeast-2\\.amazonaws\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "k8s-infrastr-nginxext-f5bd7dbb5b-5828a29982264941.elb"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [
+                {
+                    "original": "l.ffx.io",
+                    "resolved": "k8s-infrastr-nginxext-f5bd7dbb5b-5828a29982264941.elb.ap-southeast-2.amazonaws.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "afr.com",
+                "www.afr.com",
+                "www.smh.com.au",
+                "www.theage.com.au"
+            ]
+        },
+        {
             "rule": "ap-southeast-2\\.amazonaws\\.com\\/api\\/v1\\/app",
             "cookies": 0,
             "fingerprinting": 0,
@@ -139,6 +222,26 @@
                 "hungryjacks.com.au",
                 "www.hungryjacks.com.au"
             ]
+        },
+        {
+            "rule": "ap-southeast-2\\.amazonaws\\.com\\/nzme-ads\\.co\\.nz\\/img\\/arrow\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "s3"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "nzherald.co.nz",
+                "www.nzherald.co.nz"
+            ]
         }
     ],
     "categories": [
@@ -149,35 +252,44 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.9230769230769231
+            "prevalence": 0.8712121212121212
         },
         {
             "domain": "jsdelivr.net",
-            "prevalence": 0.06043956043956044
+            "prevalence": 0.08333333333333333
+        },
+        {
+            "domain": "bigcommerce.com",
+            "prevalence": 0.015151515151515152
         },
         {
             "domain": "wufoo.com",
-            "prevalence": 0.005494505494505495
+            "prevalence": 0.007575757575757576
         },
         {
             "domain": "justauto.com.au",
-            "prevalence": 0.005494505494505495
+            "prevalence": 0.007575757575757576
         },
         {
             "domain": "ajax.googleapis.com",
-            "prevalence": 0.005494505494505495
+            "prevalence": 0.007575757575757576
+        },
+        {
+            "domain": "doubleclick.net",
+            "prevalence": 0.007575757575757576
         }
     ],
     "types": {
         "Stylesheet": 2,
         "Font": 4,
-        "Preflight": 2,
-        "Fetch": 2
+        "Fetch": 8,
+        "Preflight": 6,
+        "Image": 2
     },
     "nameservers": [
         "ns-1430.awsdns-50.org",
-        "ns-1873.awsdns-42.co.uk",
         "ns-334.awsdns-41.com",
+        "ns-1873.awsdns-42.co.uk",
         "ns-662.awsdns-18.net"
     ]
 }

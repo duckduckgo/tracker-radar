@@ -4,35 +4,50 @@
     "source": [
         "DuckDuckGo-NL"
     ],
-    "prevalence": 0.000101,
-    "sites": 1,
+    "prevalence": 0.000201,
+    "sites": 2,
     "subdomains": [
+        "chat",
+        "eu-chat",
         "visitorim",
-        "socket-prod"
+        "eu-app",
+        "socket-prod",
+        "eu-socket-chat",
+        "quicki18n",
+        "chata",
+        "collect",
+        "eu-app-alb"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
         {
-            "rule": "quickcep\\.com\\/im-visitor\\/event\\/settings",
+            "rule": "quickcep\\.com\\/initQuickChat\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
-                "visitorim"
+                "chat",
+                "eu-chat"
             ],
-            "apis": {},
+            "apis": {
+                "window.localStorage": 2,
+                "window.sessionStorage": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Date.prototype.getTime": 2,
+                "PerformanceTiming.prototype.navigationStart": 2
+            },
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "705af04d2c67efafdd4d243e8e396c53280bc7a307be3ad3e17944004490a740"
+                "3a1bf6da0253580a5cf80eda4a0043d0cee7683f9dbeadffac2ca24d3130c7fa"
             ],
-            "type": "XHR",
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "ugreen.com",
-                "nl.ugreen.com"
+                "www.honor.com"
             ]
         },
         {
@@ -40,7 +55,78 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "visitorim"
+                "visitorim",
+                "eu-app"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "705af04d2c67efafdd4d243e8e396c53280bc7a307be3ad3e17944004490a740",
+                "0cf5bd788894015163de09ef304ab75b8dc406bd064a583599e3a29dfa000f9b"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ugreen.com",
+                "nl.ugreen.com",
+                "www.honor.com"
+            ]
+        },
+        {
+            "rule": "quickcep\\.com\\/im-visitor\\/event\\/settings",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "visitorim",
+                "eu-app"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ugreen.com",
+                "nl.ugreen.com",
+                "www.honor.com"
+            ]
+        },
+        {
+            "rule": "quickcep\\.com\\/im-visitor\\/chatSession\\/visitorSocketConnectCheck2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "visitorim",
+                "eu-app"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "62d2cba9754d0972a98cfdde058e0a30514391c94ca352b405fe9877d16d091c"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ugreen.com",
+                "www.honor.com"
+            ]
+        },
+        {
+            "rule": "quickcep\\.com\\/im-visitor\\/chatSession\\/visitorSocketConnectCheck2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "visitorim",
+                "eu-app"
             ],
             "apis": {},
             "sites": 2,
@@ -52,7 +138,7 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "ugreen.com",
-                "nl.ugreen.com"
+                "www.honor.com"
             ]
         },
         {
@@ -60,29 +146,144 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "socket-prod"
+                "socket-prod",
+                "eu-socket-chat"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "2689367b205c16ce32ed4200942b8b8b1e262dfc70d9bc9fbc77c49699a4f1df",
+                "0ee532f311b1d08bf9121a8dbcee8dae74060d5e987f4d560c4432e826920ea8"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "mp_sessionId": 0.00030178050497937833
+            },
+            "exampleSites": [
+                "ugreen.com",
+                "nl.ugreen.com",
+                "www.honor.com"
+            ]
+        },
+        {
+            "rule": "quickcep\\.com\\/socket\\.io\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "socket-prod",
+                "eu-socket-chat"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "mp_sessionId": 0.00020118700331958554
+            },
+            "exampleSites": [
+                "ugreen.com",
+                "www.honor.com"
+            ]
+        },
+        {
+            "rule": "quickcep\\.com\\/chat\\/prod\\/en\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "quicki18n"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "2689367b205c16ce32ed4200942b8b8b1e262dfc70d9bc9fbc77c49699a4f1df"
+                "7d41b90fc2280bffee0442d6c36b049ecc57404d1d4f813223f14df809582c22"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ugreen.com",
+                "www.honor.com"
+            ]
+        },
+        {
+            "rule": "quickcep\\.com\\/im\\/message\\/visitor\\/v2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "chata",
+                "eu-app"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ugreen.com",
+                "www.honor.com"
+            ]
+        },
+        {
+            "rule": "quickcep\\.com\\/im\\/message\\/visitor\\/v2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "chata",
+                "eu-app"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "2535818ddb15b04ad631c34caebbda6283e77c05fce1f3dcab930cf3371e915f"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
-            "firstPartyCookiesSent": {
-                "mp_sessionId": 0.00020110608345902463
-            },
+            "firstPartyCookiesSent": {},
             "exampleSites": [
                 "ugreen.com",
-                "nl.ugreen.com"
+                "www.honor.com"
+            ]
+        },
+        {
+            "rule": "quickcep\\.com\\/cdp-collect\\/cdp\\/collect\\/event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "collect",
+                "eu-app-alb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "89060919b114e0bfbc032a7b56ca00d661fd12ee41a65849a5444d87a187043b"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ugreen.com",
+                "www.honor.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000101,
+    "cookies": 0.000201,
     "topInitiators": [
         {
             "domain": "first party",
@@ -90,11 +291,14 @@
         }
     ],
     "types": {
-        "XHR": 4,
-        "Preflight": 2
+        "Script": 2,
+        "XHR": 12,
+        "Preflight": 7,
+        "WebSocket": 2,
+        "Fetch": 2
     },
     "nameservers": [
-        "vip3.alidns.com",
-        "vip4.alidns.com"
+        "vip4.alidns.com",
+        "vip3.alidns.com"
     ]
 }

@@ -4,21 +4,155 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.00000685,
-    "sites": 1,
+    "prevalence": 0.0000137,
+    "sites": 2,
     "subdomains": [
-        "target",
-        "poosh"
+        "radar",
+        "poosh",
+        "target"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
         {
+            "rule": "wizzo\\.media\\/wizzoRadarClient\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "radar"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "window.sessionStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "50dd246c26e5021a4042eddbbfa2f390d18d71ba45eef7bb644d4d9f38e12f13"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hidabroot.com",
+                "www.hidabroot.org"
+            ]
+        },
+        {
+            "rule": "wizzo\\.media\\/sdk\\/poosh\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "poosh"
+            ],
+            "apis": {
+                "Notification.permission": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "1f3f6bb12d718ea65c02e2e8bca5e44e9256b4287feb4e4905278bdb7ba15ab9"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hidabroot.com",
+                "www.hidabroot.org"
+            ]
+        },
+        {
+            "rule": "wizzo\\.media\\/track",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "radar"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "a6c096edd140b3711412084df84b3fef56d204a1586d07223e63a0c6f89f4d3d"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hidabroot.com",
+                "www.hidabroot.org"
+            ]
+        },
+        {
+            "rule": "wizzo\\.media\\/track",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "radar"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hidabroot.com",
+                "www.hidabroot.org"
+            ]
+        },
+        {
             "rule": "wizzo\\.media\\/sdk\\/config",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "target",
+                "poosh",
+                "target"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "82bef64ac2d7115b5041f8de14a7c3536ae12cade147c0d345814031231b6a3f"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hidabroot.com",
+                "www.hidabroot.org"
+            ]
+        },
+        {
+            "rule": "wizzo\\.media\\/sdk\\/config",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "poosh"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hidabroot.com",
+                "www.hidabroot.org"
+            ]
+        },
+        {
+            "rule": "wizzo\\.media\\/sdk\\/poosh-sw\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
                 "poosh"
             ],
             "apis": {},
@@ -26,13 +160,13 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "64c3c85f85297df6581be41c6803916ff06a3d0611ed8b74480a14597e6e985c"
+                "6fddfb11106c34fa459205902d95ab86a324c8cd92d4f97b0376c2d840d451c6"
             ],
-            "type": "Fetch",
+            "type": "Other",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "hidabroot.org",
+                "hidabroot.com",
                 "www.hidabroot.org"
             ]
         }
@@ -43,11 +177,18 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.8333333333333334
+        },
+        {
+            "domain": "wizzo.market",
+            "prevalence": 0.16666666666666666
         }
     ],
     "types": {
-        "Fetch": 2
+        "Script": 4,
+        "Fetch": 4,
+        "Preflight": 4,
+        "Other": 2
     },
     "nameservers": [
         "ns1.crossart2.com",

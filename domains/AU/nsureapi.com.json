@@ -4,10 +4,13 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.000101,
-    "sites": 1,
+    "prevalence": 0.000302,
+    "sites": 3,
     "subdomains": [
-        "waf"
+        "sdk",
+        "sdk-service",
+        "waf",
+        "metrics"
     ],
     "cnames": [
         {
@@ -18,10 +21,31 @@
     "fingerprinting": 3,
     "resources": [
         {
-            "rule": "nsureapi\\.com\\/events",
+            "rule": "nsureapi\\.com\\/core-config\\/config\\.json",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
+                "sdk"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "novig.com",
+                "www.eldorado.gg"
+            ]
+        },
+        {
+            "rule": "nsureapi\\.com\\/events",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sdk-service",
                 "waf"
             ],
             "apis": {},
@@ -38,15 +62,16 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "eneba.com",
+                "novig.com",
                 "www.eneba.com"
             ]
         },
         {
             "rule": "nsureapi\\.com\\/events",
-            "cookies": 0,
+            "cookies": 0.000201,
             "fingerprinting": 0,
             "subdomains": [
+                "sdk-service",
                 "waf"
             ],
             "apis": {},
@@ -65,33 +90,157 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "eneba.com",
+                "novig.com",
+                "www.eneba.com"
+            ]
+        },
+        {
+            "rule": "nsureapi\\.com\\/session",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sdk-service",
+                "waf"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "metrics.eneba.com",
+                    "resolved": "waf.nsureapi.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "novig.com",
+                "www.eneba.com"
+            ]
+        },
+        {
+            "rule": "nsureapi\\.com\\/session",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sdk-service",
+                "waf"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "metrics.eneba.com",
+                    "resolved": "waf.nsureapi.com"
+                }
+            ],
+            "responseHashes": [
+                "4ff68d0c4079c3075f0e32e7cf92bd9cfe14cb1facc69b2b35a327e04fced650"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "novig.com",
+                "www.eneba.com"
+            ]
+        },
+        {
+            "rule": "nsureapi\\.com\\/KfqV\\/26T-Bs\\/n4Yy\\/3s",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "metrics"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "c29c1b3b37c99751136844221c14fd5013f7d28a1831c39867e517efc2d09c91"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "novig.com",
+                "www.eneba.com"
+            ]
+        },
+        {
+            "rule": "nsureapi\\.com\\/",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "metrics"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "113933cfa29a23d077885f83fcb9f274fe6e01a300e3a8f1c75cbf32e9cf4088"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "novig.com",
+                "www.eneba.com"
+            ]
+        },
+        {
+            "rule": "nsureapi\\.com\\/sdkIframe\\.html",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "sdk"
+            ],
+            "apis": {
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "38e9906e3f403419f5ac22fff240601e8017fca42e14ebca0867d90f4d87e3ad"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "eldorado.gg",
                 "www.eneba.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000101,
+    "cookies": 0.000201,
     "topInitiators": [
         {
-            "domain": "eneba.games",
-            "prevalence": 0.75
+            "domain": "first party",
+            "prevalence": 0.6666666666666666
         },
         {
-            "domain": "first party",
-            "prevalence": 0.25
+            "domain": "eneba.games",
+            "prevalence": 0.3333333333333333
         }
     ],
     "types": {
-        "Preflight": 2,
-        "Fetch": 2
+        "Fetch": 6,
+        "Preflight": 4,
+        "XHR": 4,
+        "Document": 2
     },
     "nameservers": [
-        "ns0.dnsmadeeasy.com",
-        "ns4.dnsmadeeasy.com",
-        "ns3.dnsmadeeasy.com",
         "ns2.dnsmadeeasy.com",
-        "ns1.dnsmadeeasy.com"
+        "ns0.dnsmadeeasy.com",
+        "ns3.dnsmadeeasy.com",
+        "ns1.dnsmadeeasy.com",
+        "ns4.dnsmadeeasy.com"
     ]
 }

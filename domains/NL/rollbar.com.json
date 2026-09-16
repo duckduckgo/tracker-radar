@@ -7,14 +7,40 @@
     "source": [
         "DuckDuckGo-NL"
     ],
-    "prevalence": 0.000603,
-    "sites": 6,
+    "prevalence": 0.000704,
+    "sites": 7,
     "subdomains": [
-        "cdn"
+        "cdn",
+        "api"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "rollbar\\.com\\/rollbarjs\\/refs\\/tags\\/v2\\.23\\.0\\/rollbar\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "console.memory": 2,
+                "Date.prototype.getTime": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "c25355cf2e7bec93c43a0ab8bd19ba779ba9cc901924cbc9312d1c6de8c04c8e"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jumbo.com",
+                "www.icm.nl"
+            ]
+        },
         {
             "rule": "rollbar\\.com\\/rollbarjs\\/refs\\/tags\\/v2\\.26\\.0\\/rollbar\\.min\\.js",
             "cookies": 0,
@@ -25,12 +51,12 @@
             "apis": {
                 "console.memory": 2,
                 "Date.prototype.getTime": 2,
-                "Navigator.prototype.userAgent": 1,
-                "Navigator.prototype.language": 1,
-                "Navigator.prototype.cookieEnabled": 1,
-                "Screen.prototype.width": 1,
-                "Screen.prototype.height": 1,
-                "Navigator.prototype.plugins": 1
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.language": 2,
+                "Navigator.prototype.cookieEnabled": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "Navigator.prototype.plugins": 2
             },
             "sites": 2,
             "prevalence": 0.000201,
@@ -45,6 +71,48 @@
                 "corsair.com",
                 "www.elgato.com"
             ]
+        },
+        {
+            "rule": "rollbar\\.com\\/api\\/1\\/item\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gog.com",
+                "www.gog.com"
+            ]
+        },
+        {
+            "rule": "rollbar\\.com\\/api\\/1\\/item\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "c6c6098ad18b6c98e27f4318483905a0c88f41a54b7ae15a1b15fd8d0779346f"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gog.com",
+                "www.gog.com"
+            ]
         }
     ],
     "categories": [],
@@ -53,11 +121,17 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.75
+        },
+        {
+            "domain": "gog-statics.com",
+            "prevalence": 0.25
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 4,
+        "Preflight": 2,
+        "XHR": 2
     },
     "nameservers": [
         "simon.ns.cloudflare.com",

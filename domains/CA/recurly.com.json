@@ -7,14 +7,67 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.000303,
-    "sites": 3,
+    "prevalence": 0.000505,
+    "sites": 5,
     "subdomains": [
-        "js"
+        "js",
+        "api",
+        "api.eu"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "recurly\\.com\\/v4\\/recurly\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "js"
+            ],
+            "apis": {
+                "window.localStorage": 4,
+                "Navigator.prototype.userAgent": 4,
+                "window.sessionStorage": 2
+            },
+            "sites": 4,
+            "prevalence": 0.000404,
+            "cnames": [],
+            "responseHashes": [
+                "95d1f456573a6a1cbf462612d2f5055a741af5c1a7e478d32d5877847c78fbcf"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kahoot.com",
+                "www.dailywire.com",
+                "www.gbnews.com",
+                "www.mathway.com"
+            ]
+        },
+        {
+            "rule": "recurly\\.com\\/js\\/v1\\/risk\\/info",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api",
+                "api.eu"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "05780cd85d4f798e666fe8c53c39f87a69dc12485d39df176c5a6c2eaf531fbc"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kahoot.com",
+                "www.gbnews.com"
+            ]
+        },
         {
             "rule": "recurly\\.com\\/v4\\/recurly\\.css",
             "cookies": 0,
@@ -37,32 +90,6 @@
                 "www.dailywire.com",
                 "www.gbnews.com"
             ]
-        },
-        {
-            "rule": "recurly\\.com\\/v4\\/recurly\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "js"
-            ],
-            "apis": {
-                "window.localStorage": 2,
-                "Navigator.prototype.userAgent": 2,
-                "window.sessionStorage": 1
-            },
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [],
-            "responseHashes": [
-                "95d1f456573a6a1cbf462612d2f5055a741af5c1a7e478d32d5877847c78fbcf"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "dailywire.com",
-                "www.gbnews.com"
-            ]
         }
     ],
     "categories": [],
@@ -75,13 +102,14 @@
         }
     ],
     "types": {
-        "Stylesheet": 3,
-        "Script": 2
+        "Script": 4,
+        "XHR": 2,
+        "Stylesheet": 3
     },
     "nameservers": [
-        "ns-cloud-c3.googledomains.com",
-        "ns-cloud-c1.googledomains.com",
         "ns-cloud-c2.googledomains.com",
-        "ns-cloud-c4.googledomains.com"
+        "ns-cloud-c4.googledomains.com",
+        "ns-cloud-c3.googledomains.com",
+        "ns-cloud-c1.googledomains.com"
     ]
 }
