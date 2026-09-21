@@ -11,7 +11,8 @@
     "sites": 6,
     "subdomains": [
         "http-intake.logs.us5",
-        "http-intake.logs"
+        "http-intake.logs",
+        "rum-http-intake.logs"
     ],
     "cnames": [],
     "fingerprinting": 0,
@@ -25,8 +26,8 @@
                 "http-intake.logs"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000302,
+            "sites": 2,
+            "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
@@ -34,7 +35,6 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "replit.com",
-                "www.allohealth.com",
                 "www.boody.com.au"
             ]
         },
@@ -47,8 +47,8 @@
                 "http-intake.logs.us5"
             ],
             "apis": {},
-            "sites": 6,
-            "prevalence": 0.000603,
+            "sites": 5,
+            "prevalence": 0.000503,
             "cnames": [],
             "responseHashes": [
                 "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
@@ -59,10 +59,31 @@
             "exampleSites": [
                 "17track.net",
                 "www.17track.net",
-                "www.allohealth.com",
                 "www.boody.com.au",
                 "www.golinuxcloud.com",
                 "www.islamicfinder.org"
+            ]
+        },
+        {
+            "rule": "datadoghq\\.com\\/v1\\/input\\/pub79fa5f1ebe3e1433c39df1593420eb9a",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rum-http-intake.logs"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "yates.com.au",
+                "www.yates.com.au"
             ]
         }
     ],
@@ -72,20 +93,21 @@
     "topInitiators": [
         {
             "domain": "adpushup.com",
-            "prevalence": 0.6666666666666666
+            "prevalence": 0.5294117647058824
+        },
+        {
+            "domain": "datadoghq-browser-agent.com",
+            "prevalence": 0.29411764705882354
         },
         {
             "domain": "first party",
-            "prevalence": 0.25
-        },
-        {
-            "domain": "shopify.com",
-            "prevalence": 0.08333333333333333
+            "prevalence": 0.17647058823529413
         }
     ],
     "types": {
-        "Preflight": 3,
-        "Fetch": 6
+        "Preflight": 2,
+        "Fetch": 5,
+        "Ping": 2
     },
     "nameservers": [
         "ns-1169.awsdns-18.org",

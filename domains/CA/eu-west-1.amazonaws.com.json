@@ -9,10 +9,12 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.00171,
-    "sites": 17,
+    "prevalence": 0.00192,
+    "sites": 19,
     "subdomains": [
+        "v11cf13hx0.execute-api",
         "cognito-identity",
+        "firehose",
         "prod-ses-proxy-ext-lb-9287c7c2cf3220a1.elb"
     ],
     "cnames": [
@@ -24,25 +26,23 @@
     "fingerprinting": 1,
     "resources": [
         {
-            "rule": "eu-west-1\\.amazonaws\\.com\\/",
+            "rule": "eu-west-1\\.amazonaws\\.com\\/pixel-prod\\/",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "cognito-identity"
+                "v11cf13hx0.execute-api"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000202,
             "cnames": [],
-            "responseHashes": [
-                "b3739c2893a67ab04825d98ad34068762ead4a0fa20f28baa4b9dd2e41579f59"
-            ],
-            "type": "XHR",
+            "responseHashes": [],
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "runningroom.com",
-                "www.motorola.com"
+                "iherb.com",
+                "www.iherb.com"
             ]
         },
         {
@@ -53,8 +53,33 @@
                 "cognito-identity"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "05a592bc65e6e31de988a2099e3959c931e44acaec07a9677005917e3868692e",
+                "90a4c64e18862f3dd8543f13100e680ebfc7ab12f047d61948f1371287e9e488"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "runningroom.com",
+                "ca.shop.runningroom.com",
+                "www.motorola.com"
+            ]
+        },
+        {
+            "rule": "eu-west-1\\.amazonaws\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cognito-identity",
+                "firehose"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
@@ -62,6 +87,7 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "runningroom.com",
+                "ca.shop.runningroom.com",
                 "www.motorola.com"
             ]
         },
@@ -82,7 +108,7 @@
                 }
             ],
             "responseHashes": [
-                "3e8f5007ebdb111b8ef2d628d672d48b277d76290bc016707edb3e29b7ea6f5a"
+                "ec32ca12dbbdd7a2b223c778f579f71503d08bff553439beacd786e78c4f27fc"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -101,30 +127,35 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.782608695652174
+            "prevalence": 0.7692307692307693
         },
         {
             "domain": "go-mpulse.net",
-            "prevalence": 0.13043478260869565
+            "prevalence": 0.11538461538461539
         },
         {
             "domain": "d5zu2f4xvqanl.cloudfront.net",
-            "prevalence": 0.043478260869565216
+            "prevalence": 0.038461538461538464
         },
         {
             "domain": "yottaa.com",
-            "prevalence": 0.043478260869565216
+            "prevalence": 0.038461538461538464
+        },
+        {
+            "domain": "osano.com",
+            "prevalence": 0.038461538461538464
         }
     ],
     "types": {
-        "XHR": 2,
-        "Preflight": 2,
+        "Fetch": 2,
+        "XHR": 3,
+        "Preflight": 3,
         "Image": 2
     },
     "nameservers": [
         "ns-1189.awsdns-20.org",
+        "ns-549.awsdns-04.net",
         "ns-1927.awsdns-48.co.uk",
-        "ns-290.awsdns-36.com",
-        "ns-549.awsdns-04.net"
+        "ns-290.awsdns-36.com"
     ]
 }

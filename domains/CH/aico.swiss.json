@@ -8,8 +8,8 @@
     "sites": 5,
     "subdomains": [
         "aico.apps",
-        "storage",
-        "app"
+        "collect",
+        "storage"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -38,29 +38,37 @@
             ]
         },
         {
-            "rule": "aico\\.swiss\\/19929_623ace\\/videos\\/68a6c452e5dd0_ig_import\\.mp4",
-            "cookies": 0,
-            "fingerprinting": 0,
+            "rule": "aico\\.swiss\\/tracker\\.js",
+            "cookies": 0.000101,
+            "fingerprinting": 1,
             "subdomains": [
-                "storage"
+                "collect"
             ],
-            "apis": {},
+            "apis": {
+                "window.localStorage": 2,
+                "Document.cookie getter": 2,
+                "window.sessionStorage": 1,
+                "Document.cookie setter": 1,
+                "window.innerHeight": 1,
+                "window.innerWidth": 1,
+                "Navigator.prototype.userAgent": 1
+            },
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "987db296baa9d680834de5bb2a0dce82985644e521fd4c1f56559562cad7ce04"
+                "41ff70815d5a56547d4dffb79ccb315c0d59602c40a0793a73a2d7789fd46a8d"
             ],
-            "type": "Media",
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "fcsg.ch",
+                "nikin.com",
                 "www.fcsg.ch"
             ]
         },
         {
-            "rule": "aico\\.swiss\\/19929_623ace\\/videos\\/679a06b5d249e_ig_import\\.mp4",
+            "rule": "aico\\.swiss\\/19929_623ace\\/videos\\/6aa987bf23070_ig_import\\.mp4",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -77,68 +85,6 @@
             "exampleSites": [
                 "fcsg.ch",
                 "www.fcsg.ch"
-            ]
-        },
-        {
-            "rule": "aico\\.swiss\\/19929_623ace\\/videos\\/6a8d9c7519ef2_ig_import\\.mp4",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "storage"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Media",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "fcsg.ch",
-                "www.fcsg.ch"
-            ]
-        },
-        {
-            "rule": "aico\\.swiss\\/19838\\/api\\/v1\\/news",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "app"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "fcz.ch",
-                "www.fcz.ch"
-            ]
-        },
-        {
-            "rule": "aico\\.swiss\\/19838\\/api\\/v1\\/news",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "app"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "8c893f6d42f5d9f1e5a310205f72ebc1b5f77b608001fd8a319a72e39b0729fe"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "fcz.ch",
-                "www.fcz.ch"
             ]
         }
     ],
@@ -148,29 +94,21 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.8709677419354839
-        },
-        {
-            "domain": "event-observer-collector.js",
-            "prevalence": 0.06451612903225806
-        },
-        {
-            "domain": "jsdelivr.net",
-            "prevalence": 0.04838709677419355
+            "prevalence": 0.9811320754716981
         },
         {
             "domain": "b-cdn.net",
-            "prevalence": 0.016129032258064516
+            "prevalence": 0.018867924528301886
         }
     ],
     "types": {
-        "XHR": 5,
-        "Media": 6,
-        "Preflight": 2
+        "XHR": 3,
+        "Script": 2,
+        "Media": 2
     },
     "nameservers": [
         "ns3.hostpoint.ch",
-        "ns.hostpoint.ch",
-        "ns2.hostpoint.ch"
+        "ns2.hostpoint.ch",
+        "ns.hostpoint.ch"
     ]
 }

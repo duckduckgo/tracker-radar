@@ -4,8 +4,8 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.00000685,
-    "sites": 1,
+    "prevalence": 0.0000137,
+    "sites": 2,
     "subdomains": [
         "journey-events"
     ],
@@ -13,18 +13,25 @@
     "fingerprinting": 1,
     "resources": [
         {
-            "rule": "thesak\\.workers\\.dev\\/track",
+            "rule": "thesak\\.workers\\.dev\\/hp-tile-tracker\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "journey-events"
             ],
-            "apis": {},
+            "apis": {
+                "window.sessionStorage": 1,
+                "window.innerHeight": 1,
+                "Document.cookie getter": 1,
+                "window.innerWidth": 1
+            },
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "9c44141f163fcbf33c19df9aa38ba6b8309d37d036ecb4a917b345d84634d748"
+            ],
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -51,6 +58,26 @@
                 "thesak.com",
                 "www.thesak.com"
             ]
+        },
+        {
+            "rule": "thesak\\.workers\\.dev\\/track",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "journey-events"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thesak.com",
+                "www.thesak.com"
+            ]
         }
     ],
     "categories": [],
@@ -58,20 +85,21 @@
     "cookies": 0,
     "topInitiators": [
         {
-            "domain": "first party",
-            "prevalence": 0.6666666666666666
+            "domain": "yottaa.com",
+            "prevalence": 0.5
         },
         {
-            "domain": "yottaa.com",
-            "prevalence": 0.3333333333333333
+            "domain": "first party",
+            "prevalence": 0.5
         }
     ],
     "types": {
-        "Preflight": 2,
-        "Fetch": 2
+        "Script": 2,
+        "Fetch": 2,
+        "Preflight": 2
     },
     "nameservers": [
-        "chad.ns.cloudflare.com",
-        "linda.ns.cloudflare.com"
+        "linda.ns.cloudflare.com",
+        "chad.ns.cloudflare.com"
     ]
 }

@@ -7,48 +7,37 @@
     "prevalence": 0.0000274,
     "sites": 4,
     "subdomains": [
-        "knowledge",
-        "sfbok.kb",
         "static"
     ],
-    "cnames": [
-        {
-            "original": "fragaoss.max.se",
-            "resolved": "knowledge.kundo.se"
-        }
-    ],
-    "fingerprinting": 0,
+    "cnames": [],
+    "fingerprinting": 1,
     "resources": [
         {
-            "rule": "kundo\\.se\\/js\\/kundo-knowledge-widget\\.js",
+            "rule": "kundo\\.se\\/widget\\/kundo-widget-v1\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
-                "knowledge",
-                "sfbok.kb"
+                "static"
             ],
-            "apis": {},
+            "apis": {
+                "window.localStorage": 1,
+                "Navigator.prototype.userAgent": 1,
+                "Date.prototype.getTime": 1
+            },
             "sites": 2,
             "prevalence": 0.0000137,
-            "cnames": [
-                {
-                    "original": "fragaoss.max.se",
-                    "resolved": "knowledge.kundo.se"
-                }
-            ],
-            "responseHashes": [
-                "758a9f903375ba208c9db81d112f42efe7343745fe478d12af68c7f25e10c990"
-            ],
+            "cnames": [],
+            "responseHashes": [],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "max.se",
-                "www.sfbok.se"
+                "verktygsboden.se",
+                "www.morakniv.com"
             ]
         },
         {
-            "rule": "kundo\\.se\\/widget\\/kundo-widget-v1\\.js",
+            "rule": "kundo\\.se\\/widget\\/locales\\/sv\\/translation\\.json",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -59,11 +48,11 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [],
-            "type": "Script",
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "morakniv.com",
+                "verktygsboden.se",
                 "www.morakniv.com"
             ]
         }
@@ -78,12 +67,13 @@
         }
     ],
     "types": {
-        "Script": 4
+        "Script": 2,
+        "Fetch": 2
     },
     "nameservers": [
-        "ns-822.awsdns-38.net",
         "ns-1621.awsdns-10.co.uk",
         "ns-265.awsdns-33.com",
+        "ns-822.awsdns-38.net",
         "ns-1121.awsdns-12.org"
     ]
 }

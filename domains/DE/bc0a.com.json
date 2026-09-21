@@ -7,14 +7,15 @@
     "source": [
         "DuckDuckGo-DE"
     ],
-    "prevalence": 0.000302,
-    "sites": 3,
+    "prevalence": 0.000705,
+    "sites": 7,
     "subdomains": [
         "ixf2-api",
-        "ixfd2-api"
+        "ixfd2-api",
+        "cdn"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "bc0a\\.com\\/api\\/ixf\\/1\\.0\\.0\\/get_capsule\\/f00000000320911\\/0949283723",
@@ -38,6 +39,55 @@
                 "playmobil.com",
                 "www.playmobil.com"
             ]
+        },
+        {
+            "rule": "bc0a\\.com\\/autopilot\\/f00000000314502\\/autopilot_sdk\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.appVersion": 2,
+                "Date.prototype.getTimezoneOffset": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "2395b948dc4885ec2e4abb4168c83db60e7686461cd0417f7a4e5e150175c9b2"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "zoom.com",
+                "zoom.us"
+            ]
+        },
+        {
+            "rule": "bc0a\\.com\\/api\\/ixf\\/1\\.0\\.0\\/get_capsule\\/f00000000314502\\/02136793597",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ixfd2-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "80550f741a29af7f22d2e2a28ff6f1235f34d61af56a0a6a9657ded148b2b061"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "zoom.com",
+                "zoom.us"
+            ]
         }
     ],
     "categories": [],
@@ -46,14 +96,23 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.8666666666666667
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.06666666666666667
+        },
+        {
+            "domain": "zoom.com",
+            "prevalence": 0.06666666666666667
         }
     ],
     "types": {
-        "XHR": 2
+        "XHR": 4,
+        "Script": 2
     },
     "nameservers": [
-        "pdns10.domaincontrol.com",
-        "pdns09.domaincontrol.com"
+        "pdns09.domaincontrol.com",
+        "pdns10.domaincontrol.com"
     ]
 }

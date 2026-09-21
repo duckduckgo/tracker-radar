@@ -4,12 +4,20 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.00000685,
-    "sites": 1,
+    "prevalence": 0.0000137,
+    "sites": 2,
     "subdomains": [
-        "et.cdn"
+        "et.cdn",
+        "cma.cdn",
+        "marketing",
+        "api-gateway-frankfurt.shared-production"
     ],
-    "cnames": [],
+    "cnames": [
+        {
+            "original": "pulse.hear.com",
+            "resolved": "api-gateway-frankfurt.shared-production.audibene.net"
+        }
+    ],
     "fingerprinting": 0,
     "resources": [
         {
@@ -31,6 +39,102 @@
                 "hear.com",
                 "www.hear.com"
             ]
+        },
+        {
+            "rule": "audibene\\.net\\/campaign",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cma.cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "797d12769050c5425011f8b85077edd9e03666e9fb1245ab36110bac55e11ba5"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hear.com",
+                "www.hear.com"
+            ]
+        },
+        {
+            "rule": "audibene\\.net\\/session",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "marketing"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e7c4d263771ef3396b72e067c3f1ed8f9fe169a5ef7b426fa4b98e1a244a4f70"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hear.com",
+                "www.hear.com"
+            ]
+        },
+        {
+            "rule": "audibene\\.net\\/track",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-gateway-frankfurt.shared-production"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "pulse.hear.com",
+                    "resolved": "api-gateway-frankfurt.shared-production.audibene.net"
+                }
+            ],
+            "responseHashes": [
+                "350bb46d6144840a820211960c3ec9ed81a6b7f20c88a8b00ddcea83fa3cf14f"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hear.com",
+                "www.hear.com"
+            ]
+        },
+        {
+            "rule": "audibene\\.net\\/track",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-gateway-frankfurt.shared-production"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "pulse.hear.com",
+                    "resolved": "api-gateway-frankfurt.shared-production.audibene.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "hear.com",
+                "www.hear.com"
+            ]
         }
     ],
     "categories": [],
@@ -43,12 +147,13 @@
         }
     ],
     "types": {
-        "Fetch": 2
+        "Fetch": 8,
+        "Preflight": 2
     },
     "nameservers": [
-        "ns-657.awsdns-18.net",
-        "ns-426.awsdns-53.com",
         "ns-1967.awsdns-53.co.uk",
+        "ns-426.awsdns-53.com",
+        "ns-657.awsdns-18.net",
         "ns-1469.awsdns-55.org"
     ]
 }

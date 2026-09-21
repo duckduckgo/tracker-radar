@@ -7,11 +7,13 @@
     "prevalence": 0.000101,
     "sites": 1,
     "subdomains": [
-        "kraken",
         "cs",
+        "kraken",
         "ssp01-rambler",
         "imgserve",
-        "sync"
+        "imgredirect",
+        "sync",
+        "imgstats"
     ],
     "cnames": [
         {
@@ -19,8 +21,16 @@
             "resolved": "cs.ad-tech.ru"
         },
         {
+            "original": "imgredirect.rambler.ru",
+            "resolved": "imgredirect.ad-tech.ru"
+        },
+        {
             "original": "imgserve.rambler.ru",
             "resolved": "imgserve.ad-tech.ru"
+        },
+        {
+            "original": "imgstats.rambler.ru",
+            "resolved": "imgstats.ad-tech.ru"
         },
         {
             "original": "kraken.rambler.ru",
@@ -38,19 +48,19 @@
     "fingerprinting": 2,
     "resources": [
         {
-            "rule": "ad-tech\\.ru\\/cnt\\/v2\\/",
+            "rule": "ad-tech\\.ru\\/api\\/v2\\/events",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "kraken"
+                "cs"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [
                 {
-                    "original": "kraken.rambler.ru",
-                    "resolved": "kraken.ad-tech.ru"
+                    "original": "cs.rambler.ru",
+                    "resolved": "cs.ad-tech.ru"
                 }
             ],
             "responseHashes": [
@@ -65,19 +75,19 @@
             ]
         },
         {
-            "rule": "ad-tech\\.ru\\/api\\/v2\\/events",
+            "rule": "ad-tech\\.ru\\/cnt\\/v2\\/",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "cs"
+                "kraken"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [
                 {
-                    "original": "cs.rambler.ru",
-                    "resolved": "cs.ad-tech.ru"
+                    "original": "kraken.rambler.ru",
+                    "resolved": "kraken.ad-tech.ru"
                 }
             ],
             "responseHashes": [
@@ -108,13 +118,13 @@
                 }
             ],
             "responseHashes": [
-                "9ea02dff873d7cfc04db72efe83f0b4c4984dbd2860846f37d2f0402262af967"
+                "a55b534c031659c5ab5bb3f901f84e8a4f7696de3fb1896c849e136fd31a62be"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "_ym_uid": 0.00020126798832645668,
-                "_ym_d": 0.00020126798832645668
+                "_ym_uid": 0.00020128824476650564,
+                "_ym_d": 0.00020128824476650564
             },
             "exampleSites": [
                 "rambler.ru",
@@ -126,7 +136,8 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "imgserve"
+                "imgserve",
+                "imgredirect"
             ],
             "apis": {},
             "sites": 2,
@@ -135,11 +146,13 @@
                 {
                     "original": "imgserve.rambler.ru",
                     "resolved": "imgserve.ad-tech.ru"
+                },
+                {
+                    "original": "imgredirect.rambler.ru",
+                    "resolved": "imgredirect.ad-tech.ru"
                 }
             ],
-            "responseHashes": [
-                "2c8a5b969f6e12cc2d5bf3a6b97ec6ae64e51aa2dbe497e328958839276ffb5c"
-            ],
+            "responseHashes": [],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -165,6 +178,33 @@
                 }
             ],
             "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rambler.ru",
+                "finance.rambler.ru"
+            ]
+        },
+        {
+            "rule": "ad-tech\\.ru\\/file\\.jsp",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "imgstats"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "imgstats.rambler.ru",
+                    "resolved": "imgstats.ad-tech.ru"
+                }
+            ],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
             "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -207,20 +247,24 @@
     "topInitiators": [
         {
             "domain": "top100.ru",
-            "prevalence": 0.875
+            "prevalence": 0.8840579710144928
         },
         {
             "domain": "ad-tech.ru",
-            "prevalence": 0.1171875
+            "prevalence": 0.10144927536231885
         },
         {
             "domain": "first party",
-            "prevalence": 0.0078125
+            "prevalence": 0.007246376811594203
+        },
+        {
+            "domain": "dsp-rambler.ru",
+            "prevalence": 0.007246376811594203
         }
     ],
     "types": {
         "XHR": 8,
-        "Image": 4
+        "Image": 6
     },
     "nameservers": [
         "ns2.ad-tech.ru",
