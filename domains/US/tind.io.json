@@ -4,13 +4,14 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000137,
-    "sites": 2,
+    "prevalence": 0.0000206,
+    "sites": 3,
     "subdomains": [
-        "sentry.internal"
+        "sentry.internal",
+        "stats"
     ],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "tind\\.io\\/api\\/38\\/envelope\\/",
@@ -20,8 +21,8 @@
                 "sentry.internal"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "sites": 4,
+            "prevalence": 0.0000274,
             "cnames": [],
             "responseHashes": [
                 "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
@@ -30,37 +31,101 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "un.org",
+                "berkeley.edu",
+                "digicoll.lib.berkeley.edu",
+                "digitallibrary.un.org",
                 "lawcat.berkeley.edu"
             ]
         },
         {
-            "rule": "tind\\.io\\/api\\/38\\/security\\/",
-            "cookies": 0,
-            "fingerprinting": 0,
+            "rule": "tind\\.io\\/piwik\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 2,
             "subdomains": [
-                "sentry.internal"
+                "stats"
             ],
-            "apis": {},
+            "apis": {
+                "Document.cookie getter": 2,
+                "window.name": 2,
+                "NavigatorUAData.prototype.brands": 2,
+                "NavigatorUAData.prototype.platform": 2,
+                "NavigatorUAData.prototype.getHighEntropyValues": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.mimeTypes": 2,
+                "Navigator.prototype.javaEnabled": 2,
+                "Navigator.prototype.cookieEnabled": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.platform": 2,
+                "Document.cookie setter": 2
+            },
             "sites": 3,
             "prevalence": 0.0000206,
             "cnames": [],
             "responseHashes": [
+                "40c1b9a1c297746e02cd5614390adf6a51e9f0a024c77567a114eceb7a581895"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_pk_id.1187.1927": {
+                    "ttl": 33955210,
+                    "length": 28,
+                    "prevalence": 0.000006858475360927266,
+                    "uniqueness": 1
+                },
+                "_pk_ses.1187.1927": {
+                    "ttl": 1809,
+                    "length": 1,
+                    "prevalence": 0.000006858475360927266,
+                    "uniqueness": 1
+                },
+                "_pk_id.1165.3abf": {
+                    "ttl": 33955207,
+                    "length": 28,
+                    "prevalence": 0.000006858475360927266,
+                    "uniqueness": 1
+                },
+                "_pk_ses.1165.3abf": {
+                    "ttl": 1806,
+                    "length": 1,
+                    "prevalence": 0.000006858475360927266,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "berkeley.edu",
+                "digitallibrary.un.org",
+                "lawcat.berkeley.edu"
+            ]
+        },
+        {
+            "rule": "tind\\.io\\/piwik\\.php",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "stats"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
             ],
-            "type": "Other",
+            "type": "Ping",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "un.org",
-                "digitallibrary.un.org",
-                "lawcat.berkeley.edu"
+                "berkeley.edu",
+                "digitallibrary.un.org"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.0000137,
     "topInitiators": [
         {
             "domain": "first party",
@@ -68,13 +133,14 @@
         }
     ],
     "types": {
-        "Fetch": 2,
-        "Other": 3
+        "Fetch": 4,
+        "Script": 3,
+        "Ping": 2
     },
     "nameservers": [
-        "ns3.dnsimple.com",
-        "ns1.dnsimple.com",
         "ns4.dnsimple.com",
-        "ns2.dnsimple.com"
+        "ns2.dnsimple.com",
+        "ns1.dnsimple.com",
+        "ns3.dnsimple.com"
     ]
 }

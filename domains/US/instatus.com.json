@@ -4,11 +4,13 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000549,
-    "sites": 8,
+    "prevalence": 0.0000686,
+    "sites": 10,
     "subdomains": [
         "cname",
         "opuspro",
+        "api",
+        "kaxekbxe",
         "praisecharts"
     ],
     "cnames": [
@@ -17,7 +19,7 @@
             "resolved": "cname.instatus.com"
         }
     ],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "instatus\\.com\\/summary\\.json",
@@ -45,6 +47,53 @@
             "exampleSites": [
                 "utoronto.ca",
                 "www.opus.pro"
+            ]
+        },
+        {
+            "rule": "instatus\\.com\\/issues",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "c8306278b2c53108b369aa6144cb3f4c18dc10ffce6949d38539ac2e51828a11"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "commonlit.org",
+                "www.kaxe.org"
+            ]
+        },
+        {
+            "rule": "instatus\\.com\\/en\\/13df912c\\/widget\\/script\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "kaxekbxe"
+            ],
+            "apis": {
+                "Screen.prototype.width": 2,
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "0e2c5f1f11f0950e81a86a8706cc3ec538a0c8d6db2044c82bd667cd799a2318"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kaxe.org",
+                "www.kaxe.org"
             ]
         },
         {
@@ -80,11 +129,12 @@
         }
     ],
     "types": {
-        "Fetch": 2,
+        "Fetch": 4,
+        "Script": 2,
         "Document": 2
     },
     "nameservers": [
-        "mallory.ns.cloudflare.com",
-        "donovan.ns.cloudflare.com"
+        "donovan.ns.cloudflare.com",
+        "mallory.ns.cloudflare.com"
     ]
 }

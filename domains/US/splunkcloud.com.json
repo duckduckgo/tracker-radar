@@ -7,11 +7,13 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000617,
-    "sites": 9,
+    "prevalence": 0.0000754,
+    "sites": 11,
     "subdomains": [
         "cdn.observability",
+        "rum-ingest.us0.observability",
         "rum-ingest.us1.observability",
+        "rum-ingest.eu0.observability",
         "rum-ingest.au0.observability",
         "http-inputs-itv"
     ],
@@ -19,7 +21,7 @@
     "fingerprinting": 2,
     "resources": [
         {
-            "rule": "splunkcloud\\.com\\/o11y-gdi-rum\\/v2\\.1\\.0\\/splunk-otel-web\\.js",
+            "rule": "splunkcloud\\.com\\/o11y-gdi-rum\\/v3\\/splunk-otel-web\\.js",
             "cookies": 0.0000137,
             "fingerprinting": 2,
             "subdomains": [
@@ -27,14 +29,16 @@
             ],
             "apis": {
                 "Navigator.prototype.userAgent": 2,
-                "Navigator.prototype.webdriver": 2,
+                "window.localStorage": 2,
                 "window.name": 2,
                 "window.sessionStorage": 2,
                 "Document.cookie getter": 2,
                 "Document.cookie setter": 2,
+                "Navigator.prototype.webdriver": 2,
                 "Navigator.prototype.language": 2,
                 "NavigatorUAData.prototype.platform": 2,
                 "Navigator.prototype.platform": 2,
+                "window.devicePixelRatio": 2,
                 "NavigatorUAData.prototype.getHighEntropyValues": 2,
                 "Screen.prototype.width": 2,
                 "Screen.prototype.height": 2
@@ -43,27 +47,27 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "24a49a87a009025fcd4b02dddb8f5f4c5755f4770d8340e6eb090b1d5e5a2bbc"
+                "7f94ac833dc94b7d39170d4e03490581171635fa463e21fe9ee43e51c1537471"
             ],
             "type": "Script",
             "firstPartyCookies": {
                 "_splunk_rum_sid": {
                     "ttl": 900,
                     "length": 123,
-                    "prevalence": 0.000013713940906628634,
+                    "prevalence": 0.000013716950721854531,
                     "uniqueness": 1
                 },
                 "_splunk_rum_user_anonymousId": {
                     "ttl": 34560000,
                     "length": 32,
-                    "prevalence": 0.000013713940906628634,
+                    "prevalence": 0.000013716950721854531,
                     "uniqueness": 1
                 }
             },
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "t-mobile.com",
-                "www.t-mobile.com"
+                "illinoisstate.edu",
+                "us.maxmara.com"
             ]
         },
         {
@@ -71,23 +75,26 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
+                "rum-ingest.us0.observability",
                 "rum-ingest.us1.observability",
+                "rum-ingest.eu0.observability",
                 "rum-ingest.au0.observability"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.0000274,
+            "sites": 7,
+            "prevalence": 0.000048,
             "cnames": [],
-            "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-            ],
-            "type": "XHR",
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "cruisingpower.com",
+                "illinoisstate.edu",
                 "secure.cruisingpower.com",
-                "www.myherbalife.com",
+                "stores.newbalance.com",
+                "us.maxmara.com",
+                "www.espresso.cruisingpower.com",
+                "www.icabanken.se",
                 "www.tafensw.edu.au"
             ]
         },
@@ -96,20 +103,28 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
+                "rum-ingest.us0.observability",
                 "rum-ingest.us1.observability",
+                "rum-ingest.eu0.observability",
                 "rum-ingest.au0.observability"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000206,
+            "sites": 7,
+            "prevalence": 0.000048,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "cruisingpower.com",
-                "www.myherbalife.com",
+                "illinoisstate.edu",
+                "secure.cruisingpower.com",
+                "stores.newbalance.com",
+                "us.maxmara.com",
+                "www.espresso.cruisingpower.com",
+                "www.icabanken.se",
                 "www.tafensw.edu.au"
             ]
         },
@@ -154,53 +169,35 @@
                 "itv.com",
                 "www.itv.com"
             ]
-        },
-        {
-            "rule": "splunkcloud\\.com\\/v1\\/rumreplay",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "rum-ingest.us1.observability"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "myherbalife.com",
-                "www.myherbalife.com"
-            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0000206,
+    "cookies": 0.0000274,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.8518518518518519
+        },
+        {
+            "domain": "tiqcdn.com",
+            "prevalence": 0.14814814814814814
         }
     ],
     "types": {
         "Script": 2,
-        "XHR": 4,
-        "Preflight": 5,
-        "Fetch": 4
+        "Preflight": 9,
+        "XHR": 7,
+        "Fetch": 2
     },
     "nameservers": [
         "ns-4-2-1.splunkdns.net",
-        "ns-4-2-3.splunkdns.net",
         "ns-4-2-2.splunkdns.net",
-        "ns-4-2-8.splunkdns.net",
+        "ns-4-2-3.splunkdns.net",
         "ns-4-2-4.splunkdns.net",
-        "ns-4-2-7.splunkdns.net",
+        "ns-4-2-5.splunkdns.net",
         "ns-4-2-6.splunkdns.net",
-        "ns-4-2-5.splunkdns.net"
+        "ns-4-2-7.splunkdns.net",
+        "ns-4-2-8.splunkdns.net"
     ]
 }

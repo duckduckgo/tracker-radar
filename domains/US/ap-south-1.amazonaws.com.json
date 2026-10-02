@@ -9,10 +9,13 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000206,
-    "sites": 3,
+    "prevalence": 0.0000343,
+    "sites": 5,
     "subdomains": [
-        "a068381ea74b0410da7b5ba4640ed5c7-721dfbf039b0079f.elb"
+        "a068381ea74b0410da7b5ba4640ed5c7-721dfbf039b0079f.elb",
+        "dataplane.rum",
+        "cognito-identity",
+        "firehose"
     ],
     "cnames": [
         {
@@ -68,7 +71,7 @@
                 }
             ],
             "responseHashes": [
-                "4e9ee9d5ea0b95ca4b4a7510276a8e8272f80f984d0f7bf5467d0484d136d2b9"
+                "c2d6304e1e765d0b6f69a3745de967acf52c7340e346cd6a1f0b0246e0907298"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -120,7 +123,7 @@
                 }
             ],
             "responseHashes": [
-                "415a33b60253b73310ea04514f4d1b808113ef082c941dbd0543dbb305bdafb9"
+                "b8c03988927fbf6323342374a7ccee8537b5149ace6e6f6ba4b757d3df5a1348"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -147,7 +150,7 @@
                 }
             ],
             "responseHashes": [
-                "980d3fffd069fb1177df1e879021fc48ff571db5806aea1fa9bd5b90ed8c3d56"
+                "6f41a60c4360c42e2007062243c5b0ca2cc47d63d48d0567715dc4ff19b2c96d"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -155,6 +158,71 @@
             "exampleSites": [
                 "moglix.com",
                 "www.moglix.com"
+            ]
+        },
+        {
+            "rule": "ap-south-1\\.amazonaws\\.com\\/appmonitors\\/009393bf-a98d-41b1-9988-effbee8b7984",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dataplane.rum"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "upgrad.com",
+                "www.upgrad.com"
+            ]
+        },
+        {
+            "rule": "ap-south-1\\.amazonaws\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cognito-identity"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "b1cbde4c0e63e5f4b8b0a6efd840d0353895c33088594ed5ff462d9ad129b977"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "watcho.com",
+                "www.watcho.com"
+            ]
+        },
+        {
+            "rule": "ap-south-1\\.amazonaws\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cognito-identity",
+                "firehose"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "watcho.com",
+                "www.watcho.com"
             ]
         }
     ],
@@ -165,18 +233,27 @@
     "cookies": 0.00000686,
     "topInitiators": [
         {
+            "domain": "rum.us-east-1.amazonaws.com",
+            "prevalence": 0.6
+        },
+        {
+            "domain": "vzy.one",
+            "prevalence": 0.3
+        },
+        {
             "domain": "vidgyor.com",
-            "prevalence": 1
+            "prevalence": 0.1
         }
     ],
     "types": {
-        "Preflight": 4,
-        "XHR": 6
+        "Preflight": 6,
+        "XHR": 6,
+        "Fetch": 4
     },
     "nameservers": [
-        "ns-1307.awsdns-35.org",
-        "ns-1850.awsdns-39.co.uk",
         "ns-342.awsdns-42.com",
-        "ns-754.awsdns-30.net"
+        "ns-1850.awsdns-39.co.uk",
+        "ns-754.awsdns-30.net",
+        "ns-1307.awsdns-35.org"
     ]
 }

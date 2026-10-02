@@ -8,21 +8,52 @@
     "sites": 2,
     "subdomains": [
         "admin-pipeline.upsun-au.observability-pipeline",
-        "admin-pipeline.upsun-au-2.observability-pipeline"
+        "admin-pipeline.upsun-au-2.observability-pipeline",
+        "ingest.upsun-au-2.observability-pipeline"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 3,
     "resources": [
         {
             "rule": "blackfire\\.io\\/js\\/probe\\.js",
             "cookies": 0,
-            "fingerprinting": 1,
+            "fingerprinting": 3,
             "subdomains": [
                 "admin-pipeline.upsun-au.observability-pipeline",
                 "admin-pipeline.upsun-au-2.observability-pipeline"
             ],
             "apis": {
-                "Navigator.prototype.product": 2
+                "Navigator.prototype.product": 2,
+                "Navigator.prototype.language": 1,
+                "window.innerWidth": 1,
+                "window.innerHeight": 1,
+                "Screen.prototype.availHeight": 1,
+                "Screen.prototype.availLeft": 1,
+                "Screen.prototype.availTop": 1,
+                "Screen.prototype.availWidth": 1,
+                "Screen.prototype.colorDepth": 1,
+                "Screen.prototype.height": 1,
+                "Screen.prototype.pixelDepth": 1,
+                "Screen.prototype.width": 1,
+                "Screen.prototype.orientation": 1,
+                "Navigator.prototype.connection": 1,
+                "Navigator.prototype.vendor": 1,
+                "OfflineAudioContext.prototype.constructor": 1,
+                "AudioBuffer.prototype.getChannelData": 1,
+                "Navigator.prototype.languages": 1,
+                "Navigator.prototype.deviceMemory": 1,
+                "Navigator.prototype.hardwareConcurrency": 1,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 1,
+                "window.sessionStorage": 1,
+                "window.localStorage": 1,
+                "window.indexedDB": 1,
+                "Navigator.prototype.platform": 1,
+                "Navigator.prototype.plugins": 1,
+                "CanvasRenderingContext2D.prototype.isPointInPath": 1,
+                "HTMLCanvasElement.prototype.toDataURL": 1,
+                "Navigator.prototype.maxTouchPoints": 1,
+                "WebGLRenderingContext.prototype.getExtension": 1,
+                "WebGLRenderingContext.prototype.getParameter": 1
             },
             "sites": 2,
             "prevalence": 0.000201,
@@ -37,6 +68,28 @@
                 "play.afl",
                 "www.foodstandards.gov.au"
             ]
+        },
+        {
+            "rule": "blackfire\\.io\\/browser\\/v1\\/input\\/metrics",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ingest.upsun-au-2.observability-pipeline"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "foodstandards.gov.au",
+                "www.foodstandards.gov.au"
+            ]
         }
     ],
     "categories": [],
@@ -49,7 +102,7 @@
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 4
     },
     "nameservers": [
         "ns-350.awsdns-43.com",

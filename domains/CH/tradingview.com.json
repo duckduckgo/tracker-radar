@@ -4,15 +4,17 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.000302,
-    "sites": 3,
+    "prevalence": 0.000503,
+    "sites": 5,
     "subdomains": [
         "s3",
         "scanner-backend",
         "widgetdata",
         "s",
         "pushstream",
-        "www"
+        "www",
+        "snowplow-pixel",
+        "s3-symbol-logo"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -69,19 +71,21 @@
                 "widgetdata"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000302,
+            "sites": 5,
+            "prevalence": 0.000503,
             "cnames": [],
             "responseHashes": [],
             "type": "WebSocket",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "_li_dcdm_c": 0.00010057326762546515
+                "_li_dcdm_c": 0.0001006238679814852
             },
             "exampleSites": [
                 "goldprice.org",
                 "prixdubaril.com",
-                "www.investopedia.com"
+                "www.elconfidencial.com",
+                "www.investopedia.com",
+                "www.kitco.com"
             ]
         },
         {
@@ -112,8 +116,8 @@
                 "pushstream"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [],
             "type": "WebSocket",
@@ -121,7 +125,8 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "goldprice.org",
-                "prixdubaril.com"
+                "prixdubaril.com",
+                "www.kitco.com"
             ]
         },
         {
@@ -143,32 +148,142 @@
                 "goldprice.org",
                 "prixdubaril.com"
             ]
+        },
+        {
+            "rule": "tradingview\\.com\\/external-embedding\\/embed-widget-ticker-tape\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "s3"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "7c43d89763c9d8f78efe2fec00217687b8c3bf7dec480a19d95d1deb8436e498"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "elconfidencial.com",
+                "www.investopedia.com"
+            ]
+        },
+        {
+            "rule": "tradingview\\.com\\/com\\.tradingview\\/track",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "snowplow-pixel"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "2689367b205c16ce32ed4200942b8b8b1e262dfc70d9bc9fbc77c49699a4f1df"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "elconfidencial.com",
+                "www.kitco.com"
+            ]
+        },
+        {
+            "rule": "tradingview\\.com\\/com\\.tradingview\\/track",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "snowplow-pixel"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "elconfidencial.com",
+                "www.kitco.com"
+            ]
+        },
+        {
+            "rule": "tradingview\\.com\\/country\\/US\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "s3-symbol-logo"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "71bfd6b1db0f03e8ad00d7951a2ec80d684450490bae344b9a0e33141e9264b0"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "investopedia.com",
+                "www.kitco.com"
+            ]
+        },
+        {
+            "rule": "tradingview\\.com\\/country\\/EU\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "s3-symbol-logo"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "b47993af3ef9963a193ddc9d0bd10fc8f1f773fe0881ffa3c8d2151498fccf03"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "investopedia.com",
+                "www.kitco.com"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.000201,
     "topInitiators": [
         {
             "domain": "tradingview-widget.com",
-            "prevalence": 0.7727272727272727
+            "prevalence": 0.7567567567567568
         },
         {
             "domain": "first party",
-            "prevalence": 0.22727272727272727
+            "prevalence": 0.24324324324324326
         }
     ],
     "types": {
-        "Script": 2,
+        "Script": 4,
         "Other": 2,
-        "WebSocket": 5,
+        "WebSocket": 8,
         "Fetch": 2,
-        "Preflight": 2
+        "Preflight": 4,
+        "Ping": 2,
+        "Image": 4
     },
     "nameservers": [
-        "ns-234.awsdns-29.com",
         "ns-1533.awsdns-63.org",
         "ns-1853.awsdns-39.co.uk",
+        "ns-234.awsdns-29.com",
         "ns-619.awsdns-13.net"
     ]
 }

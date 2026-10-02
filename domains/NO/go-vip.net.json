@@ -4,11 +4,12 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000704,
-    "sites": 7,
+    "prevalence": 0.000906,
+    "sites": 9,
     "subdomains": [
         "nasa-tv",
-        "malwarebytes-api"
+        "malwarebytes-api",
+        "technologyreview-com"
     ],
     "cnames": [
         {
@@ -18,9 +19,13 @@
         {
             "original": "web-service.malwarebytes.com",
             "resolved": "malwarebytes-api.go-vip.net"
+        },
+        {
+            "original": "wp.technologyreview.com",
+            "resolved": "technologyreview-com.go-vip.net"
         }
     ],
-    "fingerprinting": 1,
+    "fingerprinting": 0,
     "resources": [
         {
             "rule": "go-vip\\.net\\/wp-json\\/nasaplus\\/v1\\/live",
@@ -73,6 +78,33 @@
                 "malwarebytes.com",
                 "www.malwarebytes.com"
             ]
+        },
+        {
+            "rule": "go-vip\\.net\\/wp-json\\/irving\\/v1\\/data\\/feed_section",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "technologyreview-com"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "wp.technologyreview.com",
+                    "resolved": "technologyreview-com.go-vip.net"
+                }
+            ],
+            "responseHashes": [
+                "846376304622becd3314e8e8d75c1286d4639c153003a2c0871e2190d4ad3ebe"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "technologyreview.com",
+                "www.technologyreview.com"
+            ]
         }
     ],
     "categories": [],
@@ -80,12 +112,13 @@
     "cookies": 0,
     "types": {
         "XHR": 2,
-        "Preflight": 2
+        "Preflight": 2,
+        "Fetch": 2
     },
     "nameservers": [
+        "ns1.go-vip.net",
         "ns2.go-vip.net",
         "ns3.go-vip.net",
-        "ns1.go-vip.net",
         "ns4.go-vip.net"
     ]
 }

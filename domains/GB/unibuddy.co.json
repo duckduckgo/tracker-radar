@@ -4,18 +4,16 @@
     "source": [
         "DuckDuckGo-GB"
     ],
-    "prevalence": 0.000302,
-    "sites": 3,
+    "prevalence": 0.000201,
+    "sites": 2,
     "subdomains": [
         "traffic-drivers",
         "prospect-guidance-ui",
         "gateway",
-        "api",
-        "popcard",
         "logos"
     ],
     "cnames": [],
-    "fingerprinting": 2,
+    "fingerprinting": 3,
     "resources": [
         {
             "rule": "unibuddy\\.co\\/config\\.js",
@@ -45,23 +43,18 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "gateway",
-                "api"
+                "gateway"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000302,
+            "sites": 2,
+            "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [
-                "40b12beda009d00106eeab04a47b497fdd7f0e7fceae3155ebf245f33b9d15b5",
-                "017bcbc97bd48b406e713e6fd048fb9fbd6e91625d0b62182916a875d4d73317"
-            ],
-            "type": "Fetch",
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "bangor.ac.uk",
-                "www.brookes.ac.uk",
                 "www.essex.ac.uk"
             ]
         },
@@ -70,20 +63,20 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "gateway",
-                "api"
+                "gateway"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000302,
+            "sites": 2,
+            "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "017bcbc97bd48b406e713e6fd048fb9fbd6e91625d0b62182916a875d4d73317"
+            ],
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "bangor.ac.uk",
-                "www.brookes.ac.uk",
                 "www.essex.ac.uk"
             ]
         },
@@ -92,7 +85,6 @@
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "popcard",
                 "prospect-guidance-ui"
             ],
             "apis": {},
@@ -106,7 +98,7 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "brookes.ac.uk",
+                "essex.ac.uk",
                 "www.essex.ac.uk"
             ]
         },
@@ -259,11 +251,15 @@
         {
             "rule": "unibuddy\\.co\\/npm\\.sentry-internal\\.b0cb546b65dabcd41129\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 2,
             "subdomains": [
                 "prospect-guidance-ui"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.connection": 2,
+                "Navigator.prototype.deviceMemory": 2,
+                "Navigator.prototype.hardwareConcurrency": 2
+            },
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
@@ -1560,17 +1556,13 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.8888888888888888
-        },
-        {
-            "domain": "googletagmanager.com",
-            "prevalence": 0.1111111111111111
+            "prevalence": 1
         }
     ],
     "types": {
         "Script": 128,
-        "Fetch": 3,
-        "Preflight": 3,
+        "Preflight": 2,
+        "Fetch": 2,
         "Document": 2,
         "Image": 2
     },

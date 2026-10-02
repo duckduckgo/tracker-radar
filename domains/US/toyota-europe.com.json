@@ -7,16 +7,45 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000343,
-    "sites": 5,
+    "prevalence": 0.0000412,
+    "sites": 6,
     "subdomains": [
-        "map",
         "cp-common",
-        "kong-proxy-intranet"
+        "map",
+        "kong-proxy-intranet",
+        "dxp-webcarconfig"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "toyota-europe\\.com\\/cp-ui-sso\\/configuration\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cp-common"
+            ],
+            "apis": {
+                "window.localStorage": 6
+            },
+            "sites": 6,
+            "prevalence": 0.0000412,
+            "cnames": [],
+            "responseHashes": [
+                "5593345838d79b32a4007d06066c12e4186599c4916232455e85f1e995638949"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "lexus.co.uk",
+                "www.toyota.es",
+                "www.toyota.se",
+                "www.toyota.it",
+                "www.toyota.fi",
+                "www.toyota.pl"
+            ]
+        },
         {
             "rule": "toyota-europe\\.com\\/toyota-map\\.min\\.js",
             "cookies": 0,
@@ -43,33 +72,6 @@
             ]
         },
         {
-            "rule": "toyota-europe\\.com\\/cp-ui-sso\\/configuration\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "cp-common"
-            ],
-            "apis": {
-                "window.localStorage": 5
-            },
-            "sites": 5,
-            "prevalence": 0.0000343,
-            "cnames": [],
-            "responseHashes": [
-                "5593345838d79b32a4007d06066c12e4186599c4916232455e85f1e995638949"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "lexus.co.uk",
-                "www.toyota.es",
-                "www.toyota.se",
-                "www.toyota.it",
-                "www.toyota.pl"
-            ]
-        },
-        {
             "rule": "toyota-europe\\.com\\/dxp\\/dealers\\/api\\/lexus\\/gb\\/en\\/find\\/uuid\\/d5e78b6c-50ca-478b-a5df-84096e4b7077",
             "cookies": 0,
             "fingerprinting": 0,
@@ -90,6 +92,82 @@
                 "lexus.co.uk",
                 "www.lexus.co.uk"
             ]
+        },
+        {
+            "rule": "toyota-europe\\.com\\/css\\/grade-selector-toyota-d8f0a35\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dxp-webcarconfig"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "acbb8d5dea571f1b5c74a9ee83a9b9613bc01fcaae66a54604701916a67ae39e"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "toyota.fi",
+                "www.toyota.pl"
+            ]
+        },
+        {
+            "rule": "toyota-europe\\.com\\/js\\/grade-selector-toyota-d8f0a35\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "dxp-webcarconfig"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.product": 2,
+                "window.innerWidth": 2,
+                "window.innerHeight": 2,
+                "window.outerWidth": 2,
+                "window.outerHeight": 2,
+                "window.sessionStorage": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "9d7288b4b851ca2f3265a0ec93d3727e27f342d4d4477f3dc9fd91265418ebfc"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "toyota.fi",
+                "www.toyota.pl"
+            ]
+        },
+        {
+            "rule": "toyota-europe\\.com\\/js\\/vendor-d8f0a35\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "dxp-webcarconfig"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "7721c7266e91fd12bad189c6c046d84eb2ff55f99fe7fc6c14f1a130d5e6ee4b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "toyota.fi",
+                "www.toyota.pl"
+            ]
         }
     ],
     "categories": [],
@@ -98,24 +176,25 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.9423076923076923
+            "prevalence": 0.9117647058823529
         },
         {
             "domain": "azureedge.net",
-            "prevalence": 0.038461538461538464
+            "prevalence": 0.058823529411764705
         },
         {
             "domain": "datadoghq-browser-agent.com",
-            "prevalence": 0.019230769230769232
+            "prevalence": 0.029411764705882353
         }
     ],
     "types": {
-        "Script": 7,
-        "Fetch": 2
+        "Script": 12,
+        "Fetch": 2,
+        "Stylesheet": 2
     },
     "nameservers": [
-        "pdns2.cscdns.net",
-        "pdns1.cscdns.net",
+        "ns2.netnames.net",
+        "ns1.netnames.net",
         "ns1.toyota-europe.com"
     ]
 }

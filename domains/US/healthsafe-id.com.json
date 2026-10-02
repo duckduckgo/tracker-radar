@@ -10,11 +10,34 @@
     "prevalence": 0.00000686,
     "sites": 1,
     "subdomains": [
+        "identity",
         "rba-screen"
     ],
     "cnames": [],
     "fingerprinting": 3,
     "resources": [
+        {
+            "rule": "healthsafe-id\\.com\\/api\\/v1\\/ui-audit-events",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "identity"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "838a7c62adda8d131d694ae13ba2c5b73579aeb0f327d9f23e23880943a8a289"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mygeha.com",
+                "member.mygeha.com"
+            ]
+        },
         {
             "rule": "healthsafe-id\\.com\\/fp\\/check\\.js",
             "cookies": 0,
@@ -64,13 +87,13 @@
                 "Performance.prototype.memory": 1,
                 "HTMLCanvasElement.prototype.toDataURL": 1,
                 "CanvasRenderingContext2D.prototype.getImageData": 1,
-                "WebGL2RenderingContext.prototype.getExtension": 1,
-                "WebGL2RenderingContext.prototype.readPixels": 1,
                 "speechSynthesis.__proto__.getVoices": 1,
-                "AudioBuffer.prototype.getChannelData": 1,
                 "NavigatorUAData.prototype.brands": 1,
                 "NavigatorUAData.prototype.platform": 1,
                 "window.matchMedia(\"prefers-color-scheme\")": 1,
+                "WebGL2RenderingContext.prototype.getExtension": 1,
+                "WebGL2RenderingContext.prototype.readPixels": 1,
+                "AudioBuffer.prototype.getChannelData": 1,
                 "Navigator.prototype.appCodeName": 1,
                 "Navigator.prototype.appName": 1,
                 "Navigator.prototype.cookieEnabled": 1,
@@ -86,7 +109,7 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "e284dd3e5e9dccec75b63e8c97316be77fa1d86779d8db311a0305f21a07a74b"
+                "7f950965f2f45fe88bce5cb6dc7b37089ffdfd7c0e970e370e9fc92bead9e739"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -154,7 +177,7 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "066ae8ed20cbd443ed2fcbab2245df0c2bcc8540124cd229472f59941abbd24d"
+                "423ba3ec06305670181992c2945643d906301669f6cdd99126e40e912c910c28"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -193,19 +216,20 @@
     "topInitiators": [
         {
             "domain": "datadoghq-browser-agent.com",
-            "prevalence": 1
+            "prevalence": 0.9090909090909091
+        },
+        {
+            "domain": "healthsafe-id.com",
+            "prevalence": 0.09090909090909091
         }
     ],
     "types": {
+        "XHR": 2,
         "Script": 8,
         "Image": 2
     },
     "nameservers": [
-        "epla2.corpnamesvcs.com",
         "epla1.corpnamesvcs.com",
-        "edns4.ultradns.net",
-        "edns4.ultradns.com",
-        "edns4.ultradns.biz",
-        "edns4.ultradns.org"
+        "epla2.corpnamesvcs.com"
     ]
 }
