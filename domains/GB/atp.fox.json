@@ -7,25 +7,26 @@
     "prevalence": 0.000201,
     "sites": 2,
     "subdomains": [
-        "prod.pyxis"
+        "prod.pyxis",
+        "prod.fennec"
     ],
     "cnames": [],
-    "fingerprinting": 2,
+    "fingerprinting": 3,
     "resources": [
         {
             "rule": "atp\\.fox\\/pyxis\\/submit",
-            "cookies": 0.000302,
+            "cookies": 0.000301,
             "fingerprinting": 0,
             "subdomains": [
                 "prod.pyxis"
             ],
             "apis": {},
             "sites": 3,
-            "prevalence": 0.000302,
+            "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [
-                "6ab9d6d64a1af002ecdbac91e849763df5c3aafaa1b2882f8f19614f1bbab3cc",
-                "42664ab133b06a4640f960713c9ca2dfb2a48606218bf3a902cfe5f4114c25ff"
+                "d1ef15572586e11312e33256b6626fce6d5bf12876b80958757a9f1097e96bd8",
+                "34225d5371f1054f67c86762cfe14ecab4b97e6403cb2226d39912fbf8096620"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -55,6 +56,76 @@
                 "foxnews.com",
                 "www.tmz.com"
             ]
+        },
+        {
+            "rule": "atp\\.fox\\/js\\/fennec\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "prod.fennec"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "window.localStorage": 2,
+                "Navigator.prototype.userAgent": 2,
+                "window.outerWidth": 2,
+                "window.outerHeight": 2,
+                "window.innerHeight": 2,
+                "window.innerWidth": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "3ff3c5a4680bea779a88a819574d6efd5320ae14f7e3c1ffa8368db4eaeedf62"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "foxnews.com",
+                "www.foxnews.com"
+            ]
+        },
+        {
+            "rule": "atp\\.fox\\/config\\/v2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prod.fennec"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "foxnews.com",
+                "www.foxnews.com"
+            ]
+        },
+        {
+            "rule": "atp\\.fox\\/config\\/v2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prod.fennec"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "foxnews.com",
+                "www.foxnews.com"
+            ]
         }
     ],
     "categories": [],
@@ -68,16 +139,18 @@
     ],
     "types": {
         "Fetch": 3,
-        "Preflight": 2
+        "Preflight": 4,
+        "Script": 2,
+        "XHR": 2
     },
     "nameservers": [
-        "ns04.dns.fox",
-        "ns04.foxdoua.com",
         "ns01.dns.fox",
+        "ns01.foxdoua.com",
         "ns02.dns.fox",
         "ns02.foxdoua.com",
         "ns03.dns.fox",
         "ns03.foxdoua.com",
-        "ns01.foxdoua.com"
+        "ns04.dns.fox",
+        "ns04.foxdoua.com"
     ]
 }

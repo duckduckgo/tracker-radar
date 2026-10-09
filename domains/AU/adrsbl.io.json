@@ -4,14 +4,67 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.000101,
-    "sites": 1,
+    "prevalence": 0.000201,
+    "sites": 2,
     "subdomains": [
-        "tag"
+        "tag",
+        "v6.tag"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "adrsbl\\.io\\/p\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 2,
+            "subdomains": [
+                "tag"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2,
+                "window.indexedDB": 2,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 2,
+                "Date.prototype.getTimezoneOffset": 2,
+                "WebGLRenderingContext.prototype.getExtension": 2,
+                "Navigator.prototype.platform": 2,
+                "Navigator.prototype.languages": 2,
+                "Navigator.prototype.deviceMemory": 2,
+                "Navigator.prototype.hardwareConcurrency": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "Screen.prototype.colorDepth": 2,
+                "Navigator.prototype.doNotTrack": 2,
+                "Navigator.prototype.cookieEnabled": 2,
+                "Navigator.prototype.maxTouchPoints": 2,
+                "WebGLRenderingContext.prototype.getParameter": 2,
+                "Navigator.prototype.mimeTypes": 2,
+                "Performance.prototype.memory": 2,
+                "Navigator.prototype.connection": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "bc35a9ef8046d8b3b8b046077f6da625b642de0a812dc4c21865c4794507947b"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "___adrsbl_nonce": {
+                    "ttl": 315360014,
+                    "length": 32,
+                    "prevalence": 0.0002009444388626545,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cryptonews.com",
+                "www.coindesk.com"
+            ]
+        },
         {
             "rule": "adrsbl\\.io\\/events\\/prod_standard_stage\\/p\\.png",
             "cookies": 0,
@@ -30,27 +83,52 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "coindesk.com",
+                "cryptonews.com",
+                "www.coindesk.com"
+            ]
+        },
+        {
+            "rule": "adrsbl\\.io\\/v1\\/resolve",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "v6.tag"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "cryptonews.com",
                 "www.coindesk.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000101,
+    "cookies": 0.000201,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.7
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.3
         }
     ],
     "types": {
-        "Image": 2
+        "Script": 2,
+        "Image": 4
     },
     "nameservers": [
         "ns-439.awsdns-54.com",
-        "ns-1879.awsdns-42.co.uk",
         "ns-1183.awsdns-19.org",
+        "ns-1879.awsdns-42.co.uk",
         "ns-810.awsdns-37.net"
     ]
 }

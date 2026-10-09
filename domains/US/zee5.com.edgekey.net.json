@@ -13,22 +13,27 @@
     "sites": 2,
     "subdomains": [
         "stcf-prod",
-        "cerberus",
+        "event-prod",
         "cs-help-api",
-        "contentapi"
+        "cerberus",
+        "artemis"
     ],
     "cnames": [
+        {
+            "original": "artemis.zee5.com",
+            "resolved": "artemis.zee5.com.edgekey.net"
+        },
         {
             "original": "cerberus.zee5.com",
             "resolved": "cerberus.zee5.com.edgekey.net"
         },
         {
-            "original": "contentapi.zee5.com",
-            "resolved": "contentapi.zee5.com.edgekey.net"
-        },
-        {
             "original": "cs-help-api.zee5.com",
             "resolved": "cs-help-api.zee5.com.edgekey.net"
+        },
+        {
+            "original": "event-prod.zee5.com",
+            "resolved": "event-prod.zee5.com.edgekey.net"
         },
         {
             "original": "stcf-prod.zee5.com",
@@ -37,6 +42,87 @@
     ],
     "fingerprinting": 0,
     "resources": [
+        {
+            "rule": "zee5\\.com\\.edgekey\\.net\\/prod\\/zee5Videojs\\/vcss\\/video-js\\.min\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "stcf-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "stcf-prod.zee5.com",
+                    "resolved": "stcf-prod.zee5.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "5da3370ea81bf9fec16d0edc044663f919e8662c07c1d9e1e346c139f3e3aa0d"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "zee5.com",
+                "www.zee5.com"
+            ]
+        },
+        {
+            "rule": "zee5\\.com\\.edgekey\\.net\\/prod\\/zee5Videojs\\/vcss\\/videojs\\.ads\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "stcf-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "stcf-prod.zee5.com",
+                    "resolved": "stcf-prod.zee5.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "7fe6b65765f099da8417a13bf95bada41c2c1a16cbf134893318586e66152e45"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "zee5.com",
+                "www.zee5.com"
+            ]
+        },
+        {
+            "rule": "zee5\\.com\\.edgekey\\.net\\/prod\\/zee5Videojs\\/vcss\\/videojs\\.ima\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "stcf-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "stcf-prod.zee5.com",
+                    "resolved": "stcf-prod.zee5.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "ee5efed459c124675f1a2445a7e0b1f57b9a4f75ef1d59f914348a69c23ef487"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "zee5.com",
+                "www.zee5.com"
+            ]
+        },
         {
             "rule": "zee5\\.com\\.edgekey\\.net\\/prod\\/pwa\\/remote\\/mixpanelPayloadRules\\.json",
             "cookies": 0,
@@ -107,8 +193,10 @@
                     "resolved": "stcf-prod.zee5.com.edgekey.net"
                 }
             ],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "04131ebc3dd8a7a1e1175895fc0440775914d6647c1e7d15e685480e1b9fefba"
+            ],
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -132,33 +220,6 @@
                     "resolved": "stcf-prod.zee5.com.edgekey.net"
                 }
             ],
-            "responseHashes": [
-                "04131ebc3dd8a7a1e1175895fc0440775914d6647c1e7d15e685480e1b9fefba"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "zee5.com",
-                "www.zee5.com"
-            ]
-        },
-        {
-            "rule": "zee5\\.com\\.edgekey\\.net\\/cerberus\\/platform\\/web_app\\/v2\\/config",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "cerberus"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [
-                {
-                    "original": "cerberus.zee5.com",
-                    "resolved": "cerberus.zee5.com.edgekey.net"
-                }
-            ],
             "responseHashes": [],
             "type": "Preflight",
             "firstPartyCookies": {},
@@ -169,25 +230,50 @@
             ]
         },
         {
-            "rule": "zee5\\.com\\.edgekey\\.net\\/cerberus\\/platform\\/web_app\\/v2\\/config",
+            "rule": "zee5\\.com\\.edgekey\\.net\\/v1\\/events\\/PageView",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "cerberus"
+                "event-prod"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [
                 {
-                    "original": "cerberus.zee5.com",
-                    "resolved": "cerberus.zee5.com.edgekey.net"
+                    "original": "event-prod.zee5.com",
+                    "resolved": "event-prod.zee5.com.edgekey.net"
                 }
             ],
             "responseHashes": [
-                "630a7882905278ac415330463bb194485f3fb466892a8f2eb7a05c9218bd0455"
+                "e75e4fcd0fc97f3129a2dcc7d33ee1be9840275a3e45c8f7bc38d61698077dec"
             ],
             "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "zee5.com",
+                "www.zee5.com"
+            ]
+        },
+        {
+            "rule": "zee5\\.com\\.edgekey\\.net\\/v1\\/events\\/PageView",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "event-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "event-prod.zee5.com",
+                    "resolved": "event-prod.zee5.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -223,25 +309,154 @@
             ]
         },
         {
-            "rule": "zee5\\.com\\.edgekey\\.net\\/content\\/seo\\/genres-languages",
+            "rule": "zee5\\.com\\.edgekey\\.net\\/cerberus\\/platform\\/web_app\\/v2\\/config",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "contentapi"
+                "cerberus"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [
                 {
-                    "original": "contentapi.zee5.com",
-                    "resolved": "contentapi.zee5.com.edgekey.net"
+                    "original": "cerberus.zee5.com",
+                    "resolved": "cerberus.zee5.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "zee5.com",
+                "www.zee5.com"
+            ]
+        },
+        {
+            "rule": "zee5\\.com\\.edgekey\\.net\\/cerberus\\/platform\\/web_app\\/v2\\/config",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cerberus"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "cerberus.zee5.com",
+                    "resolved": "cerberus.zee5.com.edgekey.net"
                 }
             ],
             "responseHashes": [
-                "6ad89d1d44e6cc7d1312d96d3271c4fd253705fcded4fdf9f9d304d414b9e988"
+                "581e809536d619168b1fcc5d375482043f99130d013794f72c633e6395747c0f"
             ],
             "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "zee5.com",
+                "www.zee5.com"
+            ]
+        },
+        {
+            "rule": "zee5\\.com\\.edgekey\\.net\\/prod\\/zee5Videojs\\/resources\\/images\\/group\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "stcf-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "stcf-prod.zee5.com",
+                    "resolved": "stcf-prod.zee5.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "39c2f8fab1eaf6ff916f56dcb99d066e12dc4a9b308f13627487f66a37e87e86"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "zee5.com",
+                "www.zee5.com"
+            ]
+        },
+        {
+            "rule": "zee5\\.com\\.edgekey\\.net\\/prod\\/pwa\\/remote\\/menu\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "stcf-prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "stcf-prod.zee5.com",
+                    "resolved": "stcf-prod.zee5.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [
+                "50b59ee47ed9cf821762cb9e6371d8eeae0fc9e017059ce475616397d7789432"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "zee5.com",
+                "www.zee5.com"
+            ]
+        },
+        {
+            "rule": "zee5\\.com\\.edgekey\\.net\\/artemis\\/apq\\/web_app\\/US\\/CCQ\\/0-8-7442",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "artemis"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "artemis.zee5.com",
+                    "resolved": "artemis.zee5.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "zee5.com",
+                "www.zee5.com"
+            ]
+        },
+        {
+            "rule": "zee5\\.com\\.edgekey\\.net\\/artemis\\/apq\\/web_app\\/US\\/CCQ\\/0-8-7442",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "artemis"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "artemis.zee5.com",
+                    "resolved": "artemis.zee5.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -253,9 +468,17 @@
     "categories": [],
     "performance": {},
     "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "cookielaw.org",
+            "prevalence": 1
+        }
+    ],
     "types": {
-        "Fetch": 12,
-        "Preflight": 4
+        "Stylesheet": 6,
+        "Fetch": 16,
+        "Preflight": 8,
+        "Image": 2
     },
     "nameservers": []
 }

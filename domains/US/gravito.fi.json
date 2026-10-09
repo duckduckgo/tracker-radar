@@ -8,6 +8,7 @@
     "sites": 3,
     "subdomains": [
         "azerion.detect",
+        "fr24.detect",
         "ksml.detect"
     ],
     "cnames": [],
@@ -19,6 +20,7 @@
             "fingerprinting": 3,
             "subdomains": [
                 "azerion.detect",
+                "fr24.detect",
                 "ksml.detect"
             ],
             "apis": {
@@ -48,6 +50,7 @@
             "prevalence": 0.0000206,
             "cnames": [],
             "responseHashes": [
+                "b5803fe3f6c2613847c8e0a1845850d63a6aed087dfc75b687162adfad4dae6a",
                 "987dea9108e264db4ab78f968abd6c839f0fd8992931c233997c5fc7e83f9f82"
             ],
             "type": "Script",
@@ -55,16 +58,17 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "autogids.be",
-                "www.helsinginuutiset.fi",
+                "www.flightradar24.com",
                 "www.ksml.fi"
             ]
         },
         {
-            "rule": "gravito\\.fi\\/api\\/v1\\/events",
+            "rule": "gravito\\.fi\\/api\\/v1\\/config",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
                 "azerion.detect",
+                "fr24.detect",
                 "ksml.detect"
             ],
             "apis": {},
@@ -72,15 +76,15 @@
             "prevalence": 0.0000206,
             "cnames": [],
             "responseHashes": [
-                "d0bdc47f3432b0ca4a0d16a071d5d1c6bb80e704b30f0039fc68c578915474a7",
-                "5aefb7420ede66ffcbf50b71ad37aa570ce601cb35f0a26c82c7467764daa501"
+                "bf566bbdb92819e9081edd2012beaf2f72a82654ea600ad516032c0f5399ee40",
+                "06e1fd982d333ce8775f6508adc8711cc430fa0bdb0fd96fa1c2f0f126fb877c"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "autogids.be",
-                "www.helsinginuutiset.fi",
+                "www.flightradar24.com",
                 "www.ksml.fi"
             ]
         },
@@ -90,6 +94,33 @@
             "fingerprinting": 0,
             "subdomains": [
                 "azerion.detect",
+                "fr24.detect",
+                "ksml.detect"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000206,
+            "cnames": [],
+            "responseHashes": [
+                "66ecbf4e37c9febe2e97e43525cce1ae26f6c8b310cb5c5eddb6258e2659bfbc",
+                "058e77e214517cc95b5caaa5c2e26b0ecbd67898f037d5b0b59b62dcf646492a"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "autogids.be",
+                "www.flightradar24.com",
+                "www.ksml.fi"
+            ]
+        },
+        {
+            "rule": "gravito\\.fi\\/api\\/v1\\/events",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "azerion.detect",
+                "fr24.detect",
                 "ksml.detect"
             ],
             "apis": {},
@@ -102,30 +133,50 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "autogids.be",
-                "www.helsinginuutiset.fi",
+                "www.flightradar24.com",
                 "www.ksml.fi"
             ]
         },
         {
-            "rule": "gravito\\.fi\\/api\\/v1\\/config",
+            "rule": "gravito\\.fi\\/api\\/v1\\/activity",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "ksml.detect"
+                "azerion.detect",
+                "fr24.detect"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
-            "responseHashes": [
-                "06e1fd982d333ce8775f6508adc8711cc430fa0bdb0fd96fa1c2f0f126fb877c"
-            ],
+            "responseHashes": [],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "helsinginuutiset.fi",
-                "www.ksml.fi"
+                "autogids.be",
+                "www.flightradar24.com"
+            ]
+        },
+        {
+            "rule": "gravito\\.fi\\/api\\/v1\\/activity",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "azerion.detect",
+                "fr24.detect"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "autogids.be",
+                "www.flightradar24.com"
             ]
         }
     ],
@@ -135,17 +186,17 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.6666666666666666
+            "prevalence": 0.8333333333333334
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.3333333333333333
+            "prevalence": 0.16666666666666666
         }
     ],
     "types": {
         "Script": 3,
-        "Fetch": 5,
-        "Preflight": 3
+        "Fetch": 8,
+        "Preflight": 5
     },
     "nameservers": [
         "hazel.ns.cloudflare.com",

@@ -7,14 +7,40 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000402,
-    "sites": 4,
+    "prevalence": 0.000805,
+    "sites": 8,
     "subdomains": [
-        "cdn"
+        "tracking.aws",
+        "cdn",
+        "public-images"
     ],
     "cnames": [],
     "fingerprinting": 0,
     "resources": [
+        {
+            "rule": "judge\\.me\\/widgets\\/track_bulk_events",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tracking.aws"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "a7ef577042315b0f4985a83514220932b5eed6b5821f0371a09e7f77b27f4a45"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dokidokicos.com",
+                "retrospillkongen.no",
+                "store.warlordgames.com"
+            ]
+        },
         {
             "rule": "judge\\.me\\/reviews\\/reviews_for_carousel",
             "cookies": 0,
@@ -23,20 +49,47 @@
                 "cdn"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 5,
+            "prevalence": 0.000503,
             "cnames": [],
             "responseHashes": [
-                "ff4a9b2554de9cfa28328d68284e8ec605d101237de8159737dd665dc783855b"
+                "ba2e2de8917ff790b76abc68805a4690fd1dd6017588634b27009ea10f72af1f",
+                "ad03bc2d0e14a7d2b4014bfc84761fa8c380f25b2a463afdb3862eb51df449d2",
+                "c72f935cfe8b95273f88dfe3e01a7e23f069bc472cd467bd9eab1d610834c1c1"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "IR_gbd": 0.00010060362173038229
+                "el-same-host-redirect-session": 0.00010063399416322834
             },
             "exampleSites": [
                 "game-on.no",
-                "www.xteink.com"
+                "glimja.com",
+                "lampemagasinet.no",
+                "skillebekksurdeig.no",
+                "store.warlordgames.com"
+            ]
+        },
+        {
+            "rule": "judge\\.me\\/judgeme\\/logos\\/logo-judgeme-2025-rebranding\\.svg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "public-images"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "c3bcec4b036ebf5680890c4ba76a6d4839a612145b8e69d73cba04e05b97fecf"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "game-on.no",
+                "store.warlordgames.com"
             ]
         }
     ],
@@ -46,16 +99,22 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.95
+        },
+        {
+            "domain": "event-observer-collector.js",
+            "prevalence": 0.05
         }
     ],
     "types": {
-        "Fetch": 2
+        "XHR": 3,
+        "Fetch": 5,
+        "Image": 2
     },
     "nameservers": [
         "ns1.dnsimple.com",
         "ns2.dnsimple.com",
-        "ns4.dnsimple.com",
-        "ns3.dnsimple.com"
+        "ns3.dnsimple.com",
+        "ns4.dnsimple.com"
     ]
 }

@@ -7,16 +7,21 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.000201,
-    "sites": 2,
+    "prevalence": 0.000402,
+    "sites": 4,
     "subdomains": [
         "us.tags",
-        "hc.tags"
+        "hc.tags",
+        "v2.pixel"
     ],
     "cnames": [
         {
             "original": "tags.biblegateway.com",
             "resolved": "hc.tags.newscgp.com"
+        },
+        {
+            "original": "tags.decider.com",
+            "resolved": "us.tags.newscgp.com"
         },
         {
             "original": "tags.nypost.com",
@@ -26,17 +31,100 @@
     "fingerprinting": 2,
     "resources": [
         {
+            "rule": "newscgp\\.com\\/prod\\/ncg\\/ncg\\.js",
+            "cookies": 0.000402,
+            "fingerprinting": 2,
+            "subdomains": [
+                "us.tags",
+                "hc.tags"
+            ],
+            "apis": {
+                "window.localStorage": 4,
+                "Document.cookie getter": 4,
+                "window.sessionStorage": 4,
+                "Document.cookie setter": 4,
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.language": 2,
+                "Navigator.prototype.doNotTrack": 2,
+                "Navigator.prototype.cookieEnabled": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "Screen.prototype.colorDepth": 2,
+                "Date.prototype.getTimezoneOffset": 2,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 2,
+                "Navigator.prototype.userAgent": 2,
+                "window.innerWidth": 2,
+                "window.innerHeight": 2
+            },
+            "sites": 4,
+            "prevalence": 0.000402,
+            "cnames": [],
+            "responseHashes": [
+                "7344af5a61f31b5b5d762d4dfe86257f7020eccc6d35a2f29d3fff0942f80575"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_ncg_sp_ses.64db": {
+                    "ttl": 1814,
+                    "length": 1,
+                    "prevalence": 0.0001006238679814852,
+                    "uniqueness": 1
+                },
+                "_ncg_sp_id.64db": {
+                    "ttl": 63072014,
+                    "length": 108,
+                    "prevalence": 0.0001006238679814852,
+                    "uniqueness": 1
+                },
+                "_ncg_id_": {
+                    "ttl": 63072009,
+                    "length": 36,
+                    "prevalence": 0.0002012477359629704,
+                    "uniqueness": 1
+                },
+                "_ncg_domain_id_": {
+                    "ttl": 63072007,
+                    "length": 66,
+                    "prevalence": 0.0001006238679814852,
+                    "uniqueness": 1
+                },
+                "_ncg_sp_ses.f6a2": {
+                    "ttl": 1812,
+                    "length": 1,
+                    "prevalence": 0.0001006238679814852,
+                    "uniqueness": 1
+                },
+                "_ncg_sp_id.f6a2": {
+                    "ttl": 63072012,
+                    "length": 108,
+                    "prevalence": 0.0001006238679814852,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "decider.com",
+                "nypost.com",
+                "pagesix.com",
+                "www.biblegateway.com"
+            ]
+        },
+        {
             "rule": "newscgp\\.com\\/cs\\/sync\\/i",
-            "cookies": 0.000201,
+            "cookies": 0.000302,
             "fingerprinting": 0,
             "subdomains": [
                 "us.tags",
                 "hc.tags"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [
+                {
+                    "original": "tags.decider.com",
+                    "resolved": "us.tags.newscgp.com"
+                },
                 {
                     "original": "tags.nypost.com",
                     "resolved": "us.tags.newscgp.com"
@@ -51,6 +139,7 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
+                "decider.com",
                 "nypost.com",
                 "www.biblegateway.com"
             ]
@@ -63,14 +152,37 @@
                 "us.tags"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [],
             "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "_li_dcdm_c": 0.00010057326762546515
+                "_li_dcdm_c": 0.0001006238679814852
+            },
+            "exampleSites": [
+                "decider.com",
+                "nypost.com",
+                "www.biblegateway.com"
+            ]
+        },
+        {
+            "rule": "newscgp\\.com\\/i",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "v2.pixel"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_ncg_id_": 0.0002012477359629704
             },
             "exampleSites": [
                 "nypost.com",
@@ -80,24 +192,34 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000201,
+    "cookies": 0.000402,
     "topInitiators": [
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.7272727272727273
+            "prevalence": 0.5
         },
         {
             "domain": "adlightning.com",
-            "prevalence": 0.2727272727272727
+            "prevalence": 0.3125
+        },
+        {
+            "domain": "newscgp.com",
+            "prevalence": 0.125
+        },
+        {
+            "domain": "first party",
+            "prevalence": 0.0625
         }
     ],
     "types": {
-        "Image": 4
+        "Script": 4,
+        "Image": 6,
+        "XHR": 2
     },
     "nameservers": [
-        "ns-26.awsdns-03.com",
         "ns-1297.awsdns-34.org",
-        "ns-757.awsdns-30.net",
-        "ns-2035.awsdns-62.co.uk"
+        "ns-2035.awsdns-62.co.uk",
+        "ns-26.awsdns-03.com",
+        "ns-757.awsdns-30.net"
     ]
 }
