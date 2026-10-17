@@ -7,23 +7,24 @@
     "prevalence": 0.000202,
     "sites": 2,
     "subdomains": [
-        "cdn"
+        "cdn",
+        "rum-ingest.eu0"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
         {
             "rule": "signalfx\\.com\\/o11y-gdi-rum\\/v1\\.1\\.1\\/splunk-otel-web\\.js",
-            "cookies": 0.000202,
+            "cookies": 0,
             "fingerprinting": 1,
             "subdomains": [
                 "cdn"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 2,
-                "window.sessionStorage": 2,
                 "Document.cookie getter": 2,
-                "Document.cookie setter": 2
+                "Navigator.prototype.userAgent": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2
             },
             "sites": 2,
             "prevalence": 0.000202,
@@ -32,37 +33,62 @@
                 "48645799921bd2195920e8d1dcb6a6399a69bc270359bebe0f750af32275919e"
             ],
             "type": "Script",
-            "firstPartyCookies": {
-                "_splunk_rum_sid": {
-                    "ttl": 900,
-                    "length": 123,
-                    "prevalence": 0.00020165355918531962,
-                    "uniqueness": 1
-                }
-            },
+            "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "accor.com",
+                "www.fairmont.com"
+            ]
+        },
+        {
+            "rule": "signalfx\\.com\\/v1\\/rum",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rum-ingest.eu0"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "accor.com",
+                "all.accor.com",
                 "www.fairmont.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000202,
+    "cookies": 0,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.8
+        },
+        {
+            "domain": "static-p46175-e229011.adobeaemcloud.com",
+            "prevalence": 0.1
+        },
+        {
+            "domain": "qualtrics.com",
+            "prevalence": 0.1
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 2,
+        "XHR": 3
     },
     "nameservers": [
-        "ns-5.awsdns-00.com",
         "ns-933.awsdns-52.net",
+        "ns-1270.awsdns-30.org",
         "ns-1875.awsdns-42.co.uk",
-        "ns-1270.awsdns-30.org"
+        "ns-5.awsdns-00.com"
     ]
 }

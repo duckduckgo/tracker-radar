@@ -7,10 +7,12 @@
     "prevalence": 0.000048,
     "sites": 7,
     "subdomains": [
+        "cf-enrich.prod",
+        "signals.gnet.prod",
+        "usc1.gnet.prod",
         "js-cname",
         "js",
-        "gnet.prod",
-        "cf-enrich.prod"
+        "gnet.prod"
     ],
     "cnames": [
         {
@@ -24,14 +26,107 @@
         {
             "original": "js.upromise.com",
             "resolved": "js-cname.verisoul.ai"
-        },
-        {
-            "original": "v.arshtcenter.org",
-            "resolved": "js-cname.verisoul.ai"
         }
     ],
     "fingerprinting": 3,
     "resources": [
+        {
+            "rule": "verisoul\\.ai\\/",
+            "cookies": 0.0000343,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cf-enrich.prod"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.0000343,
+            "cnames": [],
+            "responseHashes": [
+                "4062edaf750fb8074e7e83e0c9028c94e32468a8b6f1614774328ef045150f93"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "novig.com",
+                "www.inboxdollars.com",
+                "www.rotowire.com",
+                "www.swagbucks.com",
+                "www.upromise.com"
+            ]
+        },
+        {
+            "rule": "verisoul\\.ai\\/",
+            "cookies": 0.0000343,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cf-enrich.prod"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.0000343,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "novig.com",
+                "www.inboxdollars.com",
+                "www.rotowire.com",
+                "www.swagbucks.com",
+                "www.upromise.com"
+            ]
+        },
+        {
+            "rule": "verisoul\\.ai\\/network-signals",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "signals.gnet.prod"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [],
+            "responseHashes": [
+                "ff7b00f3511cdd15b7ddf8884e14bcb1e99277eda00f69220023084397285e17",
+                "28ef0c41e5bb9aae32eaaa59f9ee53a3d70fda6df9494090212bbebb2f0ba525",
+                "ca7ca1167836e1df1341bf5b8e673345b510fd49f9026b4417c3a55fc07b7e4e"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "novig.com",
+                "www.inboxdollars.com",
+                "www.swagbucks.com",
+                "www.upromise.com"
+            ]
+        },
+        {
+            "rule": "verisoul\\.ai\\/bhve-ws",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "usc1.gnet.prod"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.0000343,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "novig.com",
+                "www.inboxdollars.com",
+                "www.rotowire.com",
+                "www.swagbucks.com",
+                "www.upromise.com"
+            ]
+        },
         {
             "rule": "verisoul\\.ai\\/prod\\/bundle\\.js",
             "cookies": 0,
@@ -41,8 +136,7 @@
                 "js"
             ],
             "apis": {
-                "Screen.prototype.colorDepth": 1,
-                "Screen.prototype.height": 1,
+                "Screen.prototype.width": 1,
                 "window.localStorage": 1,
                 "BroadcastChannel.prototype.constructor": 1,
                 "RTCPeerConnection.prototype.constructor": 1,
@@ -51,10 +145,9 @@
                 "window.sessionStorage": 1,
                 "Navigator.prototype.vendor": 1,
                 "Navigator.prototype.webdriver": 1,
+                "Navigator.prototype.platform": 1,
                 "NavigatorUAData.prototype.getHighEntropyValues": 1,
                 "OfflineAudioContext.prototype.constructor": 1,
-                "Navigator.prototype.platform": 1,
-                "Navigator.prototype.requestMediaKeySystemAccess": 1,
                 "Performance.prototype.memory": 1,
                 "Navigator.prototype.storage": 1,
                 "window.indexedDB": 1,
@@ -65,8 +158,8 @@
                 "window.outerWidth": 1,
                 "window.innerWidth": 1,
                 "Screen.prototype.availHeight": 1,
-                "Screen.prototype.width": 1,
                 "Screen.prototype.availWidth": 1,
+                "Screen.prototype.colorDepth": 1,
                 "Screen.prototype.pixelDepth": 1,
                 "Navigator.prototype.mediaDevices": 1,
                 "MediaDevices.prototype.enumerateDevices": 1,
@@ -78,6 +171,7 @@
                 "Navigator.prototype.hardwareConcurrency": 1,
                 "Navigator.prototype.deviceMemory": 1,
                 "Navigator.prototype.maxTouchPoints": 1,
+                "Screen.prototype.height": 1,
                 "window.devicePixelRatio": 1,
                 "Navigator.prototype.language": 1,
                 "Navigator.prototype.languages": 1,
@@ -105,13 +199,9 @@
                 "Navigator.prototype.mimeTypes": 1,
                 "BarProp.prototype.visible": 1
             },
-            "sites": 5,
-            "prevalence": 0.0000343,
+            "sites": 4,
+            "prevalence": 0.0000274,
             "cnames": [
-                {
-                    "original": "v.arshtcenter.org",
-                    "resolved": "js-cname.verisoul.ai"
-                },
                 {
                     "original": "js.inboxdollars.com",
                     "resolved": "js-cname.verisoul.ai"
@@ -126,17 +216,15 @@
                 }
             ],
             "responseHashes": [
-                "6639e219b5f655703af4614eb58f3eb71c0126b0b4b8648dae924e8aa1c0f452",
-                "cece59ceea426c9ffc596210efb2d6f7e60a8bc3073bd885c70c4bc6e7713487",
-                "65b94bf578a9b0046183ea6d1b732d16d204acd9b1cbc42f63beebd0e12b8c01",
-                "b402228faba9b3d9bda3d6c6735e7d0387a1c29e3ebfad56f789bb6cede194ec"
+                "02458bc63b5d741b698a5833caf0c06b85bc60aaade103d1d550575f2d9ae891",
+                "4c56372c67e19a889401d2da16b0bdff8eda72634f4fd9fe5d308c7c9b5af6f9",
+                "1d689413bfc0434418a142a6f6150cfed8fe071ac3558340ec3620288070dee1"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "arshtcenter.org",
-                "www.inboxdollars.com",
+                "inboxdollars.com",
                 "www.rotowire.com",
                 "www.swagbucks.com",
                 "www.upromise.com"
@@ -152,16 +240,11 @@
             ],
             "apis": {
                 "Navigator.prototype.doNotTrack": 1,
-                "DeviceMotionEvent.prototype.accelerationIncludingGravity": 1,
-                "DeviceMotionEvent.prototype.rotationRate": 1
+                "DeviceMotionEvent.prototype.accelerationIncludingGravity": 1
             },
-            "sites": 5,
-            "prevalence": 0.0000343,
+            "sites": 4,
+            "prevalence": 0.0000274,
             "cnames": [
-                {
-                    "original": "v.arshtcenter.org",
-                    "resolved": "js-cname.verisoul.ai"
-                },
                 {
                     "original": "js.inboxdollars.com",
                     "resolved": "js-cname.verisoul.ai"
@@ -176,14 +259,13 @@
                 }
             ],
             "responseHashes": [
-                "a7d680c15804b7e37a950d64609f400066ede33b04e8dc6b8f45241f45da32e3"
+                "9a60016fca8a525e02d3f5cd18975aeb74a8b5008a3226f8dbf667b24a2b7185"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "arshtcenter.org",
-                "www.inboxdollars.com",
+                "inboxdollars.com",
                 "www.rotowire.com",
                 "www.swagbucks.com",
                 "www.upromise.com"
@@ -198,13 +280,9 @@
                 "gnet.prod"
             ],
             "apis": {},
-            "sites": 5,
-            "prevalence": 0.0000343,
+            "sites": 4,
+            "prevalence": 0.0000274,
             "cnames": [
-                {
-                    "original": "v.arshtcenter.org",
-                    "resolved": "js-cname.verisoul.ai"
-                },
                 {
                     "original": "js.inboxdollars.com",
                     "resolved": "js-cname.verisoul.ai"
@@ -223,8 +301,7 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "arshtcenter.org",
-                "www.inboxdollars.com",
+                "inboxdollars.com",
                 "www.rotowire.com",
                 "www.swagbucks.com",
                 "www.upromise.com"
@@ -243,13 +320,9 @@
                 "window.localStorage": 1,
                 "URL.createObjectURL": 1
             },
-            "sites": 5,
-            "prevalence": 0.0000343,
+            "sites": 4,
+            "prevalence": 0.0000274,
             "cnames": [
-                {
-                    "original": "v.arshtcenter.org",
-                    "resolved": "js-cname.verisoul.ai"
-                },
                 {
                     "original": "js.inboxdollars.com",
                     "resolved": "js-cname.verisoul.ai"
@@ -264,62 +337,13 @@
                 }
             ],
             "responseHashes": [
-                "4da91979199565e746409f1193b21826372e89c6d847dce0d647027b3920d86f"
+                "39672a8f29f788819598604884cf7b0204b9f9fa0fc631c7724a1efae56bda11"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "arshtcenter.org",
-                "www.inboxdollars.com",
-                "www.rotowire.com",
-                "www.swagbucks.com",
-                "www.upromise.com"
-            ]
-        },
-        {
-            "rule": "verisoul\\.ai\\/",
-            "cookies": 0.0000343,
-            "fingerprinting": 0,
-            "subdomains": [
-                "cf-enrich.prod"
-            ],
-            "apis": {},
-            "sites": 5,
-            "prevalence": 0.0000343,
-            "cnames": [],
-            "responseHashes": [
-                "4062edaf750fb8074e7e83e0c9028c94e32468a8b6f1614774328ef045150f93"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "arshtcenter.org",
-                "www.inboxdollars.com",
-                "www.rotowire.com",
-                "www.swagbucks.com",
-                "www.upromise.com"
-            ]
-        },
-        {
-            "rule": "verisoul\\.ai\\/",
-            "cookies": 0.0000343,
-            "fingerprinting": 0,
-            "subdomains": [
-                "cf-enrich.prod"
-            ],
-            "apis": {},
-            "sites": 5,
-            "prevalence": 0.0000343,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "arshtcenter.org",
-                "www.inboxdollars.com",
+                "inboxdollars.com",
                 "www.rotowire.com",
                 "www.swagbucks.com",
                 "www.upromise.com"
@@ -334,13 +358,9 @@
                 "gnet.prod"
             ],
             "apis": {},
-            "sites": 5,
-            "prevalence": 0.0000343,
+            "sites": 4,
+            "prevalence": 0.0000274,
             "cnames": [
-                {
-                    "original": "v.arshtcenter.org",
-                    "resolved": "js-cname.verisoul.ai"
-                },
                 {
                     "original": "js.inboxdollars.com",
                     "resolved": "js-cname.verisoul.ai"
@@ -355,19 +375,103 @@
                 }
             ],
             "responseHashes": [
-                "309186f8327d55297e8572e062a7fee2c4726e88de801b5afde4e3a5b99af4db",
-                "95a1543394ff39f237939e7208332fee498e3c5c53008662b68473fe702b27bf",
-                "6feb26a5a29fb115bfc27e2be4c9a08d85495072d4cebe2ad798a5cf41e13e1b"
+                "6fa37a3db8daa5e59a09fe8ce29593e0e5f190fa67904fbc6ba051a917a8785a",
+                "4d5bcfffe176bf2ddeb6358888df40943b776adbfc7f8b16e1e00a089fe58201"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "arshtcenter.org",
-                "www.inboxdollars.com",
+                "inboxdollars.com",
                 "www.rotowire.com",
                 "www.swagbucks.com",
                 "www.upromise.com"
+            ]
+        },
+        {
+            "rule": "verisoul\\.ai\\/network-signals\\/tls\\/frame",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "signals.gnet.prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "7f7d2dbf171f63ba41d9bcdd786ee57dec599a1cc023622c9fdcb1e33bbe0528"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "inboxdollars.com",
+                "www.swagbucks.com"
+            ]
+        },
+        {
+            "rule": "verisoul\\.ai\\/network-signals\\/tls\\/frame\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "signals.gnet.prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "7b5be91668df8734e76b7dfb003c37fde09ce38009a31aa47f3c20fd424750cc"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "inboxdollars.com",
+                "www.swagbucks.com"
+            ]
+        },
+        {
+            "rule": "verisoul\\.ai\\/network-signals\\/tls\\/frame\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "signals.gnet.prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "7b5be91668df8734e76b7dfb003c37fde09ce38009a31aa47f3c20fd424750cc"
+            ],
+            "type": "Other",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "inboxdollars.com",
+                "www.swagbucks.com"
+            ]
+        },
+        {
+            "rule": "verisoul\\.ai\\/network-signals\\/tls\\/candidates",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "signals.gnet.prod"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "inboxdollars.com",
+                "www.swagbucks.com"
             ]
         }
     ],
@@ -377,22 +481,28 @@
     "topInitiators": [
         {
             "domain": "prdgsvc.com",
-            "prevalence": 0.7741935483870968
+            "prevalence": 0.8297872340425532
         },
         {
             "domain": "first party",
-            "prevalence": 0.16129032258064516
+            "prevalence": 0.0851063829787234
+        },
+        {
+            "domain": "coinflow.sh",
+            "prevalence": 0.0425531914893617
         },
         {
             "domain": "adlightning.com",
-            "prevalence": 0.06451612903225806
+            "prevalence": 0.0425531914893617
         }
     ],
     "types": {
-        "Script": 15,
-        "WebSocket": 5,
-        "Fetch": 10,
-        "Preflight": 5
+        "Fetch": 15,
+        "Preflight": 5,
+        "WebSocket": 9,
+        "Script": 14,
+        "Document": 2,
+        "Other": 2
     },
     "nameservers": [
         "jim.ns.cloudflare.com",

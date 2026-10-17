@@ -7,60 +7,101 @@
     "prevalence": 0.0000343,
     "sites": 5,
     "subdomains": [
-        "api",
+        "gm",
         "game",
-        "gamea"
+        "gamea",
+        "api"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
         {
-            "rule": "azgame\\.io\\/static\\/gmsdkv1\\.js",
+            "rule": "azgame\\.io\\/sdk\\/v3\\/gm-sdk\\.js",
             "cookies": 0,
             "fingerprinting": 1,
             "subdomains": [
-                "api"
+                "gm"
             ],
             "apis": {
-                "window.localStorage": 2
+                "window.localStorage": 2,
+                "window.sessionStorage": 2,
+                "Navigator.prototype.onLine": 2,
+                "Date.prototype.getTime": 2
             },
-            "sites": 3,
-            "prevalence": 0.0000206,
+            "sites": 2,
+            "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "cdfb47e8791d47579bf0fda5a7f545a055feafe65330578047b9bf18a9767785"
+                "67c39d8d57b5ef096068e936ffd3eecc603f049f69ea886a033ce0bb5ec45f92"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "escaperoad2.io",
-                "soflowheelielife.com",
-                "wackyflip.io"
+                "curverush.com",
+                "snake-game.io"
             ]
         },
         {
-            "rule": "azgame\\.io\\/sdk\\/gmadsv1",
+            "rule": "azgame\\.io\\/",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "api"
+                "gm"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000206,
+            "sites": 2,
+            "prevalence": 0.0000137,
             "cnames": [],
-            "responseHashes": [
-                "310d13280990e810652007f462d1e36bdfff6e126a3c8dc24d927795cf68fc63",
-                "83745a982786c78245e93a64aca5e4992f496acf781209ea7ea8718167f0231d"
-            ],
-            "type": "XHR",
+            "responseHashes": [],
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "escaperoad2.io",
-                "soflowheelielife.com",
-                "wackyflip.io"
+                "curverush.com",
+                "snake-game.io"
+            ]
+        },
+        {
+            "rule": "azgame\\.io\\/api\\/v1\\/events",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gm"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "c90ec0baffcd87b541f2ef53ff4b07f8806ffa10ecfcc0d8d8556442da65248a"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "curverush.com",
+                "snake-game.io"
+            ]
+        },
+        {
+            "rule": "azgame\\.io\\/api\\/v1\\/events",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gm"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "curverush.com",
+                "snake-game.io"
             ]
         },
         {
@@ -82,10 +123,56 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
+                "curverush.com",
                 "escaperoad2.io",
                 "ragdollplayground.io",
-                "soflowheelielife.com",
-                "wackyflip.io"
+                "soflowheelielife.com"
+            ]
+        },
+        {
+            "rule": "azgame\\.io\\/static\\/gmsdkv1\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "cdfb47e8791d47579bf0fda5a7f545a055feafe65330578047b9bf18a9767785"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "escaperoad2.io",
+                "soflowheelielife.com"
+            ]
+        },
+        {
+            "rule": "azgame\\.io\\/sdk\\/gmadsv1",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "310d13280990e810652007f462d1e36bdfff6e126a3c8dc24d927795cf68fc63"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "escaperoad2.io",
+                "soflowheelielife.com"
             ]
         }
     ],
@@ -95,23 +182,25 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.5294117647058824
+            "prevalence": 0.5555555555555556
         },
         {
             "domain": "cloudflareinsights.com",
-            "prevalence": 0.23529411764705882
+            "prevalence": 0.2222222222222222
         },
         {
             "domain": "azgame.io",
-            "prevalence": 0.23529411764705882
+            "prevalence": 0.2222222222222222
         }
     ],
     "types": {
-        "Script": 3,
-        "XHR": 7
+        "Script": 4,
+        "Fetch": 4,
+        "Preflight": 2,
+        "XHR": 6
     },
     "nameservers": [
-        "rodney.ns.cloudflare.com",
-        "lara.ns.cloudflare.com"
+        "lara.ns.cloudflare.com",
+        "rodney.ns.cloudflare.com"
     ]
 }

@@ -7,17 +7,40 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.000604,
-    "sites": 6,
+    "prevalence": 0.000704,
+    "sites": 7,
     "subdomains": [
         "pango-virginia-prod-dji-official.us-east-1.log",
-        "retcode-us-west-1.arms",
         "huga88mbbq-sdk.rum",
-        "sdk.rum"
+        "sdk.rum",
+        "huga88mbbq-default-sea.rum",
+        "j2c03hoppk-default-cn.rum"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "aliyuncs\\.com\\/logstores\\/dji-official-fe-web\\/track",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pango-virginia-prod-dji-official.us-east-1.log"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dji.com",
+                "www.dji.com"
+            ]
+        },
         {
             "rule": "aliyuncs\\.com\\/logstores\\/dji-official-fe-monitor\\/track",
             "cookies": 0,
@@ -39,28 +62,6 @@
             ]
         },
         {
-            "rule": "aliyuncs\\.com\\/r\\.png",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "retcode-us-west-1.arms"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {
-                "_bl_uid": 0.0002012477359629704
-            },
-            "exampleSites": [
-                "dji.com",
-                "www.dji.com"
-            ]
-        },
-        {
             "rule": "aliyuncs\\.com\\/v2\\/browser-sdk\\.js",
             "cookies": 0.000201,
             "fingerprinting": 1,
@@ -73,7 +74,7 @@
                 "Document.cookie setter": 2,
                 "Document.cookie getter": 2,
                 "PerformanceTiming.prototype.navigationStart": 2,
-                "Navigator.prototype.connection": 1
+                "Navigator.prototype.connection": 2
             },
             "sites": 2,
             "prevalence": 0.000201,
@@ -88,6 +89,28 @@
                 "xmodhub.com",
                 "z.ai"
             ]
+        },
+        {
+            "rule": "aliyuncs\\.com\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "huga88mbbq-default-sea.rum",
+                "j2c03hoppk-default-cn.rum"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "xmodhub.com",
+                "www.xmodhub.com",
+                "z.ai"
+            ]
         }
     ],
     "categories": [],
@@ -95,24 +118,25 @@
     "cookies": 0.000201,
     "topInitiators": [
         {
-            "domain": "first party",
-            "prevalence": 0.5384615384615384
-        },
-        {
             "domain": "djicdn.com",
-            "prevalence": 0.34615384615384615
+            "prevalence": 0.525
         },
         {
-            "domain": "alicdn.com",
-            "prevalence": 0.07692307692307693
+            "domain": "first party",
+            "prevalence": 0.425
         },
         {
             "domain": "wondershare.cc",
-            "prevalence": 0.038461538461538464
+            "prevalence": 0.025
+        },
+        {
+            "domain": "alicdn.com",
+            "prevalence": 0.025
         }
     ],
     "types": {
-        "Fetch": 4,
+        "Ping": 2,
+        "Fetch": 5,
         "Script": 2
     },
     "nameservers": [

@@ -4,14 +4,41 @@
     "source": [
         "DuckDuckGo-NL"
     ],
-    "prevalence": 0.000302,
-    "sites": 3,
+    "prevalence": 0.000503,
+    "sites": 5,
     "subdomains": [
-        "lobe.scv.public.sse-prod-eks-euw1"
+        "lobe.scv.public.sse-prod-eks-euw1",
+        "champagne-metrics.public.rtb-prod-eks-euw1"
     ],
-    "cnames": [],
+    "cnames": [
+        {
+            "original": "champagne-gateway.futureplc.com",
+            "resolved": "champagne-metrics.public.rtb-prod-eks-euw1.futureplc.engineering"
+        }
+    ],
     "fingerprinting": 0,
     "resources": [
+        {
+            "rule": "futureplc\\.engineering\\/v1\\/get-user-campaigns",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "lobe.scv.public.sse-prod-eks-euw1"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "gamesradar.com",
+                "www.pcgamer.com",
+                "www.tomsguide.com"
+            ]
+        },
         {
             "rule": "futureplc\\.engineering\\/v1\\/get-user-campaigns",
             "cookies": 0,
@@ -36,24 +63,28 @@
             ]
         },
         {
-            "rule": "futureplc\\.engineering\\/v1\\/get-user-campaigns",
+            "rule": "futureplc\\.engineering\\/push_metrics\\/",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "lobe.scv.public.sse-prod-eks-euw1"
+                "champagne-metrics.public.rtb-prod-eks-euw1"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000302,
-            "cnames": [],
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "champagne-gateway.futureplc.com",
+                    "resolved": "champagne-metrics.public.rtb-prod-eks-euw1.futureplc.engineering"
+                }
+            ],
             "responseHashes": [],
-            "type": "Preflight",
+            "type": "Ping",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "gamesradar.com",
-                "www.pcgamer.com",
-                "www.tomsguide.com"
+                "guitarworld.com",
+                "www.whathifi.com"
             ]
         }
     ],
@@ -67,13 +98,14 @@
         }
     ],
     "types": {
+        "Preflight": 3,
         "Fetch": 3,
-        "Preflight": 3
+        "Ping": 2
     },
     "nameservers": [
-        "ns-1333.awsdns-38.org",
-        "ns-423.awsdns-52.com",
+        "ns-1874.awsdns-42.co.uk",
         "ns-671.awsdns-19.net",
-        "ns-1874.awsdns-42.co.uk"
+        "ns-1333.awsdns-38.org",
+        "ns-423.awsdns-52.com"
     ]
 }

@@ -13,17 +13,18 @@
     "sites": 56,
     "subdomains": [
         "sr-client-cfg",
-        "api-sr",
         "cdn",
         "api2",
-        "api.eu",
-        "api",
         "cdn.eu",
+        "api.eu",
+        "api-sr",
+        "sr-client-cfg.eu",
+        "api",
         "api.lab.eu",
         "api.lab",
         "gs.eu",
         "gs",
-        "sr-client-cfg.eu",
+        "flag.lab",
         "profile-api"
     ],
     "cnames": [],
@@ -49,52 +50,6 @@
             "exampleSites": [
                 "clickup.com",
                 "meet.jit.si"
-            ]
-        },
-        {
-            "rule": "amplitude\\.com\\/sessions\\/v2\\/track",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "api-sr"
-            ],
-            "apis": {},
-            "sites": 4,
-            "prevalence": 0.000402,
-            "cnames": [],
-            "responseHashes": [
-                "aee408847d35e44e99430f0979c3357b85fe8dbb4535a494301198adbee85f27"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "clickup.com",
-                "docs.getdbt.com",
-                "support.norton.com",
-                "www.ms.now"
-            ]
-        },
-        {
-            "rule": "amplitude\\.com\\/sessions\\/v2\\/track",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "api-sr"
-            ],
-            "apis": {},
-            "sites": 4,
-            "prevalence": 0.000402,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "clickup.com",
-                "docs.getdbt.com",
-                "support.norton.com",
-                "www.ms.now"
             ]
         },
         {
@@ -133,7 +88,9 @@
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "97062fa51b41981ae22899001851c8114c5d536aa8f39e4092c6897273ecbf72"
+            ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -143,21 +100,44 @@
             ]
         },
         {
+            "rule": "amplitude\\.com\\/2\\/httpapi",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api2"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "qt.io",
+                "openart.ai"
+            ]
+        },
+        {
             "rule": "amplitude\\.com\\/libs\\/plugin-session-replay-browser-1\\.32\\.1-min\\.js\\.gz",
             "cookies": 0,
             "fingerprinting": 2,
             "subdomains": [
-                "cdn"
+                "cdn",
+                "cdn.eu"
             ],
             "apis": {
-                "window.localStorage": 2,
+                "window.localStorage": 3,
                 "URL.createObjectURL": 2,
-                "window.innerWidth": 2,
-                "window.innerHeight": 2,
-                "Navigator.prototype.storage": 2
+                "window.innerWidth": 1,
+                "window.innerHeight": 1,
+                "Navigator.prototype.storage": 1
             },
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
                 "36c0113d0a5b6ee4ff64fb952c1063463c9665aafa14e1459d11ec1044248860"
@@ -167,30 +147,32 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "getdbt.com",
-                "www.ms.now"
+                "www.ms.now",
+                "www.pfaswijzer.com"
             ]
         },
         {
             "rule": "amplitude\\.com\\/libs\\/analytics-browser-2\\.42\\.4-min\\.js\\.gz",
-            "cookies": 0.000201,
+            "cookies": 0.000302,
             "fingerprinting": 2,
             "subdomains": [
-                "cdn"
+                "cdn",
+                "cdn.eu"
             ],
             "apis": {
-                "window.localStorage": 2,
-                "window.indexedDB": 2,
-                "Navigator.prototype.userAgent": 2,
-                "Document.cookie setter": 2,
-                "Document.cookie getter": 2,
-                "Date.prototype.getTime": 2,
-                "CookieStore.prototype.getAll": 2,
+                "window.localStorage": 3,
+                "window.indexedDB": 3,
+                "Navigator.prototype.userAgent": 3,
+                "Document.cookie setter": 3,
+                "Document.cookie getter": 3,
+                "Date.prototype.getTime": 3,
+                "CookieStore.prototype.getAll": 3,
                 "Navigator.prototype.onLine": 2,
-                "window.sessionStorage": 1,
+                "window.sessionStorage": 2,
                 "Navigator.prototype.languages": 2
             },
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
                 "a69870023259379991d0bb70de9d735c68dfe64fa3c51f0e78ffff9966e166f9"
@@ -198,37 +180,43 @@
             "type": "Script",
             "firstPartyCookies": {
                 "AMP_TEST": {
-                    "ttl": -86392,
+                    "ttl": -86393,
                     "length": 6,
-                    "prevalence": 0.0002010454362685967,
-                    "uniqueness": 0.5
+                    "prevalence": 0.00030156815440289503,
+                    "uniqueness": 0.3333333333333333
                 },
                 "AMP_TLDTEST": {
-                    "ttl": -86392,
+                    "ttl": -86393,
                     "length": 6,
-                    "prevalence": 0.0002010454362685967,
-                    "uniqueness": 0.5
+                    "prevalence": 0.00030156815440289503,
+                    "uniqueness": 0.3333333333333333
                 },
                 "AMP_edc81d3811": {
-                    "ttl": 31536009,
+                    "ttl": 31536008,
                     "length": 332,
                     "prevalence": 0.00010052271813429835,
                     "uniqueness": 1
                 },
                 "AMP_MKTG_edc81d3811": {
-                    "ttl": 31536009,
+                    "ttl": 31536008,
                     "length": 8,
                     "prevalence": 0.00010052271813429835,
                     "uniqueness": 1
                 },
                 "AMP_a0d5931c0a": {
-                    "ttl": 31536021,
-                    "length": 356,
+                    "ttl": 31536031,
+                    "length": 167,
                     "prevalence": 0.00010052271813429835,
                     "uniqueness": 1
                 },
-                "AMP_MKTG_a0d5931c0a": {
-                    "ttl": 31536020,
+                "AMP_1debc6c05a": {
+                    "ttl": 31536005,
+                    "length": 338,
+                    "prevalence": 0.00010052271813429835,
+                    "uniqueness": 1
+                },
+                "AMP_MKTG_1debc6c05a": {
+                    "ttl": 31536004,
                     "length": 8,
                     "prevalence": 0.00010052271813429835,
                     "uniqueness": 1
@@ -237,7 +225,8 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "getdbt.com",
-                "www.ms.now"
+                "www.ms.now",
+                "www.pfaswijzer.com"
             ]
         },
         {
@@ -271,27 +260,44 @@
                 "api.eu"
             ],
             "apis": {},
-            "sites": 15,
-            "prevalence": 0.00151,
+            "sites": 17,
+            "prevalence": 0.00171,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "8706821d30eb7a86e3559014ecc6c05782f109af57a03b4aabc16ba7d4723cf4",
+                "09857bf7d249f8880282d0b69f7d3985fdecc2589468ddd89d3d88286ce5f247",
+                "50f57b76af9e8f4576a1495de3be5a8430f014ed7025bed5f13197d7fe98093c",
+                "24f97d207cf10f833e9701e01f07dc0ff95b5c3e85a25ea5f9bba1ed0ad42462",
+                "9698354811080210d927daf56c866a55522a60c4885e82637b28b8f42525e040",
+                "2bced80db08ce986bd3ded19e4347e9d75f55c8d20f94347fccb442707f4ab0c",
+                "30bf328066ccc7513f278f843977ae65a3ea89699bc61b9c411c289891734afc",
+                "ab8e65a97ca98686489d95423a410c0c55ba7a788fe459b6755f69260de06aa2",
+                "4afd27b171c7db64c4f1a186a24926c1ead01fa455844c8896bfbded9e05c5e3",
+                "e47675fc56c7a73df40edcf323cd9678fed6ceac0911d4ebfabc858b522d2a2a",
+                "f724bafebcb386f24c4af366ad4572096ac7088b227dd072afd88d99fc096faf",
+                "1293409b908a0ff23c037851f8b304f60855a94abc6fa0af92c882bb935918cc",
+                "4ad1e5071bf5cb6bd47351587d5e0057114f2f7ac5e0373cee5f2285b1e811e9",
+                "a6204d338ea159c0af8305a089b96979586a4e54640fd6324c5d23783f10e461"
+            ],
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "getdbt.com",
+                "docs.mendix.com",
+                "ersties.com",
                 "kahoot.com",
+                "lovescape.com",
                 "mangohoutonline.nl",
                 "meet.jit.si",
-                "tamaris.com",
                 "www.aljazeera.com",
-                "www.autoexpress.co.uk",
                 "www.express.co.uk",
+                "www.fender.com",
                 "www.image-line.com",
+                "www.kaufmich.com",
                 "www.kapwing.com",
-                "www.ms.now",
-                "www.nba.com",
                 "www.ns.nl",
+                "www.pfaswijzer.com",
                 "www.stuvia.com",
                 "www.usmagazine.com"
             ]
@@ -305,43 +311,102 @@
                 "api.eu"
             ],
             "apis": {},
-            "sites": 15,
-            "prevalence": 0.00151,
+            "sites": 17,
+            "prevalence": 0.00171,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "getdbt.com",
+                "docs.mendix.com",
+                "ersties.com",
+                "kahoot.com",
+                "lovescape.com",
+                "mangohoutonline.nl",
+                "meet.jit.si",
+                "www.aljazeera.com",
+                "www.express.co.uk",
+                "www.fender.com",
+                "www.image-line.com",
+                "www.kaufmich.com",
+                "www.kapwing.com",
+                "www.ns.nl",
+                "www.pfaswijzer.com",
+                "www.stuvia.com",
+                "www.usmagazine.com"
+            ]
+        },
+        {
+            "rule": "amplitude\\.com\\/sessions\\/v2\\/track",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-sr"
+            ],
+            "apis": {},
+            "sites": 5,
+            "prevalence": 0.000503,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "getdbt.com",
+                "docs.getdbt.com",
+                "nl.norton.com",
+                "support.norton.com",
+                "www.fender.com"
+            ]
+        },
+        {
+            "rule": "amplitude\\.com\\/sessions\\/v2\\/track",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-sr"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.000603,
             "cnames": [],
             "responseHashes": [
-                "0d9011c5127a3d09d584144c1f61142a7de44cdbaea582b0edbbafd152754d6d",
-                "4f87c2b248a8492bcfff2443fc20830e990c82dbf496bb93fb84570a18c12385",
-                "ea465f57492c7d591e234c92a34d41eeca0370028c6cc9d7d53d0101998061d7",
-                "4867b8b3182c5b97ed9d994bfc5e7a03e8f42ad3c5880decfc05607f33d18980",
-                "bdf3e3033dc31a03a0ba571e06488b9768bb6b9faee23b4431f8d1b6cb4592b5",
-                "7a0d0334863346026879c1a91d237d6555f0c419cb69292133fb7dc35a10e53c",
-                "be5418b4ee8f4615c941bceae51bb58efc528764c513ad5225cd4b5b85f22c4b",
-                "23e3607436340dad9f458c6d55f89e73e3d10d32dba3291dd4afa355a5263ef1",
-                "0b207e92f3d92916065b3b16efa13498b214133a7b546ca60b9e90903007a98f",
-                "00fb10ec87a80384bc551397ebd82ca493ea9e29c6ad517f455ec2291fd1c0e3",
-                "080954410591c0e5180683dfcfd16a7e8c6aa13ff03e00d354f3006a726d5f0c",
-                "b400614e5699e7dbf7607607709bb7adc3f3de4c45ab13e3fb3d7fec94fe5ef3",
-                "ec6a429068fd9af1f6dfdfe1f81b69ac11cd8ae151ff99360f0b3118b7a3ee21"
+                "aee408847d35e44e99430f0979c3357b85fe8dbb4535a494301198adbee85f27"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "getdbt.com",
-                "kahoot.com",
-                "mangohoutonline.nl",
-                "meet.jit.si",
-                "tamaris.com",
-                "www.aljazeera.com",
-                "www.autoexpress.co.uk",
-                "www.express.co.uk",
-                "www.image-line.com",
-                "www.kapwing.com",
-                "www.ms.now",
-                "www.nba.com",
-                "www.ns.nl",
-                "www.stuvia.com",
-                "www.usmagazine.com"
+                "docs.getdbt.com",
+                "nl.norton.com",
+                "support.norton.com",
+                "www.avast.com",
+                "www.fender.com"
+            ]
+        },
+        {
+            "rule": "amplitude\\.com\\/config\\/582aaf845c8e92adb7f9e55daa709c54",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sr-client-cfg.eu"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "9d34e01b8b7e7b73c8c67227e30ed88482cb99e730832fbc4cc4c53557c4f5e9"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "mendix.com",
+                "docs.mendix.com"
             ]
         },
         {
@@ -352,8 +417,8 @@
                 "api"
             ],
             "apis": {},
-            "sites": 8,
-            "prevalence": 0.000804,
+            "sites": 6,
+            "prevalence": 0.000603,
             "cnames": [],
             "responseHashes": [
                 "aee408847d35e44e99430f0979c3357b85fe8dbb4535a494301198adbee85f27",
@@ -364,8 +429,6 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "fansly.com",
-                "www.browserstack.com",
-                "www.internetpostcodecheck.nl",
                 "www.newsbreak.com",
                 "www.periscope.tv",
                 "www.pscp.tv",
@@ -395,39 +458,38 @@
         },
         {
             "rule": "amplitude\\.com\\/script\\/ecca48190cd380cd032813235c0fb3cd\\.experiment\\.js",
-            "cookies": 0.000402,
+            "cookies": 0.000302,
             "fingerprinting": 1,
             "subdomains": [
                 "cdn.eu"
             ],
             "apis": {
-                "window.sessionStorage": 4,
-                "window.localStorage": 4,
-                "Document.cookie getter": 4,
-                "Navigator.prototype.userAgent": 4,
-                "Navigator.prototype.languages": 4,
-                "Document.cookie setter": 4,
-                "Date.prototype.getTime": 4
+                "window.sessionStorage": 3,
+                "window.localStorage": 3,
+                "Document.cookie getter": 3,
+                "Navigator.prototype.userAgent": 3,
+                "Navigator.prototype.languages": 3,
+                "Document.cookie setter": 3,
+                "Date.prototype.getTime": 3
             },
-            "sites": 4,
-            "prevalence": 0.000402,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
-                "d59abe663135641f9a7705f7ddc6ff680aaba9fb77a63dff448bd8e78d8a641b"
+                "f391bf01783c8b3c3e1e6aa3fe949822e0ad76a3b99a64c7ed207586e3e813ed"
             ],
             "type": "Script",
             "firstPartyCookies": {
                 "EXP_ecca48190c_identity": {
                     "ttl": 31536001,
                     "length": 190,
-                    "prevalence": 0.0004020908725371934,
+                    "prevalence": 0.00030156815440289503,
                     "uniqueness": 1
                 }
             },
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "landal.nl",
-                "www.landal.com",
                 "www.landal.nl",
                 "www.roompot.nl"
             ]
@@ -452,12 +514,12 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "15f712f0e2fbec5b7abe9a759dfd84d0239536c003957d8c9ffc0a39545457d9"
+                "76b361f793ea86013a5a8273808ecbca1da15823891bdbd540590aebaf5443c8"
             ],
             "type": "Script",
             "firstPartyCookies": {
                 "EXP_9cef763414_identity": {
-                    "ttl": 31536004,
+                    "ttl": 31536009,
                     "length": 190,
                     "prevalence": 0.0002010454362685967,
                     "uniqueness": 1
@@ -478,18 +540,20 @@
                 "api.lab"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.000402,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "02f19a432fad195d5a056fbb149b7168a97adac1023d072b89057d2610522288",
+                "abdcaaa0baa44f20d7c7c04da5fd9c753475ce37ac56105a2d083406bcd34f86"
+            ],
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "lustery.com",
                 "www.cnbc.com",
-                "www.itv.com",
-                "www.ms.now"
+                "www.kaufmich.com"
             ]
         },
         {
@@ -501,22 +565,17 @@
                 "api.lab"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.000402,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [],
-            "responseHashes": [
-                "0882b1a069e7ae545c1d9832756fabadf951be2e7cf5a89c3b9f8111b8b217d9",
-                "4b5839ed10a762efba3eb83ce28e42a5dc4824c4471448b984ba8c089e1877ca",
-                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
-            ],
-            "type": "Fetch",
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "lustery.com",
                 "www.cnbc.com",
-                "www.itv.com",
-                "www.ms.now"
+                "www.kaufmich.com"
             ]
         },
         {
@@ -531,7 +590,7 @@
             "prevalence": 0.000302,
             "cnames": [],
             "responseHashes": [
-                "1d737b6c8d183d0f426a18567a21cee166e8bce56c7956438b88c5a2844da64d"
+                "be34b023fc962d37b49270fa8cb4df24625b1845236312f9ba13779e061d1563"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -551,15 +610,13 @@
                 "cdn"
             ],
             "apis": {
-                "window.localStorage": 2,
-                "Navigator.prototype.userAgent": 2,
-                "Navigator.prototype.languages": 2
+                "window.localStorage": 1
             },
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "627718d1cf37691dcce6e8f4ab657c625f64a1db9fd781b31604b9808dfcf55f"
+                "9eb8411cff5f5b89cd95e27ba0b388831297e584871ea4594dc636f5b8aedec1"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -570,7 +627,7 @@
             ]
         },
         {
-            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/b8674a24f598ed691b8e17983c9ca8dc57fd0476-chunk-X2HH6SIU\\.js",
+            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/79ac190cb2d32cf92c6e10517cde374a0a1b0342-chunk-YRHKFJSL\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -593,7 +650,7 @@
             ]
         },
         {
-            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/b8674a24f598ed691b8e17983c9ca8dc57fd0476-chunk-6XSMOJO7\\.js",
+            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/79ac190cb2d32cf92c6e10517cde374a0a1b0342-chunk-ZTIJPNWS\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -605,7 +662,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "fdf7419af94bd502d7cebd8f36b0309518a7492867fb66d7faa427ba069eb4b9"
+                "03fe50f195c9fe7258ac2a09e119e49a0bf5b73a27833837ce6b71e4b58b5917"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -616,7 +673,7 @@
             ]
         },
         {
-            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/b8674a24f598ed691b8e17983c9ca8dc57fd0476-chunk-4Z25PSCP\\.js",
+            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/79ac190cb2d32cf92c6e10517cde374a0a1b0342-chunk-N2QDCHVF\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -628,7 +685,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "34515496163e41ee6616ad00be058a4f3cfc47584489033fdb40166eefec8c39"
+                "3a9195dd76e208f6d3aa3876642a3f50c82c422f3d3823edd657faf23b21cf63"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -639,7 +696,7 @@
             ]
         },
         {
-            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/b8674a24f598ed691b8e17983c9ca8dc57fd0476-chunk-CE7V6MKG\\.js",
+            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/79ac190cb2d32cf92c6e10517cde374a0a1b0342-chunk-7EHYDEI6\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -651,7 +708,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "88a88bd725b7fa27bc87a7d84c411897c48056b44afa0197ebca6f76ec5a8775"
+                "cce4fe80c6bdf56878e14c9241a43804b5085c75e4aab5c6134e1e126c211a16"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -662,7 +719,7 @@
             ]
         },
         {
-            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/b8674a24f598ed691b8e17983c9ca8dc57fd0476-chunk-YH6RO7JG\\.js",
+            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/79ac190cb2d32cf92c6e10517cde374a0a1b0342-chunk-PCQAQPFN\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -674,7 +731,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "bfc88395f90b1e69c94e20536756e5828836d3236746e98d5cc99feb9c2e2876"
+                "278d532e306bb0a88d9858e48b5c567fa77c67fc28b456911227bab49e819300"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -685,7 +742,7 @@
             ]
         },
         {
-            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/b8674a24f598ed691b8e17983c9ca8dc57fd0476-chunk-3WX5XZ5Y\\.js",
+            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/79ac190cb2d32cf92c6e10517cde374a0a1b0342-chunk-Q4TG2SSU\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -697,7 +754,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "ac078aba50ab320644b61bd9893b84d045f118aa62fa1e48a7994e35c8bbb004"
+                "f2c16905be42ef2d1daf98a888589fd68712f1e5fc1090c21c899c4054a97aed"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -708,7 +765,7 @@
             ]
         },
         {
-            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/b8674a24f598ed691b8e17983c9ca8dc57fd0476-chunk-SPHUVXXD\\.js",
+            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/79ac190cb2d32cf92c6e10517cde374a0a1b0342-chunk-DL2G4V56\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -720,7 +777,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "519ac5746a6430a825e437c6501acdcb740b5a92891258b30b1e796ccdcf1cf0"
+                "6e28c606c75217b9663effbd991e2b36d751a51c939a7e9c5c3a28b1c02adabc"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -731,7 +788,7 @@
             ]
         },
         {
-            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/b8674a24f598ed691b8e17983c9ca8dc57fd0476-chunk-R5Q2WL7I\\.js",
+            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/79ac190cb2d32cf92c6e10517cde374a0a1b0342-chunk-ZBAUCXJ4\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -743,7 +800,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "d023d02ed64ac77131f07b79f88b31eb92c8cd76a7a05c820381a327857bd508"
+                "aef9608ec961c4838b545d0dfb05247f5409c40e59b34d0bc9d576d001c06939"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -754,7 +811,7 @@
             ]
         },
         {
-            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/b8674a24f598ed691b8e17983c9ca8dc57fd0476-chunk-YHT6G7E4\\.js",
+            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/79ac190cb2d32cf92c6e10517cde374a0a1b0342-chunk-6NT35NHA\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -766,7 +823,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "c472a5e861a9b59a1267d84ef80338d59c390c117c773ebf0ee066b899a5a33f"
+                "dc1066704b9682f6b16e1aa11c49eb950c73d38e7c211c345f9f25c130382016"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -777,7 +834,7 @@
             ]
         },
         {
-            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/b8674a24f598ed691b8e17983c9ca8dc57fd0476-chunk-KPH4QK7H\\.js",
+            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/79ac190cb2d32cf92c6e10517cde374a0a1b0342-chunk-OOPRESLK\\.js",
             "cookies": 0,
             "fingerprinting": 1,
             "subdomains": [
@@ -785,14 +842,14 @@
                 "cdn"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 2,
-                "Navigator.prototype.platform": 2
+                "Navigator.prototype.userAgent": 1,
+                "Navigator.prototype.platform": 1
             },
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "8c9042624b4fd947d14dd5b036fc12775961bdc04a7ce9619b19874cbd5da990"
+                "416954471d2d7829e517eec395e76d5af63ce6eb55748f74a49c98d329342fb6"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -803,7 +860,7 @@
             ]
         },
         {
-            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/b8674a24f598ed691b8e17983c9ca8dc57fd0476-chunk-KSMGCPLM\\.js",
+            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/79ac190cb2d32cf92c6e10517cde374a0a1b0342-chunk-GT2DN5ZL\\.js",
             "cookies": 0,
             "fingerprinting": 1,
             "subdomains": [
@@ -812,13 +869,13 @@
             ],
             "apis": {
                 "window.localStorage": 2,
-                "window.sessionStorage": 2
+                "window.sessionStorage": 1
             },
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "6cead851be906922fd8832471129c2e2a18d64a8971703bd245303df72694a8d"
+                "848f0f9afe9305d92658dcb68d165c22a1f5a27333f4bff931980188e265a579"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -840,9 +897,7 @@
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [
-                "d3dfdabf546f77ba971f6f28ce9e8b7b18ea1e12dfd8193caad0939f57bfcbc6"
-            ],
+            "responseHashes": [],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -863,232 +918,8 @@
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [
-                "9ab6af483aba67328f668234150c6e91103f26fc923782cc4218b2fbae5eee62"
-            ],
+            "responseHashes": [],
             "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "remarkable.com",
-                "www.ms.now"
-            ]
-        },
-        {
-            "rule": "amplitude\\.com\\/sdk\\/v1\\/config",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "gs.eu",
-                "gs"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "remarkable.com",
-                "www.ms.now"
-            ]
-        },
-        {
-            "rule": "amplitude\\.com\\/sdk\\/v1\\/resource_center",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "gs.eu",
-                "gs"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "remarkable.com",
-                "www.ms.now"
-            ]
-        },
-        {
-            "rule": "amplitude\\.com\\/sdk\\/v1\\/decide",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "gs.eu",
-                "gs"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "remarkable.com",
-                "www.ms.now"
-            ]
-        },
-        {
-            "rule": "amplitude\\.com\\/sdk\\/v1\\/decide",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "gs.eu",
-                "gs"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "aec2ebee331b49511709293e9d237ca98be6ee18200d370fffe380059961f57e"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "remarkable.com",
-                "www.ms.now"
-            ]
-        },
-        {
-            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/b8674a24f598ed691b8e17983c9ca8dc57fd0476-ResourceCenterRoot-DCPKOKVM\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "cdn.eu",
-                "cdn"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "c04cae18c09c3d3ed2a57d3c0cb34154307d6d64ebc76a81c87ea0b78f53363e"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "remarkable.com",
-                "www.ms.now"
-            ]
-        },
-        {
-            "rule": "amplitude\\.com\\/sdk\\/v1\\/state",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "gs.eu",
-                "gs"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "8d99d2734a3f44c365c52fb761083dc43b0429e7d8411ce3d7a05fc6f2f14308"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "remarkable.com",
-                "www.ms.now"
-            ]
-        },
-        {
-            "rule": "amplitude\\.com\\/sdk\\/v1\\/state",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "gs.eu",
-                "gs"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "remarkable.com",
-                "www.ms.now"
-            ]
-        },
-        {
-            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/b8674a24f598ed691b8e17983c9ca8dc57fd0476-chunk-THMQMMR6\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "cdn.eu",
-                "cdn"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "adc4aa6f8c900eb3fb52973eea4819d14da0b163d2eebc19ad9265858016156e"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "remarkable.com",
-                "www.ms.now"
-            ]
-        },
-        {
-            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/b8674a24f598ed691b8e17983c9ca8dc57fd0476-chunk-SCURSDPT\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "cdn.eu",
-                "cdn"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "f54d14856e3a1ed197b35adc88aa3ff45c58f0212997ff0578a5b84d595386c6"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "remarkable.com",
-                "www.ms.now"
-            ]
-        },
-        {
-            "rule": "amplitude\\.com\\/engagement-browser\\/prod\\/split\\/b8674a24f598ed691b8e17983c9ca8dc57fd0476-chunk-PXDZFQGW\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "cdn.eu",
-                "cdn"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "368d2c71ef0d612333b6741517891f307b358eff95b0db6910f5aa5b86b82c65"
-            ],
-            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -1108,9 +939,29 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "9d34e01b8b7e7b73c8c67227e30ed88482cb99e730832fbc4cc4c53557c4f5e9"
+                "be34b023fc962d37b49270fa8cb4df24625b1845236312f9ba13779e061d1563"
             ],
             "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "avast.com",
+                "www.avast.com"
+            ]
+        },
+        {
+            "rule": "amplitude\\.com\\/sessions\\/v2\\/track",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-sr"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Other",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -1174,7 +1025,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "a7e1f7520e00f447ca1f4bbb87249470824b32ad1194d0cd49e14b9996eb5cc7"
+                "e101042e41b90aadabf2a94bd8b5da200ffb35fb0735a07153a59d3c7a27f248"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -1185,7 +1036,7 @@
             ]
         },
         {
-            "rule": "amplitude\\.com\\/config\\/7fb8b886549754e07e76152f133b33dd",
+            "rule": "amplitude\\.com\\/config\\/37f60018ee7c4da339ca0e874606403c",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -1196,7 +1047,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "124ac44badb33b0322881eeab70fa9d66c1efd57c3fa6a15afc1a6b80851dbd4"
+                "5e5860457d8dd38aba63fab7ba5f494ccc72f3e2a3d00e3272a2c3508874c880"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -1256,19 +1107,19 @@
             "type": "Script",
             "firstPartyCookies": {
                 "AMP_TEST": {
-                    "ttl": -86397,
+                    "ttl": -86396,
                     "length": 6,
                     "prevalence": 0.00010052271813429835,
                     "uniqueness": 1
                 },
                 "AMP_TLDTEST": {
-                    "ttl": -86397,
+                    "ttl": -86396,
                     "length": 6,
                     "prevalence": 0.00010052271813429835,
                     "uniqueness": 1
                 },
                 "AMP_7b36054124": {
-                    "ttl": 31536003,
+                    "ttl": 31536004,
                     "length": 304,
                     "prevalence": 0.00010052271813429835,
                     "uniqueness": 1
@@ -1292,7 +1143,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "e1c81b2aaff3792d044873250e7aabe242b2121ac8ed0a3ececa76b2a2f9ecce"
+                "bf958c2f78f5bae8148f95afa61bb67c0799915e182330f923e7742138f83470"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -1322,6 +1173,70 @@
             "exampleSites": [
                 "image-line.com",
                 "www.image-line.com"
+            ]
+        },
+        {
+            "rule": "amplitude\\.com\\/config\\/63725950ac9ca7418e61664e1c862b52",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sr-client-cfg.eu"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "96c6c8535e3fc12be9df193108c8f41826ac10c6e30eeebf40e92c0a53a48d00"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "kaufmich.com",
+                "www.kaufmich.com"
+            ]
+        },
+        {
+            "rule": "amplitude\\.com\\/v1\\/vardata",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api.lab"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "81b8f171939ae2bad86ef0479a6e96a05ae76197e4b1d4ffb612788bbabe7fad"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "motortrend.com",
+                "www.usmagazine.com"
+            ]
+        },
+        {
+            "rule": "amplitude\\.com\\/v1\\/vardata",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api.lab"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "motortrend.com",
+                "www.usmagazine.com"
             ]
         },
         {
@@ -1369,40 +1284,86 @@
             ]
         },
         {
-            "rule": "amplitude\\.com\\/v1\\/vardata",
+            "rule": "amplitude\\.com\\/config\\/1debc6c05a9b3bdd5b943288b20b77a7",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "api.lab"
+                "sr-client-cfg.eu"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+                "33da01808cba85097172d073f19b86ad72a0a879de676331bce8a43e299c408d"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "usmagazine.com",
-                "www.usmagazine.com"
+                "pfaswijzer.com",
+                "www.pfaswijzer.com"
             ]
         },
         {
-            "rule": "amplitude\\.com\\/v1\\/vardata",
+            "rule": "amplitude\\.com\\/config\\/0cc38251f8841c0d84d11fd20b400b07",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "api.lab"
+                "sr-client-cfg"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "fc1c12fb4029b899fd0e2309a25772b5cdd1205b1b8dfb9e21446b57b4a14342"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "photoroom.com",
+                "www.photoroom.com"
+            ]
+        },
+        {
+            "rule": "amplitude\\.com\\/sdk\\/v2\\/flags",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "flag.lab"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "541aa0f37381412476ac20372df616c888836ebe0a217f50ff2a3637f8653262"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "photoroom.com",
+                "www.photoroom.com"
+            ]
+        },
+        {
+            "rule": "amplitude\\.com\\/v1\\/userprofile",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "profile-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "8f01eaebd4169c46a993d00245513114866bd751d3592fe4a9481a67fd5cceb2"
+            ],
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -1421,10 +1382,8 @@
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [
-                "6556d18ec29e1411d532774a7b8e945f6d9032b16b87fc0d735c8afe0665c588"
-            ],
-            "type": "Fetch",
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -1433,23 +1392,23 @@
             ]
         },
         {
-            "rule": "amplitude\\.com\\/v1\\/userprofile",
+            "rule": "amplitude\\.com\\/config\\/47f1934446a0a010ea3423d040ee53c3",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "profile-api"
+                "sr-client-cfg"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [],
-            "type": "Preflight",
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "usmagazine.com",
-                "www.usmagazine.com"
+                "veed.io",
+                "www.veed.io"
             ]
         }
     ],
@@ -1461,50 +1420,52 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.7733333333333333
+            "prevalence": 0.7548387096774194
         },
         {
             "domain": "tiqcdn.com",
-            "prevalence": 0.05333333333333334
+            "prevalence": 0.07096774193548387
         },
         {
             "domain": "ensighten.com",
-            "prevalence": 0.04666666666666667
+            "prevalence": 0.07096774193548387
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.03333333333333333
-        },
-        {
-            "domain": "kinsta.cloud",
-            "prevalence": 0.02666666666666667
+            "prevalence": 0.03225806451612903
         },
         {
             "domain": "smassets.net",
-            "prevalence": 0.013333333333333334
+            "prevalence": 0.01935483870967742
         },
         {
             "domain": "adobedtm.com",
-            "prevalence": 0.013333333333333334
+            "prevalence": 0.01935483870967742
         },
         {
             "domain": "quantummetric.com",
-            "prevalence": 0.013333333333333334
+            "prevalence": 0.012903225806451613
         },
         {
             "domain": "jsdelivr.net",
-            "prevalence": 0.006666666666666667
+            "prevalence": 0.0064516129032258064
         },
         {
             "domain": "cnbcfm.com",
-            "prevalence": 0.006666666666666667
+            "prevalence": 0.0064516129032258064
+        },
+        {
+            "domain": "pscp.tv",
+            "prevalence": 0.0064516129032258064
         }
     ],
     "types": {
-        "Fetch": 60,
-        "Preflight": 37,
-        "Script": 50,
-        "XHR": 8
+        "Fetch": 71,
+        "Script": 43,
+        "Ping": 2,
+        "Preflight": 31,
+        "XHR": 6,
+        "Other": 2
     },
     "nameservers": [
         "ns-1262.awsdns-29.org",

@@ -12,8 +12,8 @@
     "prevalence": 0.000101,
     "sites": 1,
     "subdomains": [
-        "ssl01.microsites",
-        "akamai-integration"
+        "akamai-integration",
+        "ssl01.microsites"
     ],
     "cnames": [
         {
@@ -27,6 +27,31 @@
     ],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "redbull\\.edgesuite\\.net\\/v1\\/graphql\\/rrn:gql-queries:126f4531-a501-537c-861b-25099b3804cb",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "akamai-integration"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "api.redbull.com",
+                    "resolved": "akamai-integration.redbull.edgesuite.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "redbull.com",
+                "www.redbull.com"
+            ]
+        },
         {
             "rule": "redbull\\.edgesuite\\.net\\/report-usage",
             "cookies": 0,
@@ -70,31 +95,6 @@
                     "resolved": "akamai-integration.redbull.edgesuite.net"
                 }
             ],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "redbull.com",
-                "www.redbull.com"
-            ]
-        },
-        {
-            "rule": "redbull\\.edgesuite\\.net\\/v1\\/graphql\\/rrn:gql-queries:126f4531-a501-537c-861b-25099b3804cb",
-            "cookies": 0.000101,
-            "fingerprinting": 0,
-            "subdomains": [
-                "akamai-integration"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [
-                {
-                    "original": "api.redbull.com",
-                    "resolved": "akamai-integration.redbull.edgesuite.net"
-                }
-            ],
             "responseHashes": [
                 "52bec00663c7c001df0708e1dd34eaaf927ee244f38b82b5bf30c6849f3aed58"
             ],
@@ -111,10 +111,10 @@
         "CDN"
     ],
     "performance": {},
-    "cookies": 0.000101,
+    "cookies": 0,
     "types": {
-        "Ping": 2,
         "Preflight": 2,
+        "Ping": 2,
         "Fetch": 2
     },
     "nameservers": []

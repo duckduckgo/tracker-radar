@@ -4,12 +4,18 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.00101,
-    "sites": 10,
+    "prevalence": 0.00111,
+    "sites": 11,
     "subdomains": [
-        "lobe.scv.public.sse-prod-eks-euw1"
+        "lobe.scv.public.sse-prod-eks-euw1",
+        "bordeaux-metrics.public.rtb-prod-eks-euw1"
     ],
-    "cnames": [],
+    "cnames": [
+        {
+            "original": "bordeaux-gateway.futureplc.com",
+            "resolved": "bordeaux-metrics.public.rtb-prod-eks-euw1.futureplc.engineering"
+        }
+    ],
     "fingerprinting": 0,
     "resources": [
         {
@@ -69,6 +75,33 @@
                 "www.tomsguide.com",
                 "www.whowhatwear.com"
             ]
+        },
+        {
+            "rule": "futureplc\\.engineering\\/push_metrics\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "bordeaux-metrics.public.rtb-prod-eks-euw1"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [
+                {
+                    "original": "bordeaux-gateway.futureplc.com",
+                    "resolved": "bordeaux-metrics.public.rtb-prod-eks-euw1.futureplc.engineering"
+                }
+            ],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "techradar.com",
+                "www.techradar.com"
+            ]
         }
     ],
     "categories": [],
@@ -82,12 +115,13 @@
     ],
     "types": {
         "Fetch": 10,
-        "Preflight": 10
+        "Preflight": 10,
+        "Ping": 2
     },
     "nameservers": [
-        "ns-423.awsdns-52.com",
+        "ns-1874.awsdns-42.co.uk",
         "ns-671.awsdns-19.net",
         "ns-1333.awsdns-38.org",
-        "ns-1874.awsdns-42.co.uk"
+        "ns-423.awsdns-52.com"
     ]
 }

@@ -7,8 +7,8 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000403,
-    "sites": 4,
+    "prevalence": 0.000503,
+    "sites": 5,
     "subdomains": [
         "cdn"
     ],
@@ -23,10 +23,10 @@
                 "cdn"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 3
+                "Navigator.prototype.userAgent": 5
             },
-            "sites": 4,
-            "prevalence": 0.000403,
+            "sites": 5,
+            "prevalence": 0.000503,
             "cnames": [],
             "responseHashes": [],
             "type": "Script",
@@ -34,30 +34,33 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "newyorker.com",
-                "www.sephora.com",
+                "www.peakdesign.com",
+                "www.vogue.co.uk",
                 "www.vogue.com",
                 "www.wired.com"
             ]
         },
         {
-            "rule": "gladly\\.com\\/assets\\/chat-sdk\\/bundle~1469a4c6db404f36\\.js",
+            "rule": "gladly\\.com\\/assets\\/chat-sdk\\/bundle~169816be212df059\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
                 "cdn"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000302,
+            "sites": 5,
+            "prevalence": 0.000503,
             "cnames": [],
             "responseHashes": [
-                "5ad58688269269fb7ba2b1dc6abb4ae73dee955fe6b9aeea85dded82090dd22c"
+                "c13796b385ad31e5cbd902a3795b64e2233159d2c53be56d331ef51807b2190e"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "newyorker.com",
+                "www.peakdesign.com",
+                "www.vogue.co.uk",
                 "www.vogue.com",
                 "www.wired.com"
             ]
@@ -65,13 +68,16 @@
         {
             "rule": "gladly\\.com\\/assets\\/chat-sdk\\/vendor-node_modules_reduxjs_toolkit_dist_redux-toolkit_cjs_production_min_js-node_modules_bow-f505c7~673e843a0384cd5c\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "cdn"
             ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.000302,
+            "apis": {
+                "Date.prototype.getTimezoneOffset": 2,
+                "Date.prototype.getTime": 2
+            },
+            "sites": 5,
+            "prevalence": 0.000503,
             "cnames": [],
             "responseHashes": [
                 "0ad2232be730c2bd12220a54081f3c9ca3e7b15917db3f8fed71c24041cd2897"
@@ -81,6 +87,8 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "newyorker.com",
+                "www.peakdesign.com",
+                "www.vogue.co.uk",
                 "www.vogue.com",
                 "www.wired.com"
             ]
@@ -93,12 +101,12 @@
                 "cdn"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 3,
-                "Date.prototype.getTime": 3,
-                "window.localStorage": 3
+                "Navigator.prototype.userAgent": 5,
+                "Date.prototype.getTime": 5,
+                "window.localStorage": 5
             },
-            "sites": 3,
-            "prevalence": 0.000302,
+            "sites": 5,
+            "prevalence": 0.000503,
             "cnames": [],
             "responseHashes": [
                 "efcdcc5232e32451754ce39e511cbefb47af6aae168145f270d11aac81513d7e"
@@ -108,8 +116,54 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "newyorker.com",
+                "www.peakdesign.com",
+                "www.vogue.co.uk",
                 "www.vogue.com",
                 "www.wired.com"
+            ]
+        },
+        {
+            "rule": "gladly\\.com\\/orgs\\/configs\\/chat\\/condenast\\.com-Vogue\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "c2bd2d3ae7297803933243e0654ec5e530fd815c737896d77333374f2c320b79"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vogue.co.uk",
+                "www.vogue.com"
+            ]
+        },
+        {
+            "rule": "gladly\\.com\\/orgs\\/configs\\/chat\\/condenast\\.com-Vogue-dynamic\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "d2cf772bed660648c12cadad523c1a4b70e64bf3f451913521b9b9b1300e395a"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vogue.co.uk",
+                "www.vogue.com"
             ]
         }
     ],
@@ -119,16 +173,21 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.5714285714285714
+        },
+        {
+            "domain": "shopify.com",
+            "prevalence": 0.42857142857142855
         }
     ],
     "types": {
-        "Script": 13
+        "Script": 20,
+        "Fetch": 4
     },
     "nameservers": [
-        "ns-451.awsdns-56.com",
         "ns-1391.awsdns-45.org",
         "ns-1564.awsdns-03.co.uk",
+        "ns-451.awsdns-56.com",
         "ns-723.awsdns-26.net"
     ]
 }

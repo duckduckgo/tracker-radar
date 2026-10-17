@@ -10,10 +10,20 @@
         "proxymedia.prod.cachehttp.gslb",
         "elcos.orange.fr.multis",
         "elcos.sosh.fr.multis",
+        "poole-soi-https.prod.cachehttp.gslb",
         "ms-gcs.prod.cachehttp.gslb",
-        "pdata.orange.fr.ext"
+        "pdata.orange.fr.ext",
+        "proxy-captcha.prod.euicaptcha.gslb"
     ],
     "cnames": [
+        {
+            "original": "captcha.woopic.com",
+            "resolved": "proxy-captcha.prod.euicaptcha.gslb.fti.net"
+        },
+        {
+            "original": "cdn.woopic.com",
+            "resolved": "poole-soi-https.prod.cachehttp.gslb.fti.net"
+        },
         {
             "original": "elcos.orange.fr",
             "resolved": "elcos.orange.fr.multis.fti.net"
@@ -86,11 +96,11 @@
                 }
             ],
             "responseHashes": [
-                "aee81348e0bf94ba370080b823fe394bb1342834632862c603971fbbd038147e",
-                "01da6f24b431e836b1434256d787aea1f86a55192e1157e8fc3888d3067916d8",
-                "8511ea46ac2f62ca906cfaa4c0b8b4848e6e01a3752172fa54d12cecde233a4d",
-                "a56875cd55bc3c88bf4c7e6d73d70d7268cc984d31cd25d8a22e970f1e4cd552",
-                "600a492ea3c48f0bf8ae7ee4380e2964136d2791a341893bf0e8864aa2d13894"
+                "ffca500ee764a79ed3f3467906eba69be3872c0a4444cb251caf0de4038983de",
+                "06448cc2e65c765d30190aa69aa04894039648a5c5e46bee11cdc0c85a3e7ce4",
+                "f365cece7d29e4de911e17f2f687296bd25170fb72ccdf71a17e8cc17cb94041",
+                "6eb8120293459ff2e96242d38c06505e27d6dcf7e93c806bcfe1ae3e7b609454",
+                "95ba6093e4fd1ec2200603dbebac922d9672ac4d29fae6bacdadc148bfcb8357"
             ],
             "type": "EventSource",
             "firstPartyCookies": {},
@@ -106,6 +116,34 @@
             ]
         },
         {
+            "rule": "fti\\.net\\/v1\\/AUTH_840aa06aeef64c848738c7997ff75b62\\/messaging-web\\/style_orange\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "poole-soi-https.prod.cachehttp.gslb"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000206,
+            "cnames": [
+                {
+                    "original": "cdn.woopic.com",
+                    "resolved": "poole-soi-https.prod.cachehttp.gslb.fti.net"
+                }
+            ],
+            "responseHashes": [
+                "87736f9b4aa15ffb977a97090569c42f590151d6ffdeb20258a81f25f3202df7"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "orange.fr",
+                "boutique.orange.fr",
+                "www.orange.fr"
+            ]
+        },
+        {
             "rule": "fti\\.net\\/assets\\/secure-files-white\\.png",
             "cookies": 0,
             "fingerprinting": 0,
@@ -113,8 +151,8 @@
                 "ms-gcs.prod.cachehttp.gslb"
             ],
             "apis": {},
-            "sites": 6,
-            "prevalence": 0.0000412,
+            "sites": 5,
+            "prevalence": 0.0000343,
             "cnames": [
                 {
                     "original": "experiment.cdn.s.woopic.com",
@@ -129,7 +167,6 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "orange.fr",
-                "assistance.orange.fr",
                 "boutique.orange.fr",
                 "espace-client.orange.fr",
                 "messagerie.orange.fr",
@@ -144,8 +181,8 @@
                 "pdata.orange.fr.ext"
             ],
             "apis": {},
-            "sites": 6,
-            "prevalence": 0.0000412,
+            "sites": 5,
+            "prevalence": 0.0000343,
             "cnames": [
                 {
                     "original": "pdata.orange.fr",
@@ -160,11 +197,37 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "orange.fr",
-                "assistance.orange.fr",
                 "boutique.orange.fr",
                 "espace-client.orange.fr",
                 "messagerie.orange.fr",
                 "www.orange.fr"
+            ]
+        },
+        {
+            "rule": "fti\\.net\\/captcha\\/bin\\/image\\.cgi",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "proxy-captcha.prod.euicaptcha.gslb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "captcha.woopic.com",
+                    "resolved": "proxy-captcha.prod.euicaptcha.gslb.fti.net"
+                }
+            ],
+            "responseHashes": [
+                "ec0fce2b37b6c8ddc1ac171eb1e65a584a0087366dd88554ecec1d1f4fdbba05"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "orange.fr",
+                "boutique.orange.fr"
             ]
         }
     ],
@@ -174,31 +237,32 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.8557692307692307
+            "prevalence": 0.810126582278481
         },
         {
             "domain": "tiqcdn.com",
-            "prevalence": 0.07692307692307693
+            "prevalence": 0.11392405063291139
         },
         {
             "domain": "privacy-center.org",
-            "prevalence": 0.057692307692307696
+            "prevalence": 0.06329113924050633
         },
         {
             "domain": "woopic.com",
-            "prevalence": 0.009615384615384616
+            "prevalence": 0.012658227848101266
         }
     ],
     "types": {
         "Image": 14,
-        "EventSource": 7
+        "EventSource": 7,
+        "Stylesheet": 3
     },
     "nameservers": [
-        "ns6.fti.net",
         "ns1.fti.net",
-        "ns4.fti.net",
         "ns2.fti.net",
+        "ns3.fti.net",
+        "ns4.fti.net",
         "ns5.fti.net",
-        "ns3.fti.net"
+        "ns6.fti.net"
     ]
 }

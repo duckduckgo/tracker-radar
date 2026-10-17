@@ -4,26 +4,39 @@
     "source": [
         "DuckDuckGo-NL"
     ],
-    "prevalence": 0.000201,
-    "sites": 2,
+    "prevalence": 0.000402,
+    "sites": 4,
     "subdomains": [
-        "wjs"
+        "wjs",
+        "prebid",
+        "stats.prebid"
     ],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "wurflcloud\\.com\\/wurfl\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 2,
             "subdomains": [
-                "wjs"
+                "wjs",
+                "prebid"
             ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "apis": {
+                "Navigator.prototype.platform": 2,
+                "WebGLRenderingContext.prototype.getExtension": 2,
+                "WebGLRenderingContext.prototype.getParameter": 2,
+                "WebGL2RenderingContext.prototype.getExtension": 2,
+                "WebGL2RenderingContext.prototype.getParameter": 2,
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2,
+                "Date.prototype.getTime": 2
+            },
+            "sites": 4,
+            "prevalence": 0.000402,
             "cnames": [],
             "responseHashes": [
+                "91295725aa8c3dff5d1be38409566980468170d033d09fac5a4b3bde5c1c3005",
                 "df2b6ab6013bce2532b9b275ff980ba0ad04086f6626706bd52807f0bcbd5d79"
             ],
             "type": "Script",
@@ -31,7 +44,31 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "smartphonehoesjes.nl",
+                "www.handleidi.ng",
+                "www.manua.ls",
                 "www.smartphonehoesjes.nl"
+            ]
+        },
+        {
+            "rule": "wurflcloud\\.com\\/v2\\/prebid\\/stats",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "stats.prebid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "handleidi.ng",
+                "www.manua.ls"
             ]
         }
     ],
@@ -45,12 +82,13 @@
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 4,
+        "Ping": 2
     },
     "nameservers": [
-        "ns-973.awsdns-57.net",
-        "ns-1854.awsdns-39.co.uk",
         "ns-47.awsdns-05.com",
-        "ns-1170.awsdns-18.org"
+        "ns-973.awsdns-57.net",
+        "ns-1170.awsdns-18.org",
+        "ns-1854.awsdns-39.co.uk"
     ]
 }

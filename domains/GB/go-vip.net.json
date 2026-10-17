@@ -8,9 +8,14 @@
     "sites": 9,
     "subdomains": [
         "nasa-tv",
-        "malwarebytes-api"
+        "malwarebytes-api",
+        "voxmedia-theverge"
     ],
     "cnames": [
+        {
+            "original": "platform.theverge.com",
+            "resolved": "voxmedia-theverge.go-vip.net"
+        },
         {
             "original": "plus.nasa.gov",
             "resolved": "nasa-tv.go-vip.net"
@@ -20,7 +25,7 @@
             "resolved": "malwarebytes-api.go-vip.net"
         }
     ],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "go-vip\\.net\\/wp-json\\/nasaplus\\/v1\\/live",
@@ -73,6 +78,33 @@
                 "malwarebytes.com",
                 "www.malwarebytes.com"
             ]
+        },
+        {
+            "rule": "go-vip\\.net\\/wp-content\\/uploads\\/sites\\/2\\/2026\\/10\\/HUuw-rwXoAAQf9r\\.jpeg",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "voxmedia-theverge"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "platform.theverge.com",
+                    "resolved": "voxmedia-theverge.go-vip.net"
+                }
+            ],
+            "responseHashes": [
+                "522101da1e3f273f1dd45ba91d6aaf3deab9e1b6ceda975459a13e397793a327"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "theverge.com",
+                "www.theverge.com"
+            ]
         }
     ],
     "categories": [],
@@ -86,12 +118,13 @@
     ],
     "types": {
         "XHR": 2,
-        "Preflight": 2
+        "Preflight": 2,
+        "Image": 2
     },
     "nameservers": [
         "ns1.go-vip.net",
+        "ns4.go-vip.net",
         "ns2.go-vip.net",
-        "ns3.go-vip.net",
-        "ns4.go-vip.net"
+        "ns3.go-vip.net"
     ]
 }

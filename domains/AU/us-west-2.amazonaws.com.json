@@ -14,9 +14,15 @@
     "subdomains": [
         "04tlv4uq88.execute-api",
         "eq47czqy1l.execute-api",
+        "eks01-usw2-shared-external-01a88084a1837fa4.elb",
         "cognito-identity"
     ],
-    "cnames": [],
+    "cnames": [
+        {
+            "original": "stderr.consumeraffairs.com",
+            "resolved": "eks01-usw2-shared-external-01a88084a1837fa4.elb.us-west-2.amazonaws.com"
+        }
+    ],
     "fingerprinting": 0,
     "resources": [
         {
@@ -47,8 +53,8 @@
                 "eq47czqy1l.execute-api"
             ],
             "apis": {},
-            "sites": 16,
-            "prevalence": 0.00161,
+            "sites": 15,
+            "prevalence": 0.00151,
             "cnames": [],
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -66,13 +72,39 @@
                 "www.goodhousekeeping.com",
                 "www.harpersbazaar.com",
                 "www.menshealth.com",
-                "www.motortrend.com",
                 "www.popularmechanics.com",
                 "www.prevention.com",
                 "www.runnersworld.com",
                 "www.thepioneerwoman.com",
                 "www.townandcountrymag.com",
                 "www.womenshealthmag.com"
+            ]
+        },
+        {
+            "rule": "us-west-2\\.amazonaws\\.com\\/api\\/7\\/envelope\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "eks01-usw2-shared-external-01a88084a1837fa4.elb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "stderr.consumeraffairs.com",
+                    "resolved": "eks01-usw2-shared-external-01a88084a1837fa4.elb.us-west-2.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "consumeraffairs.com",
+                "www.consumeraffairs.com"
             ]
         },
         {
@@ -87,7 +119,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "273a850458c533b7528a2fb806c02c3f64dc04d7d1a000d6178dcb3be8868f00"
+                "d84254a6185a608774902ba91007c0a3e5823c15d8ab553d9e914867a569454e"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -106,21 +138,25 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.9393939393939394
+            "prevalence": 0.88
         },
         {
             "domain": "d1wwtn5gq9xmny.cloudfront.net",
-            "prevalence": 0.06060606060606061
+            "prevalence": 0.08
+        },
+        {
+            "domain": "discourse-cdn.com",
+            "prevalence": 0.04
         }
     ],
     "types": {
-        "Fetch": 4,
-        "Ping": 16
+        "Fetch": 6,
+        "Ping": 15
     },
     "nameservers": [
-        "ns-156.awsdns-19.com",
         "ns-1522.awsdns-62.org",
-        "ns-821.awsdns-38.net",
-        "ns-1556.awsdns-02.co.uk"
+        "ns-1556.awsdns-02.co.uk",
+        "ns-156.awsdns-19.com",
+        "ns-821.awsdns-38.net"
     ]
 }

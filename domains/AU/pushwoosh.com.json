@@ -10,7 +10,9 @@
     "prevalence": 0.000301,
     "sites": 3,
     "subdomains": [
-        "cdn"
+        "cdn",
+        "api",
+        "aajtak"
     ],
     "cnames": [],
     "fingerprinting": 2,
@@ -23,20 +25,22 @@
                 "cdn"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 1,
-                "Navigator.prototype.vendor": 1,
-                "Navigator.prototype.platform": 1,
-                "window.localStorage": 1,
-                "window.indexedDB": 1,
-                "Navigator.prototype.language": 1,
-                "Date.prototype.getTimezoneOffset": 1,
-                "Date.prototype.getTime": 1
+                "window.sessionStorage": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.vendor": 2,
+                "Navigator.prototype.platform": 2,
+                "window.localStorage": 2,
+                "window.indexedDB": 2,
+                "Navigator.prototype.language": 2,
+                "Date.prototype.getTimezoneOffset": 2,
+                "Date.prototype.getTime": 2,
+                "Notification.permission": 2
             },
             "sites": 3,
             "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [
-                "be41ed0ff48d205d65fb9c53a6009d8d95e54038f0ba1c0e697d8d65ee393237"
+                "41491ae732df2d2c95edb1d54b1eec00be5e90fe6ed69915934fdc235e8c75af"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -44,6 +48,51 @@
             "exampleSites": [
                 "gbnews.com",
                 "www.indiatoday.in",
+                "www.jpost.com"
+            ]
+        },
+        {
+            "rule": "pushwoosh\\.com\\/json\\/1\\.3\\/getConfig",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "b83a4071e1d68604b40f0cb7a28409c3ea9c17ff89ea5074884bc9de0676047d"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "indiatoday.in",
+                "www.jpost.com"
+            ]
+        },
+        {
+            "rule": "pushwoosh\\.com\\/json\\/1\\.3\\/applicationOpen",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "aajtak",
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "4add3fe371639b40f8491b105b99a35050365ebbc41dac264d11c5ca29434b96"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "indiatoday.in",
                 "www.jpost.com"
             ]
         }
@@ -58,7 +107,8 @@
         }
     ],
     "types": {
-        "Script": 3
+        "Script": 3,
+        "Fetch": 4
     },
     "nameservers": [
         "ns-01.pushwoosh.com",
