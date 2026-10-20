@@ -9,22 +9,63 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.000137,
-    "sites": 20,
+    "prevalence": 0.00013,
+    "sites": 19,
     "subdomains": [
+        "nlb-public-77a1514ecade66cd.elb",
+        "ewfpyf5wlb01-a7f6d9e66296b6d6.elb",
         "cognito-identity",
-        "d-41n01ced1f.execute-api",
-        "knwxh8dmh1.execute-api",
-        "dataplane.rum"
+        "k8s-envoygat-envoyenv-a7c722829b-74bdefc538873da5.elb"
     ],
     "cnames": [
         {
-            "original": "service.eyefilm.nl",
-            "resolved": "d-41n01ced1f.execute-api.eu-central-1.amazonaws.com"
+            "original": "gtm.allwebgames.com",
+            "resolved": "nlb-public-77a1514ecade66cd.elb.eu-central-1.amazonaws.com"
+        },
+        {
+            "original": "statistics-registration.api.beslist.nl",
+            "resolved": "k8s-envoygat-envoyenv-a7c722829b-74bdefc538873da5.elb.eu-central-1.amazonaws.com"
+        },
+        {
+            "original": "tagmanager.edisonenergia.it",
+            "resolved": "ewfpyf5wlb01-a7f6d9e66296b6d6.elb.eu-central-1.amazonaws.com"
         }
     ],
     "fingerprinting": 0,
     "resources": [
+        {
+            "rule": "eu-central-1\\.amazonaws\\.com\\/g\\/collect",
+            "cookies": 0.00000686,
+            "fingerprinting": 0,
+            "subdomains": [
+                "nlb-public-77a1514ecade66cd.elb",
+                "ewfpyf5wlb01-a7f6d9e66296b6d6.elb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "gtm.allwebgames.com",
+                    "resolved": "nlb-public-77a1514ecade66cd.elb.eu-central-1.amazonaws.com"
+                },
+                {
+                    "original": "tagmanager.edisonenergia.it",
+                    "resolved": "ewfpyf5wlb01-a7f6d9e66296b6d6.elb.eu-central-1.amazonaws.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "IABGPP_HDR_GppString": 0.00000685551320371843,
+                "_ga": 0.00000685551320371843
+            },
+            "exampleSites": [
+                "allwebgames.com",
+                "www.edisonenergia.it"
+            ]
+        },
         {
             "rule": "eu-central-1\\.amazonaws\\.com\\/",
             "cookies": 0,
@@ -33,8 +74,8 @@
                 "cognito-identity"
             ],
             "apis": {},
-            "sites": 6,
-            "prevalence": 0.0000412,
+            "sites": 5,
+            "prevalence": 0.0000343,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
@@ -43,7 +84,6 @@
             "exampleSites": [
                 "sensiseeds.com",
                 "www.clairol.com",
-                "www.leapmotor.net",
                 "www.mepal.com",
                 "www.refurbished.nl",
                 "www.wella.com"
@@ -61,8 +101,8 @@
             "prevalence": 0.0000206,
             "cnames": [],
             "responseHashes": [
-                "513b620b051cdffb1f1b1ea01e1cae6a4a022229e907d287206b9826e1568836",
-                "93f70d6a42929f2ff6acd6ffcf07b4e2583ea67f3bedf5c12b0f33b79652f6e1"
+                "a3036afdae9ba88a99e9f5d35ed2cbce854ecaeb610f0debbc58c9f5d778d5e6",
+                "5e17d3d97f4d19141e34e62a1ee5c35d5336093451b6f4dd45264730d3140ba7"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -74,6 +114,33 @@
             ]
         },
         {
+            "rule": "eu-central-1\\.amazonaws\\.com\\/abtest\\/register",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "k8s-envoygat-envoyenv-a7c722829b-74bdefc538873da5.elb"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "statistics-registration.api.beslist.nl",
+                    "resolved": "k8s-envoygat-envoyenv-a7c722829b-74bdefc538873da5.elb.eu-central-1.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "beslist.nl",
+                "www.beslist.nl"
+            ]
+        },
+        {
             "rule": "eu-central-1\\.amazonaws\\.com\\/",
             "cookies": 0,
             "fingerprinting": 0,
@@ -81,13 +148,12 @@
                 "cognito-identity"
             ],
             "apis": {},
-            "sites": 4,
-            "prevalence": 0.0000274,
+            "sites": 3,
+            "prevalence": 0.0000206,
             "cnames": [],
             "responseHashes": [
-                "bb1ad54cc549b20453cd2a002b738a61390f7837bc984d0e519f368accd1abd2",
-                "88f790686200a9e825c0789ba5bbadf2cb27f755fdf994dfd63bbbe85f2ce5a6",
-                "98b4c1a8b6fbc2fdd9c8d786d0695ff25fb4b6b70d94152fb7f9e18da495abe6"
+                "bc68988a62bc3c94e30384860b9ebca71953e76107b203b87cc7b68ecd7a6052",
+                "8e8b38fd1ac4dfa0cafe52039f6deb4da6cd3783dde44ec16cbb22742c3dcdc4"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -95,84 +161,7 @@
             "exampleSites": [
                 "clairol.com",
                 "www.clairol.com",
-                "www.leapmotor.net",
                 "www.wella.com"
-            ]
-        },
-        {
-            "rule": "eu-central-1\\.amazonaws\\.com\\/graphql",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "d-41n01ced1f.execute-api",
-                "knwxh8dmh1.execute-api"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [
-                {
-                    "original": "service.eyefilm.nl",
-                    "resolved": "d-41n01ced1f.execute-api.eu-central-1.amazonaws.com"
-                }
-            ],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "eyefilm.nl",
-                "www.paradiso.nl"
-            ]
-        },
-        {
-            "rule": "eu-central-1\\.amazonaws\\.com\\/graphql",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "d-41n01ced1f.execute-api",
-                "knwxh8dmh1.execute-api"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [
-                {
-                    "original": "service.eyefilm.nl",
-                    "resolved": "d-41n01ced1f.execute-api.eu-central-1.amazonaws.com"
-                }
-            ],
-            "responseHashes": [
-                "be777f9dbaa5bb3935baf16234bd2672a58ec477400c58bd350b6218b5c31457"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "eyefilm.nl",
-                "www.paradiso.nl"
-            ]
-        },
-        {
-            "rule": "eu-central-1\\.amazonaws\\.com\\/appmonitors\\/fb2ec1d4-24fc-4742-867e-bccbeea163c6",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "dataplane.rum"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "leapmotor.net",
-                "www.leapmotor.net"
             ]
         }
     ],
@@ -183,19 +172,23 @@
     "cookies": 0.00000686,
     "topInitiators": [
         {
-            "domain": "first party",
-            "prevalence": 0.3448275862068966
-        },
-        {
-            "domain": "rum.us-east-1.amazonaws.com",
-            "prevalence": 0.2413793103448276
+            "domain": "googletagmanager.com",
+            "prevalence": 0.20689655172413793
         },
         {
             "domain": "sooqr.com",
             "prevalence": 0.20689655172413793
         },
         {
-            "domain": "googletagmanager.com",
+            "domain": "rum.us-east-1.amazonaws.com",
+            "prevalence": 0.20689655172413793
+        },
+        {
+            "domain": "beslist.net",
+            "prevalence": 0.1724137931034483
+        },
+        {
+            "domain": "first party",
             "prevalence": 0.13793103448275862
         },
         {
@@ -208,14 +201,14 @@
         }
     ],
     "types": {
-        "Preflight": 8,
-        "XHR": 3,
-        "Fetch": 8
+        "Fetch": 7,
+        "Preflight": 5,
+        "XHR": 3
     },
     "nameservers": [
-        "ns-1630.awsdns-11.co.uk",
         "ns-398.awsdns-49.com",
-        "ns-862.awsdns-43.net",
-        "ns-1433.awsdns-51.org"
+        "ns-1630.awsdns-11.co.uk",
+        "ns-1433.awsdns-51.org",
+        "ns-862.awsdns-43.net"
     ]
 }

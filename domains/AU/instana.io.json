@@ -7,34 +7,66 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.0001,
-    "sites": 1,
+    "prevalence": 0.000201,
+    "sites": 2,
     "subdomains": [
-        "eum-eu-west-1"
+        "eum",
+        "eum-red-saas"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
         {
-            "rule": "instana\\.io\\/",
+            "rule": "instana\\.io\\/eum\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 2,
             "subdomains": [
-                "eum-eu-west-1"
+                "eum"
             ],
-            "apis": {},
+            "apis": {
+                "window.localStorage": 2,
+                "Date.prototype.getTime": 2,
+                "Navigator.prototype.languages": 2,
+                "PerformanceTiming.prototype.navigationStart": 2,
+                "window.innerWidth": 2,
+                "window.innerHeight": 2,
+                "Navigator.prototype.connection": 2
+            },
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                "372e0f86c3a5638adb57a8db32f4255b23313a75a6cd75e9e2f2b1677df5e1ac"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ehow.com",
+                "www.techwalla.com"
+            ]
+        },
+        {
+            "rule": "instana\\.io\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "eum-red-saas"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [
+                "158f66e524e9465bd53af835e4c7a34ca0fb6ea8b99d901a4bd19a7fcdfad8c0"
             ],
             "type": "Ping",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "eharmony.com.au",
-                "www.eharmony.com.au"
+                "ehow.com",
+                "www.ehow.com",
+                "www.techwalla.com"
             ]
         }
     ],
@@ -48,12 +80,13 @@
         }
     ],
     "types": {
-        "Ping": 2
+        "Script": 2,
+        "Ping": 3
     },
     "nameservers": [
         "ns-240.awsdns-30.com",
-        "ns-1272.awsdns-31.org",
         "ns-517.awsdns-00.net",
+        "ns-1272.awsdns-31.org",
         "ns-1952.awsdns-52.co.uk"
     ]
 }

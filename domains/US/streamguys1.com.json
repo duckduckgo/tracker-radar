@@ -10,8 +10,11 @@
     "prevalence": 0.000096,
     "sites": 14,
     "subdomains": [
+        "weta-rss",
+        "dbc-rss",
         "kqed-live",
-        "mpr-hls"
+        "mpr-hls",
+        "dbc-ondemand"
     ],
     "cnames": [
         {
@@ -23,8 +26,85 @@
             "resolved": "kqed-live.streamguys1.com"
         }
     ],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "streamguys1\\.com\\/player\\/include\\/css\\/blue\\.monday\\/jplayer\\.blue\\.monday\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "weta-rss",
+                "dbc-rss"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "68f7a4e3fe0537c3fcf7ec95e6d4476797b5e8fcf2ab499c8d09bf835c70229d"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "weta.org",
+                "www.rock92.com"
+            ]
+        },
+        {
+            "rule": "streamguys1\\.com\\/player\\/include\\/js\\/jquery-1\\.10\\.2\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "weta-rss",
+                "dbc-rss"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2,
+                "Event.prototype.timeStamp": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "f0f110d4d7e6827e814948df488aadc89855355a6f4854608e3ddce17c63a5a5"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "weta.org",
+                "www.rock92.com"
+            ]
+        },
+        {
+            "rule": "streamguys1\\.com\\/player\\/include\\/js\\/jquery\\.jplayer\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "weta-rss",
+                "dbc-rss"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "HTMLMediaElement.prototype.canPlayType": 2,
+                "Navigator.prototype.plugins": 2,
+                "Navigator.prototype.mimeTypes": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "46fac3ff8d6027423a4fd20946754e29343eeb45925fe0850f948e2de15846cb"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "weta.org",
+                "www.rock92.com"
+            ]
+        },
         {
             "rule": "streamguys1\\.com\\/generateSDKSessionId",
             "cookies": 0,
@@ -42,7 +122,7 @@
                 }
             ],
             "responseHashes": [
-                "ec0b704b6cac5216e9c73e3adeae434a146c81307af3ff3030f3a4540b0e0e25"
+                "2f198a23bd433ad93899b2577a908e1e64748ebfb46cd76e6363d00636d3a091"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -69,7 +149,7 @@
                 }
             ],
             "responseHashes": [
-                "0a0ccb97abeef464ec53597e6f522899e3af519df5e503b6b64d862cfc03e6ff"
+                "66d6f80a96dfdb7a61737e974923d167b6f840f4873fb8d1ed27cfe2b9f58775"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -77,6 +157,26 @@
             "exampleSites": [
                 "mprnews.org",
                 "www.mprnews.org"
+            ]
+        },
+        {
+            "rule": "streamguys1\\.com\\/greensboro-market\\/podcasts\\/20261015055208_207584-2tbHYRX\\.mp3",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "dbc-ondemand"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Media",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rock92.com",
+                "www.rock92.com"
             ]
         },
         {
@@ -96,7 +196,7 @@
                 }
             ],
             "responseHashes": [
-                "22fe0cb6608c0aa9249aa6ad19f0e2064eba9f5e54d199e302f0e426e61771ce"
+                "a9e091b0e68ea7c84f5633e529b90020af2f721d5acdcd120d1455ac2fa8a8ba"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -109,24 +209,27 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0000274,
+    "cookies": 0.0000343,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.9
+            "prevalence": 0.8888888888888888
         },
         {
             "domain": "adswizz.com",
-            "prevalence": 0.1
+            "prevalence": 0.1111111111111111
         }
     ],
     "types": {
-        "XHR": 6
+        "Stylesheet": 2,
+        "Script": 4,
+        "XHR": 6,
+        "Media": 2
     },
     "nameservers": [
-        "ns1.streamguys.net",
         "ns2.streamguys.net",
-        "ns3.streamguys.net",
-        "ns4.streamguys.net"
+        "ns4.streamguys.net",
+        "ns1.streamguys.net",
+        "ns3.streamguys.net"
     ]
 }

@@ -7,10 +7,11 @@
     "prevalence": 0.000402,
     "sites": 4,
     "subdomains": [
-        "sonic"
+        "sonic",
+        "ad"
     ],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 1,
     "resources": [
         {
             "rule": "impactify\\.media\\/static\\/cookie_sync\\.html",
@@ -24,7 +25,7 @@
             "prevalence": 0.000402,
             "cnames": [],
             "responseHashes": [
-                "7fdfe9a65c5cdd8c4f9a062b60d583c6ab92e18729d415a5d50dcfd624ba231d"
+                "ea11a450d6ddc8a12365c4d376e856353f72e3a8874da84902985c8acd03c39e"
             ],
             "type": "Document",
             "firstPartyCookies": {},
@@ -37,24 +38,26 @@
             ]
         },
         {
-            "rule": "impactify\\.media\\/cookie_sync",
+            "rule": "impactify\\.media\\/user-sync\\/load-cookie\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
-                "sonic"
+                "ad"
             ],
-            "apis": {},
+            "apis": {
+                "Document.cookie getter": 1
+            },
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "f9a4e96a9a98dea3520e11afe817abe59bce8599ca63817221e4103c43a62f8c"
+                "667fc5ef2fad62ffc8659fdf92236cd64ee0d199c5fa80fc5c8e7c32ff730399"
             ],
-            "type": "Fetch",
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "techcrunch.com",
+                "celebritate.com",
                 "www.zerohedge.com"
             ]
         }
@@ -65,21 +68,17 @@
     "topInitiators": [
         {
             "domain": "servenobid.com",
-            "prevalence": 0.7142857142857143
-        },
-        {
-            "domain": "impactify.io",
-            "prevalence": 0.2857142857142857
+            "prevalence": 1
         }
     ],
     "types": {
         "Document": 4,
-        "Fetch": 2
+        "Script": 2
     },
     "nameservers": [
+        "gns21.cloudns.net",
         "gns22.cloudns.net",
         "gns23.cloudns.net",
-        "gns24.cloudns.net",
-        "gns21.cloudns.net"
+        "gns24.cloudns.net"
     ]
 }

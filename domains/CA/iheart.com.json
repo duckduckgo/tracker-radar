@@ -11,9 +11,8 @@
     "sites": 2,
     "subdomains": [
         "www",
-        "ca.api",
-        "pws.radioedit",
         "webapi.radioedit",
+        "ca.api",
         "us-events.api"
     ],
     "cnames": [],
@@ -21,20 +20,42 @@
     "resources": [
         {
             "rule": "iheart\\.com\\/privacy\\/sdk\\/iheart-privacy\\.umd\\.js",
-            "cookies": 0.000101,
-            "fingerprinting": 0,
+            "cookies": 0.000202,
+            "fingerprinting": 2,
             "subdomains": [
                 "www"
             ],
-            "apis": {},
+            "apis": {
+                "Document.cookie getter": 1,
+                "Document.cookie setter": 1,
+                "window.innerHeight": 1,
+                "window.innerWidth": 1,
+                "Navigator.prototype.language": 1,
+                "Screen.prototype.availWidth": 1,
+                "Screen.prototype.availHeight": 1,
+                "Navigator.prototype.userAgent": 1
+            },
             "sites": 2,
             "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "b569e0f70190b702fd5a4c097f61fde1b8a6ccd5033957444e700e75257b80a1"
+                "8806a33fcec3f08df987a070331f681670098a4784628bbd76d919bd16c32fa0"
             ],
             "type": "Script",
-            "firstPartyCookies": {},
+            "firstPartyCookies": {
+                "iheart_privacy_identity": {
+                    "ttl": 31536003,
+                    "length": 9,
+                    "prevalence": 0.00010092854259184497,
+                    "uniqueness": 1
+                },
+                "iheart-device-id": {
+                    "ttl": 31536003,
+                    "length": 36,
+                    "prevalence": 0.00010092854259184497,
+                    "uniqueness": 1
+                }
+            },
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "coasttocoastam.com",
@@ -85,21 +106,21 @@
             "type": "Script",
             "firstPartyCookies": {
                 "pid": {
-                    "ttl": 15552004,
+                    "ttl": 15552005,
                     "length": 11,
-                    "prevalence": 0.00020165355918531962,
+                    "prevalence": 0.00020185708518368994,
                     "uniqueness": 1
                 },
                 "aid": {
-                    "ttl": 15552004,
+                    "ttl": 15552005,
                     "length": 22,
-                    "prevalence": 0.00020165355918531962,
+                    "prevalence": 0.00020185708518368994,
                     "uniqueness": 1
                 },
                 "auuid": {
-                    "ttl": 15552004,
+                    "ttl": 15552005,
                     "length": 36,
-                    "prevalence": 0.00020165355918531962,
+                    "prevalence": 0.00020185708518368994,
                     "uniqueness": 1
                 }
             },
@@ -206,116 +227,6 @@
             ]
         },
         {
-            "rule": "iheart\\.com\\/api\\/v1\\/account\\/loginOrCreateOauthUser",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "ca.api"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [],
-            "responseHashes": [
-                "72d745c4424b17857a7ad42759002761439e767b31802453cf4f371c3a16c46d"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {
-                "auuid": 0.00020165355918531962
-            },
-            "exampleSites": [
-                "coasttocoastam.com",
-                "www.rollingstone.com"
-            ]
-        },
-        {
-            "rule": "iheart\\.com\\/api\\/v1\\/account\\/loginOrCreateOauthUser",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "ca.api"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {
-                "auuid": 0.00020165355918531962
-            },
-            "exampleSites": [
-                "coasttocoastam.com",
-                "www.rollingstone.com"
-            ]
-        },
-        {
-            "rule": "iheart\\.com\\/api\\/v3\\/locationConfig",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "ca.api"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [],
-            "responseHashes": [
-                "1ff40ba69fc7532a4ccc9a4fe28cbcd3837dedd339577044e3227ae739440989"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "coasttocoastam.com",
-                "www.rollingstone.com"
-            ]
-        },
-        {
-            "rule": "iheart\\.com\\/api\\/v3\\/locationConfig",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "ca.api"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "coasttocoastam.com",
-                "www.rollingstone.com"
-            ]
-        },
-        {
-            "rule": "iheart\\.com\\/media\\/coast\\/on-air-status",
-            "cookies": 0.000202,
-            "fingerprinting": 0,
-            "subdomains": [
-                "pws.radioedit"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000202,
-            "cnames": [],
-            "responseHashes": [
-                "5b68602c05a273b20643a61cc80053b40f8ccf1f137f1eb7c48bdf41e85410a8"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "coasttocoastam.com",
-                "www.coasttocoastam.com"
-            ]
-        },
-        {
             "rule": "iheart\\.com\\/graphql",
             "cookies": 0.000202,
             "fingerprinting": 0,
@@ -327,7 +238,7 @@
             "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "46aed13fdc09c973ac4ae36ad117f22a8c0b66feaec78f5d374effca9c8b251c"
+                "ec70d76b1128309537dd72cdbb947823f07b404a57aed2a2588b38d0f9421ba0"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -338,20 +249,86 @@
             ]
         },
         {
-            "rule": "iheart\\.com\\/events",
+            "rule": "iheart\\.com\\/api\\/v1\\/account\\/loginOrCreateOauthUser",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "us-events.api"
+                "ca.api"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000202,
             "cnames": [],
             "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                "19b6843a643564119d05d7b33a05997523c75dd1a044be7b48ebcbb8efd3f488"
             ],
             "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "auuid": 0.00020185708518368994
+            },
+            "exampleSites": [
+                "coasttocoastam.com",
+                "www.rollingstone.com"
+            ]
+        },
+        {
+            "rule": "iheart\\.com\\/api\\/v1\\/account\\/loginOrCreateOauthUser",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ca.api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "auuid": 0.00020185708518368994
+            },
+            "exampleSites": [
+                "coasttocoastam.com",
+                "www.rollingstone.com"
+            ]
+        },
+        {
+            "rule": "iheart\\.com\\/api\\/v3\\/locationConfig",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ca.api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [
+                "9648b47de9217154b66264e7ee525d75d1ffd8246f83f845dfa2c2ba2cdad207"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "coasttocoastam.com",
+                "www.rollingstone.com"
+            ]
+        },
+        {
+            "rule": "iheart\\.com\\/api\\/v3\\/locationConfig",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ca.api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000202,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -370,12 +347,35 @@
             "sites": 2,
             "prevalence": 0.000202,
             "cnames": [],
+            "responseHashes": [
+                "f48b65225179705bfcb6f50e0dd7b9071f19882bd52a2bd5f9ce9453357a612e"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "coasttocoastam.com",
+                "www.rollingstone.com"
+            ]
+        },
+        {
+            "rule": "iheart\\.com\\/events",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "us-events.api"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "coasttocoastam.com",
+                "www.coasttocoastam.com",
                 "www.rollingstone.com"
             ]
         }
@@ -391,15 +391,15 @@
     ],
     "types": {
         "Script": 14,
-        "XHR": 10,
-        "Preflight": 6
+        "XHR": 8,
+        "Preflight": 7
     },
     "nameservers": [
-        "pdns196.ultradns.info",
-        "pdns196.ultradns.biz",
-        "pdns196.ultradns.com",
         "pdns196.ultradns.co.uk",
         "pdns196.ultradns.org",
-        "pdns196.ultradns.net"
+        "pdns196.ultradns.com",
+        "pdns196.ultradns.net",
+        "pdns196.ultradns.biz",
+        "pdns196.ultradns.info"
     ]
 }

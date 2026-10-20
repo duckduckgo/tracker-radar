@@ -7,7 +7,8 @@
     "prevalence": 0.000201,
     "sites": 2,
     "subdomains": [
-        "cdn"
+        "cdn",
+        "api"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -23,8 +24,58 @@
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "ac21f4111d8da5446cf05d2155391f9a547f49ed93b65dcc6ce903dc6d62b2df"
+            ],
             "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "game-on.no",
+                "www.cg.no"
+            ]
+        },
+        {
+            "rule": "zigpoll\\.com\\/static\\/js\\/main\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2,
+                "window.localStorage": 2,
+                "window.sessionStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "8e11c5debc0ade0157bf0b590a2ad9a66141a35724f979c0dd07394f3b58066f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "game-on.no",
+                "www.cg.no"
+            ]
+        },
+        {
+            "rule": "zigpoll\\.com\\/consent-policy",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "256d11c929353e98fa5d139940d928141bdeb1d50ccb013e80e57ebc3f740d6e"
+            ],
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -39,15 +90,16 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.6666666666666666
+            "prevalence": 0.6
         },
         {
             "domain": "shopify.com",
-            "prevalence": 0.3333333333333333
+            "prevalence": 0.4
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 4,
+        "XHR": 2
     },
     "nameservers": [
         "lee.ns.cloudflare.com",

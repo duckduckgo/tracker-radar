@@ -4,12 +4,18 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.000101,
-    "sites": 1,
+    "prevalence": 0.000302,
+    "sites": 3,
     "subdomains": [
-        "kraken",
+        "ssp-rambler",
         "cs",
-        "sync"
+        "kraken",
+        "ssp01-rambler",
+        "imgserve",
+        "profile",
+        "imgredirect",
+        "sync",
+        "imgstats"
     ],
     "cnames": [
         {
@@ -17,8 +23,28 @@
             "resolved": "cs.ad-tech.ru"
         },
         {
+            "original": "imgredirect.rambler.ru",
+            "resolved": "imgredirect.ad-tech.ru"
+        },
+        {
+            "original": "imgserve.rambler.ru",
+            "resolved": "imgserve.ad-tech.ru"
+        },
+        {
+            "original": "imgstats.rambler.ru",
+            "resolved": "imgstats.ad-tech.ru"
+        },
+        {
             "original": "kraken.rambler.ru",
             "resolved": "kraken.ad-tech.ru"
+        },
+        {
+            "original": "ssp.rambler.ru",
+            "resolved": "ssp-rambler.ad-tech.ru"
+        },
+        {
+            "original": "ssp01.rambler.ru",
+            "resolved": "ssp01-rambler.ad-tech.ru"
         },
         {
             "original": "sync.rambler.ru",
@@ -28,42 +54,50 @@
     "fingerprinting": 2,
     "resources": [
         {
-            "rule": "ad-tech\\.ru\\/cnt\\/v2\\/",
-            "cookies": 0.000201,
-            "fingerprinting": 0,
+            "rule": "ad-tech\\.ru\\/capirs_async\\.js",
+            "cookies": 0.000302,
+            "fingerprinting": 2,
             "subdomains": [
-                "kraken"
+                "ssp-rambler"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000302,
             "cnames": [
                 {
-                    "original": "kraken.rambler.ru",
-                    "resolved": "kraken.ad-tech.ru"
+                    "original": "ssp.rambler.ru",
+                    "resolved": "ssp-rambler.ad-tech.ru"
                 }
             ],
             "responseHashes": [
-                "d346801abbf9bb4e9e9a055239053d4ab5596514304f601a6c70604187acb744"
+                "772531c3d53d1911e5121e8ccb0ec12ade70e1ebae445d8d4c9708222dd80aab"
             ],
-            "type": "XHR",
-            "firstPartyCookies": {},
+            "type": "Script",
+            "firstPartyCookies": {
+                "adtech_uid": {
+                    "ttl": 31536007,
+                    "length": 51,
+                    "prevalence": 0.0002011465352509303,
+                    "uniqueness": 1
+                }
+            },
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "livejournal.com",
+                "rambler.ru",
+                "lenta.ru",
                 "peremogi.livejournal.com"
             ]
         },
         {
             "rule": "ad-tech\\.ru\\/api\\/v2\\/events",
-            "cookies": 0.000201,
+            "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
                 "cs"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 4,
+            "prevalence": 0.000402,
             "cnames": [
                 {
                     "original": "cs.rambler.ru",
@@ -77,20 +111,167 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "livejournal.com",
+                "rambler.ru",
+                "finance.rambler.ru",
+                "lenta.ru",
                 "peremogi.livejournal.com"
             ]
         },
         {
-            "rule": "ad-tech\\.ru\\/emily",
+            "rule": "ad-tech\\.ru\\/cnt\\/v2\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "kraken"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000402,
+            "cnames": [
+                {
+                    "original": "kraken.rambler.ru",
+                    "resolved": "kraken.ad-tech.ru"
+                }
+            ],
+            "responseHashes": [
+                "d346801abbf9bb4e9e9a055239053d4ab5596514304f601a6c70604187acb744"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rambler.ru",
+                "finance.rambler.ru",
+                "lenta.ru",
+                "peremogi.livejournal.com"
+            ]
+        },
+        {
+            "rule": "ad-tech\\.ru\\/context\\.jsp",
             "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ssp01-rambler"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000402,
+            "cnames": [
+                {
+                    "original": "ssp01.rambler.ru",
+                    "resolved": "ssp01-rambler.ad-tech.ru"
+                }
+            ],
+            "responseHashes": [
+                "15aa94eeef8e6bcc8a3a56278c93ec413495686a0c534bef3e159bf8ce5b3fba",
+                "a4e113bb961036a729f9501287a09e35eceabc9bede8142caf682ad814236228",
+                "219c11e2e86c6c481f02a5a7d3411501fb40326c3a0b2769ddea15df97d58084"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_ym_uid": 0.0002011465352509303,
+                "_ym_d": 0.0002011465352509303
+            },
+            "exampleSites": [
+                "rambler.ru",
+                "finance.rambler.ru",
+                "lenta.ru",
+                "peremogi.livejournal.com"
+            ]
+        },
+        {
+            "rule": "ad-tech\\.ru\\/file\\.jsp",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "imgserve"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000402,
+            "cnames": [
+                {
+                    "original": "imgserve.rambler.ru",
+                    "resolved": "imgserve.ad-tech.ru"
+                }
+            ],
+            "responseHashes": [
+                "9773fa1bb88ed28894eba9b59da9c18695137632980891c00311b6aedbed5951",
+                "841c29f2f238e91d05214dd51020d6a14dbf37b4473b775d9ba831717b43e80c",
+                "46ec6f0611bcdd780ce7a3d77bb25b89a190d5225eab049b1cd015fdf1083bc2"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rambler.ru",
+                "finance.rambler.ru",
+                "lenta.ru",
+                "peremogi.livejournal.com"
+            ]
+        },
+        {
+            "rule": "ad-tech\\.ru\\/sandbox",
+            "cookies": 0.000302,
+            "fingerprinting": 0,
+            "subdomains": [
+                "profile"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000302,
+            "cnames": [],
+            "responseHashes": [
+                "34e98c49645a67fa9fe1d9b276e3396a799ec7f47003427f01faf17c0f97408f",
+                "b3dbd9f50881d5f9b288e728eb1414dc75a5d771d8232fc9d1509a4608277f1b"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rambler.ru",
+                "lenta.ru",
+                "peremogi.livejournal.com"
+            ]
+        },
+        {
+            "rule": "ad-tech\\.ru\\/file\\.jsp",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "imgredirect"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "imgredirect.rambler.ru",
+                    "resolved": "imgredirect.ad-tech.ru"
+                }
+            ],
+            "responseHashes": [
+                "6f327d868f7dfb7fa8ec1633b4cb6e0a3ae9d59ba97cb79ef463e91e9dd681c9"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rambler.ru",
+                "finance.rambler.ru"
+            ]
+        },
+        {
+            "rule": "ad-tech\\.ru\\/emily",
+            "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
                 "sync"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 4,
+            "prevalence": 0.000402,
             "cnames": [
                 {
                     "original": "sync.rambler.ru",
@@ -102,24 +283,56 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "livejournal.com",
+                "rambler.ru",
+                "finance.rambler.ru",
+                "lenta.ru",
                 "peremogi.livejournal.com"
             ]
         },
         {
             "rule": "ad-tech\\.ru\\/set",
-            "cookies": 0.000201,
+            "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
                 "sync"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000402,
+            "cnames": [
+                {
+                    "original": "sync.rambler.ru",
+                    "resolved": "sync.ad-tech.ru"
+                }
+            ],
+            "responseHashes": [
+                "77b1d2c0857d4e95d4c2ae7aa0abc5aaafa6bd4581b31203d1592759c26f5c44",
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rambler.ru",
+                "finance.rambler.ru",
+                "lenta.ru",
+                "peremogi.livejournal.com"
+            ]
+        },
+        {
+            "rule": "ad-tech\\.ru\\/file\\.jsp",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "imgstats"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [
                 {
-                    "original": "sync.rambler.ru",
-                    "resolved": "sync.ad-tech.ru"
+                    "original": "imgstats.rambler.ru",
+                    "resolved": "imgstats.ad-tech.ru"
                 }
             ],
             "responseHashes": [
@@ -129,39 +342,45 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "livejournal.com",
-                "peremogi.livejournal.com"
+                "rambler.ru",
+                "finance.rambler.ru"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000101,
+    "cookies": 0.000302,
     "topInitiators": [
         {
             "domain": "top100.ru",
-            "prevalence": 0.7230769230769231
-        },
-        {
-            "domain": "ad-tech.ru",
-            "prevalence": 0.2153846153846154
-        },
-        {
-            "domain": "livejournal.net",
-            "prevalence": 0.03076923076923077
+            "prevalence": 0.5189504373177842
         },
         {
             "domain": "first party",
-            "prevalence": 0.015384615384615385
+            "prevalence": 0.30612244897959184
+        },
+        {
+            "domain": "ad-tech.ru",
+            "prevalence": 0.13994169096209913
+        },
+        {
+            "domain": "dsp-rambler.ru",
+            "prevalence": 0.023323615160349854
         },
         {
             "domain": "rambler.ru",
-            "prevalence": 0.015384615384615385
+            "prevalence": 0.0058309037900874635
+        },
+        {
+            "domain": "livejournal.net",
+            "prevalence": 0.0058309037900874635
         }
     ],
     "types": {
-        "XHR": 4,
-        "Image": 4
+        "Script": 3,
+        "XHR": 16,
+        "Document": 5,
+        "Image": 10
     },
     "nameservers": [
         "ns3.ad-tech.ru",

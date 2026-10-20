@@ -7,64 +7,40 @@
     "prevalence": 0.000201,
     "sites": 2,
     "subdomains": [
-        "script",
-        "cdn.s3",
-        "cdn.micro",
         "sdk",
+        "cdn.micro",
         "micro",
-        "cdn"
+        "script",
+        "cdn.s3"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
         {
-            "rule": "pop-convert\\.com\\/new-micro\\/production\\.pc\\.min\\.js",
+            "rule": "pop-convert\\.com\\/sdk\\.js",
             "cookies": 0,
             "fingerprinting": 1,
             "subdomains": [
-                "script"
+                "sdk"
             ],
             "apis": {
-                "window.localStorage": 2,
-                "window.sessionStorage": 2,
-                "Navigator.prototype.userAgent": 2,
-                "Navigator.prototype.maxTouchPoints": 1
+                "window.localStorage": 1,
+                "window.sessionStorage": 1,
+                "Navigator.prototype.userAgent": 1,
+                "Date.prototype.getTime": 1
             },
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "inspirepearls.com",
-                "uk.store.tapo.com"
-            ]
-        },
-        {
-            "rule": "pop-convert\\.com\\/pcjs\\.production\\.min\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "cdn.s3"
-            ],
-            "apis": {
-                "window.localStorage": 2,
-                "Navigator.prototype.userAgent": 2,
-                "Date.prototype.getTime": 2
-            },
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [
-                "cc5a9e2900a9c3dc52995ce79b1aeb92c3edf4d0c3a129922a460845b782d56e"
+                "82e505ffdd32734933cba92aa55c55bad4157f2db5634c9bde8589eee795e67c"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "inspirepearls.com",
+                "ugreen.com",
+                "ai.ugreen.com",
                 "uk.store.tapo.com"
             ]
         },
@@ -86,29 +62,7 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "inspirepearls.com",
-                "uk.store.tapo.com"
-            ]
-        },
-        {
-            "rule": "pop-convert\\.com\\/sdk\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "sdk"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "82e505ffdd32734933cba92aa55c55bad4157f2db5634c9bde8589eee795e67c"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "inspirepearls.com",
+                "ugreen.com",
                 "uk.store.tapo.com"
             ]
         },
@@ -130,29 +84,57 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "inspirepearls.com",
+                "ugreen.com",
                 "uk.store.tapo.com"
             ]
         },
         {
-            "rule": "pop-convert\\.com\\/micro\\/api\\/sites",
+            "rule": "pop-convert\\.com\\/new-micro\\/production\\.pc\\.min\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
-                "cdn"
+                "script"
             ],
-            "apis": {},
+            "apis": {
+                "window.localStorage": 2,
+                "window.sessionStorage": 2,
+                "Navigator.prototype.userAgent": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ugreen.com",
+                "uk.store.tapo.com"
+            ]
+        },
+        {
+            "rule": "pop-convert\\.com\\/pcjs\\.production\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn.s3"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Navigator.prototype.userAgent": 1,
+                "Date.prototype.getTime": 1
+            },
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "6651ebb4aa28f3ffa0bb60d08d6146df258a0419a11771568c2d890637ecca34"
+                "cc5a9e2900a9c3dc52995ce79b1aeb92c3edf4d0c3a129922a460845b782d56e"
             ],
-            "type": "Fetch",
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "inspirepearls.com",
+                "ugreen.com",
                 "uk.store.tapo.com"
             ]
         }
@@ -163,12 +145,16 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.9230769230769231
+        },
+        {
+            "domain": "shopify.com",
+            "prevalence": 0.07692307692307693
         }
     ],
     "types": {
-        "Script": 6,
-        "Fetch": 6
+        "Script": 7,
+        "Fetch": 4
     },
     "nameservers": [
         "adele.ns.cloudflare.com",

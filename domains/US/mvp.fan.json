@@ -4,13 +4,13 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.00011,
-    "sites": 16,
+    "prevalence": 0.0000823,
+    "sites": 12,
     "subdomains": [
         "sdk"
     ],
     "cnames": [],
-    "fingerprinting": 2,
+    "fingerprinting": 3,
     "resources": [
         {
             "rule": "mvp\\.fan\\/web-sdk\\/0\\.19\\.1\\/index\\.js",
@@ -52,13 +52,16 @@
         {
             "rule": "mvp\\.fan\\/web-sdk\\/js\\/hls\\.js@1\\.5\\.20\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "sdk"
             ],
-            "apis": {},
-            "sites": 12,
-            "prevalence": 0.0000823,
+            "apis": {
+                "MediaSource.isTypeSupported": 1,
+                "URL.createObjectURL": 1
+            },
+            "sites": 10,
+            "prevalence": 0.0000686,
             "cnames": [],
             "responseHashes": [
                 "df5455504c2131036b309b6f9a21a05540a965b619ffbe757c6afe44146ddc2f"
@@ -68,15 +71,13 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "nascar.com",
-                "www.hockeyallsvenskan.se",
-                "www.icc-cricket.com",
                 "www.israelhayom.co.il",
                 "www.itftennis.com",
                 "www.legaseriea.it",
+                "www.motogp.com",
                 "www.nascar.com",
-                "www.opel-hbl.de",
-                "www.pgatour.com",
                 "www.premierleague.com",
+                "www.tottenhamhotspur.com",
                 "www.tsn.ca",
                 "www.worldsurfleague.com"
             ]
@@ -89,8 +90,8 @@
                 "sdk"
             ],
             "apis": {},
-            "sites": 13,
-            "prevalence": 0.0000892,
+            "sites": 11,
+            "prevalence": 0.0000754,
             "cnames": [],
             "responseHashes": [
                 "d53b62adbf1a11141eda213c64b2922016a544808f511e2a5f031720f4bbcf29"
@@ -100,16 +101,14 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "nascar.com",
-                "www.hockeyallsvenskan.se",
-                "www.icc-cricket.com",
                 "www.israelhayom.co.il",
                 "www.itftennis.com",
                 "www.legaseriea.it",
                 "www.lpga.com",
+                "www.motogp.com",
                 "www.nascar.com",
-                "www.opel-hbl.de",
-                "www.pgatour.com",
                 "www.premierleague.com",
+                "www.tottenhamhotspur.com",
                 "www.tsn.ca",
                 "www.worldsurfleague.com"
             ]
@@ -134,7 +133,8 @@
                 "Screen.prototype.availWidth": 2,
                 "Screen.prototype.availHeight": 2,
                 "Screen.prototype.colorDepth": 2,
-                "Navigator.prototype.connection": 2
+                "Navigator.prototype.connection": 2,
+                "Date.prototype.getTime": 1
             },
             "sites": 2,
             "prevalence": 0.0000137,
@@ -149,6 +149,42 @@
                 "itftennis.com",
                 "www.premierleague.com"
             ]
+        },
+        {
+            "rule": "mvp\\.fan\\/web-sdk\\/0\\.14\\.3\\/index\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "sdk"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.innerWidth": 2,
+                "window.innerHeight": 2,
+                "window.localStorage": 2,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 2,
+                "Navigator.prototype.storage": 2,
+                "window.indexedDB": 2,
+                "Navigator.prototype.language": 2,
+                "Screen.prototype.availWidth": 2,
+                "Screen.prototype.availHeight": 2,
+                "Screen.prototype.colorDepth": 2,
+                "Navigator.prototype.connection": 2,
+                "Date.prototype.getTime": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "77dc61a4a9882c5fda91ca272eb9120045907106bb7a2afcff94e3f23837da33"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "motogp.com",
+                "www.motogp.com"
+            ]
         }
     ],
     "categories": [],
@@ -157,29 +193,25 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.8688524590163934
+            "prevalence": 0.85
         },
         {
             "domain": "azureedge.net",
-            "prevalence": 0.04918032786885246
+            "prevalence": 0.075
         },
         {
             "domain": "d3qf8nvav5av0u.cloudfront.net",
-            "prevalence": 0.04918032786885246
-        },
-        {
-            "domain": "priv.center",
-            "prevalence": 0.03278688524590164
+            "prevalence": 0.075
         }
     ],
     "types": {
         "Script": 16,
-        "Stylesheet": 13
+        "Stylesheet": 11
     },
     "nameservers": [
-        "ns4-03.azure-dns.info",
         "ns1-03.azure-dns.com",
+        "ns2-03.azure-dns.net",
         "ns3-03.azure-dns.org",
-        "ns2-03.azure-dns.net"
+        "ns4-03.azure-dns.info"
     ]
 }

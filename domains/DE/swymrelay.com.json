@@ -10,13 +10,54 @@
     "prevalence": 0.000201,
     "sites": 2,
     "subdomains": [
-        "procdn",
         "swymstore-v3pro-01",
-        "swymstore-v3free-01"
+        "procdn"
     ],
     "cnames": [],
     "fingerprinting": 0,
     "resources": [
+        {
+            "rule": "swymrelay\\.com\\/api\\/v3\\/provider\\/checkAndGet",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "swymstore-v3pro-01"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "5f4ab07839571f5011967c77a95de810298dea62c4f127cbeb013a5b322d8d8a"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "benetton.com",
+                "www.shelly.com"
+            ]
+        },
+        {
+            "rule": "swymrelay\\.com\\/api\\/v2\\/provider\\/collect",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "swymstore-v3pro-01"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "benetton.com",
+                "www.shelly.com"
+            ]
+        },
         {
             "rule": "swymrelay\\.com\\/code\\/v3\\/swym_fonts\\.woff2",
             "cookies": 0,
@@ -36,31 +77,6 @@
                 "shelly.com",
                 "www.shelly.com"
             ]
-        },
-        {
-            "rule": "swymrelay\\.com\\/api\\/v3\\/provider\\/checkAndGet",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "swymstore-v3pro-01",
-                "swymstore-v3free-01"
-            ],
-            "apis": {},
-            "sites": 3,
-            "prevalence": 0.000302,
-            "cnames": [],
-            "responseHashes": [
-                "d7afaeaeb5c03ea256811a09eb9db8b691fcc20bd4dead315be1214d62d684c7",
-                "046ce636bf78c32d05b4f54d05cc1a56689fa2c02e9efcd61df4e98320424711"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "shelly.com",
-                "www.shelly.com",
-                "www.uaudio.com"
-            ]
         }
     ],
     "categories": [],
@@ -69,12 +85,16 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.625
+        },
+        {
+            "domain": "event-observer-collector.js",
+            "prevalence": 0.375
         }
     ],
     "types": {
-        "Font": 2,
-        "XHR": 3
+        "XHR": 4,
+        "Font": 2
     },
     "nameservers": [
         "ns66.domaincontrol.com",
