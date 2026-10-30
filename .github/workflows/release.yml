@@ -10,15 +10,15 @@ jobs:
     runs-on: ubuntu-latest
     if: "!contains(github.event.head_commit.message, 'ci skip') && !contains(github.event.head_commit.message, 'skip ci')"
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v5
 
       - name: Prepare repository
         run: git fetch --unshallow --tags
 
-      - name: Use Node.js 18.x
-        uses: actions/setup-node@v3
+      - name: Use Node.js from .nvmrc
+        uses: actions/setup-node@v5
         with:
-          node-version: 18.x
+          node-version-file: .nvmrc
 
       - name: Create Release
         env:
