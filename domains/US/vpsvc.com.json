@@ -24,7 +24,7 @@
     "resources": [
         {
             "rule": "vpsvc\\.com\\/static\\/v3\\/pricing-context-module\\.min\\.js",
-            "cookies": 0,
+            "cookies": 0.00000686,
             "fingerprinting": 1,
             "subdomains": [
                 "pricing-context-module.products"
@@ -33,7 +33,8 @@
                 "Navigator.prototype.appName": 2,
                 "Date.prototype.getTime": 2,
                 "Navigator.prototype.userAgent": 2,
-                "Document.cookie getter": 2
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 1
             },
             "sites": 2,
             "prevalence": 0.0000137,
@@ -42,7 +43,14 @@
                 "915c2205b9570e5b31de59299e935545688ada7ccf8ad0c5febfa07e932b8360"
             ],
             "type": "Script",
-            "firstPartyCookies": {},
+            "firstPartyCookies": {
+                "PCXT": {
+                    "ttl": 604801,
+                    "length": 827,
+                    "prevalence": 0.000006864124652503689,
+                    "uniqueness": 1
+                }
+            },
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "vistaprint.co.uk",
@@ -123,18 +131,15 @@
                 "log-forwarder.product-page-layouts"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000206,
+            "sites": 2,
+            "prevalence": 0.0000137,
             "cnames": [],
-            "responseHashes": [
-                "c3f51dc6b83c8bbb9425c4e084a87e25edc038102e3c7dd3371694ad62b80e78"
-            ],
-            "type": "Fetch",
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "vistaprint.co.uk",
-                "www.vistaprint.co.uk",
                 "www.vistaprint.fr"
             ]
         },
@@ -149,8 +154,10 @@
             "sites": 3,
             "prevalence": 0.0000206,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "c3f51dc6b83c8bbb9425c4e084a87e25edc038102e3c7dd3371694ad62b80e78"
+            ],
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -178,7 +185,7 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "5e7a72b398b97387911f4913763815f6e99d206768f340cb49109c46fc670b7b"
+                "f016aa275755e0d236161620ef2899376e3a9dc855485a5947c07fa5e92c3374"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -200,7 +207,7 @@
             "prevalence": 0.0000206,
             "cnames": [],
             "responseHashes": [
-                "ffe3f9df9a2d3475638bc634a68d0e350ce58f32492766096c0a7137ce705623"
+                "4777b23ec80f26eed9b981b196f5fab8eeb76bcd9bd783dc98e2f561556dffd5"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -290,7 +297,7 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "da8d437cc11dfb7ce92a19720c6f1d275530dc2a3f72cdd03e46b5b27d343739"
+                "aa3845b850bb24e853d3a8a1f12681d668fb2ab00eaa2d2b2c7d3d7bc6d61bd9"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -332,7 +339,7 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "22dc1721c72116ab152180b335602c5048233d0a06377c4cb263f0d0971d7786"
+                "59dc08e58203342b5d4136975b75d57ea00a9a9868476a3b9a381123b030f720"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -371,14 +378,18 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.96
+        },
+        {
+            "domain": "vpdcp.com",
+            "prevalence": 0.04
         }
     ],
     "types": {
         "Script": 6,
         "Image": 4,
         "Fetch": 16,
-        "Preflight": 7
+        "Preflight": 6
     },
     "nameservers": [
         "dara.ns.cloudflare.com",

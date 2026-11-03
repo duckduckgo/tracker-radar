@@ -7,27 +7,32 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.00000686,
-    "sites": 1,
+    "prevalence": 0.0000137,
+    "sites": 2,
     "subdomains": [
+        "cdn",
+        "analytics",
         "butler"
     ],
     "cnames": [],
-    "fingerprinting": 3,
+    "fingerprinting": 1,
     "resources": [
         {
-            "rule": "ibj\\.com\\/adserve\\/",
+            "rule": "ibj\\.com\\/wp-content\\/themes\\/ibj\\/js\\/vue-2-6-10\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
-                "butler"
+                "cdn"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Event.prototype.timeStamp": 2
+            },
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "4ff5539bcb9988a00b6f2702d4616bc0af3ee65fee50ca8f97191c070a859a1a"
+                "72194d152571dd375c4365e5c3b4af9db2c06af0102ced18fcb062597d38be26"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -38,20 +43,105 @@
             ]
         },
         {
-            "rule": "ibj\\.com\\/adserve\\/",
+            "rule": "ibj\\.com\\/js\\/insight\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 1,
+            "subdomains": [
+                "analytics"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "a07525eac13d3ce402b538a62c2f007a48b8c53549b7f63bbf63d9579417341a"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "insight": {
+                    "ttl": 602,
+                    "length": 36,
+                    "prevalence": 0.000013728249305007378,
+                    "uniqueness": 1
+                },
+                "insight_visitor": {
+                    "ttl": 31536002,
+                    "length": 36,
+                    "prevalence": 0.000013728249305007378,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "theindianalawyer.com",
+                "www.theindianalawyer.com"
+            ]
+        },
+        {
+            "rule": "ibj\\.com\\/app\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "butler"
+            ],
+            "apis": {
+                "window.sessionStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "23e074393c54f768a4cdb3d220670a38ded9ed84c4f86039296e0d233014aef7"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "theindianalawyer.com",
+                "www.theindianalawyer.com"
+            ]
+        },
+        {
+            "rule": "ibj\\.com\\/api\\/events",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "butler"
+                "analytics"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "theindianalawyer.com",
+                "www.theindianalawyer.com"
+            ]
+        },
+        {
+            "rule": "ibj\\.com\\/api\\/events",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "analytics"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                "b666bd36adb54d87522f88450b592f6052acc6abe9ae9223134153759ab642bb"
             ],
-            "type": "XHR",
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -62,7 +152,7 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.00000686,
+    "cookies": 0.0000137,
     "topInitiators": [
         {
             "domain": "first party",
@@ -70,8 +160,9 @@
         }
     ],
     "types": {
-        "Script": 2,
-        "XHR": 2
+        "Script": 6,
+        "Preflight": 2,
+        "Fetch": 2
     },
     "nameservers": [
         "daisy.ns.cloudflare.com",

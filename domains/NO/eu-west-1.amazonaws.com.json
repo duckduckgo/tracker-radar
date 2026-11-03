@@ -9,14 +9,15 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.00302,
-    "sites": 30,
+    "prevalence": 0.00322,
+    "sites": 32,
     "subdomains": [
         "storefront-cookie-consent-prd.s3",
         "s3",
         "cognito-identity",
         "firehose",
-        "resursbank-prd-images.s3"
+        "resursbank-prd-images.s3",
+        "sd-mkt-grupo-pixel-bucket-js-pro.s3"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -142,7 +143,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "2cbcbced3d702c3f16d1206376991a4dbfe53e923c78214482f37bee49bac0f0"
+                "839e6b6405dd3c40d32a1e4bc6eee3c63d8917b3aa9e3ae1b3d52e25f50aa700"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -150,28 +151,6 @@
             "exampleSites": [
                 "lydenavradio.no",
                 "www.lydenavradio.no"
-            ]
-        },
-        {
-            "rule": "eu-west-1\\.amazonaws\\.com\\/localoffers\\.innocode-cdn\\.com\\/production\\/uploads\\/source\\/logo\\/18420\\/19006552-264f-4603-b9f5-0029a081f8aa\\.jpg",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "s3"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "c4c8fd1600b40d2614539ec7d70b7e13296931870efc79f8d96e09740526cd9d"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "osogfusa.no",
-                "www.osogfusa.no"
             ]
         },
         {
@@ -261,48 +240,78 @@
                 "resursbank.no",
                 "www.resursbank.no"
             ]
+        },
+        {
+            "rule": "eu-west-1\\.amazonaws\\.com\\/v1\\.3\\.6\\/gauss-sa-tag\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "sd-mkt-grupo-pixel-bucket-js-pro.s3"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 2,
+                "Document.cookie getter": 2,
+                "window.sessionStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "verisure.no",
+                "www.verisure.no"
+            ]
         }
     ],
     "categories": [
         "CDN"
     ],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.000101,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.7647058823529411
-        },
-        {
-            "domain": "d32tdr35c4icxo.cloudfront.net",
-            "prevalence": 0.08823529411764706
+            "prevalence": 0.813953488372093
         },
         {
             "domain": "innocode.no",
-            "prevalence": 0.07352941176470588
+            "prevalence": 0.11627906976744186
+        },
+        {
+            "domain": "insided.com",
+            "prevalence": 0.023255813953488372
         },
         {
             "domain": "piano.io",
-            "prevalence": 0.029411764705882353
-        },
-        {
-            "domain": "jaguarlandrover.com",
-            "prevalence": 0.029411764705882353
+            "prevalence": 0.011627906976744186
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.014705882352941176
+            "prevalence": 0.011627906976744186
+        },
+        {
+            "domain": "rum.us-east-1.amazonaws.com",
+            "prevalence": 0.011627906976744186
+        },
+        {
+            "domain": "usercentrics.eu",
+            "prevalence": 0.011627906976744186
         }
     ],
     "types": {
-        "Image": 18,
+        "Image": 16,
         "Preflight": 2,
-        "Fetch": 2
+        "Fetch": 2,
+        "Script": 2
     },
     "nameservers": [
         "ns-290.awsdns-36.com",
         "ns-1189.awsdns-20.org",
-        "ns-549.awsdns-04.net",
-        "ns-1927.awsdns-48.co.uk"
+        "ns-1927.awsdns-48.co.uk",
+        "ns-549.awsdns-04.net"
     ]
 }

@@ -8,51 +8,30 @@
     "sites": 20,
     "subdomains": [
         "rts-static-prod",
-        "rts-euc",
-        "rts-in"
+        "rts-euc-fcht",
+        "rts-us-fd",
+        "rts-euc"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
         {
-            "rule": "freshworksapi\\.com\\/us\\/rts-min\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "rts-static-prod"
-            ],
-            "apis": {
-                "window.localStorage": 6,
-                "Navigator.prototype.userAgent": 6
-            },
-            "sites": 6,
-            "prevalence": 0.000603,
-            "cnames": [],
-            "responseHashes": [
-                "76644a2494f1b18ce80745c7eca523aae90c5aac663e4a2586f8b2b33ceb4f54"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "cutmy.co.uk",
-                "help.na.panasonic.com",
-                "www.gl-inet.com",
-                "www.jessops.com",
-                "www.peachguitars.com",
-                "www.weirdfish.co.uk"
-            ]
-        },
-        {
             "rule": "freshworksapi\\.com\\/euc\\/rts-min\\.js",
             "cookies": 0,
-            "fingerprinting": 1,
+            "fingerprinting": 2,
             "subdomains": [
                 "rts-static-prod"
             ],
             "apis": {
-                "window.localStorage": 10,
-                "Navigator.prototype.userAgent": 10
+                "window.localStorage": 9,
+                "Navigator.prototype.userAgent": 9,
+                "NavigatorUAData.prototype.brands": 1,
+                "NavigatorUAData.prototype.platform": 1,
+                "Navigator.prototype.connection": 1,
+                "Navigator.prototype.hardwareConcurrency": 1,
+                "Navigator.prototype.onLine": 1,
+                "Date.prototype.getTime": 1,
+                "URL.createObjectURL": 1
             },
             "sites": 10,
             "prevalence": 0.001,
@@ -64,16 +43,106 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "insulation4less.co.uk",
+                "build4less.co.uk",
+                "festive-lights.com",
                 "my-picture.co.uk",
-                "swiftdirectblinds.co.uk",
+                "office.co.uk",
                 "thegrasspeople.com",
-                "www.absolute-snow.co.uk",
                 "www.blackcountrymetalworks.co.uk",
-                "www.brewers.co.uk",
                 "www.dunelondon.com",
                 "www.haven.com",
+                "www.office.co.uk",
                 "www.seasaltcornwall.com"
+            ]
+        },
+        {
+            "rule": "freshworksapi\\.com\\/ws",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "rts-euc-fcht",
+                "rts-us-fd",
+                "rts-euc"
+            ],
+            "apis": {},
+            "sites": 8,
+            "prevalence": 0.000804,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "_fw_crm_v": 0.00010045203415369161
+            },
+            "exampleSites": [
+                "festive-lights.com",
+                "games.dailymail.co.uk",
+                "games.washingtonpost.com",
+                "puzzles.independent.co.uk",
+                "puzzles.standard.co.uk",
+                "www.citylink.co.uk",
+                "www.megabus.co.uk",
+                "www.vetuk.co.uk"
+            ]
+        },
+        {
+            "rule": "freshworksapi\\.com\\/us\\/fd-wdgt\\/rts-min\\.js",
+            "cookies": 0,
+            "fingerprinting": 2,
+            "subdomains": [
+                "rts-static-prod"
+            ],
+            "apis": {
+                "window.localStorage": 3,
+                "Navigator.prototype.userAgent": 3,
+                "NavigatorUAData.prototype.brands": 3,
+                "NavigatorUAData.prototype.platform": 3,
+                "Navigator.prototype.connection": 3,
+                "Navigator.prototype.hardwareConcurrency": 3,
+                "Navigator.prototype.onLine": 3,
+                "Date.prototype.getTime": 3,
+                "URL.createObjectURL": 3
+            },
+            "sites": 4,
+            "prevalence": 0.000402,
+            "cnames": [],
+            "responseHashes": [
+                "ab0821778363a022c386c2cf865b0eff58f6441d3e96393e542443a536319002"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dailymail.co.uk",
+                "games.washingtonpost.com",
+                "puzzles.independent.co.uk",
+                "puzzles.standard.co.uk"
+            ]
+        },
+        {
+            "rule": "freshworksapi\\.com\\/us\\/rts-min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "rts-static-prod"
+            ],
+            "apis": {
+                "window.localStorage": 3,
+                "Navigator.prototype.userAgent": 3
+            },
+            "sites": 3,
+            "prevalence": 0.000301,
+            "cnames": [],
+            "responseHashes": [
+                "76644a2494f1b18ce80745c7eca523aae90c5aac663e4a2586f8b2b33ceb4f54"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "panasonic.com",
+                "www.jessops.com",
+                "www.peachguitars.com"
             ]
         },
         {
@@ -84,18 +153,18 @@
                 "rts-static-prod"
             ],
             "apis": {
-                "window.localStorage": 2,
-                "Navigator.prototype.userAgent": 2,
-                "NavigatorUAData.prototype.brands": 2,
-                "NavigatorUAData.prototype.platform": 2,
-                "Navigator.prototype.connection": 2,
-                "Navigator.prototype.hardwareConcurrency": 2,
-                "Navigator.prototype.onLine": 2,
-                "Date.prototype.getTime": 2,
-                "URL.createObjectURL": 2
+                "window.localStorage": 3,
+                "Navigator.prototype.userAgent": 3,
+                "NavigatorUAData.prototype.brands": 3,
+                "NavigatorUAData.prototype.platform": 3,
+                "Navigator.prototype.connection": 3,
+                "Navigator.prototype.hardwareConcurrency": 3,
+                "Navigator.prototype.onLine": 3,
+                "Date.prototype.getTime": 3,
+                "URL.createObjectURL": 3
             },
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [
                 "5759e828e41e5b76ed007098378dc3be4d0eb80b96c6f120e2a98d2e7e42b3ef"
@@ -105,62 +174,8 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "citylink.co.uk",
-                "www.megabus.co.uk"
-            ]
-        },
-        {
-            "rule": "freshworksapi\\.com\\/ws",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "rts-euc",
-                "rts-in"
-            ],
-            "apis": {},
-            "sites": 4,
-            "prevalence": 0.000402,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "WebSocket",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "citylink.co.uk",
-                "www.idealworld.tv",
                 "www.megabus.co.uk",
-                "www.tjc.co.uk"
-            ]
-        },
-        {
-            "rule": "freshworksapi\\.com\\/ind\\/fd-wdgt\\/rts-min\\.js",
-            "cookies": 0,
-            "fingerprinting": 2,
-            "subdomains": [
-                "rts-static-prod"
-            ],
-            "apis": {
-                "window.localStorage": 2,
-                "Navigator.prototype.userAgent": 2,
-                "NavigatorUAData.prototype.brands": 2,
-                "NavigatorUAData.prototype.platform": 2,
-                "Navigator.prototype.connection": 2,
-                "Navigator.prototype.hardwareConcurrency": 2,
-                "Navigator.prototype.onLine": 2,
-                "Date.prototype.getTime": 2,
-                "URL.createObjectURL": 2
-            },
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "d4a956a477c831dc9e3e941a7177aea93a6b9f4be2972c15485bea486ce98230"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "idealworld.tv",
-                "www.tjc.co.uk"
+                "www.vetuk.co.uk"
             ]
         }
     ],
@@ -170,21 +185,21 @@
     "topInitiators": [
         {
             "domain": "freshchat.com",
-            "prevalence": 0.6666666666666666
+            "prevalence": 0.5172413793103449
         },
         {
             "domain": "freshworks.com",
-            "prevalence": 0.3333333333333333
+            "prevalence": 0.4827586206896552
         }
     ],
     "types": {
         "Script": 20,
-        "WebSocket": 4
+        "WebSocket": 8
     },
     "nameservers": [
         "ns-1556.awsdns-02.co.uk",
+        "ns-1492.awsdns-58.org",
         "ns-223.awsdns-27.com",
-        "ns-936.awsdns-53.net",
-        "ns-1492.awsdns-58.org"
+        "ns-936.awsdns-53.net"
     ]
 }

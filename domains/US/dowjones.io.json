@@ -4,20 +4,72 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000137,
-    "sites": 2,
+    "prevalence": 0.0000206,
+    "sites": 3,
     "subdomains": [
-        "shared-data",
-        "api.shdsvc"
+        "api.shdsvc",
+        "shared-data"
     ],
     "cnames": [
         {
-            "original": "api.wsj.net",
+            "original": "api.barrons.com",
             "resolved": "api.shdsvc.dowjones.io"
         }
     ],
     "fingerprinting": 0,
     "resources": [
+        {
+            "rule": "dowjones\\.io\\/api\\/michelangelo\\/timeseries\\/history",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api.shdsvc"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "api.barrons.com",
+                    "resolved": "api.shdsvc.dowjones.io"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "barrons.com",
+                "www.barrons.com"
+            ]
+        },
+        {
+            "rule": "dowjones\\.io\\/api\\/michelangelo\\/timeseries\\/history",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api.shdsvc"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "api.barrons.com",
+                    "resolved": "api.shdsvc.dowjones.io"
+                }
+            ],
+            "responseHashes": [
+                "34cfc49a73f0c26e05068412bbf4ebc8083f8abcdf4dea242c1b50c518247e01"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "barrons.com",
+                "www.barrons.com"
+            ]
+        },
         {
             "rule": "dowjones\\.io\\/gateway\\/graphql",
             "cookies": 0,
@@ -49,40 +101,15 @@
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "9e7f88a54675e9a50baac34fd700ec00d076c5e0bf5b0c6c8650f2f25aee3ff4"
+            ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "investors.com",
                 "www.investors.com"
-            ]
-        },
-        {
-            "rule": "dowjones\\.io\\/api\\/dylan\\/quotes\\/v2\\/comp\\/quoteByDialect",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "api.shdsvc"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [
-                {
-                    "original": "api.wsj.net",
-                    "resolved": "api.shdsvc.dowjones.io"
-                }
-            ],
-            "responseHashes": [
-                "88a980f51f362a647211a006daae236b6cf6a8142e1147c56023488f8cb2ecb9"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "wsj.com",
-                "www.wsj.com"
             ]
         }
     ],
@@ -96,12 +123,13 @@
         }
     ],
     "types": {
-        "Preflight": 2,
-        "Fetch": 4
+        "Preflight": 4,
+        "XHR": 2,
+        "Fetch": 2
     },
     "nameservers": [
-        "ns-320.awsdns-40.com",
         "ns-801.awsdns-36.net",
+        "ns-320.awsdns-40.com",
         "ns-1288.awsdns-33.org",
         "ns-1824.awsdns-36.co.uk"
     ]

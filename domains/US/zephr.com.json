@@ -9,20 +9,9 @@
     "subdomains": [
         "assets",
         "euw2.production.ai",
-        "v4-news-au-news24.cdn",
-        "customer-api-cname-target.cdn",
-        "thesun-the-irish-live.cdn"
+        "v4-news-au-news24.cdn"
     ],
-    "cnames": [
-        {
-            "original": "zephrapi.thescottishsun.co.uk",
-            "resolved": "customer-api-cname-target.cdn.zephr.com"
-        },
-        {
-            "original": "zephrapi.thesun.ie",
-            "resolved": "thesun-the-irish-live.cdn.zephr.com"
-        }
-    ],
+    "cnames": [],
     "fingerprinting": 1,
     "resources": [
         {
@@ -34,7 +23,7 @@
             ],
             "apis": {
                 "Navigator.prototype.userAgent": 10,
-                "window.localStorage": 2
+                "window.localStorage": 1
             },
             "sites": 10,
             "prevalence": 0.0000686,
@@ -46,10 +35,10 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "apnews.com",
                 "nymag.com",
                 "www.curbed.com",
                 "www.dagbladet.no",
+                "www.grubstreet.com",
                 "www.racingpost.com",
                 "www.seher.no",
                 "www.thecut.com",
@@ -74,7 +63,7 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "e671ba1325a7be0fdcb267a75c1a2ddc560bcbefe3ba3b414c4eefd6a895f874"
+                "38d40b38d862f2633c8b06d2b294796233ff4e03ff557b1f7c2a15abccc4459e"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -92,7 +81,8 @@
                 "assets"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 2
+                "Navigator.prototype.userAgent": 2,
+                "window.localStorage": 1
             },
             "sites": 2,
             "prevalence": 0.0000137,
@@ -117,10 +107,9 @@
             ],
             "apis": {
                 "Navigator.prototype.userAgent": 2,
-                "window.innerWidth": 2,
-                "Document.cookie getter": 2,
-                "Date.prototype.getTime": 1,
-                "window.localStorage": 2
+                "Document.cookie getter": 1,
+                "window.innerWidth": 1,
+                "window.localStorage": 1
             },
             "sites": 2,
             "prevalence": 0.0000137,
@@ -177,6 +166,26 @@
             ]
         },
         {
+            "rule": "zephr\\.com\\/blaize\\/decision-engine",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "v4-news-au-news24.cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "news24.com.au",
+                "www.news24.com.au"
+            ]
+        },
+        {
             "rule": "zephr\\.com\\/www\\.radiotimes\\.com\\/SiteScript\\.js",
             "cookies": 0,
             "fingerprinting": 1,
@@ -192,7 +201,7 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "c7675808a4b7c1488259f21b077fc8db7049a7ff9c6ef7de04017ef46b1ee92f"
+                "524d9ecd40e1818e5e3122791f620734d723e44f788d63a8359f7e83b17d97d0"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -201,128 +210,38 @@
                 "radiotimes.com",
                 "www.radiotimes.com"
             ]
-        },
-        {
-            "rule": "zephr\\.com\\/zephr\\/features",
-            "cookies": 0.0000137,
-            "fingerprinting": 0,
-            "subdomains": [
-                "customer-api-cname-target.cdn",
-                "thesun-the-irish-live.cdn"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [
-                {
-                    "original": "zephrapi.thescottishsun.co.uk",
-                    "resolved": "customer-api-cname-target.cdn.zephr.com"
-                },
-                {
-                    "original": "zephrapi.thesun.ie",
-                    "resolved": "thesun-the-irish-live.cdn.zephr.com"
-                }
-            ],
-            "responseHashes": [
-                "76f037e7e7b51532ca561fa283ea6d5d4d1e83e2faa3394fc89288eb4b7aaa7b"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "thescottishsun.co.uk",
-                "www.thesun.ie"
-            ]
-        },
-        {
-            "rule": "zephr\\.com\\/zephr\\/feature-decisions",
-            "cookies": 0.0000137,
-            "fingerprinting": 0,
-            "subdomains": [
-                "customer-api-cname-target.cdn",
-                "thesun-the-irish-live.cdn"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [
-                {
-                    "original": "zephrapi.thescottishsun.co.uk",
-                    "resolved": "customer-api-cname-target.cdn.zephr.com"
-                },
-                {
-                    "original": "zephrapi.thesun.ie",
-                    "resolved": "thesun-the-irish-live.cdn.zephr.com"
-                }
-            ],
-            "responseHashes": [
-                "ccbc9332c791154d40eaddc7e5d2337f705c4f0aaf40e32263bf08c2a1c29dc6"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "thescottishsun.co.uk",
-                "www.thesun.ie"
-            ]
-        },
-        {
-            "rule": "zephr\\.com\\/zephr\\/feature-decisions",
-            "cookies": 0.0000137,
-            "fingerprinting": 0,
-            "subdomains": [
-                "customer-api-cname-target.cdn",
-                "thesun-the-irish-live.cdn"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [
-                {
-                    "original": "zephrapi.thescottishsun.co.uk",
-                    "resolved": "customer-api-cname-target.cdn.zephr.com"
-                },
-                {
-                    "original": "zephrapi.thesun.ie",
-                    "resolved": "thesun-the-irish-live.cdn.zephr.com"
-                }
-            ],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "thescottishsun.co.uk",
-                "www.thesun.ie"
-            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0000343,
+    "cookies": 0.0000275,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.6875
+            "prevalence": 0.6571428571428571
         },
         {
             "domain": "newscdn.com.au",
-            "prevalence": 0.25
+            "prevalence": 0.2571428571428571
         },
         {
             "domain": "adobedtm.com",
-            "prevalence": 0.0625
+            "prevalence": 0.05714285714285714
+        },
+        {
+            "domain": "googletagmanager.com",
+            "prevalence": 0.02857142857142857
         }
     ],
     "types": {
         "Script": 18,
-        "Preflight": 4,
-        "Fetch": 6
+        "Preflight": 2,
+        "Fetch": 4
     },
     "nameservers": [
         "ns-46.awsdns-05.com",
-        "ns-877.awsdns-45.net",
+        "ns-1991.awsdns-56.co.uk",
         "ns-1113.awsdns-11.org",
-        "ns-1991.awsdns-56.co.uk"
+        "ns-877.awsdns-45.net"
     ]
 }

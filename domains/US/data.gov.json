@@ -7,9 +7,10 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000206,
-    "sites": 3,
+    "prevalence": 0.0000412,
+    "sites": 6,
     "subdomains": [
+        "api-waterdata-usgs-gov.domains.api",
         "api-open-fec-gov.domains.api",
         "api-foia-gov.domains.api"
     ],
@@ -21,10 +22,66 @@
         {
             "original": "api.open.fec.gov",
             "resolved": "api-open-fec-gov.domains.api.data.gov"
+        },
+        {
+            "original": "api.waterdata.usgs.gov",
+            "resolved": "api-waterdata-usgs-gov.domains.api.data.gov"
         }
     ],
     "fingerprinting": 0,
     "resources": [
+        {
+            "rule": "data\\.gov\\/ogcapi\\/v1\\/collections\\/continuous\\/items",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-waterdata-usgs-gov.domains.api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "api.waterdata.usgs.gov",
+                    "resolved": "api-waterdata-usgs-gov.domains.api.data.gov"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "usgs.gov",
+                "waterdata.usgs.gov"
+            ]
+        },
+        {
+            "rule": "data\\.gov\\/ogcapi\\/v1\\/collections\\/continuous\\/items",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-waterdata-usgs-gov.domains.api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "api.waterdata.usgs.gov",
+                    "resolved": "api-waterdata-usgs-gov.domains.api.data.gov"
+                }
+            ],
+            "responseHashes": [
+                "5a2d7ff5603a3877f08f196ddebae10145b24a5aa26a481f3da043f31880d9a0"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "usgs.gov",
+                "waterdata.usgs.gov"
+            ]
+        },
         {
             "rule": "data\\.gov\\/v1\\/calendar-dates\\/",
             "cookies": 0,
@@ -42,7 +99,7 @@
                 }
             ],
             "responseHashes": [
-                "5ab8f1d6dc6ff820024d52d94dda9d2bae77f964b68c38b55bd45a6ba7e3b350"
+                "d5b4fd92c0ac818dc01a52cea5b349b7b657eccff420ecbbac6de790e345b0ca"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
@@ -50,6 +107,33 @@
             "exampleSites": [
                 "fec.gov",
                 "www.fec.gov"
+            ]
+        },
+        {
+            "rule": "data\\.gov\\/api\\/agency_components",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api-foia-gov.domains.api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "api.foia.gov",
+                    "resolved": "api-foia-gov.domains.api.data.gov"
+                }
+            ],
+            "responseHashes": [
+                "9f265e94cf191fb24a57b52e4f2213c51fbaade464a514e8318c9b5c8435c199"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "foia.gov",
+                "www.foia.gov"
             ]
         },
         {
@@ -76,41 +160,21 @@
                 "foia.gov",
                 "www.foia.gov"
             ]
-        },
-        {
-            "rule": "data\\.gov\\/api\\/agency_components",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "api-foia-gov.domains.api"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [
-                {
-                    "original": "api.foia.gov",
-                    "resolved": "api-foia-gov.domains.api.data.gov"
-                }
-            ],
-            "responseHashes": [
-                "3ca3bdf5bbea93afb56f42e7e2f4de66371f982621d632a129c1110cfd319f46"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "foia.gov",
-                "www.foia.gov"
-            ]
         }
     ],
     "categories": [],
     "performance": {},
     "cookies": 0,
+    "topInitiators": [
+        {
+            "domain": "first party",
+            "prevalence": 1
+        }
+    ],
     "types": {
-        "XHR": 4,
-        "Preflight": 2
+        "Preflight": 4,
+        "Fetch": 2,
+        "XHR": 4
     },
     "nameservers": [
         "ns-60.awsdns-07.com",

@@ -7,14 +7,38 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000411,
-    "sites": 6,
+    "prevalence": 0.0000618,
+    "sites": 9,
     "subdomains": [
-        "dable-api"
+        "prebid",
+        "dable-api",
+        "img"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "scupio\\.com\\/recweb\\/prebid\\.aspx",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "prebid"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "udn.com",
+                "www.mobile01.com"
+            ]
+        },
         {
             "rule": "scupio\\.com\\/dable\\/v1\\/exc\\/",
             "cookies": 0,
@@ -29,7 +53,9 @@
             "responseHashes": [],
             "type": "Image",
             "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
+            "firstPartyCookiesSent": {
+                "dable_uid": 0.000027456498610014756
+            },
             "exampleSites": [
                 "udn.com",
                 "www.chosun.com",
@@ -37,27 +63,95 @@
                 "www.koreatimes.co.kr",
                 "www.nownews.com"
             ]
+        },
+        {
+            "rule": "scupio\\.com\\/js\\/pixel\\.js",
+            "cookies": 0.0000137,
+            "fingerprinting": 1,
+            "subdomains": [
+                "img"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Document.cookie getter": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "74cc95601e7325971690ef02db35614708b0fbeec388bd4e32593800cc660b1d"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "__BWtransf": {
+                    "ttl": 863996407,
+                    "length": 24,
+                    "prevalence": 0.000013728249305007378,
+                    "uniqueness": 1
+                },
+                "__BWfp": {
+                    "ttl": 863996407,
+                    "length": 24,
+                    "prevalence": 0.000013728249305007378,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "eslite.com",
+                "www.ikea.com.tw"
+            ]
+        },
+        {
+            "rule": "scupio\\.com\\/html\\/ls\\.html",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "img"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "window.localStorage": 1
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "204b096d37249d9125a8b3450e44a31773cb148dba50c88d1fd26a0b914216ce"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "eslite.com",
+                "www.ikea.com.tw"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.00000686,
+    "cookies": 0.0000137,
     "topInitiators": [
         {
             "domain": "dable.io",
-            "prevalence": 0.8571428571428571
+            "prevalence": 0.5
         },
         {
             "domain": "first party",
-            "prevalence": 0.09523809523809523
+            "prevalence": 0.4375
         },
         {
             "domain": "udn.com.tw",
-            "prevalence": 0.047619047619047616
+            "prevalence": 0.0625
         }
     ],
     "types": {
-        "Image": 5
+        "Fetch": 2,
+        "Image": 5,
+        "Script": 2,
+        "Document": 2
     },
     "nameservers": [
         "ns-639.awsdns-15.net",

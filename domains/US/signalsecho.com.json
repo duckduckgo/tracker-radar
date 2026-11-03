@@ -15,12 +15,17 @@
     "resources": [
         {
             "rule": "signalsecho\\.com\\/e55b7f21-86ea-48d5-b313-78d9215c8464\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
+            "cookies": 0.0000137,
+            "fingerprinting": 1,
             "subdomains": [
                 "scripts"
             ],
-            "apis": {},
+            "apis": {
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 2,
+                "Document.cookie setter": 2,
+                "Navigator.prototype.userAgent": 2
+            },
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
@@ -28,7 +33,20 @@
                 "5d35b26dc62c4399d12928d3adb58e9e06d43cb590051dfc79f61b7aa73aacfe"
             ],
             "type": "Script",
-            "firstPartyCookies": {},
+            "firstPartyCookies": {
+                "bdmsessid": {
+                    "ttl": 31536007,
+                    "length": 36,
+                    "prevalence": 0.000013728249305007378,
+                    "uniqueness": 1
+                },
+                "bdmlastvisit": {
+                    "ttl": 31536007,
+                    "length": 24,
+                    "prevalence": 0.000013728249305007378,
+                    "uniqueness": 1
+                }
+            },
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "jamesavery.com",
@@ -56,11 +74,31 @@
                 "jamesavery.com",
                 "www.jamesavery.com"
             ]
+        },
+        {
+            "rule": "signalsecho\\.com\\/check\\/ping",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "wevi"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "jamesavery.com",
+                "www.jamesavery.com"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.00000686,
+    "cookies": 0.0000206,
     "topInitiators": [
         {
             "domain": "yottaa.com",
@@ -73,7 +111,8 @@
     ],
     "types": {
         "Script": 2,
-        "Fetch": 2
+        "Fetch": 2,
+        "Preflight": 2
     },
     "nameservers": [
         "ns01.domaincontrol.com",

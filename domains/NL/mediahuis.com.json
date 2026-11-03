@@ -7,17 +7,17 @@
     "prevalence": 0.000302,
     "sites": 3,
     "subdomains": [
-        "login"
+        "auth"
     ],
     "cnames": [],
     "fingerprinting": 0,
     "resources": [
         {
-            "rule": "mediahuis\\.com\\/authorize",
+            "rule": "mediahuis\\.com\\/oauth2\\/authorize",
             "cookies": 0.000302,
             "fingerprinting": 0,
             "subdomains": [
-                "login"
+                "auth"
             ],
             "apis": {},
             "sites": 3,
@@ -32,6 +32,26 @@
                 "epaper.limburger.nl",
                 "www.limburger.nl"
             ]
+        },
+        {
+            "rule": "mediahuis\\.com\\/oauth2\\/authorize",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "auth"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "limburger.nl",
+                "epaper.limburger.nl"
+            ]
         }
     ],
     "categories": [],
@@ -39,12 +59,17 @@
     "cookies": 0.000302,
     "topInitiators": [
         {
+            "domain": "twipecloud.net",
+            "prevalence": 0.9333333333333333
+        },
+        {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.06666666666666667
         }
     ],
     "types": {
-        "Document": 3
+        "Document": 3,
+        "Fetch": 2
     },
     "nameservers": [
         "erin.ns.cloudflare.com",

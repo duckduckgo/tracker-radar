@@ -11,20 +11,16 @@
     "sites": 5,
     "subdomains": [
         "logging",
-        "www",
-        "cdn"
+        "cdn",
+        "www"
     ],
     "cnames": [
-        {
-            "original": "book.hotels-rates.com",
-            "resolved": "www.hotelplanner.com"
-        },
         {
             "original": "secure1.reservations.com",
             "resolved": "www.hotelplanner.com"
         }
     ],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "hotelplanner\\.com\\/v1\\/logging",
@@ -34,7 +30,7 @@
                 "logging"
             ],
             "apis": {
-                "Date.prototype.getTime": 3
+                "Date.prototype.getTime": 2
             },
             "sites": 3,
             "prevalence": 0.0000206,
@@ -59,50 +55,17 @@
                 "logging"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.0000206,
+            "sites": 2,
+            "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "4f28d99ee90c19c9e1b5ebc65db04b9e2ad2dcb0a6588224e99935bdfba88a78",
-                "924a6138e82381101ad3693c69e401204b6c994167395746c20580b21dd1e73c"
+                "98d1b4a773d1b4a48f96502d030dd65a3c19d6a064fa94034238e7876a7fc207"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "hotelguides.com",
-                "www.hotels-rates.com",
-                "www.reservations.com"
-            ]
-        },
-        {
-            "rule": "hotelplanner\\.com\\/Common\\/Cfcs\\/Services\\/OfflineSession\\.cfc",
-            "cookies": 0.0000137,
-            "fingerprinting": 0,
-            "subdomains": [
-                "www"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [
-                {
-                    "original": "book.hotels-rates.com",
-                    "resolved": "www.hotelplanner.com"
-                },
-                {
-                    "original": "secure1.reservations.com",
-                    "resolved": "www.hotelplanner.com"
-                }
-            ],
-            "responseHashes": [
-                "f29ca48ee47d2f68f72cef823e16c93df75f6f04688323afd2221262e016b610"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "hotels-rates.com",
                 "www.reservations.com"
             ]
         },
@@ -132,23 +95,54 @@
                 "reservations.com",
                 "www.reservations.com"
             ]
+        },
+        {
+            "rule": "hotelplanner\\.com\\/Common\\/Cfcs\\/Services\\/OfflineSession\\.cfc",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "www"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "secure1.reservations.com",
+                    "resolved": "www.hotelplanner.com"
+                }
+            ],
+            "responseHashes": [
+                "59b5ab13e8e24044d43f362121085627f0f73b6a1ef7b55858a36c831ac1ba32"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "reservations.com",
+                "www.reservations.com"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0000274,
+    "cookies": 0.0000275,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.8333333333333334
+            "prevalence": 0.75
         },
         {
             "domain": "hotelplanner.com",
             "prevalence": 0.16666666666666666
+        },
+        {
+            "domain": "cloudflareinsights.com",
+            "prevalence": 0.08333333333333333
         }
     ],
     "types": {
-        "Script": 10
+        "Script": 9
     },
     "nameservers": [
         "lovisa.ns.cloudflare.com",

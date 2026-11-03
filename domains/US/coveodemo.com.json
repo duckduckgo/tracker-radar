@@ -4,8 +4,8 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000686,
-    "sites": 10,
+    "prevalence": 0.0000549,
+    "sites": 8,
     "subdomains": [
         "poc-beacon"
     ],
@@ -14,12 +14,18 @@
     "resources": [
         {
             "rule": "coveodemo\\.com\\/v2\\/galls\\/bundle\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
+            "cookies": 0.00000686,
+            "fingerprinting": 1,
             "subdomains": [
                 "poc-beacon"
             ],
-            "apis": {},
+            "apis": {
+                "window.localStorage": 1,
+                "Document.cookie getter": 1,
+                "Date.prototype.getTime": 1,
+                "Document.cookie setter": 1,
+                "Navigator.prototype.userAgent": 1
+            },
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
@@ -27,33 +33,18 @@
                 "7f396f0612c9d971af08ff68b9ad0fb332437c03572185e98d26dab8a737c6ca"
             ],
             "type": "Script",
-            "firstPartyCookies": {},
+            "firstPartyCookies": {
+                "coveo_visitorId": {
+                    "ttl": 31556963,
+                    "length": 36,
+                    "prevalence": 0.000006864124652503689,
+                    "uniqueness": 1
+                }
+            },
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "galls.com",
                 "www.galls.com"
-            ]
-        },
-        {
-            "rule": "coveodemo\\.com\\/v2\\/shaklee\\/bundle\\.js",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "poc-beacon"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "80bbfc0d120e5ffd91e137b91a45fa8e21eccee2e628c5b5250aeafc336582b4"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "myshaklee.com",
-                "us.shaklee.com"
             ]
         },
         {
@@ -81,24 +72,24 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.00000686,
+    "cookies": 0.0000137,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.5384615384615384
+            "prevalence": 0.6666666666666666
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.46153846153846156
+            "prevalence": 0.3333333333333333
         }
     ],
     "types": {
-        "Script": 6
+        "Script": 4
     },
     "nameservers": [
-        "ns-110.awsdns-13.com",
-        "ns-829.awsdns-39.net",
         "ns-1239.awsdns-26.org",
+        "ns-829.awsdns-39.net",
+        "ns-110.awsdns-13.com",
         "ns-1949.awsdns-51.co.uk"
     ]
 }
