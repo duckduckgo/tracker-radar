@@ -4,14 +4,39 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000206,
-    "sites": 3,
+    "prevalence": 0.0000275,
+    "sites": 4,
     "subdomains": [
+        "cdn-assets",
         "api"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "custompricecalculator\\.com\\/shopify\\/v2\\/calculator\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn-assets"
+            ],
+            "apis": {
+                "window.localStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "2bee3adf331baa78b2271ecfedde18582175bee5ccc304be2fdca084352ffc6f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "churchsupplies.com",
+                "churchsupplywarehouse.com"
+            ]
+        },
         {
             "rule": "custompricecalculator\\.com\\/api\\/v1\\/calculator\\/app\\/resolve",
             "cookies": 0,
@@ -20,8 +45,8 @@
                 "api"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "sites": 3,
+            "prevalence": 0.0000206,
             "cnames": [],
             "responseHashes": [],
             "type": "Fetch",
@@ -29,6 +54,7 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "churchsupplies.com",
+                "churchsupplywarehouse.com",
                 "forgenflame.com"
             ]
         }
@@ -39,11 +65,16 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.75
+        },
+        {
+            "domain": "event-observer-collector.js",
+            "prevalence": 0.25
         }
     ],
     "types": {
-        "Fetch": 2
+        "Script": 2,
+        "Fetch": 3
     },
     "nameservers": [
         "melinda.ns.cloudflare.com",

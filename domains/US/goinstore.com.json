@@ -4,10 +4,11 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000343,
-    "sites": 5,
+    "prevalence": 0.0000275,
+    "sites": 4,
     "subdomains": [
-        "gis"
+        "gis",
+        "static-gis"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -15,11 +16,16 @@
         {
             "rule": "goinstore\\.com\\/gis\\/script\\/159af8da-dc5a-4ff3-9e2d-a61659010655",
             "cookies": 0.0000137,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "gis"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.platform": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Document.cookie getter": 2,
+                "window.localStorage": 2
+            },
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
@@ -33,36 +39,137 @@
                 "irobot.com",
                 "www.irobot.com"
             ]
+        },
+        {
+            "rule": "goinstore\\.com\\/gis\\/jsapi\\/init-info\\/gisCallbacks\\.initInfo",
+            "cookies": 0.0000206,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gis"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000206,
+            "cnames": [],
+            "responseHashes": [
+                "51da6afc370e70c401e68120396974524a43a7fdcac775fc009384216ca88520"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "irobot.com",
+                "www.irobot.com",
+                "www.mamasandpapas.com"
+            ]
+        },
+        {
+            "rule": "goinstore\\.com\\/static-common\\/js\\/lib\\/loggly\\.tracker-2\\.1\\.min\\.js",
+            "cookies": 0.0000206,
+            "fingerprinting": 1,
+            "subdomains": [
+                "gis"
+            ],
+            "apis": {
+                "Document.cookie getter": 1,
+                "Document.cookie setter": 1
+            },
+            "sites": 3,
+            "prevalence": 0.0000206,
+            "cnames": [],
+            "responseHashes": [
+                "71f7425abbc06c752fcb28488d55734aa4915c2ce18a01a58fd97e83211a6623"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "logglytrackingsession": {
+                    "ttl": null,
+                    "length": 36,
+                    "prevalence": 0.000006864124652503689,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "irobot.com",
+                "www.irobot.com",
+                "www.mamasandpapas.com"
+            ]
+        },
+        {
+            "rule": "goinstore\\.com\\/gis\\/css",
+            "cookies": 0.0000206,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gis"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000206,
+            "cnames": [],
+            "responseHashes": [
+                "ccda0fca560d1a710d39aa6b87b28d923cc6f3ced6ad696cfd38b790aa1b7497"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "irobot.com",
+                "www.irobot.com",
+                "www.mamasandpapas.com"
+            ]
+        },
+        {
+            "rule": "goinstore\\.com\\/fonts\\/Roboto\\/roboto-v29-vietnamese_latin-ext_latin_greek-ext_greek_cyrillic-ext_cyrillic-500\\.woff2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "static-gis"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "irobot.com",
+                "www.irobot.com"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0000274,
+    "cookies": 0.0000275,
     "topInitiators": [
         {
-            "domain": "opentok.com",
-            "prevalence": 0.45454545454545453
+            "domain": "transcend-cdn.com",
+            "prevalence": 0.631578947368421
         },
         {
-            "domain": "transcend-cdn.com",
-            "prevalence": 0.2727272727272727
+            "domain": "opentok.com",
+            "prevalence": 0.2631578947368421
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.18181818181818182
+            "prevalence": 0.05263157894736842
         },
         {
             "domain": "first party",
-            "prevalence": 0.09090909090909091
+            "prevalence": 0.05263157894736842
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 8,
+        "Stylesheet": 3,
+        "Font": 2
     },
     "nameservers": [
-        "ns-1795.awsdns-32.co.uk",
-        "ns-655.awsdns-17.net",
+        "ns-1272.awsdns-31.org",
         "ns-421.awsdns-52.com",
-        "ns-1272.awsdns-31.org"
+        "ns-655.awsdns-17.net",
+        "ns-1795.awsdns-32.co.uk"
     ]
 }

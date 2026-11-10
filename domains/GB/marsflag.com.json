@@ -7,14 +7,37 @@
     "source": [
         "DuckDuckGo-GB"
     ],
-    "prevalence": 0.000201,
-    "sites": 2,
+    "prevalence": 0.000301,
+    "sites": 3,
     "subdomains": [
-        "ce.mf"
+        "ce.mf",
+        "c"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "marsflag\\.com\\/latest\\/css\\/mf-search\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "ce.mf"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "cacf8f134cd25c1ae890fe133956a30559c4416a0a509ad07f2c5593a634c9c7"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "epson.net",
+                "www.sony.com"
+            ]
+        },
         {
             "rule": "marsflag\\.com\\/latest\\/js\\/mf-search\\.js",
             "cookies": 0,
@@ -24,7 +47,7 @@
             ],
             "apis": {
                 "Document.cookie getter": 3,
-                "window.localStorage": 1
+                "window.localStorage": 3
             },
             "sites": 3,
             "prevalence": 0.000301,
@@ -36,8 +59,30 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "seikowatches.com",
+                "epson.net",
                 "www.seikowatches.com",
+                "www.sony.com"
+            ]
+        },
+        {
+            "rule": "marsflag\\.com\\/lib\\/fonts\\/font-awesome\\/4\\.6\\.3\\/css\\/font-awesome\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "c"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "008a1d103902f15fdb1c191fcb1ce8954330e7b8de43d09abb08555ba609f420"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "epson.net",
                 "www.sony.com"
             ]
         },
@@ -56,9 +101,7 @@
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [
-                "3c53df6849aaa1c58628b4ff258c29c0d0279e3b0ef2ebdefff42f820a7c3dbe"
-            ],
+            "responseHashes": [],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -74,10 +117,15 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.75
+        },
+        {
+            "domain": "epson.com",
+            "prevalence": 0.25
         }
     ],
     "types": {
+        "Stylesheet": 4,
         "Script": 5
     },
     "nameservers": [

@@ -7,7 +7,8 @@
     "prevalence": 0.0000206,
     "sites": 3,
     "subdomains": [
-        "identity",
+        "fw-module.cf.px",
+        "ppm-modules.cf.px",
         "services-epocrates.api"
     ],
     "cnames": [
@@ -19,23 +20,51 @@
     "fingerprinting": 2,
     "resources": [
         {
-            "rule": "athena\\.io\\/identity\\/api\\/v1\\/lwa-config\\/pre-authn",
+            "rule": "athena\\.io\\/remoteEntry\\.js",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "identity"
+                "fw-module.cf.px",
+                "ppm-modules.cf.px"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "8ddbce65151b53c8e76569e80b2111306b5d722b326b90f7edbb057ce2d32103"
+            ],
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "athenahealth.com",
                 "es.portal.athenahealth.com"
+            ]
+        },
+        {
+            "rule": "athena\\.io\\/profile\\/v1\\/validate\\/allowAnalytics",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "services-epocrates.api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "services.epocrates.com",
+                    "resolved": "services-epocrates.api.athena.io"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "epocrates.com",
+                "www.epocrates.com"
             ]
         },
         {
@@ -64,31 +93,6 @@
                 "epocrates.com",
                 "www.epocrates.com"
             ]
-        },
-        {
-            "rule": "athena\\.io\\/profile\\/v1\\/validate\\/allowAnalytics",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "services-epocrates.api"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [
-                {
-                    "original": "services.epocrates.com",
-                    "resolved": "services-epocrates.api.athena.io"
-                }
-            ],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "epocrates.com",
-                "www.epocrates.com"
-            ]
         }
     ],
     "categories": [],
@@ -96,22 +100,27 @@
     "cookies": 0.00000686,
     "topInitiators": [
         {
+            "domain": "datadoghq-browser-agent.com",
+            "prevalence": 0.6666666666666666
+        },
+        {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.3333333333333333
         }
     ],
     "types": {
-        "Preflight": 4,
+        "Script": 2,
+        "Preflight": 2,
         "XHR": 2
     },
     "nameservers": [
-        "ns02.athenahealth-dns.com",
         "ns04.athenahealth-dns.com",
-        "dns1.p03.nsone.net",
         "dns4.p03.nsone.net",
-        "ns01.athenahealth-dns.com",
-        "dns3.p03.nsone.net",
+        "dns1.p03.nsone.net",
         "ns03.athenahealth-dns.com",
+        "dns3.p03.nsone.net",
+        "ns01.athenahealth-dns.com",
+        "ns02.athenahealth-dns.com",
         "dns2.p03.nsone.net"
     ]
 }

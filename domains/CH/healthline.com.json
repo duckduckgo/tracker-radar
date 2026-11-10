@@ -10,11 +10,41 @@
     "prevalence": 0.000101,
     "sites": 1,
     "subdomains": [
+        "gtm-server",
         "pavlov-prod"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "healthline\\.com\\/gtm\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "gtm-server"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 2,
+                "window.name": 2,
+                "Date.prototype.getTimezoneOffset": 2,
+                "NavigatorUAData.prototype.getHighEntropyValues": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "84e5542ef1dc734ff61f258579ea615a71bd51752956893751e95beca4340be7"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "medicalnewstoday.com",
+                "www.medicalnewstoday.com"
+            ]
+        },
         {
             "rule": "healthline\\.com\\/api\\/metrics",
             "cookies": 0,
@@ -26,10 +56,60 @@
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [
-                "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
-            ],
+            "responseHashes": [],
             "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "medicalnewstoday.com",
+                "www.medicalnewstoday.com"
+            ]
+        },
+        {
+            "rule": "healthline\\.com\\/gtag\\/js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "gtm-server"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 2,
+                "window.name": 2,
+                "Navigator.prototype.language": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "20ccfc1b5c91027f947c30a3de69705d912006afe3e79ea27e78b1e245f6ffa4"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "medicalnewstoday.com",
+                "www.medicalnewstoday.com"
+            ]
+        },
+        {
+            "rule": "healthline\\.com\\/g\\/collect",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gtm-server"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e64954dc34e12c7190cc2338a54b07644ff0f102aa71cc7209bcbb49c3009f7c"
+            ],
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -48,7 +128,9 @@
         }
     ],
     "types": {
-        "Ping": 2
+        "Script": 4,
+        "Ping": 2,
+        "Fetch": 2
     },
     "nameservers": [
         "ns-532.awsdns-02.net",

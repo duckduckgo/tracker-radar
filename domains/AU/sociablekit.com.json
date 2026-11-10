@@ -4,15 +4,38 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.000201,
-    "sites": 2,
+    "prevalence": 0.000301,
+    "sites": 3,
     "subdomains": [
-        "views",
-        "widgets"
+        "widgets",
+        "views"
     ],
     "cnames": [],
     "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "sociablekit\\.com\\/instagram-feed\\/widget\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "widgets"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 1,
+                "window.sessionStorage": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ramset.com.au",
+                "www.lawsons.com.au"
+            ]
+        },
         {
             "rule": "sociablekit\\.com\\/track-widget-views\\.php",
             "cookies": 0,
@@ -84,13 +107,17 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.9
+        },
+        {
+            "domain": "cloudflare.com",
+            "prevalence": 0.1
         }
     ],
     "types": {
+        "Script": 4,
         "Preflight": 2,
-        "Fetch": 2,
-        "Script": 2
+        "Fetch": 2
     },
     "nameservers": [
         "emma.ns.cloudflare.com",

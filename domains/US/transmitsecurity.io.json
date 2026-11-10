@@ -4,11 +4,12 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000754,
+    "prevalence": 0.0000755,
     "sites": 11,
     "subdomains": [
         "platform-websdk",
         "api.ubs",
+        "api.eu",
         "api"
     ],
     "cnames": [
@@ -17,37 +18,16 @@
             "resolved": "api.ubs.transmitsecurity.io"
         },
         {
+            "original": "stats.par.sg.fr",
+            "resolved": "api.eu.transmitsecurity.io"
+        },
+        {
             "original": "tsdrs.schwab.com",
             "resolved": "api.transmitsecurity.io"
         }
     ],
     "fingerprinting": 1,
     "resources": [
-        {
-            "rule": "transmitsecurity\\.io\\/platform-websdk\\/latest\\/ts-platform-websdk\\.js",
-            "cookies": 0.0000137,
-            "fingerprinting": 1,
-            "subdomains": [
-                "platform-websdk"
-            ],
-            "apis": {
-                "Navigator.prototype.userAgent": 1,
-                "Date.prototype.getTime": 1
-            },
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "057ccc7981fc0cec1427171b4be63f4dfe857d958e2d77ee8ae73ec73e2eeb52"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "tiaa.org",
-                "www.avis.com"
-            ]
-        },
         {
             "rule": "transmitsecurity\\.io\\/platform-websdk\\/1\\.x\\/ts-platform-websdk\\.js",
             "cookies": 0.0000206,
@@ -77,19 +57,24 @@
         },
         {
             "rule": "transmitsecurity\\.io\\/risk-collect\\/device\\/conf",
-            "cookies": 0.0000343,
+            "cookies": 0.0000412,
             "fingerprinting": 0,
             "subdomains": [
                 "api.ubs",
+                "api.eu",
                 "api"
             ],
             "apis": {},
-            "sites": 5,
-            "prevalence": 0.0000343,
+            "sites": 6,
+            "prevalence": 0.0000412,
             "cnames": [
                 {
                     "original": "risk-amer.nexa.ubs.com",
                     "resolved": "api.ubs.transmitsecurity.io"
+                },
+                {
+                    "original": "stats.par.sg.fr",
+                    "resolved": "api.eu.transmitsecurity.io"
                 },
                 {
                     "original": "tsdrs.schwab.com",
@@ -97,16 +82,18 @@
                 }
             ],
             "responseHashes": [
-                "b7698a731c02f97cf6cbb16da58f1628c738181230a037b5cb5c9f7a6fb6b4d4",
-                "0e6da8931431b2d1e8158c7e9d04874f0d32dedc36917875c20ea19d0a798c2f",
-                "929644c2b8cab63397517443462690d7f2ecdeef2cee61e615392b8fbff76128",
-                "16ebc797a9a036578bbc61f2af7d7f24f8b742311bf274754a9342bfcd6b58ff"
+                "200e263cd081b335185996e84913df91b7d06adbe1995350dca4f9318ec2a7bf",
+                "93fbc45f35b75c09a962e6cf6cb6b13799d9ab86ab077787497f1ff8ef62cec5",
+                "b707ccdbb554ebae61dd974cc467e5e9c3c78d9833ea123434dd32871243b92f",
+                "9a3b7d40275326f64702f613533304b1b394fb0782c8a6fd529d8cdd48765b9f",
+                "25caad85fec2bda8a91632356d4f742788e8910430bd617130d9a1a2656309a0"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "ubs.com",
+                "particuliers.sg.fr",
                 "schwab.com",
                 "welcome.schwab.com",
                 "workplace.schwab.com",
@@ -115,19 +102,24 @@
         },
         {
             "rule": "transmitsecurity\\.io\\/risk-collect\\/device\\/events",
-            "cookies": 0.0000411,
+            "cookies": 0.000048,
             "fingerprinting": 0,
             "subdomains": [
                 "api.ubs",
+                "api.eu",
                 "api"
             ],
             "apis": {},
-            "sites": 6,
-            "prevalence": 0.0000411,
+            "sites": 7,
+            "prevalence": 0.000048,
             "cnames": [
                 {
                     "original": "risk-amer.nexa.ubs.com",
                     "resolved": "api.ubs.transmitsecurity.io"
+                },
+                {
+                    "original": "stats.par.sg.fr",
+                    "resolved": "api.eu.transmitsecurity.io"
                 },
                 {
                     "original": "tsdrs.schwab.com",
@@ -135,11 +127,12 @@
                 }
             ],
             "responseHashes": [
-                "3074d1ed214272f75faa2d16601829538a2b7b7e4cdd6d5cd72f6328ecf71303",
-                "f79b1c27154ddebb77263fbb6b3e775d2630d1c0048a64f5fcfcdea6f5fc0ec6",
-                "c7843eb741898a22c13d57cb5dfa283368ee82c01cad4289d179377735c15ce1",
-                "3b8b8d37dc7efb1924a715588d2e31ac86ee39f2d0c5f6edda88fb61b701b99d",
-                "e68f057b9b01e66592093c17ec2d22f98b6d1c153a4c1cb93ed6b781b15dd7a9"
+                "91a5a0ce4d02d72f35fc3067d294039e95fad12f1ef4e35778a58808196dc575",
+                "e09354201fd82054ca08bcdbff498fdd010c85db0af8f951d0ddd6cf48f9f9f0",
+                "c2b18a01c102c3d7b52acfc4a621496f370c5da1a1dd1f7eb1c9a4c8976832a2",
+                "eadc16769596eac30e7590ace3a8ed59971f6d7d4c5fb9a49414180a34170c95",
+                "8d665f0c94f35619dfd1b080f37917037daba65e8bf1008b14ab599dc796b3f5",
+                "e0b94582f63d3dd237c9d012edb86122316b40ebe0d29cdf435b5d3e9a389d79"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -147,6 +140,7 @@
             "exampleSites": [
                 "ubs.com",
                 "onlineservices.ubs.com",
+                "particuliers.sg.fr",
                 "schwab.com",
                 "welcome.schwab.com",
                 "workplace.schwab.com",
@@ -155,19 +149,24 @@
         },
         {
             "rule": "transmitsecurity\\.io\\/risk-collect\\/device\\/events",
-            "cookies": 0.0000411,
+            "cookies": 0.000048,
             "fingerprinting": 0,
             "subdomains": [
                 "api.ubs",
+                "api.eu",
                 "api"
             ],
             "apis": {},
-            "sites": 6,
-            "prevalence": 0.0000411,
+            "sites": 7,
+            "prevalence": 0.000048,
             "cnames": [
                 {
                     "original": "risk-amer.nexa.ubs.com",
                     "resolved": "api.ubs.transmitsecurity.io"
+                },
+                {
+                    "original": "stats.par.sg.fr",
+                    "resolved": "api.eu.transmitsecurity.io"
                 },
                 {
                     "original": "tsdrs.schwab.com",
@@ -181,6 +180,7 @@
             "exampleSites": [
                 "ubs.com",
                 "onlineservices.ubs.com",
+                "particuliers.sg.fr",
                 "schwab.com",
                 "welcome.schwab.com",
                 "workplace.schwab.com",
@@ -190,22 +190,26 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0000754,
+    "cookies": 0.0000755,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.625
+        },
+        {
+            "domain": "go-mpulse.net",
+            "prevalence": 0.375
         }
     ],
     "types": {
-        "Script": 5,
-        "Fetch": 11,
-        "Preflight": 6
+        "Script": 3,
+        "Fetch": 13,
+        "Preflight": 7
     },
     "nameservers": [
-        "ns-702.awsdns-23.net",
+        "ns-383.awsdns-47.com",
         "ns-1889.awsdns-44.co.uk",
-        "ns-1357.awsdns-41.org",
-        "ns-383.awsdns-47.com"
+        "ns-702.awsdns-23.net",
+        "ns-1357.awsdns-41.org"
     ]
 }

@@ -7,14 +7,50 @@
     "source": [
         "DuckDuckGo-GB"
     ],
-    "prevalence": 0.000703,
-    "sites": 7,
+    "prevalence": 0.000603,
+    "sites": 6,
     "subdomains": [
+        "tag",
         "api"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "getdrip\\.com\\/client\\.js",
+            "cookies": 0.0001,
+            "fingerprinting": 1,
+            "subdomains": [
+                "tag"
+            ],
+            "apis": {
+                "Navigator.prototype.userAgent": 2,
+                "Document.cookie getter": 2,
+                "Date.prototype.getTimezoneOffset": 2,
+                "Document.cookie setter": 1,
+                "Date.prototype.getTime": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "df62b7f4c0aa6c7c27cf9c8d6b44bbe17de7ba3d38bf8b1b1eeeb725704575ac"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {
+                "_drip_client_8512893": {
+                    "ttl": 63072006,
+                    "length": 277,
+                    "prevalence": 0.00010045203415369161,
+                    "uniqueness": 1
+                }
+            },
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "coffeeblog.co.uk",
+                "www.uaudio.com"
+            ]
+        },
         {
             "rule": "getdrip\\.com\\/client\\/events\\/visit",
             "cookies": 0.0001,
@@ -27,17 +63,17 @@
             "prevalence": 0.000402,
             "cnames": [],
             "responseHashes": [
-                "9766c8eebc809f3c1eecf148178d42094717b0d3ff6a4fe9b079c31bba76e5e2",
-                "171ad4707c38b47d9be3d91c922cfea212ea43301ed19d659af4ad11d3a25770",
-                "4f7b08711c90ef40560952125f611bf713474a0e892d6adbf1f5a37bfad69222"
+                "57660cbe449b1c97530f949f6cafa68186a769a28268ec75ad9cd32dc18d177d",
+                "0099372f0375e583e63f11dad4dc1f436d39ea39ef7f0ef118b18d341ae7c10c",
+                "26867097b05dc5387157e22c1d9832164d50b3aeb5da4752f0ca931b75eeef70"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
+                "coffeeblog.co.uk",
                 "spreadsheeto.com",
                 "www.baeldung.com",
-                "www.thesoapery.co.uk",
                 "www.uaudio.com"
             ]
         },
@@ -53,39 +89,17 @@
             "prevalence": 0.000402,
             "cnames": [],
             "responseHashes": [
-                "7c558bf2ac9bbbb242f53444ff940e7aea3808928c9ca7d676bd21ad4d2a9b25",
-                "6751719be2a2ee890e30dd9a26b2ad4d7c015904ad2e7edbae592e4dd2736dee",
-                "312459d18ddcb633b11fb6a31ff8dbaa874b6ed2ff5fd15421b0cecbf55534d1"
+                "f0834a10d4610c0ac012e1f35d5fdb5378c51b55f07bb889537360de30d1d4a4",
+                "0431d6ec4949e18c316ed5c2f091bb1eefab98339e7e984814df24c9028f4e15",
+                "dfa163b3545dc50881d1322697c193b24ea2b77177548ed1f22dcaf554ebb367"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
+                "coffeeblog.co.uk",
                 "spreadsheeto.com",
                 "www.baeldung.com",
-                "www.thesoapery.co.uk",
-                "www.uaudio.com"
-            ]
-        },
-        {
-            "rule": "getdrip\\.com\\/client\\/forms\\/show",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "api"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "7ea07cc47b05eef96c6084c54e60637fe4a959d66aec5c84ce34bae9ba0e6a80"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "thesoapery.co.uk",
                 "www.uaudio.com"
             ]
         },
@@ -101,13 +115,13 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "e2146ada4aa01636210abeeefd86e4fc5578f2ad1f456d56d392bc5a3676e720"
+                "d8909840dfeb787f2a62b1ebfb865dcddab9ba243df7b7c4d92d339ff09fe689"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "thesoapery.co.uk",
+                "coffeeblog.co.uk",
                 "www.uaudio.com"
             ]
         }
@@ -118,7 +132,11 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.875
+            "prevalence": 0.75
+        },
+        {
+            "domain": "sleeknote.com",
+            "prevalence": 0.125
         },
         {
             "domain": "sentry-cdn.com",
@@ -129,9 +147,9 @@
         "Script": 12
     },
     "nameservers": [
-        "ns-339.awsdns-42.com",
-        "ns-1955.awsdns-52.co.uk",
+        "ns-1039.awsdns-01.org",
         "ns-691.awsdns-22.net",
-        "ns-1039.awsdns-01.org"
+        "ns-339.awsdns-42.com",
+        "ns-1955.awsdns-52.co.uk"
     ]
 }
