@@ -7,24 +7,84 @@
     "prevalence": 0.000201,
     "sites": 2,
     "subdomains": [
-        "sdk"
+        "sdk",
+        "amag4",
+        "hgc"
     ],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "frontnow\\.app\\/v1\\/advisor\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 2,
             "subdomains": [
                 "sdk"
+            ],
+            "apis": {
+                "window.localStorage": 2,
+                "Navigator.prototype.userAgent": 2,
+                "Navigator.prototype.language": 2,
+                "Navigator.prototype.cookieEnabled": 2,
+                "Screen.prototype.width": 2,
+                "Screen.prototype.height": 2,
+                "Screen.prototype.colorDepth": 2,
+                "window.innerWidth": 2,
+                "window.innerHeight": 2,
+                "Intl.DateTimeFormat.prototype.resolvedOptions": 2,
+                "window.sessionStorage": 2
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "15109c87eda0e8684cb31d22be4e3a5aa9c7b7081ab55a8efba277668928a2c6"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "amag.ch",
+                "www.hgc.ch"
+            ]
+        },
+        {
+            "rule": "frontnow\\.app\\/api\\/event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "amag4",
+                "hgc"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [],
-            "type": "Script",
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "amag.ch",
+                "www.hgc.ch"
+            ]
+        },
+        {
+            "rule": "frontnow\\.app\\/api\\/event",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "amag4",
+                "hgc"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "a1a6a65b5c9d160f104dd1203d6e6782c16e544cd85d67483ea63b03f4b441b0"
+            ],
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -47,10 +107,12 @@
         }
     ],
     "types": {
-        "Script": 2
+        "Script": 2,
+        "Preflight": 2,
+        "Fetch": 2
     },
     "nameservers": [
-        "ns1.vercel-dns.com",
-        "ns2.vercel-dns.com"
+        "ns2.vercel-dns.com",
+        "ns1.vercel-dns.com"
     ]
 }

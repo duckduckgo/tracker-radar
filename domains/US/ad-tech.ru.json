@@ -4,16 +4,20 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.00013,
-    "sites": 19,
+    "prevalence": 0.000117,
+    "sites": 17,
     "subdomains": [
         "ssp-rambler",
         "ssp01-rambler",
-        "imgserve",
         "kraken",
-        "profile",
         "cs",
-        "sync"
+        "imgserve",
+        "imgredirect",
+        "profile",
+        "sync",
+        "imgstats",
+        "mpx",
+        "pixel"
     ],
     "cnames": [
         {
@@ -21,12 +25,28 @@
             "resolved": "cs.ad-tech.ru"
         },
         {
+            "original": "imgredirect.rambler.ru",
+            "resolved": "imgredirect.ad-tech.ru"
+        },
+        {
             "original": "imgserve.rambler.ru",
             "resolved": "imgserve.ad-tech.ru"
         },
         {
+            "original": "imgstats.rambler.ru",
+            "resolved": "imgstats.ad-tech.ru"
+        },
+        {
             "original": "kraken.rambler.ru",
             "resolved": "kraken.ad-tech.ru"
+        },
+        {
+            "original": "mpx.rambler.ru",
+            "resolved": "mpx.ad-tech.ru"
+        },
+        {
+            "original": "pixel.rambler.ru",
+            "resolved": "pixel.ad-tech.ru"
         },
         {
             "original": "ssp.rambler.ru",
@@ -45,7 +65,7 @@
     "resources": [
         {
             "rule": "ad-tech\\.ru\\/capirs_async\\.js",
-            "cookies": 0.0000892,
+            "cookies": 0.0000823,
             "fingerprinting": 2,
             "subdomains": [
                 "ssp-rambler"
@@ -67,13 +87,14 @@
                 "adtech_uid": {
                     "ttl": 31536004,
                     "length": 50,
-                    "prevalence": 0.00004804887256752583,
+                    "prevalence": 0.000034307435793633915,
                     "uniqueness": 1
                 }
             },
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "rambler.ru",
+                "eda.rambler.ru",
                 "finance.rambler.ru",
                 "horoscopes.rambler.ru",
                 "lenta.ru",
@@ -81,7 +102,6 @@
                 "m.lenta.ru",
                 "mail.rambler.ru",
                 "news.rambler.ru",
-                "ohnotheydidnt.livejournal.com",
                 "woman.rambler.ru",
                 "www.afisha.ru",
                 "www.championat.com",
@@ -92,7 +112,7 @@
         },
         {
             "rule": "ad-tech\\.ru\\/context\\.jsp",
-            "cookies": 0.000048,
+            "cookies": 0.0000343,
             "fingerprinting": 0,
             "subdomains": [
                 "ssp01-rambler"
@@ -107,85 +127,35 @@
                 }
             ],
             "responseHashes": [
-                "21c5a02b6aa1114b39c4b19012296eb5d2e40a0896bc704a4f7a7ec212145ce0",
-                "2f2036cc16b17709d8312f8fe6aaf5e9c3f46cd73cbedd875a59dc9c196859d2",
-                "7f7986f8c025b446cee231b8cc687f1af740835742b8a78823165d06cd9d0320",
-                "808db2a3ac94e944ec03b1e02f28cba643214daa7a6a0397f0a74ba92b623d30",
-                "e0b70818e9c5131eecc32648dc367a0c881e893081d2dab08eecf1e393ad46c6",
-                "acc2c190fe3bbe69b94f23a38fae224eec993269564a6b698d6e4a46d306d89e",
-                "1b10d92a35a8ee15cc3e19a30435af4031436cc18b3eec2b2efa64fec6abb81a",
-                "275573650be49b7d217fe8f93e19b4f9f3098271af595dd29d17105317fd7279",
-                "2c98df5ea4d2c61ee86ab3f04fb65381828c061367b20e91f5ef10a5e33a3c20",
-                "d29ac08f29f8c64efc1fac0e9dbd23cd8be86f10dc8ed1aaf5dbd1e89675c032",
-                "561cd065f6b7b2e3b27ceb853bc508e39d3e55a9a3d6cae829c686460953553f",
-                "173f1803fa197f260a1ea1c70dce14b77c09b79bd9faae1efe87d5b099ba098d",
-                "9266b63f4f00e3ac9fa23e4e7c3c0cc69ed3b9d334d4eeaf6611d283c82623d2"
+                "c4d1347788ca67378facb8613597e436ede77d6cbe78ff427ff2758a93ef3964",
+                "e6b9c7e976f77a8c47bb737329f1c70248ec885e96e31e32f35a6c2da67e6029",
+                "09de082c3b090a92d74ce8d99bd553a10b717d91e511c6430350b26414f3eaf3",
+                "0cad9e6545e0d150eca2b1f65d51f2be7c7c5eb026a7f63b54a3dbbf9f5cf65d",
+                "868d46de73629a0229831f04b13115e256ea99ccf617eca48cd0f49883bb5756",
+                "d75f11ba9aa944d00a2cf28cf38147fa5227decf3f4eacf31af42d5eb0094ba9",
+                "1d601d93c790df9c1b02895e85ccb0ce3f1b42980e8f5424a213a0b6a5abe56a",
+                "1174a76f65f938cf8f9500745de2b68e5fd50639fbdc4c94c9b2be59731ab9e5",
+                "f6f79dcc8175e33e54212952a3965d26b0f6e54f07f63bce05c5c0af8b60191e",
+                "b778d5389f38448ed3d506ee3567585b6a98abe34ec4dde3d1f3d5fff109abc1",
+                "8d5a322b0db5224231ca3368fd6404cc2c5ae0013abaa2cf884813d004a83dc6",
+                "773a8b8f44010c9e7befd151cfd9036dea87b4b158a15db3a9b110da0a40f803"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {
-                "_ym_uid": 0.00004804887256752583,
-                "_ym_d": 0.00004804887256752583
+                "_ym_uid": 0.00004116892295236069,
+                "_ym_d": 0.00004116892295236069
             },
             "exampleSites": [
                 "rambler.ru",
                 "doctor.rambler.ru",
+                "eda.rambler.ru",
                 "finance.rambler.ru",
                 "horoscopes.rambler.ru",
                 "lenta.ru",
                 "m.gazeta.ru",
                 "m.lenta.ru",
                 "news.rambler.ru",
-                "ohnotheydidnt.livejournal.com",
-                "woman.rambler.ru",
-                "www.championat.com",
-                "www.gazeta.ru",
-                "www.livejournal.com",
-                "www.rambler.ru"
-            ]
-        },
-        {
-            "rule": "ad-tech\\.ru\\/file\\.jsp",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "imgserve"
-            ],
-            "apis": {},
-            "sites": 14,
-            "prevalence": 0.0000961,
-            "cnames": [
-                {
-                    "original": "imgserve.rambler.ru",
-                    "resolved": "imgserve.ad-tech.ru"
-                }
-            ],
-            "responseHashes": [
-                "7e50a2c18284992ee208888a35747bc009f19b6a67e0c7044a3c3a259c2e5ff4",
-                "5987747d579d81401bb91eda9768fa7ffad7fe6e87f2cf70b7fb30a73f578914",
-                "99f113b3dbef2649d5d595718c910e62b24c5c29d9446676ada9eb2b4ddab2ef",
-                "841c29f2f238e91d05214dd51020d6a14dbf37b4473b775d9ba831717b43e80c",
-                "16f0949662d6c7fd489081cd41bed71834b4386c61c2a6a8e3bb9e7be3c38480",
-                "c6e08da8b98976a7c25743486e762b7c81279fe2a853f4054fa36bb8a11cc738",
-                "13e0bfc631b136abbd7a01551002d8805b0b31d2eaf8d9845d8dc9e6c81a0bc1",
-                "61d0ceb8a057bcc449ea29775e83703e0b9134963007677b01bb68a16e538ecc",
-                "b68bc0de34700fc8c6b09fe1d8142a484f3e29766ff072bb63345c85d2593141",
-                "0f241d840d12d1b7c421ef1a34bf166303e6d3fc96a2bf0d4b43dc3c14398a9a",
-                "b79453294e8fe29f4443e50ff0617ebc0fbdd9b26ea937f30c1d06d6167cb2d1"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "rambler.ru",
-                "doctor.rambler.ru",
-                "finance.rambler.ru",
-                "horoscopes.rambler.ru",
-                "lenta.ru",
-                "m.gazeta.ru",
-                "m.lenta.ru",
-                "news.rambler.ru",
-                "ohnotheydidnt.livejournal.com",
                 "woman.rambler.ru",
                 "www.championat.com",
                 "www.gazeta.ru",
@@ -195,7 +165,7 @@
         },
         {
             "rule": "ad-tech\\.ru\\/cnt\\/v2\\/",
-            "cookies": 0.0000343,
+            "cookies": 0.0000274,
             "fingerprinting": 0,
             "subdomains": [
                 "kraken"
@@ -218,6 +188,7 @@
             "exampleSites": [
                 "rambler.ru",
                 "doctor.rambler.ru",
+                "eda.rambler.ru",
                 "finance.rambler.ru",
                 "horoscopes.rambler.ru",
                 "lenta.ru",
@@ -225,7 +196,6 @@
                 "m.lenta.ru",
                 "mail.rambler.ru",
                 "news.rambler.ru",
-                "ohnotheydidnt.livejournal.com",
                 "woman.rambler.ru",
                 "www.afisha.ru",
                 "www.championat.com",
@@ -235,52 +205,8 @@
             ]
         },
         {
-            "rule": "ad-tech\\.ru\\/sandbox",
-            "cookies": 0.0000892,
-            "fingerprinting": 0,
-            "subdomains": [
-                "profile"
-            ],
-            "apis": {},
-            "sites": 13,
-            "prevalence": 0.0000892,
-            "cnames": [],
-            "responseHashes": [
-                "c1659a364cfce1a41615e925bf870fa117748b96a8cc216a2209c8add7a20f82",
-                "489c9089995bde2e03427aea577e8cc4e7704dcff48302b01b88e2dbbc184a06",
-                "c6d6b7f1afac0e68af2bc0d05bddea30a3b9ab6f588f89184fe5032c2295b75f",
-                "67a8eb895acef509a8dae522bfe175791454e41577860672e9aee7df4acaccac",
-                "3245fa0e5e083e33657ed3ad5062c0882286267eae3b8ad6dfd3a95ee2f3a4ce",
-                "44d18f99a04a490f173f22e8e31dacd8931ba998d4a5ef4d6d366fc894433c51",
-                "ebe640c67fd2394d1ccb998a47b326cebac730d57e42023bf0815a0e53593aab",
-                "63fe1a74499a92048f6954923c6e56395b83cdfd6dcfc123186478b3cacf5578",
-                "c99a1d957d1b8b7997170357601440df16cc1c7b039f9d659548e0f92ee06ffe",
-                "1587598e207899dc4dbab359db58e96adc69b0281d3280cf7ff077d374f757e3",
-                "200665fe199a105a4a369f5693d36ec67c1a2a4490ad9b9c13d6fade972f6610",
-                "25606269c62f34d6bd8b673a3b38150500e2c0751009baa793fa049edd139bd3"
-            ],
-            "type": "Document",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "rambler.ru",
-                "finance.rambler.ru",
-                "horoscopes.rambler.ru",
-                "lenta.ru",
-                "m.gazeta.ru",
-                "m.lenta.ru",
-                "news.rambler.ru",
-                "ohnotheydidnt.livejournal.com",
-                "woman.rambler.ru",
-                "www.championat.com",
-                "www.gazeta.ru",
-                "www.livejournal.com",
-                "www.rambler.ru"
-            ]
-        },
-        {
             "rule": "ad-tech\\.ru\\/api\\/v2\\/events",
-            "cookies": 0.0000275,
+            "cookies": 0.0000206,
             "fingerprinting": 0,
             "subdomains": [
                 "cs"
@@ -303,6 +229,7 @@
             "exampleSites": [
                 "rambler.ru",
                 "doctor.rambler.ru",
+                "eda.rambler.ru",
                 "finance.rambler.ru",
                 "horoscopes.rambler.ru",
                 "lenta.ru",
@@ -310,7 +237,6 @@
                 "m.lenta.ru",
                 "mail.rambler.ru",
                 "news.rambler.ru",
-                "ohnotheydidnt.livejournal.com",
                 "woman.rambler.ru",
                 "www.afisha.ru",
                 "www.championat.com",
@@ -320,35 +246,52 @@
             ]
         },
         {
-            "rule": "ad-tech\\.ru\\/emily",
+            "rule": "ad-tech\\.ru\\/file\\.jsp",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "sync"
+                "imgserve",
+                "imgredirect"
             ],
             "apis": {},
-            "sites": 14,
-            "prevalence": 0.0000961,
+            "sites": 13,
+            "prevalence": 0.0000892,
             "cnames": [
                 {
-                    "original": "sync.rambler.ru",
-                    "resolved": "sync.ad-tech.ru"
+                    "original": "imgserve.rambler.ru",
+                    "resolved": "imgserve.ad-tech.ru"
+                },
+                {
+                    "original": "imgredirect.rambler.ru",
+                    "resolved": "imgredirect.ad-tech.ru"
                 }
             ],
-            "responseHashes": [],
-            "type": "Image",
+            "responseHashes": [
+                "1e0838dc81cdd694017a7f89719766ed57eee72910cf41dfe3d016da10a20b0c",
+                "c43d8b71b5d08f81c65060047c5ec5fa5acbf76ef2baaf306a430a928d2b1574",
+                "ed3df171fdd158593c460898bdbd80f8844a90d5b753b11c81ccd7b6cab25ab5",
+                "0a2e1a573a5a9ea187e1ccfde6d289c923e2e29553fad262b04439298e3e4e80",
+                "841c29f2f238e91d05214dd51020d6a14dbf37b4473b775d9ba831717b43e80c",
+                "adf122f6be3752c4c39666a56b7aece15da0373c6e5ae8894f11270630761200",
+                "994a0c69c75cff9319aa4279ef9584b8ba784f8bf61a294fc8747b945559d61b",
+                "27acf8b9d9bb416f8082e3f55de56a8d391417cc097addbff6ca385812a746a7",
+                "b68bc0de34700fc8c6b09fe1d8142a484f3e29766ff072bb63345c85d2593141",
+                "16f0949662d6c7fd489081cd41bed71834b4386c61c2a6a8e3bb9e7be3c38480",
+                "57a7a40616340354335bebe2843146fd468266b67670d0b93feaf5fbb018ab29",
+                "954cada6e87f707dad3012fa2a4d73ed660682c88004582cdd11c196e0ad6a33"
+            ],
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "rambler.ru",
                 "doctor.rambler.ru",
+                "eda.rambler.ru",
                 "finance.rambler.ru",
                 "horoscopes.rambler.ru",
                 "lenta.ru",
-                "m.gazeta.ru",
                 "m.lenta.ru",
                 "news.rambler.ru",
-                "ohnotheydidnt.livejournal.com",
                 "woman.rambler.ru",
                 "www.championat.com",
                 "www.gazeta.ru",
@@ -357,15 +300,167 @@
             ]
         },
         {
-            "rule": "ad-tech\\.ru\\/set",
-            "cookies": 0,
+            "rule": "ad-tech\\.ru\\/sandbox",
+            "cookies": 0.0000823,
+            "fingerprinting": 0,
+            "subdomains": [
+                "profile"
+            ],
+            "apis": {},
+            "sites": 12,
+            "prevalence": 0.0000823,
+            "cnames": [],
+            "responseHashes": [
+                "a86ce7d4f74301e6bddd49f5238becada39ae474d04e5045b666e79bd1d670ad",
+                "19be8e31eac3829cbb40214c764d64784582ca6a613bcf277670fe8b96f89482",
+                "ec4e18f5ed07104ff8e09747905b2a9fee7468f9a96d8bccfa9000b7a4201a51",
+                "544397a88ba3e832fdb28b5e0f823b94dbfda9b015d83524292e18cc7737ab1e",
+                "668c2c563f99189ca0c5a7d355e134be56e0c287f44d50b8b1ea4265f2e23b6a",
+                "f892d356b6d5ad42b30d371c3d417f77d7cdb113d1786fb25ff07f46783c1b3b",
+                "ec4ee6fe9bb18daaa51b59590a08a3a41512a5487d784c39abdb12fe05ba52b3",
+                "f69bce71f7550263a8d60031633106da6547420f23137cd600ef390df52a6ee6",
+                "c2d0989b2ea8f98b2d466d9bc35fc45edccf02da0b083fa39ab3fb9f897256cf",
+                "d2e83b9aaa1400c4e86dba6c359beba413b99b0922be60acb2376329685ad37a",
+                "461c287e1968bf5f853645f2d19fb296b4458976530fb5fc6d1d8c959d2435bb"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rambler.ru",
+                "eda.rambler.ru",
+                "finance.rambler.ru",
+                "horoscopes.rambler.ru",
+                "lenta.ru",
+                "m.lenta.ru",
+                "news.rambler.ru",
+                "woman.rambler.ru",
+                "www.championat.com",
+                "www.gazeta.ru",
+                "www.livejournal.com",
+                "www.rambler.ru"
+            ]
+        },
+        {
+            "rule": "ad-tech\\.ru\\/emily",
+            "cookies": 0.00000686,
             "fingerprinting": 0,
             "subdomains": [
                 "sync"
             ],
             "apis": {},
-            "sites": 14,
-            "prevalence": 0.0000961,
+            "sites": 13,
+            "prevalence": 0.0000892,
+            "cnames": [
+                {
+                    "original": "sync.rambler.ru",
+                    "resolved": "sync.ad-tech.ru"
+                }
+            ],
+            "responseHashes": [
+                "f4eef8263281c0b26486637831251059757bc3fdc4c3a48045a8ef8646b36e8f"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rambler.ru",
+                "doctor.rambler.ru",
+                "eda.rambler.ru",
+                "finance.rambler.ru",
+                "horoscopes.rambler.ru",
+                "lenta.ru",
+                "m.lenta.ru",
+                "news.rambler.ru",
+                "woman.rambler.ru",
+                "www.championat.com",
+                "www.gazeta.ru",
+                "www.livejournal.com",
+                "www.rambler.ru"
+            ]
+        },
+        {
+            "rule": "ad-tech\\.ru\\/file\\.jsp",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "imgredirect"
+            ],
+            "apis": {},
+            "sites": 8,
+            "prevalence": 0.0000549,
+            "cnames": [
+                {
+                    "original": "imgredirect.rambler.ru",
+                    "resolved": "imgredirect.ad-tech.ru"
+                }
+            ],
+            "responseHashes": [
+                "2f0b17a83cab5218d639b65533af716c8d149559f82c7012f6d3f5dbae958f2f",
+                "dd9ca1700cb5e4c1840fc140d592bb018220036544de85b22af5ade454b56fb4",
+                "7e997f202fba305d7f4d86d82c0f7c1ca7802b1833ad1685e7450bee1cde15f0",
+                "d0178476ed72ac25a3744131cd1fe85d3aa04b1052347e46c6229f23b76f7b05",
+                "8e471dc9aebc019393936a49b41b3afe2ca0417518dd7e10120b8d50acfb18ca",
+                "4c1345d3aeb2b91437775416bece77856d5216056fa9c0314901fefa17070ef6",
+                "4a6e4fb9e9aa806029294c9abbaae6f9008c3a9a7ca630973cd39034a776e8bd"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rambler.ru",
+                "doctor.rambler.ru",
+                "eda.rambler.ru",
+                "finance.rambler.ru",
+                "horoscopes.rambler.ru",
+                "news.rambler.ru",
+                "woman.rambler.ru",
+                "www.rambler.ru"
+            ]
+        },
+        {
+            "rule": "ad-tech\\.ru\\/file\\.jsp",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "imgstats"
+            ],
+            "apis": {},
+            "sites": 8,
+            "prevalence": 0.0000549,
+            "cnames": [
+                {
+                    "original": "imgstats.rambler.ru",
+                    "resolved": "imgstats.ad-tech.ru"
+                }
+            ],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rambler.ru",
+                "doctor.rambler.ru",
+                "eda.rambler.ru",
+                "finance.rambler.ru",
+                "horoscopes.rambler.ru",
+                "news.rambler.ru",
+                "woman.rambler.ru",
+                "www.rambler.ru"
+            ]
+        },
+        {
+            "rule": "ad-tech\\.ru\\/set",
+            "cookies": 0.00000686,
+            "fingerprinting": 0,
+            "subdomains": [
+                "sync"
+            ],
+            "apis": {},
+            "sites": 13,
+            "prevalence": 0.0000892,
             "cnames": [
                 {
                     "original": "sync.rambler.ru",
@@ -382,18 +477,332 @@
             "exampleSites": [
                 "rambler.ru",
                 "doctor.rambler.ru",
+                "eda.rambler.ru",
                 "finance.rambler.ru",
                 "horoscopes.rambler.ru",
                 "lenta.ru",
-                "m.gazeta.ru",
                 "m.lenta.ru",
                 "news.rambler.ru",
-                "ohnotheydidnt.livejournal.com",
                 "woman.rambler.ru",
                 "www.championat.com",
                 "www.gazeta.ru",
                 "www.livejournal.com",
                 "www.rambler.ru"
+            ]
+        },
+        {
+            "rule": "ad-tech\\.ru\\/pixel\\/642450483\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "mpx"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.0000412,
+            "cnames": [
+                {
+                    "original": "mpx.rambler.ru",
+                    "resolved": "mpx.ad-tech.ru"
+                }
+            ],
+            "responseHashes": [
+                "77b1d2c0857d4e95d4c2ae7aa0abc5aaafa6bd4581b31203d1592759c26f5c44"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rambler.ru",
+                "eda.rambler.ru",
+                "finance.rambler.ru",
+                "horoscopes.rambler.ru",
+                "news.rambler.ru",
+                "woman.rambler.ru"
+            ]
+        },
+        {
+            "rule": "ad-tech\\.ru\\/pixelnotvast\\/642450483\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pixel"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.0000412,
+            "cnames": [
+                {
+                    "original": "pixel.rambler.ru",
+                    "resolved": "pixel.ad-tech.ru"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rambler.ru",
+                "eda.rambler.ru",
+                "finance.rambler.ru",
+                "horoscopes.rambler.ru",
+                "news.rambler.ru",
+                "woman.rambler.ru"
+            ]
+        },
+        {
+            "rule": "ad-tech\\.ru\\/pixel\\/642450456\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "mpx"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000206,
+            "cnames": [
+                {
+                    "original": "mpx.rambler.ru",
+                    "resolved": "mpx.ad-tech.ru"
+                }
+            ],
+            "responseHashes": [
+                "77b1d2c0857d4e95d4c2ae7aa0abc5aaafa6bd4581b31203d1592759c26f5c44"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rambler.ru",
+                "horoscopes.rambler.ru",
+                "www.rambler.ru"
+            ]
+        },
+        {
+            "rule": "ad-tech\\.ru\\/pixelnotvast\\/642450456\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pixel"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000206,
+            "cnames": [
+                {
+                    "original": "pixel.rambler.ru",
+                    "resolved": "pixel.ad-tech.ru"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rambler.ru",
+                "horoscopes.rambler.ru",
+                "www.rambler.ru"
+            ]
+        },
+        {
+            "rule": "ad-tech\\.ru\\/pixelnotvast\\/642450456",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pixel"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000206,
+            "cnames": [
+                {
+                    "original": "pixel.rambler.ru",
+                    "resolved": "pixel.ad-tech.ru"
+                }
+            ],
+            "responseHashes": [
+                "d346801abbf9bb4e9e9a055239053d4ab5596514304f601a6c70604187acb744"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rambler.ru",
+                "horoscopes.rambler.ru",
+                "www.rambler.ru"
+            ]
+        },
+        {
+            "rule": "ad-tech\\.ru\\/pixelnotvast\\/642450483",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pixel"
+            ],
+            "apis": {},
+            "sites": 6,
+            "prevalence": 0.0000412,
+            "cnames": [
+                {
+                    "original": "pixel.rambler.ru",
+                    "resolved": "pixel.ad-tech.ru"
+                }
+            ],
+            "responseHashes": [
+                "d346801abbf9bb4e9e9a055239053d4ab5596514304f601a6c70604187acb744"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rambler.ru",
+                "eda.rambler.ru",
+                "finance.rambler.ru",
+                "horoscopes.rambler.ru",
+                "news.rambler.ru",
+                "woman.rambler.ru"
+            ]
+        },
+        {
+            "rule": "ad-tech\\.ru\\/view_dsp\\/642450456\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "mpx"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000206,
+            "cnames": [
+                {
+                    "original": "mpx.rambler.ru",
+                    "resolved": "mpx.ad-tech.ru"
+                }
+            ],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rambler.ru",
+                "horoscopes.rambler.ru",
+                "www.rambler.ru"
+            ]
+        },
+        {
+            "rule": "ad-tech\\.ru\\/pixel\\/642450457\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "mpx"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [
+                {
+                    "original": "mpx.rambler.ru",
+                    "resolved": "mpx.ad-tech.ru"
+                }
+            ],
+            "responseHashes": [
+                "77b1d2c0857d4e95d4c2ae7aa0abc5aaafa6bd4581b31203d1592759c26f5c44"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rambler.ru",
+                "finance.rambler.ru",
+                "news.rambler.ru",
+                "woman.rambler.ru"
+            ]
+        },
+        {
+            "rule": "ad-tech\\.ru\\/pixelnotvast\\/642450457\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pixel"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [
+                {
+                    "original": "pixel.rambler.ru",
+                    "resolved": "pixel.ad-tech.ru"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rambler.ru",
+                "finance.rambler.ru",
+                "news.rambler.ru",
+                "woman.rambler.ru"
+            ]
+        },
+        {
+            "rule": "ad-tech\\.ru\\/pixelnotvast\\/642450457",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pixel"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [
+                {
+                    "original": "pixel.rambler.ru",
+                    "resolved": "pixel.ad-tech.ru"
+                }
+            ],
+            "responseHashes": [
+                "d346801abbf9bb4e9e9a055239053d4ab5596514304f601a6c70604187acb744"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rambler.ru",
+                "finance.rambler.ru",
+                "news.rambler.ru",
+                "woman.rambler.ru"
+            ]
+        },
+        {
+            "rule": "ad-tech\\.ru\\/view_dsp\\/642450457\\/",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "mpx"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.0000274,
+            "cnames": [
+                {
+                    "original": "mpx.rambler.ru",
+                    "resolved": "mpx.ad-tech.ru"
+                }
+            ],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "rambler.ru",
+                "finance.rambler.ru",
+                "news.rambler.ru",
+                "woman.rambler.ru"
             ]
         },
         {
@@ -427,41 +836,45 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000117,
+    "cookies": 0.000103,
     "topInitiators": [
         {
             "domain": "top100.ru",
-            "prevalence": 0.6780866192630899
+            "prevalence": 0.676208651399491
         },
         {
             "domain": "first party",
-            "prevalence": 0.15578539107950873
+            "prevalence": 0.15012722646310434
         },
         {
             "domain": "ad-tech.ru",
-            "prevalence": 0.15513897866839044
+            "prevalence": 0.1316793893129771
+        },
+        {
+            "domain": "dsp-rambler.ru",
+            "prevalence": 0.03498727735368957
         },
         {
             "domain": "rambler.ru",
-            "prevalence": 0.005171299288946348
+            "prevalence": 0.0031806615776081423
         },
         {
             "domain": "livejournal.net",
-            "prevalence": 0.005171299288946348
+            "prevalence": 0.002544529262086514
         },
         {
             "domain": "yandex.ru",
-            "prevalence": 0.0006464124111182935
+            "prevalence": 0.001272264631043257
         }
     ],
     "types": {
         "Script": 15,
-        "XHR": 60,
-        "Document": 13,
-        "Image": 31
+        "XHR": 59,
+        "Document": 20,
+        "Image": 83
     },
     "nameservers": [
-        "ns3.ad-tech.ru",
-        "ns2.ad-tech.ru"
+        "ns2.ad-tech.ru",
+        "ns3.ad-tech.ru"
     ]
 }

@@ -7,8 +7,8 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.00000686,
-    "sites": 1,
+    "prevalence": 0.0000137,
+    "sites": 2,
     "subdomains": [
         "asset"
     ],
@@ -16,7 +16,84 @@
     "fingerprinting": 2,
     "resources": [
         {
+            "rule": "easydmp\\.net\\/js\\/client\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "asset"
+            ],
+            "apis": {
+                "Document.cookie getter": 2,
+                "Date.prototype.getTime": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "08de6bdbaf865aeb1fad6e0f14d5190fd181594e8214e0f22fe346217a8526a5"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dyson.fr",
+                "www.ktotv.com"
+            ]
+        },
+        {
+            "rule": "easydmp\\.net\\/client_iframe\\.html",
+            "cookies": 0.0000137,
+            "fingerprinting": 1,
+            "subdomains": [
+                "asset"
+            ],
+            "apis": {
+                "Date.prototype.getTime": 2,
+                "window.localStorage": 2,
+                "Document.cookie getter": 2,
+                "window.indexedDB": 2,
+                "Document.cookie setter": 2
+            },
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "8bb9d4832b5b968049e7530dcf01a7f6b3653ec03bc0a1362cf91e58be83b3d2"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dyson.fr",
+                "www.ktotv.com"
+            ]
+        },
+        {
             "rule": "easydmp\\.net\\/etag\\.php",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "asset"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000206,
+            "cnames": [],
+            "responseHashes": [
+                "9a7b3e6c1ab80e2e124714b11ffaaec020ee6d83e11eba6243bfe6b957e72b47",
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dyson.fr",
+                "www.dyson.fr",
+                "www.ktotv.com"
+            ]
+        },
+        {
+            "rule": "easydmp\\.net\\/collect_v3\\.php",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -27,18 +104,18 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "396c1bbeecc0a65065390275fb3e161887ff7116e79fe11c17e9f81bbeed1497"
+                "802c1c0d04f193a23c1c2e2b8072e6d02079ceaebb0d1b064d5acd00391d9ad7"
             ],
             "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "dyson.fr",
-                "www.dyson.fr"
+                "www.ktotv.com"
             ]
         },
         {
-            "rule": "easydmp\\.net\\/collect_v2\\.img\\.php",
+            "rule": "easydmp\\.net\\/get_delivery_data\\.php",
             "cookies": 0.0000137,
             "fingerprinting": 0,
             "subdomains": [
@@ -49,6 +126,28 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
+                "72c4b32efc41f835986641ed53b93cdca85829b6553637e770472a63be1b374e"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dyson.fr",
+                "www.ktotv.com"
+            ]
+        },
+        {
+            "rule": "easydmp\\.net\\/collect_v2\\.img\\.php",
+            "cookies": 0.0000206,
+            "fingerprinting": 0,
+            "subdomains": [
+                "asset"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000206,
+            "cnames": [],
+            "responseHashes": [
                 "77b1d2c0857d4e95d4c2ae7aa0abc5aaafa6bd4581b31203d1592759c26f5c44"
             ],
             "type": "Image",
@@ -56,22 +155,29 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "dyson.fr",
-                "www.dyson.fr"
+                "www.dyson.fr",
+                "www.ktotv.com"
             ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.00000686,
+    "cookies": 0.0000137,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.9090909090909091
+        },
+        {
+            "domain": "email-match.com",
+            "prevalence": 0.09090909090909091
         }
     ],
     "types": {
-        "XHR": 2,
-        "Image": 2
+        "Script": 2,
+        "Document": 2,
+        "XHR": 7,
+        "Image": 3
     },
     "nameservers": [
         "ns109.ovh.net",

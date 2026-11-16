@@ -7,12 +7,17 @@
     "prevalence": 0.00000686,
     "sites": 1,
     "subdomains": [
-        "gateway-age.ops"
+        "gateway-age.ops",
+        "gateway-age-prod-monitoring.ops"
     ],
     "cnames": [
         {
             "original": "collector.omio.com",
             "resolved": "gateway-age.ops.omio.tech"
+        },
+        {
+            "original": "logger.omio.com",
+            "resolved": "gateway-age-prod-monitoring.ops.omio.tech"
         }
     ],
     "fingerprinting": 0,
@@ -43,6 +48,58 @@
                 "omio.com",
                 "www.omio.com"
             ]
+        },
+        {
+            "rule": "omio\\.tech\\/frontend",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gateway-age-prod-monitoring.ops"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "logger.omio.com",
+                    "resolved": "gateway-age-prod-monitoring.ops.omio.tech"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "omio.com",
+                "www.omio.com"
+            ]
+        },
+        {
+            "rule": "omio\\.tech\\/frontend",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "gateway-age-prod-monitoring.ops"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "logger.omio.com",
+                    "resolved": "gateway-age-prod-monitoring.ops.omio.tech"
+                }
+            ],
+            "responseHashes": [
+                "2689367b205c16ce32ed4200942b8b8b1e262dfc70d9bc9fbc77c49699a4f1df"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "omio.com",
+                "www.omio.com"
+            ]
         }
     ],
     "categories": [],
@@ -50,16 +107,13 @@
     "cookies": 0.00000686,
     "topInitiators": [
         {
-            "domain": "usercentrics.eu",
-            "prevalence": 0.6666666666666666
-        },
-        {
             "domain": "omio.design",
-            "prevalence": 0.3333333333333333
+            "prevalence": 1
         }
     ],
     "types": {
-        "Fetch": 2
+        "Fetch": 4,
+        "Preflight": 2
     },
     "nameservers": [
         "vern.ns.cloudflare.com",

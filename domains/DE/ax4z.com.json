@@ -4,18 +4,23 @@
     "source": [
         "DuckDuckGo-DE"
     ],
-    "prevalence": 0.000604,
+    "prevalence": 0.000603,
     "sites": 6,
     "subdomains": [
-        "api--shop-prod-kik-de"
+        "api--shop-prod-kik-de",
+        "push-ls--tc-de"
     ],
     "cnames": [
         {
             "original": "api-shop.prod.kik.de",
             "resolved": "api--shop-prod-kik-de.ax4z.com"
+        },
+        {
+            "original": "push.ls-tc.de",
+            "resolved": "push-ls--tc-de.ax4z.com"
         }
     ],
-    "fingerprinting": 2,
+    "fingerprinting": 0,
     "resources": [
         {
             "rule": "ax4z\\.com\\/api\\/v1\\/me",
@@ -91,6 +96,58 @@
                 "kik.de",
                 "www.kik.de"
             ]
+        },
+        {
+            "rule": "ax4z\\.com\\/lightstreamer\\/create_session\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "push-ls--tc-de"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "push.ls-tc.de",
+                    "resolved": "push-ls--tc-de.ax4z.com"
+                }
+            ],
+            "responseHashes": [
+                "136c212dd1ecd182ed838f999de2451ccbf3d085c655e2078c83d7bb99dd4cf8"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ls-tc.de",
+                "www.ls-tc.de"
+            ]
+        },
+        {
+            "rule": "ax4z\\.com\\/lightstreamer",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "push-ls--tc-de"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "push.ls-tc.de",
+                    "resolved": "push-ls--tc-de.ax4z.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "WebSocket",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "ls-tc.de",
+                "www.ls-tc.de"
+            ]
         }
     ],
     "categories": [],
@@ -98,11 +155,13 @@
     "cookies": 0.000101,
     "types": {
         "Fetch": 4,
-        "Other": 2
+        "Other": 2,
+        "XHR": 2,
+        "WebSocket": 2
     },
     "nameservers": [
         "c.ax4z.com",
-        "a.ax4z.com",
-        "b.ax4z.com"
+        "b.ax4z.com",
+        "a.ax4z.com"
     ]
 }
