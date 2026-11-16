@@ -10,31 +10,34 @@
     "prevalence": 0.000402,
     "sites": 4,
     "subdomains": [
-        "api"
+        "sdk"
     ],
     "cnames": [],
-    "fingerprinting": 1,
+    "fingerprinting": 2,
     "resources": [
         {
-            "rule": "woosmap\\.com\\/geolocation\\/position\\/",
+            "rule": "woosmap\\.com\\/map\\/map\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 2,
             "subdomains": [
-                "api"
+                "sdk"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.hardwareConcurrency": 2,
+                "URL.createObjectURL": 2
+            },
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "1c2268685c486980c8abe4b2a23f8c79b9a00c49b143ec1071f9cb7acc728193"
+                "17bc23d5bf8c550e2fb2cbb0a6b81c949699a438034d995caf0a67e7e8bce087"
             ],
-            "type": "Fetch",
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "castorama.fr",
-                "www.diy.com"
+                "hubo.be",
+                "www.snappcar.nl"
             ]
         }
     ],
@@ -44,14 +47,18 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.75
+        },
+        {
+            "domain": "dzklgi3s0q69j.cloudfront.net",
+            "prevalence": 0.25
         }
     ],
     "types": {
-        "Fetch": 2
+        "Script": 2
     },
     "nameservers": [
-        "chad.ns.cloudflare.com",
-        "jasmine.ns.cloudflare.com"
+        "jasmine.ns.cloudflare.com",
+        "chad.ns.cloudflare.com"
     ]
 }

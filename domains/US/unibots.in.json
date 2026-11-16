@@ -4,12 +4,11 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000686,
-    "sites": 10,
+    "prevalence": 0.0000618,
+    "sites": 9,
     "subdomains": [
         "cdn",
-        "socket",
-        "api"
+        "socket"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -39,11 +38,14 @@
         {
             "rule": "unibots\\.in\\/headerbidding\\/common\\/hb\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "cdn"
             ],
-            "apis": {},
+            "apis": {
+                "window.localStorage": 2,
+                "Navigator.prototype.userAgent": 2
+            },
             "sites": 3,
             "prevalence": 0.0000206,
             "cnames": [],
@@ -60,6 +62,48 @@
             ]
         },
         {
+            "rule": "unibots\\.in\\/headerbidding\\/vnexpress\\.json",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "7530ca26a233f0ccf536add9d5146ada44f4e09bf44460543ac113dcf751280b"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vnexpress.net",
+                "e.vnexpress.net"
+            ]
+        },
+        {
+            "rule": "unibots\\.in\\/headerbidding\\/common\\/ub_prebid\\.js",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "vnexpress.net",
+                "e.vnexpress.net"
+            ]
+        },
+        {
             "rule": "unibots\\.in\\/socket\\.io\\/",
             "cookies": 0,
             "fingerprinting": 0,
@@ -67,8 +111,8 @@
                 "socket"
             ],
             "apis": {},
-            "sites": 6,
-            "prevalence": 0.0000412,
+            "sites": 5,
+            "prevalence": 0.0000343,
             "cnames": [],
             "responseHashes": [],
             "type": "WebSocket",
@@ -77,32 +121,9 @@
             "exampleSites": [
                 "ragalahari.com",
                 "scrolldroll.com",
-                "soapoperadaily.com",
                 "www.bhaktibharat.com",
-                "www.mid-day.com",
+                "www.republicworld.com",
                 "www.thebridgechronicle.com"
-            ]
-        },
-        {
-            "rule": "unibots\\.in\\/block",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "api"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {
-                "lotame_domain_check": 0.000006864124652503689
-            },
-            "exampleSites": [
-                "soapoperadaily.com",
-                "www.republicworld.com"
             ]
         }
     ],
@@ -111,11 +132,11 @@
     "cookies": 0,
     "topInitiators": [
         {
-            "domain": "socket.io",
-            "prevalence": 0.35294117647058826
+            "domain": "doubleclick.net",
+            "prevalence": 0.4117647058823529
         },
         {
-            "domain": "doubleclick.net",
+            "domain": "socket.io",
             "prevalence": 0.29411764705882354
         },
         {
@@ -124,17 +145,17 @@
         },
         {
             "domain": "unibotscdn.com",
-            "prevalence": 0.11764705882352941
+            "prevalence": 0.058823529411764705
         }
     ],
     "types": {
-        "Script": 5,
-        "WebSocket": 6,
-        "Fetch": 2
+        "Script": 7,
+        "Fetch": 2,
+        "WebSocket": 5
     },
     "nameservers": [
-        "ns5.linode.com",
         "ns2.linode.com",
+        "ns5.linode.com",
         "ns4.linode.com",
         "ns1.linode.com",
         "ns3.linode.com"

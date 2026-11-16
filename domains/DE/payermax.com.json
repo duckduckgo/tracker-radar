@@ -7,10 +7,11 @@
     "prevalence": 0.000101,
     "sites": 1,
     "subdomains": [
-        "basic-monitor-gateway"
+        "basic-monitor-gateway",
+        "finger-print"
     ],
     "cnames": [],
-    "fingerprinting": 2,
+    "fingerprinting": 3,
     "resources": [
         {
             "rule": "payermax\\.com\\/data\\/save",
@@ -23,8 +24,10 @@
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Other",
+            "responseHashes": [
+                "db5e56aee14fbacb8756da3de32442862bb76526753ebcf237ddebd9d1670ff7"
+            ],
+            "type": "Ping",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -44,7 +47,29 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [],
-            "type": "Ping",
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "seaart.ai",
+                "www.seaart.ai"
+            ]
+        },
+        {
+            "rule": "payermax\\.com\\/udid\\/c1",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "finger-print"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "1f930b17870bca47c22b00079db57333291ab673cb537bb2100156e548bc0c1b"
+            ],
+            "type": "XHR",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -63,8 +88,9 @@
         }
     ],
     "types": {
-        "Other": 2,
-        "Ping": 2
+        "Ping": 2,
+        "Preflight": 2,
+        "XHR": 2
     },
     "nameservers": [
         "ns-333.awsdns-41.com",

@@ -9,10 +9,11 @@
     "source": [
         "DuckDuckGo-GB"
     ],
-    "prevalence": 0.000502,
-    "sites": 5,
+    "prevalence": 0.000602,
+    "sites": 6,
     "subdomains": [
         "ssl-delivery",
+        "utut-service-api",
         "commerce"
     ],
     "cnames": [
@@ -23,6 +24,10 @@
         {
             "original": "geo2.adobe.com",
             "resolved": "ssl-delivery.adobe.com.edgekey.net"
+        },
+        {
+            "original": "utut-service.adobe.com",
+            "resolved": "utut-service-api.adobe.com.edgekey.net"
         }
     ],
     "fingerprinting": 1,
@@ -35,8 +40,8 @@
                 "ssl-delivery"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000301,
+            "sites": 4,
+            "prevalence": 0.000402,
             "cnames": [
                 {
                     "original": "geo2.adobe.com",
@@ -44,8 +49,9 @@
                 }
             ],
             "responseHashes": [
-                "2d84a4c7d3971c83de30e1a7cbc51c7204870538cb54b24e5818b6cf7905e587",
-                "429d2c469b96f1e4f99d88bfc0899f9a28a753f7644b6086cca064d522828e30"
+                "ead3e38e75b84746ae1d727cd67a0bebb10e7184c8ce2f49fc5bbc7e484b8198",
+                "282c757205011f3fc528d8fe21240319888657edeaf65abcb89dd27024b6b208",
+                "60c52a83aa10e5cf757be05ceccae7a0c3390e0201c09c5c141a95323c178b3d"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -53,6 +59,7 @@
             "exampleSites": [
                 "adobe.com",
                 "fonts.adobe.com",
+                "lightroom.adobe.com",
                 "www.behance.net"
             ]
         },
@@ -84,30 +91,55 @@
             ]
         },
         {
-            "rule": "adobe\\.com\\.edgekey\\.net\\/amsterdam\\/sdk\\/sherlock\\.min\\.js",
-            "cookies": 0.000201,
-            "fingerprinting": 1,
+            "rule": "adobe\\.com\\.edgekey\\.net\\/api\\/ututs",
+            "cookies": 0,
+            "fingerprinting": 0,
             "subdomains": [
-                "commerce"
+                "utut-service-api"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [
                 {
-                    "original": "commerce.adobe.com",
-                    "resolved": "commerce.adobe.com.edgekey.net"
+                    "original": "utut-service.adobe.com",
+                    "resolved": "utut-service-api.adobe.com.edgekey.net"
                 }
             ],
             "responseHashes": [
-                "16d4815149cf717d94b76ce3883aaf6d9159a0b966ef13988d022ac1a5ffb86b"
+                "8e02cc4dfc3f0bcc8195478e14bce5ae4acd597daabf9b7cbfd2eb442035ff9e"
             ],
-            "type": "Script",
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "adobe.com",
-                "www.adobe.com"
+                "lightroom.adobe.com"
+            ]
+        },
+        {
+            "rule": "adobe\\.com\\.edgekey\\.net\\/api\\/ututs",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "utut-service-api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "utut-service.adobe.com",
+                    "resolved": "utut-service-api.adobe.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "adobe.com",
+                "lightroom.adobe.com"
             ]
         },
         {
@@ -134,49 +166,28 @@
                 "adobe.com",
                 "www.adobe.com"
             ]
-        },
-        {
-            "rule": "adobe\\.com\\.edgekey\\.net\\/amsterdam\\/log",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "commerce"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [
-                {
-                    "original": "commerce.adobe.com",
-                    "resolved": "commerce.adobe.com.edgekey.net"
-                }
-            ],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "adobe.com",
-                "www.adobe.com"
-            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000201,
+    "cookies": 0.0001,
     "topInitiators": [
         {
+            "domain": "d3gnp5fs6fu2h7.cloudfront.net",
+            "prevalence": 0.5714285714285714
+        },
+        {
             "domain": "adobeccstatic.com",
-            "prevalence": 0.8333333333333334
+            "prevalence": 0.35714285714285715
         },
         {
             "domain": "forter.com",
-            "prevalence": 0.16666666666666666
+            "prevalence": 0.07142857142857142
         }
     ],
     "types": {
-        "Script": 5,
-        "Fetch": 4,
+        "Script": 4,
+        "Fetch": 6,
         "Preflight": 2
     },
     "nameservers": []
