@@ -7,14 +7,39 @@
     "source": [
         "DuckDuckGo-NO"
     ],
-    "prevalence": 0.00231,
-    "sites": 23,
+    "prevalence": 0.00301,
+    "sites": 30,
     "subdomains": [
+        "app",
         "static"
     ],
     "cnames": [],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "readpeak\\.com\\/header\\/prebid",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "app"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000402,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dagbladet.no",
+                "borsen.dagbladet.no",
+                "dinside.dagbladet.no",
+                "www.dagbladet.no"
+            ]
+        },
         {
             "rule": "readpeak\\.com\\/js\\/rp-int\\.js",
             "cookies": 0,
@@ -54,13 +79,15 @@
         {
             "rule": "readpeak\\.com\\/js\\/rpa\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "static"
             ],
-            "apis": {},
-            "sites": 8,
-            "prevalence": 0.000805,
+            "apis": {
+                "Document.cookie getter": 1
+            },
+            "sites": 12,
+            "prevalence": 0.00121,
             "cnames": [],
             "responseHashes": [
                 "1ca769876d67bfdf0cab7761cd706b47362d56d5e19ab3fd63dd2647c33b3cac"
@@ -70,13 +97,17 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "hoyre.no",
-                "www.eidsiva.no",
+                "ntg.no",
+                "teleoutlet.no",
+                "www.bouvet.no",
                 "www.elvia.no",
                 "www.fargerike.no",
                 "www.glava.no",
                 "www.inatur.no",
                 "www.interoptik.no",
-                "www.kvik.no"
+                "www.klimaoslo.no",
+                "www.kvik.no",
+                "www.movement.as"
             ]
         }
     ],
@@ -86,15 +117,24 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.7391304347826086
+            "prevalence": 0.53125
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.2608695652173913
+            "prevalence": 0.28125
+        },
+        {
+            "domain": "rubiconproject.com",
+            "prevalence": 0.15625
+        },
+        {
+            "domain": "matomo.cloud",
+            "prevalence": 0.03125
         }
     ],
     "types": {
-        "Script": 22
+        "Fetch": 4,
+        "Script": 26
     },
     "nameservers": [
         "ns-214.awsdns-26.com",

@@ -7,26 +7,33 @@
     "source": [
         "DuckDuckGo-CH"
     ],
-    "prevalence": 0.000503,
-    "sites": 5,
+    "prevalence": 0.000705,
+    "sites": 7,
     "subdomains": [
         "embed",
+        "tracking",
         "www",
-        "admin"
+        "admin",
+        "api",
+        "images"
     ],
     "cnames": [],
-    "fingerprinting": 0,
+    "fingerprinting": 2,
     "resources": [
         {
             "rule": "typeform\\.com\\/next\\/embed\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
                 "embed"
             ],
-            "apis": {},
-            "sites": 4,
-            "prevalence": 0.000402,
+            "apis": {
+                "Navigator.prototype.userAgent": 1,
+                "window.localStorage": 2,
+                "Date.prototype.getTime": 2
+            },
+            "sites": 6,
+            "prevalence": 0.000604,
             "cnames": [],
             "responseHashes": [
                 "7bab450f606efb2b1775c4761c8ca094ac2a94ee6b2a161b197136e75e165f82"
@@ -35,10 +42,12 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "easygov.swiss",
-                "fr.saint-james.com",
+                "zvv.ch",
                 "pickawood.com",
-                "sph.ethz.ch"
+                "sph.ethz.ch",
+                "www.orthopaedie-rosenberg.ch",
+                "www.victronenergy.com",
+                "www.victronenergy.de"
             ]
         },
         {
@@ -49,19 +58,38 @@
                 "embed"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000302,
+            "sites": 2,
+            "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [
-                "0e0701e0ad36569c93a83b77b91cbaca1cdf871945707d6b7d15bd809b2fff85"
-            ],
+            "responseHashes": [],
             "type": "Stylesheet",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "easygov.swiss",
                 "pickawood.com",
                 "sph.ethz.ch"
+            ]
+        },
+        {
+            "rule": "typeform\\.com\\/v1\\/track",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "tracking"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "orthopaedie-rosenberg.ch",
+                "www.orthopaedie-rosenberg.ch"
             ]
         },
         {
@@ -84,29 +112,101 @@
                 "planetsuzy.org",
                 "www.planetsuzy.org"
             ]
+        },
+        {
+            "rule": "typeform\\.com\\/single-embed\\/01JRYTAV30VNYNFPPNRCXFHQ9P",
+            "cookies": 0.000201,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "4e8ca5516fdabfc8cf5e9c31abe8132494ee3671bcadd3547232f0ccea65875f"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "victronenergy.com",
+                "www.victronenergy.de"
+            ]
+        },
+        {
+            "rule": "typeform\\.com\\/next\\/css\\/popover\\.css",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "embed"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "a6e83d8b94e8156ed49849b7eff382d7d072de7c4796ab54c4d58e7c04c795ef"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "victronenergy.com",
+                "www.victronenergy.de"
+            ]
+        },
+        {
+            "rule": "typeform\\.com\\/images\\/tsZAiX4p4aqY",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "images"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "b987654d2f7321f4ef931c32a803334f110d5df7401a50611db2c88fdcceef16"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "victronenergy.com",
+                "www.victronenergy.de"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0,
+    "cookies": 0.000403,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.6363636363636364
+            "prevalence": 0.5789473684210527
+        },
+        {
+            "domain": "rudderlabs.com",
+            "prevalence": 0.21052631578947367
         },
         {
             "domain": "cookiebot.com",
-            "prevalence": 0.18181818181818182
+            "prevalence": 0.10526315789473684
         },
         {
             "domain": "hats-47b.com",
-            "prevalence": 0.18181818181818182
+            "prevalence": 0.10526315789473684
         }
     ],
     "types": {
-        "Script": 4,
-        "Stylesheet": 3,
-        "Fetch": 2
+        "Script": 6,
+        "Stylesheet": 4,
+        "XHR": 2,
+        "Fetch": 4,
+        "Image": 2
     },
     "nameservers": [
         "ns-14.awsdns-01.com",

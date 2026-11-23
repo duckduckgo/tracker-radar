@@ -7,14 +7,69 @@
     "source": [
         "DuckDuckGo-CA"
     ],
-    "prevalence": 0.00161,
-    "sites": 16,
+    "prevalence": 0.00192,
+    "sites": 19,
     "subdomains": [
+        "yoto-cd-jeo5zzrtsvs27mqu.edge.tenants.eu",
+        "finder-us-prod-cd-ewaqufuvygc5rgwq.edge.tenants",
+        "flightcentre-prod-ca-cd-1d7yc368y79cvp0h.edge.tenants.ca",
         "cdn"
     ],
-    "cnames": [],
+    "cnames": [
+        {
+            "original": "auth.flightcentre.ca",
+            "resolved": "flightcentre-prod-ca-cd-1d7yc368y79cvp0h.edge.tenants.ca.auth0.com"
+        },
+        {
+            "original": "login.finder.com",
+            "resolved": "finder-us-prod-cd-ewaqufuvygc5rgwq.edge.tenants.auth0.com"
+        },
+        {
+            "original": "login.yotoplay.com",
+            "resolved": "yoto-cd-jeo5zzrtsvs27mqu.edge.tenants.eu.auth0.com"
+        }
+    ],
     "fingerprinting": 1,
     "resources": [
+        {
+            "rule": "auth0\\.com\\/authorize",
+            "cookies": 0.000303,
+            "fingerprinting": 0,
+            "subdomains": [
+                "yoto-cd-jeo5zzrtsvs27mqu.edge.tenants.eu",
+                "finder-us-prod-cd-ewaqufuvygc5rgwq.edge.tenants",
+                "flightcentre-prod-ca-cd-1d7yc368y79cvp0h.edge.tenants.ca"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.000303,
+            "cnames": [
+                {
+                    "original": "login.yotoplay.com",
+                    "resolved": "yoto-cd-jeo5zzrtsvs27mqu.edge.tenants.eu.auth0.com"
+                },
+                {
+                    "original": "login.finder.com",
+                    "resolved": "finder-us-prod-cd-ewaqufuvygc5rgwq.edge.tenants.auth0.com"
+                },
+                {
+                    "original": "auth.flightcentre.ca",
+                    "resolved": "flightcentre-prod-ca-cd-1d7yc368y79cvp0h.edge.tenants.ca.auth0.com"
+                }
+            ],
+            "responseHashes": [
+                "68c2a95c1df213e208944f15312a9e58258f8f69a34ad43e734ecb12e4d77ac6",
+                "d845e20e35e452862fec289a8bb26b14b0588e5a960cde4f466f235fd20f035f"
+            ],
+            "type": "Document",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "yotoplay.com",
+                "www.finder.com",
+                "www.flightcentre.ca"
+            ]
+        },
         {
             "rule": "auth0\\.com\\/js\\/auth0-spa-js\\/2\\.21\\/auth0-spa-js\\.production\\.js",
             "cookies": 0,
@@ -23,12 +78,12 @@
                 "cdn"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 9,
-                "Document.cookie getter": 8,
-                "window.localStorage": 8
+                "Navigator.prototype.userAgent": 11,
+                "Document.cookie getter": 11,
+                "window.localStorage": 11
             },
-            "sites": 10,
-            "prevalence": 0.00101,
+            "sites": 11,
+            "prevalence": 0.00111,
             "cnames": [],
             "responseHashes": [
                 "32ab0c1ff4f47a2706f7684e2a9698021d2265243472513d4bb5f26b98a19079"
@@ -44,6 +99,7 @@
                 "ottawacitizen.com",
                 "ottawasun.com",
                 "theprovince.com",
+                "tj.news",
                 "torontosun.com",
                 "vancouversun.com",
                 "www.saltwire.com"
@@ -52,18 +108,25 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.000202,
+    "cookies": 0.000404,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 1
+            "prevalence": 0.9473684210526315
+        },
+        {
+            "domain": "flightcentre.com",
+            "prevalence": 0.05263157894736842
         }
     ],
     "types": {
-        "Script": 10
+        "Document": 3,
+        "Script": 11
     },
     "nameservers": [
-        "monroe.ns.cloudflare.com",
-        "kolton.ns.cloudflare.com"
+        "ns-344.awsdns-43.com",
+        "ns-1936.awsdns-50.co.uk",
+        "ns-1033.awsdns-01.org",
+        "ns-604.awsdns-11.net"
     ]
 }

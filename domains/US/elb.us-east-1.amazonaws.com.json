@@ -9,13 +9,13 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.000261,
-    "sites": 38,
+    "prevalence": 0.000268,
+    "sites": 39,
     "subdomains": [
-        "k8s-envoygat-envoyenv-0e1ad1a3b3-e5ee1e027b12c43a",
         "k8s-system-traefik-29398cec54-dd7bba9c63258599",
         "webmgmtwebhosting-std-pub-nlb-1f2d41369f5ca1c8",
         "gwse-aim-dms-prod-fd558f4675bb6d06",
+        "ingress-b-nlb-01c6741e2789bda8",
         "ue1-caext-nlb-c40e66312c75c330",
         "a0e17d02ba6eb4de999b2df9f1aaf939-db79925a68357571",
         "aa7924a957fd341f1b9ae6457a0a4c29-6d4bb1511e25c340",
@@ -40,6 +40,10 @@
             "resolved": "a0e17d02ba6eb4de999b2df9f1aaf939-db79925a68357571.elb.us-east-1.amazonaws.com"
         },
         {
+            "original": "proxy.angel.com",
+            "resolved": "ingress-b-nlb-01c6741e2789bda8.elb.us-east-1.amazonaws.com"
+        },
+        {
             "original": "rateapi.broadviewfcu.com",
             "resolved": "ue1-caext-nlb-c40e66312c75c330.elb.us-east-1.amazonaws.com"
         },
@@ -60,10 +64,6 @@
             "resolved": "webmgmtwebhosting-std-pub-nlb-1f2d41369f5ca1c8.elb.us-east-1.amazonaws.com"
         },
         {
-            "original": "together.plex.tv",
-            "resolved": "k8s-envoygat-envoyenv-0e1ad1a3b3-e5ee1e027b12c43a.elb.us-east-1.amazonaws.com"
-        },
-        {
             "original": "tracking.shopcider.com",
             "resolved": "k8s-opstest-apisixga-ffd5932408-71111629e4aa4dd8.elb.us-east-1.amazonaws.com"
         },
@@ -78,58 +78,6 @@
     ],
     "fingerprinting": 1,
     "resources": [
-        {
-            "rule": "elb\\.us-east-1\\.amazonaws\\.com\\/rooms",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "k8s-envoygat-envoyenv-0e1ad1a3b3-e5ee1e027b12c43a"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [
-                {
-                    "original": "together.plex.tv",
-                    "resolved": "k8s-envoygat-envoyenv-0e1ad1a3b3-e5ee1e027b12c43a.elb.us-east-1.amazonaws.com"
-                }
-            ],
-            "responseHashes": [],
-            "type": "Preflight",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "plex.tv",
-                "app.plex.tv"
-            ]
-        },
-        {
-            "rule": "elb\\.us-east-1\\.amazonaws\\.com\\/rooms",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "k8s-envoygat-envoyenv-0e1ad1a3b3-e5ee1e027b12c43a"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [
-                {
-                    "original": "together.plex.tv",
-                    "resolved": "k8s-envoygat-envoyenv-0e1ad1a3b3-e5ee1e027b12c43a.elb.us-east-1.amazonaws.com"
-                }
-            ],
-            "responseHashes": [
-                "a248b629f2d9508e8ac49b43f61e90e3046f8c124f28adc2b2e938fb20d00b3f"
-            ],
-            "type": "XHR",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "plex.tv",
-                "app.plex.tv"
-            ]
-        },
         {
             "rule": "elb\\.us-east-1\\.amazonaws\\.com\\/track\\/track_pixel\\.php",
             "cookies": 0.0000206,
@@ -168,14 +116,14 @@
         },
         {
             "rule": "elb\\.us-east-1\\.amazonaws\\.com\\/shared-assets\\/emergency\\/alert-feed\\.php",
-            "cookies": 0.0000275,
+            "cookies": 0.0000274,
             "fingerprinting": 0,
             "subdomains": [
                 "webmgmtwebhosting-std-pub-nlb-1f2d41369f5ca1c8"
             ],
             "apis": {},
             "sites": 4,
-            "prevalence": 0.0000275,
+            "prevalence": 0.0000274,
             "cnames": [
                 {
                     "original": "template.aws.emory.edu",
@@ -230,8 +178,8 @@
                 "gwse-aim-dms-prod-fd558f4675bb6d06"
             ],
             "apis": {},
-            "sites": 6,
-            "prevalence": 0.0000412,
+            "sites": 5,
+            "prevalence": 0.0000343,
             "cnames": [
                 {
                     "original": "dyn-msg-service.prod.adp.com",
@@ -247,8 +195,7 @@
                 "my.adp.com",
                 "mykplan.adp.com",
                 "runpayroll.adp.com",
-                "workforcenow.adp.com",
-                "www.runlogin.adp.com"
+                "workforcenow.adp.com"
             ]
         },
         {
@@ -259,8 +206,8 @@
                 "gwse-aim-dms-prod-fd558f4675bb6d06"
             ],
             "apis": {},
-            "sites": 6,
-            "prevalence": 0.0000412,
+            "sites": 5,
+            "prevalence": 0.0000343,
             "cnames": [
                 {
                     "original": "dyn-msg-service.prod.adp.com",
@@ -278,8 +225,34 @@
                 "my.adp.com",
                 "mykplan.adp.com",
                 "runpayroll.adp.com",
-                "workforcenow.adp.com",
-                "www.runlogin.adp.com"
+                "workforcenow.adp.com"
+            ]
+        },
+        {
+            "rule": "elb\\.us-east-1\\.amazonaws\\.com\\/metrics\\/gtag\\/js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "ingress-b-nlb-01c6741e2789bda8"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "proxy.angel.com",
+                    "resolved": "ingress-b-nlb-01c6741e2789bda8.elb.us-east-1.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "7b72a39cbbee50c7da8ccf8872443941b84390c0fb6387267586731bb1872918"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "angel.com",
+                "shop.angel.com"
             ]
         },
         {
@@ -324,7 +297,7 @@
                 }
             ],
             "responseHashes": [
-                "bb9f236e3084a37e8fd0a2a70c1eabc0a5621157ba20be0e4ecf13eb47cb2809"
+                "3e49e5bc116b2665a0bd3c962bdd77fcb1489e0392c61e79811da00326e90966"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -416,6 +389,56 @@
             ]
         },
         {
+            "rule": "elb\\.us-east-1\\.amazonaws\\.com\\/api\\/analytics-events",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "aa7924a957fd341f1b9ae6457a0a4c29-6d4bb1511e25c340"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "api.labfinder.com",
+                    "resolved": "aa7924a957fd341f1b9ae6457a0a4c29-6d4bb1511e25c340.elb.us-east-1.amazonaws.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "labfinder.com",
+                "www.labfinder.com"
+            ]
+        },
+        {
+            "rule": "elb\\.us-east-1\\.amazonaws\\.com\\/api\\/analytics-events",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "aa7924a957fd341f1b9ae6457a0a4c29-6d4bb1511e25c340"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "api.labfinder.com",
+                    "resolved": "aa7924a957fd341f1b9ae6457a0a4c29-6d4bb1511e25c340.elb.us-east-1.amazonaws.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "labfinder.com",
+                "www.labfinder.com"
+            ]
+        },
+        {
             "rule": "elb\\.us-east-1\\.amazonaws\\.com\\/api\\/autocomplete\\/getPopularExamData",
             "cookies": 0.0000137,
             "fingerprinting": 0,
@@ -486,7 +509,7 @@
                 }
             ],
             "responseHashes": [
-                "6cc5cf4f502febb202eed56280f7c26eb2fa3a16cb305afa2e50cdfff648d4a2"
+                "0354bea3cc0377a52bfde92e2bfae19ca2fef4570f18c2946444771614df0605"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -571,10 +594,8 @@
                     "resolved": "k8s-opstest-apisixga-ffd5932408-71111629e4aa4dd8.elb.us-east-1.amazonaws.com"
                 }
             ],
-            "responseHashes": [
-                "7397e0987dc915f33e145a086726c9654845ee27a6dd9e053b25781d7b54fdde"
-            ],
-            "type": "Ping",
+            "responseHashes": [],
+            "type": "Preflight",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -598,8 +619,62 @@
                     "resolved": "k8s-opstest-apisixga-ffd5932408-71111629e4aa4dd8.elb.us-east-1.amazonaws.com"
                 }
             ],
+            "responseHashes": [
+                "7397e0987dc915f33e145a086726c9654845ee27a6dd9e053b25781d7b54fdde"
+            ],
+            "type": "Ping",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "shopcider.com",
+                "www.shopcider.com"
+            ]
+        },
+        {
+            "rule": "elb\\.us-east-1\\.amazonaws\\.com\\/ms\\/analysis\\/v1\\/experiment\\/exposure",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "k8s-opstest-apisixga-ffd5932408-71111629e4aa4dd8"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "tracking.shopcider.com",
+                    "resolved": "k8s-opstest-apisixga-ffd5932408-71111629e4aa4dd8.elb.us-east-1.amazonaws.com"
+                }
+            ],
             "responseHashes": [],
             "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "shopcider.com",
+                "www.shopcider.com"
+            ]
+        },
+        {
+            "rule": "elb\\.us-east-1\\.amazonaws\\.com\\/ms\\/analysis\\/v1\\/experiment\\/exposure",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "k8s-opstest-apisixga-ffd5932408-71111629e4aa4dd8"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "tracking.shopcider.com",
+                    "resolved": "k8s-opstest-apisixga-ffd5932408-71111629e4aa4dd8.elb.us-east-1.amazonaws.com"
+                }
+            ],
+            "responseHashes": [
+                "7397e0987dc915f33e145a086726c9654845ee27a6dd9e053b25781d7b54fdde"
+            ],
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -664,37 +739,41 @@
         "CDN"
     ],
     "performance": {},
-    "cookies": 0.000124,
+    "cookies": 0.000137,
     "topInitiators": [
         {
+            "domain": "angelstudios.com",
+            "prevalence": 0.3076923076923077
+        },
+        {
             "domain": "jquery.com",
-            "prevalence": 0.3333333333333333
+            "prevalence": 0.23076923076923078
         },
         {
             "domain": "cloudflare.com",
-            "prevalence": 0.3333333333333333
+            "prevalence": 0.23076923076923078
         },
         {
-            "domain": "is-ebird-web-static-content-prod.s3.amazonaws.com",
-            "prevalence": 0.2222222222222222
+            "domain": "aliyuncs.com",
+            "prevalence": 0.15384615384615385
         },
         {
             "domain": "first party",
-            "prevalence": 0.1111111111111111
+            "prevalence": 0.07692307692307693
         }
     ],
     "types": {
-        "Preflight": 14,
-        "XHR": 16,
         "Image": 3,
-        "Script": 2,
-        "Fetch": 8,
+        "XHR": 13,
+        "Script": 4,
+        "Preflight": 15,
+        "Fetch": 12,
         "Ping": 11
     },
     "nameservers": [
         "ns-1286.awsdns-32.org",
-        "ns-844.awsdns-41.net",
         "ns-1826.awsdns-36.co.uk",
-        "ns-281.awsdns-35.com"
+        "ns-281.awsdns-35.com",
+        "ns-844.awsdns-41.net"
     ]
 }

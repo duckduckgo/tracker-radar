@@ -4,8 +4,8 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.000192,
-    "sites": 28,
+    "prevalence": 0.000322,
+    "sites": 47,
     "subdomains": [
         "v",
         "clip"
@@ -21,6 +21,10 @@
         },
         {
             "original": "bytes.rd.com",
+            "resolved": "v.bytes.media"
+        },
+        {
+            "original": "bytes.rollingstone.com",
             "resolved": "v.bytes.media"
         },
         {
@@ -54,20 +58,31 @@
         {
             "original": "videos.phoenixnewtimes.com",
             "resolved": "v.bytes.media"
+        },
+        {
+            "original": "watch.the-express.com",
+            "resolved": "v.bytes.media"
         }
     ],
     "fingerprinting": 2,
     "resources": [
         {
             "rule": "bytes\\.media\\/vs\\.js",
-            "cookies": 0.000048,
+            "cookies": 0.0000618,
             "fingerprinting": 1,
             "subdomains": [
                 "v"
             ],
-            "apis": {},
-            "sites": 17,
-            "prevalence": 0.000117,
+            "apis": {
+                "Date.prototype.getTime": 1,
+                "Navigator.prototype.userAgent": 1,
+                "Document.cookie getter": 1,
+                "Navigator.prototype.platform": 1,
+                "window.innerWidth": 1,
+                "Document.cookie setter": 1
+            },
+            "sites": 31,
+            "prevalence": 0.000213,
             "cnames": [
                 {
                     "original": "bytes.webmd.com",
@@ -106,7 +121,15 @@
                     "resolved": "v.bytes.media"
                 },
                 {
+                    "original": "bytes.rollingstone.com",
+                    "resolved": "v.bytes.media"
+                },
+                {
                     "original": "bytes.tasteofhome.com",
+                    "resolved": "v.bytes.media"
+                },
+                {
+                    "original": "watch.the-express.com",
                     "resolved": "v.bytes.media"
                 },
                 {
@@ -115,54 +138,72 @@
                 }
             ],
             "responseHashes": [
-                "06a13e8a3910c4026efbecf4a1220634c4bcf32cc65308ed8a286b79ac0a8ac2",
-                "05bc451094cf93fc57aa5a17ae366de429d00bd8d92978ef1f746171f3a5d003",
-                "2e51bba19299b1b719fa3362788e933a26ed5701e99a06457cbe8afd587650d8",
-                "b65c695da2dba714d59931e365d55e9d4d38254a656b7de8f7c48e0d28c0713c",
-                "d19871dc8caddd439c80f6260f639c017f10cbc9765fc8e93ac72526628af053",
-                "257723d921f5b9af3527efc8e9886137d25a5aefad7cbf94da045868c87cc8cd",
-                "41d704d24e9868f2551a6a7bad39d1e4d0dbfad2f69b16d835a01f90239f6042",
-                "ed43156ae3a42b63eabb11bb92fb2609986dc34fd27cafabcfee2d35b403a87e",
-                "46e44aeb52784e887139f2eedc9bec626a9943fea4c875bfce66450b1e1426f3",
-                "44dfdc88383fcfb0b3a7ee3cba4c063de98a4a1ec40a11990a00d0e74e2f87a0",
-                "4b54918f88a81709fe592883a8e30fec1aad9bf911467704e06e00a9f04a3b05",
-                "fc7281e7eb5b77d0551625c931144e9002350bb5da1b1cf36531fd52b617a9d7",
-                "0b498e23551f8102556a04d677420f96a8e7fc136a931d390ccf93766c3dc6b5",
-                "0547e3b1ddc5a5a9f80d3fd8aae54bf40b506ccbbd3d51e810abf03d0d31f06f"
+                "da1d0701f77b516b4acb1f57cc23308c624894655f66631d83f153ba9392f38e",
+                "32ed880ed53cf5b1694f4330d53747e303419644b6867265e57d838892b40232",
+                "2c23541329cd6f6392055ef1b5871408b4c4e8b3f4d746dfe37f3d034e97fbbd",
+                "fc85a78949fd3952d32d30a38359e74494295903e4da741a208d48b786087efd",
+                "e77f45870d6be9e70be76ebc0384ba6673f18f7dd0ba2f534c8b01f1d2488435",
+                "fc43269fb106f00e9cce0309652ea9f914f63505d1148abed3ddccd51a992f86",
+                "d5c76a618596d9649390ca6ae02379afa9ede266f1abaf808c0334f722f24148",
+                "1ac9cb0d4b963c86dff33a25b6169a40ffc552cd33fe5fba7d6c082f5ae0a583",
+                "966cdd520ee21fb0c3bc8a381bedc5f86e076d30ae8918a2ec6e5081cbcd3794",
+                "e6c2ff451d051fba046cfdef5416045a8b444b468fabbd8bec180fa61b1576a2",
+                "e0eb12a646a05fd29ce7d0accd34b6616e50b316438f9c0f0125afc716123990",
+                "0c3ef160cb9769f37d8ee08cd06ddfa188fa55ac03145f8b45a020d86e5f58e7",
+                "4af093d70a4efe1243cee026bf792d85d259555e418d7e88764424314ddcd5cb",
+                "b6219d229997c008bd9e8fa1517e7138536c29b369e2b5f41d4c2d8ad744cef8",
+                "3ad662981f7ffdaea5977a0488d8644b1e069c1b8488e494476256ad133733b1",
+                "59409247a06c80ab8e8303de28f7ed9845be318105f4f454894079329f91aecf",
+                "d07ef9720a21e8e58c242d0b04cee3f1223e2d7169e093c3bc7f2c52ee2bba0c",
+                "42ef428de3941970b503b0d148fd72781b93e50c810819bb3d81d2b0c87d25a1",
+                "18e561edac50f239517a73d34b87ed352282f91e1eeb532cd7bb663584ac9a08",
+                "aec5f2f6cfb4c88337d47bbaec6d6eaf565b420718f48df17ccd74ec3e8e95c3",
+                "6ed79be631e02aa9dbe8c4a3fa8a894eb8b0a52adc938ffe1062477bdec8ef70",
+                "d0e93f135917d0ec67b1806148666a7f9d932a9fb054cb28de6708f551337d56"
             ],
             "type": "Script",
-            "firstPartyCookies": {},
+            "firstPartyCookies": {
+                "session_depth": {
+                    "ttl": 1832,
+                    "length": 37,
+                    "prevalence": 0.000006861487158726783,
+                    "uniqueness": 1
+                }
+            },
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "webmd.com",
                 "doctor.webmd.com",
-                "reviews.webmd.com",
-                "symptoms.webmd.com",
-                "www.adweek.com",
-                "www.billboard.com",
-                "www.boston25news.com",
                 "www.businessinsider.com",
-                "www.dailystar.co.uk",
-                "www.dallasobserver.com",
-                "www.familyhandyman.com",
-                "www.miaminewtimes.com",
-                "www.phoenixnewtimes.com",
-                "www.rd.com",
                 "www.tasteofhome.com",
                 "www.webmd.com",
-                "www.westword.com"
+                "www.bristolpost.co.uk",
+                "www.the-express.com",
+                "symptoms.webmd.com",
+                "www.glasgowlive.co.uk",
+                "www.miaminewtimes.com",
+                "www.familyhandyman.com",
+                "www.billboard.com",
+                "www.corkbeo.ie",
+                "www.edinburghlive.co.uk",
+                "www.ok.co.uk",
+                "www.rd.com",
+                "www.adweek.com",
+                "reviews.webmd.com",
+                "www.rollingstone.com",
+                "www.liverpoolecho.co.uk"
             ]
         },
         {
             "rule": "bytes\\.media\\/sr\\/2342010664\\/SAFEFRAME\\.js",
-            "cookies": 0.000048,
+            "cookies": 0.0000686,
             "fingerprinting": 0,
             "subdomains": [
                 "v"
             ],
             "apis": {},
-            "sites": 7,
-            "prevalence": 0.000048,
+            "sites": 10,
+            "prevalence": 0.0000686,
             "cnames": [
                 {
                     "original": "bytes.adweek.com",
@@ -185,7 +226,15 @@
                     "resolved": "v.bytes.media"
                 },
                 {
+                    "original": "bytes.rollingstone.com",
+                    "resolved": "v.bytes.media"
+                },
+                {
                     "original": "bytes.tasteofhome.com",
+                    "resolved": "v.bytes.media"
+                },
+                {
+                    "original": "watch.the-express.com",
                     "resolved": "v.bytes.media"
                 },
                 {
@@ -194,23 +243,27 @@
                 }
             ],
             "responseHashes": [
-                "7e13cce0368c7083901df22e23c5bf93729f8e1d2538b40b1a85b6b43a484b08",
-                "e076a8928cbf452348dc40b51705ef43ea1e9718accdde172904847bd6aedb67",
-                "526bd8b1476a1460e4c4102adee5558454686ca686cb89c65fb40225c564d464",
-                "5fdfc53ced584038754cfd474cd558d1dfc96b15cd4c2b22586de5b580bc5e8c",
-                "5d5a6a3c310bfad404eff555698b27d79d492e87c00c1cfe1e411876d295c5ca",
-                "4a4cdcfe8b4dbf472b8c5e09b239122b9ac54b7d1eb9dc3e0dcc83881dd8455e"
+                "370d674eef6330ce2353828ca7d85a4703a2184f8d0e499864edbcfadece861c",
+                "e4c9892c6595b8d3b849dfad38d9388b7000bdf6078a006be5fd00bc14c2f370",
+                "d295dd8e3126f77fb632499adad44ad4dcb815083aff266a71d1fc6a69a3d42a",
+                "b552c31f217d2c39ad562a5e5f5d0924ffe4eba63e9450ee824cf305ef503456",
+                "aa1f218beaa3cad8c17a059ecb68d5b42a55671c97e23706c05837adc68395a5",
+                "188db4bae0a3b2330e15d14cb4d6a80d2be7c6e9993a3182d49a2b0c1c2a6fc2",
+                "84e32f56a12cd240565e9e26fcfedef07d010efcb13be808c4398d23a02bda25"
             ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "adweek.com",
+                "www.billboard.com",
                 "www.dallasobserver.com",
                 "www.familyhandyman.com",
                 "www.miaminewtimes.com",
                 "www.phoenixnewtimes.com",
+                "www.rollingstone.com",
                 "www.tasteofhome.com",
+                "www.the-express.com",
                 "www.westword.com"
             ]
         },
@@ -222,8 +275,8 @@
                 "v"
             ],
             "apis": {},
-            "sites": 7,
-            "prevalence": 0.000048,
+            "sites": 8,
+            "prevalence": 0.0000549,
             "cnames": [
                 {
                     "original": "bytes.adweek.com",
@@ -247,6 +300,10 @@
                 },
                 {
                     "original": "bytes.tasteofhome.com",
+                    "resolved": "v.bytes.media"
+                },
+                {
+                    "original": "watch.the-express.com",
                     "resolved": "v.bytes.media"
                 },
                 {
@@ -267,6 +324,7 @@
                 "www.miaminewtimes.com",
                 "www.phoenixnewtimes.com",
                 "www.tasteofhome.com",
+                "www.the-express.com",
                 "www.westword.com"
             ]
         },
@@ -278,8 +336,8 @@
                 "v"
             ],
             "apis": {},
-            "sites": 7,
-            "prevalence": 0.000048,
+            "sites": 8,
+            "prevalence": 0.0000549,
             "cnames": [
                 {
                     "original": "bytes.adweek.com",
@@ -306,6 +364,10 @@
                     "resolved": "v.bytes.media"
                 },
                 {
+                    "original": "watch.the-express.com",
+                    "resolved": "v.bytes.media"
+                },
+                {
                     "original": "video.westword.com",
                     "resolved": "v.bytes.media"
                 }
@@ -323,11 +385,12 @@
                 "www.miaminewtimes.com",
                 "www.phoenixnewtimes.com",
                 "www.tasteofhome.com",
+                "www.the-express.com",
                 "www.westword.com"
             ]
         },
         {
-            "rule": "bytes\\.media\\/video\\/7521284804345221120\\.mp4",
+            "rule": "bytes\\.media\\/video\\/7520800394613149696\\.mp4",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -401,6 +464,195 @@
             ]
         },
         {
+            "rule": "bytes\\.media\\/vimg2\\/dbejcxs3x\\/image\\/fetch\\/w_500,f_webp\\/https%3A%2F%2Fstorage\\.googleapis\\.com%2Fv\\.media\\.net%2Fthumbnail%2FDfqBn70p_ex\\.jpg%3Fv%3D1",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "v"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "videos.dallasobserver.com",
+                    "resolved": "v.bytes.media"
+                }
+            ],
+            "responseHashes": [
+                "c76f9cacc1797d39ce1ddcd7b44d46c51537def5c6a70ab49e59a2256f0f164e"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dallasobserver.com",
+                "www.dallasobserver.com"
+            ]
+        },
+        {
+            "rule": "bytes\\.media\\/vimg2\\/dbejcxs3x\\/image\\/fetch\\/w_500,f_webp\\/https%3A%2F%2Fstorage\\.googleapis\\.com%2Fv\\.media\\.net%2Fthumbnail%2FDfiI86ZpTyu\\.jpg%3Fv%3D1",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "v"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "videos.dallasobserver.com",
+                    "resolved": "v.bytes.media"
+                }
+            ],
+            "responseHashes": [
+                "837a4ffb3f865a3aa6c49629996045cfb536905b365b9c6c432f14e68028a0c2"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dallasobserver.com",
+                "www.dallasobserver.com"
+            ]
+        },
+        {
+            "rule": "bytes\\.media\\/vimg2\\/dbejcxs3x\\/image\\/fetch\\/w_500,f_webp\\/https%3A%2F%2Fstorage\\.googleapis\\.com%2Fv\\.media\\.net%2Fthumbnail%2FDffd0A8CCo_\\.jpg%3Fv%3D1",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "v"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "videos.dallasobserver.com",
+                    "resolved": "v.bytes.media"
+                }
+            ],
+            "responseHashes": [
+                "d55aec9f8c1a292352b939db71552e12c29757a8db9e1a133f5a45656382f34d"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dallasobserver.com",
+                "www.dallasobserver.com"
+            ]
+        },
+        {
+            "rule": "bytes\\.media\\/vimg2\\/dbejcxs3x\\/image\\/fetch\\/w_500,f_webp\\/https%3A%2F%2Fstorage\\.googleapis\\.com%2Fv\\.media\\.net%2Fthumbnail%2FDfaKWMwCZ-k\\.jpg%3Fv%3D1",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "v"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "videos.dallasobserver.com",
+                    "resolved": "v.bytes.media"
+                }
+            ],
+            "responseHashes": [
+                "6a2147e37647c414ad80948ce8253119e4e303a94f4058ed3f023dba309ec4f3"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dallasobserver.com",
+                "www.dallasobserver.com"
+            ]
+        },
+        {
+            "rule": "bytes\\.media\\/vimg2\\/dbejcxs3x\\/image\\/fetch\\/w_500,f_webp\\/https%3A%2F%2Fstorage\\.googleapis\\.com%2Fv\\.media\\.net%2Fthumbnail%2FDfXT_bHCfNK\\.jpg%3Fv%3D1",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "v"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "videos.dallasobserver.com",
+                    "resolved": "v.bytes.media"
+                }
+            ],
+            "responseHashes": [
+                "49f0d224857d7513ef4f8cdb1b28cb7ed56ab6632f865635be388094651ed1f3"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dallasobserver.com",
+                "www.dallasobserver.com"
+            ]
+        },
+        {
+            "rule": "bytes\\.media\\/vimg2\\/dbejcxs3x\\/image\\/fetch\\/w_500,f_webp\\/https%3A%2F%2Fstorage\\.googleapis\\.com%2Fv\\.media\\.net%2Fthumbnail%2FDfTorjzgKIj\\.jpg%3Fv%3D1",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "v"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "videos.dallasobserver.com",
+                    "resolved": "v.bytes.media"
+                }
+            ],
+            "responseHashes": [
+                "e6a5dc3153e0762aecc5848cfcac4c86ec74c1d0ec4aee2948d9f777d506accf"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dallasobserver.com",
+                "www.dallasobserver.com"
+            ]
+        },
+        {
+            "rule": "bytes\\.media\\/vimg2\\/dbejcxs3x\\/image\\/fetch\\/w_500,f_webp\\/https%3A%2F%2Fstorage\\.googleapis\\.com%2Fv\\.media\\.net%2Fthumbnail%2FDfTnMmcg8l-\\.jpg%3Fv%3D1",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "v"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "videos.dallasobserver.com",
+                    "resolved": "v.bytes.media"
+                }
+            ],
+            "responseHashes": [
+                "2ff6fe51a044c3c692c3438b30dd337024c42147558844e6092cff2d4de87123"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dallasobserver.com",
+                "www.dallasobserver.com"
+            ]
+        },
+        {
             "rule": "bytes\\.media\\/__media__\\/fonts\\/Roboto-Bold\\/Roboto-Bold\\.woff2",
             "cookies": 0,
             "fingerprinting": 0,
@@ -440,6 +692,195 @@
                 "www.miaminewtimes.com",
                 "www.phoenixnewtimes.com",
                 "www.westword.com"
+            ]
+        },
+        {
+            "rule": "bytes\\.media\\/vimg2\\/dbejcxs3x\\/video\\/fetch\\/ac_none,w_350,fps_24,so_0,du_2,q_auto:good\\/https%3A%2F%2Fstorage\\.googleapis\\.com%2Fv\\.media\\.net%2Fvideo%2FDfqBn70p_ex\\.mp4%3Fv%3D1",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "v"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "videos.dallasobserver.com",
+                    "resolved": "v.bytes.media"
+                }
+            ],
+            "responseHashes": [
+                "c93745c3509367f13ee53468dc20e3d4a8a78aeea80e6b35d0fe5b614c3bad24"
+            ],
+            "type": "Media",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dallasobserver.com",
+                "www.dallasobserver.com"
+            ]
+        },
+        {
+            "rule": "bytes\\.media\\/vimg2\\/dbejcxs3x\\/video\\/fetch\\/ac_none,w_350,fps_24,so_0,du_2,q_auto:good\\/https%3A%2F%2Fstorage\\.googleapis\\.com%2Fv\\.media\\.net%2Fvideo%2FDfiI86ZpTyu\\.mp4%3Fv%3D1",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "v"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "videos.dallasobserver.com",
+                    "resolved": "v.bytes.media"
+                }
+            ],
+            "responseHashes": [
+                "8a152d739cc8625beec80df261ad35887b2bf90c83f086940cd0604de72497b7"
+            ],
+            "type": "Media",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dallasobserver.com",
+                "www.dallasobserver.com"
+            ]
+        },
+        {
+            "rule": "bytes\\.media\\/vimg2\\/dbejcxs3x\\/video\\/fetch\\/ac_none,w_350,fps_24,so_0,du_2,q_auto:good\\/https%3A%2F%2Fstorage\\.googleapis\\.com%2Fv\\.media\\.net%2Fvideo%2FDffd0A8CCo_\\.mp4%3Fv%3D1",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "v"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "videos.dallasobserver.com",
+                    "resolved": "v.bytes.media"
+                }
+            ],
+            "responseHashes": [
+                "3dc91c97e8c2f4858f18cfe0773df23b8899cf146ed0ed32caa7f6692bbd1bb8"
+            ],
+            "type": "Media",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dallasobserver.com",
+                "www.dallasobserver.com"
+            ]
+        },
+        {
+            "rule": "bytes\\.media\\/vimg2\\/dbejcxs3x\\/video\\/fetch\\/ac_none,w_350,fps_24,so_0,du_2,q_auto:good\\/https%3A%2F%2Fstorage\\.googleapis\\.com%2Fv\\.media\\.net%2Fvideo%2FDfaKWMwCZ-k\\.mp4%3Fv%3D1",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "v"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "videos.dallasobserver.com",
+                    "resolved": "v.bytes.media"
+                }
+            ],
+            "responseHashes": [
+                "9ac0dfb37f3c6a547b6902c851483d078698d29ab4e450a4748af923dde1c62e"
+            ],
+            "type": "Media",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dallasobserver.com",
+                "www.dallasobserver.com"
+            ]
+        },
+        {
+            "rule": "bytes\\.media\\/vimg2\\/dbejcxs3x\\/video\\/fetch\\/ac_none,w_350,fps_24,so_0,du_2,q_auto:good\\/https%3A%2F%2Fstorage\\.googleapis\\.com%2Fv\\.media\\.net%2Fvideo%2FDfXT_bHCfNK\\.mp4%3Fv%3D1",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "v"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "videos.dallasobserver.com",
+                    "resolved": "v.bytes.media"
+                }
+            ],
+            "responseHashes": [
+                "b28f9ff2c1af8f1845dcfc0940957f55f20f65f572f5879a154582cb7243632b"
+            ],
+            "type": "Media",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dallasobserver.com",
+                "www.dallasobserver.com"
+            ]
+        },
+        {
+            "rule": "bytes\\.media\\/vimg2\\/dbejcxs3x\\/video\\/fetch\\/ac_none,w_350,fps_24,so_0,du_2,q_auto:good\\/https%3A%2F%2Fstorage\\.googleapis\\.com%2Fv\\.media\\.net%2Fvideo%2FDfTorjzgKIj\\.mp4%3Fv%3D1",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "v"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "videos.dallasobserver.com",
+                    "resolved": "v.bytes.media"
+                }
+            ],
+            "responseHashes": [
+                "7c85fde4740c02a282e0796937ab9d55d1a1941b6742fa961eb8a87abda55eab"
+            ],
+            "type": "Media",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dallasobserver.com",
+                "www.dallasobserver.com"
+            ]
+        },
+        {
+            "rule": "bytes\\.media\\/vimg2\\/dbejcxs3x\\/video\\/fetch\\/ac_none,w_350,fps_24,so_0,du_2,q_auto:good\\/https%3A%2F%2Fstorage\\.googleapis\\.com%2Fv\\.media\\.net%2Fvideo%2FDfTnMmcg8l-\\.mp4%3Fv%3D1",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "v"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "videos.dallasobserver.com",
+                    "resolved": "v.bytes.media"
+                }
+            ],
+            "responseHashes": [
+                "b63cf8cf4e7b73d8ab4b46a6c89e87192d2d441bec8ddd69249cdb2e5e66339d"
+            ],
+            "type": "Media",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dallasobserver.com",
+                "www.dallasobserver.com"
             ]
         },
         {
@@ -528,7 +969,7 @@
             ]
         },
         {
-            "rule": "bytes\\.media\\/vimg2\\/dbejcxs3x\\/image\\/fetch\\/w_500,f_webp\\/https%3A%2F%2Fstorage\\.googleapis\\.com%2Fv\\.media\\.net%2Fthumbnail_og%2FDfDdfNHFKcX\\.jpg%3Fv%3D1",
+            "rule": "bytes\\.media\\/vimg2\\/dbejcxs3x\\/image\\/fetch\\/w_500,f_webp\\/https%3A%2F%2Fstorage\\.googleapis\\.com%2Fv\\.media\\.net%2Fthumbnail_og%2FDfpccahlKRo\\.jpg%3Fv%3D1",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -544,7 +985,61 @@
                 }
             ],
             "responseHashes": [
-                "2cb44e0dc6990de9d0f2adbad3749ac0d51a36691bbdc7dca9d0ff30c39164e5"
+                "8cb9f0c6d756a646b600529d46b2faa149715e5a9af0fccf3dbc298c5a576769"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "miaminewtimes.com",
+                "www.miaminewtimes.com"
+            ]
+        },
+        {
+            "rule": "bytes\\.media\\/vimg2\\/dbejcxs3x\\/image\\/fetch\\/w_500,f_webp\\/https%3A%2F%2Fstorage\\.googleapis\\.com%2Fv\\.media\\.net%2Fthumbnail_og%2FDehCNtTjF7u\\.jpg%3Fv%3D1",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "v"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "videos.miaminewtimes.com",
+                    "resolved": "v.bytes.media"
+                }
+            ],
+            "responseHashes": [
+                "2364653e239f67e3c0d74fb6d6750a5977c785e507b2987d1ee1ba8bc30d62eb"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "miaminewtimes.com",
+                "www.miaminewtimes.com"
+            ]
+        },
+        {
+            "rule": "bytes\\.media\\/vimg2\\/dbejcxs3x\\/image\\/fetch\\/w_500,f_webp\\/https%3A%2F%2Fstorage\\.googleapis\\.com%2Fv\\.media\\.net%2Fthumbnail_og%2FDe2SMXGkyPZ\\.jpg%3Fv%3D1",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "v"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "videos.miaminewtimes.com",
+                    "resolved": "v.bytes.media"
+                }
+            ],
+            "responseHashes": [
+                "eb02b471f4a3eaca43e292b5845cff120c0071c06333e5924813cf2e1dfb27c0"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -582,7 +1077,7 @@
             ]
         },
         {
-            "rule": "bytes\\.media\\/vimg2\\/dbejcxs3x\\/image\\/fetch\\/w_500,f_webp\\/https%3A%2F%2Fstorage\\.googleapis\\.com%2Fv\\.media\\.net%2Fthumbnail_og%2FDfH3vl3zJQ1\\.jpg%3Fv%3D1",
+            "rule": "bytes\\.media\\/vimg2\\/dbejcxs3x\\/image\\/fetch\\/w_500,f_webp\\/https%3A%2F%2Fstorage\\.googleapis\\.com%2Fv\\.media\\.net%2Fthumbnail_og%2FDfiJctKlJDS\\.jpg%3Fv%3D1",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -598,7 +1093,7 @@
                 }
             ],
             "responseHashes": [
-                "73d5f62180a1cf0d0f075319efce744c8ce216f5185c02398beaebe6c6b99f48"
+                "ac7a3f24f16a3c271e26411a2ba7d80ef57b2d64678ac1b0b2b3127310c323ed"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -609,7 +1104,7 @@
             ]
         },
         {
-            "rule": "bytes\\.media\\/vimg2\\/dbejcxs3x\\/image\\/fetch\\/w_500,f_webp\\/https%3A%2F%2Fstorage\\.googleapis\\.com%2Fv\\.media\\.net%2Fthumbnail%2FDfDdfNHFKcX\\.jpg%3Fv%3D1",
+            "rule": "bytes\\.media\\/vimg2\\/dbejcxs3x\\/image\\/fetch\\/w_500,f_webp\\/https%3A%2F%2Fstorage\\.googleapis\\.com%2Fv\\.media\\.net%2Fthumbnail_og%2FDe0Bg1Cjzt9\\.jpg%3Fv%3D1",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -625,7 +1120,164 @@
                 }
             ],
             "responseHashes": [
-                "41181e5b41523a7766fd1b2c3ce3d1e968a3e2d85b6cead8901882772c7c689c"
+                "8f9bbfc2b4067c041b628c03d250b837ed79e90218a6cb450e616f7ced881762"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "miaminewtimes.com",
+                "www.miaminewtimes.com"
+            ]
+        },
+        {
+            "rule": "bytes\\.media\\/vimg2\\/dbejcxs3x\\/image\\/fetch\\/w_500,f_webp\\/https%3A%2F%2Fstorage\\.googleapis\\.com%2Fv\\.media\\.net%2Fthumbnail_og%2FDezbOFzkuIx\\.jpg%3Fv%3D1",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "v"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "videos.miaminewtimes.com",
+                    "resolved": "v.bytes.media"
+                }
+            ],
+            "responseHashes": [
+                "afd3f9e86bfc66e160da36bc66d723a6e5a88da611d5ee7e5ebb501faa0b2813"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "miaminewtimes.com",
+                "www.miaminewtimes.com"
+            ]
+        },
+        {
+            "rule": "bytes\\.media\\/vimg2\\/dbejcxs3x\\/image\\/fetch\\/w_500,f_webp\\/https%3A%2F%2Fstorage\\.googleapis\\.com%2Fv\\.media\\.net%2Fthumbnail_og%2FDet-g5zD0Go\\.jpg%3Fv%3D1",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "v"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "videos.miaminewtimes.com",
+                    "resolved": "v.bytes.media"
+                }
+            ],
+            "responseHashes": [
+                "7228ded7f52daa29a2222bef25b2edd558a9b3eec1145690bc998fe577b9ad9a"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "miaminewtimes.com",
+                "www.miaminewtimes.com"
+            ]
+        },
+        {
+            "rule": "bytes\\.media\\/hls\\/40ad3212c1f34665a9cf5a5b67620d30_hls_baseline\\/master_854p_1280p\\.m3u8",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "clip"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "a10932accf5cf4ede2c665391788e882ea9870684d9209acb08fc23847b7c615"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "miaminewtimes.com",
+                "www.miaminewtimes.com"
+            ]
+        },
+        {
+            "rule": "bytes\\.media\\/vimg2\\/dbejcxs3x\\/image\\/fetch\\/w_500,f_webp\\/https%3A%2F%2Fstorage\\.googleapis\\.com%2Fv\\.media\\.net%2Fthumbnail%2FDfpccahlKRo\\.jpg%3Fv%3D1",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "v"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "videos.miaminewtimes.com",
+                    "resolved": "v.bytes.media"
+                }
+            ],
+            "responseHashes": [
+                "9fd7dbdaec73bc48aa58427c7cb7afa9a199de46375097350f94ecb1cd5f30fe"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "miaminewtimes.com",
+                "www.miaminewtimes.com"
+            ]
+        },
+        {
+            "rule": "bytes\\.media\\/vimg2\\/dbejcxs3x\\/image\\/fetch\\/w_500,f_webp\\/https%3A%2F%2Fstorage\\.googleapis\\.com%2Fv\\.media\\.net%2Fthumbnail%2FDehCNtTjF7u\\.jpg%3Fv%3D1",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "v"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "videos.miaminewtimes.com",
+                    "resolved": "v.bytes.media"
+                }
+            ],
+            "responseHashes": [
+                "5e79c2796c2665188fdd4434233a5cb84d045c886aa9e47e3a3a8fc579ad8a28"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "miaminewtimes.com",
+                "www.miaminewtimes.com"
+            ]
+        },
+        {
+            "rule": "bytes\\.media\\/vimg2\\/dbejcxs3x\\/image\\/fetch\\/w_500,f_webp\\/https%3A%2F%2Fstorage\\.googleapis\\.com%2Fv\\.media\\.net%2Fthumbnail%2FDe2SMXGkyPZ\\.jpg%3Fv%3D1",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "v"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "videos.miaminewtimes.com",
+                    "resolved": "v.bytes.media"
+                }
+            ],
+            "responseHashes": [
+                "69e625824d1d6b54d38791e23a7e9546e33f640fbccad0298e56546014a0f8d4"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -663,7 +1315,7 @@
             ]
         },
         {
-            "rule": "bytes\\.media\\/vimg2\\/dbejcxs3x\\/image\\/fetch\\/w_500,f_webp\\/https%3A%2F%2Fstorage\\.googleapis\\.com%2Fv\\.media\\.net%2Fthumbnail%2FDfH3vl3zJQ1\\.jpg%3Fv%3D1",
+            "rule": "bytes\\.media\\/vimg2\\/dbejcxs3x\\/image\\/fetch\\/w_500,f_webp\\/https%3A%2F%2Fstorage\\.googleapis\\.com%2Fv\\.media\\.net%2Fthumbnail%2FDfiJctKlJDS\\.jpg%3Fv%3D1",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -679,9 +1331,198 @@
                 }
             ],
             "responseHashes": [
-                "734372611072044c5b0561c6ea22f22b309c017e2b2a0702c438fb72c857e669"
+                "3d78aa70d2ce9053e5f0268708a3afb6542f449d1015bee1c584f6b36cede992"
             ],
             "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "miaminewtimes.com",
+                "www.miaminewtimes.com"
+            ]
+        },
+        {
+            "rule": "bytes\\.media\\/vimg2\\/dbejcxs3x\\/image\\/fetch\\/w_500,f_webp\\/https%3A%2F%2Fstorage\\.googleapis\\.com%2Fv\\.media\\.net%2Fthumbnail%2FDe0Bg1Cjzt9\\.jpg%3Fv%3D1",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "v"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "videos.miaminewtimes.com",
+                    "resolved": "v.bytes.media"
+                }
+            ],
+            "responseHashes": [
+                "765c037e8b7eab23e964a59689f972ba05c244ee1ec02c22470de093838b6fa8"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "miaminewtimes.com",
+                "www.miaminewtimes.com"
+            ]
+        },
+        {
+            "rule": "bytes\\.media\\/vimg2\\/dbejcxs3x\\/image\\/fetch\\/w_500,f_webp\\/https%3A%2F%2Fstorage\\.googleapis\\.com%2Fv\\.media\\.net%2Fthumbnail%2FDezbOFzkuIx\\.jpg%3Fv%3D1",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "v"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "videos.miaminewtimes.com",
+                    "resolved": "v.bytes.media"
+                }
+            ],
+            "responseHashes": [
+                "0f7124d2fca8b5f85c41c147adc10828af6b55ff27817db15152a9b027b4a7e1"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "miaminewtimes.com",
+                "www.miaminewtimes.com"
+            ]
+        },
+        {
+            "rule": "bytes\\.media\\/vimg2\\/dbejcxs3x\\/image\\/fetch\\/w_500,f_webp\\/https%3A%2F%2Fstorage\\.googleapis\\.com%2Fv\\.media\\.net%2Fthumbnail%2FDet-g5zD0Go\\.jpg%3Fv%3D1",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "v"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "videos.miaminewtimes.com",
+                    "resolved": "v.bytes.media"
+                }
+            ],
+            "responseHashes": [
+                "d31fe3631b87c837ecafec6f4cc4667ea12f8270524c97b2ef0e8fcd3b805cd4"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "miaminewtimes.com",
+                "www.miaminewtimes.com"
+            ]
+        },
+        {
+            "rule": "bytes\\.media\\/hls\\/40ad3212c1f34665a9cf5a5b67620d30_hls_baseline\\/video\\/h264\\/854p\\/40ad3212c1f34665a9cf5a5b67620d30_hls_baseline_4\\.m3u8",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "clip"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "b622d9ecf54389789d9f74cd019042da8ab1edc1186b7c82369c4fca4db17256"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "miaminewtimes.com",
+                "www.miaminewtimes.com"
+            ]
+        },
+        {
+            "rule": "bytes\\.media\\/hls\\/40ad3212c1f34665a9cf5a5b67620d30_hls_baseline\\/audio\\/40ad3212c1f34665a9cf5a5b67620d30_hls_baseline_audio\\.m3u8",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "clip"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "e2366be84558bdc4d034d35aee4e8bb537640dfac0a766ec40cc2291dfe88c45"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "miaminewtimes.com",
+                "www.miaminewtimes.com"
+            ]
+        },
+        {
+            "rule": "bytes\\.media\\/hls\\/40ad3212c1f34665a9cf5a5b67620d30_hls_baseline\\/video\\/h264\\/854p\\/segments\\/40ad3212c1f34665a9cf5a5b67620d30_hls_baseline_854p_1\\.ts",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "clip"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "41ff52de653fa68d9f70d57fcd6c64b2c92b1bb5917d9cc37adf57ef8c8f54cb"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "miaminewtimes.com",
+                "www.miaminewtimes.com"
+            ]
+        },
+        {
+            "rule": "bytes\\.media\\/hls\\/40ad3212c1f34665a9cf5a5b67620d30_hls_baseline\\/audio\\/segments\\/40ad3212c1f34665a9cf5a5b67620d30_hls_baseline_audio_1\\.aac",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "clip"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [
+                "8f3f226de45e98e68071ed9f00f1e90b3064f6d8ea1b147e5bb5e303db9bde95"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "miaminewtimes.com",
+                "www.miaminewtimes.com"
+            ]
+        },
+        {
+            "rule": "bytes\\.media\\/hls\\/40ad3212c1f34665a9cf5a5b67620d30_hls_baseline\\/audio\\/segments\\/40ad3212c1f34665a9cf5a5b67620d30_hls_baseline_audio_2\\.aac",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "clip"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [],
+            "responseHashes": [],
+            "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -744,7 +1585,7 @@
             ]
         },
         {
-            "rule": "bytes\\.media\\/vimg2\\/dbejcxs3x\\/image\\/fetch\\/w_500,f_webp\\/https%3A%2F%2Fstorage\\.googleapis\\.com%2Fv\\.media\\.net%2Fthumbnail%2FDfIzzoOAvkT\\.jpg%3Fv%3D1",
+            "rule": "bytes\\.media\\/__media__\\/pics\\/9900\\/63\\/551\\/\\/swiper-bundleH\\.min\\.css",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -755,23 +1596,50 @@
             "prevalence": 0.0000137,
             "cnames": [
                 {
-                    "original": "videos.phoenixnewtimes.com",
+                    "original": "watch.the-express.com",
                     "resolved": "v.bytes.media"
                 }
             ],
             "responseHashes": [
-                "bff8e87397bc25ed06707dc1472980a68e3e7601f5d73c9d9a1e38ab6d789e11"
+                "3fe770a83eb01116f3d42dcf0618ced4a3d343e995c1d62488d3897d31563ed4"
+            ],
+            "type": "Stylesheet",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "the-express.com",
+                "www.the-express.com"
+            ]
+        },
+        {
+            "rule": "bytes\\.media\\/vimg2\\/dbejcxs3x\\/image\\/fetch\\/w_500,f_webp\\/https%3A%2F%2Fstorage\\.googleapis\\.com%2Fv\\.media\\.net%2Fthumbnail_og%2F2309753953144773\\.jpg%3Fv%3D1",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "v"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "watch.the-express.com",
+                    "resolved": "v.bytes.media"
+                }
+            ],
+            "responseHashes": [
+                "fa22e5bc3d27b89373b9e22caec06bc6f2f7e6bfe363fc1d2365dde5d3246b55"
             ],
             "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "phoenixnewtimes.com",
-                "www.phoenixnewtimes.com"
+                "the-express.com",
+                "www.the-express.com"
             ]
         },
         {
-            "rule": "bytes\\.media\\/vimg2\\/dbejcxs3x\\/video\\/fetch\\/ac_none,w_350,fps_24,so_0,du_2,q_auto:good\\/https%3A%2F%2Fstorage\\.googleapis\\.com%2Fv\\.media\\.net%2Fvideo%2FDfIzzoOAvkT\\.mp4%3Fv%3D1",
+            "rule": "bytes\\.media\\/vimg2\\/dbejcxs3x\\/image\\/fetch\\/w_500,f_webp\\/https%3A%2F%2Fstorage\\.googleapis\\.com%2Fv\\.media\\.net%2Fthumbnail_og%2F1093704869982688\\.jpg%3Fv%3D1",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -782,19 +1650,181 @@
             "prevalence": 0.0000137,
             "cnames": [
                 {
-                    "original": "videos.phoenixnewtimes.com",
+                    "original": "watch.the-express.com",
                     "resolved": "v.bytes.media"
                 }
             ],
             "responseHashes": [
-                "4bf0a72d0c4c52698e3c4421bfbd1bc5e8fc325d85c610aa6c19c3bb3d1a94e3"
+                "7c7d9bafd9ae641416fce0cc9cacbc8bf55b75a6a0e8d5d71ec82ef527922c19"
             ],
-            "type": "Media",
+            "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "phoenixnewtimes.com",
-                "www.phoenixnewtimes.com"
+                "the-express.com",
+                "www.the-express.com"
+            ]
+        },
+        {
+            "rule": "bytes\\.media\\/__media__\\/pics\\/9900\\/63\\/551\\/\\/swiper-bundleH\\.min\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "v"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "watch.the-express.com",
+                    "resolved": "v.bytes.media"
+                }
+            ],
+            "responseHashes": [
+                "6191bfa0f9d87ee9dedcdd78b1bf88fd8fd76cab839268f7790bc4702e9e694f"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "the-express.com",
+                "www.the-express.com"
+            ]
+        },
+        {
+            "rule": "bytes\\.media\\/__media__\\/fonts\\/SourceSansPro-Bold\\/SourceSansPro-Bold\\.woff2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "v"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "watch.the-express.com",
+                    "resolved": "v.bytes.media"
+                }
+            ],
+            "responseHashes": [
+                "147c237dbf972a8f838d66f40b1b78ea65d493e04accc11fb0daed8eff18ac5a"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "the-express.com",
+                "www.the-express.com"
+            ]
+        },
+        {
+            "rule": "bytes\\.media\\/__media__\\/fonts\\/Cardo-Bold\\/Cardo-Bold\\.woff2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "v"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "watch.the-express.com",
+                    "resolved": "v.bytes.media"
+                }
+            ],
+            "responseHashes": [
+                "6bbc5e9b591032ac8da2e1e023bf7644950946dd14258a1163fb8349ee7eb9b0"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "the-express.com",
+                "www.the-express.com"
+            ]
+        },
+        {
+            "rule": "bytes\\.media\\/__media__\\/fonts\\/Inter_Extra_bold\\/Inter_Extra_bold\\.woff2",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "v"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "watch.the-express.com",
+                    "resolved": "v.bytes.media"
+                }
+            ],
+            "responseHashes": [
+                "5bc5450439d21c240f6745883d3a2fa37e944bafcf60426de47017150a8aedf1"
+            ],
+            "type": "Font",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "the-express.com",
+                "www.the-express.com"
+            ]
+        },
+        {
+            "rule": "bytes\\.media\\/vimg2\\/dbejcxs3x\\/image\\/fetch\\/w_500,f_webp\\/https%3A%2F%2Fstorage\\.googleapis\\.com%2Fv\\.media\\.net%2Fthumbnail%2F2309753953144773\\.jpg%3Fv%3D1",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "v"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "watch.the-express.com",
+                    "resolved": "v.bytes.media"
+                }
+            ],
+            "responseHashes": [
+                "c0330033636dfcf4c44e15abca44e7d9b1947636d6afc796288d29026d0d2cc4"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "the-express.com",
+                "www.the-express.com"
+            ]
+        },
+        {
+            "rule": "bytes\\.media\\/vimg2\\/dbejcxs3x\\/image\\/fetch\\/w_500,f_webp\\/https%3A%2F%2Fstorage\\.googleapis\\.com%2Fv\\.media\\.net%2Fthumbnail%2F1093704869982688\\.jpg%3Fv%3D1",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "v"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "watch.the-express.com",
+                    "resolved": "v.bytes.media"
+                }
+            ],
+            "responseHashes": [
+                "e46af833cf396e851548818bb3e6d243d621edf3e2c1649923a80c49065c004c"
+            ],
+            "type": "Image",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "the-express.com",
+                "www.the-express.com"
             ]
         },
         {
@@ -852,7 +1882,7 @@
             ]
         },
         {
-            "rule": "bytes\\.media\\/vimg2\\/dbejcxs3x\\/image\\/fetch\\/w_500,f_webp\\/https%3A%2F%2Fstorage\\.googleapis\\.com%2Fv\\.media\\.net%2Fthumbnail%2FDa3xy9aJ73S\\.jpg%3Fv%3D1",
+            "rule": "bytes\\.media\\/vimg2\\/dbejcxs3x\\/image\\/fetch\\/w_500,f_webp\\/https%3A%2F%2Fstorage\\.googleapis\\.com%2Fv\\.media\\.net%2Fthumbnail%2FDfaIH58zTD0\\.jpg%3Fv%3D1",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -868,7 +1898,7 @@
                 }
             ],
             "responseHashes": [
-                "836994ddbe2d24ec536a4959618ef262d56ae360d0babe7d95ce51676b8791fe"
+                "9d77739ac008715582f83ca595973a730627dbd85047d1fc7425b7dd9aaf4cca"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -879,7 +1909,7 @@
             ]
         },
         {
-            "rule": "bytes\\.media\\/vimg2\\/dbejcxs3x\\/image\\/fetch\\/w_500,f_webp\\/https%3A%2F%2Fstorage\\.googleapis\\.com%2Fv\\.media\\.net%2Fthumbnail%2FDWkOhgqCdWK\\.jpg%3Fv%3D1",
+            "rule": "bytes\\.media\\/vimg2\\/dbejcxs3x\\/image\\/fetch\\/w_500,f_webp\\/https%3A%2F%2Fstorage\\.googleapis\\.com%2Fv\\.media\\.net%2Fthumbnail%2FDfaiEksp2HU\\.jpg%3Fv%3D1",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -895,7 +1925,7 @@
                 }
             ],
             "responseHashes": [
-                "ec22ce69906e62257f2a5eb29fa3a860bec4c137e7a7d211f5571fc71866848f"
+                "a380cc8a72efa44c45bd39fe69f8604c9fe4443f0a976032643a41dbad593a06"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -906,7 +1936,7 @@
             ]
         },
         {
-            "rule": "bytes\\.media\\/vimg2\\/dbejcxs3x\\/image\\/fetch\\/w_500,f_webp\\/https%3A%2F%2Fstorage\\.googleapis\\.com%2Fv\\.media\\.net%2Fthumbnail%2FDWPwt4DicHn\\.jpg%3Fv%3D1",
+            "rule": "bytes\\.media\\/vimg2\\/dbejcxs3x\\/image\\/fetch\\/w_500,f_webp\\/https%3A%2F%2Fstorage\\.googleapis\\.com%2Fv\\.media\\.net%2Fthumbnail%2FDfqRtBIxfO1\\.jpg%3Fv%3D1",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -922,7 +1952,7 @@
                 }
             ],
             "responseHashes": [
-                "22c83378023083109335558f70b9de3a6b312b3b79ce1e379034464806c72d43"
+                "2db0704bdbe0a5a2c90c92948870f362352edb0731e796e5f8b27088cd70f674"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -933,7 +1963,7 @@
             ]
         },
         {
-            "rule": "bytes\\.media\\/vimg2\\/dbejcxs3x\\/image\\/fetch\\/w_500,f_webp\\/https%3A%2F%2Fstorage\\.googleapis\\.com%2Fv\\.media\\.net%2Fthumbnail%2FDeFFpBiRxpW\\.jpg%3Fv%3D1",
+            "rule": "bytes\\.media\\/vimg2\\/dbejcxs3x\\/image\\/fetch\\/w_500,f_webp\\/https%3A%2F%2Fstorage\\.googleapis\\.com%2Fv\\.media\\.net%2Fthumbnail%2FDfsXyrnRXDj\\.jpg%3Fv%3D1",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -949,7 +1979,7 @@
                 }
             ],
             "responseHashes": [
-                "c756f40880b85694fa0447e62a0ae53afcac0e62f5e4d98a8b489481a7adab81"
+                "4d94c1d03a002089022c51fc0abe800be62ed078a72ad930dbf276f44b984e84"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -960,7 +1990,7 @@
             ]
         },
         {
-            "rule": "bytes\\.media\\/vimg2\\/dbejcxs3x\\/image\\/fetch\\/w_500,f_webp\\/https%3A%2F%2Fstorage\\.googleapis\\.com%2Fv\\.media\\.net%2Fthumbnail%2FDaA7hB9OCyg\\.jpg%3Fv%3D1",
+            "rule": "bytes\\.media\\/vimg2\\/dbejcxs3x\\/image\\/fetch\\/w_500,f_webp\\/https%3A%2F%2Fstorage\\.googleapis\\.com%2Fv\\.media\\.net%2Fthumbnail%2FDfs6a35xz9V\\.jpg%3Fv%3D1",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -976,7 +2006,7 @@
                 }
             ],
             "responseHashes": [
-                "09074656c8a6c34dfc64f8cbe90c27fed69687e99a38f9aa69ef9ab248021bf8"
+                "3aebd4b5116763fa2d8e244bef5507fdfc133d47e75f4843c7617e50839457c0"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -987,7 +2017,7 @@
             ]
         },
         {
-            "rule": "bytes\\.media\\/vimg2\\/dbejcxs3x\\/image\\/fetch\\/w_500,f_webp\\/https%3A%2F%2Fstorage\\.googleapis\\.com%2Fv\\.media\\.net%2Fthumbnail%2FDWZfOJbCTvo\\.jpg%3Fv%3D1",
+            "rule": "bytes\\.media\\/vimg2\\/dbejcxs3x\\/image\\/fetch\\/w_500,f_webp\\/https%3A%2F%2Fstorage\\.googleapis\\.com%2Fv\\.media\\.net%2Fthumbnail%2FDfVMRwYpHQv\\.jpg%3Fv%3D1",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -1003,7 +2033,7 @@
                 }
             ],
             "responseHashes": [
-                "e44889c675fe7cc2aa6a1a1e3eb8d2c4508c3701988a536e8e62e9d25d2ed16d"
+                "2efb25a51ececabfc987e330255465647b8208e82bd310211767c5596104a41c"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -1014,7 +2044,7 @@
             ]
         },
         {
-            "rule": "bytes\\.media\\/vimg2\\/dbejcxs3x\\/image\\/fetch\\/w_500,f_webp\\/https%3A%2F%2Fstorage\\.googleapis\\.com%2Fv\\.media\\.net%2Fthumbnail%2FDeAWHNCpbFh\\.jpg%3Fv%3D1",
+            "rule": "bytes\\.media\\/vimg2\\/dbejcxs3x\\/image\\/fetch\\/w_500,f_webp\\/https%3A%2F%2Fstorage\\.googleapis\\.com%2Fv\\.media\\.net%2Fthumbnail%2FDfTqt99us3N\\.jpg%3Fv%3D1",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -1030,34 +2060,7 @@
                 }
             ],
             "responseHashes": [
-                "1e9f45ce791b6b2e474512ad25dfa4fa7c775fbadbaf222a9c737e41a85a25d6"
-            ],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "westword.com",
-                "www.westword.com"
-            ]
-        },
-        {
-            "rule": "bytes\\.media\\/vimg2\\/dbejcxs3x\\/image\\/fetch\\/w_500,f_webp\\/https%3A%2F%2Fstorage\\.googleapis\\.com%2Fv\\.media\\.net%2Fthumbnail%2FDd98U9qpOfi\\.jpg%3Fv%3D1",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "v"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [
-                {
-                    "original": "video.westword.com",
-                    "resolved": "v.bytes.media"
-                }
-            ],
-            "responseHashes": [
-                "61ec02fdd53b1dbc05ea9138efa1e0dbe520bfc9e45f0c3f2a9c66eb71315280"
+                "fc741d2436db6ae9c6623a8ad5ec5934c06162ec705aa1aff859bde984c010d8"
             ],
             "type": "Image",
             "firstPartyCookies": {},
@@ -1095,7 +2098,7 @@
             ]
         },
         {
-            "rule": "bytes\\.media\\/vimg2\\/dbejcxs3x\\/video\\/fetch\\/w_350,fps_24,ac_none,q_auto:good\\/https%3A%2F%2Fstorage\\.googleapis\\.com%2Fv\\.media\\.net%2Fgif%2Fs1%2FDWkOhgqCdWK\\.mp4%3Fv%3D1",
+            "rule": "bytes\\.media\\/vimg2\\/dbejcxs3x\\/video\\/fetch\\/ac_none,w_350,fps_24,so_0,du_2,q_auto:good\\/https%3A%2F%2Fstorage\\.googleapis\\.com%2Fv\\.media\\.net%2Fvideo%2FDfaIH58zTD0\\.mp4%3Fv%3D1",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -1111,7 +2114,7 @@
                 }
             ],
             "responseHashes": [
-                "475ecf4854466e45f007270bf57c12ae0da2e48119efe158c77dce402f26acf0"
+                "e3983ba4c7362a840f27f8d1b5b2560d660e0133241a153282adb2bc8eaaeb7b"
             ],
             "type": "Media",
             "firstPartyCookies": {},
@@ -1122,7 +2125,7 @@
             ]
         },
         {
-            "rule": "bytes\\.media\\/vimg2\\/dbejcxs3x\\/video\\/fetch\\/ac_none,w_350,fps_24,so_0,du_2,q_auto:good\\/https%3A%2F%2Fstorage\\.googleapis\\.com%2Fv\\.media\\.net%2Fvideo%2FDeFFpBiRxpW\\.mp4%3Fv%3D1",
+            "rule": "bytes\\.media\\/vimg2\\/dbejcxs3x\\/video\\/fetch\\/ac_none,w_350,fps_24,so_0,du_2,q_auto:good\\/https%3A%2F%2Fstorage\\.googleapis\\.com%2Fv\\.media\\.net%2Fvideo%2FDfaiEksp2HU\\.mp4%3Fv%3D1",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -1138,7 +2141,7 @@
                 }
             ],
             "responseHashes": [
-                "6bd34a1956f815dcc0cd845f86d81a3018d6984b4af3559165f1ae502942c8e5"
+                "bd025ac82886d3ac597c08a87f72127db155f4842f5606147cd0f3859d87d4bd"
             ],
             "type": "Media",
             "firstPartyCookies": {},
@@ -1149,7 +2152,7 @@
             ]
         },
         {
-            "rule": "bytes\\.media\\/vimg2\\/dbejcxs3x\\/video\\/fetch\\/ac_none,w_350,fps_24,so_0,du_2,q_auto:good\\/https%3A%2F%2Fstorage\\.googleapis\\.com%2Fv\\.media\\.net%2Fvideo%2FDaA7hB9OCyg\\.mp4%3Fv%3D1",
+            "rule": "bytes\\.media\\/vimg2\\/dbejcxs3x\\/video\\/fetch\\/ac_none,w_350,fps_24,so_0,du_2,q_auto:good\\/https%3A%2F%2Fstorage\\.googleapis\\.com%2Fv\\.media\\.net%2Fvideo%2FDfqRtBIxfO1\\.mp4%3Fv%3D1",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -1165,7 +2168,7 @@
                 }
             ],
             "responseHashes": [
-                "a4bd784be712baf660859c85736706122cdb2306b83d1a754b879da098ca623e"
+                "997beec5eafc69d37e0ed085b40457b2fb2d9814f7a8144c6fb1502195ca56b8"
             ],
             "type": "Media",
             "firstPartyCookies": {},
@@ -1176,7 +2179,7 @@
             ]
         },
         {
-            "rule": "bytes\\.media\\/vimg2\\/dbejcxs3x\\/video\\/fetch\\/w_350,fps_24,ac_none,q_auto:good\\/https%3A%2F%2Fstorage\\.googleapis\\.com%2Fv\\.media\\.net%2Fgif%2Fp1%2FDWZfOJbCTvo\\.mp4%3Fv%3D1",
+            "rule": "bytes\\.media\\/vimg2\\/dbejcxs3x\\/video\\/fetch\\/ac_none,w_350,fps_24,so_0,du_2,q_auto:good\\/https%3A%2F%2Fstorage\\.googleapis\\.com%2Fv\\.media\\.net%2Fvideo%2FDfsXyrnRXDj\\.mp4%3Fv%3D1",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -1192,7 +2195,7 @@
                 }
             ],
             "responseHashes": [
-                "b458edeb30250e035b15b5001858739b23eef1a6fc2d1975921a7452fa5e4169"
+                "006fe9eacd65cfa1a8c62469c44dc6af0e6e13b186f4e7ff54435e9cc1aa5474"
             ],
             "type": "Media",
             "firstPartyCookies": {},
@@ -1203,7 +2206,7 @@
             ]
         },
         {
-            "rule": "bytes\\.media\\/vimg2\\/dbejcxs3x\\/video\\/fetch\\/ac_none,w_350,fps_24,so_0,du_2,q_auto:good\\/https%3A%2F%2Fstorage\\.googleapis\\.com%2Fv\\.media\\.net%2Fvideo%2FDeAWHNCpbFh\\.mp4%3Fv%3D1",
+            "rule": "bytes\\.media\\/vimg2\\/dbejcxs3x\\/video\\/fetch\\/ac_none,w_350,fps_24,so_0,du_2,q_auto:good\\/https%3A%2F%2Fstorage\\.googleapis\\.com%2Fv\\.media\\.net%2Fvideo%2FDfs6a35xz9V\\.mp4%3Fv%3D1",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -1219,7 +2222,7 @@
                 }
             ],
             "responseHashes": [
-                "5f8aff794e4f3f1db817d404e482c23a0f85755f2beb700cafa2c9ee778d7927"
+                "eff7f1dd2eb8a4fd01ed781d20bd47eb9c9894e26468c887edbd2417f682d70c"
             ],
             "type": "Media",
             "firstPartyCookies": {},
@@ -1230,7 +2233,7 @@
             ]
         },
         {
-            "rule": "bytes\\.media\\/vimg2\\/dbejcxs3x\\/video\\/fetch\\/ac_none,w_350,fps_24,so_0,du_2,q_auto:good\\/https%3A%2F%2Fstorage\\.googleapis\\.com%2Fv\\.media\\.net%2Fvideo%2FDd98U9qpOfi\\.mp4%3Fv%3D1",
+            "rule": "bytes\\.media\\/vimg2\\/dbejcxs3x\\/video\\/fetch\\/ac_none,w_350,fps_24,so_0,du_2,q_auto:good\\/https%3A%2F%2Fstorage\\.googleapis\\.com%2Fv\\.media\\.net%2Fvideo%2FDfVMRwYpHQv\\.mp4%3Fv%3D1",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
@@ -1246,7 +2249,7 @@
                 }
             ],
             "responseHashes": [
-                "23e5025e7b60939d2f92694cb7eb86624d123760ed5cb3ce3af763089ee6f975"
+                "0c0a685a304527cf3275d59470749c9554b58ab0ff48f93e04e2936924301650"
             ],
             "type": "Media",
             "firstPartyCookies": {},
@@ -1257,104 +2260,25 @@
             ]
         },
         {
-            "rule": "bytes\\.media\\/hls\\/ce8e0e49a1d44545b62fdb1f357fe9a1_hls_baseline\\/master_854p_1280p\\.m3u8",
+            "rule": "bytes\\.media\\/vimg2\\/dbejcxs3x\\/video\\/fetch\\/ac_none,w_350,fps_24,so_0,du_2,q_auto:good\\/https%3A%2F%2Fstorage\\.googleapis\\.com%2Fv\\.media\\.net%2Fvideo%2FDfTqt99us3N\\.mp4%3Fv%3D1",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "clip"
+                "v"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.0000137,
-            "cnames": [],
+            "cnames": [
+                {
+                    "original": "video.westword.com",
+                    "resolved": "v.bytes.media"
+                }
+            ],
             "responseHashes": [
-                "15761a825fe45f6b2b3724ff676dcf0cf0f8c49348b0161a3e26e6fde51265a3"
+                "35945e29d241a28265ac5ef8f4b86cae32aee791b9e4bdf92d3e2dc8fb717e2e"
             ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "westword.com",
-                "www.westword.com"
-            ]
-        },
-        {
-            "rule": "bytes\\.media\\/hls\\/ce8e0e49a1d44545b62fdb1f357fe9a1_hls_baseline\\/video\\/h264\\/854p\\/ce8e0e49a1d44545b62fdb1f357fe9a1_hls_baseline_4\\.m3u8",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "clip"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "fd440fc84977597b1c348846f03505f8a8c20053ba87d9638cb3704bfadcc55a"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "westword.com",
-                "www.westword.com"
-            ]
-        },
-        {
-            "rule": "bytes\\.media\\/hls\\/ce8e0e49a1d44545b62fdb1f357fe9a1_hls_baseline\\/audio\\/ce8e0e49a1d44545b62fdb1f357fe9a1_hls_baseline_audio\\.m3u8",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "clip"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "6eba246ba1aaf2f514f3cd5577f26abc13152a4dd21c2760c92c08282387d00d"
-            ],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "westword.com",
-                "www.westword.com"
-            ]
-        },
-        {
-            "rule": "bytes\\.media\\/hls\\/ce8e0e49a1d44545b62fdb1f357fe9a1_hls_baseline\\/video\\/h264\\/854p\\/segments\\/ce8e0e49a1d44545b62fdb1f357fe9a1_hls_baseline_854p_1\\.ts",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "clip"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "westword.com",
-                "www.westword.com"
-            ]
-        },
-        {
-            "rule": "bytes\\.media\\/hls\\/ce8e0e49a1d44545b62fdb1f357fe9a1_hls_baseline\\/audio\\/segments\\/ce8e0e49a1d44545b62fdb1f357fe9a1_hls_baseline_audio_1\\.aac",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "clip"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Fetch",
+            "type": "Media",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
@@ -1365,53 +2289,53 @@
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0000755,
+    "cookies": 0.000103,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.6382978723404256
+            "prevalence": 0.743801652892562
         },
         {
             "domain": "sentry-cdn.com",
-            "prevalence": 0.1276595744680851
+            "prevalence": 0.09917355371900827
         },
         {
             "domain": "adobedtm.com",
-            "prevalence": 0.0851063829787234
-        },
-        {
-            "domain": "clym-sdk.net",
-            "prevalence": 0.05319148936170213
+            "prevalence": 0.06611570247933884
         },
         {
             "domain": "media.net",
-            "prevalence": 0.031914893617021274
+            "prevalence": 0.024793388429752067
         },
         {
             "domain": "ketchjs.com",
-            "prevalence": 0.031914893617021274
-        },
-        {
-            "domain": "privacy-mgmt.com",
-            "prevalence": 0.02127659574468085
+            "prevalence": 0.024793388429752067
         },
         {
             "domain": "cookielaw.org",
-            "prevalence": 0.010638297872340425
+            "prevalence": 0.01652892561983471
+        },
+        {
+            "domain": "clym-sdk.net",
+            "prevalence": 0.01652892561983471
+        },
+        {
+            "domain": "privacy-mgmt.com",
+            "prevalence": 0.008264462809917356
         }
     ],
     "types": {
-        "Script": 39,
-        "Stylesheet": 15,
+        "Script": 59,
+        "Stylesheet": 18,
         "XHR": 2,
-        "Font": 9,
-        "Image": 30,
-        "Media": 14,
-        "Fetch": 10
+        "Image": 68,
+        "Font": 15,
+        "Media": 28,
+        "Fetch": 12
     },
     "nameservers": [
+        "eur4.akam.net",
         "a1-247.akam.net",
-        "a11-66.akam.net",
-        "eur4.akam.net"
+        "a11-66.akam.net"
     ]
 }

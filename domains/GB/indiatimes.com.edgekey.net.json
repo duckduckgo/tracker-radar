@@ -12,6 +12,7 @@
     "prevalence": 0.000301,
     "sites": 3,
     "subdomains": [
+        "etusapi",
         "geoapi",
         "agi-static"
     ],
@@ -21,12 +22,66 @@
             "resolved": "agi-static.indiatimes.com.edgekey.net"
         },
         {
+            "original": "etusapi.indiatimes.com",
+            "resolved": "etusapi.indiatimes.com.edgekey.net"
+        },
+        {
             "original": "geoapi.indiatimes.com",
             "resolved": "geoapi.indiatimes.com.edgekey.net"
         }
     ],
     "fingerprinting": 2,
     "resources": [
+        {
+            "rule": "indiatimes\\.com\\.edgekey\\.net\\/us-stocks\\/us-intraday-stats",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "etusapi"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "etusapi.indiatimes.com",
+                    "resolved": "etusapi.indiatimes.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "indiatimes.com",
+                "economictimes.indiatimes.com"
+            ]
+        },
+        {
+            "rule": "indiatimes\\.com\\.edgekey\\.net\\/us-stocks\\/us-intraday-stats",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "etusapi"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [
+                {
+                    "original": "etusapi.indiatimes.com",
+                    "resolved": "etusapi.indiatimes.com.edgekey.net"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "indiatimes.com",
+                "economictimes.indiatimes.com"
+            ]
+        },
         {
             "rule": "indiatimes\\.com\\.edgekey\\.net\\/",
             "cookies": 0.000201,
@@ -88,15 +143,17 @@
     "cookies": 0.000201,
     "topInitiators": [
         {
-            "domain": "toiimg.com",
-            "prevalence": 0.75
+            "domain": "etimg.com",
+            "prevalence": 0.5
         },
         {
-            "domain": "etimg.com",
-            "prevalence": 0.25
+            "domain": "toiimg.com",
+            "prevalence": 0.5
         }
     ],
     "types": {
+        "Preflight": 2,
+        "Fetch": 2,
         "Script": 5
     },
     "nameservers": []

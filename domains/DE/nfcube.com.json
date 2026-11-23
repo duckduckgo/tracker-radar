@@ -7,9 +7,10 @@
     "source": [
         "DuckDuckGo-DE"
     ],
-    "prevalence": 0.000704,
-    "sites": 7,
+    "prevalence": 0.000804,
+    "sites": 8,
     "subdomains": [
+        "cdn",
         "instafeed",
         "api"
     ],
@@ -17,26 +18,75 @@
     "fingerprinting": 1,
     "resources": [
         {
-            "rule": "nfcube\\.com\\/feed\\/v6",
+            "rule": "nfcube\\.com\\/instafeed-8b47a5742a01c5eb0f6f2c605d27f3c6\\.js",
+            "cookies": 0,
+            "fingerprinting": 1,
+            "subdomains": [
+                "cdn"
+            ],
+            "apis": {
+                "window.innerWidth": 2,
+                "Navigator.prototype.language": 2,
+                "Navigator.prototype.connection": 1
+            },
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "69efc9c7bd2fc9488ec7b33c78e0347b1dc3903f67741eb260f01fb458155787"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "stanley1913.com",
+                "eu.stanley1913.com"
+            ]
+        },
+        {
+            "rule": "nfcube\\.com\\/i18n\\/storefront\\/instafeed-en\\.json",
             "cookies": 0,
             "fingerprinting": 0,
             "subdomains": [
-                "instafeed",
-                "api"
+                "instafeed"
             ],
             "apis": {},
-            "sites": 3,
-            "prevalence": 0.000302,
+            "sites": 2,
+            "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "fbe4de2b00c7c13df9a0d9d9ecf9f1be3c1119e2fe34bc65a0c877ae2333c6db",
-                "ace0973e01454de8e91a171134b16ad65230dd148e6d019e59d5bef2ae31ffeb"
+                "ec5f115c52e9ae60782743e3465797dda4999935cd0669d427a8eec237527e8b"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "allpacka-box.de",
+                "stanley1913.com",
+                "eu.stanley1913.com"
+            ]
+        },
+        {
+            "rule": "nfcube\\.com\\/feed\\/v6",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "api"
+            ],
+            "apis": {},
+            "sites": 4,
+            "prevalence": 0.000402,
+            "cnames": [],
+            "responseHashes": [
+                "98681b635177e400ab0a96d030eef7a210b12b7b4e684c2bc0a70157e10164f1",
+                "ab5231f6c191072e313b07f0cc3b477b9da705040f50ebf2c63ccbf5b6557b4d",
+                "75a7aa0ed36bbc19b42388141339557e6f8e75deff617baa6e3f61f384128bfe"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "stanley1913.com",
+                "eu.stanley1913.com",
                 "naturtreu.de",
                 "www.petiteknit.com"
             ]
@@ -59,32 +109,10 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "allpacka-box.de",
+                "stanley1913.com",
                 "mac-jeans.com",
                 "naturtreu.de",
                 "www.petiteknit.com"
-            ]
-        },
-        {
-            "rule": "nfcube\\.com\\/cdn\\/instafeed-20\\.0\\.1\\.css",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "instafeed"
-            ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
-            "cnames": [],
-            "responseHashes": [
-                "acd2c83c200da4cdd8ee97e9e2c8c23e0252e1615162b7347a578d15d7640b40"
-            ],
-            "type": "Stylesheet",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "mac-jeans.com",
-                "snocks.com"
             ]
         },
         {
@@ -118,17 +146,13 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.9
-        },
-        {
-            "domain": "event-observer-collector.js",
-            "prevalence": 0.1
+            "prevalence": 1
         }
     ],
     "types": {
-        "Fetch": 7,
-        "Image": 4,
-        "Stylesheet": 2
+        "Script": 2,
+        "Fetch": 10,
+        "Image": 4
     },
     "nameservers": [
         "ivan.ns.cloudflare.com",

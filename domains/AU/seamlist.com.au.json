@@ -4,10 +4,11 @@
     "source": [
         "DuckDuckGo-AU"
     ],
-    "prevalence": 0.000201,
-    "sites": 2,
+    "prevalence": 0.000301,
+    "sites": 3,
     "subdomains": [
-        "api"
+        "api",
+        "app"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -20,17 +21,19 @@
                 "api"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [
-                "0af9cf7e884bc9c49a7595fa59b9e5210650c7a92080b12a2093fc2bba97e48f"
+                "0709202f017285874d9957982b9b9a6290727961f01efde01a7db09e667bd676",
+                "7bf3b9a9756a34f1f226d1469bea8984aa69bd3aa6c67bc8457ce132b5a4c894"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "cottonon.com",
+                "www.mimco.com.au",
                 "www.seedheritage.com"
             ]
         },
@@ -42,8 +45,8 @@
                 "api"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
@@ -51,6 +54,7 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "cottonon.com",
+                "www.mimco.com.au",
                 "www.seedheritage.com"
             ]
         },
@@ -62,17 +66,19 @@
                 "api"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [
-                "06713dd90813c3e81329045d82d199527995529e81d0c75cca66de6b6af8699c"
+                "67cb25594a8ab9053bdc577f10c46ea6768e51233f67694a20400dc0274077f6",
+                "bf07e64b24cce871e91bc921d123583b4f39cc2a3c4a1af035aa1ed8d08d61df"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "cottonon.com",
+                "www.mimco.com.au",
                 "www.seedheritage.com"
             ]
         },
@@ -84,8 +90,8 @@
                 "api"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000301,
             "cnames": [],
             "responseHashes": [],
             "type": "Preflight",
@@ -93,26 +99,32 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "cottonon.com",
+                "www.mimco.com.au",
                 "www.seedheritage.com"
             ]
         },
         {
-            "rule": "seamlist\\.com\\.au\\/api\\/v1\\/partner\\/sdk-public\\/TV-S67H4",
+            "rule": "seamlist\\.com\\.au\\/shopify\\/js\\/main\\/app\\.js",
             "cookies": 0,
-            "fingerprinting": 0,
+            "fingerprinting": 1,
             "subdomains": [
-                "api"
+                "app"
             ],
-            "apis": {},
+            "apis": {
+                "window.localStorage": 1,
+                "Navigator.prototype.userAgent": 1
+            },
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Preflight",
+            "responseHashes": [
+                "b34dcec1572902d42200f72af21be4507921d129ed069ea262404379f3e25691"
+            ],
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "seedheritage.com",
+                "mimco.com.au",
                 "www.seedheritage.com"
             ]
         },
@@ -128,7 +140,7 @@
             "prevalence": 0.000201,
             "cnames": [],
             "responseHashes": [
-                "8a4efcee8711cab47556dc9f6b29b04f4886ae995e4492eb0abb1fa081d9b2a0"
+                "47a85bd1c7c83c1a297341ae01100f1eb8be0e67b0a10b01da362441da8e627e"
             ],
             "type": "Fetch",
             "firstPartyCookies": {},
@@ -145,16 +157,21 @@
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.5555555555555556
+            "prevalence": 0.46153846153846156
         },
         {
             "domain": "seamlist.com",
-            "prevalence": 0.4444444444444444
+            "prevalence": 0.3076923076923077
+        },
+        {
+            "domain": "dynatrace.com",
+            "prevalence": 0.23076923076923078
         }
     ],
     "types": {
-        "Fetch": 6,
-        "Preflight": 6
+        "Fetch": 8,
+        "Preflight": 6,
+        "Script": 2
     },
     "nameservers": [
         "sage.ns.cloudflare.com",

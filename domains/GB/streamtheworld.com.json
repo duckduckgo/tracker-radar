@@ -7,8 +7,8 @@
     "source": [
         "DuckDuckGo-GB"
     ],
-    "prevalence": 0.000402,
-    "sites": 4,
+    "prevalence": 0.000301,
+    "sites": 3,
     "subdomains": [
         "playerservices.live",
         "yield-op-idsync.live",
@@ -18,37 +18,44 @@
     "fingerprinting": 1,
     "resources": [
         {
-            "rule": "streamtheworld\\.com\\/api\\/getuuid",
+            "rule": "streamtheworld\\.com\\/api\\/idsync\\.js",
             "cookies": 0.000201,
             "fingerprinting": 0,
             "subdomains": [
                 "playerservices.live"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000301,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Image",
+            "responseHashes": [
+                "e55242d5d5485b1a0a4e0ba06487d398a3cadcc55704263a5d48408b61846bda"
+            ],
+            "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "elpais.com",
-                "english.elpais.com"
+                "dictionary.com",
+                "www.dictionary.com",
+                "www.thesaurus.com"
             ]
         },
         {
-            "rule": "streamtheworld\\.com\\/api\\/idsync\\.js",
-            "cookies": 0.0001,
-            "fingerprinting": 0,
+            "rule": "streamtheworld\\.com\\/idsync\\.js",
+            "cookies": 0.000201,
+            "fingerprinting": 1,
             "subdomains": [
-                "playerservices.live"
+                "yield-op-idsync.live"
             ],
-            "apis": {},
+            "apis": {
+                "Navigator.prototype.userAgent": 2
+            },
             "sites": 2,
             "prevalence": 0.000201,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "f2b4679084d1af9c342dd995b65ec614f82e7eb1f9ae79713ebffa3468ccfac7"
+            ],
             "type": "Script",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
@@ -58,23 +65,48 @@
             ]
         },
         {
+            "rule": "streamtheworld\\.com\\/partnerIds",
+            "cookies": 0.0001,
+            "fingerprinting": 0,
+            "subdomains": [
+                "yield-op-idsync.live"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.000201,
+            "cnames": [],
+            "responseHashes": [
+                "c1a60c66fef48b465a1c302b3488051d4b72c192d93fe496b254e7a4a346be4b"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "dictionary.com",
+                "www.thesaurus.com"
+            ]
+        },
+        {
             "rule": "streamtheworld\\.com\\/pixel\\.gif",
-            "cookies": 0.000201,
+            "cookies": 0.000301,
             "fingerprinting": 0,
             "subdomains": [
                 "yield-op-idsync.live",
                 "idsync.live"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.000201,
+            "sites": 3,
+            "prevalence": 0.000301,
             "cnames": [],
-            "responseHashes": [],
+            "responseHashes": [
+                "d346801abbf9bb4e9e9a055239053d4ab5596514304f601a6c70604187acb744"
+            ],
             "type": "Image",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "thesaurus.com",
+                "dictionary.com",
+                "www.dictionary.com",
                 "www.thesaurus.com"
             ]
         }
@@ -85,21 +117,22 @@
     "topInitiators": [
         {
             "domain": "shigotech.io",
-            "prevalence": 0.6666666666666666
+            "prevalence": 0.8571428571428571
         },
         {
             "domain": "demdex.net",
-            "prevalence": 0.3333333333333333
+            "prevalence": 0.14285714285714285
         }
     ],
     "types": {
-        "Image": 4,
-        "Script": 2
+        "Script": 5,
+        "Fetch": 2,
+        "Image": 3
     },
     "nameservers": [
-        "ns04.streamtheworld.net",
-        "ns02.streamtheworld.net",
+        "ns03.streamtheworld.net",
         "ns01.streamtheworld.net",
-        "ns03.streamtheworld.net"
+        "ns02.streamtheworld.net",
+        "ns04.streamtheworld.net"
     ]
 }

@@ -4,14 +4,25 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.000199,
-    "sites": 29,
+    "prevalence": 0.000178,
+    "sites": 26,
     "subdomains": [
         "assets",
         "euw2.production.ai",
-        "v4-news-au-news24.cdn"
+        "v4-news-au-dailytelegraph.cdn",
+        "v4-news-au-news24.cdn",
+        "customer-api-cname-target.cdn"
     ],
-    "cnames": [],
+    "cnames": [
+        {
+            "original": "zephrapi.thescottishsun.co.uk",
+            "resolved": "customer-api-cname-target.cdn.zephr.com"
+        },
+        {
+            "original": "zephrapi.thesun.co.uk",
+            "resolved": "customer-api-cname-target.cdn.zephr.com"
+        }
+    ],
     "fingerprinting": 1,
     "resources": [
         {
@@ -22,11 +33,11 @@
                 "assets"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 10,
+                "Navigator.prototype.userAgent": 8,
                 "window.localStorage": 1
             },
-            "sites": 10,
-            "prevalence": 0.0000686,
+            "sites": 8,
+            "prevalence": 0.0000549,
             "cnames": [],
             "responseHashes": [
                 "45f491c7c6006913bb2156a02b3416c4661989b03209611e30b765dc841d78d1"
@@ -36,8 +47,6 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "nymag.com",
-                "www.curbed.com",
-                "www.dagbladet.no",
                 "www.grubstreet.com",
                 "www.racingpost.com",
                 "www.seher.no",
@@ -63,7 +72,7 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "38d40b38d862f2633c8b06d2b294796233ff4e03ff557b1f7c2a15abccc4459e"
+                "723f44454468071e28f5e7b562b8b3410acee3652b30627700a4660d34d4d207"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -81,8 +90,7 @@
                 "assets"
             ],
             "apis": {
-                "Navigator.prototype.userAgent": 2,
-                "window.localStorage": 1
+                "Navigator.prototype.userAgent": 2
             },
             "sites": 2,
             "prevalence": 0.0000137,
@@ -99,37 +107,11 @@
             ]
         },
         {
-            "rule": "zephr\\.com\\/zephr-browser\\/1\\.3\\.10\\/zephr-browser\\.umd\\.js",
-            "cookies": 0,
-            "fingerprinting": 1,
-            "subdomains": [
-                "assets"
-            ],
-            "apis": {
-                "Navigator.prototype.userAgent": 2,
-                "Document.cookie getter": 1,
-                "window.innerWidth": 1,
-                "window.localStorage": 1
-            },
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [
-                "d98f3c146304d61e34da5e04cb32b628c58b401b7c01576d6c47f8f1ca6bea02"
-            ],
-            "type": "Script",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "estadao.com.br",
-                "www.estadao.com.br"
-            ]
-        },
-        {
             "rule": "zephr\\.com\\/zephr\\/decision-engine",
             "cookies": 0.0000137,
             "fingerprinting": 0,
             "subdomains": [
+                "v4-news-au-dailytelegraph.cdn",
                 "v4-news-au-news24.cdn"
             ],
             "apis": {},
@@ -141,7 +123,7 @@
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "news24.com.au",
+                "dailytelegraph.com.au",
                 "www.news24.com.au"
             ]
         },
@@ -150,38 +132,21 @@
             "cookies": 0.0000137,
             "fingerprinting": 0,
             "subdomains": [
+                "v4-news-au-dailytelegraph.cdn",
                 "v4-news-au-news24.cdn"
             ],
             "apis": {},
             "sites": 2,
             "prevalence": 0.0000137,
             "cnames": [],
-            "responseHashes": [],
-            "type": "Fetch",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {},
-            "exampleSites": [
-                "news24.com.au",
-                "www.news24.com.au"
-            ]
-        },
-        {
-            "rule": "zephr\\.com\\/blaize\\/decision-engine",
-            "cookies": 0.0000137,
-            "fingerprinting": 0,
-            "subdomains": [
-                "v4-news-au-news24.cdn"
+            "responseHashes": [
+                "2ae0d06516a2788f607d6c87ffb80a4db8b66d1960540a9953afebdd114668cd"
             ],
-            "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
-            "cnames": [],
-            "responseHashes": [],
             "type": "Fetch",
             "firstPartyCookies": {},
             "firstPartyCookiesSent": {},
             "exampleSites": [
-                "news24.com.au",
+                "dailytelegraph.com.au",
                 "www.news24.com.au"
             ]
         },
@@ -201,7 +166,7 @@
             "prevalence": 0.0000137,
             "cnames": [],
             "responseHashes": [
-                "524d9ecd40e1818e5e3122791f620734d723e44f788d63a8359f7e83b17d97d0"
+                "2a52a69d0624a85de405f38a5ec787902a9d3451e8a814add494529a875e795f"
             ],
             "type": "Script",
             "firstPartyCookies": {},
@@ -210,38 +175,129 @@
                 "radiotimes.com",
                 "www.radiotimes.com"
             ]
+        },
+        {
+            "rule": "zephr\\.com\\/zephr\\/features",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "customer-api-cname-target.cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "zephrapi.thescottishsun.co.uk",
+                    "resolved": "customer-api-cname-target.cdn.zephr.com"
+                },
+                {
+                    "original": "zephrapi.thesun.co.uk",
+                    "resolved": "customer-api-cname-target.cdn.zephr.com"
+                }
+            ],
+            "responseHashes": [
+                "76f037e7e7b51532ca561fa283ea6d5d4d1e83e2faa3394fc89288eb4b7aaa7b"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thescottishsun.co.uk",
+                "www.thesun.co.uk"
+            ]
+        },
+        {
+            "rule": "zephr\\.com\\/zephr\\/feature-decisions",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "customer-api-cname-target.cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "zephrapi.thescottishsun.co.uk",
+                    "resolved": "customer-api-cname-target.cdn.zephr.com"
+                },
+                {
+                    "original": "zephrapi.thesun.co.uk",
+                    "resolved": "customer-api-cname-target.cdn.zephr.com"
+                }
+            ],
+            "responseHashes": [
+                "8641923e1c8f88c739cc56d7a7500d9629706621f9f315d36aa0a6b111cad341"
+            ],
+            "type": "Fetch",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thescottishsun.co.uk",
+                "www.thesun.co.uk"
+            ]
+        },
+        {
+            "rule": "zephr\\.com\\/zephr\\/feature-decisions",
+            "cookies": 0.0000137,
+            "fingerprinting": 0,
+            "subdomains": [
+                "customer-api-cname-target.cdn"
+            ],
+            "apis": {},
+            "sites": 2,
+            "prevalence": 0.0000137,
+            "cnames": [
+                {
+                    "original": "zephrapi.thescottishsun.co.uk",
+                    "resolved": "customer-api-cname-target.cdn.zephr.com"
+                },
+                {
+                    "original": "zephrapi.thesun.co.uk",
+                    "resolved": "customer-api-cname-target.cdn.zephr.com"
+                }
+            ],
+            "responseHashes": [],
+            "type": "Preflight",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "thescottishsun.co.uk",
+                "www.thesun.co.uk"
+            ]
         }
     ],
     "categories": [],
     "performance": {},
-    "cookies": 0.0000275,
+    "cookies": 0.0000343,
     "topInitiators": [
         {
             "domain": "first party",
-            "prevalence": 0.6571428571428571
+            "prevalence": 0.7037037037037037
         },
         {
             "domain": "newscdn.com.au",
-            "prevalence": 0.2571428571428571
+            "prevalence": 0.18518518518518517
         },
         {
             "domain": "adobedtm.com",
-            "prevalence": 0.05714285714285714
+            "prevalence": 0.07407407407407407
         },
         {
             "domain": "googletagmanager.com",
-            "prevalence": 0.02857142857142857
+            "prevalence": 0.037037037037037035
         }
     ],
     "types": {
-        "Script": 18,
-        "Preflight": 2,
-        "Fetch": 4
+        "Script": 14,
+        "Preflight": 4,
+        "Fetch": 6
     },
     "nameservers": [
-        "ns-46.awsdns-05.com",
         "ns-1991.awsdns-56.co.uk",
+        "ns-877.awsdns-45.net",
         "ns-1113.awsdns-11.org",
-        "ns-877.awsdns-45.net"
+        "ns-46.awsdns-05.com"
     ]
 }

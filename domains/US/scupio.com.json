@@ -7,12 +7,13 @@
     "source": [
         "DuckDuckGo-US"
     ],
-    "prevalence": 0.0000618,
-    "sites": 9,
+    "prevalence": 0.0000343,
+    "sites": 5,
     "subdomains": [
         "prebid",
-        "dable-api",
-        "img"
+        "img",
+        "pixel-api",
+        "google-api"
     ],
     "cnames": [],
     "fingerprinting": 1,
@@ -25,8 +26,8 @@
                 "prebid"
             ],
             "apis": {},
-            "sites": 2,
-            "prevalence": 0.0000137,
+            "sites": 3,
+            "prevalence": 0.0000206,
             "cnames": [],
             "responseHashes": [
                 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -36,32 +37,8 @@
             "firstPartyCookiesSent": {},
             "exampleSites": [
                 "udn.com",
+                "www.chinatimes.com",
                 "www.mobile01.com"
-            ]
-        },
-        {
-            "rule": "scupio\\.com\\/dable\\/v1\\/exc\\/",
-            "cookies": 0,
-            "fingerprinting": 0,
-            "subdomains": [
-                "dable-api"
-            ],
-            "apis": {},
-            "sites": 5,
-            "prevalence": 0.0000343,
-            "cnames": [],
-            "responseHashes": [],
-            "type": "Image",
-            "firstPartyCookies": {},
-            "firstPartyCookiesSent": {
-                "dable_uid": 0.000027456498610014756
-            },
-            "exampleSites": [
-                "udn.com",
-                "www.chosun.com",
-                "www.koreaherald.com",
-                "www.koreatimes.co.kr",
-                "www.nownews.com"
             ]
         },
         {
@@ -86,15 +63,15 @@
             "type": "Script",
             "firstPartyCookies": {
                 "__BWtransf": {
-                    "ttl": 863996407,
+                    "ttl": 863996405,
                     "length": 24,
-                    "prevalence": 0.000013728249305007378,
+                    "prevalence": 0.000013722974317453565,
                     "uniqueness": 1
                 },
                 "__BWfp": {
-                    "ttl": 863996407,
+                    "ttl": 863996405,
                     "length": 24,
-                    "prevalence": 0.000013728249305007378,
+                    "prevalence": 0.000013722974317453565,
                     "uniqueness": 1
                 }
             },
@@ -112,8 +89,8 @@
                 "img"
             ],
             "apis": {
-                "Document.cookie getter": 2,
-                "window.localStorage": 1
+                "window.localStorage": 1,
+                "Document.cookie getter": 1
             },
             "sites": 2,
             "prevalence": 0.0000137,
@@ -128,6 +105,56 @@
                 "eslite.com",
                 "www.ikea.com.tw"
             ]
+        },
+        {
+            "rule": "scupio\\.com\\/v0\\/event",
+            "cookies": 0.0000206,
+            "fingerprinting": 0,
+            "subdomains": [
+                "pixel-api"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000206,
+            "cnames": [],
+            "responseHashes": [
+                "475152fb891f436a334076db88f0de317a162d2ec7aaac4514048f89cecb06f5",
+                "cc1bbb34aa5d4c10a72880b68038b8d07dce1069ee600347ee667bedfe809cca"
+            ],
+            "type": "XHR",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {},
+            "exampleSites": [
+                "eslite.com",
+                "www.eslite.com",
+                "www.ikea.com.tw"
+            ]
+        },
+        {
+            "rule": "scupio\\.com\\/google\\/v1\\/callback",
+            "cookies": 0,
+            "fingerprinting": 0,
+            "subdomains": [
+                "google-api"
+            ],
+            "apis": {},
+            "sites": 3,
+            "prevalence": 0.0000206,
+            "cnames": [],
+            "responseHashes": [
+                "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            ],
+            "type": "Script",
+            "firstPartyCookies": {},
+            "firstPartyCookiesSent": {
+                "__BWtransf": 0.000020584461476180346,
+                "__BWfp": 0.000020584461476180346
+            },
+            "exampleSites": [
+                "eslite.com",
+                "www.eslite.com",
+                "www.ikea.com.tw"
+            ]
         }
     ],
     "categories": [],
@@ -135,28 +162,24 @@
     "cookies": 0.0000137,
     "topInitiators": [
         {
-            "domain": "dable.io",
-            "prevalence": 0.5
-        },
-        {
             "domain": "first party",
-            "prevalence": 0.4375
+            "prevalence": 0.9166666666666666
         },
         {
             "domain": "udn.com.tw",
-            "prevalence": 0.0625
+            "prevalence": 0.08333333333333333
         }
     ],
     "types": {
-        "Fetch": 2,
-        "Image": 5,
-        "Script": 2,
-        "Document": 2
+        "Fetch": 3,
+        "Script": 5,
+        "Document": 2,
+        "XHR": 3
     },
     "nameservers": [
-        "ns-639.awsdns-15.net",
-        "ns-500.awsdns-62.com",
         "ns-1834.awsdns-37.co.uk",
-        "ns-1225.awsdns-25.org"
+        "ns-500.awsdns-62.com",
+        "ns-1225.awsdns-25.org",
+        "ns-639.awsdns-15.net"
     ]
 }
